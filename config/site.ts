@@ -1,43 +1,43 @@
 /**
- * Central site configuration for Agry Entreprenad AB.
+ * Central site configuration for Armeringsproffs.
  *
  * Alla riktiga kontaktuppgifter samlas HÄR. Fyll i fälten markerade med TODO
  * så uppdateras hela sajten (sidfot, kontaktsida, JSON-LD, sitemap) automatiskt.
  */
 
 export const site = {
-  company: "Agry Entreprenad AB",
-  brand: "Agry Entreprenad",
+  company: "Armeringsproffs",
+  brand: "Armeringsproffs",
   // Huvudtjänst / SEO-fokus
-  service: "Gjuta betongplatta",
-  tagline: "Gjutning av betongplattor och husgrunder i Stockholm",
+  service: "Prefab armering",
+  tagline: "Prefabricerad armering – klippt & bockad, korgar och nät i hela Sverige",
 
-  // Domän (utan avslutande slash)
-  url: "https://gjutabetongplatta.se",
+  // Domän (utan avslutande slash). OBS: domänen stavas utan genitiv-s.
+  url: "https://armeringproffs.se",
 
   // Kontaktuppgifter
-  phone: "+46 70 757 75 75", // Support (primär, visas i header/footer/CTA)
-  phoneHref: "tel:+46707577575",
-  phoneOffice: "+46 81 241 02 76", // Kontor
-  phoneOfficeHref: "tel:+46812410276",
-  email: "info@gjutabetongplatta.se",
+  phone: "+46 70 000 00 00", // TODO: riktigt telefonnummer
+  phoneHref: "tel:+46700000000", // TODO
+  phoneOffice: "", // valfritt kontorsnummer
+  phoneOfficeHref: "",
+  email: "info@armeringproffs.se",
   orgNumber: "000000-0000", // TODO
 
   address: {
     street: "Gatuadress 1", // TODO
     zip: "100 00", // TODO
-    city: "Stockholm", // TODO
+    city: "Sverige", // TODO – ort för tillverkning/lager
     country: "SE",
   },
 
   // Öppettider (för LocalBusiness-schema)
   openingHours: [
-    { days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], opens: "07:00", closes: "17:00" },
+    { days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], opens: "07:00", closes: "16:00" },
   ],
 
-  // Serviceområde – huvudort
-  region: "Stockholm",
-  regionInflected: "Stockholm med omnejd",
+  // Leveransområde – hela landet
+  region: "Sverige",
+  regionInflected: "hela Sverige",
 
   // Sociala länkar (valfritt) – TODO
   social: {
@@ -46,7 +46,7 @@ export const site = {
   },
 
   // Geografiska koordinater (för LocalBusiness) – TODO: uppdatera vid behov
-  geo: { lat: 59.3293, lng: 18.0686 },
+  geo: { lat: 62.0, lng: 15.0 },
 } as const;
 
 export type Site = typeof site;
