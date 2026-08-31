@@ -6,15 +6,20 @@ import { IconCheck } from "@/components/icons";
 
 export const metadata: Metadata = {
   title: "Om oss",
-  description: `${site.company} är specialister på gjutning av betongplattor och grundläggning i Stockholm. Läs mer om oss, vårt arbetssätt och våra värderingar.`,
+  description: `${site.company} är specialister på prefabricerad armering – klippt & bockad, armeringskorgar och svetsad armering – med tillverkning, leverans och montage i hela Sverige. Läs mer om oss.`,
   alternates: { canonical: "/om-oss" },
+  openGraph: {
+    title: `Om oss | ${site.company}`,
+    description: "Specialister på prefab armering med tillverkning, leverans och montage i hela Sverige.",
+    url: `${site.url}/om-oss`,
+  },
 };
 
 const values = [
-  "Fackmässigt utförande enligt gällande normer",
-  "Tydlig kommunikation och fast pris",
-  "Kvalitetsmaterial anpassade för nordiskt klimat",
-  "Garanti och dokumentation på allt arbete",
+  "Tillverkning enligt bockningslista och konstruktionsritning",
+  "Kamstål B500B och nät enligt gällande normer",
+  "Tydlig märkning, sortering och leverans i tid",
+  "Full cykel: tillverkning, leverans och montage",
 ];
 
 export default function OmOssPage() {
@@ -26,14 +31,15 @@ export default function OmOssPage() {
           <SectionHeading eyebrow="Om oss" title={`${site.company}`} />
           <div className="prose-body mt-6 space-y-4 text-lg">
             <p>
-              Vi är ett entreprenadföretag i Stockholm specialiserat på gjutning av betongplattor,
-              husgrunder och markarbeten. Vår ambition är enkel: att leverera grunder som håller i
-              generationer, med tydlig kommunikation och pris utan överraskningar.
+              Vi är specialiserade på prefabricerad armering – klippt och bockad armering,
+              armeringskorgar, svetsad armering och nät, kamstål och distanser. Vi tillverkar efter
+              din bockningslista eller konstruktionsritning och levererar i hela Sverige.
             </p>
             <p>
-              Från första platsbesöket till färdig platta tar vi helhetsansvar. Vi arbetar
-              fackmässigt enligt gällande konstruktionsritningar och branschregler, och står för
-              kvaliteten med garanti på allt vi utför.
+              Vår ambition är enkel: rätt armering, i rätt tid, till rätt plats. Vi tar hela cykeln –
+              tillverkning, leverans och montage – och arbetar enligt gällande normer med kamstål
+              B500B. Skicka din ritning så hjälper vi dig hela vägen, från bockningslista till färdig
+              leverans.
             </p>
           </div>
           <ul className="mt-8 grid gap-3 sm:grid-cols-2">

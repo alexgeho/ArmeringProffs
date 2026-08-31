@@ -2,17 +2,17 @@ import { site } from "@/config/site";
 import { faq } from "@/config/faq";
 import { Section, SectionHeading } from "@/components/ui";
 import {
-  Hero, UspBar, ServicesGrid, Process, RotSection, CitiesGrid, Reviews, CtaBanner,
+  Hero, UspBar, ProductsGrid, Process, LeveransSection, Reviews, CtaBanner,
 } from "@/components/sections";
 import { FaqAccordion } from "@/components/FaqAccordion";
-import { JsonLd, faqSchema } from "@/lib/jsonld";
+import { JsonLd, faqSchema, serviceSchema } from "@/lib/jsonld";
 
 export default function HomePage() {
   return (
     <>
       <Hero
-        title={<>Gjuta betongplatta i <span className="text-brand">Stockholm</span></>}
-        intro="Vi gjuter betongplattor, husgrunder och garageplattor i hela Stockholm med omnejd. Fackmässigt utfört från schakt till färdig platta – med fast pris, ROT-avdrag och garanti."
+        title={<>Prefab armering i <span className="text-brand">hela Sverige</span></>}
+        intro="Vi tillverkar prefabricerad armering – klippt & bockad, armeringskorgar, svetsad armering och nät – efter din bockningslista eller ritning. Full cykel: tillverkning, leverans och montage i hela landet."
         formSource="startsida-hero"
       />
 
@@ -23,18 +23,17 @@ export default function HomePage() {
         <div className="mx-auto max-w-3xl text-center">
           <SectionHeading
             center
-            eyebrow="Betongexperter i Stockholm"
-            title="Din grund byggd för att hålla"
-            intro={`${site.company} är specialister på att gjuta betongplatta och grundläggning – platta på mark, bottenplatta och garageplatta. Vi tar helhetsansvar från markarbeten och isolering till armering och gjutning, så att du får en stabil, fuktsäker och energieffektiv grund som håller i generationer. Du får alltid ett fast pris.`}
+            eyebrow="Armeringsleverantör för hela Sverige"
+            title="Prefab armering efter din ritning"
+            intro={`${site.company} tillverkar och levererar prefabricerad armering för bygg och anläggning – klippt och bockad armering, armeringskorgar, svetsad armering och armeringsnät, kamstål B500B och distanser. Vi tar hela cykeln: tillverkning efter bockningslista, leverans i hela Sverige och montage på plats. Skicka din ritning så får du en offert.`}
           />
         </div>
       </Section>
 
-      <ServicesGrid />
+      <ProductsGrid />
       <Process />
-      <RotSection />
+      <LeveransSection />
       <Reviews />
-      <CitiesGrid />
 
       {/* FAQ */}
       <Section muted>
@@ -46,6 +45,15 @@ export default function HomePage() {
       </Section>
 
       <CtaBanner />
+
+      <JsonLd
+        data={serviceSchema({
+          name: "Prefab armering – tillverkning, leverans och montage",
+          description:
+            "Tillverkning av prefabricerad armering (klippt & bockad, armeringskorgar, svetsad armering och nät) efter bockningslista, med leverans och montage i hela Sverige.",
+          url: site.url,
+        })}
+      />
     </>
   );
 }

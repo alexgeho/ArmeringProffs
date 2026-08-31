@@ -23,8 +23,9 @@ export default function IntegritetspolicyPage() {
 
         <h2 className="mt-8 text-2xl font-bold text-ink">Vilka uppgifter vi samlar in</h2>
         <p className="mt-3 text-ink-soft">
-          När du fyller i vårt kontaktformulär samlar vi in namn, telefonnummer, e-postadress, ort
-          och den information du lämnar om ditt projekt.
+          När du fyller i vårt offertformulär samlar vi in namn eller företag, telefonnummer,
+          e-postadress, leveransort, mängd och den information du lämnar om ditt projekt – samt en
+          eventuell ritning eller bockningslista som du väljer att bifoga.
         </p>
 
         <h2 className="mt-8 text-2xl font-bold text-ink">Hur vi använder uppgifterna</h2>

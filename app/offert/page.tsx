@@ -6,16 +6,21 @@ import { ContactForm } from "@/components/ContactForm";
 import { IconCheck, IconPhone } from "@/components/icons";
 
 export const metadata: Metadata = {
-  title: "Begär offert – kostnadsfritt",
-  description: `Begär en kostnadsfri offert på gjutning av betongplatta eller husgrund i Stockholm. ${site.company} återkommer snabbt med fast pris.`,
+  title: "Begär offert på prefab armering",
+  description: `Begär offert på prefab armering – klippt & bockad, korgar och nät. Ladda upp din bockningslista eller ritning så återkommer ${site.company} snabbt med pris och leveranstid för hela Sverige.`,
   alternates: { canonical: "/offert" },
+  openGraph: {
+    title: `Begär offert på prefab armering | ${site.company}`,
+    description: "Ladda upp din bockningslista eller ritning så får du pris och leveranstid för hela Sverige.",
+    url: `${site.url}/offert`,
+  },
 };
 
 const points = [
   "Kostnadsfritt och utan förpliktelser",
-  "Fast pris efter platsbesök",
-  "Vi hjälper dig med ROT-avdraget",
-  "Snabbt svar",
+  "Ladda upp bockningslista eller ritning",
+  "Tillverkning, leverans & montage",
+  "Snabbt svar med pris och leveranstid",
 ];
 
 export default function OffertPage() {
@@ -25,10 +30,11 @@ export default function OffertPage() {
       <section className="bg-ink text-white">
         <Container className="grid gap-10 py-14 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
           <div>
-            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">Begär en kostnadsfri offert</h1>
+            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">Begär offert på prefab armering</h1>
             <p className="mt-5 text-lg text-slate-300">
-              Berätta om ditt projekt så återkommer vi snabbt med ett förslag och fast pris. Vi bokar
-              gärna ett kostnadsfritt platsbesök.
+              Ladda upp din bockningslista eller ritning och ange mängd och leveransort, så återkommer
+              vi snabbt med pris och leveranstid. Vi tillverkar och levererar i hela Sverige – och kan
+              även sköta montaget.
             </p>
             <ul className="mt-8 space-y-3">
               {points.map((p) => (

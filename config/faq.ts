@@ -4,27 +4,27 @@ export type Faq = { q: string; a: string };
 
 export const faq: Faq[] = [
   {
-    q: "Vad kostar det att gjuta en betongplatta?",
-    a: "Priset beror på plattans storlek, markförhållanden, isolering och om golvvärme ska ingå. Efter ett kostnadsfritt platsbesök lämnar vi ett tydligt fast pris utan dolda avgifter. Vid arbete på befintlig fastighet kan ROT-avdrag sänka arbetskostnaden med 30 %.",
+    q: "Vad är prefab armering?",
+    a: "Prefabricerad armering är armering som tillverkas färdig i verkstad efter din bockningslista eller ritning – klippt och bockat kamstål, armeringskorgar och svetsade nät. Den levereras märkt och sorterad så att den bara ska monteras på bygget, vilket sparar tid och minskar spill.",
   },
   {
-    q: "Hur lång tid tar det att gjuta en platta?",
-    a: "En normal villaplatta tar oftast 1–3 veckor inklusive schakt, isolering, armering och gjutning – beroende på storlek, markförhållanden och väder. Betongen behöver därefter härda innan man bygger vidare.",
+    q: "Kan ni tillverka efter min bockningslista eller ritning?",
+    a: "Ja. Skicka din bockningslista eller konstruktionsritning (PDF, DWG, Excel eller foto) så tar vi fram en offert och tillverkar armeringen efter den. Har du ingen färdig bockningslista hjälper vi dig att ta fram en utifrån ritningen.",
   },
   {
-    q: "Kan jag använda ROT-avdrag?",
-    a: "Ja, för arbete på en befintlig fastighet (t.ex. tillbyggnad, garage eller uterum) kan du använda ROT-avdraget på arbetskostnaden. För helt nybyggda hus gäller inte ROT. Vi hjälper dig med hela hanteringen mot Skatteverket.",
+    q: "Levererar ni i hela Sverige?",
+    a: "Ja, vi tillverkar och levererar prefab armering i hela Sverige. Ange leveransort och mängd i offertförfrågan så räknar vi fram frakt och leveranstid.",
   },
   {
-    q: "Vilka områden arbetar ni i?",
-    a: "Vi utför gjutning och grundläggning i hela Stockholm med omnejd – bland annat Nacka, Täby, Lidingö, Danderyd, Solna, Huddinge och Sollentuna.",
+    q: "Vad kostar armeringen och hur får jag pris?",
+    a: "Priset beror på mängd, dimensioner, utförande och leveransort. Vi arbetar med offert per projekt – skicka din bockningslista, ritning eller mängd så återkommer vi snabbt med ett tydligt pris utan förpliktelser.",
   },
   {
-    q: "Lämnar ni garanti på arbetet?",
-    a: "Ja. Allt vi utför omfattas av garanti och vi arbetar enligt gällande branschregler. Du får en tydlig offert och dokumentation på utfört arbete.",
+    q: "Ingår montage och armeringsläggning?",
+    a: "Vi erbjuder hela cykeln: tillverkning, leverans och montage. Vill du att vi även lägger armeringen på plats ordnar vi det – ange det i offertförfrågan så tar vi med montaget i offerten.",
   },
   {
-    q: "Ingår isolering och golvvärme?",
-    a: "Vi bygger upp plattan med markisolering för ett energieffektivt hus och kan förbereda för golvvärme innan gjutning. Det specificeras i offerten utifrån dina önskemål.",
+    q: "Vilken kvalitet och vilka dimensioner tillverkar ni?",
+    a: "Vi arbetar med varmvalsat kamstål B500B i dimensioner Ø6–Ø32 mm samt svetsade armeringsnät i olika trådgrovlekar och maskvidder. Allt tillverkas enligt gällande normer och din konstruktionsritning.",
   },
 ];

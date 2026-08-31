@@ -7,10 +7,9 @@ import { IconPhone } from "./icons";
 
 const nav = [
   { href: "/", label: "Hem" },
-  { href: "/tjanster", label: "Tjänster" },
-  { href: "/priser", label: "Priser" },
-  { href: "/omraden", label: "Områden" },
-  { href: "/blogg", label: "Blogg" },
+  { href: "/produkter", label: "Produkter" },
+  { href: "/leverans", label: "Leverans" },
+  { href: "/blogg", label: "Guider" },
   { href: "/om-oss", label: "Om oss" },
   { href: "/kontakt", label: "Kontakt" },
 ];

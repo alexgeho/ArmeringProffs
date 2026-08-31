@@ -11,13 +11,21 @@ import { site } from "@/config/site";
  * så att formuläret ändå fungerar i utvecklingsläge (förfrågan loggas då).
  */
 
+export type LeadAttachment = {
+  filename: string;
+  content: Buffer;
+  contentType?: string;
+};
+
 export type Lead = {
   name?: string;
   phone?: string;
   email?: string;
   location?: string;
+  quantity?: string;
   message?: string;
   source?: string;
+  attachment?: LeadAttachment;
 };
 
 export function isMailConfigured() {
@@ -48,10 +56,12 @@ export async function sendLeadEmail(lead: Lead) {
   const from = process.env.LEAD_FROM || process.env.SMTP_USER || site.email;
 
   const rows: [string, unknown][] = [
-    ["Namn", lead.name],
+    ["Namn / företag", lead.name],
     ["Telefon", lead.phone],
     ["E-post", lead.email],
-    ["Ort", lead.location],
+    ["Leveransort", lead.location],
+    ["Mängd / dimension", lead.quantity],
+    ["Bilaga", lead.attachment?.filename],
     ["Källa", lead.source],
   ];
 
@@ -79,5 +89,8 @@ export async function sendLeadEmail(lead: Lead) {
     subject: `Ny offertförfrågan${lead.name ? ` – ${lead.name}` : ""}${lead.location ? ` (${lead.location})` : ""}`,
     text,
     html,
+    attachments: lead.attachment
+      ? [{ filename: lead.attachment.filename, content: lead.attachment.content, contentType: lead.attachment.contentType }]
+      : undefined,
   });
 }

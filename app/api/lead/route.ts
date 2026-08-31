@@ -1,35 +1,76 @@
 import { NextResponse } from "next/server";
-import { isMailConfigured, sendLeadEmail } from "@/lib/mail";
+import { isMailConfigured, sendLeadEmail, type LeadAttachment } from "@/lib/mail";
 
 /**
- * Tar emot offertförfrågningar från formuläret och mejlar dem till företaget.
+ * Tar emot offertförfrågningar (multipart/form-data) från formuläret och mejlar
+ * dem till företaget. En bifogad ritning/bockningslista följer med som bilaga.
  * SMTP konfigureras via miljövariabler (se .env.example).
  */
+
+const MAX_FILE_BYTES = 10 * 1024 * 1024; // 10 MB
+
 export async function POST(request: Request) {
-  let data: Record<string, unknown>;
+  let form: FormData;
   try {
-    data = await request.json();
+    form = await request.formData();
   } catch {
     return NextResponse.json({ ok: false, error: "Ogiltig förfrågan" }, { status: 400 });
   }
 
+  const get = (k: string) => {
+    const v = form.get(k);
+    return typeof v === "string" && v.trim() ? v.trim() : undefined;
+  };
+
+  const name = get("name");
+  const phone = get("phone");
+
   // Enkel validering
-  if (!data?.name || !data?.phone) {
+  if (!name || !phone) {
     return NextResponse.json({ ok: false, error: "Namn och telefon krävs" }, { status: 400 });
   }
 
+  // Ev. bifogad ritning/bockningslista
+  let attachment: LeadAttachment | undefined;
+  const file = form.get("drawing");
+  if (file && typeof file !== "string" && file.size > 0) {
+    if (file.size > MAX_FILE_BYTES) {
+      return NextResponse.json(
+        { ok: false, error: "Filen är för stor (max 10 MB)" },
+        { status: 413 },
+      );
+    }
+    const buffer = Buffer.from(await file.arrayBuffer());
+    attachment = {
+      filename: file.name || "bilaga",
+      content: buffer,
+      contentType: file.type || "application/octet-stream",
+    };
+  }
+
   const lead = {
-    name: String(data.name),
-    phone: String(data.phone),
-    email: data.email ? String(data.email) : undefined,
-    location: data.location ? String(data.location) : undefined,
-    message: data.message ? String(data.message) : undefined,
-    source: data.source ? String(data.source) : "webbformulär",
+    name,
+    phone,
+    email: get("email"),
+    location: get("location"),
+    quantity: get("quantity"),
+    message: get("message"),
+    source: get("source") ?? "webbformulär",
+    attachment,
   };
 
   // Utan SMTP-konfig: logga och kvittera (så formuläret fungerar i dev).
   if (!isMailConfigured()) {
-    console.warn("[LEAD] SMTP ej konfigurerat – förfrågan loggas istället:", lead);
+    console.warn("[LEAD] SMTP ej konfigurerat – förfrågan loggas istället:", {
+      name: lead.name,
+      phone: lead.phone,
+      email: lead.email,
+      location: lead.location,
+      quantity: lead.quantity,
+      message: lead.message,
+      source: lead.source,
+      attachment: attachment ? `${attachment.filename} (${attachment.content.length} B)` : undefined,
+    });
     return NextResponse.json({ ok: true });
   }
 

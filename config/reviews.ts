@@ -8,20 +8,20 @@ export type Review = { name: string; place: string; text: string; rating: number
 export const reviews: Review[] = [
   {
     name: "Kund (exempel)",
-    place: "Nacka",
-    text: "Proffsigt utfört från schakt till färdig platta. Tydlig offert och de höll tiden.",
+    place: "Göteborg",
+    text: "Beställde klippt och bockad armering efter vår bockningslista. Rätt mått, tydlig märkning och leverans i tid.",
     rating: 5,
   },
   {
     name: "Kund (exempel)",
-    place: "Täby",
-    text: "Gjöt vår garageplatta. Bra kommunikation och snyggt slutresultat.",
+    place: "Stockholm",
+    text: "Prefabricerade armeringskorgar till våra pelare – sparade massor av tid på bygget.",
     rating: 5,
   },
   {
     name: "Kund (exempel)",
-    place: "Lidingö",
-    text: "Anlitade dem för grunden till vår tillbyggnad. Rekommenderas varmt.",
+    place: "Malmö",
+    text: "Specialnät efter mått, snabb offert och bra leverans ända hit. Rekommenderas.",
     rating: 5,
   },
 ];

@@ -11,18 +11,18 @@ export function JsonLd({ data }: { data: object }) {
   );
 }
 
-/** LocalBusiness/GeneralContractor – huvudschema för hela sajten. */
+/** Organisation/leverantör – huvudschema för hela sajten (prefab armering, hela Sverige). */
 export function localBusinessSchema() {
   return {
     "@context": "https://schema.org",
-    "@type": "GeneralContractor",
+    "@type": "Organization",
     "@id": `${site.url}/#business`,
     name: site.company,
     image: `${site.url}/og.jpg`,
+    logo: `${site.url}/logo.png`,
     url: site.url,
     telephone: site.phone,
     email: site.email,
-    priceRange: "$$",
     address: {
       "@type": "PostalAddress",
       streetAddress: site.address.street,
@@ -30,25 +30,14 @@ export function localBusinessSchema() {
       addressLocality: site.address.city,
       addressCountry: site.address.country,
     },
-    geo: {
-      "@type": "GeoCoordinates",
-      latitude: site.geo.lat,
-      longitude: site.geo.lng,
-    },
     areaServed: {
-      "@type": "City",
-      name: site.region,
+      "@type": "Country",
+      name: "Sverige",
     },
-    openingHoursSpecification: site.openingHours.map((h) => ({
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: h.days,
-      opens: h.opens,
-      closes: h.closes,
-    })),
   };
 }
 
-/** Service-schema för tjänstesidor. */
+/** Service-schema (helhet: tillverkning + leverans + montage). */
 export function serviceSchema(opts: { name: string; description: string; url: string }) {
   return {
     "@context": "https://schema.org",
@@ -58,7 +47,35 @@ export function serviceSchema(opts: { name: string; description: string; url: st
     description: opts.description,
     url: opts.url,
     provider: { "@id": `${site.url}/#business` },
-    areaServed: { "@type": "City", name: site.region },
+    areaServed: { "@type": "Country", name: "Sverige" },
+  };
+}
+
+/** Product-schema för produktkategorisidor. */
+export function productSchema(opts: {
+  name: string;
+  description: string;
+  url: string;
+  category?: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: opts.name,
+    description: opts.description,
+    url: opts.url,
+    ...(opts.category ? { category: opts.category } : {}),
+    brand: { "@type": "Brand", name: site.brand },
+    material: "Kamstål B500B",
+    manufacturer: { "@id": `${site.url}/#business` },
+    offers: {
+      "@type": "Offer",
+      priceCurrency: "SEK",
+      availability: "https://schema.org/InStock",
+      areaServed: { "@type": "Country", name: "Sverige" },
+      url: opts.url,
+      seller: { "@id": `${site.url}/#business` },
+    },
   };
 }
 

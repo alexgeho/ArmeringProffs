@@ -167,8 +167,8 @@ export default async function PostPage({
           )}
 
           <div className="mt-10 rounded-xl border border-line bg-surface p-6">
-            <h2 className="text-lg font-bold text-ink">Behöver du hjälp med ditt projekt?</h2>
-            <p className="mt-2 text-ink-soft">Vi gjuter plattor och grunder i hela Stockholm. Begär en kostnadsfri offert.</p>
+            <h2 className="text-lg font-bold text-ink">Behöver du armering till ditt projekt?</h2>
+            <p className="mt-2 text-ink-soft">Vi tillverkar och levererar prefab armering i hela Sverige. Skicka din bockningslista för offert.</p>
             <div className="mt-4">
               <Button href="/offert">Begär offert <IconArrow className="h-4 w-4" /></Button>
             </div>

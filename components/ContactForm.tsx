@@ -11,14 +11,12 @@ export function ContactForm({ compact = false, source = "webbformulär" }: { com
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const form = e.currentTarget;
-    const data = Object.fromEntries(new FormData(form).entries());
+    const data = new FormData(form);
+    data.append("source", source);
     setStatus("sending");
     try {
-      const res = await fetch("/api/lead", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...data, source }),
-      });
+      // Skickas som multipart/form-data så att en bifogad ritning/bockningslista följer med.
+      const res = await fetch("/api/lead", { method: "POST", body: data });
       if (!res.ok) throw new Error("bad response");
       setStatus("sent");
       form.reset();
@@ -34,7 +32,7 @@ export function ContactForm({ compact = false, source = "webbformulär" }: { com
           <IconCheck className="h-6 w-6" />
         </span>
         <h3 className="text-xl font-bold text-ink">Tack för din förfrågan!</h3>
-        <p className="text-ink-soft">Vi återkommer så snart som möjligt med en kostnadsfri offert.</p>
+        <p className="text-ink-soft">Vi återkommer så snart som möjligt med en offert på din armering.</p>
       </div>
     );
   }
@@ -42,13 +40,16 @@ export function ContactForm({ compact = false, source = "webbformulär" }: { com
   return (
     <form onSubmit={onSubmit} className="grid gap-4">
       <div className={compact ? "grid gap-4" : "grid gap-4 sm:grid-cols-2"}>
-        <Field name="name" label="Namn" placeholder="För- och efternamn" required />
+        <Field name="name" label="Namn / företag" placeholder="Namn eller företag" required />
         <Field name="phone" label="Telefon" type="tel" placeholder="07x-xxx xx xx" required />
       </div>
       <div className={compact ? "grid gap-4" : "grid gap-4 sm:grid-cols-2"}>
         <Field name="email" label="E-post" type="email" placeholder="namn@exempel.se" required />
-        <Field name="location" label="Ort" placeholder="T.ex. Nacka" />
+        <Field name="location" label="Leveransort" placeholder="T.ex. Göteborg" />
       </div>
+
+      <Field name="quantity" label="Mängd / dimension" placeholder="T.ex. 2 ton, nät 6x150, Ø12 kamstål" />
+
       <div className="grid gap-1.5">
         <label htmlFor="message" className="text-sm font-medium text-ink">
           Beskriv ditt projekt
@@ -57,9 +58,23 @@ export function ContactForm({ compact = false, source = "webbformulär" }: { com
           id="message"
           name="message"
           rows={compact ? 3 : 4}
-          placeholder="T.ex. platta på mark ca 60 m² för tillbyggnad..."
+          placeholder="T.ex. klippt & bockad armering enligt bockningslista, armeringskorgar till 12 pelare, specialnät 2,4 × 6 m..."
           className="rounded-lg border border-line bg-white px-4 py-3 text-ink placeholder:text-muted focus:border-brand focus:outline-none"
         />
+      </div>
+
+      <div className="grid gap-1.5">
+        <label htmlFor="drawing" className="text-sm font-medium text-ink">
+          Ritning / bockningslista <span className="font-normal text-muted">(valfritt)</span>
+        </label>
+        <input
+          id="drawing"
+          name="drawing"
+          type="file"
+          accept=".pdf,.dwg,.dxf,.xls,.xlsx,.csv,.doc,.docx,.png,.jpg,.jpeg,.zip"
+          className="rounded-lg border border-line bg-white px-4 py-2.5 text-sm text-ink-soft file:mr-3 file:rounded-md file:border-0 file:bg-brand-light file:px-3 file:py-1.5 file:text-sm file:font-semibold file:text-brand hover:file:bg-orange-100 focus:border-brand focus:outline-none"
+        />
+        <p className="text-xs text-muted">PDF, DWG/DXF, Excel, bild eller zip. Max ca 10 MB.</p>
       </div>
 
       <label className="flex items-start gap-2 text-sm text-ink-soft">

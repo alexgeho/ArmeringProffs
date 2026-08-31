@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { site } from "@/config/site";
-import { services } from "@/config/services";
-import { cities } from "@/config/cities";
+import { products } from "@/config/products";
+import { regions } from "@/config/cities";
 import { IconPhone, IconMail, IconMapPin } from "./icons";
 
 export function Footer() {
@@ -16,17 +16,17 @@ export function Footer() {
             <span className="text-lg">{site.brand}</span>
           </div>
           <p className="mt-4 text-sm leading-relaxed text-slate-400">
-            Gjutning av betongplattor, husgrunder och markarbeten i {site.regionInflected}. Fast pris, ROT-avdrag och garanti.
+            Prefabricerad armering – klippt & bockad, armeringskorgar, svetsad armering och nät. Tillverkning, leverans och montage i {site.regionInflected}.
           </p>
         </div>
 
         <div>
-          <h3 className="text-sm font-semibold uppercase tracking-wider text-white">Tjänster</h3>
+          <h3 className="text-sm font-semibold uppercase tracking-wider text-white">Produkter</h3>
           <ul className="mt-4 space-y-2 text-sm">
-            {services.map((s) => (
-              <li key={s.slug}>
-                <Link href={`/tjanster/${s.slug}`} className="text-slate-400 hover:text-white">
-                  {s.name}
+            {products.map((p) => (
+              <li key={p.slug}>
+                <Link href={`/produkter/${p.slug}`} className="text-slate-400 hover:text-white">
+                  {p.name}
                 </Link>
               </li>
             ))}
@@ -34,14 +34,13 @@ export function Footer() {
         </div>
 
         <div>
-          <h3 className="text-sm font-semibold uppercase tracking-wider text-white">Områden</h3>
-          <ul className="mt-4 grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
-            {cities.slice(0, 10).map((c) => (
-              <li key={c.slug}>
-                <Link href={`/omraden/${c.slug}`} className="text-slate-400 hover:text-white">
-                  {c.name}
-                </Link>
-              </li>
+          <h3 className="text-sm font-semibold uppercase tracking-wider text-white">Leverans</h3>
+          <p className="mt-4 text-sm text-slate-400">
+            Vi levererar i <Link href="/leverans" className="text-slate-300 underline hover:text-white">hela Sverige</Link>, bland annat:
+          </p>
+          <ul className="mt-3 grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
+            {regions.slice(0, 10).map((r) => (
+              <li key={r} className="text-slate-400">{r}</li>
             ))}
           </ul>
         </div>
@@ -74,7 +73,7 @@ export function Footer() {
           <p>
             © {year} {site.company} · Org.nr {site.orgNumber}
           </p>
-          <p>Gjuta betongplatta · Husgrund · Markarbeten · {site.region}</p>
+          <p>Klippt & bockad · Armeringskorgar · Svetsad armering · {site.region}</p>
         </div>
       </div>
     </footer>

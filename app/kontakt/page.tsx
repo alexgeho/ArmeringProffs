@@ -7,8 +7,13 @@ import { IconPhone, IconMail, IconMapPin, IconClock } from "@/components/icons";
 
 export const metadata: Metadata = {
   title: "Kontakt",
-  description: `Kontakta ${site.company} för gjutning av betongplatta och grundläggning i Stockholm. Ring ${site.phone} eller begär en kostnadsfri offert.`,
+  description: `Kontakta ${site.company} för offert på prefab armering – klippt & bockad, korgar och nät i hela Sverige. Ring ${site.phone} eller skicka din bockningslista.`,
   alternates: { canonical: "/kontakt" },
+  openGraph: {
+    title: `Kontakt | ${site.company}`,
+    description: "Kontakta oss för offert på prefab armering i hela Sverige.",
+    url: `${site.url}/kontakt`,
+  },
 };
 
 export default function KontaktPage() {
@@ -27,17 +32,19 @@ export default function KontaktPage() {
               <li className="flex items-start gap-3">
                 <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-brand-light text-brand"><IconPhone className="h-5 w-5" /></span>
                 <div>
-                  <p className="text-sm text-muted">Support</p>
+                  <p className="text-sm text-muted">Telefon</p>
                   <a href={site.phoneHref} className="font-semibold text-ink hover:text-brand">{site.phone}</a>
                 </div>
               </li>
-              <li className="flex items-start gap-3">
-                <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-brand-light text-brand"><IconPhone className="h-5 w-5" /></span>
-                <div>
-                  <p className="text-sm text-muted">Kontor</p>
-                  <a href={site.phoneOfficeHref} className="font-semibold text-ink hover:text-brand">{site.phoneOffice}</a>
-                </div>
-              </li>
+              {site.phoneOffice && (
+                <li className="flex items-start gap-3">
+                  <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-brand-light text-brand"><IconPhone className="h-5 w-5" /></span>
+                  <div>
+                    <p className="text-sm text-muted">Kontor</p>
+                    <a href={site.phoneOfficeHref} className="font-semibold text-ink hover:text-brand">{site.phoneOffice}</a>
+                  </div>
+                </li>
+              )}
               <li className="flex items-start gap-3">
                 <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-brand-light text-brand"><IconMail className="h-5 w-5" /></span>
                 <div>
@@ -56,7 +63,7 @@ export default function KontaktPage() {
                 <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-brand-light text-brand"><IconClock className="h-5 w-5" /></span>
                 <div>
                   <p className="text-sm text-muted">Öppettider</p>
-                  <p className="font-semibold text-ink">Vardagar 07:00–17:00</p>
+                  <p className="font-semibold text-ink">Vardagar 07:00–16:00</p>
                 </div>
               </li>
             </ul>
