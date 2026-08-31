@@ -4,6 +4,7 @@ import { Section, Container } from "@/components/ui";
 import { Breadcrumbs } from "@/components/sections";
 import { ContactForm } from "@/components/ContactForm";
 import { IconCheck, IconPhone } from "@/components/icons";
+import { JsonLd, breadcrumbSchema } from "@/lib/jsonld";
 
 export const metadata: Metadata = {
   title: "Begär offert på prefab armering",
@@ -61,6 +62,12 @@ export default function OffertPage() {
           <a href="/integritetspolicy" className="text-brand underline">integritetspolicy</a> och delar dem aldrig med tredje part.
         </p>
       </Section>
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: "Hem", url: site.url },
+          { name: "Begär offert", url: `${site.url}/offert` },
+        ])}
+      />
     </>
   );
 }

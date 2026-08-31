@@ -39,13 +39,11 @@ export const metadata: Metadata = {
     title: `${site.company} | ${site.tagline}`,
     description:
       "Prefab armering i hela Sverige – klippt & bockad, armeringskorgar, svetsad armering och nät. Tillverkning, leverans och montage.",
-    images: [{ url: "/og.jpg", width: 1200, height: 630, alt: site.company }],
   },
   twitter: {
     card: "summary_large_image",
     title: `${site.company} | ${site.tagline}`,
     description: "Prefabricerad armering i hela Sverige – tillverkning, leverans och montage.",
-    images: ["/og.jpg"],
   },
   robots: { index: true, follow: true },
 };

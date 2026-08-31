@@ -4,6 +4,7 @@ import { Section, SectionHeading } from "@/components/ui";
 import { Breadcrumbs } from "@/components/sections";
 import { ContactForm } from "@/components/ContactForm";
 import { IconPhone, IconMail, IconMapPin, IconClock } from "@/components/icons";
+import { JsonLd, breadcrumbSchema } from "@/lib/jsonld";
 
 export const metadata: Metadata = {
   title: "Kontakt",
@@ -78,6 +79,12 @@ export default function KontaktPage() {
           </div>
         </div>
       </Section>
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: "Hem", url: site.url },
+          { name: "Kontakt", url: `${site.url}/kontakt` },
+        ])}
+      />
     </>
   );
 }

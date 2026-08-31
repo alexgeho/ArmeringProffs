@@ -18,8 +18,8 @@ export function localBusinessSchema() {
     "@type": "Organization",
     "@id": `${site.url}/#business`,
     name: site.company,
-    image: `${site.url}/og.jpg`,
-    logo: `${site.url}/logo.png`,
+    image: `${site.url}/opengraph-image`,
+    logo: `${site.url}/opengraph-image`,
     url: site.url,
     telephone: site.phone,
     email: site.email,
@@ -112,7 +112,7 @@ export function articleSchema(opts: {
     publisher: {
       "@type": "Organization",
       name: site.company,
-      logo: { "@type": "ImageObject", url: `${site.url}/logo.png` },
+      logo: { "@type": "ImageObject", url: `${site.url}/opengraph-image` },
     },
   };
 }
