@@ -62,6 +62,12 @@ Se även färdigt armering-innehåll i gjutabetongplatta.se (`config/blog.ts` ar
 6. E-post: skapa `info@armeringproffs.se` på Inleed, sätt SMTP-env som för Agry.
 
 ## Status
-- **Ej påbörjad.** Prioritet just nu: flytta Agry-sajten VPS→Inleed Prime (se
-  `docs/DEPLOY.md`). Armeringproffs byggs efter det.
+- **BYGGD OCH LIVE (2026-08-31).** Sajten är byggd (Next.js 16, prefab armering, hela
+  Sverige), deployad på Inleed Prime och nås på http://armeringproffs.se. Autodeploy via
+  GitHub Actions (`git push` main → Inleed).
+- 👉 **Aktuell status, vad som är gjort och nästa steg finns i [`docs/STATUS.md`](./STATUS.md)** —
+  läs den FÖRST. Mål: leads (offertförfrågningar).
+- Kvar/nästa (se STATUS.md): SMTP för att leads ska mejlas (nu loggas de bara), riktiga
+  kontaktuppgifter (telefon/orgnr/adress är platshållare), HTTPS-cert klart + force-SSL,
+  Search Console, analytics, ev. Google Ads.
 - Affärsscope bekräftat 2026-08-31: full cykel + hela Sverige.
