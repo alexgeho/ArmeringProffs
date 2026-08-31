@@ -1,0 +1,50 @@
+name: Deploy to Inleed
+
+# Push till main -> bygg på GitHub-runnern -> rsync till Inleed via SSH -> starta om Passenger.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch: {}
+
+concurrency:
+  group: inleed-deploy
+  cancel-in-progress: true
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install & build
+        run: |
+          npm ci
+          npm run build
+
+      # Rsync:ar den byggda appen (inkl. .next) till Inleed och kör post-script över SSH.
+      # node_modules exkluderas – prod-beroenden installeras på servern (lättare än att synka).
+      - name: Deploy to Inleed
+        uses: easingthemes/ssh-deploy@v5.1.0
+        with:
+          SSH_PRIVATE_KEY: ${{ secrets.INLEED_SSH_KEY }}
+          REMOTE_HOST: ${{ secrets.INLEED_SSH_HOST }}
+          REMOTE_USER: ${{ secrets.INLEED_SSH_USER }}
+          REMOTE_PORT: ${{ secrets.INLEED_SSH_PORT }}
+          SOURCE: "./"
+          TARGET: ${{ secrets.INLEED_APP_DIR }}
+          ARGS: "-rlzc --delete"
+          EXCLUDE: "/node_modules/, /.git/, /.github/, /.env, /tmp/"
+          SCRIPT_AFTER: |
+            set -e
+            ${{ secrets.INLEED_ACTIVATE }}
+            cd "${{ secrets.INLEED_APP_DIR }}"
+            npm ci --omit=dev
+            mkdir -p tmp && touch tmp/restart.txt
+            echo "Deploy klart – Passenger startar om."
