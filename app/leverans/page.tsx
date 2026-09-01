@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { site } from "@/config/site";
 import { regions } from "@/config/cities";
 import { Section, SectionHeading } from "@/components/ui";
@@ -29,6 +30,16 @@ export default function LeveransPage() {
           title="Armering levererad i hela Sverige"
           intro="Oavsett var i landet ditt bygg- eller anläggningsprojekt ligger tillverkar vi armeringen efter din bockningslista eller ritning och levererar den till arbetsplatsen. Ange leveransort och mängd i offertförfrågan så räknar vi fram frakt och leveranstid."
         />
+        <figure className="mt-8 overflow-hidden rounded-2xl border border-line">
+          <Image
+            src="/images/leverans-betongplatta.webp"
+            alt="Färdig armerad betongplatta på ett byggprojekt i Sverige"
+            width={1600}
+            height={1240}
+            sizes="(min-width: 1152px) 1152px, 100vw"
+            className="h-auto w-full object-cover"
+          />
+        </figure>
         <div className="mt-8">
           <h2 className="text-lg font-bold text-ink">Vi levererar bland annat till</h2>
           <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">

@@ -183,6 +183,12 @@ export const products: Product[] = [
       "Armeringsjärn i kamstål B500B, dimension 6–32 mm. Raka längder och rullat material som komplement till prefab armering. Levereras i hela Sverige. Begär offert.",
     intro:
       "Vi levererar armeringsjärn i kamstål B500B som komplement till prefab-sortimentet. Raka längder och rullat material i dimension Ø6–Ø32 mm – för dig som vill komplettera nät och bockade detaljer med lösa järn.",
+    image: {
+      src: "/images/armeringsjarn-kamstal.webp",
+      alt: "Armeringsjärn i kamstål bundna i ett rutnät på bygget",
+      width: 1400,
+      height: 938,
+    },
     keywords: [
       "armeringsjärn",
       "armeringsjarn",
@@ -230,6 +236,12 @@ export const products: Product[] = [
       "Distanser, klossar, bockstöd och bindtråd för rätt placering och täckskikt av armeringen. Tillbehör till din prefab armering, levererat i hela Sverige. Begär offert.",
     intro:
       "Vi levererar distanser och tillbehör som håller armeringen på rätt plats och ger korrekt täckskikt. Distansklossar, distanslister, bockstöd, bindtråd och nätstöd – allt du behöver för att montera armeringen rätt.",
+    image: {
+      src: "/images/distanser-armeringsnat.webp",
+      alt: "Armeringsnät upplyft på distanser för rätt täckskikt",
+      width: 1400,
+      height: 935,
+    },
     keywords: [
       "distanser armering",
       "distanser",

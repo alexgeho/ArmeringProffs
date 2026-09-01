@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { products } from "@/config/products";
 import { site } from "@/config/site";
 import { Section, SectionHeading, Button } from "@/components/ui";
@@ -30,6 +31,16 @@ export default function ProdukterPage() {
           title="Prefabricerad armering – hela sortimentet"
           intro={`Vi tillverkar och levererar prefab armering i ${site.regionInflected}. Välj en kategori för mer information och begär en offert efter din bockningslista eller ritning.`}
         />
+        <figure className="mt-8 overflow-hidden rounded-2xl border border-line">
+          <Image
+            src="/images/produkter-betongplatta.webp"
+            alt="Färdig betongplatta armerad med prefab armering"
+            width={1600}
+            height={1068}
+            sizes="(min-width: 1152px) 1152px, 100vw"
+            className="h-auto w-full object-cover"
+          />
+        </figure>
         <div className="mt-10 grid gap-6 lg:grid-cols-2">
           {products.map((p) => (
             <div key={p.slug} className="flex flex-col rounded-xl border border-line p-6 sm:p-8">
