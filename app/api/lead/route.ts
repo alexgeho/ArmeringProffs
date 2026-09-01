@@ -23,11 +23,23 @@ export async function POST(request: Request) {
   };
 
   const name = get("name");
-  const phone = get("phone");
+  let phone = get("phone");
+  let email = get("email");
 
-  // Enkel validering
-  if (!name || !phone) {
-    return NextResponse.json({ ok: false, error: "Namn och telefon krävs" }, { status: 400 });
+  // Kompakt hero-form skickar ett kombinerat fält "contact" (telefon ELLER e-post).
+  // Innehåller det "@" tolkas det som e-post, annars som telefon.
+  const contact = get("contact");
+  if (contact) {
+    if (contact.includes("@")) email = email ?? contact;
+    else phone = phone ?? contact;
+  }
+
+  // Enkel validering: minst en kontaktuppgift (telefon eller e-post). Namn är valfritt.
+  if (!(phone || email)) {
+    return NextResponse.json(
+      { ok: false, error: "Telefon eller e-post krävs" },
+      { status: 400 },
+    );
   }
 
   // Ev. bifogad ritning/bockningslista
@@ -51,7 +63,7 @@ export async function POST(request: Request) {
   const lead = {
     name,
     phone,
-    email: get("email"),
+    email,
     location: get("location"),
     quantity: get("quantity"),
     message: get("message"),

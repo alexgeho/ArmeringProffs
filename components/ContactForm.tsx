@@ -39,49 +39,61 @@ export function ContactForm({ compact = false, source = "webbformulär" }: { com
 
   return (
     <form onSubmit={onSubmit} className="grid gap-4">
-      <div className={compact ? "grid gap-4" : "grid gap-4 sm:grid-cols-2"}>
-        <Field name="name" label="Namn / företag" placeholder="Namn eller företag" required />
-        <Field name="phone" label="Telefon" type="tel" placeholder="07x-xxx xx xx" required />
-      </div>
+      {/* Namn – alltid full bredd, valfritt */}
+      <Field name="name" label="Namn / företag" placeholder="Namn eller företag" />
+
       {compact ? (
-        <Field name="email" label="E-post" type="email" placeholder="namn@exempel.se" required />
+        /* Ett kombinerat kontaktfält – telefon eller e-post */
+        <Field
+          name="contact"
+          label="Telefon / E-post"
+          placeholder="07x-xxx xx xx eller namn@exempel.se"
+          required
+        />
       ) : (
-        <>
-          <div className="grid gap-4 sm:grid-cols-2">
-            <Field name="email" label="E-post" type="email" placeholder="namn@exempel.se" required />
-            <Field name="location" label="Leveransort" placeholder="T.ex. Göteborg" />
-          </div>
-
-          <Field name="quantity" label="Mängd / dimension" placeholder="T.ex. 2 ton, nät 6x150, Ø12 kamstål" />
-
-          <div className="grid gap-1.5">
-            <label htmlFor="message" className="text-sm font-medium text-ink">
-              Beskriv ditt projekt
-            </label>
-            <textarea
-              id="message"
-              name="message"
-              rows={4}
-              placeholder="T.ex. klippt & bockad armering enligt bockningslista, armeringskorgar till 12 pelare, specialnät 2,4 × 6 m..."
-              className="rounded-lg border border-line bg-white px-4 py-3 text-ink placeholder:text-muted focus:border-brand focus:outline-none"
-            />
-          </div>
-
-          <div className="grid gap-1.5">
-            <label htmlFor="drawing" className="text-sm font-medium text-ink">
-              Ritning / bockningslista <span className="font-normal text-muted">(valfritt)</span>
-            </label>
-            <input
-              id="drawing"
-              name="drawing"
-              type="file"
-              accept=".pdf,.dwg,.dxf,.xls,.xlsx,.csv,.doc,.docx,.png,.jpg,.jpeg,.zip"
-              className="rounded-lg border border-line bg-white px-4 py-2.5 text-sm text-ink-soft file:mr-3 file:rounded-md file:border-0 file:bg-brand-light file:px-3 file:py-1.5 file:text-sm file:font-semibold file:text-brand hover:file:bg-orange-100 focus:border-brand focus:outline-none"
-            />
-            <p className="text-xs text-muted">PDF, DWG/DXF, Excel, bild eller zip. Max ca 10 MB.</p>
-          </div>
-        </>
+        /* Full form: telefon + e-post var för sig */
+        <div className="grid gap-4 sm:grid-cols-2">
+          <Field name="phone" label="Telefon" type="tel" placeholder="07x-xxx xx xx" required />
+          <Field name="email" label="E-post" type="email" placeholder="namn@exempel.se" required />
+        </div>
       )}
+
+      {/* Extra fält bara i den fulla formen (offert/kontakt) */}
+      {!compact && (
+        <div className="grid gap-4 sm:grid-cols-2">
+          <Field name="location" label="Leveransort" placeholder="T.ex. Göteborg" />
+          <Field name="quantity" label="Mängd / dimension" placeholder="T.ex. 2 ton, Ø12 kamstål" />
+        </div>
+      )}
+
+      {/* Meddelande – både i hero och full form */}
+      <div className="grid gap-1.5">
+        <label htmlFor="message" className="text-sm font-medium text-ink">
+          Beskriv ditt projekt
+        </label>
+        <textarea
+          id="message"
+          name="message"
+          rows={compact ? 3 : 4}
+          placeholder="T.ex. armering till betongplatta 8 × 10 m – räkna gärna på ritningen jag bifogar."
+          className="rounded-lg border border-line bg-white px-4 py-3 text-ink placeholder:text-muted focus:border-brand focus:outline-none"
+        />
+      </div>
+
+      {/* Bifoga ritning/bockningslista – både i hero och full form */}
+      <div className="grid gap-1.5">
+        <label htmlFor="drawing" className="text-sm font-medium text-ink">
+          Ritning / bockningslista <span className="font-normal text-muted">(valfritt)</span>
+        </label>
+        <input
+          id="drawing"
+          name="drawing"
+          type="file"
+          accept=".pdf,.dwg,.dxf,.xls,.xlsx,.csv,.doc,.docx,.png,.jpg,.jpeg,.zip"
+          className="rounded-lg border border-line bg-white px-4 py-2.5 text-sm text-ink-soft file:mr-3 file:rounded-md file:border-0 file:bg-brand-light file:px-3 file:py-1.5 file:text-sm file:font-semibold file:text-brand hover:file:bg-orange-100 focus:border-brand focus:outline-none"
+        />
+        <p className="text-xs text-muted">PDF, DWG/DXF, Excel, bild eller zip. Max ca 10 MB.</p>
+      </div>
 
       <label className="flex items-start gap-2 text-sm text-ink-soft">
         <input type="checkbox" name="consent" required className="mt-1 h-4 w-4 accent-[var(--color-brand)]" />
@@ -98,15 +110,6 @@ export function ContactForm({ compact = false, source = "webbformulär" }: { com
       >
         {status === "sending" ? "Skickar..." : "Skicka förfrågan"}
       </button>
-
-      {compact && (
-        <p className="text-center text-sm text-muted">
-          Har du ritning eller bockningslista?{" "}
-          <a href="/offert" className="font-medium text-brand underline underline-offset-2 hover:no-underline">
-            Bifoga den på offertsidan
-          </a>
-        </p>
-      )}
 
       {status === "error" && (
         <p className="text-sm text-red-600">

@@ -38,8 +38,9 @@ export function Hero({
             sizes="100vw"
             className="pointer-events-none absolute inset-0 h-full w-full object-cover"
           />
-          {/* mörk gradient så vit text alltid är läsbar men fotot syns */}
-          <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-ink/85 via-ink/55 to-ink/25" />
+          {/* mörk gradient så vit text alltid är läsbar men fotot syns.
+              Kraftig vänster (bakom texten), ljusare höger (visar fotot). */}
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-ink via-ink/80 via-55% to-ink/35" />
         </>
       ) : (
         <RebarMeshPattern className="pointer-events-none absolute inset-0 h-full w-full text-white opacity-[0.07]" />
@@ -50,7 +51,7 @@ export function Hero({
             <IconStar className="h-4 w-4 text-brand" /> Prefab armering · Tillverkning & montage · Hela Sverige
           </span>
           <h1 className="mt-5 text-4xl font-bold leading-tight tracking-tight sm:text-5xl">{title}</h1>
-          <p className="mt-5 max-w-xl text-lg leading-relaxed text-slate-300">{intro}</p>
+          <p className="mt-5 max-w-xl text-lg leading-relaxed text-slate-100">{intro}</p>
 
           <ul className="mt-7 grid gap-3 sm:grid-cols-2">
             {["Prefab efter bockningslista & ritning", "Klippt, bockat, svetsat & korgar", "Leverans i hela Sverige", "Tillverkning, leverans & montage"].map((t) => (
@@ -61,7 +62,11 @@ export function Hero({
           </ul>
 
           <div className="mt-8 flex flex-wrap items-center gap-4">
-            <Button href="/offert">Begär offert <IconArrow className="h-4 w-4" /></Button>
+            {/* På mobil ligger formuläret direkt under – då är denna knapp överflödig.
+                Visas därför bara från sm och uppåt (där formuläret står bredvid). */}
+            <span className="hidden sm:inline-flex">
+              <Button href="/offert">Begär offert <IconArrow className="h-4 w-4" /></Button>
+            </span>
             <a href={site.phoneHref} className="inline-flex h-12 items-center gap-2 rounded-lg border border-white/20 px-5 font-semibold text-white hover:bg-white/10">
               <IconPhone className="h-4 w-4 text-brand" /> {site.phone}
             </a>
