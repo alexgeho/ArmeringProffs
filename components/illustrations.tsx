@@ -130,10 +130,119 @@ export function CoverLayerDiagram({ className = "" }: { className?: string }) {
   );
 }
 
+/* ---------- Bockningsschema: vanliga former ---------- */
+export function BendingShapesDiagram({ className = "" }: { className?: string }) {
+  const ink = "#0f172a";
+  const soft = "#64748b";
+  const accent = "#ea580c";
+  const label = (x: number, t: string) => (
+    <text x={x} y="140" textAnchor="middle" fontSize="13" fontWeight="600" fill={soft} fontFamily="system-ui, sans-serif">{t}</text>
+  );
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 460 160"
+      fill="none"
+      role="img"
+      aria-label="Bockningsschema med vanliga armeringsformer: rak stång, vinkeljärn, U-bygel och sluten bygel"
+    >
+      {/* Rak */}
+      <line x1="20" y1="70" x2="100" y2="70" stroke={accent} strokeWidth="6" strokeLinecap="round" />
+      {label(60, "Rak")}
+
+      {/* Vinkel (L) */}
+      <path d="M 150 30 L 150 100 L 215 100" stroke={accent} strokeWidth="6" strokeLinecap="round" strokeLinejoin="round" />
+      {label(182, "Vinkel")}
+
+      {/* U-bygel */}
+      <path d="M 255 100 L 255 45 L 315 45 L 315 100" stroke={accent} strokeWidth="6" strokeLinecap="round" strokeLinejoin="round" />
+      {label(285, "U-bygel")}
+
+      {/* Sluten bygel */}
+      <path d="M 375 100 L 375 40 L 435 40 L 435 100 L 383 100" stroke={ink} strokeWidth="6" strokeLinecap="round" strokeLinejoin="round" />
+      {label(405, "Sluten bygel")}
+    </svg>
+  );
+}
+
+/* ---------- Dimensionsjämförelse: Ø6–Ø32 (tvärsnitt i skala) ---------- */
+export function RebarDiametersDiagram({ className = "" }: { className?: string }) {
+  const ink = "#0f172a";
+  const soft = "#64748b";
+  const accent = "#ea580c";
+  const bars = [
+    { mm: 6, x: 40 }, { mm: 8, x: 73 }, { mm: 10, x: 108 }, { mm: 12, x: 147 },
+    { mm: 16, x: 190 }, { mm: 20, x: 239 }, { mm: 25, x: 295 }, { mm: 32, x: 359 },
+  ];
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 420 150"
+      fill="none"
+      role="img"
+      aria-label="Tvärsnitt av armeringsjärn i skala från 6 till 32 millimeter"
+    >
+      {bars.map((b) => (
+        <g key={b.mm}>
+          <circle cx={b.x} cy="70" r={(b.mm * 1.5) / 2} fill={accent} stroke={ink} strokeWidth="1.5" />
+          <text x={b.x} y="128" textAnchor="middle" fontSize="12" fontWeight="600" fill={soft} fontFamily="system-ui, sans-serif">Ø{b.mm}</text>
+        </g>
+      ))}
+    </svg>
+  );
+}
+
+/* ---------- Armeringsnät med överlapp ---------- */
+export function MeshOverlapDiagram({ className = "" }: { className?: string }) {
+  const ink = "#0f172a";
+  const soft = "#64748b";
+  const accent = "#ea580c";
+  const line = "#94a3b8";
+  const gx = [20, 60, 100, 140, 180, 220, 260, 300, 340, 380, 420];
+  const gy = [70, 100, 130, 160];
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 440 200"
+      fill="none"
+      role="img"
+      aria-label="Två armeringsnät som överlappar varandra i skarven"
+    >
+      {/* överlappszon markerad */}
+      <rect x="180" y="60" width="80" height="110" fill="#fff7ed" />
+
+      {/* nät (rutnät) */}
+      {gx.map((x) => (
+        <line key={`v${x}`} x1={x} y1="70" x2={x} y2="160" stroke={line} strokeWidth="2" />
+      ))}
+      {gy.map((y) => (
+        <line key={`h${y}`} x1="20" y1={y} x2="420" y2={y} stroke={line} strokeWidth="2" />
+      ))}
+
+      {/* accent på trådarna i överlappet */}
+      {[180, 220, 260].map((x) => (
+        <line key={`ov${x}`} x1={x} y1="70" x2={x} y2="160" stroke={accent} strokeWidth="3" />
+      ))}
+
+      {/* måttbygel för överlapp */}
+      <line x1="180" y1="45" x2="260" y2="45" stroke={ink} strokeWidth="1.5" />
+      <path d="M 183 42 L 180 45 L 183 48" fill={ink} />
+      <path d="M 257 42 L 260 45 L 257 48" fill={ink} />
+      <text x="220" y="36" textAnchor="middle" fontSize="12" fontWeight="700" fill={ink} fontFamily="system-ui, sans-serif">Överlapp</text>
+
+      <text x="100" y="188" textAnchor="middle" fontSize="12" fill={soft} fontFamily="system-ui, sans-serif">Nät A</text>
+      <text x="340" y="188" textAnchor="middle" fontSize="12" fill={soft} fontFamily="system-ui, sans-serif">Nät B</text>
+    </svg>
+  );
+}
+
 /** Register så bloggens content kan referera en illustration via nyckel. */
 export const figures = {
   "cover-layer": CoverLayerDiagram,
   "rebar-cage": RebarCageIllustration,
+  "bending-shapes": BendingShapesDiagram,
+  "rebar-diameters": RebarDiametersDiagram,
+  "mesh-overlap": MeshOverlapDiagram,
 } as const;
 
 export type FigureKey = keyof typeof figures;

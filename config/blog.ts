@@ -142,6 +142,8 @@ export const posts: Post[] = [
       { type: "h2", text: "Överlapp och placering" },
       { type: "p", text: "Skarvar mellan nät ska överlappa minst 1,5–2 rutor (ca 200–300 mm) och bindas ihop. Nätet läggs på distanser så att det hamnar inne i betongen med tillräckligt täckskikt (ofta minst 25–35 mm). Läs mer i vår guide om [armering till betongplatta](/blogg/armering-till-betongplatta)." },
 
+      { type: "figure", illustration: "mesh-overlap", caption: "Två armeringsnät skarvas med överlapp på ca 200–300 mm som binds ihop." },
+
       { type: "h2", text: "Osäker på valet?" },
       { type: "p", text: "Vill du inte räkna själv? Vi tillverkar [svetsad armering och specialnät](/produkter/svetsad-armering) efter dina mått och levererar i hela Sverige. Begär en kostnadsfri offert." },
     ],
@@ -184,6 +186,8 @@ export const posts: Post[] = [
           ["16–32 mm", "Kraftiga balkar, pelare och konstruktioner med stora laster"],
         ],
       },
+
+      { type: "figure", illustration: "rebar-diameters", caption: "Armeringsjärn i kamstål B500B – dimensioner Ø6–Ø32 mm i skala." },
 
       { type: "h2", text: "Kamjärn eller armeringsnät?" },
       { type: "p", text: "I en platta på mark kombineras oftast båda: armeringsnät ger jämn armering över hela ytan, medan lösa armeringsjärn förstärker kanter, kantbalkar och punkter med stora laster. Under bärande väggar läggs extra järn för att fördela lasten. Se vår guide om [armering till betongplatta](/blogg/armering-till-betongplatta) för helheten." },
@@ -369,6 +373,8 @@ export const posts: Post[] = [
 
       { type: "h2", text: "Så fungerar det" },
       { type: "p", text: "Utifrån konstruktionsritningen tas en bockningslista fram som anger varje järns dimension, längd, form och antal. Armeringsverkstaden kapar och bockar järnen enligt listan, och de levereras märkta och sorterade till bygget. Kantbyglar, kramlor och förstärkningsjärn är exempel på detaljer som ofta beställs bockade." },
+
+      { type: "figure", illustration: "bending-shapes", caption: "Vanliga former som bockas efter bockningslistan – från raka stänger till byglar." },
 
       { type: "h2", text: "Fördelar" },
       { type: "ul", items: [
