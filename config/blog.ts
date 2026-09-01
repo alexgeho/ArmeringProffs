@@ -6,6 +6,7 @@
  */
 
 import type { Faq } from "@/config/faq";
+import type { FigureKey } from "@/components/illustrations";
 
 export type Block =
   | { type: "h2"; text: string }
@@ -13,7 +14,8 @@ export type Block =
   | { type: "p"; text: string }
   | { type: "ul"; items: string[] }
   | { type: "ol"; items: string[] }
-  | { type: "table"; head: string[]; rows: string[][]; caption?: string };
+  | { type: "table"; head: string[]; rows: string[][]; caption?: string }
+  | { type: "figure"; illustration: FigureKey; caption?: string };
 
 export type Post = {
   slug: string;
@@ -326,6 +328,8 @@ export const posts: Post[] = [
         "Välj distanshöjd efter önskat täckskikt och armeringens läge i plattan.",
         "Använd distanser av rätt typ mot underlaget så de inte trycker igenom.",
       ] },
+
+      { type: "figure", illustration: "cover-layer", caption: "Tvärsnitt: distanserna lyfter armeringen så att den ligger inne i betongen med rätt täckskikt – inte mot underlaget." },
 
       { type: "h2", text: "Vanliga misstag" },
       { type: "ul", items: [

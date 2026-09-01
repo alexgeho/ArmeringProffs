@@ -9,6 +9,7 @@ import {
   IconPhone, IconCheck, IconShield, IconStar,
   IconTruck, IconTools, IconLayers, IconRuler, IconArrow, IconChevron,
 } from "./icons";
+import { RebarMeshPattern, RebarCageIllustration } from "./illustrations";
 
 /* ---------- Hero ---------- */
 export function Hero({
@@ -22,7 +23,7 @@ export function Hero({
 }) {
   return (
     <section className="relative overflow-hidden bg-ink">
-      <div className="absolute inset-0 opacity-[0.06]" style={{ backgroundImage: "radial-gradient(circle at 1px 1px, white 1px, transparent 0)", backgroundSize: "22px 22px" }} />
+      <RebarMeshPattern className="pointer-events-none absolute inset-0 h-full w-full text-white opacity-[0.07]" />
       <Container className="relative grid gap-10 py-16 sm:py-20 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
         <div className="text-white">
           <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-sm font-medium text-orange-200">

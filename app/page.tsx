@@ -4,6 +4,7 @@ import { Section, SectionHeading } from "@/components/ui";
 import {
   Hero, UspBar, ProductsGrid, Process, LeveransSection, Reviews, CtaBanner,
 } from "@/components/sections";
+import { RebarCageIllustration } from "@/components/illustrations";
 import { FaqAccordion } from "@/components/FaqAccordion";
 import { JsonLd, faqSchema, serviceSchema } from "@/lib/jsonld";
 
@@ -20,13 +21,20 @@ export default function HomePage() {
 
       {/* Intro/SEO-text */}
       <Section muted>
-        <div className="mx-auto max-w-3xl text-center">
-          <SectionHeading
-            center
-            eyebrow="Armeringsleverantör för hela Sverige"
-            title="Prefab armering efter din ritning"
-            intro={`${site.company} tillverkar och levererar prefabricerad armering för bygg och anläggning – klippt och bockad armering, armeringskorgar, svetsad armering och armeringsnät, kamstål B500B och distanser. Vi tar hela cykeln: tillverkning efter bockningslista, leverans i hela Sverige och montage på plats. Skicka din ritning så får du en offert.`}
-          />
+        <div className="grid items-center gap-10 lg:grid-cols-[1fr_0.8fr]">
+          <div>
+            <SectionHeading
+              eyebrow="Armeringsleverantör för hela Sverige"
+              title="Prefab armering efter din ritning"
+              intro={`${site.company} tillverkar och levererar prefabricerad armering för bygg och anläggning – klippt och bockad armering, armeringskorgar, svetsad armering och armeringsnät, kamstål B500B och distanser. Vi tar hela cykeln: tillverkning efter bockningslista, leverans i hela Sverige och montage på plats. Skicka din ritning så får du en offert.`}
+            />
+          </div>
+          <div className="rounded-2xl border border-line bg-white p-6 shadow-sm">
+            <RebarCageIllustration className="h-auto w-full" />
+            <p className="mt-4 text-center text-sm text-muted">
+              Armeringskorg – svetsad prefab efter dina mått
+            </p>
+          </div>
         </div>
       </Section>
 

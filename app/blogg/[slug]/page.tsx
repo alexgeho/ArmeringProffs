@@ -8,6 +8,7 @@ import { Section, Container, Button } from "@/components/ui";
 import { Breadcrumbs, CtaBanner } from "@/components/sections";
 import { FaqAccordion } from "@/components/FaqAccordion";
 import { IconClock, IconArrow, IconCheck } from "@/components/icons";
+import { figures } from "@/components/illustrations";
 import { JsonLd, articleSchema, breadcrumbSchema, faqSchema } from "@/lib/jsonld";
 
 export function generateStaticParams() {
@@ -104,6 +105,15 @@ function renderBlock(b: Block, i: number) {
         {b.caption && <figcaption className="mt-2 text-sm text-muted">{b.caption}</figcaption>}
       </figure>
     );
+  if (b.type === "figure") {
+    const Illustration = figures[b.illustration];
+    return (
+      <figure key={i} className="mt-8 rounded-xl border border-line bg-surface p-5 sm:p-8">
+        <Illustration className="mx-auto h-auto w-full max-w-lg" />
+        {b.caption && <figcaption className="mt-4 text-center text-sm text-muted">{b.caption}</figcaption>}
+      </figure>
+    );
+  }
   return <p key={i} className="mt-4 text-lg leading-relaxed text-ink-soft">{renderText(b.text)}</p>;
 }
 
