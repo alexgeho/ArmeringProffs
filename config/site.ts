@@ -47,6 +47,9 @@ export const site = {
 
   // Geografiska koordinater (för LocalBusiness) – TODO: uppdatera vid behov
   geo: { lat: 62.0, lng: 15.0 },
+
+  // Google Analytics 4 mät-ID (gtag.js). Tomt = ingen spårning laddas.
+  gaId: "G-730LFLXQCP",
 } as const;
 
 export type Site = typeof site;
