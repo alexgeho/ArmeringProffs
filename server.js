@@ -20,20 +20,7 @@ const app = next({ dev: false });
 const handle = app.getRequestHandler();
 
 app.prepare().then(() => {
-  createServer((req, res) => {
-    // Force HTTPS. Passenger/Apache terminerar SSL och skickar vidare med
-    // X-Forwarded-Proto. Vi omdirigerar bara när proxyn uttryckligen säger
-    // "http" – saknas headern gör vi inget (undviker redirect-loop).
-    if (req.headers["x-forwarded-proto"] === "http") {
-      const host = req.headers.host;
-      if (host) {
-        res.writeHead(301, { Location: `https://${host}${req.url}` });
-        res.end();
-        return;
-      }
-    }
-    handle(req, res);
-  }).listen(port, () => {
+  createServer((req, res) => handle(req, res)).listen(port, () => {
     console.log(`> Server listening on port ${port}`);
   });
 });
