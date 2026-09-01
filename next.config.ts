@@ -8,6 +8,12 @@ const nextConfig: NextConfig = {
     cpus: 1,
     workerThreads: false,
   },
+  // Bilderna är redan nedskalade och konverterade till WebP i public/images.
+  // På delad hosting (Passenger, cpus:1) undviker vi Next runtime-optimizern
+  // – den spawnar trådar och kan slå i nproc-gränsen. Filerna serveras statiskt.
+  images: {
+    unoptimized: true,
+  },
 };
 
 export default nextConfig;

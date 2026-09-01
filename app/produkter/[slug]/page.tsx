@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import { products, getProduct } from "@/config/products";
 import { posts } from "@/config/blog";
 import { faq } from "@/config/faq";
@@ -101,6 +102,18 @@ export default async function ProductPage({
       <Section>
         <div className="grid gap-12 lg:grid-cols-[1.4fr_0.6fr]">
           <div className="prose-body max-w-none">
+            {p.image && (
+              <figure className="mb-8 overflow-hidden rounded-2xl border border-line">
+                <Image
+                  src={p.image.src}
+                  alt={p.image.alt}
+                  width={p.image.width}
+                  height={p.image.height}
+                  sizes="(min-width: 1024px) 60vw, 100vw"
+                  className="h-auto w-full object-cover"
+                />
+              </figure>
+            )}
             {p.body.map((b) => (
               <div key={b.heading} className="mb-8">
                 <h2 className="text-2xl font-bold text-ink">{b.heading}</h2>

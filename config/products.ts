@@ -19,6 +19,8 @@ export type Product = {
   body: { heading: string; text: string }[];
   faqs?: Faq[]; // Kategorispecifika frågor → FAQPage-schema
   featured?: boolean;
+  /** Produktfoto (WebP i public/images). Visas i sidans brödtext. */
+  image?: { src: string; alt: string; width: number; height: number };
 };
 
 export const products: Product[] = [
@@ -31,6 +33,12 @@ export const products: Product[] = [
       "Klippt och bockad armering tillverkad efter din bockningslista eller ritning. Kapat och bockat kamstål B500B, märkt och sorterat, levererat i hela Sverige. Begär offert.",
     intro:
       "Vi tillverkar klippt och bockad armering efter din bockningslista eller konstruktionsritning. Varje järn kapas och bockas till rätt längd och form i B500B, märks och sorteras – redo att läggas direkt på bygget. Vi levererar i hela Sverige.",
+    image: {
+      src: "/images/klippt-och-bockad-bockning.webp",
+      alt: "Kamstål B500B bockas i en bockningsmaskin till rätt form",
+      width: 1400,
+      height: 788,
+    },
     keywords: [
       "klippt och bockad armering",
       "bockad armering",

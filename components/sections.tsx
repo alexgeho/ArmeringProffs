@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import type { ReactNode } from "react";
 import { site } from "@/config/site";
 import { products } from "@/config/products";
@@ -16,14 +17,33 @@ export function Hero({
   title,
   intro,
   formSource = "hero",
+  bgImage,
+  bgAlt = "",
 }: {
   title: ReactNode;
   intro: string;
   formSource?: string;
+  bgImage?: string;
+  bgAlt?: string;
 }) {
   return (
     <section className="relative overflow-hidden bg-ink">
-      <RebarMeshPattern className="pointer-events-none absolute inset-0 h-full w-full text-white opacity-[0.07]" />
+      {bgImage ? (
+        <>
+          <Image
+            src={bgImage}
+            alt={bgAlt}
+            fill
+            priority
+            sizes="100vw"
+            className="pointer-events-none absolute inset-0 h-full w-full object-cover"
+          />
+          {/* mörk gradient så vit text alltid är läsbar men fotot syns */}
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-ink/85 via-ink/55 to-ink/25" />
+        </>
+      ) : (
+        <RebarMeshPattern className="pointer-events-none absolute inset-0 h-full w-full text-white opacity-[0.07]" />
+      )}
       <Container className="relative grid gap-10 py-16 sm:py-20 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
         <div className="text-white">
           <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-sm font-medium text-orange-200">
