@@ -131,6 +131,17 @@ armeringskorgar, svetsad armering/nät, kamstål, distanser) — модель of
 
 ---
 
+## 🔎 SEO-аудит (2026-09-05) — проверено по факту на живом сайте
+- ✅ robots.txt (allow, sitemap, host), sitemap 39 URL без дублей, канонические на всех, 404 работает, HTTPS,
+  по 1 H1 на странице, уникальные title/description, `robots: index,follow`, OG-теги, metadataBase.
+- 🔧 Исправлено: Product-разметка была невалидна (offers без цены) → на продуктовых перешёл на **Service**;
+  из Organization-разметки убран **фейковый телефон-плейсхолдер** (нельзя отдавать неверный NAP).
+- ℹ️ **FAQ rich results убраны Google 7 мая 2026** — FAQPage-разметка больше не даёт сниппетов (но валидна, оставили).
+- ⚠️ `images.unoptimized: true` (шаред-хостинг) — компромисс по Core Web Vitals; образа заранее в WebP, CLS ок (width/height есть).
+- ⚠️ **Риск doorway** у 12 локальных страниц: уникальны intro/FAQ/соседние орты, но продуктовый блок/CTA общие;
+  в главном меню их нет (только хаб `/leverans` + футер). Мониторить индексацию; при провисании — обогатить
+  реальным локальным контентом (нужны данные) или сократить число.
+
 ## 🗒️ Лог сессии 2026-09-05
 - **GSC**: подтверждена property `armeringproffs.se`, отправлена `sitemap.xml`. Запрошена индексация (URL Inspection): `/armeringskalkylator`, `/blogg/vad-kostar-armering` (главная уже была indexed). Остальные новые URL подтянутся из sitemap.
 - **Ещё контент (2-й заход)**: +2 статьи (`armering-till-plintar`, `armera-stodmur`) → блог 13 статей. Промо-блок калькулятора на `/blogg`.
