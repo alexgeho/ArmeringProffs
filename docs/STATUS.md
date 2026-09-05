@@ -138,9 +138,10 @@ armeringskorgar, svetsad armering/nät, kamstål, distanser) — модель of
   из Organization-разметки убран **фейковый телефон-плейсхолдер** (нельзя отдавать неверный NAP).
 - ℹ️ **FAQ rich results убраны Google 7 мая 2026** — FAQPage-разметка больше не даёт сниппетов (но валидна, оставили).
 - ⚠️ `images.unoptimized: true` (шаред-хостинг) — компромисс по Core Web Vitals; образа заранее в WebP, CLS ок (width/height есть).
-- ⚠️ **Риск doorway** у 12 локальных страниц: уникальны intro/FAQ/соседние орты, но продуктовый блок/CTA общие;
-  в главном меню их нет (только хаб `/leverans` + футер). Мониторить индексацию; при провисании — обогатить
-  реальным локальным контентом (нужны данные) или сократить число.
+- ✅ **Doorway-риск снижен** (2026-09-05): на каждый город добавлен уникальный 2-й абзац (`intro2`) и блок
+  «Vanliga användningsområden» (`sectors`), + сокращён in-content список городов до соседних по landsdel
+  (убран red-flag «список всех городов»). Уникальны: H1, angle, intro2, sectors, leverans-текст, nearby, FAQ.
+  Футер по-прежнему листит 10 городов (стандартная практика, ок). Дальше — мониторить индексацию в GSC.
 
 ## 🗒️ Лог сессии 2026-09-05
 - **GSC**: подтверждена property `armeringproffs.se`, отправлена `sitemap.xml`. Запрошена индексация (URL Inspection): `/armeringskalkylator`, `/blogg/vad-kostar-armering` (главная уже была indexed). Остальные новые URL подтянутся из sitemap.
