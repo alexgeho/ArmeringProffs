@@ -73,7 +73,11 @@ export default async function CityPage({
 
   const url = `${site.url}/armering/${c.slug}`;
   const faqs = localFaqs(c);
-  const others = cities.filter((x) => x.slug !== c.slug);
+  // Visa bara närliggande orter (samma landsdel) – undvik ett stort block med
+  // länkar till alla städer (Googles doorway-varning). Faller tillbaka till ett
+  // fåtal om landsdelen bara har en ort.
+  const sameLandsdel = cities.filter((x) => x.slug !== c.slug && x.landsdel === c.landsdel);
+  const others = sameLandsdel.length ? sameLandsdel : cities.filter((x) => x.slug !== c.slug).slice(0, 4);
   const norrland = c.landsdel === "Norrland";
 
   return (
@@ -127,6 +131,7 @@ export default async function CityPage({
           title={`Armering efter din ritning – levererad till ${c.name}`}
           intro={`Vi tillverkar prefabricerad armering och levererar den till bygg- och anläggningsprojekt i ${c.name} och ${c.lan}. Skicka din bockningslista eller ritning så tar vi fram en offert med pris och leveranstid.`}
         />
+        <p className="mt-6 max-w-3xl text-lg leading-relaxed text-ink-soft">{c.intro2}</p>
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {products.map((p) => (
             <Link
@@ -141,6 +146,18 @@ export default async function CityPage({
               </span>
             </Link>
           ))}
+        </div>
+
+        <div className="mt-12">
+          <h2 className="text-2xl font-bold text-ink">Vanliga användningsområden i {c.name}</h2>
+          <p className="mt-2 text-ink-soft">Vi levererar armering till bland annat:</p>
+          <ul className="mt-4 grid gap-3 sm:grid-cols-2">
+            {c.sectors.map((s) => (
+              <li key={s} className="flex items-start gap-2 rounded-lg border border-line bg-white p-4 text-ink-soft">
+                <IconCheck className="mt-0.5 h-5 w-5 shrink-0 text-brand" /> {s}
+              </li>
+            ))}
+          </ul>
         </div>
       </Section>
 
@@ -198,7 +215,7 @@ export default async function CityPage({
 
       {/* Andra orter */}
       <Section muted>
-        <SectionHeading eyebrow="Fler orter" title="Vi levererar armering i hela Sverige" />
+        <SectionHeading eyebrow="Närliggande orter" title={`Armering i ${c.landsdel} och hela Sverige`} />
         <div className="mt-8 flex flex-wrap gap-3">
           {others.map((o) => (
             <Link
