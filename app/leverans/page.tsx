@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { site } from "@/config/site";
-import { regions } from "@/config/cities";
+import Link from "next/link";
+import { cities } from "@/config/cities";
 import { Section, SectionHeading } from "@/components/ui";
 import { Breadcrumbs, LeveransSection, CtaBanner } from "@/components/sections";
 import { IconCheck } from "@/components/icons";
@@ -41,16 +42,21 @@ export default function LeveransPage() {
           />
         </figure>
         <div className="mt-8">
-          <h2 className="text-lg font-bold text-ink">Vi levererar bland annat till</h2>
+          <h2 className="text-lg font-bold text-ink">Armering per ort</h2>
+          <p className="mt-2 text-ink-soft">Läs mer om leverans av armering till din stad:</p>
           <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
-            {regions.map((r) => (
-              <div key={r} className="flex items-center gap-2 rounded-lg border border-line px-4 py-3 text-sm font-medium text-ink">
-                <IconCheck className="h-4 w-4 shrink-0 text-brand" /> {r}
-              </div>
+            {cities.map((c) => (
+              <Link
+                key={c.slug}
+                href={`/armering/${c.slug}`}
+                className="flex items-center gap-2 rounded-lg border border-line px-4 py-3 text-sm font-medium text-ink transition-colors hover:border-brand hover:text-brand"
+              >
+                <IconCheck className="h-4 w-4 shrink-0 text-brand" /> Armering i {c.name}
+              </Link>
             ))}
           </div>
           <p className="mt-4 text-sm text-muted">
-            Listan är exempel – vi levererar till hela Sverige, inte bara till orterna ovan.
+            Orterna är exempel – vi levererar till hela Sverige, inte bara till städerna ovan.
           </p>
         </div>
       </Section>

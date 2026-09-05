@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { site } from "@/config/site";
 import { products } from "@/config/products";
-import { regions } from "@/config/cities";
+import { cities } from "@/config/cities";
 import { IconPhone, IconMail, IconMapPin } from "./icons";
 
 export function Footer() {
@@ -39,8 +39,10 @@ export function Footer() {
             Vi levererar i <Link href="/leverans" className="text-slate-300 underline hover:text-white">hela Sverige</Link>, bland annat:
           </p>
           <ul className="mt-3 grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
-            {regions.slice(0, 10).map((r) => (
-              <li key={r} className="text-slate-400">{r}</li>
+            {cities.slice(0, 10).map((c) => (
+              <li key={c.slug}>
+                <Link href={`/armering/${c.slug}`} className="text-slate-400 hover:text-white">{c.name}</Link>
+              </li>
             ))}
           </ul>
         </div>

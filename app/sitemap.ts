@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { site } from "@/config/site";
 import { products } from "@/config/products";
 import { posts } from "@/config/blog";
+import { cities } from "@/config/cities";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = site.url;
@@ -30,5 +31,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  return [...staticPages, ...productPages, ...blogPages];
+  const cityPages: MetadataRoute.Sitemap = cities.map((c) => ({
+    url: `${base}/armering/${c.slug}`,
+    changeFrequency: "monthly",
+    priority: 0.7,
+  }));
+
+  return [...staticPages, ...productPages, ...blogPages, ...cityPages];
 }

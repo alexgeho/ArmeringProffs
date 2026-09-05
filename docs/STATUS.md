@@ -139,6 +139,7 @@ armeringskorgar, svetsad armering/nät, kamstål, distanser) — модель of
   - `KalkylatorPromo` секция на главной (после ProductsGrid).
   - `/offert`: 2 карточки-инструмента (калькулятор + скачать шаблон).
   - Продуктовые страницы (`produkter/[slug]`): CTA калькулятора в сайдбаре.
+- **Локальные SEO-страницы (4-й заход)**: `app/armering/[slug]/page.tsx` — 12 городов (Stockholm, Göteborg, Malmö, Uppsala, Västerås, Örebro, Linköping, Helsingborg, Jönköping, Norrköping, Umeå, Sundsvall). Уникальный контент на город (län, landsdel, närliggande orter, локальный текст, локальный FAQ, Service JSON-LD areaServed=City). Данные в `config/cities.ts` (`cities[]` + `getCity`, `regions` производный). Перелинковка: футер и `/leverans` → страницы городов; города линкуют друг на друга. Добавлены в sitemap. Цель: запросы «armering [stad]».
 - **Новое** (НЕ закоммичено/задеплоено на момент записи):
   - `app/armeringskalkylator/page.tsx` + `components/ArmeringsKalkylator.tsx` — лид-магнит-калькулятор.
   - `components/ContactForm.tsx` — проп `defaultMessage` (префилл) + GA4 `generate_lead`.
