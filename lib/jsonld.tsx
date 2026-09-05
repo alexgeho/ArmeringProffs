@@ -11,8 +11,13 @@ export function JsonLd({ data }: { data: object }) {
   );
 }
 
-/** Organisation/leverantör – huvudschema för hela sajten (prefab armering, hela Sverige). */
+/** Organisation/leverantör – huvudschema för hela sajten (prefab armering, hela Sverige).
+ *  OBS: platshållar-uppgifter (telefon/adress i config/site.ts) tas INTE med i schemat –
+ *  vi vill inte mata Google felaktig NAP-data. De inkluderas automatiskt när riktiga
+ *  värden fyllts i. */
 export function localBusinessSchema() {
+  const hasPhone = !/0 00 00 00/.test(site.phone); // platshållare = "+46 70 000 00 00"
+  const hasAddress = site.address.street !== "Gatuadress 1"; // platshållare
   return {
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -21,19 +26,20 @@ export function localBusinessSchema() {
     image: `${site.url}/opengraph-image`,
     logo: `${site.url}/opengraph-image`,
     url: site.url,
-    telephone: site.phone,
+    ...(hasPhone ? { telephone: site.phone } : {}),
     email: site.email,
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: site.address.street,
-      postalCode: site.address.zip,
-      addressLocality: site.address.city,
-      addressCountry: site.address.country,
-    },
-    areaServed: {
-      "@type": "Country",
-      name: "Sverige",
-    },
+    ...(hasAddress
+      ? {
+          address: {
+            "@type": "PostalAddress",
+            streetAddress: site.address.street,
+            postalCode: site.address.zip,
+            addressLocality: site.address.city,
+            addressCountry: site.address.country,
+          },
+        }
+      : {}),
+    areaServed: { "@type": "Country", name: "Sverige" },
   };
 }
 

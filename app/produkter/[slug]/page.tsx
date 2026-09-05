@@ -12,7 +12,7 @@ import { ContactForm } from "@/components/ContactForm";
 import { FaqAccordion } from "@/components/FaqAccordion";
 import { IconCheck, IconArrow, IconPhone } from "@/components/icons";
 import {
-  JsonLd, productSchema, faqSchema, breadcrumbSchema,
+  JsonLd, serviceSchema, faqSchema, breadcrumbSchema,
 } from "@/lib/jsonld";
 
 export function generateStaticParams() {
@@ -187,7 +187,9 @@ export default async function ProductPage({
 
       <CtaBanner />
 
-      <JsonLd data={productSchema({ name: p.name, description: p.metaDescription, url, category: "Prefab armering" })} />
+      {/* Service-schema (inte Product) – vi är offert-/prefabmodell utan fasta priser.
+          Product utan pris ger ogiltig Merchant/Product-data i GSC. Se slagplanen. */}
+      <JsonLd data={serviceSchema({ name: p.name, description: p.metaDescription, url })} />
       <JsonLd data={faqSchema(faqs)} />
       <JsonLd
         data={breadcrumbSchema([
