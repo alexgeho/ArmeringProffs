@@ -16,7 +16,7 @@ export function JsonLd({ data }: { data: object }) {
  *  vi vill inte mata Google felaktig NAP-data. De inkluderas automatiskt när riktiga
  *  värden fyllts i. */
 export function localBusinessSchema() {
-  const hasPhone = !/0 00 00 00/.test(site.phone); // platshållare = "+46 70 000 00 00"
+  const hasPhone = !site.phone.includes("000 00 00"); // platshållare = "+46 70 000 00 00"
   const hasAddress = site.address.street !== "Gatuadress 1"; // platshållare
   return {
     "@context": "https://schema.org",
