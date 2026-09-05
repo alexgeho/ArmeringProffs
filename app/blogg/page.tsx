@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { posts } from "@/config/blog";
 import { site } from "@/config/site";
-import { Section, SectionHeading } from "@/components/ui";
+import { Section, SectionHeading, Button } from "@/components/ui";
 import { Breadcrumbs, CtaBanner } from "@/components/sections";
 import { IconArrow, IconClock } from "@/components/icons";
 
@@ -50,6 +50,19 @@ export default function BloggPage() {
           title="Allt om armering"
           intro="Praktiska guider och svar på vanliga frågor om armeringsnät, armeringsjärn, dimensioner, klippt & bockad armering, distanser och täckskikt – så väljer och beställer du rätt armering."
         />
+        <div className="mt-8 flex flex-col items-start gap-4 rounded-xl border border-brand/30 bg-brand-light p-6 sm:flex-row sm:items-center sm:justify-between sm:p-8">
+          <div>
+            <h2 className="text-xl font-bold text-ink">Räkna åtgången direkt</h2>
+            <p className="mt-1 text-ink-soft">
+              Fyll i plattans mått i vår armeringskalkylator och få ungefärlig åtgång av nät, kantjärn
+              och distanser – begär offert direkt på din beräkning.
+            </p>
+          </div>
+          <Button href="/armeringskalkylator" className="shrink-0">
+            Öppna kalkylatorn <IconArrow className="h-4 w-4" />
+          </Button>
+        </div>
+
         <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {posts.map((p) => <PostCard key={p.slug} p={p} />)}
         </div>

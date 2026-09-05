@@ -132,7 +132,8 @@ armeringskorgar, svetsad armering/nät, kamstål, distanser) — модель of
 ---
 
 ## 🗒️ Лог сессии 2026-09-05
-- **GSC**: подтверждена property `armeringproffs.se`, отправлена `sitemap.xml`.
+- **GSC**: подтверждена property `armeringproffs.se`, отправлена `sitemap.xml`. Запрошена индексация (URL Inspection): `/armeringskalkylator`, `/blogg/vad-kostar-armering` (главная уже была indexed). Остальные новые URL подтянутся из sitemap.
+- **Ещё контент (2-й заход)**: +2 статьи (`armering-till-plintar`, `armera-stodmur`) → блог 13 статей. Промо-блок калькулятора на `/blogg`.
 - **Новое** (НЕ закоммичено/задеплоено на момент записи):
   - `app/armeringskalkylator/page.tsx` + `components/ArmeringsKalkylator.tsx` — лид-магнит-калькулятор.
   - `components/ContactForm.tsx` — проп `defaultMessage` (префилл) + GA4 `generate_lead`.

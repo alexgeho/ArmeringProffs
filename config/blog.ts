@@ -625,6 +625,97 @@ export const posts: Post[] = [
       { q: "Hur får jag ett exakt pris på armering?", a: "Ta fram mängd och dimensioner via bockningslista, ritning eller mått och skicka in för offert. Vill du ha en uppskattning först kan du använda vår armeringskalkylator." },
     ],
   },
+  {
+    slug: "armering-till-plintar",
+    title: "Armering till plintar och plintgrund",
+    metaTitle: "Armering till plintar | Rätt armering i plintgrund 2026",
+    metaDescription:
+      "Hur armeras en plint? Guide om armering till plintar och plintgrund – armeringskorg, byglar, dimensioner och täckskikt till altan, attefallshus och carport.",
+    excerpt:
+      "Plintar bär upp altaner, attefallshus och carportar. Här går vi igenom hur en plint armeras, vilken korg som används och vad du behöver tänka på.",
+    date: "2026-09-05",
+    readingMinutes: 4,
+    keywords: [
+      "armering till plintar",
+      "plintgrund armering",
+      "armera plint",
+      "plintarmering",
+      "armering altan",
+    ],
+    content: [
+      { type: "p", text: "Plintar är punktvisa betongfundament som bär upp laster från till exempel en altan, ett attefallshus, en carport eller en stomme. Rätt armering håller ihop plinten, fördelar lasten ner i marken och begränsar sprickor. Här går vi igenom hur plintar armeras." },
+
+      { type: "h2", text: "Så armeras en plint" },
+      { type: "p", text: "En gjuten plint armeras oftast med en liten armeringskorg: längsgående kamjärn som huvudarmering och byglar som håller ihop korgen. Bredare plintar och sulor kan även armeras med ett nät eller en bottenmatta som fördelar lasten. Dimensioner och antal järn bestäms av lasten och ska följa konstruktionsritning." },
+      { type: "ul", items: [
+        "Huvudjärn (längsgående kamstål) – ofta Ø10–16 mm beroende på last.",
+        "Byglar – håller ihop korgen och tar upp tvärkrafter.",
+        "Bottenmatta/nät i bredare plintsulor för lastfördelning.",
+        "Distanser – ger rätt täckskikt runt hela korgen.",
+      ] },
+
+      { type: "figure", illustration: "rebar-cage", caption: "En liten armeringskorg till en plint – huvudjärn och byglar sammanbundna." },
+
+      { type: "h2", text: "Täckskikt är extra viktigt i mark" },
+      { type: "p", text: "Plintar står ofta i fuktig mark, vilket ställer krav på täckskiktet – betongen mellan armeringen och ytan. Ett för litet täckskikt gör att stålet rostar. Lägg korgen på distanser så att täckskiktet blir jämnt runt om, och håll det tillräckligt stort för markmiljö. Läs mer om [distanser och täckskikt](/blogg/distanser-tackskikt-armering)." },
+
+      { type: "h2", text: "Prefab plintkorgar sparar tid" },
+      { type: "p", text: "Har du många likadana plintar går det snabbt att beställa färdiga korgar. Vi tillverkar [armeringskorgar](/produkter/armeringskorgar) och [klippt och bockad armering](/produkter/klippt-och-bockad) till plintar och plintgrund efter din ritning och levererar i hela Sverige. Se även guiden om [armeringskorgar](/blogg/armeringskorgar-palarmering). Begär en kostnadsfri offert." },
+    ],
+    faqs: [
+      { q: "Hur armeras en plint?", a: "Oftast med en liten armeringskorg – längsgående kamjärn (ofta Ø10–16 mm) som huvudarmering och byglar som håller ihop korgen. Bredare plintsulor kan även armeras med nät. Dimensioner ska följa konstruktionsritning." },
+      { q: "Behöver en plint armering?", a: "Bärande plintar armeras normalt för att fördela laster och begränsa sprickor. Utförandet beror på last och markförhållanden och ska dimensioneras enligt ritning." },
+      { q: "Vilket täckskikt ska en plint ha?", a: "Eftersom plintar ofta står i fuktig mark är täckskiktet extra viktigt så att armeringen inte rostar. Lägg korgen på distanser så att täckskiktet blir jämnt och tillräckligt stort för markmiljön." },
+      { q: "Kan ni tillverka färdiga plintkorgar?", a: "Ja, vi tillverkar armeringskorgar till plintar efter din ritning och levererar dem färdiga i hela Sverige – särskilt tidsbesparande när du har många likadana plintar." },
+    ],
+  },
+  {
+    slug: "armera-stodmur",
+    title: "Armering till stödmur och L-stöd",
+    metaTitle: "Armering till stödmur | Rätt armering i L-stöd 2026",
+    metaDescription:
+      "Hur armeras en stödmur? Guide om armering till stödmur och L-stöd i betong – huvudarmering, byglar, täckskikt och varför murar måste dimensioneras rätt.",
+    excerpt:
+      "En stödmur håller emot jordtryck och måste armeras rätt för att inte spricka eller välta. Så armeras en gjuten stödmur och ett L-stöd.",
+    date: "2026-09-05",
+    readingMinutes: 4,
+    keywords: [
+      "armering stödmur",
+      "armera stödmur",
+      "stödmur betong armering",
+      "l-stöd armering",
+      "armering mur",
+    ],
+    content: [
+      { type: "p", text: "En stödmur håller emot jord- och marktryck, till exempel vid en slänt eller en nivåskillnad på tomten. Trycket vill både skjuta muren framåt och välta den, och armeringen är det som håller emot. En underdimensionerad eller felplacerad armering gör att muren spricker eller rör sig – därför ska stödmurar alltid dimensioneras av en konstruktör." },
+
+      { type: "h2", text: "Så armeras en gjuten stödmur" },
+      { type: "p", text: "En platsgjuten stödmur eller ett L-stöd i betong armeras med huvudarmering på dragsidan och fördelningsarmering på tvären, samt förankring mellan sula och vägg. Byglar och krokar binder ihop konstruktionen där sula och mur möts – ett kritiskt parti där stora krafter tas upp." },
+      { type: "ul", items: [
+        "Huvudarmering (vertikala kamjärn) på murens dragsida.",
+        "Fördelningsjärn horisontellt som binder ihop och fördelar.",
+        "Förankringsjärn mellan bottensula och mur.",
+        "Rätt täckskikt mot jordsidan så stålet inte rostar.",
+      ] },
+
+      { type: "h2", text: "Vanliga misstag" },
+      { type: "ul", items: [
+        "Underdimensionerad armering – muren spricker eller lutar med tiden.",
+        "Armeringen på fel sida – huvudarmeringen ska sitta på dragsidan.",
+        "För litet täckskikt mot jorden – korrosion.",
+        "Glömd förankring mellan sula och vägg.",
+      ] },
+
+      { type: "h2", text: "Prefabricera murens armering" },
+      { type: "p", text: "Vi tillverkar armeringen till stödmurar och L-stöd – [klippt och bockad armering](/produkter/klippt-och-bockad), [armeringskorgar](/produkter/armeringskorgar) och [nät](/produkter/svetsad-armering) – efter konstruktörens ritning, och levererar i hela Sverige. Se även guiden om [armeringsjärn dimensioner](/blogg/armeringsjarn-dimensioner). Begär en kostnadsfri offert på din mur." },
+    ],
+    faqs: [
+      { q: "Hur armeras en betongstödmur?", a: "Med huvudarmering på murens dragsida, horisontell fördelningsarmering och förankringsjärn mellan bottensula och vägg. Byglar binder ihop det kritiska partiet där sula och mur möts. Utförandet ska dimensioneras av en konstruktör." },
+      { q: "Varför måste en stödmur armeras?", a: "En stödmur tar upp jordtryck som vill skjuta och välta muren. Armeringen håller emot dragkrafterna som betongen själv inte klarar. Utan rätt armering kan muren spricka, luta eller välta." },
+      { q: "På vilken sida ska armeringen i en stödmur sitta?", a: "Huvudarmeringen ska sitta på dragsidan – normalt sidan bort från jordtrycket – där betongen annars skulle spricka. Exakt placering framgår av konstruktionsritningen." },
+      { q: "Kan ni leverera armering till stödmur?", a: "Ja, vi tillverkar klippt och bockad armering, korgar och nät till stödmurar och L-stöd efter ritning och levererar i hela Sverige." },
+    ],
+  },
 ];
 
 export const getPost = (slug: string) => posts.find((p) => p.slug === slug);
