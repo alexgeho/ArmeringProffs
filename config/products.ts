@@ -70,12 +70,23 @@ export const products: Product[] = [
         heading: "Kvalitet och standard",
         text: "All armering är varmvalsat kamstål B500B enligt SS 212540 och tillverkas efter gällande normer. Bockningsradier och former följer bockningslistan så att täckskikt och passform stämmer mot konstruktionen.",
       },
+      {
+        heading: "Bockade detaljer vi tillverkar",
+        text: "Vi kapar och bockar alla vanliga detaljer efter din bockningslista: byglar (B-bygel, N-bygel), kramlor, förankringsjärn, kantjärn samt S-, U- och L-former och raka längder. Dimensioner Ø6–Ø32 mm i B500B. Har du många likadana positioner – till exempel byglar till en balk eller kantjärn runt en platta – tillverkar vi dem i serie, märkta och buntade per position så att rätt detalj hamnar på rätt plats.",
+      },
+      {
+        heading: "Pris och frakt – så funkar det",
+        text: "Priset styrs av mängd, dimensioner och hur mycket kapning och bockning som krävs. Frakten räknar vi efter mängd och leveransort och anger den i offerten – du betalar ingen fast fraktavgift oavsett orderstorlek, och vi levererar i hela Sverige, även norrut. Skicka din bockningslista eller mått så får du ett tydligt pris med leveranstid.",
+      },
     ],
     faqs: [
       { q: "Vad betyder klippt och bockad armering?", a: "Att kamstålet levereras färdigkapat och böjt till rätt form enligt en bockningslista, redo att monteras på plats utan kapning eller bockning på bygget." },
       { q: "Kan ni tillverka efter min ritning eller bockningslista?", a: "Ja. Skicka bockningslista eller konstruktionsritning (PDF, DWG, Excel eller foto) så tar vi fram offert och tillverkar efter den. Saknar du bockningslista hjälper vi dig att ta fram en." },
       { q: "Vilka dimensioner kan bockas?", a: "Vi kapar och bockar kamstål i B500B från Ø6 till Ø32 mm, med bockningsradier enligt standard och konstruktionsritning." },
       { q: "Levererar ni i hela Sverige?", a: "Ja, vi tillverkar och levererar klippt och bockad armering i hela Sverige. Leveranstid och frakt anges i offerten utifrån ort och mängd." },
+      { q: "Vad kostar klippt och bockad armering?", a: "Priset beror på mängd, dimensioner och hur mycket kapning och bockning som krävs. Skicka bockningslista eller mått så får du ett exakt pris i en offert." },
+      { q: "Vad kostar frakten?", a: "Vi räknar frakten efter mängd och leveransort och anger den i offerten – ingen fast fraktavgift oavsett orderstorlek. Vi levererar i hela Sverige, även norrut." },
+      { q: "Vilka bockade detaljer kan ni tillverka?", a: "Byglar (B-bygel, N-bygel), kramlor, förankringsjärn, kantjärn samt S-, U- och L-former och raka längder i Ø6–Ø32 mm B500B – allt efter din bockningslista." },
     ],
     featured: true,
   },

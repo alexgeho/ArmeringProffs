@@ -376,6 +376,20 @@ export const posts: Post[] = [
 
       { type: "figure", illustration: "bending-shapes", caption: "Vanliga former som bockas efter bockningslistan – från raka stänger till byglar." },
 
+      { type: "h2", text: "Vanliga bockade detaljer" },
+      { type: "table",
+        caption: "Exempel på detaljer vi kapar och bockar efter bockningslista (Ø6–Ø32 mm, B500B).",
+        head: ["Detalj", "Typisk användning"],
+        rows: [
+          ["Byglar (B-bygel, N-bygel)", "Balkar, pelare och korgar – tar upp tvärkrafter"],
+          ["Kramlor", "Förbinder och förankrar armering"],
+          ["Kantjärn / L-form", "Kanter och hörn på plattor"],
+          ["Förankringsjärn", "Förankring i anslutningar och skarvar"],
+          ["Raka längder", "Huvudarmering, kapad i rätt längd"],
+        ],
+      },
+      { type: "p", text: "Behöver du en mall att fylla i? Ladda ner vår [bockningslista-mall](/offert) och bifoga den i offertförfrågan. Vill du uppskatta mängden först kan du använda vår [armeringskalkylator](/armeringskalkylator)." },
+
       { type: "h2", text: "Fördelar" },
       { type: "ul", items: [
         "Sparar tid – ingen kapning och bockning på plats.",
