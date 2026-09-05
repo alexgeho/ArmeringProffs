@@ -270,7 +270,7 @@ export const posts: Post[] = [
       "räkna armering platta",
     ],
     content: [
-      { type: "p", text: "Innan du beställer armering vill du veta ungefär hur mycket som går åt. Här är enkla tumregler för armeringsnät och kamjärn – exakt mängd ska alltid följa konstruktionsritning." },
+      { type: "p", text: "Innan du beställer armering vill du veta ungefär hur mycket som går åt. Här är enkla tumregler för armeringsnät och kamjärn – exakt mängd ska alltid följa konstruktionsritning. Vill du räkna automatiskt? Använd vår [armeringskalkylator](/armeringskalkylator)." },
 
       { type: "h2", text: "Armeringsnät" },
       { type: "p", text: "Åtgången av nät motsvarar plattans yta plus spill för överlapp. Eftersom skarvar ska överlappa 1,5–2 rutor räknar man normalt med cirka 10–15 % extra utöver kvadratmeterytan. En platta på 40 m² kräver alltså ungefär 44–46 m² nät." },
@@ -395,6 +395,234 @@ export const posts: Post[] = [
       { q: "Vad är en bockningslista?", a: "En bockningslista är en specifikation, framtagen ur konstruktionsritningen, som anger varje armeringsjärns dimension, längd, form och antal. Armeringsverkstaden tillverkar järnen efter listan." },
       { q: "Vilka är fördelarna med bockad armering?", a: "Den sparar tid på bygget, ger rätt mått och form enligt ritning, minskar spill och ger en renare arbetsplats jämfört med att kapa och bocka järnen på plats." },
       { q: "När ska man välja klippt och bockad armering?", a: "Det passar särskilt vid många likadana eller komplicerade detaljer och när tiden är knapp. För enklare plattor med mest nät kan lösa järn räcka – ofta blir det en kombination." },
+    ],
+  },
+  {
+    slug: "armeringskorgar-palarmering",
+    title: "Armeringskorgar – till pålar, pelare och balkar",
+    metaTitle: "Armeringskorgar | Prefab till pålar, pelare & balk 2026",
+    metaDescription:
+      "Vad är en armeringskorg och när används den? Guide om prefab armeringskorgar till pålar, pelare, balkar och plintar – svetsade eller bundna, byglar, täckskikt och montage.",
+    excerpt:
+      "En armeringskorg är färdigmonterad armering för ett bärande element. Här går vi igenom vad korgar är, var de används och varför prefab sparar tid på bygget.",
+    date: "2026-09-05",
+    readingMinutes: 5,
+    keywords: [
+      "armeringskorgar",
+      "armeringskorg",
+      "pålarmering",
+      "pelararmering",
+      "balkkorg",
+      "prefab armeringskorg",
+    ],
+    content: [
+      { type: "p", text: "En armeringskorg är armering som är färdigmonterad till en tredimensionell korg för ett bärande element – till exempel en pelare, balk eller påle. Huvudjärn och byglar binds eller svetsas ihop i verkstad, så att korgen bara behöver lyftas på plats och gjutas in. Här går vi igenom vad korgar används till och varför de ofta prefabriceras." },
+
+      { type: "h2", text: "Vad består en armeringskorg av?" },
+      { type: "ul", items: [
+        "Huvudjärn (längsgående kamstål) som tar upp huvudlasterna.",
+        "Byglar som håller ihop korgen och tar upp tvärkrafter.",
+        "Bygelavstånd (centrumavstånd) enligt konstruktionsritning.",
+        "Rätt täckskikt runt om så att stålet skyddas i betongen.",
+      ] },
+
+      { type: "figure", illustration: "rebar-cage", caption: "En armeringskorg – huvudjärn och byglar sammanfogade till ett bärande element." },
+
+      { type: "h2", text: "Var används armeringskorgar?" },
+      { type: "table",
+        caption: "Vanliga tillämpningar – utförande dimensioneras enligt ritning.",
+        head: ["Element", "Typisk korg"],
+        rows: [
+          ["Pålar", "Cirkulär eller fyrkantig pålkorg med spiralbygel eller enkelbyglar"],
+          ["Pelare", "Pelarkorg med huvudjärn i hörnen och byglar"],
+          ["Balkar / kantbalkar", "Balkkorg med över- och underkantsjärn samt byglar"],
+          ["Plintar och brunnar", "Korg anpassad efter form och laster"],
+        ],
+      },
+
+      { type: "h2", text: "Svetsad eller bunden korg?" },
+      { type: "p", text: "Korgar kan svetsas eller bindas. Svetsade korgar blir styva och lätta att hantera och lyfta, medan bundna korgar används där föreskriften kräver det. Vilket utförande som passar avgörs av konstruktionen och gällande normer." },
+
+      { type: "h2", text: "Därför lönar sig prefab" },
+      { type: "ul", items: [
+        "Kortare byggtid – korgen lyfts på plats istället för att bindas för hand på bygget.",
+        "Jämnare kvalitet – rätt bygelavstånd och mått varje gång.",
+        "Bättre arbetsmiljö – mindre tunga moment och böjning på plats.",
+        "Mindre spill och färre fel jämfört med att tillverka på arbetsplatsen.",
+      ] },
+
+      { type: "h2", text: "Vi tillverkar dina korgar" },
+      { type: "p", text: "Vi bygger [armeringskorgar](/produkter/armeringskorgar) till pålar, pelare, balkar och plintar efter din konstruktionsritning – svetsade eller bundna, märkta per position och levererade i hela Sverige. Se även vår guide om [klippt och bockad armering](/blogg/klippt-bockad-armering) och [armeringsjärn dimensioner](/blogg/armeringsjarn-dimensioner). Begär en kostnadsfri offert så tar vi fram rätt korgar till ditt projekt." },
+    ],
+    faqs: [
+      { q: "Vad är en armeringskorg?", a: "En armeringskorg är färdigmonterad armering för ett bärande element som en pelare, balk eller påle – huvudjärn och byglar sammanfogade till en korg som lyfts på plats och gjuts in." },
+      { q: "Vad är pålarmering?", a: "Pålarmering är armeringskorgen som gjuts in i en betongpåle, oftast med längsgående huvudjärn och spiral- eller enkelbyglar. Utförandet dimensioneras efter pålens laster och längd enligt ritning." },
+      { q: "Är armeringskorgar svetsade eller bundna?", a: "Båda förekommer. Svetsade korgar blir styva och lätta att hantera, medan bundna korgar används där föreskriften kräver det. Valet styrs av konstruktionen och gällande normer." },
+      { q: "Kan ni tillverka korgar efter vår ritning?", a: "Ja, vi bygger korgarna efter er konstruktionsritning med rätt huvudjärn, byglar, bygelavstånd och täckskikt, och märker varje korg med position för montage." },
+    ],
+  },
+  {
+    slug: "bestalla-armering",
+    title: "Beställa armering – så går det till steg för steg",
+    metaTitle: "Beställa armering | Så beställer du prefab armering 2026",
+    metaDescription:
+      "Så beställer du armering – från bockningslista och ritning till offert och leverans. Guide om vad en armeringsleverantör behöver, vad som påverkar priset och hur du får rätt armering.",
+    excerpt:
+      "Ska du beställa armering till ett bygge? Här går vi igenom steg för steg vad som behövs, vad leverantören behöver veta och hur du får en offert snabbt.",
+    date: "2026-09-05",
+    readingMinutes: 5,
+    keywords: [
+      "beställa armering",
+      "armeringsleverantör",
+      "köpa armering",
+      "beställa prefab armering",
+      "offert armering",
+    ],
+    content: [
+      { type: "p", text: "Att beställa armering behöver inte vara krångligt. Med rätt underlag får du snabbt en offert och armering som passar direkt på bygget. Här går vi igenom hur en beställning går till och vad en armeringsleverantör behöver för att räkna rätt." },
+
+      { type: "h2", text: "1. Ta fram underlaget" },
+      { type: "p", text: "Bäst underlag är en bockningslista eller konstruktionsritning. Har du inte det räcker det ofta med mått och en beskrivning av vad som ska armeras – till exempel en betongplatta på 8 × 10 m. Då kan leverantören räkna fram ett förslag." },
+      { type: "ul", items: [
+        "Bockningslista (specifikation över varje järns dimension, längd, form och antal).",
+        "Konstruktionsritning (PDF, DWG, DXF, Excel eller foto).",
+        "Eller: mått, typ av konstruktion och önskad mängd.",
+      ] },
+
+      { type: "h2", text: "2. Vad leverantören behöver veta" },
+      { type: "table",
+        caption: "Ju mer du kan ange, desto snabbare och mer exakt blir offerten.",
+        head: ["Uppgift", "Varför den behövs"],
+        rows: [
+          ["Vad ska armeras", "Platta, grund, pool, pelare, balk osv. styr utförandet"],
+          ["Mängd / mått", "Ligger till grund för åtgång och pris"],
+          ["Dimensioner", "Nättyp och kamstålsdimension enligt ritning"],
+          ["Leveransort", "Påverkar frakt och leveranstid"],
+          ["Leveranstidpunkt", "När armeringen behövs på bygget"],
+        ],
+      },
+      { type: "p", text: "Osäker på mängden? Använd vår [armeringskalkylator](/armeringskalkylator) för att räkna fram ungefärlig åtgång av nät, kantjärn och distanser innan du skickar förfrågan." },
+
+      { type: "h2", text: "3. Offert och leveranstid" },
+      { type: "p", text: "Utifrån underlaget får du en offert med pris och leveranstid. Saknar du bockningslista hjälper en bra leverantör till att ta fram den från ritningen. Kontrollera att dimensioner, mängder och leveransvillkor stämmer innan du godkänner." },
+
+      { type: "h2", text: "4. Tillverkning och leverans" },
+      { type: "p", text: "Efter godkänd offert tillverkas armeringen – kapas, bockas och svetsas i B500B, märks och sorteras per element – och levereras till bygget. Prefab betyder att den är redo att läggas direkt, vilket sparar tid på plats." },
+
+      { type: "h2", text: "Beställ hos oss" },
+      { type: "p", text: "Vi är armeringsleverantör för hela Sverige och tillverkar [klippt och bockad armering](/produkter/klippt-och-bockad), [armeringskorgar](/produkter/armeringskorgar), [svetsad armering och nät](/produkter/svetsad-armering) samt levererar [kamstål](/produkter/armeringsjarn) och [distanser](/produkter/distanser). Skicka din bockningslista eller mått så återkommer vi snabbt. [Begär en kostnadsfri offert](/offert)." },
+    ],
+    faqs: [
+      { q: "Vad behöver jag för att beställa armering?", a: "Bäst är en bockningslista eller konstruktionsritning, men det räcker ofta med mått och en beskrivning av vad som ska armeras. Då kan leverantören räkna fram ett förslag och en offert." },
+      { q: "Kan jag beställa armering utan bockningslista?", a: "Ja. Ange mått, typ av konstruktion och önskad mängd, så hjälper vi dig att ta fram en bockningslista utifrån ritningen. Du kan också använda vår armeringskalkylator för att uppskatta åtgången." },
+      { q: "Vad påverkar priset på armering?", a: "Priset styrs främst av mängd (ton/löpmeter/m²), dimensioner, hur mycket kapning och bockning som krävs, samt frakt till leveransorten. Läs mer i guiden om vad armering kostar." },
+      { q: "Levererar ni armering i hela Sverige?", a: "Ja, vi tillverkar och levererar prefab armering i hela Sverige. Leveranstid och frakt anges i offerten utifrån ort och mängd." },
+    ],
+  },
+  {
+    slug: "armering-till-garage",
+    title: "Armering till garageplatta – så armerar du rätt",
+    metaTitle: "Armering till garage | Rätt armering i garageplatta 2026",
+    metaDescription:
+      "Vilken armering behövs till en garageplatta? Guide om armeringsnät, kantjärn, dimensioner och täckskikt till garage – och hur mycket armering som går åt.",
+    excerpt:
+      "En garageplatta ska bära bilar och ibland bärande väggar. Här går vi igenom vilken armering som behövs, vanliga dimensioner och hur mycket som går åt.",
+    date: "2026-09-05",
+    readingMinutes: 5,
+    keywords: [
+      "armering till garage",
+      "armering garageplatta",
+      "garageplatta armering",
+      "armeringsnät garage",
+      "gjuta garageplatta",
+    ],
+    content: [
+      { type: "p", text: "En garageplatta belastas av bilar, förvaring och ibland bärande väggar till själva garaget. Rätt armering fördelar lasterna, begränsar sprickor och håller plattan hel över tid. Här går vi igenom hur en garageplatta vanligtvis armeras." },
+
+      { type: "h2", text: "Vilken armering till garageplatta?" },
+      { type: "p", text: "En garageplatta armeras oftast med svetsat armeringsnät som huvudarmering, kompletterat med lösa kamjärn i kanterna och under bärande väggar. Nätet ger jämn armering över hela ytan medan kantjärnen förstärker där lasterna är stora." },
+      { type: "ul", items: [
+        "Armeringsnät – vanligtvis 6×150 (Ø6 mm) till garage.",
+        "Kantjärn (kamstål) – ofta Ø10–12 mm i kantbalkar.",
+        "Distanser – lyfter armeringen till rätt höjd med rätt täckskikt.",
+        "Extra järn under bärande väggar och vid portöppningen.",
+      ] },
+
+      { type: "h2", text: "Vanliga dimensioner" },
+      { type: "table",
+        caption: "Riktvärden – exakt val ska följa konstruktionsritning.",
+        head: ["Del av plattan", "Typisk armering"],
+        rows: [
+          ["Ytan / fält", "Armeringsnät 6×150 (Ø6 mm), 150 mm rutor"],
+          ["Kanter / kantbalk", "Kamjärn Ø10–12 mm"],
+          ["Under bärande vägg", "Extra kamjärn enligt ritning"],
+        ],
+      },
+
+      { type: "h2", text: "Hur mycket armering går åt?" },
+      { type: "p", text: "Åtgången av nät motsvarar plattans yta plus cirka 10–15 % för överlapp och spill. En garageplatta på 6 × 6 m (36 m²) kräver alltså ungefär 40–41 m² nät, plus kantjärn efter omkretsen. Räkna snabbt fram din åtgång i vår [armeringskalkylator](/armeringskalkylator)." },
+
+      { type: "h2", text: "Täckskikt och placering" },
+      { type: "p", text: "Armeringen ska ligga inne i betongen på distanser, inte mot underlaget, med ett täckskikt på ofta minst 25–35 mm. I ett ouppvärmt eller fuktigt garage är täckskiktet extra viktigt så att stålet inte rostar. Läs mer om [distanser och täckskikt](/blogg/distanser-tackskikt-armering)." },
+
+      { type: "h2", text: "Beställ armeringen färdig" },
+      { type: "p", text: "Vi tar fram rätt armering till din garageplatta – [svetsad armering och nät](/produkter/svetsad-armering), [kamjärn](/produkter/armeringsjarn) och [bockade kantjärn](/produkter/klippt-och-bockad) – och levererar i hela Sverige. Se även guiden om [armering till betongplatta](/blogg/armering-till-betongplatta). Begär en kostnadsfri offert." },
+    ],
+    faqs: [
+      { q: "Vilken armering behövs till en garageplatta?", a: "Vanligtvis armeringsnät 6×150 (Ø6 mm) som huvudarmering, kompletterat med kamjärn Ø10–12 mm i kanter och under bärande väggar. Exakt val ska följa konstruktionsritning." },
+      { q: "Hur mycket armeringsnät går åt till ett garage?", a: "Räkna med plattans yta plus 10–15 % för överlapp. En garageplatta på 36 m² kräver alltså ungefär 40–41 m² nät, plus kantjärn efter omkretsen." },
+      { q: "Vilket täckskikt ska armeringen ha i ett garage?", a: "Ofta minst 25–35 mm betong runt armeringen. I ett ouppvärmt eller fuktigt garage är täckskiktet extra viktigt så att stålet inte rostar – lägg armeringen på distanser." },
+      { q: "Behöver en garageplatta kantbalk?", a: "En garageplatta har ofta förstärkta kanter eller en kantbalk med extra kamjärn, särskilt om väggar vilar på plattan. Utförandet ska följa konstruktionsritningen." },
+    ],
+  },
+  {
+    slug: "vad-kostar-armering",
+    title: "Vad kostar armering? Så påverkas priset",
+    metaTitle: "Vad kostar armering? | Pris & vad som styr det 2026",
+    metaDescription:
+      "Vad kostar armering? Guide om vad som påverkar priset på armering – mängd, dimensioner, kapning och bockning, prefab och frakt – och hur du får ett exakt pris.",
+    excerpt:
+      "Priset på armering beror på flera saker: mängd, dimensioner, hur mycket bearbetning som krävs och frakt. Här går vi igenom vad som styr priset och hur du får ett exakt besked.",
+    date: "2026-09-05",
+    readingMinutes: 4,
+    keywords: [
+      "vad kostar armering",
+      "armering pris",
+      "pris armering",
+      "kostnad armering",
+      "armeringspris",
+    ],
+    content: [
+      { type: "p", text: "Vad armering kostar går inte att svara på med en enda siffra – priset beror på ditt projekt. Stålpriset varierar dessutom över tid. Däremot går det att förstå vad som styr kostnaden, så att du kan jämföra offerter och få ett exakt pris snabbt." },
+
+      { type: "h2", text: "Det här påverkar priset" },
+      { type: "ul", items: [
+        "Mängd – armering prissätts ofta per ton, löpmeter eller kvadratmeter nät. Större volym ger oftast lägre styckpris.",
+        "Dimensioner – grövre kamstål och tätare nät väger mer och kostar mer.",
+        "Bearbetning – kapning, bockning och svetsning av korgar innebär mer arbete än raka längder.",
+        "Prefab-grad – färdiga korgar och bockade detaljer kostar mer i tillverkning men sparar tid och spill på bygget.",
+        "Frakt – leveransort, mängd och tillgänglighet påverkar transportkostnaden.",
+      ] },
+
+      { type: "h2", text: "Materialpris kontra totalkostnad" },
+      { type: "p", text: "Titta inte bara på materialpriset per kilo. Prefab armering kan ha ett högre kilopris men ändå bli billigare totalt, eftersom du sparar arbetstid, minskar spillet och får färre fel på bygget. Räkna på helheten: material + arbete + spill + tid." },
+
+      { type: "h2", text: "Så får du ett exakt pris" },
+      { type: "ol", items: [
+        "Ta fram mängd och dimensioner – bockningslista, ritning eller mått.",
+        "Uppskatta åtgången med vår [armeringskalkylator](/armeringskalkylator) om du vill ha en känsla först.",
+        "Skicka underlaget för offert så får du pris och leveranstid.",
+      ] },
+      { type: "p", text: "Läs mer om hur en beställning går till i guiden [beställa armering](/blogg/bestalla-armering)." },
+
+      { type: "h2", text: "Begär pris på din armering" },
+      { type: "p", text: "Vi räknar fram ett tydligt pris på din [klippt och bockade armering](/produkter/klippt-och-bockad), [armeringskorgar](/produkter/armeringskorgar), [nät](/produkter/svetsad-armering) och [kamstål](/produkter/armeringsjarn) – med leverans i hela Sverige. [Begär en kostnadsfri offert](/offert) så återkommer vi snabbt." },
+    ],
+    faqs: [
+      { q: "Vad kostar armering?", a: "Priset beror på mängd, dimensioner, hur mycket kapning och bockning som krävs samt frakt. Stålpriset varierar dessutom över tid. Skicka mått eller bockningslista så får du ett exakt pris i en offert." },
+      { q: "Prissätts armering per kilo eller per meter?", a: "Det varierar: kamstål prissätts ofta per ton eller kilo, kantjärn per löpmeter och armeringsnät per kvadratmeter. Prefab-detaljer och korgar prissätts utifrån tillverkningen." },
+      { q: "Är prefab armering dyrare?", a: "Prefab kan ha ett högre kilopris men blir ofta billigare totalt, eftersom du sparar arbetstid, minskar spill och får färre fel på bygget. Räkna på helheten, inte bara materialpriset." },
+      { q: "Hur får jag ett exakt pris på armering?", a: "Ta fram mängd och dimensioner via bockningslista, ritning eller mått och skicka in för offert. Vill du ha en uppskattning först kan du använda vår armeringskalkylator." },
     ],
   },
 ];

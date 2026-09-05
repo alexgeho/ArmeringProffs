@@ -2,7 +2,7 @@
 
 > **Главная цель: ЛИДЫ** (offertförfrågningar на prefab-арматуру по всей Швеции).
 > Всё ниже приоритизировано по влиянию на количество заявок.
-> Обновлено: 2026-09-01.
+> Обновлено: 2026-09-05.
 
 ---
 
@@ -58,7 +58,14 @@ armeringskorgar, svetsad armering/nät, kamstål, distanser) — модель of
 
 ### ✅ Аналитика (готово, сессия 2026-09-01)
 - **Google Analytics 4** подключён: `gaId: "G-730LFLXQCP"` в `config/site.ts`, грузится через `next/script` (afterInteractive) в `app/layout.tsx`. Живой.
-- ⚠️ Пока БЕЗ cookie-согласия и БЕЗ кастомного события конверсии.
+- ⚠️ Пока БЕЗ cookie-согласия (GDPR-баннер ещё нужен).
+
+### ✅ Лид-магнит + контент + GSC (сессия 2026-09-05)
+- **Google Search Console**: property `armeringproffs.se` подтверждена; **sitemap отправлена** (`/sitemap.xml`, 19+ URL). Статус «Couldn't fetch» — нормально сразу после отправки, подтянется. Данные индексации ещё «Processing» (сайт новый). Реальных ошибок пока нет.
+- **Armeringskalkylator (лид-магнит)** — новая страница `/armeringskalkylator` (`app/armeringskalkylator/page.tsx` + client-компонент `components/ArmeringsKalkylator.tsx`). Вводишь размеры плиты → считает åtgång нят/кантъерн/дистансер → форма offert **уже префилл** беräкнингом (`source="kalkylator"`). Добавлена в nav (`Header.tsx`) и sitemap. SEO-контент + FAQ + JSON-LD.
+- **GA4-событие конверсии**: `ContactForm.tsx` шлёт `gtag('event','generate_lead',{form_source})` при успешной отправке — закрывает P1 «offert skickad». (Осталось: пометить как conversion в GA4 UI.)
+- **4 новые SEO-статьи** в `config/blog.ts` (блог 7 → 11): `armeringskorgar-palarmering`, `bestalla-armering` (commercial intent), `armering-till-garage`, `vad-kostar-armering` (pris intent). Все с внутренними ссылками на калькулятор/`/offert`/продукты + FAQ.
+- ⚠️ **Ещё НЕ задеплоено** — нужен `git push` (см. лог ниже).
 
 ---
 
@@ -76,10 +83,10 @@ armeringskorgar, svetsad armering/nät, kamstål, distanser) — модель of
    телефон (`phone`/`phoneHref`), `orgNumber`, `address`. Видны в шапке/футере/CTA/JSON-LD.
 
 ### 🟠 P1 — включить поток трафика/заявок
-3. **Google Search Console** — добавить домен (уже HTTPS!), отправить `sitemap.xml`, запросить индексацию
-   главных URL (`/`, `/produkter/klippt-och-bockad`, `/produkter/armeringskorgar`, `/blogg/klippt-bockad-armering`).
-4. **GA4 — цель/событие «offert skickad»** — отправлять `gtag('event', ...)` при успешной отправке формы
-   (в `ContactForm.tsx`, ветка `status === "sent"`), чтобы мерить конверсии. + отслеживание кликов по телефону.
+3. ✅ **Google Search Console** — домен добавлен, **sitemap отправлена** (2026-09-05). Осталось: запросить
+   индексацию главных URL (`/`, `/armeringskalkylator`, `/produkter/*`, новые статьи) через URL Inspection.
+4. ✅ **GA4-событие «generate_lead»** — шлётся при успешной отправке формы (`ContactForm.tsx`).
+   Осталось: пометить событие как **conversion** в GA4 UI + отслеживание кликов по телефону.
 5. **Cookie-согласие (GDPR)** — GA ставит cookie; в ЕС нужен баннер. Вариант: грузить GA только после «Godkänn».
 6. **Google Business Profile** — локальные/brand-запросы, звонки.
 7. **Google Ads** — transaktions-запросы (*prefab armering*, *klippt och bockad armering*, *armeringskorgar*,
@@ -123,6 +130,17 @@ armeringskorgar, svetsad armering/nät, kamstål, distanser) — модель of
 6. [ ] Фото для `armeringskorgar` и `svetsad-armering` (см. ТЗ выше).
 
 ---
+
+## 🗒️ Лог сессии 2026-09-05
+- **GSC**: подтверждена property `armeringproffs.se`, отправлена `sitemap.xml`.
+- **Новое** (НЕ закоммичено/задеплоено на момент записи):
+  - `app/armeringskalkylator/page.tsx` + `components/ArmeringsKalkylator.tsx` — лид-магнит-калькулятор.
+  - `components/ContactForm.tsx` — проп `defaultMessage` (префилл) + GA4 `generate_lead`.
+  - `components/Header.tsx` — пункт «Kalkylator» в nav.
+  - `app/sitemap.ts` — добавлен `/armeringskalkylator`.
+  - `config/blog.ts` — +4 статьи (armeringskorgar-palarmering, bestalla-armering, armering-till-garage, vad-kostar-armering) + ссылка на калькулятор в armering-atgang-per-m2.
+  - `npm run build` — зелёный (32 страницы).
+- **TODO деплой**: `git push` в `main` → автодеплой на Inleed.
 
 ## 🗒️ Лог сессии 2026-09-01 (последние коммиты)
 - `732dee0` — SVG-иллюстрации (hero-mesh, армокаркас, täckskikt).

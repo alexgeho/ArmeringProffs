@@ -10,6 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/`, changeFrequency: "weekly", priority: 1 },
     { url: `${base}/produkter`, changeFrequency: "monthly", priority: 0.9 },
     { url: `${base}/leverans`, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${base}/armeringskalkylator`, changeFrequency: "monthly", priority: 0.8 },
     { url: `${base}/blogg`, changeFrequency: "weekly", priority: 0.7 },
     { url: `${base}/om-oss`, changeFrequency: "yearly", priority: 0.5 },
     { url: `${base}/kontakt`, changeFrequency: "yearly", priority: 0.6 },

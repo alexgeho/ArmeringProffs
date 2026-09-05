@@ -5,7 +5,16 @@ import { IconCheck } from "./icons";
 
 type Status = "idle" | "sending" | "sent" | "error";
 
-export function ContactForm({ compact = false, source = "webbformulär" }: { compact?: boolean; source?: string }) {
+export function ContactForm({
+  compact = false,
+  source = "webbformulär",
+  defaultMessage,
+}: {
+  compact?: boolean;
+  source?: string;
+  /** Förifylld text i meddelandefältet (t.ex. en beräkning från kalkylatorn). */
+  defaultMessage?: string;
+}) {
   const [status, setStatus] = useState<Status>("idle");
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
@@ -20,6 +29,9 @@ export function ContactForm({ compact = false, source = "webbformulär" }: { com
       if (!res.ok) throw new Error("bad response");
       setStatus("sent");
       form.reset();
+      // GA4-konvertering: mät varje skickad offertförfrågan (om gtag finns).
+      const gtag = (window as unknown as { gtag?: (...args: unknown[]) => void }).gtag;
+      gtag?.("event", "generate_lead", { form_source: source });
     } catch {
       setStatus("error");
     }
@@ -75,6 +87,9 @@ export function ContactForm({ compact = false, source = "webbformulär" }: { com
           id="message"
           name="message"
           rows={compact ? 3 : 4}
+          // key gör att fältet uppdateras när en ny beräkning skickas in från kalkylatorn.
+          key={defaultMessage}
+          defaultValue={defaultMessage}
           placeholder="T.ex. armering till betongplatta 8 × 10 m – räkna gärna på ritningen jag bifogar."
           className="rounded-lg border border-line bg-white px-4 py-3 text-ink placeholder:text-muted focus:border-brand focus:outline-none"
         />

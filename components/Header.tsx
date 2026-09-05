@@ -9,6 +9,7 @@ const nav = [
   { href: "/", label: "Hem" },
   { href: "/produkter", label: "Produkter" },
   { href: "/leverans", label: "Leverans" },
+  { href: "/armeringskalkylator", label: "Kalkylator" },
   { href: "/blogg", label: "Guider" },
   { href: "/om-oss", label: "Om oss" },
   { href: "/kontakt", label: "Kontakt" },
