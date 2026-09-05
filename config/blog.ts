@@ -716,6 +716,60 @@ export const posts: Post[] = [
       { q: "Kan ni leverera armering till stödmur?", a: "Ja, vi tillverkar klippt och bockad armering, korgar och nät till stödmurar och L-stöd efter ritning och levererar i hela Sverige." },
     ],
   },
+  {
+    slug: "armeringsnat-eller-armeringsjarn",
+    title: "Armeringsnät eller armeringsjärn – vad ska du välja?",
+    metaTitle: "Armeringsnät eller armeringsjärn? | Skillnad & val 2026",
+    metaDescription:
+      "Armeringsnät eller lösa armeringsjärn – vad är skillnaden och när använder du vad? Guide som jämför nät och kamjärn till betongplatta, kanter och punktlaster.",
+    excerpt:
+      "Nät eller lösa järn? De flesta plattor använder båda. Här jämför vi armeringsnät och armeringsjärn så att du vet vad som passar var.",
+    date: "2026-09-05",
+    readingMinutes: 4,
+    keywords: [
+      "armeringsnät eller armeringsjärn",
+      "skillnad armeringsnät armeringsjärn",
+      "nät eller kamjärn",
+      "armeringsnät vs armeringsjärn",
+    ],
+    content: [
+      { type: "p", text: "En vanlig fråga när man ska armera en betongplatta är om man ska använda armeringsnät eller lösa armeringsjärn (kamstål). Svaret är oftast: båda. De fyller olika funktioner och kombineras i de flesta konstruktioner. Här jämför vi dem." },
+
+      { type: "h2", text: "Kort skillnad" },
+      { type: "ul", items: [
+        "Armeringsnät – ett svetsat rutnät som ger jämn armering över hela ytan, snabbt att lägga.",
+        "Armeringsjärn (kamstål) – lösa räfflade stänger som förstärker punktvis, i kanter och där lasterna är stora.",
+      ] },
+
+      { type: "h2", text: "När passar vad?" },
+      { type: "table",
+        caption: "Riktlinje – dimensionering ska följa konstruktionsritning.",
+        head: ["Situation", "Lämpligt val"],
+        rows: [
+          ["Jämn armering av en plattyta", "Armeringsnät"],
+          ["Kanter, kantbalkar och hörn", "Armeringsjärn (kamjärn)"],
+          ["Under bärande väggar / punktlaster", "Extra armeringsjärn"],
+          ["Byglar, korgar och specialformer", "Bockat armeringsjärn"],
+          ["Snabb yttäckning på stora golv", "Armeringsnät (ev. specialnät)"],
+        ],
+      },
+
+      { type: "h2", text: "Oftast kombineras de" },
+      { type: "p", text: "I en typisk platta på mark läggs armeringsnät över hela ytan, medan lösa kamjärn förstärker kantbalkar, hörn och partier under bärande väggar. Nätet tar den jämna armeringen, järnen tar de koncentrerade lasterna. Läs mer i vår guide om [armering till betongplatta](/blogg/armering-till-betongplatta)." },
+
+      { type: "h2", text: "Räkna åtgången" },
+      { type: "p", text: "Vill du veta ungefär hur mycket nät och kantjärn som går åt? Använd vår [armeringskalkylator](/armeringskalkylator). Se även guiderna om [armeringsnät](/blogg/armeringsnat-storlekar-och-matt) och [armeringsjärn dimensioner](/blogg/armeringsjarn-dimensioner)." },
+
+      { type: "h2", text: "Vi levererar båda" },
+      { type: "p", text: "Vi tillverkar och levererar både [svetsad armering och nät](/produkter/svetsad-armering) och [armeringsjärn i kamstål B500B](/produkter/armeringsjarn) – samt [klippt och bockade detaljer](/produkter/klippt-och-bockad) – i hela Sverige. Begär en kostnadsfri offert så tar vi fram rätt kombination till din konstruktion." },
+    ],
+    faqs: [
+      { q: "Vad är skillnaden på armeringsnät och armeringsjärn?", a: "Armeringsnät är ett svetsat rutnät som ger jämn armering över en hel yta, medan armeringsjärn (kamstål) är lösa stänger som förstärker punktvis – i kanter, kantbalkar och där lasterna är stora." },
+      { q: "Ska jag använda nät eller kamjärn till min platta?", a: "Oftast båda: nät över ytan och lösa kamjärn i kanter, hörn och under bärande väggar. Exakt utförande ska följa konstruktionsritning." },
+      { q: "Kan man armera en platta med bara nät?", a: "Mindre, lätt belastade plattor kan klara sig med enbart nät, men de flesta plattor förstärks även med kamjärn i kanterna. Dimensionering ska följa ritning." },
+      { q: "Är armeringsnät eller kamjärn billigast?", a: "Det beror på konstruktionen. Nät går snabbt att lägga och täcker stora ytor effektivt, medan kamjärn behövs för kanter och punktlaster. Totalkostnaden avgörs av mängd, dimensioner och arbete – begär offert för exakt pris." },
+    ],
+  },
 ];
 
 export const getPost = (slug: string) => posts.find((p) => p.slug === slug);
