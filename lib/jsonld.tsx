@@ -68,14 +68,9 @@ export function productSchema(opts: {
     brand: { "@type": "Brand", name: site.brand },
     material: "Kamstål B500B",
     manufacturer: { "@id": `${site.url}/#business` },
-    offers: {
-      "@type": "Offer",
-      priceCurrency: "SEK",
-      availability: "https://schema.org/InStock",
-      areaServed: { "@type": "Country", name: "Sverige" },
-      url: opts.url,
-      seller: { "@id": `${site.url}/#business` },
-    },
+    // OBS: inget `offers` – vi är offert-/prefabmodell utan fasta priser. Ett Offer
+    // utan `price` gör Product-datan ogiltig (GSC-kritiskt fel). När vi vill in i
+    // Google Shopping/rich results lägger vi till giltiga priser här (se slagplan).
   };
 }
 
