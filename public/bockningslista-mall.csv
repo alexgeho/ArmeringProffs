@@ -1,0 +1,9 @@
+Pos,Antal,Dimension Ø (mm),Kvalitet,Total längd (mm),Form/bockning,Mått A (mm),Mått B (mm),Mått C (mm),Kommentar
+K1,24,12,B500B,4200,Rak,,,,Kantbalk underkant
+K2,24,12,B500B,4200,Rak,,,,Kantbalk överkant
+B1,60,8,B500B,1600,Bygel,300,500,,Bygel c/c 200
+H1,8,16,B500B,3000,L-form,2600,400,,Hörnjärn
+S1,40,10,B500B,2000,U-form,700,600,700,Stödjärn
+,,,,,,,,,
+"Fyll i din bockningslista och bifoga den i offertförfrågan på armeringproffs.se/offert",,,,,,,,,
+"Pos = positionsbeteckning · Antal = st · Dimension = Ø i mm · Form = rak/bygel/L/U m.m. · Mått A/B/C = bockningsmått i mm",,,,,,,,,

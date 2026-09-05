@@ -2,7 +2,7 @@ import { site } from "@/config/site";
 import { faq } from "@/config/faq";
 import { Section, SectionHeading } from "@/components/ui";
 import {
-  Hero, UspBar, ProductsGrid, Process, LeveransSection, Reviews, CtaBanner,
+  Hero, UspBar, ProductsGrid, Process, LeveransSection, Reviews, CtaBanner, KalkylatorPromo,
 } from "@/components/sections";
 import { RebarCageIllustration } from "@/components/illustrations";
 import { FaqAccordion } from "@/components/FaqAccordion";
@@ -41,6 +41,7 @@ export default function HomePage() {
       </Section>
 
       <ProductsGrid />
+      <KalkylatorPromo />
       <Process />
       <LeveransSection />
       <Reviews />

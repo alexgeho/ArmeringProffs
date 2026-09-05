@@ -247,6 +247,42 @@ export function Reviews() {
   );
 }
 
+/* ---------- Kalkylator-promo (lead-magnet) ---------- */
+export function KalkylatorPromo() {
+  return (
+    <Section>
+      <div className="grid items-center gap-8 rounded-2xl border border-brand/25 bg-brand-light p-8 sm:p-10 lg:grid-cols-[1.2fr_0.8fr]">
+        <div>
+          <span className="inline-flex items-center gap-2 rounded-full bg-white px-3 py-1 text-sm font-semibold text-brand">
+            <IconRuler className="h-4 w-4" /> Gratis verktyg
+          </span>
+          <h2 className="mt-4 text-3xl font-bold tracking-tight text-ink sm:text-4xl">
+            Räkna ut armeringen till din betongplatta
+          </h2>
+          <p className="mt-4 text-lg leading-relaxed text-ink-soft">
+            Fyll i plattans mått i vår armeringskalkylator och få ungefärlig åtgång av armeringsnät,
+            kantjärn och distanser på sekunder – och begär offert direkt på din beräkning.
+          </p>
+          <div className="mt-6">
+            <Button href="/armeringskalkylator">Öppna armeringskalkylatorn <IconArrow className="h-4 w-4" /></Button>
+          </div>
+        </div>
+        <ul className="grid gap-3">
+          {[
+            "Åtgång av nät, kantjärn och distanser",
+            "Baserat på samma tumregler som våra guider",
+            "Offertformuläret förifylls med din beräkning",
+          ].map((t) => (
+            <li key={t} className="flex items-start gap-3 rounded-xl bg-white p-4 text-ink-soft">
+              <IconCheck className="mt-0.5 h-5 w-5 shrink-0 text-brand" /> {t}
+            </li>
+          ))}
+        </ul>
+      </div>
+    </Section>
+  );
+}
+
 /* ---------- CTA banner ---------- */
 export function CtaBanner() {
   return (

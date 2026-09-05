@@ -146,6 +146,13 @@ export default async function ProductPage({
                   </li>
                 ))}
               </ul>
+              <div className="mt-6 border-t border-line pt-5">
+                <p className="text-sm font-semibold text-ink">Osäker på mängden?</p>
+                <p className="mt-1 text-sm text-ink-soft">Räkna ut åtgången i vår kalkylator.</p>
+                <Link href="/armeringskalkylator" className="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-brand hover:underline">
+                  Öppna armeringskalkylatorn <IconArrow className="h-4 w-4" />
+                </Link>
+              </div>
             </div>
           </aside>
         </div>

@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import { site } from "@/config/site";
+import Link from "next/link";
 import { Section, Container } from "@/components/ui";
 import { Breadcrumbs } from "@/components/sections";
 import { ContactForm } from "@/components/ContactForm";
-import { IconCheck, IconPhone } from "@/components/icons";
+import { IconCheck, IconPhone, IconRuler, IconArrow } from "@/components/icons";
 import { JsonLd, breadcrumbSchema } from "@/lib/jsonld";
 
 export const metadata: Metadata = {
@@ -57,7 +58,45 @@ export default function OffertPage() {
         </Container>
       </section>
       <Section>
-        <p className="mx-auto max-w-2xl text-center text-ink-soft">
+        <div className="grid gap-6 md:grid-cols-2">
+          <div className="flex flex-col rounded-2xl border border-line bg-surface p-6 sm:p-8">
+            <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-brand-light text-brand">
+              <IconRuler className="h-6 w-6" />
+            </span>
+            <h2 className="mt-4 text-xl font-bold text-ink">Osäker på mängden?</h2>
+            <p className="mt-2 flex-1 text-ink-soft">
+              Räkna ut ungefärlig åtgång av armeringsnät, kantjärn och distanser i vår
+              armeringskalkylator – du kan begära offert direkt på beräkningen.
+            </p>
+            <div className="mt-5">
+              <Link href="/armeringskalkylator" className="inline-flex items-center gap-1 font-semibold text-brand hover:underline">
+                Öppna armeringskalkylatorn <IconArrow className="h-4 w-4" />
+              </Link>
+            </div>
+          </div>
+
+          <div className="flex flex-col rounded-2xl border border-line bg-surface p-6 sm:p-8">
+            <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-brand-light text-brand">
+              <IconCheck className="h-6 w-6" />
+            </span>
+            <h2 className="mt-4 text-xl font-bold text-ink">Ingen bockningslista?</h2>
+            <p className="mt-2 flex-1 text-ink-soft">
+              Ladda ner vår mall för bockningslista, fyll i dina positioner och bifoga den i
+              förfrågan – så räknar vi på den. Saknar du underlag hjälper vi dig fram.
+            </p>
+            <div className="mt-5">
+              <a
+                href="/bockningslista-mall.csv"
+                download
+                className="inline-flex items-center gap-1 font-semibold text-brand hover:underline"
+              >
+                Ladda ner bockningslista-mall (CSV) <IconArrow className="h-4 w-4" />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <p className="mx-auto mt-10 max-w-2xl text-center text-ink-soft">
           Vi behandlar dina uppgifter enligt vår{" "}
           <a href="/integritetspolicy" className="text-brand underline">integritetspolicy</a> och delar dem aldrig med tredje part.
         </p>
