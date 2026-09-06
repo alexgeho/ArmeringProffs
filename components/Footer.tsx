@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { site } from "@/config/site";
 import { products } from "@/config/products";
 import { cities } from "@/config/cities";
@@ -20,7 +21,7 @@ export function Footer() {
       <div className="mx-auto grid w-full max-w-6xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-4">
         <div>
           <div className="flex items-center gap-2 font-bold text-white">
-            <span className="flex h-9 w-9 items-center justify-center rounded-md bg-brand">A</span>
+            <Image src="/images/logo-emblem.png" alt="" width={44} height={44} className="h-11 w-11 shrink-0" />
             <span className="text-lg">{site.brand}</span>
           </div>
           <p className="mt-4 text-sm leading-relaxed text-slate-400">
