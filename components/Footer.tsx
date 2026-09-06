@@ -20,9 +20,8 @@ export function Footer() {
     <footer className="border-t border-line bg-ink text-slate-300">
       <div className="mx-auto grid w-full max-w-6xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-4">
         <div>
-          <div className="flex items-center gap-2 font-bold text-white">
-            <Image src="/images/logo-emblem.png" alt="" width={44} height={44} className="h-11 w-11 shrink-0" />
-            <span className="text-lg">{site.brand}</span>
+          <div className="flex items-center">
+            <Image src="/images/logo-emblem.png" alt={site.brand} width={64} height={64} className="h-16 w-16 shrink-0" />
           </div>
           <p className="mt-4 text-sm leading-relaxed text-slate-400">
             Prefabricerad armering – klippt & bockad, armeringskorgar, svetsad armering och nät. Tillverkning, leverans och montage i {site.regionInflected}.
