@@ -16,8 +16,8 @@ export const site = {
   url: "https://armeringproffs.se",
 
   // Kontaktuppgifter
-  phone: "+46 70 000 00 00", // TODO: riktigt telefonnummer
-  phoneHref: "tel:+46700000000", // TODO
+  phone: "+46 72 858 99 75",
+  phoneHref: "tel:+46728589975",
   phoneOffice: "", // valfritt kontorsnummer
   phoneOfficeHref: "",
   email: "info@armeringproffs.se",
