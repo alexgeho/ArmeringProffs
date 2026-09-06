@@ -38,9 +38,11 @@ export function Hero({
             sizes="100vw"
             className="pointer-events-none absolute inset-0 h-full w-full object-cover"
           />
-          {/* mörk gradient så vit text alltid är läsbar men fotot syns.
-              Kraftig vänster (bakom texten), ljusare höger (visar fotot). */}
-          <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-ink via-ink/80 via-55% to-ink/35" />
+          {/* Läsbarhets-overlay i två lager så texten alltid har kontrast:
+              1) en jämn mörk bas som tonar ner hela fotot (skyddar mobil + orange accent),
+              2) en kraftig mörk vänster som blir genomskinlig åt höger där fotot får synas. */}
+          <div className="pointer-events-none absolute inset-0 bg-ink/70" />
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-ink via-ink/80 via-45% to-transparent" />
         </>
       ) : (
         <RebarMeshPattern className="pointer-events-none absolute inset-0 h-full w-full text-white opacity-[0.07]" />
@@ -50,8 +52,8 @@ export function Hero({
           <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-sm font-medium text-orange-200">
             <IconStar className="h-4 w-4 text-brand" /> Prefab armering · Tillverkning & montage · Hela Sverige
           </span>
-          <h1 className="mt-5 text-4xl font-bold leading-tight tracking-tight sm:text-5xl">{title}</h1>
-          <p className="mt-5 max-w-xl text-lg leading-relaxed text-slate-100">{intro}</p>
+          <h1 className="mt-5 text-4xl font-bold leading-tight tracking-tight drop-shadow-[0_2px_12px_rgba(0,0,0,0.55)] sm:text-5xl">{title}</h1>
+          <p className="mt-5 max-w-xl text-lg leading-relaxed text-slate-100 drop-shadow-[0_1px_8px_rgba(0,0,0,0.5)]">{intro}</p>
 
           <ul className="mt-7 grid gap-3 sm:grid-cols-2">
             {["Prefab efter bockningslista & ritning", "Klippt, bockat, svetsat & korgar", "Leverans i hela Sverige", "Tillverkning, leverans & montage"].map((t) => (
