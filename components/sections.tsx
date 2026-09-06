@@ -41,8 +41,8 @@ export function Hero({
           {/* Läsbarhets-overlay i två lager så texten alltid har kontrast:
               1) en måttlig mörk bas som tonar ner fotots högdagrar (skyddar mobil + orange accent),
               2) en kraftig mörk vänster (bakom rubrik/text) som tonar ut åt höger där fotot får synas. */}
-          <div className="pointer-events-none absolute inset-0 bg-ink/55" />
-          <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-ink via-ink/85 via-50% to-transparent" />
+          <div className="pointer-events-none absolute inset-0 bg-ink/60" />
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-ink via-ink/90 via-55% to-transparent" />
         </>
       ) : (
         <RebarMeshPattern className="pointer-events-none absolute inset-0 h-full w-full text-white opacity-[0.07]" />
@@ -57,7 +57,7 @@ export function Hero({
 
           <ul className="mt-7 grid gap-3 sm:grid-cols-2">
             {["Prefab efter bockningslista & ritning", "Klippt, bockat, svetsat & korgar", "Leverans i hela Sverige", "Tillverkning, leverans & montage"].map((t) => (
-              <li key={t} className="flex items-center gap-2 text-slate-200">
+              <li key={t} className="flex items-center gap-2 text-slate-50 drop-shadow-[0_1px_6px_rgba(0,0,0,0.5)]">
                 <IconCheck className="h-5 w-5 shrink-0 text-brand" /> {t}
               </li>
             ))}
@@ -296,20 +296,20 @@ export function KalkylatorPromo() {
 /* ---------- CTA banner ---------- */
 export function CtaBanner() {
   return (
-    <section className="bg-brand">
+    <section className="bg-ink">
       <Container className="flex flex-col items-center gap-6 py-14 text-center sm:py-16">
         <h2 className="max-w-2xl text-3xl font-bold text-white sm:text-4xl">
           Skicka din bockningslista – få offert på prefab armering
         </h2>
-        <p className="max-w-xl text-lg text-orange-50">
+        <p className="max-w-xl text-lg text-slate-300">
           Vi svarar snabbt med pris och leveranstid för hela Sverige.
         </p>
         <div className="flex flex-wrap justify-center gap-4">
-          <Link href="/offert" className="inline-flex h-12 items-center gap-2 rounded-lg bg-white px-6 font-semibold text-brand hover:bg-orange-50">
+          <Link href="/offert" className="inline-flex h-12 items-center gap-2 rounded-lg bg-brand px-6 font-semibold text-white hover:bg-brand-dark">
             Begär offert <IconArrow className="h-4 w-4" />
           </Link>
-          <a href={site.phoneHref} className="inline-flex h-12 items-center gap-2 rounded-lg border border-white/40 px-6 font-semibold text-white hover:bg-white/10">
-            <IconPhone className="h-4 w-4" /> {site.phone}
+          <a href={site.phoneHref} className="inline-flex h-12 items-center gap-2 rounded-lg border border-white/25 px-6 font-semibold text-white hover:bg-white/10">
+            <IconPhone className="h-4 w-4 text-brand" /> {site.phone}
           </a>
         </div>
       </Container>
