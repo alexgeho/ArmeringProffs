@@ -16,9 +16,13 @@
    Environment variables): `SMTP_HOST=mail.inleed.com`, `SMTP_PORT=465`, `SMTP_SECURE=true`,
    `SMTP_USER=offert@armeringproffs.se`, `SMTP_PASS=***` (в панели), `LEAD_TO`/`LEAD_FROM=offert@armeringproffs.se`.
    Ящик `offert@armeringproffs.se` (Webmail). Тест-лид через `/offert` дошёл. Код: `lib/mail.ts`, `app/api/lead/route.ts`.
-2. **Реальные контакты** в `config/site.ts`: `phone`/`phoneHref`, `orgNumber`, `address`.
-   Сейчас плейсхолдеры. Как впишешь реальные — телефон/адрес **автоматически** вернутся и в JSON-LD
-   (сейчас скрыты, чтобы не отдавать Google фейковый NAP). Видны в шапке/футере/CTA.
+2. **Реальные контакты** — частично готово 2026-09-06:
+   - ✅ Юр.данные вписаны: `AGRY OÜ · Reg.nr 14785246 · VAT EE102510841` (эстонское юрлицо за брендом
+     «Armeringsproffs»). В футере/контактах/интеграполиси + JSON-LD (`legalName`/`vatID`).
+   - ✅ Адрес **скрыт по решению владельца** (юрлицо в Эстонии, сервис — вся Швеция). Фейк «Gatuadress 1»
+     убран. Если захотят показать шведский адрес — заполнить `address.street/zip/city` в `config/site.ts`.
+   - ⏳ **ОСТАЛОСЬ: телефон.** `phone`/`phoneHref` в `config/site.ts` всё ещё плейсхолдер `+46 70 000 00 00`
+     (скрыт в JSON-LD). В регистре телефона нет — ждём номер от владельца. Как впишу — появится в шапке/CTA/футере/JSON-LD.
 
 ### 🟠 P1 — трафик/доверие (в основном нужны твои данные)
 3. **Google Business Profile** — бесплатно, локальные/«nära mig»-запросы, звонки. Нужны адрес/телефон + верификация.
