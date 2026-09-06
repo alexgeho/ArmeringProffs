@@ -28,7 +28,7 @@ export default function OmOssPage() {
     <>
       <Breadcrumbs items={[{ name: "Hem", href: "/" }, { name: "Om oss" }]} />
       <Section>
-        <div className="grid items-start gap-10 lg:grid-cols-2 lg:items-center">
+        <div className="grid items-start gap-10 lg:grid-cols-[1fr_1.45fr] lg:items-center">
           <div>
             <SectionHeading eyebrow="Om oss" title={`${site.company}`} />
             <div className="prose-body mt-6 space-y-4 text-lg">
@@ -58,7 +58,7 @@ export default function OmOssPage() {
               alt="Armeringsverkstad med prefabricerade armeringskorgar, kamstål och skyddshjälm"
               width={1400}
               height={934}
-              sizes="(min-width: 1024px) 600px, 100vw"
+              sizes="(min-width: 1024px) 720px, 100vw"
               className="h-auto w-full object-cover"
             />
           </figure>
