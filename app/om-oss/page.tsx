@@ -28,38 +28,40 @@ export default function OmOssPage() {
     <>
       <Breadcrumbs items={[{ name: "Hem", href: "/" }, { name: "Om oss" }]} />
       <Section>
-        <div className="mx-auto max-w-3xl">
-          <SectionHeading eyebrow="Om oss" title={`${site.company}`} />
-          <div className="prose-body mt-6 space-y-4 text-lg">
-            <p>
-              Vi är specialiserade på prefabricerad armering – klippt och bockad armering,
-              armeringskorgar, svetsad armering och nät, kamstål och distanser. Vi tillverkar efter
-              din bockningslista eller konstruktionsritning och levererar i hela Sverige.
-            </p>
-            <p>
-              Vår ambition är enkel: rätt armering, i rätt tid, till rätt plats. Vi tar hela cykeln –
-              tillverkning, leverans och montage – och arbetar enligt gällande normer med kamstål
-              B500B. Skicka din ritning så hjälper vi dig hela vägen, från bockningslista till färdig
-              leverans.
-            </p>
+        <div className="grid items-start gap-10 lg:grid-cols-2 lg:items-center">
+          <div>
+            <SectionHeading eyebrow="Om oss" title={`${site.company}`} />
+            <div className="prose-body mt-6 space-y-4 text-lg">
+              <p>
+                Vi är specialiserade på prefabricerad armering – klippt och bockad armering,
+                armeringskorgar, svetsad armering och nät, kamstål och distanser. Vi tillverkar efter
+                din bockningslista eller konstruktionsritning och levererar i hela Sverige.
+              </p>
+              <p>
+                Vår ambition är enkel: rätt armering, i rätt tid, till rätt plats. Vi tar hela cykeln –
+                tillverkning, leverans och montage – och arbetar enligt gällande normer med kamstål
+                B500B. Skicka din ritning så hjälper vi dig hela vägen, från bockningslista till färdig
+                leverans.
+              </p>
+            </div>
+            <ul className="mt-8 grid gap-3 sm:grid-cols-2">
+              {values.map((v) => (
+                <li key={v} className="flex items-start gap-2 text-ink-soft">
+                  <IconCheck className="mt-0.5 h-5 w-5 shrink-0 text-brand" /> {v}
+                </li>
+              ))}
+            </ul>
           </div>
-          <figure className="mt-8 overflow-hidden rounded-2xl border border-line">
+          <figure className="overflow-hidden rounded-2xl border border-line">
             <Image
               src="/images/om-oss-armeringsverkstad.webp"
               alt="Armeringsverkstad med prefabricerade armeringskorgar, kamstål och skyddshjälm"
               width={1400}
               height={934}
-              sizes="(min-width: 768px) 768px, 100vw"
+              sizes="(min-width: 1024px) 600px, 100vw"
               className="h-auto w-full object-cover"
             />
           </figure>
-          <ul className="mt-8 grid gap-3 sm:grid-cols-2">
-            {values.map((v) => (
-              <li key={v} className="flex items-start gap-2 text-ink-soft">
-                <IconCheck className="mt-0.5 h-5 w-5 shrink-0 text-brand" /> {v}
-              </li>
-            ))}
-          </ul>
         </div>
       </Section>
       <UspBar />
