@@ -23,10 +23,14 @@
 :root {
   --background: #ffffff;
   --foreground: var(--color-ink);
+  /* Sajten är designad ljus. Talar om för webbläsaren så att t.ex. Chrome
+     "Auto Dark Mode" inte auto-inverterar färger/foton för besökare. */
+  color-scheme: light;
 }
 
 html {
   scroll-behavior: smooth;
+  color-scheme: light;
 }
 
 body {
