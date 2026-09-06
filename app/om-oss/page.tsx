@@ -45,8 +45,8 @@ export default function OmOssPage() {
           </div>
           <figure className="mt-8 overflow-hidden rounded-2xl border border-line">
             <Image
-              src="/images/om-oss-armering-arbete.webp"
-              alt="Montör binder ihop armeringsnät på en byggarbetsplats"
+              src="/images/om-oss-armeringsverkstad.webp"
+              alt="Armeringsverkstad med prefabricerade armeringskorgar, kamstål och skyddshjälm"
               width={1400}
               height={934}
               sizes="(min-width: 768px) 768px, 100vw"
