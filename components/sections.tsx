@@ -39,10 +39,10 @@ export function Hero({
             className="pointer-events-none absolute inset-0 h-full w-full object-cover"
           />
           {/* Läsbarhets-overlay i två lager så texten alltid har kontrast:
-              1) en jämn mörk bas som tonar ner hela fotot (skyddar mobil + orange accent),
-              2) en kraftig mörk vänster som blir genomskinlig åt höger där fotot får synas. */}
-          <div className="pointer-events-none absolute inset-0 bg-ink/70" />
-          <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-ink via-ink/80 via-45% to-transparent" />
+              1) en måttlig mörk bas som tonar ner fotots högdagrar (skyddar mobil + orange accent),
+              2) en kraftig mörk vänster (bakom rubrik/text) som tonar ut åt höger där fotot får synas. */}
+          <div className="pointer-events-none absolute inset-0 bg-ink/55" />
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-ink via-ink/85 via-50% to-transparent" />
         </>
       ) : (
         <RebarMeshPattern className="pointer-events-none absolute inset-0 h-full w-full text-white opacity-[0.07]" />
