@@ -29,8 +29,7 @@
    → *Я могу подготовить GBP+каталоги-кит (готовый текст + список) с плейсхолдерами — попроси.*
 5. **Реальные отзывы** — заменить плейсхолдеры в `config/reviews.ts` (помечены «exempel»).
 6. **GA4** — пометить событие `generate_lead` как **conversion** в интерфейсе GA4 + добавить отслеживание кликов по телефону.
-7. **Cookie-согласие (GDPR)** — GA ставит cookie; в ЕС нужен баннер (вариант: грузить GA только после «Godkänn»).
-8. **Фото** для `armeringskorgar` и `svetsad-armering` (механизм готов: `product.image` в `config/products.ts`; ТЗ ниже).
+7. **Фото** для `armeringskorgar` и `svetsad-armering` (механизм готов: `product.image` в `config/products.ts`; ТЗ ниже).
 
 ### 🟢 Что могу сделать САМ в след. раз (без твоих данных)
 - **Проверить индексацию в GSC** (через пару дней) — реально ли индексируются калькулятор/статьи/города; подстроить.
@@ -50,9 +49,16 @@
 
 ### Сайт (Next.js 16, React 19, Tailwind 4, шведский контент)
 - Страницы: `/` · `/produkter` + 5 категорий · `/leverans` · `/offert` · `/kontakt` · `/om-oss` · `/integritetspolicy`
-  · **`/armeringskalkylator`** · **`/armering/[stad]` × 12** · **`/blogg` — 14 гайдов**.
+  · **`/armeringskalkylator`** · **`/vanliga-fragor`** · **`/omdomen`** · **`/armering/[stad]` × 12** · **`/blogg` — 14 гайдов**.
 - **Offert-форма** (`components/ContactForm.tsx`): compact (hero) = имя(опц.) + Telefon/E-post(одно поле) + описание + загрузка ritning + согласие; полная — на `/offert`/`/kontakt`. Бэкенд `app/api/lead/route.ts`.
 - SEO: уникальные meta/canonical/OG на всех, JSON-LD (Service/FAQPage/Breadcrumb/Organization), sitemap.xml (**39 URL**), robots.txt, сгенерированный OG-образ, `metadataBase`.
+
+### E-E-A-T / trust (2026-09-06, по мотивам аудита bygghub.nu)
+- **Cookie-баннер (GDPR)** `components/CookieConsent.tsx`: GA грузится ТОЛЬКО после «Godkänn» (выбор в localStorage `ap-cookie-consent`). Из `app/layout.tsx` убрана безусловная загрузка GA. Форма шлёт `generate_lead` через `gtag?.()` — при «Avböj» безопасно no-op.
+- **Отдельная страница FAQ** `/vanliga-fragor` (`app/vanliga-fragor/page.tsx`): расширил `config/faq.ts` 6→14 вопросов; на главной теперь тизер 6 + «Se alla vanliga frågor». FAQPage-схема на отдельной странице (полная), на главной — по тизеру.
+- **Отдельная страница отзывов** `/omdomen` (`app/omdomen/page.tsx`): рендерит `config/reviews.ts`; т.к. отзывы пока «exempel» — честная пометка + БЕЗ Review/Rating-разметки (не кормим Google фейком). Ссылка «Läs fler omdömen» из секции на главной.
+- **Футер**: год теперь динамический (`new Date().getFullYear()`), добавлен ряд ссылок (Om oss · Omdömen · Vanliga frågor · Kontakt · Integritetspolicy). Обе новые страницы в sitemap.
+- Проверка ключевиков (глава 10 аудита): title/description/H1 уже содержат целевые запросы — правок не потребовалось.
 
 ### Лид-магниты и воронка (2026-09-05)
 - **Armeringskalkylator** `/armeringskalkylator` (`app/armeringskalkylator/page.tsx` + `components/ArmeringsKalkylator.tsx`):
@@ -110,6 +116,9 @@ Stockholm, Göteborg, Malmö, Uppsala, Västerås, Örebro, Linköping, Helsingb
 - Локальный прогон: `npm run build` → `PORT=3111 node server.js` (⚠️ curl с `-H 'X-Forwarded-Proto: https'`, иначе 301; убивай старый сервер `pkill -f server.js` перед новым запуском).
 
 ---
+
+## 🗒️ Лог сессии 2026-09-06 (всё задеплоено)
+По мотивам E-E-A-T-аудита (bygghub.nu): cookie-баннер GDPR (GA только после согласия) + отдельная FAQ-страница `/vanliga-fragor` (6→14 вопросов) + отдельная страница отзывов `/omdomen` + динамический год и ссылки в футере + обе страницы в sitemap. ⚠️ Панель Inleed выдавала `cagefs_enter: Unable to fork` (лимиты PMEM/процессов тарифа) — владелец написал в поддержку. NB: bygghub.nu на том же хосте `prime6.inleed.net` — аудит нашёл у него нестабильный SSL; проверить наш сертификат когда починят панель.
 
 ## 🗒️ Лог сессии 2026-09-05 (всё задеплоено)
 Калькулятор-лид-магнит + шаблон bockningslista + GA4 `generate_lead` + **7 новых статей** (блог 7→14) +

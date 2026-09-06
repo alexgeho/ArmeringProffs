@@ -243,6 +243,14 @@ export function Reviews() {
           </figure>
         ))}
       </div>
+      <div className="mt-8 text-center">
+        <Link
+          href="/omdomen"
+          className="inline-flex items-center gap-1 text-sm font-semibold text-brand hover:text-brand-dark"
+        >
+          Läs fler omdömen <IconArrow className="h-4 w-4" />
+        </Link>
+      </div>
     </Section>
   );
 }

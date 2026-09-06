@@ -4,8 +4,16 @@ import { products } from "@/config/products";
 import { cities } from "@/config/cities";
 import { IconPhone, IconMail, IconMapPin } from "./icons";
 
+const footerLinks = [
+  { href: "/om-oss", label: "Om oss" },
+  { href: "/omdomen", label: "Omdömen" },
+  { href: "/vanliga-fragor", label: "Vanliga frågor" },
+  { href: "/kontakt", label: "Kontakt" },
+  { href: "/integritetspolicy", label: "Integritetspolicy" },
+];
+
 export function Footer() {
-  const year = 2026; // uppdatera vid årsskifte
+  const year = new Date().getFullYear();
 
   return (
     <footer className="border-t border-line bg-ink text-slate-300">
@@ -71,11 +79,20 @@ export function Footer() {
       </div>
 
       <div className="border-t border-white/10">
-        <div className="mx-auto flex w-full max-w-6xl flex-col gap-2 px-4 py-6 text-xs text-slate-500 sm:flex-row sm:items-center sm:justify-between sm:px-6">
-          <p>
-            © {year} {site.company} · Org.nr {site.orgNumber}
-          </p>
-          <p>Klippt & bockad · Armeringskorgar · Svetsad armering · {site.region}</p>
+        <div className="mx-auto w-full max-w-6xl px-4 py-6 sm:px-6">
+          <nav className="flex flex-wrap gap-x-5 gap-y-2 text-sm">
+            {footerLinks.map((l) => (
+              <Link key={l.href} href={l.href} className="text-slate-400 hover:text-white">
+                {l.label}
+              </Link>
+            ))}
+          </nav>
+          <div className="mt-5 flex flex-col gap-2 text-xs text-slate-500 sm:flex-row sm:items-center sm:justify-between">
+            <p>
+              © {year} {site.company} · Org.nr {site.orgNumber}
+            </p>
+            <p>Klippt & bockad · Armeringskorgar · Svetsad armering · {site.region}</p>
+          </div>
         </div>
       </div>
     </footer>

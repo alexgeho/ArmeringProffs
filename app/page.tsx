@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { site } from "@/config/site";
 import { faq } from "@/config/faq";
 import { Section, SectionHeading } from "@/components/ui";
@@ -6,7 +7,11 @@ import {
 } from "@/components/sections";
 import { RebarCageIllustration } from "@/components/illustrations";
 import { FaqAccordion } from "@/components/FaqAccordion";
+import { IconArrow } from "@/components/icons";
 import { JsonLd, faqSchema, serviceSchema } from "@/lib/jsonld";
+
+// Startsidan visar ett urval frågor – fulla listan finns på /vanliga-fragor.
+const faqTeaser = faq.slice(0, 6);
 
 export default function HomePage() {
   return (
@@ -50,9 +55,17 @@ export default function HomePage() {
       <Section muted>
         <SectionHeading center eyebrow="Vanliga frågor" title="Frågor och svar" />
         <div className="mt-10">
-          <FaqAccordion items={faq} />
+          <FaqAccordion items={faqTeaser} />
         </div>
-        <JsonLd data={faqSchema(faq)} />
+        <div className="mt-8 text-center">
+          <Link
+            href="/vanliga-fragor"
+            className="inline-flex items-center gap-1 text-sm font-semibold text-brand hover:text-brand-dark"
+          >
+            Se alla vanliga frågor <IconArrow className="h-4 w-4" />
+          </Link>
+        </div>
+        <JsonLd data={faqSchema(faqTeaser)} />
       </Section>
 
       <CtaBanner />

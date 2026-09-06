@@ -14,6 +14,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/armeringskalkylator`, changeFrequency: "monthly", priority: 0.8 },
     { url: `${base}/blogg`, changeFrequency: "weekly", priority: 0.7 },
     { url: `${base}/om-oss`, changeFrequency: "yearly", priority: 0.5 },
+    { url: `${base}/omdomen`, changeFrequency: "monthly", priority: 0.5 },
+    { url: `${base}/vanliga-fragor`, changeFrequency: "monthly", priority: 0.6 },
     { url: `${base}/kontakt`, changeFrequency: "yearly", priority: 0.6 },
     { url: `${base}/offert`, changeFrequency: "yearly", priority: 0.8 },
   ];
