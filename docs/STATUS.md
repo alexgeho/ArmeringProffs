@@ -12,13 +12,10 @@
 ## 🧭 ПРОДОЛЖИТЬ ЗДЕСЬ (следующие шаги)
 
 ### 🔴 P0 — блокирует лиды, нужен ВЛАДЕЛЕЦ (я сделать не могу)
-1. **SMTP — заявки НЕ доходят на почту, только пишутся в лог сервера** (`lib/mail.ts`, `app/api/lead/route.ts`).
-   Это блокер №1 — форма работает, но письма не уходят. Нужно в DirectAdmin (Inleed):
-   - Создать ящик `info@armeringproffs.se` (E-mail Manager).
-   - Setup Node.js App → Environment variables:
-     `SMTP_HOST=mail.armeringproffs.se`, `SMTP_PORT=465`, `SMTP_SECURE=true`,
-     `SMTP_USER=info@armeringproffs.se`, `SMTP_PASS=…`, `LEAD_TO=info@armeringproffs.se`, `LEAD_FROM=info@armeringproffs.se`.
-   - Restart приложения → тест-лид через `/offert` → проверить письмо.
+1. ✅ **SMTP — ГОТОВО 2026-09-06.** Заявки уходят на почту. Настроено в DirectAdmin (Node.js App →
+   Environment variables): `SMTP_HOST=mail.inleed.com`, `SMTP_PORT=465`, `SMTP_SECURE=true`,
+   `SMTP_USER=offert@armeringproffs.se`, `SMTP_PASS=***` (в панели), `LEAD_TO`/`LEAD_FROM=offert@armeringproffs.se`.
+   Ящик `offert@armeringproffs.se` (Webmail). Тест-лид через `/offert` дошёл. Код: `lib/mail.ts`, `app/api/lead/route.ts`.
 2. **Реальные контакты** в `config/site.ts`: `phone`/`phoneHref`, `orgNumber`, `address`.
    Сейчас плейсхолдеры. Как впишешь реальные — телефон/адрес **автоматически** вернутся и в JSON-LD
    (сейчас скрыты, чтобы не отдавать Google фейковый NAP). Видны в шапке/футере/CTA.
