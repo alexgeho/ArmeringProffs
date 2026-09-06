@@ -56,8 +56,8 @@ export default function KontaktPage() {
               <li className="flex items-start gap-3">
                 <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-brand-light text-brand"><IconMapPin className="h-5 w-5" /></span>
                 <div>
-                  <p className="text-sm text-muted">Adress</p>
-                  <p className="font-semibold text-ink">{site.address.street}, {site.address.zip} {site.address.city}</p>
+                  <p className="text-sm text-muted">Leveransområde</p>
+                  <p className="font-semibold text-ink">Prefab armering i {site.regionInflected}</p>
                 </div>
               </li>
               <li className="flex items-start gap-3">
@@ -68,7 +68,9 @@ export default function KontaktPage() {
                 </div>
               </li>
             </ul>
-            <p className="mt-8 text-sm text-muted">Org.nr {site.orgNumber} · {site.company}</p>
+            <p className="mt-8 text-sm text-muted">
+              {site.company} drivs av {site.legalName} · Reg.nr {site.regNumber} · VAT {site.vat}
+            </p>
           </div>
 
           <div className="rounded-2xl border border-line p-6 sm:p-8">

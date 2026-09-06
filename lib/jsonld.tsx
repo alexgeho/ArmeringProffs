@@ -17,12 +17,14 @@ export function JsonLd({ data }: { data: object }) {
  *  värden fyllts i. */
 export function localBusinessSchema() {
   const hasPhone = !site.phone.includes("000 00 00"); // platshållare = "+46 70 000 00 00"
-  const hasAddress = site.address.street !== "Gatuadress 1"; // platshållare
+  const hasAddress = site.address.street !== ""; // adress döljs tills den fyllts i
   return {
     "@context": "https://schema.org",
     "@type": "Organization",
     "@id": `${site.url}/#business`,
     name: site.company,
+    legalName: site.legalName,
+    vatID: site.vat,
     image: `${site.url}/opengraph-image`,
     logo: `${site.url}/opengraph-image`,
     url: site.url,

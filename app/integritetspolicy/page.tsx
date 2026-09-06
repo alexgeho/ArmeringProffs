@@ -17,8 +17,9 @@ export default function IntegritetspolicyPage() {
       <Container className="prose-body max-w-3xl py-14">
         <h1 className="text-4xl font-bold text-ink">Integritetspolicy</h1>
         <p className="mt-4 text-ink-soft">
-          {site.company} (org.nr {site.orgNumber}) värnar om din integritet. Här beskriver vi hur vi
-          behandlar dina personuppgifter enligt dataskyddsförordningen (GDPR).
+          {site.company} (drivs av {site.legalName}, reg.nr {site.regNumber}, VAT {site.vat}) värnar om
+          din integritet. Här beskriver vi hur vi behandlar dina personuppgifter enligt
+          dataskyddsförordningen (GDPR).
         </p>
 
         <h2 className="mt-8 text-2xl font-bold text-ink">Vilka uppgifter vi samlar in</h2>

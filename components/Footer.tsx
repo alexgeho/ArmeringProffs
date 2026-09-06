@@ -70,9 +70,7 @@ export function Footer() {
             </li>
             <li className="flex items-start gap-2 text-slate-400">
               <IconMapPin className="mt-0.5 h-4 w-4 shrink-0 text-brand" />
-              <span>
-                {site.address.street}, {site.address.zip} {site.address.city}
-              </span>
+              <span>Leverans i {site.regionInflected}</span>
             </li>
           </ul>
         </div>
@@ -89,7 +87,7 @@ export function Footer() {
           </nav>
           <div className="mt-5 flex flex-col gap-2 text-xs text-slate-500 sm:flex-row sm:items-center sm:justify-between">
             <p>
-              © {year} {site.company} · Org.nr {site.orgNumber}
+              © {year} {site.company} · Drivs av {site.legalName} · Reg.nr {site.regNumber} · VAT {site.vat}
             </p>
             <p>Klippt & bockad · Armeringskorgar · Svetsad armering · {site.region}</p>
           </div>

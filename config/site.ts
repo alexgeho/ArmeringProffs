@@ -21,12 +21,19 @@ export const site = {
   phoneOffice: "", // valfritt kontorsnummer
   phoneOfficeHref: "",
   email: "info@armeringproffs.se",
-  orgNumber: "000000-0000", // TODO
 
+  // Juridisk info – varumärket "Armeringsproffs" drivs av det estniska bolaget AGRY OÜ.
+  legalName: "AGRY OÜ",
+  regNumber: "14785246", // estniskt registrikood
+  vat: "EE102510841", // EU-momsnummer
+
+  // Adress döljs publikt (bolaget är registrerat i Estland, tjänsten levereras i hela
+  // Sverige). Fyll i street/zip/city om ni vill visa en svensk adress – då syns den
+  // automatiskt i sidfot, kontaktsida och JSON-LD igen.
   address: {
-    street: "Gatuadress 1", // TODO
-    zip: "100 00", // TODO
-    city: "Sverige", // TODO – ort för tillverkning/lager
+    street: "",
+    zip: "",
+    city: "Sverige",
     country: "SE",
   },
 
