@@ -1,0 +1,29 @@
+# Statisk Next-export (out/) på Inleed (LiteSpeed/Apache). Ingen Node-server.
+# trailingSlash: true → varje route är .../index.html och serveras via DirectoryIndex.
+
+Options -Indexes -MultiViews
+DirectoryIndex index.html
+
+RewriteEngine On
+
+# Tvinga HTTPS (SSL termineras av hosten – ingen proxy.ts längre).
+RewriteCond %{HTTPS} !=on
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+ErrorDocument 404 /404.html
+
+# OG-bilden exporteras som filen "opengraph-image" utan filändelse – tvinga rätt
+# Content-Type så att sociala scrapers (Facebook/LinkedIn m.fl.) accepterar den.
+<Files "opengraph-image">
+  ForceType image/png
+</Files>
+
+# Cache: hashade assets cachas hårt, HTML revalideras alltid (freshness efter deploy).
+<IfModule mod_headers.c>
+  <FilesMatch "\.(js|css|woff2?|png|jpe?g|webp|svg|ico|gif)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  <FilesMatch "\.html$">
+    Header set Cache-Control "public, max-age=0, must-revalidate"
+  </FilesMatch>
+</IfModule>

@@ -1,6 +1,9 @@
 import { ImageResponse } from "next/og";
 import { site } from "@/config/site";
 
+// Krävs för statisk export (output: export): generera OG-bilden vid build.
+export const dynamic = "force-static";
+
 export const alt = `${site.company} – ${site.service} i ${site.regionInflected}`;
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";

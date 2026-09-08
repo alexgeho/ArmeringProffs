@@ -1,16 +1,15 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // Shared hosting (CloudLinux/Inleed) har hårda process-/trådgränser (nproc).
-  // Begränsa build-workers så att "Collecting page data" inte försöker spawna
-  // för många trådar (OS error 11: Resource temporarily unavailable).
-  experimental: {
-    cpus: 1,
-    workerThreads: false,
-  },
-  // Bilderna är redan nedskalade och konverterade till WebP i public/images.
-  // På delad hosting (Passenger, cpus:1) undviker vi Next runtime-optimizern
-  // – den spawnar trådar och kan slå i nproc-gränsen. Filerna serveras statiskt.
+  // Helt statisk export (out/). Sajten hostas som statiska filer + PHP-mejlare på
+  // Inleed – ingen Node-server, inga API-routes, ingen middleware. Detta tar bort
+  // nproc-/process-problemen (cagefs_enter: Unable to fork) helt.
+  output: "export",
+  // trailingSlash: varje route exporteras som .../index.html och serveras nativt av
+  // Apache/LiteSpeed via DirectoryIndex (utan .html-rewrite). Krävs för att nästlade
+  // routes (/armering/[slug] m.fl.) inte ska bli kataloger utan index → 403.
+  trailingSlash: true,
+  // Bilderna är redan nedskalade/WebP i public/images – ingen runtime-optimizer.
   images: {
     unoptimized: true,
   },

@@ -1,18 +1,14 @@
-name: Deploy to Inleed
+name: Deploy to Inleed (static)
 
-# Push till main -> bygg + installera prod-beroenden på GitHub-runnern -> rsync
-# HELA appen (inkl. node_modules) till Inleed -> touch restart. INGET npm/build körs
-# på servern (shared hosting: npm ci spawnar för många processer och slår i nproc =
-# "cagefs_enter: Unable to fork"). Runnern (ubuntu x64 glibc) matchar servern
-# (CloudLinux x64 glibc), så nativa binärer (@next/swc-linux-x64-gnu, ev. sharp)
-# fungerar direkt.
+# Push till main -> bygg statisk export (out/) på runnern -> rsync out/ till docroot
+# på Inleed -> smoke-test. INGEN Node-server, INGET npm/ssh-restart på servern
+# (sajten är ren statik + PHP-mejlare). Detta eliminerar nproc/cagefs-forkproblemen.
 on:
   push:
     branches: [main]
   workflow_dispatch: {}
 
-# cancel-in-progress:false – avbryt INTE en pågående deploy mitt i rsync/restart
-# (delad host, instances=1). Nya körningar köas istället för att döda den gamla.
+# cancel-in-progress:false – köa deploys istället för att döda en pågående rsync.
 concurrency:
   group: inleed-deploy
   cancel-in-progress: false
@@ -24,7 +20,7 @@ jobs:
       SSH_HOST: ${{ secrets.INLEED_SSH_HOST }}
       SSH_USER: ${{ secrets.INLEED_SSH_USER }}
       SSH_PORT: ${{ secrets.INLEED_SSH_PORT }}
-      APP_DIR: ${{ secrets.INLEED_APP_DIR }}
+      DOCROOT: ${{ secrets.INLEED_DOCROOT }}
       SITE_URL: https://armeringproffs.se
     steps:
       - name: Checkout
@@ -36,36 +32,40 @@ jobs:
           node-version: 20
           cache: npm
 
-      - name: Install (full) & build
+      - name: Install & build (static export -> out/)
         run: |
           npm ci
           npm run build
 
-      # Behåll bara prod-beroenden i node_modules innan de rsync:as till servern.
-      # prune tar bort devDependencies men BEHÅLLER optionalDependencies, dvs den
-      # nativa SWC-binären (@next/swc-linux-x64-gnu) som Next kräver i runtime.
-      - name: Prune to production dependencies
-        run: npm prune --omit=dev
+      - name: Guard – require INLEED_DOCROOT
+        run: |
+          if [ -z "${DOCROOT// }" ]; then
+            echo "FEL: secret INLEED_DOCROOT saknas/tom. Sätt den (t.ex. domains/armeringproffs.se/public_html)"
+            echo "innan deploy – annars skulle rsync --delete peka på fel katalog. Se docs/DEPLOY.md."
+            exit 1
+          fi
+          echo "DOCROOT satt."
 
-      - name: Verify runtime artifacts exist on runner
+      - name: Verify static output
         run: |
           set -e
-          test -f .next/BUILD_ID
-          test -d node_modules/next
-          # Nativ SWC-binär för linux x64 (samma plattform som servern) måste finnas.
-          ls node_modules/@next/swc-linux-x64-gnu >/dev/null 2>&1 \
-            || echo "VARNING: @next/swc-linux-x64-gnu hittades inte – kontrollera Next SWC-binär."
-          echo "Runner BUILD_ID=$(cat .next/BUILD_ID)"
+          test -f out/index.html
+          test -f out/404.html
+          test -f out/sendmail.php
+          test -f out/.htaccess
+          test -f out/sitemap.xml
+          test -d out/armering/stockholm
+          echo "out/ ser komplett ut."
 
       - name: Load SSH key
         uses: webfactory/ssh-agent@v0.9.0
         with:
           ssh-private-key: ${{ secrets.INLEED_SSH_KEY }}
 
-      # Rsync HELA appen inkl. node_modules. node_modules är INTE exkluderat längre –
-      # det är hela poängen (ingen npm-install på servern). /tmp/ och /.env skyddas
-      # (serverns restart-fil och miljö rörs inte). Retry mot tillfälliga nproc/ssh-fel.
-      - name: Rsync to Inleed (with retry)
+      # Rsync HELA out/ (inkl. .htaccess och sendmail.php) till docroot. --delete
+      # speglar men skyddar Let's Encrypt-validering (.well-known) och ev. cgi-bin.
+      # Retry mot tillfälliga ssh-fel.
+      - name: Rsync out/ to docroot (with retry)
         uses: nick-fields/retry@v3
         with:
           timeout_minutes: 15
@@ -73,50 +73,18 @@ jobs:
           retry_wait_seconds: 45
           command: |
             rsync -az --delete \
-              --exclude '/.git/' \
-              --exclude '/.github/' \
-              --exclude '/.env' \
-              --exclude '/tmp/' \
+              --exclude '.well-known/' \
+              --exclude 'cgi-bin/' \
               -e "ssh -p $SSH_PORT -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" \
-              ./ "$SSH_USER@$SSH_HOST:$APP_DIR/"
+              out/ "$SSH_USER@$SSH_HOST:$DOCROOT/"
 
-      # Endast restart + manifest-koll på servern. INGET npm. Retry mot nproc-fork-fel.
-      - name: Restart Passenger + manifest check (with retry)
-        uses: nick-fields/retry@v3
-        with:
-          timeout_minutes: 5
-          max_attempts: 3
-          retry_wait_seconds: 30
-          command: |
-            ssh -p $SSH_PORT -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null \
-              "$SSH_USER@$SSH_HOST" "
-                set -e
-                cd '$APP_DIR'
-                test -f .next/BUILD_ID || { echo 'FEL: .next/BUILD_ID saknas'; exit 1; }
-                test -d node_modules/next || { echo 'FEL: node_modules/next saknas'; exit 1; }
-                echo \"Server BUILD_ID=\$(cat .next/BUILD_ID)\"
-                mkdir -p tmp && touch tmp/restart.txt
-                echo 'Passenger restart triggad.'
-              "
-
-      # Smoke-test: cache-bustad request (kringgår s-maxage/ISR-cachen) och verifierar
-      # att LIVE serverar exakt den BUILD_ID vi just byggde. Väntar in Passenger-omstart.
-      - name: Smoke test (fresh build live)
+      - name: Smoke test (fresh static build live)
         run: |
-          set -e
-          BUILD_ID=$(cat .next/BUILD_ID)
-          echo "Väntar på att live ska svara med BUILD_ID=$BUILD_ID ..."
-          ok=""
-          for i in $(seq 1 12); do
-            html=$(curl -fsS "$SITE_URL/?cb=${GITHUB_RUN_ID}-$i" || true)
-            if printf '%s' "$html" | grep -q "$BUILD_ID"; then
-              echo "OK: live serverar den nya build ($BUILD_ID) efter $i försök."
-              ok="1"; break
-            fi
-            echo "Försök $i: ännu inte den nya buildern, väntar 10s ..."
-            sleep 10
+          # Vänta in ev. cache/propagering och kör smoke med några försök.
+          for i in 1 2 3 4 5; do
+            if bash scripts/smoke.sh "$SITE_URL"; then exit 0; fi
+            echo "Smoke-försök $i misslyckades, väntar 15s ..."
+            sleep 15
           done
-          if [ -z "$ok" ]; then
-            echo "FEL: live serverade inte BUILD_ID=$BUILD_ID inom tidsgränsen."
-            exit 1
-          fi
+          echo "Smoke-test misslyckades efter flera försök."
+          exit 1

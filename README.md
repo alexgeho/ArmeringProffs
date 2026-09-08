@@ -18,9 +18,9 @@ npm run build      # produktionsbygge
 npm run lint       # eslint
 ```
 
-Lokal körning av produktionsbygget sker via `server.js` (Passenger-kompatibel):
-`npm run build` → `PORT=3111 node server.js`. OBS: `proxy.ts` tvingar https-redirect,
-så använd `curl -H 'X-Forwarded-Proto: https'` lokalt (annars 301).
+Sajten byggs som **helt statisk export** (`output: 'export'` i `next.config.ts`):
+`npm run build` genererar `out/` med färdig HTML för alla routes. Förhandsgranska
+statiskt lokalt, t.ex. `npx serve out` (ingen Node-server behövs i drift).
 
 ## Var innehållet bor (allt i `config/`)
 
@@ -47,7 +47,7 @@ så använd `curl -H 'X-Forwarded-Proto: https'` lokalt (annars 301).
 /armeringskalkylator       lead-magnet (kalkyl → offert)
 /blogg      /blogg/[slug]  guider (armering-klustret)
 /vanliga-fragor  /omdomen  /om-oss  /kontakt  /offert  /integritetspolicy
-/api/lead                  offertförfrågan (POST → e-post via SMTP)
+sendmail.php               offertförfrågan (POST multipart → e-post via PHP mail())
 ```
 
 ## SEO / teknik
@@ -57,12 +57,14 @@ så använd `curl -H 'X-Forwarded-Proto: https'` lokalt (annars 301).
   (Review/AggregateRating aktiveras när äkta omdömen markeras `verified`).
 - Dynamisk `sitemap.xml` + `robots.txt`; SSG för alla sidor.
 - GA4 (`config/site.ts:gaId`) och Meta Pixel laddas **först efter cookie-samtycke**.
-- HTTPS-redirect i `proxy.ts` (Next 16, f.d. middleware) via `X-Forwarded-Proto`.
+- HTTPS-tvång + cache-regler i `public/.htaccess` (statisk host, ingen proxy.ts längre).
 
 ## Deploy
 
-`git push` till `main` → GitHub Actions (`.github/workflows/deploy.yml`) → rsync över
-SSH → omstart av Passenger. Detaljer och felsökning: `docs/DEPLOY.md` + `docs/STATUS.md`.
+`git push` till `main` → GitHub Actions (`.github/workflows/deploy.yml`) bygger `out/`
+och rsync:ar den statiska sajten (inkl. `.htaccess` + `sendmail.php`) till docroot på
+Inleed, följt av ett smoke-test. Ingen Node-server. Formuläret postar till `/sendmail.php`
+(PHP mail()). Detaljer och [OWNER]-omställning: `docs/DEPLOY.md`.
 
 ## Agent-läsning
 

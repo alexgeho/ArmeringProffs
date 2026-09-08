@@ -24,8 +24,9 @@ export function ContactForm({
     data.append("source", source);
     setStatus("sending");
     try {
+      // Statisk sajt: formuläret postar till en PHP-mejlare (sendmail.php) i docroot.
       // Skickas som multipart/form-data så att en bifogad ritning/bockningslista följer med.
-      const res = await fetch("/api/lead", { method: "POST", body: data });
+      const res = await fetch("/sendmail.php", { method: "POST", body: data });
       if (!res.ok) throw new Error("bad response");
       setStatus("sent");
       form.reset();
@@ -51,6 +52,13 @@ export function ContactForm({
 
   return (
     <form onSubmit={onSubmit} className="grid gap-4">
+      {/* Honeypot mot spam-bots: dolt fält som människor inte ser. Fylls det i
+          slänger sendmail.php förfrågan. aria-hidden + tabindex -1 + autocomplete off. */}
+      <div aria-hidden="true" className="absolute left-[-9999px] h-0 w-0 overflow-hidden" style={{ position: "absolute" }}>
+        <label htmlFor="company_website">Lämna tomt</label>
+        <input id="company_website" name="company_website" type="text" tabIndex={-1} autoComplete="off" />
+      </div>
+
       {/* Namn – alltid full bredd, valfritt */}
       <Field name="name" label="Namn / företag" placeholder="Namn eller företag" />
 

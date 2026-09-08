@@ -1,19 +1,25 @@
 # Deploy & migrering – turnkey-playbook
 
-> ⚠️ **Delvis föråldrad** (pm2/nginx/VPS-avsnitten nedan gäller inte längre).
-> **Nuvarande deploy:** `git push` → `.github/workflows/deploy.yml` bygger + installerar
-> prod-node_modules på GitHub-runnern och rsync:ar HELA appen (inkl. node_modules) till
-> Inleed; serversteget gör bara `touch tmp/restart.txt` + manifest-koll (INGET npm på servern).
+> ⚠️ **Föråldrad nedan** (pm2/nginx/VPS/Passenger-avsnitten gäller INTE längre).
+> **Nuvarande arkitektur: HELT STATISK sajt** (Next `output: 'export'`) + PHP-mejlare.
+> `git push` → `.github/workflows/deploy.yml` bygger `out/` på runnern → rsync `out/`
+> (inkl. `.htaccess` + `sendmail.php`) till docroot → smoke-test. INGEN Node-server,
+> INGET npm/ssh-restart på servern. Formuläret postar till `/sendmail.php` (PHP mail()).
 >
-> ### [OWNER] – drift/host (Inleed shared, samma konto som gjutabetong/byggexp)
-> - **DirectAdmin → Setup Node.js App:** håll **instances = 1** (fler processer slår i nproc).
-> - **Idle timeout:** Passenger stänger av appen vid inaktivitet – första besöket efter vila
->   är därför långsamt (kallstart). Normalt, inget fel.
-> - **Zombie-processer:** om deploy/omstart hänger på `cagefs_enter: Unable to fork`, logga in
->   via SSH och rensa: `pkill -f server.js` (eller `pkill -u <user> node`), vänta, försök igen.
-> - **Pusha inte i snabb följd:** varje push = en deploy + Passenger-omstart. Flera på en gång
->   kör slut på processgränsen. Workflowet har `cancel-in-progress:false` (köar) + retry, men
->   undvik att trycka 5 commits på 1 minut – samla ihop dem.
+> ### [OWNER] – engångs-omställning i DirectAdmin (Inleed)
+> 1. **GitHub secret `INLEED_DOCROOT`** – sätt till docroot-sökväg för armeringproffs.se
+>    (t.ex. `domains/armeringproffs.se/public_html`). Utan den vet deployen inte vart out/ ska.
+> 2. **Peka domänen på statik:** se till att docroot serverar statiska filer direkt
+>    (inte proxar till Node). `.htaccess` (HTTPS-tvång, 404, cache) följer med i out/.
+> 3. **TA BORT Node.js-appen** för armeringproffs (DirectAdmin → Setup Node.js App → Remove)
+>    – den behövs inte längre och frigör processer/PMEM på kontot.
+> 4. **PHP mail():** kontrollera att mail() är aktiverat och att `upload_max_filesize` +
+>    `post_max_size` är ≥ 12 MB (bifogad ritning tillåts upp till 10 MB i formuläret).
+>    Mottagare/avsändare i `public/sendmail.php` = `offert@armeringproffs.se`.
+>
+> ### [OWNER] – drift (Inleed shared, samma konto som gjutabetong/byggexp/villatak)
+> - Statik = ingen kallstart, inga zombie-Node-processer, inget nproc-problem längre.
+> - Om en gammal zombie-Node-process finns kvar efter borttagning: `pkill -u <user> node`.
 
 ## Nuläge → mål
 - **Nu:** live på VPS (185.189.51.128) via pm2 + nginx, port 3002.

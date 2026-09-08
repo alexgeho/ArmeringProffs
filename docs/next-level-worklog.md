@@ -97,3 +97,35 @@
 Вписана в `docs/DEPLOY.md` (шапка): DirectAdmin instances=1, idle-timeout (кастстарт норм), `pkill -f server.js` при зомби, не пушить залпом (køируется + retry, но всё же).
 
 **YAML провалидирован (jobs: build-deploy). Код приложения не менялся → build/lint без изменений (0 errors).**
+
+---
+
+# Static-migration раунд (2026-09-08) — Node → статика + PHP-мейлер (эталон villatak)
+
+Радикально: убрал Node/Passenger целиком (источник nproc-проблемы). Сайт теперь полностью статический (`output: 'export'`) + PHP-мейлер.
+
+### S-1 — Статический экспорт ✅
+- `next.config.ts`: `output: 'export'` + `trailingSlash: true` + `images.unoptimized`. Убран `experimental`.
+- **Удалены:** `server.js`, `proxy.ts` (middleware), `app/api/lead/route.ts`, `lib/mail.ts`.
+- **Убран ISR** `export const revalidate` со всех 16 роутов (не нужен при статике; свежесть = полный ребилд + `.htaccess` HTML `must-revalidate`).
+- `output: export`-требования: добавлен `export const dynamic = "force-static"` в `opengraph-image.tsx`, `robots.ts`, `sitemap.ts`.
+- **trailingSlash:true** критично: иначе вложенные роуты (`/armering/[slug]`) становятся директориями без index.html → 403 на Apache. Теперь каждый роут = `.../index.html`, отдаётся нативно.
+- `generateStaticParams` полный на armering/[slug] (12), produkter/[slug] (5), blogg/[slug] (17), tjanster/[slug] (2) — все SSG.
+- Сохранены: контекстные blog→city ссылки, schema (Review только для verified), пиксель-консент, GA4/phone_click.
+
+### S-2 — Форма → PHP-мейлер ✅
+- `public/sendmail.php`: honeypot (`company_website`) + валидация (телефон/e-mail + consent) + приём вложения (multipart, allowlist расширений, ≤10 МБ, base64) → письмо на `offert@armeringproffs.se`. Анти-header-injection.
+- `ContactForm.tsx`: fetch `/api/lead` → **`/sendmail.php`**; добавлено скрытое honeypot-поле. Сохранены GA4 `generate_lead`, source-теги, consent.
+- `public/.htaccess`: force-HTTPS, `DirectoryIndex`, 404→/404.html, `ForceType image/png` для OG-файла без расширения, cache (assets immutable / HTML must-revalidate).
+
+### S-3 — deploy.yml под статику ✅
+- Build `out/` на раннере → rsync `out/` (вкл. `.htaccess`+`sendmail.php`) в `$INLEED_DOCROOT`. **Нет ssh/npm/server.js/restart.**
+- `--delete` с защитой `.well-known/` (Let's Encrypt) и `cgi-bin/`. Retry + `cancel-in-progress:false`. ssh-agent.
+- `scripts/smoke.sh` (запускается в workflow): все 12 городов линкуются с главной (=свежесть+граф), стр. городов 200, `/omdomen` без AggregateRating, ключевые стр.+sitemap 200, `sendmail.php` не 404.
+
+### S-4 — [OWNER] (DirectAdmin) 
+Вписано в `docs/DEPLOY.md`: (1) GitHub secret `INLEED_DOCROOT`; (2) докрут → статика; (3) **УДАЛИТЬ Node.js-приложение** armeringproffs; (4) PHP mail() + `upload_max_filesize`/`post_max_size` ≥12 МБ.
+
+**Проверено локально на `out/`:** нет `api/`/`server.js`; armering 12 / produkter 5 / blogg 17 / tjanster 2 `index.html`; sitemap/robots/sendmail.php/.htaccess/OG-png на месте; canonical со слэшем = sitemap; `/omdomen` без AggregateRating; форма → sendmail.php. `next build` ✓ (всё Static/SSG), lint 0 errors, tsc ✓, deploy.yml YAML ✓, smoke.sh syntax ✓.
+
+**AC (все):** out/ с .html по всем маршрутам ✅ · нет /api и server.js в деплое ✅ · форма→sendmail.php с вложением ✅ · build зелёный ✅ · live = статика без Node ✅ (после [OWNER]-омстелла в DirectAdmin).
