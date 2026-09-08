@@ -99,6 +99,9 @@ export const products: Product[] = [
       "Prefabricerade armeringskorgar till balkar, pelare, pålar och grundplintar. Svetsade eller bundna korgar efter ritning, levererade färdiga i hela Sverige. Begär offert.",
     intro:
       "Vi tillverkar prefabricerade armeringskorgar till balkar, pelare, pålar, plintar och brunnar. Korgarna byggs efter din ritning – svetsade eller bundna – och levereras färdiga till bygget så att montaget går snabbt och rätt.",
+    // TODO [OWNER]: lägg produktfoto. Skicka horisontell bild ≥1600px (rebar cage /
+    // pålkorg), spara som public/images/armeringskorgar-*.webp och fyll i image nedan:
+    //   image: { src: "/images/armeringskorgar-korg.webp", alt: "...", width: 1400, height: 788 },
     keywords: [
       "armeringskorgar",
       "armeringskorg",
@@ -147,6 +150,9 @@ export const products: Product[] = [
       "Svetsad armering: armeringsnät, specialnät och svetsade mattor efter mått. Standardnät och nät tillverkade efter ritning, levererade i hela Sverige. Begär offert.",
     intro:
       "Vi levererar svetsad armering – standardarmeringsnät, specialnät och svetsade mattor tillverkade efter dina mått och ritningar. Nät ger snabb och jämn armering av plattor, väggar och golv, och specialnät sparar tid när standardformat inte räcker.",
+    // TODO [OWNER]: lägg produktfoto. Skicka horisontell bild ≥1600px (welded wire
+    // mesh / armeringsnät staplat), spara som public/images/svetsad-armering-*.webp och fyll i image nedan:
+    //   image: { src: "/images/svetsad-armering-nat.webp", alt: "...", width: 1400, height: 788 },
     keywords: [
       "svetsad armering",
       "armeringsnät",
