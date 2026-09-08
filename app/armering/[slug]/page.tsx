@@ -6,7 +6,7 @@ import { products } from "@/config/products";
 import { site } from "@/config/site";
 import type { Faq } from "@/config/faq";
 import { Section, Container, Button, SectionHeading } from "@/components/ui";
-import { Breadcrumbs, CtaBanner, KalkylatorPromo } from "@/components/sections";
+import { Breadcrumbs, CtaBanner, KalkylatorPromo, GuidesTeaser } from "@/components/sections";
 import { ContactForm } from "@/components/ContactForm";
 import { FaqAccordion } from "@/components/FaqAccordion";
 import { IconCheck, IconArrow, IconPhone, IconTruck } from "@/components/icons";
@@ -212,6 +212,8 @@ export default async function CityPage({
           </div>
         </div>
       </Section>
+
+      <GuidesTeaser title="Guider för ditt armeringsprojekt" eyebrow="Guider & kunskap" />
 
       {/* Andra orter */}
       <Section muted>

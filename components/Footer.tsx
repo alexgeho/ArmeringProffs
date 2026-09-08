@@ -47,7 +47,7 @@ export function Footer() {
             Vi levererar i <Link href="/leverans" className="text-slate-300 underline hover:text-white">hela Sverige</Link>, bland annat:
           </p>
           <ul className="mt-3 grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
-            {cities.slice(0, 10).map((c) => (
+            {cities.map((c) => (
               <li key={c.slug}>
                 <Link href={`/armering/${c.slug}`} className="text-slate-400 hover:text-white">{c.name}</Link>
               </li>

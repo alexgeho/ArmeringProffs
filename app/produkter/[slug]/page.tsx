@@ -7,7 +7,7 @@ import { posts } from "@/config/blog";
 import { faq } from "@/config/faq";
 import { site } from "@/config/site";
 import { Section, SectionHeading, Button, Container } from "@/components/ui";
-import { Breadcrumbs, CtaBanner, LeveransSection, Process } from "@/components/sections";
+import { Breadcrumbs, CtaBanner, LeveransSection, Process, CityLinks } from "@/components/sections";
 import { ContactForm } from "@/components/ContactForm";
 import { FaqAccordion } from "@/components/FaqAccordion";
 import { IconCheck, IconArrow, IconPhone } from "@/components/icons";
@@ -176,6 +176,7 @@ export default async function ProductPage({
       </Section>
 
       <LeveransSection />
+      <CityLinks muted title={`${p.name} – levereras i hela Sverige`} />
 
       {/* FAQ */}
       <Section muted>

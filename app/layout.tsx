@@ -5,7 +5,7 @@ import { site } from "@/config/site";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { CookieConsent } from "@/components/CookieConsent";
-import { JsonLd, localBusinessSchema } from "@/lib/jsonld";
+import { JsonLd, localBusinessSchema, websiteSchema } from "@/lib/jsonld";
 
 const inter = Inter({
   variable: "--font-sans",
@@ -54,6 +54,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html lang="sv" className={`${inter.variable} h-full`}>
       <body className="min-h-full flex flex-col bg-white text-ink">
         <JsonLd data={localBusinessSchema()} />
+        <JsonLd data={websiteSchema()} />
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />

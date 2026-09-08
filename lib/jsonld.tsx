@@ -45,6 +45,21 @@ export function localBusinessSchema() {
   };
 }
 
+/** WebSite-schema – förankrar domänen som en entitet och kopplar den till
+ *  organisationen (#business). Ingen SearchAction (sajten saknar intern sökruta
+ *  och Googles sitelinks-searchbox är utfasad). */
+export function websiteSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": `${site.url}/#website`,
+    url: site.url,
+    name: site.company,
+    inLanguage: "sv-SE",
+    publisher: { "@id": `${site.url}/#business` },
+  };
+}
+
 /** Service-schema (helhet: tillverkning + leverans + montage). */
 export function serviceSchema(opts: { name: string; description: string; url: string }) {
   return {

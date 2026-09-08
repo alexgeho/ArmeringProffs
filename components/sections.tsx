@@ -4,6 +4,8 @@ import type { ReactNode } from "react";
 import { site } from "@/config/site";
 import { products } from "@/config/products";
 import { reviews } from "@/config/reviews";
+import { posts, type Post } from "@/config/blog";
+import { cities } from "@/config/cities";
 import { Button, Container, Section, SectionHeading } from "./ui";
 import { ContactForm } from "./ContactForm";
 import {
@@ -56,7 +58,7 @@ export function Hero({
           <p className="mt-5 max-w-xl text-lg leading-relaxed text-slate-100 drop-shadow-[0_1px_8px_rgba(0,0,0,0.5)]">{intro}</p>
 
           <ul className="mt-7 grid gap-3 sm:grid-cols-2">
-            {["Prefab efter bockningslista & ritning", "Klippt, bockat, svetsat & korgar", "Leverans i hela Sverige", "Tillverkning, leverans & montage"].map((t) => (
+            {["Prefab efter bockningslista & ritning", "Klippt, bockat, svetsat & korgar", "Korta leveranstider – hela Sverige", "Tillverkning, leverans & montage"].map((t) => (
               <li key={t} className="flex items-center gap-2 text-slate-50 drop-shadow-[0_1px_6px_rgba(0,0,0,0.5)]">
                 <IconCheck className="h-5 w-5 shrink-0 text-brand" /> {t}
               </li>
@@ -91,7 +93,7 @@ export function Hero({
 const usps = [
   { icon: IconTools, title: "Prefab-tillverkning", text: "Kapat, bockat och svetsat efter din bockningslista." },
   { icon: IconRuler, title: "Efter ritning", text: "Vi tillverkar på mått enligt konstruktionsritning." },
-  { icon: IconTruck, title: "Leverans hela Sverige", text: "Vi levererar till bygget i hela landet." },
+  { icon: IconTruck, title: "Korta leveranstider", text: "Snabb leverans till bygget i hela Sverige – vi håller både pris och leveranstid." },
   { icon: IconShield, title: "Montage & rådgivning", text: "Vi kan även lägga armeringen och hjälpa dig rätt." },
 ];
 
@@ -288,6 +290,95 @@ export function KalkylatorPromo() {
             </li>
           ))}
         </ul>
+      </div>
+    </Section>
+  );
+}
+
+/* ---------- Guider-teaser (blogg-internlänkning) ----------
+   Ger länkkraft från start-/produkt-/stadssidor in i blogg-klustret (guiderna
+   syntes tidigare bara via header-navet). Kuraterade slugs = våra mest
+   kommersiella/högvolyms-sökfrågor. */
+const defaultGuideSlugs = [
+  "armering-till-betongplatta",
+  "vad-kostar-armering",
+  "bestalla-armering",
+  "armeringsnat-eller-armeringsjarn",
+];
+
+export function GuidesTeaser({
+  slugs = defaultGuideSlugs,
+  eyebrow = "Guider & kunskap",
+  title = "Läs våra armeringsguider",
+  muted = false,
+}: {
+  slugs?: string[];
+  eyebrow?: string;
+  title?: string;
+  muted?: boolean;
+}) {
+  const list = slugs
+    .map((s) => posts.find((p) => p.slug === s))
+    .filter((p): p is Post => Boolean(p));
+  if (!list.length) return null;
+  return (
+    <Section muted={muted}>
+      <SectionHeading eyebrow={eyebrow} title={title} />
+      <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        {list.map((p) => (
+          <Link
+            key={p.slug}
+            href={`/blogg/${p.slug}`}
+            className="group flex flex-col rounded-xl border border-line bg-white p-6 transition-all hover:border-brand hover:shadow-md"
+          >
+            <h3 className="text-base font-semibold text-ink">{p.title}</h3>
+            <p className="mt-2 flex-1 text-sm leading-relaxed text-ink-soft">{p.excerpt}</p>
+            <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-brand">
+              Läs guiden <IconArrow className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </span>
+          </Link>
+        ))}
+      </div>
+      <div className="mt-8 text-center">
+        <Link href="/blogg" className="inline-flex items-center gap-1 text-sm font-semibold text-brand hover:text-brand-dark">
+          Se alla guider <IconArrow className="h-4 w-4" />
+        </Link>
+      </div>
+    </Section>
+  );
+}
+
+/* ---------- Stad-länkar (lokal internlänkning) ----------
+   Kopplar produkt-/hub-sidor till de lokala landningssidorna (/armering/[ort]).
+   Produktsidor saknade tidigare helt länkar till stadssidorna. */
+export function CityLinks({
+  eyebrow = "Leverans per ort",
+  title = "Vi levererar armering i hela Sverige",
+  muted = false,
+}: {
+  eyebrow?: string;
+  title?: string;
+  muted?: boolean;
+}) {
+  return (
+    <Section muted={muted}>
+      <SectionHeading eyebrow={eyebrow} title={title} />
+      <div className="mt-8 flex flex-wrap gap-3">
+        {cities.map((c) => (
+          <Link
+            key={c.slug}
+            href={`/armering/${c.slug}`}
+            className="rounded-lg border border-line bg-white px-4 py-2.5 text-sm font-medium text-ink transition-colors hover:border-brand hover:text-brand"
+          >
+            Armering i {c.name}
+          </Link>
+        ))}
+        <Link
+          href="/leverans"
+          className="rounded-lg border border-line bg-white px-4 py-2.5 text-sm font-medium text-brand transition-colors hover:border-brand"
+        >
+          Leverans i hela Sverige →
+        </Link>
       </div>
     </Section>
   );
