@@ -88,6 +88,7 @@ export const posts: Post[] = [
 
       { type: "h2", text: "Köpa själv eller beställa prefab?" },
       { type: "p", text: "Armering går att köpa styckvis, men rätt dimensionering, kapning, bockning och placering är avgörande för att plattan ska hålla. Vi tillverkar prefab armering efter din bockningslista eller ritning – [klippt och bockad armering](/produkter/klippt-och-bockad), [svetsad armering och nät](/produkter/svetsad-armering) och [armeringskorgar](/produkter/armeringskorgar) – och levererar i hela Sverige. Begär en kostnadsfri offert så tar vi fram rätt armering till din platta." },
+      { type: "p", text: "Vi levererar armering till betongplattor i hela landet – från [Stockholm](/armering/stockholm) i öster till [Göteborg](/armering/goteborg) i väster och orterna däremellan." },
     ],
     faqs: [
       { q: "Vilken armering behövs till en betongplatta?", a: "Till platta på mark används oftast svetsat armeringsnät (Ø5–6 mm, 150 mm rutor) som huvudarmering, kompletterat med lösa kamjärn (Ø10–12 mm) i kanter och under bärande väggar. Exakt val ska följa konstruktionsritning." },
@@ -146,6 +147,7 @@ export const posts: Post[] = [
 
       { type: "h2", text: "Osäker på valet?" },
       { type: "p", text: "Vill du inte räkna själv? Vi tillverkar [svetsad armering och specialnät](/produkter/svetsad-armering) efter dina mått och levererar i hela Sverige. Begär en kostnadsfri offert." },
+      { type: "p", text: "Behöver du nät på annan ort? Vi skickar armeringsnät bland annat till [Malmö](/armering/malmo) och [Uppsala](/armering/uppsala) – och resten av landet." },
     ],
     faqs: [
       { q: "Vad betyder 5x150 på ett armeringsnät?", a: "Det betyder att nätet har Ø5 mm tråd med 150 mm mellan trådarna, alltså 150 mm rutor. Första siffran är trådens diameter i mm, andra är rutstorleken." },
@@ -197,6 +199,7 @@ export const posts: Post[] = [
 
       { type: "h2", text: "Beställ rätt kamstål" },
       { type: "p", text: "Rätt dimension, placering och täckskikt avgör om plattan håller. Vi levererar [armeringsjärn i kamstål B500B](/produkter/armeringsjarn) och tillverkar [klippt och bockad armering](/produkter/klippt-och-bockad) efter din ritning – i hela Sverige. Begär en kostnadsfri offert så gör vi det rätt från början." },
+      { type: "p", text: "Vi levererar kamstål i alla dimensioner till bygg- och anläggningsprojekt i bland annat [Västerås](/armering/vasteras) och [Örebro](/armering/orebro)." },
     ],
     faqs: [
       { q: "Vilka dimensioner finns på armeringsjärn?", a: "Armeringsjärn (kamstål) finns vanligtvis i dimensioner 6, 8, 10, 12, 16, 20, 25 och 32 mm. Till platta på mark och husgrund används oftast 8–12 mm i kanter och kantbalkar." },
@@ -245,6 +248,7 @@ export const posts: Post[] = [
 
       { type: "h2", text: "Beställ armeringen som prefab" },
       { type: "p", text: "En pool är en krävande betongkonstruktion där fel blir mycket dyra. Vi tillverkar och levererar armeringen – nät, kamjärn och [bockade detaljer](/produkter/klippt-och-bockad) – efter konstruktörens ritning, i hela Sverige. Läs mer om [armering till betongplatta](/blogg/armering-till-betongplatta) för grunderna, och begär en offert för ditt poolprojekt." },
+      { type: "p", text: "Bygger du pool i [Helsingborg](/armering/helsingborg), [Linköping](/armering/linkoping) eller på annan ort levererar vi poolarmeringen dit." },
     ],
     faqs: [
       { q: "Hur armeras en betongpool?", a: "Både bottenplattan och väggarna armeras, ofta med en kombination av armeringsnät och lösa kamjärn (vanligtvis Ø8–12 mm). Hörn och genomföringar förstärks extra. Dimensionering ska göras av en konstruktör utifrån poolens storlek och djup." },
@@ -296,6 +300,7 @@ export const posts: Post[] = [
 
       { type: "h2", text: "Vi räknar exakt åt dig" },
       { type: "p", text: "Vi räknar fram armeringen efter din ritning och levererar [nät](/produkter/svetsad-armering), [kamjärn](/produkter/armeringsjarn) och [bockade detaljer](/produkter/klippt-och-bockad) i hela Sverige. Se även våra guider om [armering till betongplatta](/blogg/armering-till-betongplatta) och [armeringsnät](/blogg/armeringsnat-storlekar-och-matt). Begär en kostnadsfri offert." },
+      { type: "p", text: "Vi räknar åtgången och levererar färdig armering till bland annat [Jönköping](/armering/jonkoping) och [Norrköping](/armering/norrkoping)." },
     ],
     faqs: [
       { q: "Hur mycket armeringsnät går åt per m²?", a: "Räkna med plattans yta plus cirka 10–15 % extra för överlapp och spill. En platta på 40 m² kräver alltså ungefär 44–46 m² armeringsnät." },
@@ -344,6 +349,7 @@ export const posts: Post[] = [
 
       { type: "h2", text: "Vi levererar distanser och tillbehör" },
       { type: "p", text: "Rätt täckskikt och placering är skillnaden mellan en platta som håller i generationer och en som spricker. Vi levererar [distanser och tillbehör](/produkter/distanser) tillsammans med din armering i hela Sverige. Se även vår guide om [armering till betongplatta](/blogg/armering-till-betongplatta). Begär en kostnadsfri offert." },
+      { type: "p", text: "Vi skickar distanser och armering ända upp till [Umeå](/armering/umea) och [Sundsvall](/armering/sundsvall) – hela Sverige, även norrut." },
     ],
     faqs: [
       { q: "Vad är täckskikt på armering?", a: "Täckskiktet är betonglagret mellan armeringen och ytan. Det skyddar stålet mot fukt och korrosion. För platta på mark används ofta minst 25–35 mm, och mer i fuktig miljö som pooler." },
@@ -403,6 +409,7 @@ export const posts: Post[] = [
 
       { type: "h2", text: "Vi tillverkar din armering" },
       { type: "p", text: "Vi tar fram rätt armering – [svetsad armering och nät](/produkter/svetsad-armering), [lösa järn](/produkter/armeringsjarn) och [klippt och bockade detaljer](/produkter/klippt-och-bockad) – efter din bockningslista och levererar i hela Sverige. Se även våra guider om [armeringsjärn dimensioner](/blogg/armeringsjarn-dimensioner) och [armering till betongplatta](/blogg/armering-till-betongplatta). Begär en kostnadsfri offert." },
+      { type: "p", text: "Klippt och bockad armering levererar vi till byggen i bland annat [Stockholm](/armering/stockholm) och [Göteborg](/armering/goteborg)." },
     ],
     faqs: [
       { q: "Vad betyder klippt och bockad armering?", a: "Det betyder att armeringsjärnen levereras färdigkapade och böjda till rätt form enligt en bockningslista, redo att läggas på plats utan att kapas eller bockas på bygget." },
@@ -467,6 +474,7 @@ export const posts: Post[] = [
 
       { type: "h2", text: "Vi tillverkar dina korgar" },
       { type: "p", text: "Vi bygger [armeringskorgar](/produkter/armeringskorgar) till pålar, pelare, balkar och plintar efter din konstruktionsritning – svetsade eller bundna, märkta per position och levererade i hela Sverige. Se även vår guide om [klippt och bockad armering](/blogg/klippt-bockad-armering) och [armeringsjärn dimensioner](/blogg/armeringsjarn-dimensioner). Begär en kostnadsfri offert så tar vi fram rätt korgar till ditt projekt." },
+      { type: "p", text: "Vi levererar färdiga armeringskorgar till bland annat [Malmö](/armering/malmo) och [Uppsala](/armering/uppsala) – och resten av landet." },
     ],
     faqs: [
       { q: "Vad är en armeringskorg?", a: "En armeringskorg är färdigmonterad armering för ett bärande element som en pelare, balk eller påle – huvudjärn och byglar sammanfogade till en korg som lyfts på plats och gjuts in." },
@@ -525,6 +533,7 @@ export const posts: Post[] = [
 
       { type: "h2", text: "Beställ hos oss" },
       { type: "p", text: "Vi är armeringsleverantör för hela Sverige och tillverkar [klippt och bockad armering](/produkter/klippt-och-bockad), [armeringskorgar](/produkter/armeringskorgar), [svetsad armering och nät](/produkter/svetsad-armering) samt levererar [kamstål](/produkter/armeringsjarn) och [distanser](/produkter/distanser). Skicka din bockningslista eller mått så återkommer vi snabbt. [Begär en kostnadsfri offert](/offert)." },
+      { type: "p", text: "Beställer du från [Västerås](/armering/vasteras), [Örebro](/armering/orebro) eller annan ort spelar ingen roll – vi levererar i hela Sverige." },
     ],
     faqs: [
       { q: "Vad behöver jag för att beställa armering?", a: "Bäst är en bockningslista eller konstruktionsritning, men det räcker ofta med mått och en beskrivning av vad som ska armeras. Då kan leverantören räkna fram ett förslag och en offert." },
@@ -581,6 +590,7 @@ export const posts: Post[] = [
 
       { type: "h2", text: "Beställ armeringen färdig" },
       { type: "p", text: "Vi tar fram rätt armering till din garageplatta – [svetsad armering och nät](/produkter/svetsad-armering), [kamjärn](/produkter/armeringsjarn) och [bockade kantjärn](/produkter/klippt-och-bockad) – och levererar i hela Sverige. Se även guiden om [armering till betongplatta](/blogg/armering-till-betongplatta). Begär en kostnadsfri offert." },
+      { type: "p", text: "Vi levererar armering till garageplattor i bland annat [Helsingborg](/armering/helsingborg) och [Linköping](/armering/linkoping)." },
     ],
     faqs: [
       { q: "Vilken armering behövs till en garageplatta?", a: "Vanligtvis armeringsnät 6×150 (Ø6 mm) som huvudarmering, kompletterat med kamjärn Ø10–12 mm i kanter och under bärande väggar. Exakt val ska följa konstruktionsritning." },
@@ -631,6 +641,7 @@ export const posts: Post[] = [
 
       { type: "h2", text: "Begär pris på din armering" },
       { type: "p", text: "Vi räknar fram ett tydligt pris på din [klippt och bockade armering](/produkter/klippt-och-bockad), [armeringskorgar](/produkter/armeringskorgar), [nät](/produkter/svetsad-armering) och [kamstål](/produkter/armeringsjarn) – med leverans i hela Sverige. [Begär en kostnadsfri offert](/offert) så återkommer vi snabbt." },
+      { type: "p", text: "Oavsett om bygget ligger i [Jönköping](/armering/jonkoping), [Norrköping](/armering/norrkoping) eller längre bort räknar vi fram pris och frakt till din ort." },
     ],
     faqs: [
       { q: "Vad kostar armering?", a: "Priset beror på mängd, dimensioner, hur mycket kapning och bockning som krävs samt frakt. Stålpriset varierar dessutom över tid. Skicka mått eller bockningslista så får du ett exakt pris i en offert." },
@@ -675,6 +686,7 @@ export const posts: Post[] = [
 
       { type: "h2", text: "Prefab plintkorgar sparar tid" },
       { type: "p", text: "Har du många likadana plintar går det snabbt att beställa färdiga korgar. Vi tillverkar [armeringskorgar](/produkter/armeringskorgar) och [klippt och bockad armering](/produkter/klippt-och-bockad) till plintar och plintgrund efter din ritning och levererar i hela Sverige. Se även guiden om [armeringskorgar](/blogg/armeringskorgar-palarmering). Begär en kostnadsfri offert." },
+      { type: "p", text: "Vi skickar färdiga plintkorgar även till norra Sverige – bland annat [Umeå](/armering/umea) och [Sundsvall](/armering/sundsvall)." },
     ],
     faqs: [
       { q: "Hur armeras en plint?", a: "Oftast med en liten armeringskorg – längsgående kamjärn (ofta Ø10–16 mm) som huvudarmering och byglar som håller ihop korgen. Bredare plintsulor kan även armeras med nät. Dimensioner ska följa konstruktionsritning." },
@@ -722,6 +734,7 @@ export const posts: Post[] = [
 
       { type: "h2", text: "Prefabricera murens armering" },
       { type: "p", text: "Vi tillverkar armeringen till stödmurar och L-stöd – [klippt och bockad armering](/produkter/klippt-och-bockad), [armeringskorgar](/produkter/armeringskorgar) och [nät](/produkter/svetsad-armering) – efter konstruktörens ritning, och levererar i hela Sverige. Se även guiden om [armeringsjärn dimensioner](/blogg/armeringsjarn-dimensioner). Begär en kostnadsfri offert på din mur." },
+      { type: "p", text: "Vi levererar armering till stödmurar och L-stöd i bland annat [Stockholm](/armering/stockholm) och [Göteborg](/armering/goteborg)." },
     ],
     faqs: [
       { q: "Hur armeras en betongstödmur?", a: "Med huvudarmering på murens dragsida, horisontell fördelningsarmering och förankringsjärn mellan bottensula och vägg. Byglar binder ihop det kritiska partiet där sula och mur möts. Utförandet ska dimensioneras av en konstruktör." },
@@ -776,6 +789,7 @@ export const posts: Post[] = [
 
       { type: "h2", text: "Vi levererar båda" },
       { type: "p", text: "Vi tillverkar och levererar både [svetsad armering och nät](/produkter/svetsad-armering) och [armeringsjärn i kamstål B500B](/produkter/armeringsjarn) – samt [klippt och bockade detaljer](/produkter/klippt-och-bockad) – i hela Sverige. Begär en kostnadsfri offert så tar vi fram rätt kombination till din konstruktion." },
+      { type: "p", text: "Nät, järn eller båda – vi levererar till byggen i bland annat [Malmö](/armering/malmo) och [Uppsala](/armering/uppsala)." },
     ],
     faqs: [
       { q: "Vad är skillnaden på armeringsnät och armeringsjärn?", a: "Armeringsnät är ett svetsat rutnät som ger jämn armering över en hel yta, medan armeringsjärn (kamstål) är lösa stänger som förstärker punktvis – i kanter, kantbalkar och där lasterna är stora." },
@@ -835,6 +849,7 @@ export const posts: Post[] = [
 
       { type: "h2", text: "Från lista till färdig armering" },
       { type: "p", text: "När listan är klar tillverkar vi [klippt och bockad armering](/produkter/klippt-och-bockad) efter den, märker och sorterar per position och levererar i hela Sverige – och kan även [lägga armeringen på plats](/tjanster/armeringsmontage). Behöver du uppskatta mängden först? Använd [armeringskalkylatorn](/armeringskalkylator)." },
+      { type: "p", text: "Skicka bockningslistan från [Västerås](/armering/vasteras), [Örebro](/armering/orebro) eller vilken ort som helst – vi tillverkar och levererar i hela Sverige." },
     ],
     faqs: [
       { q: "Vad är en bockningslista?", a: "En bockningslista är en sammanställning av all armering i ett projekt – varje position med form, mått per skänkel, dimension (Ø) och antal. Den används som underlag för både offert och tillverkning." },
@@ -882,6 +897,7 @@ export const posts: Post[] = [
 
       { type: "h2", text: "Prefab till trappan" },
       { type: "p", text: "Vi tillverkar armeringen till betongtrappor – [klippt och bockad armering](/produkter/klippt-och-bockad) och [armeringsjärn i kamstål](/produkter/armeringsjarn) – efter konstruktörens ritning eller [bockningslista](/tjanster/bockningslista), och levererar i hela Sverige. Vi kan även [lägga armeringen på plats](/tjanster/armeringsmontage). Se även guiden om [armeringsjärn dimensioner](/blogg/armeringsjarn-dimensioner). Begär en kostnadsfri offert på din trappa." },
+      { type: "p", text: "Vi levererar trappans armering till bland annat [Helsingborg](/armering/helsingborg) och [Linköping](/armering/linkoping)." },
     ],
     faqs: [
       { q: "Hur armeras en gjuten betongtrappa?", a: "Med huvudarmering i trappans längdriktning på dragsidan, fördelningsjärn på tvären och förankring in i bjälklag och vilplan. Rätt täckskikt säkras med distanser. Utförandet ska dimensioneras av en konstruktör." },
@@ -930,6 +946,7 @@ export const posts: Post[] = [
 
       { type: "h2", text: "Räkna åtgång och beställ" },
       { type: "p", text: "Vill du uppskatta hur mycket nät som går åt? Använd [armeringskalkylatorn](/armeringskalkylator). Vi tillverkar och levererar [armeringsnät, specialnät](/produkter/svetsad-armering) och [klippt och bockad armering](/produkter/klippt-och-bockad) till betong- och industrigolv i hela Sverige – och kan även [lägga armeringen](/tjanster/armeringsmontage). Begär en kostnadsfri offert på ditt golv." },
+      { type: "p", text: "Industri- och betonggolv armerar vi i bland annat [Norrköping](/armering/norrkoping) och [Jönköping](/armering/jonkoping) – och hela Sverige." },
     ],
     faqs: [
       { q: "Hur armeras ett betonggolv?", a: "Oftast med armeringsnät som ger jämn armering över ytan, kompletterat med kamjärn där lasterna är stora. Nätet placeras på rätt höjd med distanser så att täckskiktet blir korrekt. Dimensionering ska följa konstruktionsritning." },
