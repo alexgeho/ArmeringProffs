@@ -12,8 +12,12 @@ say() { printf '%s\n' "$*"; }
 
 cb="cb=$(date +%s)"
 
+# no-cache-headers så vi läser färsk HTML direkt efter deploy (LSCache/proxyar
+# ignorerar annars ?cb=-query och kan servera stale startsida en stund).
+NOCACHE=(-H 'Cache-Control: no-cache' -H 'Pragma: no-cache')
+
 # 1) Startsidan + alla 12 orter länkade (= färsk build + hel stads-graf).
-home="$(curl -fsS "$BASE/?$cb" || true)"
+home="$(curl -fsS "${NOCACHE[@]}" "$BASE/?$cb" || true)"
 if [ -z "$home" ]; then say "FEL: startsidan svarade inte"; fail=1; fi
 for c in stockholm goteborg malmo uppsala vasteras orebro linkoping helsingborg jonkoping norrkoping umea sundsvall; do
   printf '%s' "$home" | grep -q "/armering/$c/" || { say "FEL: stad-länk saknas på startsidan: $c"; fail=1; }
@@ -21,24 +25,24 @@ done
 
 # 2) Stadssidor svarar 200 (särskilt tidigare föräldralösa umeå/sundsvall).
 for c in stockholm umea sundsvall; do
-  code=$(curl -s -o /dev/null -w '%{http_code}' "$BASE/armering/$c/")
+  code=$(curl -s "${NOCACHE[@]}" -o /dev/null -w '%{http_code}' "$BASE/armering/$c/")
   [ "$code" = "200" ] || { say "FEL: /armering/$c/ gav HTTP $code"; fail=1; }
 done
 
 # 3) /omdomen utan AggregateRating (omdömena är fortfarande platshållare).
-om="$(curl -fsS "$BASE/omdomen/" || true)"
+om="$(curl -fsS "${NOCACHE[@]}" "$BASE/omdomen/" || true)"
 if printf '%s' "$om" | grep -q "AggregateRating"; then
   say "FEL: AggregateRating live trots platshållar-omdömen"; fail=1
 fi
 
 # 4) Nyckelsidor + sitemap/robots 200.
 for p in "" "produkter/" "tjanster/" "tjanster/bockningslista/" "blogg/" "offert/" "sitemap.xml" "robots.txt"; do
-  code=$(curl -s -o /dev/null -w '%{http_code}' "$BASE/$p")
+  code=$(curl -s "${NOCACHE[@]}" -o /dev/null -w '%{http_code}' "$BASE/$p")
   [ "$code" = "200" ] || { say "FEL: /$p gav HTTP $code"; fail=1; }
 done
 
 # 5) sendmail.php finns (POST utan data ska ge 4xx, inte 404).
-code=$(curl -s -o /dev/null -w '%{http_code}' -X POST "$BASE/sendmail.php")
+code=$(curl -s "${NOCACHE[@]}" -o /dev/null -w '%{http_code}' -X POST "$BASE/sendmail.php")
 [ "$code" = "404" ] && { say "FEL: sendmail.php saknas (404)"; fail=1; }
 
 if [ "$fail" = "0" ]; then

@@ -27,3 +27,14 @@ ErrorDocument 404 /404.html
     Header set Cache-Control "public, max-age=0, must-revalidate"
   </FilesMatch>
 </IfModule>
+
+# LiteSpeeds SERVER-cache (LSCache) är ett eget lager ovanför Apache-headers ovan:
+# den servar cachad HTML även efter rsync (och ignorerar ?cb=-query), så nya sidor
+# efter deploy syntes med fördröjning (smoke-testet såg stale startsida utan stad-länkar).
+# Stäng av LSCache för HTML/kataloger så att varje deploy syns direkt. Hashade assets
+# är immutable och cachas ändå i webbläsaren – de påverkas inte.
+<IfModule LiteSpeed>
+  RewriteEngine On
+  RewriteCond %{REQUEST_URI} (/|\.html)$
+  RewriteRule .* - [E=Cache-Control:no-cache]
+</IfModule>
