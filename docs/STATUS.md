@@ -147,7 +147,16 @@ Stockholm, Göteborg, Malmö, Uppsala, Västerås, Örebro, Linköping, Helsingb
 3. Продукт → города: новый `CityLinks` на продуктовых (12 городов + /leverans). Раньше продукты не линковали города.
 4. Footer: `cities.slice(0,10)` → все 12 — Umeå/Sundsvall больше не сироты.
 5. `WebSite` JSON-LD глобально (`websiteSchema`, publisher→#business) — якорь бренда в графе сущностей.
-Все компоненты переиспользуемые (`components/sections.tsx`). `npm run build` — ✓ compiled. Осталось из карты (не сделано): расширение городов (Gävle/Karlstad/Luleå…), новые статьи-кластеры, blog→city обратные ссылки, Product-схема ждёт цен.
+Все компоненты переиспользуемые (`components/sections.tsx`). `npm run build` — ✓ compiled.
+
+**Решение по городам (владелец 2026-09-08):** НЕ расширять. Причина — нет физического присутствия в городах, «Armering i [ort]» без присутствия = риск doorway + ощущается как накрутка. Существующие 12 честно про доставку («vi levererar till…», адрес скрыт) → оставляем как есть, но фокус SEO уводим на честные негео-рычаги (продуктовые/национальные запросы + услуги + контент).
+
+**Сервис-страницы (новый тип интента):** config-driven раздел `/tjanster` (зеркало `/produkter`):
+- `config/services.ts` + `app/tjanster/page.tsx` (хаб) + `app/tjanster/[slug]/page.tsx`.
+- 2 услуги: **armeringsmontage** (кладём/вяжем арматуру на месте) и **bockningslista** (составляем bockningslista из ritning + скачивание mall). Обе честные — реальная «full cykel»-услуга.
+- Каждая: hero+форма, body, aside (includes + скачивание mall для bockningslista + калькулятор), related guides, Process, CityLinks, FAQ + Service/FAQPage/Breadcrumb JSON-LD.
+- Связки: Header nav «Tjänster», Footer (колонка Produkter → подсписок Tjänster), sitemap (+3 URL → **44**).
+Осталось: новые статьи-кластеры (platta på mark, Eurokod, bockningslista-mall-гайд), blog→city обратные ссылки, усиление продуктовых негео-запросов, Product-схема ждёт цен.
 
 ## 🗒️ Лог сессии 2026-09-06 (всё задеплоено)
 По мотивам E-E-A-T-аудита (bygghub.nu): cookie-баннер GDPR (GA только после согласия) + отдельная FAQ-страница `/vanliga-fragor` (6→14 вопросов) + отдельная страница отзывов `/omdomen` + динамический год и ссылки в футере + обе страницы в sitemap. ⚠️ Панель Inleed выдавала `cagefs_enter: Unable to fork` (лимиты PMEM/процессов тарифа) — владелец написал в поддержку. NB: bygghub.nu на том же хосте `prime6.inleed.net` — аудит нашёл у него нестабильный SSL; проверить наш сертификат когда починят панель.

@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { site } from "@/config/site";
 import { products } from "@/config/products";
+import { services } from "@/config/services";
 import { posts } from "@/config/blog";
 import { cities } from "@/config/cities";
 
@@ -10,6 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages: MetadataRoute.Sitemap = [
     { url: `${base}/`, changeFrequency: "weekly", priority: 1 },
     { url: `${base}/produkter`, changeFrequency: "monthly", priority: 0.9 },
+    { url: `${base}/tjanster`, changeFrequency: "monthly", priority: 0.8 },
     { url: `${base}/leverans`, changeFrequency: "monthly", priority: 0.7 },
     { url: `${base}/armeringskalkylator`, changeFrequency: "monthly", priority: 0.8 },
     { url: `${base}/blogg`, changeFrequency: "weekly", priority: 0.7 },
@@ -22,6 +24,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const productPages: MetadataRoute.Sitemap = products.map((p) => ({
     url: `${base}/produkter/${p.slug}`,
+    changeFrequency: "monthly",
+    priority: 0.8,
+  }));
+
+  const servicePages: MetadataRoute.Sitemap = services.map((s) => ({
+    url: `${base}/tjanster/${s.slug}`,
     changeFrequency: "monthly",
     priority: 0.8,
   }));
@@ -39,5 +47,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  return [...staticPages, ...productPages, ...blogPages, ...cityPages];
+  return [...staticPages, ...productPages, ...servicePages, ...blogPages, ...cityPages];
 }

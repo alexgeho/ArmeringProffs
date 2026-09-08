@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { site } from "@/config/site";
 import { products } from "@/config/products";
+import { services } from "@/config/services";
 import { cities } from "@/config/cities";
 import { IconPhone, IconMail, IconMapPin } from "./icons";
 
@@ -35,6 +36,16 @@ export function Footer() {
               <li key={p.slug}>
                 <Link href={`/produkter/${p.slug}`} className="text-slate-400 hover:text-white">
                   {p.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+          <h3 className="mt-6 text-sm font-semibold uppercase tracking-wider text-white">Tjänster</h3>
+          <ul className="mt-4 space-y-2 text-sm">
+            {services.map((s) => (
+              <li key={s.slug}>
+                <Link href={`/tjanster/${s.slug}`} className="text-slate-400 hover:text-white">
+                  {s.name}
                 </Link>
               </li>
             ))}
