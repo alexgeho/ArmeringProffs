@@ -1,3 +1,7 @@
+> ⚠️ **FÖRÅLDRAD — gäller det gamla betongplatta-projektet (gjutabetongplatta.se), INTE Armeringsproffs.**
+> Sanning för detta repo: **`docs/STATUS.md`** + `docs/SLAGPLAN-klippt-bockad-armering.md`.
+> Behålls endast som historik. Använd inte innehållet nedan för Armeringsproffs.
+
 # SEO-plan: slå konkurrenterna (gjutabetongplatta.se)
 
 > Levande arbetsfil. Nästa agent: läs denna + `docs/keyword-mapping.md` först.

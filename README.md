@@ -1,121 +1,70 @@
-# Agry Entreprenad AB — сайт (gjuta betongplatta, Stockholm)
+# Armeringsproffs — sajt (prefab armering, hela Sverige)
 
-Next.js 16 (App Router) + TypeScript + Tailwind v4. Локальный SEO-лендинг подрядчика
-по заливке бетонных плит / фундаментов в Стокгольме. Тот же концерн / VPS, что и byggexp.se.
+Next.js 16 (App Router) + React 19 + TypeScript + Tailwind v4. Svensk SEO-/lead-sajt
+för **prefabricerad armering** – klippt & bockad, armeringskorgar, svetsad armering & nät,
+kamstål B500B och distanser, med tillverkning, leverans och montage i hela Sverige.
 
-## Быстрый старт
+Varumärket **Armeringsproffs** drivs av **AGRY OÜ**. Live: **https://armeringproffs.se**.
+
+> **Källa till sanning för status/nästa steg:** `docs/STATUS.md` (läs den först).
+> Slagplan för nyckelsökordet: `docs/SLAGPLAN-klippt-bockad-armering.md`.
+
+## Snabbstart
 
 ```bash
 npm install
 npm run dev        # http://localhost:3000
-npm run build      # прод-сборка
-npm run start      # запуск прод-сборки
+npm run build      # produktionsbygge
+npm run lint       # eslint
 ```
 
-## Где что лежит (весь контент — в `config/`)
+Lokal körning av produktionsbygget sker via `server.js` (Passenger-kompatibel):
+`npm run build` → `PORT=3111 node server.js`. OBS: `proxy.ts` tvingar https-redirect,
+så använd `curl -H 'X-Forwarded-Proto: https'` lokalt (annars 301).
 
-| Файл | Что редактировать |
-|------|-------------------|
-| `config/site.ts` | **Данные компании: телефон, email, org.nr, адрес, домен.** Всё помечено `TODO` |
-| `config/services.ts` | Услуги (страницы `/tjanster/[slug]`): тексты, мета, «detta ingår» |
-| `config/cities.ts` | Районы/города для гео-страниц `/omraden/[slug]` |
-| `config/faq.ts` | Вопросы-ответы (идут в FAQ-схему JSON-LD) |
-| `config/blog.ts` | Статьи блога `/blogg/[slug]` |
-| `config/reviews.ts` | Отзывы — **сейчас плейсхолдеры, заменить на реальные** |
+## Var innehållet bor (allt i `config/`)
 
-Изменил `config/*` → пересобрал (`npm run build`) → sitemap, меню, футер и разметка
-обновляются автоматически.
+| Fil | Vad du redigerar |
+|-----|------------------|
+| `config/site.ts` | Företagsdata: telefon, e-post, org.nr/VAT, domän, GA4-ID, Meta pixel-ID |
+| `config/products.ts` | Produktkategorier (`/produkter/[slug]`) |
+| `config/services.ts` | Tjänster (`/tjanster/[slug]`): armeringsmontage, bockningslista |
+| `config/cities.ts` | Lokala leveranssidor (`/armering/[slug]`) |
+| `config/blog.ts` | Guider/artiklar (`/blogg/[slug]`) |
+| `config/faq.ts` | Vanliga frågor (FAQPage-schema) |
+| `config/reviews.ts` | Omdömen – **platshållare tills äkta omdömen finns** (`verified: true` aktiverar schema) |
 
-## ⚠️ Что заполнить перед запуском (чек-лист)
+Ändra `config/*` → `npm run build` → meny, sidfot, sitemap och JSON-LD uppdateras automatiskt.
 
-- [ ] `config/site.ts` — реальные телефон, email, org.nr, адрес, домен (`url`)
-- [ ] `config/reviews.ts` — реальные отзывы (не публиковать вымышленные)
-- [ ] Ключевики из Google Ads → распределить по услугам/городам/статьям
-- [ ] Форма заявки: отправка на email готова (SMTP через nodemailer) — заполнить SMTP-переменные из `.env.example` на VPS. Без них заявки просто логируются в консоль.
-- [ ] Картинки: `public/og.jpg` (1200×630) и `public/logo.png` для соцсетей/разметки
-- [ ] Проверить/дополнить `app/integritetspolicy/page.tsx`
-
-## SEO, что уже сделано
-
-- `lang="sv"`, пер-страничные `<title>`/`meta`/canonical/Open Graph
-- JSON-LD: LocalBusiness (GeneralContractor), Service, FAQPage, Article, BreadcrumbList
-- Динамические `sitemap.xml` и `robots.txt`
-- Статическая генерация всех страниц (SSG) — быстро и хорошо для индексации
-- Гео-страницы по районам Стокгольма (локальное SEO)
-- Семантический HTML, доступность (focus-visible, aria)
-
-## Документация
-
-- `docs/PLAN.md` — живой SEO-план и прогресс (конкуренты, беклог статей, статус).
-- `docs/DEPLOY.md` — плейбук миграции на хостинг + чек-лист индексации в GSC.
-- `docs/keyword-mapping.md` — карта ключевиков: Google Ads + все 19 статей блога.
-
-## Структура страниц (~56 маршрутов)
+## Sidstruktur
 
 ```
-/                         главная
-/tjanster                 список услуг
-/tjanster/[slug]          6 услуг
-/priser                   страница цен (ценовой кластер)
-/omraden                  список районов
-/omraden/[slug]           16 гео-страниц
-/blogg  /blogg/[slug]     блог (19 статей: кластеры «Betong & grund» + «Armering»)
-/om-oss  /kontakt  /offert  /integritetspolicy
-/api/lead                 приём заявок (POST → email)
+/                          startsida
+/produkter  /produkter/[slug]     produkthub + 5 kategorier
+/tjanster   /tjanster/[slug]      tjänstehub + armeringsmontage, bockningslista
+/leverans                  leverans i hela Sverige (stads-hub)
+/armering/[slug]           12 lokala leveranssidor (leverans, inte fysisk närvaro)
+/armeringskalkylator       lead-magnet (kalkyl → offert)
+/blogg      /blogg/[slug]  guider (armering-klustret)
+/vanliga-fragor  /omdomen  /om-oss  /kontakt  /offert  /integritetspolicy
+/api/lead                  offertförfrågan (POST → e-post via SMTP)
 ```
 
-## Деплой на VPS (DirectAdmin + Node, как byggexp.se)
+## SEO / teknik
 
-Домен: **gjutabetongplatta.se**. Приложение использует API-роут (форма заявки),
-поэтому нужен Node-рантайм — запускаем через PM2 и проксируем на него веб-сервер
-DirectAdmin (Apache/LiteSpeed). Node-приложение живёт **не** в `public_html`, а в
-отдельной папке; `public_html` используется только для reverse-proxy.
+- Per-sida `<title>`/meta/canonical/OpenGraph + genererad `opengraph-image`.
+- JSON-LD: Organization, WebSite, Service, FAQPage, Article, BreadcrumbList
+  (Review/AggregateRating aktiveras när äkta omdömen markeras `verified`).
+- Dynamisk `sitemap.xml` + `robots.txt`; SSG för alla sidor.
+- GA4 (`config/site.ts:gaId`) och Meta Pixel laddas **först efter cookie-samtycke**.
+- HTTPS-redirect i `proxy.ts` (Next 16, f.d. middleware) via `X-Forwarded-Proto`.
 
-### 1. Запуск Node-приложения (SSH)
+## Deploy
 
-```bash
-# по SSH, вне public_html (напр. ~/apps/gjutabetongplatta)
-git clone https://github.com/alexgeho/Gjutabetongplatta.git
-cd Gjutabetongplatta
-npm ci
-npm run build
+`git push` till `main` → GitHub Actions (`.github/workflows/deploy.yml`) → rsync över
+SSH → omstart av Passenger. Detaljer och felsökning: `docs/DEPLOY.md` + `docs/STATUS.md`.
 
-# порт выбрать свободный (byggexp скорее всего на 3000 → берём 3001)
-PORT=3001 pm2 start "npm run start" --name gjutabetongplatta
-pm2 save
-pm2 startup     # автозапуск после перезагрузки VPS (выполнить выведенную команду)
-```
+## Agent-läsning
 
-SMTP для формы — задать переменные из `.env.example` (в `.env` в папке проекта,
-либо в экосистемном конфиге PM2). Без них заявки логируются, письма не уходят.
-
-### 2. Reverse proxy на домене
-
-DirectAdmin по умолчанию отдаёт статику из `public_html`. Нужно направить
-gjutabetongplatta.se на `127.0.0.1:3001`. **Проще всего — повторить ровно ту же
-схему, что уже настроена для byggexp.se** (тот же VPS/панель).
-
-**Apache** (Custom HTTPD Configurations в DirectAdmin для домена, секция `CUSTOM`):
-
-```apache
-ProxyRequests Off
-ProxyPreserveHost On
-ProxyPass / http://127.0.0.1:3001/
-ProxyPassReverse / http://127.0.0.1:3001/
-```
-
-**OpenLiteSpeed/LiteSpeed** — добавить External App (Web Server → тип Web Server,
-адрес `127.0.0.1:3001`) и Context `/` с этим handler'ом.
-
-HTTPS — выпустить Let's Encrypt через панель DirectAdmin для домена.
-
-### Обновление сайта
-
-```bash
-cd ~/apps/gjutabetongplatta/Gjutabetongplatta
-git pull
-npm ci
-npm run build
-pm2 restart gjutabetongplatta
-```
-# ArmeringProffs
+`AGENTS.md`/`CLAUDE.md`: denna Next-version kan ha brytande ändringar – läs relevant
+guide i `node_modules/next/dist/docs/` innan du skriver Next-specifik kod.

@@ -1,3 +1,7 @@
+> ⚠️ **FÖRÅLDRAD — sökord för det gamla betongplatta-projektet, INTE Armeringsproffs.**
+> Sanning för detta repo: **`docs/STATUS.md`** + `docs/SLAGPLAN-klippt-bockad-armering.md`.
+> Behålls endast som historik.
+
 # Sökordskarta (Google Ads, aug 2026)
 
 Data: Keyword Planner, Sverige/Stockholm, 12 mån. Volymer är Googles avrundade
