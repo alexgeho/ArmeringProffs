@@ -5,7 +5,7 @@ import Link from "next/link";
 import { posts, getPost, type Block, type Post } from "@/config/blog";
 import { site } from "@/config/site";
 import { Section, Container, Button } from "@/components/ui";
-import { Breadcrumbs, CtaBanner } from "@/components/sections";
+import { Breadcrumbs, CtaBanner, CityLinks } from "@/components/sections";
 import { FaqAccordion } from "@/components/FaqAccordion";
 import { IconClock, IconArrow, IconCheck } from "@/components/icons";
 import { figures } from "@/components/illustrations";
@@ -199,6 +199,8 @@ export default async function PostPage({
           </div>
         </Section>
       )}
+
+      <CityLinks title="Vi levererar armering i hela Sverige" eyebrow="Leverans" />
 
       <CtaBanner />
 
