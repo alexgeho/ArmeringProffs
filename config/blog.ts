@@ -784,6 +784,160 @@ export const posts: Post[] = [
       { q: "Är armeringsnät eller kamjärn billigast?", a: "Det beror på konstruktionen. Nät går snabbt att lägga och täcker stora ytor effektivt, medan kamjärn behövs för kanter och punktlaster. Totalkostnaden avgörs av mängd, dimensioner och arbete – begär offert för exakt pris." },
     ],
   },
+  {
+    slug: "bockningslista-sa-gor-du",
+    title: "Bockningslista – så gör du en, steg för steg",
+    metaTitle: "Bockningslista | Så gör du en steg för steg (+ mall) 2026",
+    metaDescription:
+      "Vad är en bockningslista och hur gör du en? Guide om bockningslista för armering – positioner, former, mått och dimensioner – med gratis mall att ladda ner.",
+    excerpt:
+      "En bockningslista är receptet för din armering: varje position med form, mått, dimension och antal. Så gör du en – och så slipper du om vi tar fram den åt dig.",
+    date: "2026-09-08",
+    readingMinutes: 5,
+    keywords: [
+      "bockningslista",
+      "bockningslista mall",
+      "bockningslista armering",
+      "göra bockningslista",
+      "armeringsritning",
+      "bockningsschema",
+    ],
+    content: [
+      { type: "p", text: "En bockningslista (kallas ibland bockningsschema eller armeringsspecifikation) är sammanställningen av all armering i ett projekt. Den talar om exakt vilka järn som ska kapas och bockas: form, mått, dimension och antal per position. Med en tydlig bockningslista får du rätt armering, ett korrekt pris och en leverans som är märkt och sorterad – redo att monteras." },
+
+      { type: "h2", text: "Vad ska en bockningslista innehålla?" },
+      { type: "p", text: "Varje rad i listan är en position – en unik armeringsdetalj. För varje position anger du:" },
+      { type: "ul", items: [
+        "Positionsnummer (pos) – en unik beteckning per detalj.",
+        "Form – rak, bygel, U, L, krok eller annan bockad form.",
+        "Mått per skänkel – längderna på formens sträckor, i mm.",
+        "Dimension (Ø) – järnets diameter i mm, t.ex. Ø10 eller Ø16.",
+        "Antal – hur många likadana järn positionen omfattar.",
+        "Gärna även täckskikt och bockningsradie där det är kritiskt.",
+      ] },
+
+      { type: "figure", illustration: "bending-shapes", caption: "Vanliga bockningsformer – raka längder, byglar, U- och L-former." },
+
+      { type: "h2", text: "Steg för steg" },
+      { type: "ol", items: [
+        "Utgå från konstruktionsritningen – där finns dimensioner, former och antal.",
+        "Numrera positionerna – ge varje unik detalj ett positionsnummer.",
+        "Ange form och mått – rita/beskriv formen och skriv måtten per skänkel.",
+        "Fyll i dimension och antal – Ø i mm och hur många av varje.",
+        "Summera per dimension – det ger underlag för mängd och pris.",
+      ] },
+
+      { type: "h2", text: "Ladda ner en mall" },
+      { type: "p", text: "Vill du fylla i själv? Ladda ner vår [bockningslista-mall](/bockningslista-mall.csv) och skriv in dina positioner. Skicka den ifyllda mallen så räknar vi fram en offert. Är du osäker på en post hjälper vi dig att komplettera." },
+
+      { type: "h2", text: "Har du bara en ritning? Vi gör listan" },
+      { type: "p", text: "Saknar du en färdig bockningslista räcker det med en konstruktionsritning. Vi tar fram [bockningslistan åt dig](/tjanster/bockningslista) med rätt former, mått, dimensioner och antal – du får godkänna den innan tillverkning. Se även guiden om [armeringsjärn dimensioner](/blogg/armeringsjarn-dimensioner)." },
+
+      { type: "h2", text: "Från lista till färdig armering" },
+      { type: "p", text: "När listan är klar tillverkar vi [klippt och bockad armering](/produkter/klippt-och-bockad) efter den, märker och sorterar per position och levererar i hela Sverige – och kan även [lägga armeringen på plats](/tjanster/armeringsmontage). Behöver du uppskatta mängden först? Använd [armeringskalkylatorn](/armeringskalkylator)." },
+    ],
+    faqs: [
+      { q: "Vad är en bockningslista?", a: "En bockningslista är en sammanställning av all armering i ett projekt – varje position med form, mått per skänkel, dimension (Ø) och antal. Den används som underlag för både offert och tillverkning." },
+      { q: "Hur gör jag en bockningslista?", a: "Utgå från konstruktionsritningen, numrera varje unik detalj som en position, ange form och mått per skänkel, fyll i dimension och antal och summera per dimension. Du kan använda vår gratis mall." },
+      { q: "Finns det en mall för bockningslista?", a: "Ja, du kan ladda ner vår bockningslista-mall och fylla i dina positioner. Skicka den ifyllda mallen så tar vi fram en offert." },
+      { q: "Kan ni göra bockningslistan åt mig?", a: "Ja. Skicka din konstruktionsritning så tar vi fram en komplett bockningslista med former, mått, dimensioner och antal – du får godkänna den innan tillverkning." },
+    ],
+  },
+  {
+    slug: "armering-till-betongtrappa",
+    title: "Armering till betongtrappa – så armeras en gjuten trappa",
+    metaTitle: "Armering till betongtrappa | Rätt armering i trappan 2026",
+    metaDescription:
+      "Hur armeras en gjuten betongtrappa? Guide om armering till betongtrappa – huvudarmering, fördelningsjärn, förankring i bjälklag och rätt täckskikt.",
+    excerpt:
+      "En gjuten betongtrappa spänner ofta fritt mellan två plan och måste armeras för att inte spricka. Så armeras trappan rätt.",
+    date: "2026-09-08",
+    readingMinutes: 4,
+    keywords: [
+      "armering till betongtrappa",
+      "armera betongtrappa",
+      "betongtrappa armering",
+      "armering trappa",
+      "gjuta betongtrappa armering",
+    ],
+    content: [
+      { type: "p", text: "En platsgjuten betongtrappa fungerar ofta som ett lutande bjälklag som spänner fritt mellan två plan. Egenvikt och last vill böja trappan, och betongen spricker på dragsidan om den inte armeras. Därför ska en gjuten trappa armeras och dimensioneras av en konstruktör – särskilt om den är fribärande." },
+
+      { type: "h2", text: "Så armeras en gjuten trappa" },
+      { type: "p", text: "Huvudarmeringen läggs i trappans längdriktning på dragsidan (normalt underkant i fältet), med fördelningsjärn på tvären. Vid infästningarna mot bjälklag eller vilplan förankras armeringen in i den anslutande konstruktionen så att krafterna tas upp där trappan möter planen." },
+      { type: "ul", items: [
+        "Huvudarmering (kamjärn) i trappans längdriktning på dragsidan.",
+        "Fördelningsjärn tvärs över för att fördela laster och begränsa sprickor.",
+        "Förankring in i bjälklag/vilplan i över- och underkant.",
+        "Rätt täckskikt med [distanser](/produkter/distanser) så stålet inte rostar.",
+      ] },
+
+      { type: "h2", text: "Vanliga misstag" },
+      { type: "ul", items: [
+        "Huvudarmering på fel sida – den ska sitta på dragsidan.",
+        "Ingen eller för svag förankring där trappan möter planen.",
+        "För litet täckskikt – armeringen ligger för nära ytan.",
+        "Underdimensionerad armering i fribärande trappor.",
+      ] },
+
+      { type: "h2", text: "Prefab till trappan" },
+      { type: "p", text: "Vi tillverkar armeringen till betongtrappor – [klippt och bockad armering](/produkter/klippt-och-bockad) och [armeringsjärn i kamstål](/produkter/armeringsjarn) – efter konstruktörens ritning eller [bockningslista](/tjanster/bockningslista), och levererar i hela Sverige. Vi kan även [lägga armeringen på plats](/tjanster/armeringsmontage). Se även guiden om [armeringsjärn dimensioner](/blogg/armeringsjarn-dimensioner). Begär en kostnadsfri offert på din trappa." },
+    ],
+    faqs: [
+      { q: "Hur armeras en gjuten betongtrappa?", a: "Med huvudarmering i trappans längdriktning på dragsidan, fördelningsjärn på tvären och förankring in i bjälklag och vilplan. Rätt täckskikt säkras med distanser. Utförandet ska dimensioneras av en konstruktör." },
+      { q: "Måste en betongtrappa armeras?", a: "Ja, en gjuten betongtrappa böjs av egenvikt och last och spricker på dragsidan utan armering. Fribärande trappor är särskilt beroende av rätt armering och ska alltid dimensioneras." },
+      { q: "Vilken dimension på armeringen behövs i en trappa?", a: "Det beror på trappans spännvidd och last och framgår av konstruktionsritningen. Vanligt är kamjärn som huvudarmering med klenare fördelningsjärn på tvären." },
+      { q: "Kan ni leverera armering till betongtrappa?", a: "Ja, vi tillverkar klippt och bockad armering och kamjärn till trappor efter ritning eller bockningslista och levererar i hela Sverige – och kan även sköta montaget." },
+    ],
+  },
+  {
+    slug: "armering-till-betonggolv",
+    title: "Armering till betonggolv och industrigolv",
+    metaTitle: "Armering till betonggolv | Nät & fibrer i industrigolv 2026",
+    metaDescription:
+      "Hur armeras ett betonggolv? Guide om armering till betonggolv, industrigolv och garagegolv – armeringsnät, kamjärn, täckskikt och placering i golvet.",
+    excerpt:
+      "Ett betonggolv armeras för att begränsa sprickor och ta upp laster. Så väljer du mellan armeringsnät och kamjärn – och placerar det rätt i golvet.",
+    date: "2026-09-08",
+    readingMinutes: 4,
+    keywords: [
+      "armering till betonggolv",
+      "armera betonggolv",
+      "industrigolv armering",
+      "armering garagegolv",
+      "armeringsnät golv",
+      "betonggolv armering",
+    ],
+    content: [
+      { type: "p", text: "Ett betonggolv – i garage, verkstad, lager eller industri – armeras för att begränsa sprickor från krympning och för att ta upp de laster golvet utsätts för. Hur mycket och vilken typ av armering som behövs beror på laster, underlag och golvets funktion. Kraftigt belastade industrigolv ska alltid dimensioneras av en konstruktör." },
+
+      { type: "h2", text: "Nät eller kamjärn i golvet?" },
+      { type: "p", text: "De flesta betonggolv armeras med [armeringsnät](/produkter/svetsad-armering) som ger jämn armering över hela ytan. I golv med stora eller koncentrerade laster kompletteras nätet med [kamjärn](/produkter/armeringsjarn) i fält och vid pelare eller portöppningar. Läs mer i guiden [armeringsnät eller armeringsjärn](/blogg/armeringsnat-eller-armeringsjarn)." },
+      { type: "table",
+        caption: "Riktlinje – dimensionering ska följa konstruktionsritning.",
+        head: ["Golvtyp", "Vanlig armering"],
+        rows: [
+          ["Garagegolv, mindre plattor", "Armeringsnät"],
+          ["Verkstads- och lagergolv", "Nät, ev. dubbla lager"],
+          ["Industrigolv med tunga laster", "Nät + kamjärn eller specialnät"],
+          ["Punktlaster (pelare, ställage)", "Extra kamjärn i fält"],
+        ],
+      },
+
+      { type: "h2", text: "Rätt placering och täckskikt" },
+      { type: "p", text: "Armeringens placering i höjdled är avgörande. Nätet ska ligga där dragkrafterna är störst – ofta i eller strax under golvets överkant för att begränsa krympsprickor, eller i två lager i kraftigt belastade golv. Rätt höjd säkras med [distanser](/produkter/distanser) så att täckskiktet blir korrekt och armeringen inte hamnar i botten av gjutningen." },
+      { type: "figure", illustration: "cover-layer", caption: "Distanser ger rätt täckskikt så att armeringen ligger på rätt höjd." },
+
+      { type: "h2", text: "Räkna åtgång och beställ" },
+      { type: "p", text: "Vill du uppskatta hur mycket nät som går åt? Använd [armeringskalkylatorn](/armeringskalkylator). Vi tillverkar och levererar [armeringsnät, specialnät](/produkter/svetsad-armering) och [klippt och bockad armering](/produkter/klippt-och-bockad) till betong- och industrigolv i hela Sverige – och kan även [lägga armeringen](/tjanster/armeringsmontage). Begär en kostnadsfri offert på ditt golv." },
+    ],
+    faqs: [
+      { q: "Hur armeras ett betonggolv?", a: "Oftast med armeringsnät som ger jämn armering över ytan, kompletterat med kamjärn där lasterna är stora. Nätet placeras på rätt höjd med distanser så att täckskiktet blir korrekt. Dimensionering ska följa konstruktionsritning." },
+      { q: "Vilket armeringsnät ska jag ha i ett garagegolv?", a: "Mindre garagegolv armeras normalt med ett armeringsnät. Vid tunga laster eller större ytor kan dubbla lager eller specialnät behövas – exakt val framgår av konstruktionsritningen." },
+      { q: "Var i golvet ska armeringen ligga?", a: "Armeringen ska ligga där dragkrafterna är störst, ofta i eller strax under överkant för att begränsa krympsprickor. Rätt höjd säkras med distanser – armeringen får inte ligga i botten av gjutningen." },
+      { q: "Kan ni leverera armering till industrigolv?", a: "Ja, vi tillverkar och levererar armeringsnät, specialnät och kamjärn till betong- och industrigolv i hela Sverige, och kan även sköta montaget." },
+    ],
+  },
 ];
 
 export const getPost = (slug: string) => posts.find((p) => p.slug === slug);
