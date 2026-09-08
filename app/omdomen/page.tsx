@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { site } from "@/config/site";
-import { reviews } from "@/config/reviews";
+import { reviews, verifiedReviews } from "@/config/reviews";
 import { Section, SectionHeading, Button } from "@/components/ui";
 import { Breadcrumbs, CtaBanner } from "@/components/sections";
-import { JsonLd, breadcrumbSchema } from "@/lib/jsonld";
+import { JsonLd, breadcrumbSchema, reviewsSchema } from "@/lib/jsonld";
 import { IconStar, IconArrow, IconCheck } from "@/components/icons";
 
 export const metadata: Metadata = {
@@ -13,9 +13,10 @@ export const metadata: Metadata = {
   alternates: { canonical: "/omdomen" },
 };
 
-// Är omdömena fortfarande platshållare (exempel)? Då märker vi ut det tydligt
-// istället för att presentera dem som äkta recensioner.
-const arExempel = reviews.some((r) => r.name.toLowerCase().includes("exempel"));
+// Visa exempel-notisen så länge det inte finns några verifierade (äkta) omdömen.
+const arExempel = verifiedReviews.length === 0;
+// Schema emitteras ENDAST för äkta, verifierade omdömen (aldrig för platshållare).
+const reviewLd = reviewsSchema(verifiedReviews);
 
 export default function OmdomenPage() {
   return (
@@ -105,6 +106,7 @@ export default function OmdomenPage() {
           { name: "Omdömen", url: `${site.url}/omdomen` },
         ])}
       />
+      {reviewLd && <JsonLd data={reviewLd} />}
     </>
   );
 }

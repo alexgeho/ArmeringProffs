@@ -12,7 +12,7 @@ import {
   IconPhone, IconCheck, IconShield, IconStar,
   IconTruck, IconTools, IconLayers, IconRuler, IconArrow, IconChevron,
 } from "./icons";
-import { RebarMeshPattern, RebarCageIllustration } from "./illustrations";
+import { RebarMeshPattern } from "./illustrations";
 
 /* ---------- Hero ---------- */
 export function Hero({

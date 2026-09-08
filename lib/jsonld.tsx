@@ -1,5 +1,6 @@
 import { site } from "@/config/site";
 import type { Faq } from "@/config/faq";
+import type { Review } from "@/config/reviews";
 
 /** Renderar ett JSON-LD-script (strukturerad data för Google). */
 export function JsonLd({ data }: { data: object }) {
@@ -132,6 +133,35 @@ export function articleSchema(opts: {
       name: site.company,
       logo: { "@type": "ImageObject", url: `${site.url}/opengraph-image` },
     },
+  };
+}
+
+/** Review + AggregateRating-schema. Anropas ENDAST med äkta, verifierade omdömen
+ *  (se verifiedReviews i config/reviews.ts). Returnerar null om listan är tom så
+ *  att inget schema emitteras för platshållare. Fäst på organisationen (#business).
+ *  OBS: Google visar normalt inte self-serving omdömen som rich result, men datan
+ *  är korrekt strukturerad och används av bl.a. AI/entitetsförståelse. */
+export function reviewsSchema(reviews: Review[]) {
+  if (!reviews.length) return null;
+  const avg = reviews.reduce((sum, r) => sum + r.rating, 0) / reviews.length;
+  return {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": `${site.url}/#business`,
+    name: site.company,
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: Math.round(avg * 10) / 10,
+      reviewCount: reviews.length,
+      bestRating: 5,
+      worstRating: 1,
+    },
+    review: reviews.map((r) => ({
+      "@type": "Review",
+      author: { "@type": "Person", name: r.name },
+      reviewRating: { "@type": "Rating", ratingValue: r.rating, bestRating: 5, worstRating: 1 },
+      reviewBody: r.text,
+    })),
   };
 }
 

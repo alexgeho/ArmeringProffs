@@ -18,6 +18,9 @@ export function CookieConsent({ gaId }: { gaId?: string }) {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    // Läser sparat samtycke först EFTER montering (localStorage saknas vid SSR).
+    // Detta är en legitim hydrerings-guard, inte en cascading-render-bugg.
+    /* eslint-disable-next-line react-hooks/set-state-in-effect */
     setMounted(true);
     const stored = localStorage.getItem(KEY);
     if (stored === "granted" || stored === "denied") setConsent(stored);

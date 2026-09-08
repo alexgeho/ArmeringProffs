@@ -1,9 +1,23 @@
 /**
  * Kundomdömen. PLATSHÅLLARE – ersätt med riktiga omdömen innan lansering.
  * (Publicera inte fiktiva recensioner som om de vore äkta.)
+ *
+ * SÅ AKTIVERAR DU STJÄRNOR (Review/AggregateRating-schema) NÄR NI HAR RIKTIGA OMDÖMEN:
+ *   1. Byt ut exempel-objekten mot äkta omdömen (riktigt namn, ort, text, betyg).
+ *   2. Sätt `verified: true` på varje äkta omdöme.
+ * Då – och ENDAST då – emitteras Review + AggregateRating-schema på /omdomen
+ * (se `verifiedReviews` i app/omdomen/page.tsx + `reviewsSchema` i lib/jsonld.tsx).
+ * Så länge inget omdöme är `verified` matar vi INTE Google med fejkad rating.
  */
 
-export type Review = { name: string; place: string; text: string; rating: number };
+export type Review = {
+  name: string;
+  place: string;
+  text: string;
+  rating: number;
+  /** true = äkta, verifierat omdöme. Endast dessa får schema-markering. */
+  verified?: boolean;
+};
 
 export const reviews: Review[] = [
   {
@@ -25,3 +39,6 @@ export const reviews: Review[] = [
     rating: 5,
   },
 ];
+
+/** Endast äkta, verifierade omdömen (dessa – och bara dessa – får schema). */
+export const verifiedReviews = reviews.filter((r) => r.verified);
