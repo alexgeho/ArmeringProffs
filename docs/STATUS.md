@@ -3,7 +3,12 @@
 > **Главная цель: ЛИДЫ** (offertförfrågningar на prefab-арматуру по всей Швеции).
 > **Лид = заполненная offert-форма** (с bockningslista/ritning) или звонок.
 > Модель: **offert/под заказ, НЕ webshop, БЕЗ фиксированных цен** (решение владельца 2026-09-05).
-> Обновлено: **2026-09-06**. Сайт живой: **https://armeringproffs.se**.
+> Обновлено: **2026-09-08**. Сайт живой: **https://armeringproffs.se**.
+>
+> ⚙️ **АРХИТЕКТУРА (с 2026-09-08): ПОЛНОСТЬЮ СТАТИЧЕСКАЯ** (Next `output: 'export'` → `out/`) + PHP-мейлер.
+> НЕТ Node/Passenger, НЕТ API-роутов, НЕТ `server.js`/`proxy.ts`. Форма постит на `public/sendmail.php`.
+> Деплой: `git push` → `.github/workflows/deploy.yml` (сборка `out/` на раннере → rsync в докрут → smoke).
+> Подробности + [OWNER]-омстелл → `docs/DEPLOY.md`. Детальный лог сессии → `docs/next-level-worklog.md`.
 >
 > 📄 Отдельный боевой план по запросу «klippt (och) bockad armering» → `docs/SLAGPLAN-klippt-bockad-armering.md`.
 
@@ -30,10 +35,12 @@ B500B, cut&bent (d8–32), сварные корзины балок/колонн
 ## 🧭 ПРОДОЛЖИТЬ ЗДЕСЬ (следующие шаги)
 
 ### 🔴 P0 — блокирует лиды, нужен ВЛАДЕЛЕЦ (я сделать не могу)
-1. ✅ **SMTP — ГОТОВО 2026-09-06.** Заявки уходят на почту. Настроено в DirectAdmin (Node.js App →
-   Environment variables): `SMTP_HOST=mail.inleed.com`, `SMTP_PORT=465`, `SMTP_SECURE=true`,
-   `SMTP_USER=offert@armeringproffs.se`, `SMTP_PASS=***` (в панели), `LEAD_TO`/`LEAD_FROM=offert@armeringproffs.se`.
-   Ящик `offert@armeringproffs.se` (Webmail). Тест-лид через `/offert` дошёл. Код: `lib/mail.ts`, `app/api/lead/route.ts`.
+1. ⚠️ **Почта лидов — ПЕРЕЕХАЛА на PHP-мейлер 2026-09-08** (при миграции на статику).
+   Форма → `public/sendmail.php` (PHP `mail()`, honeypot + валидация + вложение чертежа). Получатель/отправитель
+   `offert@armeringproffs.se` (захардкожено в `sendmail.php`). Старый SMTP/Node-путь (`lib/mail.ts`,
+   `app/api/lead`) УДАЛЁН. Endpoint проверен: POST без данных → 400 (PHP исполняется). 
+   **➡️ [OWNER] финальная проверка:** заполни `/offert` с тестовым вложением и убедись, что письмо ДОШЛО.
+   Если нет — проверь в DirectAdmin, что PHP `mail()` включён и `upload_max_filesize`/`post_max_size` ≥12 МБ.
 2. **Реальные контакты** — частично готово 2026-09-06:
    - ✅ Юр.данные вписаны: `AGRY OÜ · Reg.nr 14785246 · VAT EE102510841` (эстонское юрлицо за брендом
      «Armeringsproffs»). В футере/контактах/интеграполиси + JSON-LD (`legalName`/`vatID`).
@@ -48,16 +55,23 @@ B500B, cut&bent (d8–32), сварные корзины балок/колонн
 3. **Google Business Profile** — бесплатно, локальные/«nära mig»-запросы, звонки. Нужны адрес/телефон + верификация.
 4. **Каталоги** (hitta.se, eniro, allabolag, cylex, byggkataloger) — бесплатный авторитет/ссылки. Нужны данные бизнеса.
    → *Я могу подготовить GBP+каталоги-кит (готовый текст + список) с плейсхолдерами — попроси.*
-5. **Реальные отзывы** — заменить плейсхолдеры в `config/reviews.ts` (помечены «exempel»).
-6. **GA4** — пометить событие `generate_lead` как **conversion** в интерфейсе GA4 + добавить отслеживание кликов по телефону.
-7. **Фото** для `armeringskorgar` и `svetsad-armering` (механизм готов: `product.image` в `config/products.ts`; ТЗ ниже).
+5. **Реальные отзывы → звёзды.** Заменить плейсхолдеры в `config/reviews.ts` на настоящие + пометить
+   `verified: true`. Тогда Review/AggregateRating-схема включится САМА (код-путь готов 2026-09-08:
+   `reviewsSchema` в `lib/jsonld.tsx`, `verifiedReviews` в `config/reviews.ts`). Сейчас 0 verified → 0 схемы.
+6. **GA4** — пометить `generate_lead` как **conversion** в интерфейсе GA4 (⚠️ только UI, кодом нельзя).
+   ✅ `phone_click` — СДЕЛАНО (`components/PhoneClickTracker.tsx`, все `tel:`-ссылки, no-op без consent).
+7. **Фото** для `armeringskorgar` и `svetsad-armering` (механизм готов: `product.image` в `config/products.ts`;
+   TODO-заглушки с точным путём/форматом уже в файле; ТЗ по фото ниже).
+8. **Meta Pixel** (retargeting) — вписать pixel-ID в `config/site.ts → metaPixelId` (код-путь + consent-gating готовы).
 
 ### 🟢 Что могу сделать САМ в след. раз (без твоих данных)
-- **Проверить индексацию в GSC** (через пару дней) — реально ли индексируются калькулятор/статьи/города; подстроить.
+- **Проверить индексацию в GSC** (через пару дней) — калькулятор/статьи/города/`/tjanster`; подстроить.
+  ⚠️ После миграции на статику URL теперь с **trailing slash** (`/armering/stockholm/`) — sitemap/canonical
+  уже консистентны, но проверить, что GSC переиндексировал без 404 на старых без-слэш URL.
 - Подготовить **GBP + каталоги-кит** (документ).
-- Favicon / реальное лого вместо буквы «A».
-- Ещё контент/перелинковка (отдача убывает — основы уже сделаны).
-- (опц.) HSTS-заголовок — ⚠️ осторожно, `proxy.ts` — критичный https-редирект, не ломать.
+- Favicon / реальное лого (сейчас AGRY-эмблема).
+- Ещё контент-гайды (кластеры: platta på mark grund, Eurokod/BBR täckskikt-krav, betongtrappa расширить).
+- Обратные blog→city уже есть (контекстные ссылки в теле статей); при желании — усилить хаб-статью.
 
 ### ❄️ Заморожено (решение владельца 2026-09-05)
 - **Google Ads** — пока не запускаем.
@@ -69,10 +83,11 @@ B500B, cut&bent (d8–32), сварные корзины балок/колонн
 ## ✅ Сделано
 
 ### Сайт (Next.js 16, React 19, Tailwind 4, шведский контент)
-- Страницы: `/` · `/produkter` + 5 категорий · `/leverans` · `/offert` · `/kontakt` · `/om-oss` · `/integritetspolicy`
-  · **`/armeringskalkylator`** · **`/vanliga-fragor`** · **`/omdomen`** · **`/armering/[stad]` × 12** · **`/blogg` — 14 гайдов**.
-- **Offert-форма** (`components/ContactForm.tsx`): compact (hero) = имя(опц.) + Telefon/E-post(одно поле) + описание + загрузка ritning + согласие; полная — на `/offert`/`/kontakt`. Бэкенд `app/api/lead/route.ts`.
-- SEO: уникальные meta/canonical/OG на всех, JSON-LD (Service/FAQPage/Breadcrumb/Organization), sitemap.xml (**39 URL**), robots.txt, сгенерированный OG-образ, `metadataBase`.
+- Страницы: `/` · `/produkter` + 5 категорий · **`/tjanster` + 2 услуги** · `/leverans` · `/offert` · `/kontakt`
+  · `/om-oss` · `/integritetspolicy` · **`/armeringskalkylator`** · **`/vanliga-fragor`** · **`/omdomen`**
+  · **`/armering/[stad]` × 12** · **`/blogg` — 17 гайдов**. (URL c trailing slash — статика.)
+- **Offert-форма** (`components/ContactForm.tsx`): compact (hero) = имя(опц.) + Telefon/E-post(одно поле) + описание + загрузка ritning + согласие + honeypot; полная — на `/offert`/`/kontakt`. Бэкенд теперь **`public/sendmail.php`** (PHP mail(), не Node).
+- SEO: уникальные meta/canonical/OG на всех, JSON-LD (Service/FAQPage/Breadcrumb/Organization/**WebSite**; Review/AggregateRating — код-путь, ждёт verified-отзывов), sitemap.xml (**~47 URL**), robots.txt, сгенерированный OG-образ, `metadataBase`.
 
 ### E-E-A-T / trust (2026-09-06, по мотивам аудита bygghub.nu)
 - **Cookie-баннер (GDPR)** `components/CookieConsent.tsx`: GA грузится ТОЛЬКО после «Godkänn» (выбор в localStorage `ap-cookie-consent`). Из `app/layout.tsx` убрана безусловная загрузка GA. Форма шлёт `generate_lead` через `gtag?.()` — при «Avböj» безопасно no-op.
@@ -99,11 +114,16 @@ Stockholm, Göteborg, Malmö, Uppsala, Västerås, Örebro, Linköping, Helsingb
 Уникальный контент на город: `angle`, `intro2`, `sectors` (användningsområden), `nearby`, локальный FAQ, Service JSON-LD (areaServed=City).
 Перелинковка: футер + `/leverans` → города; города → соседние по landsdel + хаб. Anti-doorway сделан (см. SEO-аудит).
 
-### Инфраструктура / HTTPS / аналитика
-- **Автодеплой:** `git push` в `main` → GitHub Actions `.github/workflows/deploy.yml` → rsync SSH (порт 2020) → рестарт Passenger. Работает.
-- **HTTPS:** Let's Encrypt wildcard (до 2026-11-29). Force-redirect в **`proxy.ts`** (Next 16, бывший middleware) по `X-Forwarded-Proto`.
-  ⚠️ Редирект в `server.js` НЕ работает (Passenger не выполняет `createServer`) — только через `proxy.ts`.
-- **GA4** подключён: `gaId: "G-730LFLXQCP"` (`config/site.ts`) через `next/script` в `app/layout.tsx`.
+### Инфраструктура / HTTPS / аналитика (обновлено 2026-09-08 — статика)
+- **Хостинг:** статические файлы `out/` в докруте на Inleed (LiteSpeed/Apache), БЕЗ Node. Node.js-приложение
+  в DirectAdmin **удалено** владельцем 2026-09-08 (сняло nproc/`cagefs_enter: Unable to fork`).
+- **Автодеплой:** `git push`→`main` → `deploy.yml`: сборка `out/` на раннере → guard (secret `INLEED_DOCROOT`) →
+  rsync `out/` (вкл. `.htaccess`+`sendmail.php`) в докрут → smoke-test (`scripts/smoke.sh`). Прогон #59 зелёный.
+  Секреты в GitHub: `INLEED_SSH_KEY/HOST/USER/PORT` + **`INLEED_DOCROOT`** (`domains/armeringproffs.se/public_html`).
+- **HTTPS + кэш:** `public/.htaccess` (force-HTTPS, DirectoryIndex, 404→/404.html, `ForceType` для OG-png,
+  cache: hashed-assets immutable / HTML must-revalidate). `proxy.ts`/`server.js` больше НЕТ.
+- **Свежесть:** обеспечивается полным ребилдом на деплое + HTML `must-revalidate` в `.htaccess` (ISR не нужен, убран).
+- **GA4** `gaId: "G-730LFLXQCP"` + **Meta Pixel** (`metaPixelId`, пусто=выкл) — грузятся ТОЛЬКО после cookie-consent.
 
 ### Google Search Console (2026-09-05)
 - Property `armeringproffs.se` подтверждена. **Sitemap отправлена** (39 URL).
@@ -130,11 +150,11 @@ Stockholm, Göteborg, Malmö, Uppsala, Västerås, Örebro, Linköping, Helsingb
 
 ## 🔑 Ключевые доступы/факты
 - Репо: `github.com/alexgeho/ArmeringProffs`, ветка `main` → автодеплой. Коммит+пуш разрешён без спроса (я делаю сам).
-- Inleed SSH: `s154755@prime6.inleed.net:2020` (ключ `~/.ssh/inleed_deploy`).
-- App root: `/home/s154755/armeringproffs`; venv: `source /home/s154755/nodevenv/armeringproffs/20/bin/activate`; Node 20.20.2.
-- Docroot: `~/domains/armeringproffs.se/public_html`.
-- Деплой: `git push` в `main`. Проверка: `gh run watch <id> --exit-status`.
-- Локальный прогон: `npm run build` → `PORT=3111 node server.js` (⚠️ curl с `-H 'X-Forwarded-Proto: https'`, иначе 301; убивай старый сервер `pkill -f server.js` перед новым запуском).
+- Inleed SSH: `s154755@prime6.inleed.net:2020` (ключ `~/.ssh/inleed_deploy`). Используется rsync-деплоем.
+- **Node.js-приложение УДАЛЕНО** (2026-09-08) — сайт статический. venv/App root больше не актуальны.
+- **Docroot: `~/domains/armeringproffs.se/public_html`** (= GitHub secret `INLEED_DOCROOT` без `~/`: `domains/armeringproffs.se/public_html`). Сюда rsync-ится `out/`.
+- Деплой: `git push` в `main` (или Actions → Run workflow). Проверка: `gh run watch <id> --exit-status` (или UI).
+- Локальный прогон: `npm run build` → статика в `out/`; предпросмотр `npx serve out`. (Нет server.js/Node.)
 
 ---
 
@@ -155,8 +175,30 @@ Stockholm, Göteborg, Malmö, Uppsala, Västerås, Örebro, Linköping, Helsingb
 - `config/services.ts` + `app/tjanster/page.tsx` (хаб) + `app/tjanster/[slug]/page.tsx`.
 - 2 услуги: **armeringsmontage** (кладём/вяжем арматуру на месте) и **bockningslista** (составляем bockningslista из ritning + скачивание mall). Обе честные — реальная «full cykel»-услуга.
 - Каждая: hero+форма, body, aside (includes + скачивание mall для bockningslista + калькулятор), related guides, Process, CityLinks, FAQ + Service/FAQPage/Breadcrumb JSON-LD.
-- Связки: Header nav «Tjänster», Footer (колонка Produkter → подсписок Tjänster), sitemap (+3 URL → **44**).
-Осталось: новые статьи-кластеры (platta på mark, Eurokod, bockningslista-mall-гайд), blog→city обратные ссылки, усиление продуктовых негео-запросов, Product-схема ждёт цен.
+- Связки: Header nav «Tjänster», Footer (колонка Produkter → подсписок Tjänster), sitemap (+3 URL).
+
+**+3 гайда** (`config/blog.ts`, блог 14→17): `bockningslista-sa-gor-du`, `armering-till-betongtrappa`,
+`armering-till-betonggolv` — с внутр. ссылками на новые услуги/продукты/калькулятор.
+
+**Follow-up (проверка ревьюера) — тоже сделано 2026-09-08:**
+- **Отзывы → звёзды (код-путь):** `reviewsSchema` + `verified`-флаг; схема только для настоящих отзывов ([OWNER] дать отзывы).
+- **Блог→city контекстные ссылки:** в тело КАЖДОЙ из 17 статей — топикарелевантная фраза с 2 `/armering/[ort]`
+  ссылками (плашка `CityLinks` оставлена). Покрытие: каждый город ≥2 входящих (Umeå/Sundsvall = 2).
+- **Трекинг:** `PhoneClickTracker` (GA4 `phone_click`), Meta Pixel consent-gated (`metaPixelId`).
+- **Cleanup:** удалены неиспользуемые `shutterstock_*.jpg` (−15 МБ); README переписан; deprecation-баннеры на
+  старых доках (PLAN/keyword-mapping — они про СТАРЫЙ проект бетонных плит, НЕ актуальны).
+
+**🏗️ БОЛЬШАЯ МИГРАЦИЯ 2026-09-08: Node/Passenger → полностью СТАТИКА + PHP-мейлер** (эталон villatak):
+- `next.config`: `output:'export'` + `trailingSlash:true` + `images.unoptimized`. Удалены `server.js`,
+  `proxy.ts`, `app/api/lead`, `lib/mail.ts`, ISR `revalidate` (16 стр.). `force-static` на og-image/robots/sitemap.
+- Форма → `public/sendmail.php` (honeypot+валидация+вложение). `public/.htaccess` (HTTPS/404/cache/OG ForceType).
+- `deploy.yml` переписан 2 раза: сначала (node_modules на раннере, без серверного npm), затем под СТАТИКУ
+  (rsync `out/`, без ssh/npm/server, guard на `INLEED_DOCROOT`, retry, `cancel-in-progress:false`, `scripts/smoke.sh`).
+- Владелец удалил Node.js-app в DirectAdmin; секрет `INLEED_DOCROOT` задан. **Прогон #59 зелёный, сайт live как статика.**
+  Проверено live: 12 городов, страницы 200, `/omdomen` без AggregateRating, `sendmail.php` POST→400 (PHP работает).
+- ⚠️ **Единственное незакрытое:** [OWNER] проверить, что письмо с формы реально ДОХОДИТ (см. P0 #1 выше).
+
+📎 **Детальный пошаговый лог всех follow-up/deploy-раундов → `docs/next-level-worklog.md`.**
 
 ## 🗒️ Лог сессии 2026-09-06 (всё задеплоено)
 По мотивам E-E-A-T-аудита (bygghub.nu): cookie-баннер GDPR (GA только после согласия) + отдельная FAQ-страница `/vanliga-fragor` (6→14 вопросов) + отдельная страница отзывов `/omdomen` + динамический год и ссылки в футере + обе страницы в sitemap. ⚠️ Панель Inleed выдавала `cagefs_enter: Unable to fork` (лимиты PMEM/процессов тарифа) — владелец написал в поддержку. NB: bygghub.nu на том же хосте `prime6.inleed.net` — аудит нашёл у него нестабильный SSL; проверить наш сертификат когда починят панель.
