@@ -1,7 +1,19 @@
 # Deploy & migrering – turnkey-playbook
 
-> Mål: få den nya SEO-versionen live och be Google indexera om. När Alexander är
-> vid datorn ska detta gå på ~15 min. Läs `docs/PLAN.md` för SEO-kontexten.
+> ⚠️ **Delvis föråldrad** (pm2/nginx/VPS-avsnitten nedan gäller inte längre).
+> **Nuvarande deploy:** `git push` → `.github/workflows/deploy.yml` bygger + installerar
+> prod-node_modules på GitHub-runnern och rsync:ar HELA appen (inkl. node_modules) till
+> Inleed; serversteget gör bara `touch tmp/restart.txt` + manifest-koll (INGET npm på servern).
+>
+> ### [OWNER] – drift/host (Inleed shared, samma konto som gjutabetong/byggexp)
+> - **DirectAdmin → Setup Node.js App:** håll **instances = 1** (fler processer slår i nproc).
+> - **Idle timeout:** Passenger stänger av appen vid inaktivitet – första besöket efter vila
+>   är därför långsamt (kallstart). Normalt, inget fel.
+> - **Zombie-processer:** om deploy/omstart hänger på `cagefs_enter: Unable to fork`, logga in
+>   via SSH och rensa: `pkill -f server.js` (eller `pkill -u <user> node`), vänta, försök igen.
+> - **Pusha inte i snabb följd:** varje push = en deploy + Passenger-omstart. Flera på en gång
+>   kör slut på processgränsen. Workflowet har `cancel-in-progress:false` (köar) + retry, men
+>   undvik att trycka 5 commits på 1 minut – samla ihop dem.
 
 ## Nuläge → mål
 - **Nu:** live på VPS (185.189.51.128) via pm2 + nginx, port 3002.

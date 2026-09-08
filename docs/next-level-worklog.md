@@ -71,3 +71,29 @@
 - **Пункт закрыт.** Поверхность растёт честно: `/tjanster` + гайды (не гео-фейк).
 
 **Follow-up: 6 коммитов ранее + ISR + контекстные ссылки + фото-заглушки/worklog. build ✓, lint 0 errors.**
+
+---
+
+# Deploy-раунд (2026-09-08) — убрать серверный npm
+
+Проблема: `deploy.yml` гонял `npm ci --omit=dev` НА СЕРВЕРЕ при каждом деплое → на shared-хостинге Inleed это спавнит слишком много процессов и бьётся в nproc (`cagefs_enter: Unable to fork`).
+
+### D-1 — Сборка зависимостей на раннере, node_modules по rsync ✅
+- Раннер: `npm ci` (full) → `npm run build` → `npm prune --omit=dev` (prod-only, но с optionalDeps = нативный SWC).
+- Проверка артефактов на раннере: `.next/BUILD_ID`, `node_modules/next`, `@next/swc-linux-x64-gnu` (linux x64 = как сервер, glibc→gnu, sharp не нужен т.к. `images.unoptimized`).
+- Rsync: `./` включая **node_modules** (убран из exclude), защищены `/.env` и `/tmp/` (restart-файл сервера).
+- Server-ssh шаг: ТОЛЬКО `touch tmp/restart.txt` + manifest-проверка (`.next/BUILD_ID`, `node_modules/next`). **npm/build на сервере нет.**
+- **AC:** server-ssh без npm/build ✅; node_modules в rsync ✅; smoke-test добавлен ✅.
+
+### D-2 — Устойчивость к nproc/ssh-сбоям ✅
+- `concurrency.cancel-in-progress: false` (деплои køируются, не убивают друг друга mid-rsync).
+- Retry (`nick-fields/retry@v3`, 3 попытки) на rsync И на ssh-restart шагах.
+- SSH-ключ через `webfactory/ssh-agent`.
+
+### D-3 — Smoke-test свежей сборки live ✅
+- Cache-bustнутый `curl "$SITE_URL/?cb=<run_id>-<i>"` (обходит s-maxage/ISR) в цикле (12×10с), grep BUILD_ID в HTML → падает если live не отдаёт новую сборку. BUILD_ID реально присутствует в prerendered HTML (проверено).
+
+### D-4 — [OWNER]-заметка (drift) 
+Вписана в `docs/DEPLOY.md` (шапка): DirectAdmin instances=1, idle-timeout (кастстарт норм), `pkill -f server.js` при зомби, не пушить залпом (køируется + retry, но всё же).
+
+**YAML провалидирован (jobs: build-deploy). Код приложения не менялся → build/lint без изменений (0 errors).**

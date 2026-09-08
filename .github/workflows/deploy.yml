@@ -1,18 +1,31 @@
 name: Deploy to Inleed
 
-# Push till main -> bygg på GitHub-runnern -> rsync till Inleed via SSH -> starta om Passenger.
+# Push till main -> bygg + installera prod-beroenden på GitHub-runnern -> rsync
+# HELA appen (inkl. node_modules) till Inleed -> touch restart. INGET npm/build körs
+# på servern (shared hosting: npm ci spawnar för många processer och slår i nproc =
+# "cagefs_enter: Unable to fork"). Runnern (ubuntu x64 glibc) matchar servern
+# (CloudLinux x64 glibc), så nativa binärer (@next/swc-linux-x64-gnu, ev. sharp)
+# fungerar direkt.
 on:
   push:
     branches: [main]
   workflow_dispatch: {}
 
+# cancel-in-progress:false – avbryt INTE en pågående deploy mitt i rsync/restart
+# (delad host, instances=1). Nya körningar köas istället för att döda den gamla.
 concurrency:
   group: inleed-deploy
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
+    env:
+      SSH_HOST: ${{ secrets.INLEED_SSH_HOST }}
+      SSH_USER: ${{ secrets.INLEED_SSH_USER }}
+      SSH_PORT: ${{ secrets.INLEED_SSH_PORT }}
+      APP_DIR: ${{ secrets.INLEED_APP_DIR }}
+      SITE_URL: https://armeringproffs.se
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -23,28 +36,87 @@ jobs:
           node-version: 20
           cache: npm
 
-      - name: Install & build
+      - name: Install (full) & build
         run: |
           npm ci
           npm run build
 
-      # Rsync:ar den byggda appen (inkl. .next) till Inleed och kör post-script över SSH.
-      # node_modules exkluderas – prod-beroenden installeras på servern (lättare än att synka).
-      - name: Deploy to Inleed
-        uses: easingthemes/ssh-deploy@v5.1.0
+      # Behåll bara prod-beroenden i node_modules innan de rsync:as till servern.
+      # prune tar bort devDependencies men BEHÅLLER optionalDependencies, dvs den
+      # nativa SWC-binären (@next/swc-linux-x64-gnu) som Next kräver i runtime.
+      - name: Prune to production dependencies
+        run: npm prune --omit=dev
+
+      - name: Verify runtime artifacts exist on runner
+        run: |
+          set -e
+          test -f .next/BUILD_ID
+          test -d node_modules/next
+          # Nativ SWC-binär för linux x64 (samma plattform som servern) måste finnas.
+          ls node_modules/@next/swc-linux-x64-gnu >/dev/null 2>&1 \
+            || echo "VARNING: @next/swc-linux-x64-gnu hittades inte – kontrollera Next SWC-binär."
+          echo "Runner BUILD_ID=$(cat .next/BUILD_ID)"
+
+      - name: Load SSH key
+        uses: webfactory/ssh-agent@v0.9.0
         with:
-          SSH_PRIVATE_KEY: ${{ secrets.INLEED_SSH_KEY }}
-          REMOTE_HOST: ${{ secrets.INLEED_SSH_HOST }}
-          REMOTE_USER: ${{ secrets.INLEED_SSH_USER }}
-          REMOTE_PORT: ${{ secrets.INLEED_SSH_PORT }}
-          SOURCE: "./"
-          TARGET: ${{ secrets.INLEED_APP_DIR }}
-          ARGS: "-rlzc --delete"
-          EXCLUDE: "/node_modules/, /.git/, /.github/, /.env, /tmp/"
-          SCRIPT_AFTER: |
-            set -e
-            ${{ secrets.INLEED_ACTIVATE }}
-            cd "${{ secrets.INLEED_APP_DIR }}"
-            npm ci --omit=dev
-            mkdir -p tmp && touch tmp/restart.txt
-            echo "Deploy klart – Passenger startar om."
+          ssh-private-key: ${{ secrets.INLEED_SSH_KEY }}
+
+      # Rsync HELA appen inkl. node_modules. node_modules är INTE exkluderat längre –
+      # det är hela poängen (ingen npm-install på servern). /tmp/ och /.env skyddas
+      # (serverns restart-fil och miljö rörs inte). Retry mot tillfälliga nproc/ssh-fel.
+      - name: Rsync to Inleed (with retry)
+        uses: nick-fields/retry@v3
+        with:
+          timeout_minutes: 15
+          max_attempts: 3
+          retry_wait_seconds: 45
+          command: |
+            rsync -az --delete \
+              --exclude '/.git/' \
+              --exclude '/.github/' \
+              --exclude '/.env' \
+              --exclude '/tmp/' \
+              -e "ssh -p $SSH_PORT -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" \
+              ./ "$SSH_USER@$SSH_HOST:$APP_DIR/"
+
+      # Endast restart + manifest-koll på servern. INGET npm. Retry mot nproc-fork-fel.
+      - name: Restart Passenger + manifest check (with retry)
+        uses: nick-fields/retry@v3
+        with:
+          timeout_minutes: 5
+          max_attempts: 3
+          retry_wait_seconds: 30
+          command: |
+            ssh -p $SSH_PORT -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null \
+              "$SSH_USER@$SSH_HOST" "
+                set -e
+                cd '$APP_DIR'
+                test -f .next/BUILD_ID || { echo 'FEL: .next/BUILD_ID saknas'; exit 1; }
+                test -d node_modules/next || { echo 'FEL: node_modules/next saknas'; exit 1; }
+                echo \"Server BUILD_ID=\$(cat .next/BUILD_ID)\"
+                mkdir -p tmp && touch tmp/restart.txt
+                echo 'Passenger restart triggad.'
+              "
+
+      # Smoke-test: cache-bustad request (kringgår s-maxage/ISR-cachen) och verifierar
+      # att LIVE serverar exakt den BUILD_ID vi just byggde. Väntar in Passenger-omstart.
+      - name: Smoke test (fresh build live)
+        run: |
+          set -e
+          BUILD_ID=$(cat .next/BUILD_ID)
+          echo "Väntar på att live ska svara med BUILD_ID=$BUILD_ID ..."
+          ok=""
+          for i in $(seq 1 12); do
+            html=$(curl -fsS "$SITE_URL/?cb=${GITHUB_RUN_ID}-$i" || true)
+            if printf '%s' "$html" | grep -q "$BUILD_ID"; then
+              echo "OK: live serverar den nya build ($BUILD_ID) efter $i försök."
+              ok="1"; break
+            fi
+            echo "Försök $i: ännu inte den nya buildern, väntar 10s ..."
+            sleep 10
+          done
+          if [ -z "$ok" ]; then
+            echo "FEL: live serverade inte BUILD_ID=$BUILD_ID inom tidsgränsen."
+            exit 1
+          fi
