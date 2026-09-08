@@ -51,3 +51,7 @@ export default function VanligaFragorPage() {
     </>
   );
 }
+
+// ISR: revalidera varje timme så att SEO-/länkändringar (t.ex. footer,
+// interna länkar) når produktionscachen – annars serveras sidan som immutable.
+export const revalidate = 3600;
