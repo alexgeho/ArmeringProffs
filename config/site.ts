@@ -57,6 +57,10 @@ export const site = {
 
   // Google Analytics 4 mät-ID (gtag.js). Tomt = ingen spårning laddas.
   gaId: "G-730LFLXQCP",
+
+  // Meta (Facebook) Pixel-ID för retargeting. Laddas ENDAST efter cookie-samtycke.
+  // Tomt = ingen pixel laddas. TODO [OWNER]: klistra in pixel-ID från Meta Events Manager.
+  metaPixelId: "",
 } as const;
 
 export type Site = typeof site;

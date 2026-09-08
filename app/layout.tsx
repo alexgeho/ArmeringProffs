@@ -5,6 +5,7 @@ import { site } from "@/config/site";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { CookieConsent } from "@/components/CookieConsent";
+import { PhoneClickTracker } from "@/components/PhoneClickTracker";
 import { JsonLd, localBusinessSchema, websiteSchema } from "@/lib/jsonld";
 
 const inter = Inter({
@@ -58,7 +59,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
-        <CookieConsent gaId={site.gaId} />
+        <CookieConsent gaId={site.gaId} metaPixelId={site.metaPixelId} />
+        <PhoneClickTracker />
       </body>
     </html>
   );
