@@ -3,7 +3,7 @@
 > **Главная цель: ЛИДЫ** (offertförfrågningar на prefab-арматуру по всей Швеции).
 > **Лид = заполненная offert-форма** (с bockningslista/ritning) или звонок.
 > Модель: **offert/под заказ, НЕ webshop, БЕЗ фиксированных цен** (решение владельца 2026-09-05).
-> Обновлено: **2026-09-08**. Сайт живой: **https://armeringproffs.se**.
+> Обновлено: **2026-09-16** (сессия GSC-индексация). Сайт живой: **https://armeringproffs.se**.
 >
 > ⚙️ **АРХИТЕКТУРА (с 2026-09-08): ПОЛНОСТЬЮ СТАТИЧЕСКАЯ** (Next `output: 'export'` → `out/`) + PHP-мейлер.
 > НЕТ Node/Passenger, НЕТ API-роутов, НЕТ `server.js`/`proxy.ts`. Форма постит на `public/sendmail.php`.
@@ -65,9 +65,12 @@ B500B, cut&bent (d8–32), сварные корзины балок/колонн
 8. **Meta Pixel** (retargeting) — вписать pixel-ID в `config/site.ts → metaPixelId` (код-путь + consent-gating готовы).
 
 ### 🟢 Что могу сделать САМ в след. раз (без твоих данных)
-- **Проверить индексацию в GSC** (через пару дней) — калькулятор/статьи/города/`/tjanster`; подстроить.
-  ⚠️ После миграции на статику URL теперь с **trailing slash** (`/armering/stockholm/`) — sitemap/canonical
-  уже консистентны, но проверить, что GSC переиндексировал без 404 на старых без-слэш URL.
+- ⏭️ **ДОСЛАТЬ Request Indexing в GSC (продолжить с этого!)** — 2026-09-16 дневная квота Google исчерпана после 3 запросов.
+  Осталось дослать (по одному в день лимит ~10-12): **Uppsala** (не прошёл — квота), **Västerås, Örebro, Linköping,
+  Helsingborg, Jönköping, Norrköping, Umeå, Sundsvall** + продуктовые/`/tjanster`. Процесс: GSC → URL Inspection →
+  вставить URL со слэшем → Request Indexing. NB: города «unknown to Google» запускают live-тест (~1-2 мин), «Discovered» — сразу в очередь.
+- **Проверить индексацию в GSC** (через пару дней) — вернуться и посмотреть, подхватил ли Google досланные города/калькулятор.
+  ⚠️ URL с **trailing slash** (`/armering/stockholm/`); сервер отдаёт 301 без-слэш→со-слэш (проверено curl 2026-09-16), canonical/og:url корректны.
 - Подготовить **GBP + каталоги-кит** (документ).
 - Favicon / реальное лого (сейчас AGRY-эмблема).
 - Ещё контент-гайды (кластеры: platta på mark grund, Eurokod/BBR täckskikt-krav, betongtrappa расширить).
@@ -157,6 +160,22 @@ Stockholm, Göteborg, Malmö, Uppsala, Västerås, Örebro, Linköping, Helsingb
 - Локальный прогон: `npm run build` → статика в `out/`; предпросмотр `npx serve out`. (Нет server.js/Node.)
 
 ---
+
+## 🗒️ Лог сессии 2026-09-16 (GSC-индексация — код НЕ трогали)
+**Задача:** посмотреть отчёт индексации в Google Search Console и «поправить ошибки».
+**Вывод: настоящих ошибок в коде НЕТ.** Робот прошёл: 24 indexed / 33 not indexed. Разобрал все 4 категории «not indexed»:
+- **Page with redirect** (1) = `http://…/` → это force-HTTPS редирект. Норма.
+- **Crawled – not indexed** (1) = `/opengraph-image` → динамич. OG-картинка, ей и не надо индексироваться. Норма.
+- **Duplicate, Google chose different canonical** (1) = `/armeringskalkylator/` → исторический артефакт миграции 08.09:
+  Google держится за без-слэш версию (знал её до миграции). Проверено `curl`: сервер отдаёт **301** без-слэш→со-слэш,
+  а `<link canonical>`/`og:url` в HTML указывают на со-слэш. Т.е. **чинить нечего**, Google сам переключится.
+- **Discovered – currently not indexed** (30) = города + блог/продукты, у всех **Last crawled = N/A** → это очередь
+  краулинга Google для молодого сайта, НЕ баг. Лечится авторитетом (GBP/каталоги/ссылки) + временем, не кодом.
+
+**Сделано (Request Indexing → priority crawl queue):** `/armeringskalkylator/`, `/armering/stockholm/`, `/armering/goteborg/`.
+**Попутно:** при проверке `/armering/malmo/` и `/armering/uppsala/` — **malmö уже проиндексирован** (Google подхватывает сам).
+**Стоп-фактор:** после 3 запросов Google выдал **Quota Exceeded** (дневной лимит). Остальное дослать завтра (см. 🟢-раздел выше).
+**Код/деплой:** НЕ менялись. Работа только в GSC UI (браузер).
 
 ## 🗒️ Лог сессии 2026-09-08 (всё задеплоено)
 **Бизнес-инсайт владельца** зафиксирован (Эстония→паром→шведский бренд, УТП цена+срок, конкурент rebar.one=Nordic Rebar) — см. раздел «💡 Бизнес-модель» выше.
