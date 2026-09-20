@@ -98,7 +98,7 @@ export default function OffertPage() {
 
         <p className="mx-auto mt-10 max-w-2xl text-center text-ink-soft">
           Vi behandlar dina uppgifter enligt vår{" "}
-          <a href="/integritetspolicy" className="text-brand underline">integritetspolicy</a> och delar dem aldrig med tredje part.
+          <a href="/integritetspolicy/" className="text-brand underline">integritetspolicy</a> och delar dem aldrig med tredje part.
         </p>
       </Section>
       <JsonLd

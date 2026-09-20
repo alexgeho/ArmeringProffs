@@ -122,7 +122,7 @@ export function ContactForm({
         <input type="checkbox" name="consent" required className="mt-1 h-4 w-4 accent-[var(--color-brand)]" />
         <span>
           Jag godkänner att mina uppgifter behandlas enligt{" "}
-          <a href="/integritetspolicy" className="text-brand underline">integritetspolicyn</a>.
+          <a href="/integritetspolicy/" className="text-brand underline">integritetspolicyn</a>.
         </span>
       </label>
 
