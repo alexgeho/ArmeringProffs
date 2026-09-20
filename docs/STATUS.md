@@ -3,7 +3,7 @@
 > **Главная цель: ЛИДЫ** (offertförfrågningar на prefab-арматуру по всей Швеции).
 > **Лид = заполненная offert-форма** (с bockningslista/ritning) или звонок.
 > Модель: **offert/под заказ, НЕ webshop, БЕЗ фиксированных цен** (решение владельца 2026-09-05).
-> Обновлено: **2026-09-16** (сессия GSC-индексация). Сайт живой: **https://armeringproffs.se**.
+> Обновлено: **2026-09-20** (сессия GSC: 3 фикса в коде + 10 Request Indexing). Сайт живой: **https://armeringproffs.se**.
 >
 > ⚙️ **АРХИТЕКТУРА (с 2026-09-08): ПОЛНОСТЬЮ СТАТИЧЕСКАЯ** (Next `output: 'export'` → `out/`) + PHP-мейлер.
 > НЕТ Node/Passenger, НЕТ API-роутов, НЕТ `server.js`/`proxy.ts`. Форма постит на `public/sendmail.php`.
@@ -65,11 +65,13 @@ B500B, cut&bent (d8–32), сварные корзины балок/колонн
 8. **Meta Pixel** (retargeting) — вписать pixel-ID в `config/site.ts → metaPixelId` (код-путь + consent-gating готовы).
 
 ### 🟢 Что могу сделать САМ в след. раз (без твоих данных)
-- ⏭️ **ДОСЛАТЬ Request Indexing в GSC (продолжить с этого!)** — 2026-09-16 дневная квота Google исчерпана после 3 запросов.
-  Осталось дослать (по одному в день лимит ~10-12): **Uppsala** (не прошёл — квота), **Västerås, Örebro, Linköping,
-  Helsingborg, Jönköping, Norrköping, Umeå, Sundsvall** + продуктовые/`/tjanster`. Процесс: GSC → URL Inspection →
-  вставить URL со слэшем → Request Indexing. NB: города «unknown to Google» запускают live-тест (~1-2 мин), «Discovered» — сразу в очередь.
-- **Проверить индексацию в GSC** (через пару дней) — вернуться и посмотреть, подхватил ли Google досланные города/калькулятор.
+- ⏭️ **ДОСЛАТЬ Request Indexing в GSC (продолжить с этого!)** — 2026-09-20 квота снова исчерпана после 11 запросов.
+  **Осталось 17 URL** (все со слэшем): города **uppsala, helsingborg, jonkoping, linkoping, norrkoping, umea,
+  sundsvall**; блог **/blogg/, armering-till-garage, armering-till-pool, armeringsjarn-dimensioner,
+  armeringsnat-storlekar-och-matt**; **kontakt, leverans, om-oss, omdomen, vanliga-fragor**.
+  Процесс: GSC → строка «Inspect any URL» сверху → вставить URL со слэшем → Enter → **REQUEST INDEXING**.
+  NB: «unknown to Google» запускает live-тест (~40-60 с), «Discovered» — быстрее. Лимит ~10-11/сутки.
+- **Проверить индексацию в GSC** (через 3-7 дней) — подхватил ли Google 10 досланных 20.09 + заработал ли `lastmod`.
   ⚠️ URL с **trailing slash** (`/armering/stockholm/`); сервер отдаёт 301 без-слэш→со-слэш (проверено curl 2026-09-16), canonical/og:url корректны.
 - Подготовить **GBP + каталоги-кит** (документ).
 - Favicon / реальное лого (сейчас AGRY-эмблема).
@@ -160,6 +162,42 @@ Stockholm, Göteborg, Malmö, Uppsala, Västerås, Örebro, Linköping, Helsingb
 - Локальный прогон: `npm run build` → статика в `out/`; предпросмотр `npx serve out`. (Нет server.js/Node.)
 
 ---
+
+## 🗒️ Лог сессии 2026-09-20 (GSC: 3 фикса в коде + 10 Request Indexing)
+**Задача:** «GSC — иди и чини/улучшай».
+
+**Динамика с 16.09 — растёт само:** было 24 indexed / 33 not indexed → стало **28 indexed / 29 not indexed**.
+Причин «not indexed» 4 → 3: **«Duplicate, Google chose different canonical» ушла в 0** — прогноз прошлой
+сессии подтвердился, Google сам переключился на trailing-slash версию. Чинить было нечего и правда.
+Остались: Discovered 27 (очередь краулинга), Page with redirect 1 (http→https, норма), Crawled-not-indexed 1
+(`/opengraph-image`, норма). **Настоящих ошибок по-прежнему нет.**
+
+**🔧 НО нашёл 3 реальных дефекта в коде (коммит `88d5faf`, задеплоено):**
+1. **`<lastmod>` отсутствовал у 30 из 47 URL в sitemap** — был только у блога (`p.updated ?? p.date`).
+   Продуктовые, услуги, города и ВСЕ основные страницы — т.е. ровно те категории, что висят в «Discovered» —
+   не слали Google никакого сигнала свежести. Проставлен по группам контента **честными датами**
+   (`UPDATED` в `app/sitemap.ts`), НЕ датой билда: Google игнорирует lastmod, который считает недостоверным
+   (иначе каждый деплой утверждал бы, что изменились все страницы). ⚠️ Константы надо бампать при правке контента.
+2. **`/integritetspolicy/` вообще не было в sitemap**, хотя она линкуется с каждой формы и из cookie-баннера.
+3. **22 из 51 страницы линковали `<a href="/integritetspolicy">` БЕЗ слэша** → 301 на каждый клик/краул.
+   Причина: обычный `<a>` не нормализуется `trailingSlash: true` (в отличие от `next/link`). Исправлено в
+   `components/ContactForm.tsx` (форма стоит почти на всех страницах) и `app/offert/page.tsx`.
+   Пустая трата crawl budget на сайте, у которого проблема ровно в том, что Google жалеет на него краул.
+   Проверено в `out/`: 48 loc, 0 без lastmod, 0 оставшихся бесслэшевых ссылок. Живой sitemap подтверждён curl.
+
+**✅ Request Indexing — 10 URL** (приоритет по решению владельца: негео-рычаги, не города):
+`/produkter/klippt-och-bockad/`, `/tjanster/`, `/tjanster/armeringsmontage/`, `/tjanster/bockningslista/`,
+`/produkter/armeringskorgar/`, `/produkter/armeringsjarn/`, `/produkter/distanser/`, `/offert/`,
+`/blogg/vad-kostar-armering/`, `/blogg/armering-atgang-per-m2/`.
+На 11-м (`/kontakt/`) — **Quota Exceeded**. Остаток списка — в 🟢-разделе выше.
+
+**✅ Sitemap переотправлен** после деплоя → «Success», **Discovered pages 47 → 48** (новая страница подхвачена сразу).
+
+**Наблюдение:** у части URL инспекция пишет «No referring sitemaps detected», хотя URL в sitemap и у соседних
+URL ситемап определяется нормально — это неконсистентность данных Google для незакрауленных URL, не баг конфига.
+
+**Трафик:** Performance показывает **19 кликов** всего, заметный рост 15-18.09. GSC сам подсветил
+`/blogg/bockningslista-sa-gor-du/` как страницу с всплеском показов — кандидат на усиление контентом/перелинковкой.
 
 ## 🗒️ Лог сессии 2026-09-16 (GSC-индексация — код НЕ трогали)
 **Задача:** посмотреть отчёт индексации в Google Search Console и «поправить ошибки».
