@@ -84,10 +84,10 @@ export function Hero({
 
 /* ---------- USP / trust bar ---------- */
 const usps = [
-  { icon: IconTools, title: "Prefab-tillverkning", text: "Kapat, bockat och svetsat efter din bockningslista." },
-  { icon: IconRuler, title: "Efter ritning", text: "Vi tillverkar på mått enligt konstruktionsritning." },
-  { icon: IconTruck, title: "Korta leveranstider", text: "Snabb leverans till bygget i hela Sverige – vi håller både pris och leveranstid." },
-  { icon: IconShield, title: "Montage & rådgivning", text: "Vi kan även lägga armeringen och hjälpa dig rätt." },
+  { img: "usp-prefab", icon: IconTools, title: "Prefab-tillverkning", text: "Kapat, bockat och svetsat efter din bockningslista." },
+  { img: "usp-ritning", icon: IconRuler, title: "Efter ritning", text: "Vi tillverkar på mått enligt konstruktionsritning." },
+  { img: "usp-leverans", icon: IconTruck, title: "Korta leveranstider", text: "Snabb leverans till bygget i hela Sverige – vi håller både pris och leveranstid." },
+  { img: "usp-montage", icon: IconShield, title: "Montage & rådgivning", text: "Vi kan även lägga armeringen och hjälpa dig rätt." },
 ];
 
 export function UspBar() {
@@ -95,14 +95,22 @@ export function UspBar() {
     <Section>
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
         {usps.map((u) => (
-          <div key={u.title} className="flex items-start gap-4 rounded-xl border border-line p-5">
-            <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-brand-light text-brand">
-              <u.icon className="h-6 w-6" />
-            </span>
-            <div>
-              <h3 className="font-semibold text-ink">{u.title}</h3>
-              <p className="mt-1 text-sm text-ink-soft">{u.text}</p>
+          <div key={u.title} className="overflow-hidden rounded-xl border border-line bg-white p-5">
+            <div className="-mx-5 -mt-5 mb-4 aspect-[16/9] overflow-hidden border-b border-line bg-slate-100">
+              <Image
+                src={`/images/illustrationer/${u.img}.webp`}
+                alt=""
+                width={1280}
+                height={720}
+                sizes="(min-width: 1024px) 280px, (min-width: 640px) 50vw, 100vw"
+                className="h-full w-full object-cover"
+              />
             </div>
+            <div className="flex items-center gap-2">
+              <u.icon className="h-5 w-5 shrink-0 text-brand" />
+              <h3 className="font-semibold text-ink">{u.title}</h3>
+            </div>
+            <p className="mt-1.5 text-sm text-ink-soft">{u.text}</p>
           </div>
         ))}
       </div>
