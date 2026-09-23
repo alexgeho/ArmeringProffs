@@ -42,6 +42,12 @@
 > 🔜 Шаг 3: режим фундаментной балки/ленты + связка с типформами → список позиций в offert. Открыто: какой нахлёст
 > по умолчанию (сейчас 300 мм сетка / 50·Ø стержни) и текст дисклеймера — показать конструктору.
 >
+> **🆕 2026-09-23 — контент по Keyword Planner (`docs/ARTIKELPLAN.md`):** 6 новых статей (armeringsbyglar, bocka-armeringsjarn,
+> skarvlangd-armering, armeringsstal, kantbalksbygel, lyftoglor-betong) + 8 обновлённых; каждая прошла факт-чек по нормам и
+> язык/SEO-ревью субагентами. Найдены и исправлены старые ошибки: stödmur (арматура на стороне грунта), täckskikt 25–35 мм
+> → уточнено (мот cellplast/form; makadam ≥40, jord ≥75 мм), нахлёст сетки унифицирован (≥2 ячейки, ~300–400 мм).
+> 4 новых продукта (byglar-och-hakar, lyftoglor, armering-i-ringar, 3d-bockning). 🔜 Request Indexing в GSC для новых URL.
+>
 > **⚠️ Öppna frågor / väntar på [OWNER]:**
 > - **Проверить, что лид-мейл реально доходит** (`/offert` с вложением → `offert@armeringproffs.se`). P0, висит с 08.09.
 > - **GA4:** пометить `generate_lead` как conversion (только через UI GA4).

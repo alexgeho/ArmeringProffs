@@ -91,7 +91,7 @@ export const posts: Post[] = [
         "Lägg nätet på distanser så det hamnar inne i betongen, inte mot underlaget.",
         "Placera huvudarmeringen där dragkrafterna är störst – i platta på mark oftast i nedre tredjedelen.",
         "Överlappa nätskarvar med minst två rutor (ca 300–400 mm för 150-nät) och bind ihop dem. Se [skarvlängd och överlapp](/blogg/skarvlangd-armering).",
-        "Håll ett täckskikt av betong (ofta minst 25–35 mm) runt all armering – annars rostar stålet.",
+        "Håll ett täckskikt av betong runt all armering – ofta minst 25–35 mm mot cellplast eller form – mot makadam minst 40 mm och direkt mot jord minst 75 mm (Eurokod 2). Annars rostar stålet.",
         "Förstärk kanter och hörn med extra kamjärn där lasterna koncentreras.",
       ] },
 
@@ -104,14 +104,14 @@ export const posts: Post[] = [
       { q: "Vilken armering behövs till en betongplatta?", a: "Till platta på mark används oftast svetsat armeringsnät (Ø5–6 mm, 150 mm rutor) som huvudarmering, kompletterat med lösa kamjärn (Ø10–12 mm) i kanter och under bärande väggar. Exakt val ska följa konstruktionsritning." },
       { q: "Hur mycket armeringsnät går åt per kvadratmeter?", a: "Räkna med cirka plattans yta plus 10–15 % extra för överlapp mellan näten. Nät levereras i standardformat, t.ex. 2,0 × 5,0 m, så en del spill uppstår vid kapning." },
       { q: "Hur mycket ska armeringsnät överlappa?", a: "Vanlig praxis är att näten överlappar minst två rutor – för 150-nät cirka 300–400 mm – och binds ihop så att de ligger stilla under gjutningen. Ritningen gäller." },
-      { q: "Var i plattan ska armeringen ligga?", a: "Armeringen ska ligga inne i betongen på distanser, inte mot underlaget. I en platta på mark placeras huvudarmeringen vanligtvis i nedre tredjedelen, med minst 25–35 mm betongtäckning runt stålet så att det inte rostar." },
+      { q: "Var i plattan ska armeringen ligga?", a: "Armeringen ska ligga inne i betongen på distanser, inte mot underlaget. I en platta på mark placeras huvudarmeringen vanligtvis i nedre tredjedelen, med tillräcklig betongtäckning runt stålet – ofta minst 25–35 mm mot cellplast eller form – mot makadam minst 40 mm och direkt mot jord minst 75 mm (Eurokod 2)." },
       { q: "Behöver en liten platta armering?", a: "Ja, även en mindre platta bör armeras med ett nät för att fördela laster och begränsa sprickor. Undantag kan finnas för mycket små, olastade ytor, men för garage, uterum och husgrund krävs armering enligt ritning." },
     ],
   },
   {
     slug: "armeringsnat-storlekar-och-matt",
     title: "Armeringsnät – storlekar, mått och rätt val till plattan",
-    metaTitle: "Armeringsnät storlekar & mått | Guide till rätt nät 2026",
+    metaTitle: "Armeringsnät – storlekar & mått",
     metaDescription:
       "Armeringsnät i olika storlekar och mått – förklaring av beteckningar (t.ex. 5x150), standardformat, överlapp och vilket nät du väljer till platta, garage och husgrund.",
     excerpt:
@@ -151,9 +151,9 @@ export const posts: Post[] = [
       ] },
 
       { type: "h2", text: "Överlapp och placering" },
-      { type: "p", text: "Skarvar mellan nät ska överlappa minst två rutor (ca 300–400 mm för 150-nät) och bindas ihop – se [skarvlängd och överlapp](/blogg/skarvlangd-armering). Nätet läggs på distanser så att det hamnar inne i betongen med tillräckligt täckskikt (ofta minst 25–35 mm). Läs mer i vår guide om [armering till betongplatta](/blogg/armering-till-betongplatta)." },
+      { type: "p", text: "Skarvar mellan nät ska överlappa minst två rutor (ca 300–400 mm för 150-nät) och bindas ihop – se [skarvlängd och överlapp](/blogg/skarvlangd-armering). Nätet läggs på distanser så att det hamnar inne i betongen med tillräckligt täckskikt (ofta minst 25–35 mm mot cellplast eller form – mot makadam minst 40 mm och direkt mot jord minst 75 mm (Eurokod 2)). Läs mer i vår guide om [armering till betongplatta](/blogg/armering-till-betongplatta)." },
 
-      { type: "figure", illustration: "mesh-overlap", caption: "Två armeringsnät skarvas med överlapp på ca 200–300 mm som binds ihop." },
+      { type: "figure", illustration: "mesh-overlap", caption: "Två armeringsnät skarvas med överlapp på ca 300–400 mm (minst två rutor) som binds ihop." },
 
       { type: "h2", text: "Osäker på valet?" },
       { type: "p", text: "Vill du inte räkna själv? Vi tillverkar [svetsad armering och specialnät](/produkter/svetsad-armering) efter dina mått och levererar i hela Sverige. Begär en kostnadsfri offert." },
@@ -221,7 +221,7 @@ export const posts: Post[] = [
   {
     slug: "armering-till-pool",
     title: "Armering till pool – så armeras poolens betong",
-    metaTitle: "Armering till pool | Rätt armering i betongpool 2026",
+    metaTitle: "Armering till pool – botten & väggar",
     metaDescription:
       "Hur armeras en betongpool? Guide om armering till pool – armeringsnät och kamjärn i botten och väggar, täckskikt, rostskydd och vanliga misstag.",
     excerpt:
@@ -270,7 +270,7 @@ export const posts: Post[] = [
   {
     slug: "armering-atgang-per-m2",
     title: "Hur mycket armering går åt per m²?",
-    metaTitle: "Armeringsåtgång per m² | Räkna armering till platta 2026",
+    metaTitle: "Armeringsåtgång per m² – så räknar du",
     metaDescription:
       "Hur mycket armering går åt per kvadratmeter? Räkna ut åtgång av armeringsnät och kamjärn till betongplattan – med spill, överlapp och exempel.",
     excerpt:
@@ -341,7 +341,7 @@ export const posts: Post[] = [
       { type: "p", text: "Det räcker inte att lägga i armering – den måste ligga på rätt ställe i betongen. Två begrepp är centrala: täckskikt och distanser. Rätt utfört skyddar det armeringen och ger plattan sin styrka." },
 
       { type: "h2", text: "Vad är täckskikt?" },
-      { type: "p", text: "Täckskiktet är betongen mellan armeringen och betongytan. Det skyddar stålet mot fukt, luft och korrosion. Är täckskiktet för litet rostar armeringen, och rosten spränger loss betongen (spjälkning). För platta på mark används ofta minst 25–35 mm täckskikt, mer i fuktig eller aggressiv miljö som pooler." },
+      { type: "p", text: "Täckskiktet är betongen mellan armeringen och betongytan. Det skyddar stålet mot fukt, luft och korrosion. Är täckskiktet för litet rostar armeringen, och rosten spränger loss betongen (spjälkning). För platta på mark används ofta minst 25–35 mm mot cellplast eller form – mot makadam minst 40 mm och direkt mot jord minst 75 mm (Eurokod 2) – och mer i fuktig eller aggressiv miljö som pooler." },
 
       { type: "h2", text: "Vad gör distanser?" },
       { type: "p", text: "Distanser – även kallade ”stolar”, klossar eller listor – lyfter armeringen från underlaget så att den hamnar på rätt höjd med rätt täckskikt. Utan distanser sjunker nät och järn ner mot botten och hamnar utanför den bärande delen av plattan." },
@@ -366,7 +366,7 @@ export const posts: Post[] = [
     ],
     faqs: [
       { q: "Hur stort täckskikt ska armering ha i betong?", a: "Det beror på exponeringsklass och konstruktionens livslängd och anges på ritningen. Gjuts betongen direkt mot jord krävs minst 75 mm enligt Eurokod 2. Distanser med rätt höjd säkrar att täckskiktet blir som ritningen anger." },
-      { q: "Vad är täckskikt på armering?", a: "Täckskiktet är betonglagret mellan armeringen och ytan. Det skyddar stålet mot fukt och korrosion. För platta på mark används ofta minst 25–35 mm, och mer i fuktig miljö som pooler." },
+      { q: "Vad är täckskikt på armering?", a: "Täckskiktet är betonglagret mellan armeringen och ytan. Det skyddar stålet mot fukt och korrosion. För platta på mark ofta minst 25–35 mm mot cellplast eller form – mot makadam minst 40 mm och direkt mot jord minst 75 mm (Eurokod 2), och mer i fuktig miljö som pooler." },
       { q: "Varför behövs distanser till armeringen?", a: "Distanser lyfter armeringen från underlaget så att den hamnar på rätt höjd inne i betongen med rätt täckskikt. Utan distanser sjunker armeringen ner mot botten och förlorar sin funktion." },
       { q: "Vad händer om täckskiktet är för litet?", a: "Då kan armeringen rosta, och rosten spränger loss betongen (spjälkning). Det försämrar hållfastheten och kan skada plattan över tid." },
       { q: "Hur tätt ska distanser sitta?", a: "Distanserna ska sitta tätt nog att armeringen inte sviktar ner när man går på den under gjutning, ofta med under en meters mellanrum, men det beror på nätets styvhet." },
@@ -375,7 +375,7 @@ export const posts: Post[] = [
   {
     slug: "klippt-bockad-armering",
     title: "Klippt och bockad armering – vad är det?",
-    metaTitle: "Klippt & bockad armering | Vad det är & fördelar 2026",
+    metaTitle: "Klippt & bockad armering – fördelar",
     metaDescription:
       "Vad betyder klippt och bockad armering? Guide om färdigkapad och bockad armering – hur det fungerar, fördelarna och när det passar ditt projekt.",
     excerpt:
@@ -481,7 +481,7 @@ export const posts: Post[] = [
       },
 
       { type: "h2", text: "Svetsad eller bunden armeringskorg?" },
-      { type: "p", text: "Korgar kan bindas med najtråd eller punktsvetsas (häftsvetsas). Svetsade korgar blir styva och lätta att lyfta, men svetsning av armering ska utföras enligt SS-EN ISO 17660 och får bara användas där konstruktören tillåter det – svetsen kan påverka stålets egenskaper. Bundna korgar används där svetsning inte är tillåten. Konstruktionsritningen avgör." },
+      { type: "p", text: "Korgar kan bindas med najtråd eller häftsvetsas. Svetsade korgar blir styva och lätta att lyfta, men svetsning av armering ska utföras enligt SS-EN ISO 17660 (del 2 för icke bärande häftsvetsar) och får bara användas där konstruktören tillåter det – svetsen kan påverka stålets egenskaper. Bundna korgar används där svetsning inte är tillåten. Konstruktionsritningen avgör." },
 
       { type: "h2", text: "Beställa färdiga armeringskorgar – det här anger du" },
       { type: "ul", items: [
@@ -513,7 +513,7 @@ export const posts: Post[] = [
       { q: "Vad kostar en armeringskorg?", a: "Priset beror på mängden stål, antal byglar, om korgen svetsas eller binds och hur många korgar som beställs. Skicka ritningen så får du ett fast pris och leveranstid." },
       { q: "Vad är en armeringskorg?", a: "En armeringskorg är färdigmonterad armering för ett bärande element som en pelare, balk eller påle – huvudjärn och byglar sammanfogade till en korg som lyfts på plats och gjuts in." },
       { q: "Vad är pålarmering?", a: "Pålarmering är armeringskorgen som gjuts in i en betongpåle, oftast med längsgående huvudjärn och spiral- eller enkelbyglar. Utförandet dimensioneras efter pålens laster och längd enligt ritning." },
-      { q: "Är armeringskorgar svetsade eller bundna?", a: "Båda förekommer. Svetsade korgar blir styva och lätta att hantera, medan bundna korgar används där föreskriften kräver det. Valet styrs av konstruktionen och gällande normer." },
+      { q: "Är armeringskorgar svetsade eller bundna?", a: "Båda förekommer. Svetsade korgar blir styva och lätta att hantera, medan bundna korgar används där svetsning inte är tillåten. Konstruktören avgör." },
       { q: "Kan ni tillverka korgar efter vår ritning?", a: "Ja, vi bygger korgarna efter er konstruktionsritning med rätt huvudjärn, byglar, bygelavstånd och täckskikt, och märker varje korg med position för montage." },
     ],
   },
@@ -606,7 +606,7 @@ export const posts: Post[] = [
       { type: "h2", text: "Vilken armering till garageplatta?" },
       { type: "p", text: "En garageplatta armeras oftast med svetsat armeringsnät som huvudarmering, kompletterat med lösa kamjärn i kanterna och under bärande väggar. Nätet ger jämn armering över hela ytan medan kantjärnen förstärker där lasterna är stora." },
       { type: "ul", items: [
-        "Armeringsnät – vanligtvis 6×150 (Ø6 mm) till garage.",
+        "Armeringsnät – vanligtvis 6150 (Ø6, c/c 150) till garage.",
         "Kantjärn (kamstål) – ofta Ø10–12 mm i kantbalkar.",
         "Distanser – lyfter armeringen till rätt höjd med rätt täckskikt.",
         "Extra järn under bärande väggar och vid portöppningen.",
@@ -617,7 +617,7 @@ export const posts: Post[] = [
         caption: "Riktvärden – exakt val ska följa konstruktionsritning.",
         head: ["Del av plattan", "Typisk armering"],
         rows: [
-          ["Ytan / fält", "Armeringsnät 6×150 (Ø6 mm), 150 mm rutor"],
+          ["Ytan / fält", "Armeringsnät 6150 (Ø6, c/c 150)"],
           ["Kanter / kantbalk", "Kamjärn Ø10–12 mm"],
           ["Under bärande vägg", "Extra kamjärn enligt ritning"],
         ],
@@ -627,7 +627,7 @@ export const posts: Post[] = [
       { type: "p", text: "Åtgången av nät motsvarar plattans yta plus cirka 10–15 % för överlapp och spill. En garageplatta på 6 × 6 m (36 m²) kräver alltså ungefär 40–41 m² nät, plus kantjärn efter omkretsen. Räkna snabbt fram din åtgång i vår [armeringskalkylator](/armeringskalkylator)." },
 
       { type: "h2", text: "Täckskikt och placering" },
-      { type: "p", text: "Armeringen ska ligga inne i betongen på distanser, inte mot underlaget, med ett täckskikt på ofta minst 25–35 mm. I ett ouppvärmt eller fuktigt garage är täckskiktet extra viktigt så att stålet inte rostar. Läs mer om [distanser och täckskikt](/blogg/distanser-tackskikt-armering)." },
+      { type: "p", text: "Armeringen ska ligga inne i betongen på distanser, inte mot underlaget, med ett täckskikt på ofta minst 25–35 mm mot cellplast eller form – mot makadam minst 40 mm och direkt mot jord minst 75 mm (Eurokod 2). I ett ouppvärmt eller fuktigt garage är täckskiktet extra viktigt så att stålet inte rostar. Läs mer om [distanser och täckskikt](/blogg/distanser-tackskikt-armering)." },
 
       { type: "h2", text: "Beställ armeringen färdig" },
       { type: "p", text: "Vi tar fram rätt armering till din garageplatta – [svetsad armering och nät](/produkter/svetsad-armering), [kamjärn](/produkter/armeringsjarn) och [bockade kantjärn](/produkter/klippt-och-bockad) – och levererar i hela Sverige. Se även guiden om [armering till betongplatta](/blogg/armering-till-betongplatta). Begär en kostnadsfri offert." },
@@ -635,9 +635,9 @@ export const posts: Post[] = [
     ],
     faqs: [
       { q: "Vilket armeringsnät till garageplatta?", a: "Vanligen nät med Ø6 mm tråd och 150 mm rutor (6150), kompletterat med kantjärn och kantbalksbyglar. Tyngre fordon kan kräva grövre nät eller två lager – ritningen gäller." },
-      { q: "Vilken armering behövs till en garageplatta?", a: "Vanligtvis armeringsnät 6×150 (Ø6 mm) som huvudarmering, kompletterat med kamjärn Ø10–12 mm i kanter och under bärande väggar. Exakt val ska följa konstruktionsritning." },
+      { q: "Vilken armering behövs till en garageplatta?", a: "Vanligtvis armeringsnät 6150 (Ø6, c/c 150) som huvudarmering, kompletterat med kamjärn Ø10–12 mm i kanter och under bärande väggar. Exakt val ska följa konstruktionsritning." },
       { q: "Hur mycket armeringsnät går åt till ett garage?", a: "Räkna med plattans yta plus 10–15 % för överlapp. En garageplatta på 36 m² kräver alltså ungefär 40–41 m² nät, plus kantjärn efter omkretsen." },
-      { q: "Vilket täckskikt ska armeringen ha i ett garage?", a: "Ofta minst 25–35 mm betong runt armeringen. I ett ouppvärmt eller fuktigt garage är täckskiktet extra viktigt så att stålet inte rostar – lägg armeringen på distanser." },
+      { q: "Vilket täckskikt ska armeringen ha i ett garage?", a: "Ofta minst 25–35 mm mot cellplast eller form – mot makadam minst 40 mm och direkt mot jord minst 75 mm (Eurokod 2). I ett ouppvärmt eller fuktigt garage är täckskiktet extra viktigt så att stålet inte rostar – lägg armeringen på distanser." },
       { q: "Behöver en garageplatta kantbalk?", a: "En garageplatta har ofta förstärkta kanter eller en kantbalk med extra kamjärn, särskilt om väggar vilar på plattan. Utförandet ska följa konstruktionsritningen." },
     ],
   },
@@ -693,7 +693,7 @@ export const posts: Post[] = [
       { type: "p", text: "Oavsett om bygget ligger i [Jönköping](/armering/jonkoping), [Norrköping](/armering/norrkoping) eller längre bort räknar vi fram pris och frakt till din ort." },
     ],
     faqs: [
-      { q: "Vad kostar armering per kg?", a: "Priset per kilo följer världsmarknaden för stål och beror på mängd, dimension och förädling (raka järn, bockat eller korgar). Vi lämnar fast pris per projekt – skicka mängd eller bockningslista så får du offert." },
+      { q: "Vad kostar armering per kg?", a: "Priset per kilo påverkas av världsmarknadspriset på stål och beror på mängd, dimension och förädling (raka järn, bockat eller korgar). Vi lämnar fast pris per projekt – skicka mängd eller bockningslista så får du offert." },
       { q: "Vad kostar armering?", a: "Priset beror på mängd, dimensioner, hur mycket kapning och bockning som krävs samt frakt. Stålpriset varierar dessutom över tid. Skicka mått eller bockningslista så får du ett exakt pris i en offert." },
       { q: "Prissätts armering per kilo eller per meter?", a: "Det varierar: kamstål prissätts ofta per ton eller kilo, kantjärn per löpmeter och armeringsnät per kvadratmeter. Prefab-detaljer och korgar prissätts utifrån tillverkningen." },
       { q: "Är prefab armering dyrare?", a: "Prefab kan ha ett högre kilopris men blir ofta billigare totalt, eftersom du sparar arbetstid, minskar spill och får färre fel på bygget. Räkna på helheten, inte bara materialpriset." },
@@ -746,7 +746,7 @@ export const posts: Post[] = [
       { type: "p", text: "Vi skickar färdiga plintkorgar även till norra Sverige – bland annat [Umeå](/armering/umea) och [Sundsvall](/armering/sundsvall)." },
     ],
     faqs: [
-      { q: "Kan man gjuta plintar utan armering?", a: "Små, lätt belastade plintar – till exempel för en altan – gjuts ibland oarmerade om konstruktionen tillåter det. Armering minskar ändå risken för sprickor, och bärande plintar ska alltid armeras enligt ritning." },
+      { q: "Kan man gjuta plintar utan armering?", a: "Små, lätt belastade plintar – till exempel för en altan – gjuts ibland oarmerade om konstruktionen tillåter det. Armering minskar ändå risken för sprickor. Plintar för byggnader och större laster ska armeras enligt ritning." },
       { q: "Hur armeras en plint?", a: "Oftast med en liten armeringskorg – längsgående kamjärn (ofta Ø10–16 mm) som huvudarmering och byglar som håller ihop korgen. Bredare plintsulor kan även armeras med nät. Dimensioner ska följa konstruktionsritning." },
       { q: "Behöver en plint armering?", a: "Bärande plintar armeras normalt för att fördela laster och begränsa sprickor. Utförandet beror på last och markförhållanden och ska dimensioneras enligt ritning." },
       { q: "Vilket täckskikt ska en plint ha?", a: "Eftersom plintar ofta står i fuktig mark är täckskiktet extra viktigt så att armeringen inte rostar. Lägg korgen på distanser så att täckskiktet blir jämnt och tillräckligt stort för markmiljön." },
@@ -788,7 +788,7 @@ export const posts: Post[] = [
       { type: "h2", text: "Vanliga misstag" },
       { type: "ul", items: [
         "Underdimensionerad armering – muren spricker eller lutar med tiden.",
-        "Armeringen på fel sida – huvudarmeringen ska sitta på dragsidan.",
+        "Armeringen på fel sida – huvudarmeringen ska sitta på dragsidan, i en stödmur normalt jordsidan.",
         "För litet täckskikt mot jorden – korrosion.",
         "Glömd förankring mellan sula och vägg.",
       ] },
@@ -798,17 +798,17 @@ export const posts: Post[] = [
       { type: "p", text: "Vi levererar armering till stödmurar och L-stöd i bland annat [Stockholm](/armering/stockholm) och [Göteborg](/armering/goteborg)." },
     ],
     faqs: [
-      { q: "Vilka armeringsjärn används i en stödmur?", a: "Oftast kamstål Ø10–Ø16 i vertikal och horisontell riktning, med startjärn från sulan upp i muren. Dimension och c/c-avstånd står på konstruktionsritningen." },
+      { q: "Vilka armeringsjärn används i en stödmur?", a: "Oftast kamstål Ø10–Ø16 i vertikal och horisontell riktning, med startjärn från sulan upp i muren. Högre murar kan kräva grövre järn. Dimension och c/c-avstånd står på konstruktionsritningen." },
       { q: "Hur armeras en betongstödmur?", a: "Med huvudarmering på murens dragsida, horisontell fördelningsarmering och förankringsjärn mellan bottensula och vägg. Byglar binder ihop det kritiska partiet där sula och mur möts. Utförandet ska dimensioneras av en konstruktör." },
       { q: "Varför måste en stödmur armeras?", a: "En stödmur tar upp jordtryck som vill skjuta och välta muren. Armeringen håller emot dragkrafterna som betongen själv inte klarar. Utan rätt armering kan muren spricka, luta eller välta." },
-      { q: "På vilken sida ska armeringen i en stödmur sitta?", a: "Huvudarmeringen ska sitta på dragsidan – normalt sidan bort från jordtrycket – där betongen annars skulle spricka. Exakt placering framgår av konstruktionsritningen." },
+      { q: "På vilken sida ska armeringen i en stödmur sitta?", a: "Huvudarmeringen ska sitta på dragsidan – i en stödmur normalt jordsidan (baksidan), där jordtrycket ger drag. Exakt placering framgår av konstruktionsritningen." },
       { q: "Kan ni leverera armering till stödmur?", a: "Ja, vi tillverkar klippt och bockad armering, korgar och nät till stödmurar och L-stöd efter ritning och levererar i hela Sverige." },
     ],
   },
   {
     slug: "armeringsnat-eller-armeringsjarn",
     title: "Armeringsnät eller armeringsjärn – vad ska du välja?",
-    metaTitle: "Armeringsnät eller armeringsjärn? | Skillnad & val 2026",
+    metaTitle: "Armeringsnät eller armeringsjärn?",
     metaDescription:
       "Armeringsnät eller lösa armeringsjärn – vad är skillnaden och när använder du vad? Guide som jämför nät och kamjärn till betongplatta, kanter och punktlaster.",
     excerpt:
@@ -863,7 +863,7 @@ export const posts: Post[] = [
   {
     slug: "bockningslista-sa-gor-du",
     title: "Bockningslista – så gör du en, steg för steg",
-    metaTitle: "Bockningslista | Så gör du en steg för steg (+ mall) 2026",
+    metaTitle: "Bockningslista – så gör du (+ mall)",
     metaDescription:
       "Vad är en bockningslista och hur gör du en? Guide om bockningslista för armering – positioner, former, mått och dimensioner – med gratis mall att ladda ner.",
     excerpt:
@@ -923,7 +923,7 @@ export const posts: Post[] = [
   {
     slug: "armering-till-betongtrappa",
     title: "Armering till betongtrappa – så armeras en gjuten trappa",
-    metaTitle: "Armering till betongtrappa | Rätt armering i trappan 2026",
+    metaTitle: "Armering betongtrappa – så armeras den",
     metaDescription:
       "Hur armeras en gjuten betongtrappa? Guide om armering till betongtrappa – huvudarmering, fördelningsjärn, förankring i bjälklag och rätt täckskikt.",
     excerpt:
@@ -971,7 +971,7 @@ export const posts: Post[] = [
   {
     slug: "armering-till-betonggolv",
     title: "Armering till betonggolv och industrigolv",
-    metaTitle: "Armering till betonggolv | Nät & fibrer i industrigolv 2026",
+    metaTitle: "Armering betonggolv – nät & fiber",
     metaDescription:
       "Hur armeras ett betonggolv? Guide om armering till betonggolv, industrigolv och garagegolv – armeringsnät, kamjärn, täckskikt och placering i golvet.",
     excerpt:

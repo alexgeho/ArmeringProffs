@@ -1,5 +1,10 @@
 # План статей (по Keyword Planner, 2026-09-23)
 
+> ✅ **Статус 2026-09-23: всё выполнено и опубликовано.** 6 новых статей (`/blogg/armeringsbyglar`, `bocka-armeringsjarn`,
+> `skarvlangd-armering`, `armeringsstal`, `kantbalksbygel`, `lyftoglor-betong`) + 8 обновлённых. Каждая новая статья прошла
+> 2 проверки: факт-чек по нормам (EC2 8.1N/8.5/8.7/9.x, SS-EN 13670, SS 212540, AFS 2023:11, CEN/TR 15728) и
+> язык/SEO/каннибализация. Все error/should-fix исправлены. Следующий шаг: Request Indexing в GSC для новых URL.
+
 Источник: 8 выгрузок Google Ads Keyword Planner (`~/Downloads/Keyword Stats 2026-09-23 at 21_*.csv`), Швеция,
 период сен 2025 – авг 2026, 162 запроса.
 
