@@ -213,7 +213,8 @@ export function BockningsformerExplorer() {
         </svg>
       </div>
 
-      {/* Din bockningslista */}
+      {/* Din bockningslista – visas först när minst en position lagts till */}
+      {list.length > 0 && (
       <div className="order-4 rounded-xl border border-line bg-white p-4 sm:p-5 lg:col-span-2">
         <div className="flex items-baseline justify-between gap-3">
           <h3 className="text-lg font-bold text-ink">Din bockningslista</h3>
@@ -223,10 +224,7 @@ export function BockningsformerExplorer() {
             </button>
           )}
         </div>
-        {list.length === 0 ? (
-          <p className="mt-2 text-sm text-muted">Välj form, ange mått, Ø och antal – och lägg till positionerna här.</p>
-        ) : (
-          <div className="mt-3 grid gap-6 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)]">
+        <div className="mt-3 grid gap-6 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)]">
             <div className="min-w-0 overflow-x-auto">
               <table className="w-full text-left text-sm tabular-nums">
                 <thead className="text-xs text-muted">
@@ -283,8 +281,8 @@ export function BockningsformerExplorer() {
               <ContactForm compact source="bockningslista-verktyg" defaultMessage={spec} />
             </div>
           </div>
-        )}
       </div>
+      )}
     </div>
   );
 }
