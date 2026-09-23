@@ -21,9 +21,7 @@ export function Footer() {
     <footer className="border-t border-line bg-ink text-slate-300">
       <div className="mx-auto grid w-full max-w-6xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-4">
         <div>
-          <div className="inline-block rounded-xl bg-white p-3">
-            <Image src="/images/logo-agry.png" alt={`${site.brand} – AGRY OÜ`} width={434} height={401} className="h-auto w-40" />
-          </div>
+          <Image src="/images/logo-agry-dark.png" alt={`${site.brand} – AGRY OÜ`} width={520} height={480} className="h-auto w-40" />
           <p className="mt-4 text-sm leading-relaxed text-slate-400">
             Prefabricerad armering – klippt & bockad, armeringskorgar, svetsad armering och nät. Tillverkning, leverans och montage i {site.regionInflected}.
           </p>

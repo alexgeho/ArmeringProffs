@@ -1,3 +1,5 @@
+import { readFileSync } from "node:fs";
+import { join } from "node:path";
 import { ImageResponse } from "next/og";
 import { site } from "@/config/site";
 
@@ -7,6 +9,9 @@ export const dynamic = "force-static";
 export const alt = `${site.company} – ${site.service} i ${site.regionInflected}`;
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
+
+// Emblemet i ljus variant (för mörk bakgrund), inbäddat vid build.
+const emblem = `data:image/png;base64,${readFileSync(join(process.cwd(), "public/images/logo-emblem-dark.png")).toString("base64")}`;
 
 export default function OpengraphImage() {
   return new ImageResponse(
@@ -24,22 +29,8 @@ export default function OpengraphImage() {
         }}
       >
         <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>
-          <div
-            style={{
-              width: "72px",
-              height: "72px",
-              borderRadius: "14px",
-              background: "#ea580c",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              color: "white",
-              fontSize: "44px",
-              fontWeight: 700,
-            }}
-          >
-            A
-          </div>
+          {/* eslint-disable-next-line @next/next/no-img-element -- ImageResponse kräver <img> */}
+          <img src={emblem} width={96} height={96} alt="" />
           <div style={{ color: "white", fontSize: "38px", fontWeight: 700 }}>{site.company}</div>
         </div>
 
