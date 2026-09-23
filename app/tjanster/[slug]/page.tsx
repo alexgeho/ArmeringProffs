@@ -87,14 +87,14 @@ export default async function ServicePage({
         /* Verktygssida: ljust huvud + interaktivt verktyg i stället för mörk hero med formulär */
         <section className="border-b border-line bg-surface">
           <Container className="py-10">
-            <h1 className="max-w-3xl text-3xl font-bold tracking-tight text-ink sm:text-4xl">{s.h1}</h1>
-            <div className="mt-6 rounded-2xl border border-line bg-white p-4 shadow-sm sm:p-6">
+            <div className="rounded-2xl border border-line bg-white p-4 shadow-sm sm:p-6">
               <h2 className="text-xl font-bold text-ink">{tool.title}</h2>
               <p className="mt-1 mb-6 max-w-3xl text-sm text-muted">{tool.text}</p>
               <AnimatedScene>{tool.node}</AnimatedScene>
             </div>
-            {/* Ingress (SEO) under verktyget */}
-            <p className="mt-10 max-w-3xl text-lg leading-relaxed text-ink-soft">{s.intro}</p>
+            {/* Rubrik + ingress (SEO) under verktyget */}
+            <h1 className="mt-12 max-w-3xl text-3xl font-bold tracking-tight text-ink sm:text-4xl">{s.h1}</h1>
+            <p className="mt-4 max-w-3xl text-lg leading-relaxed text-ink-soft">{s.intro}</p>
             <div className="mt-6 flex flex-wrap items-center gap-4">
               <Link href="/offert" className="inline-flex h-12 items-center rounded-lg bg-brand px-6 font-semibold text-white hover:bg-brand-dark">
                 Har du redan en lista? Skicka den – begär offert
