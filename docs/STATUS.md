@@ -13,6 +13,13 @@
 > 3. **Усилить `/blogg/bockningslista-sa-gor-du/`** — GSC сам подсветил её как страницу со всплеском
 >    показов. Единственный живой трафик-сигнал на сайте (всего 19 кликов). Контент + перелинковка.
 >
+> **🆕 2026-09-23 — анимированные «стальные» сцены на услугах (ТЗ `docs/tz-animationer-tjanster.md`):**
+> ресёрч (NN/g и др.): картинка должна ОБЪЯСНЯТЬ, анимация — 1 раз при скролле, без scrolljacking/циклов;
+> Recraft — только эскиз композиции, финал — ручной SVG. Сделана сцена A «bockningslista → bygel» на
+> `/tjanster/bockningslista` (`components/steel-scenes.tsx` + `components/AnimatedScene.tsx`, CSS в `globals.css`,
+> десктоп + отдельная мобильная раскладка). Дальше по плану: D (montage/плита), C (маршрут Эстония→паром→Швеция, УТП срок),
+> возможно галерея стандартных форм byglar (как у armeringdirekt, но статично). Эскизы Recraft — у владельца на Desktop.
+>
 > **⚠️ Öppna frågor / väntar på [OWNER]:**
 > - **Проверить, что лид-мейл реально доходит** (`/offert` с вложением → `offert@armeringproffs.se`). P0, висит с 08.09.
 > - **GA4:** пометить `generate_lead` как conversion (только через UI GA4).

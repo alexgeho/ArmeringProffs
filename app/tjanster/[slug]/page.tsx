@@ -9,6 +9,8 @@ import { Breadcrumbs, CtaBanner, Process, CityLinks } from "@/components/section
 import { ContactForm } from "@/components/ContactForm";
 import { FaqAccordion } from "@/components/FaqAccordion";
 import { IconCheck, IconArrow, IconPhone } from "@/components/icons";
+import { AnimatedScene } from "@/components/AnimatedScene";
+import { BockningslistaScene } from "@/components/steel-scenes";
 import { JsonLd, serviceSchema, faqSchema, breadcrumbSchema } from "@/lib/jsonld";
 
 export function generateStaticParams() {
@@ -52,6 +54,14 @@ function relatedGuides(keywords: string[], n = 3) {
     .map((r) => r.post);
 }
 
+/** Animerad förklarande scen per tjänst (valfri). */
+const scenes: Record<string, { svg: React.ReactNode; caption: string }> = {
+  bockningslista: {
+    svg: <BockningslistaScene className="h-auto w-full" />,
+    caption: "Från rad i bockningslistan till färdig bygel – kapad och bockad efter dina mått.",
+  },
+};
+
 export default async function ServicePage({
   params,
 }: {
@@ -64,6 +74,7 @@ export default async function ServicePage({
   const url = `${site.url}/tjanster/${s.slug}`;
   const others = services.filter((x) => x.slug !== s.slug);
   const guides = relatedGuides(s.keywords, 3);
+  const scene = scenes[s.slug];
 
   return (
     <>
@@ -103,6 +114,12 @@ export default async function ServicePage({
       <Section>
         <div className="grid gap-12 lg:grid-cols-[1.4fr_0.6fr]">
           <div className="prose-body max-w-none">
+            {scene && (
+              <figure className="mb-10 rounded-2xl border border-line bg-surface p-4 sm:p-6">
+                <AnimatedScene>{scene.svg}</AnimatedScene>
+                <figcaption className="mt-3 text-sm text-muted">{scene.caption}</figcaption>
+              </figure>
+            )}
             {s.body.map((b) => (
               <div key={b.heading} className="mb-8">
                 <h2 className="text-2xl font-bold text-ink">{b.heading}</h2>
