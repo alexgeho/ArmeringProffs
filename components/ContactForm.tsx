@@ -51,7 +51,7 @@ export function ContactForm({
   }
 
   return (
-    <form onSubmit={onSubmit} className="grid gap-4">
+    <form onSubmit={onSubmit} className="grid min-w-0 grid-cols-1 gap-4">
       {/* Honeypot mot spam-bots: dolt fält som människor inte ser. Fylls det i
           slänger sendmail.php förfrågan. aria-hidden + tabindex -1 + autocomplete off. */}
       <div aria-hidden="true" className="absolute left-[-9999px] h-0 w-0 overflow-hidden" style={{ position: "absolute" }}>
@@ -60,34 +60,34 @@ export function ContactForm({
       </div>
 
       {/* Namn – alltid full bredd, valfritt */}
-      <Field name="name" label="Namn / företag" placeholder="Namn eller företag" />
+      <Field name="name" label="Namn / företag" placeholder="Anna Svensson, Bygg AB" />
 
       {compact ? (
         /* Ett kombinerat kontaktfält – telefon eller e-post */
         <Field
           name="contact"
-          label="Telefon / E-post"
-          placeholder="07x-xxx xx xx eller namn@exempel.se"
+          label="Telefon eller e-post"
+          placeholder="070-123 45 67"
           required
         />
       ) : (
         /* Full form: telefon + e-post var för sig */
         <div className="grid gap-4 sm:grid-cols-2">
-          <Field name="phone" label="Telefon" type="tel" placeholder="07x-xxx xx xx" required />
-          <Field name="email" label="E-post" type="email" placeholder="namn@exempel.se" required />
+          <Field name="phone" label="Telefon" type="tel" placeholder="070-123 45 67" required />
+          <Field name="email" label="E-post" type="email" placeholder="anna@byggab.se" required />
         </div>
       )}
 
       {/* Extra fält bara i den fulla formen (offert/kontakt) */}
       {!compact && (
         <div className="grid gap-4 sm:grid-cols-2">
-          <Field name="location" label="Leveransort" placeholder="T.ex. Göteborg" />
-          <Field name="quantity" label="Mängd / dimension" placeholder="T.ex. 2 ton, Ø12 kamstål" />
+          <Field name="location" label="Leveransort" placeholder="Göteborg" />
+          <Field name="quantity" label="Mängd / dimension" placeholder="Ø12 kamstål, ca 2 ton" />
         </div>
       )}
 
       {/* Meddelande – både i hero och full form */}
-      <div className="grid gap-1.5">
+      <div className="grid min-w-0 gap-1.5">
         <label htmlFor="message" className="text-sm font-medium text-ink">
           Beskriv ditt projekt
         </label>
@@ -98,13 +98,13 @@ export function ContactForm({
           // key gör att fältet uppdateras när en ny beräkning skickas in från kalkylatorn.
           key={defaultMessage}
           defaultValue={defaultMessage}
-          placeholder="T.ex. armering till betongplatta 8 × 10 m – räkna gärna på ritningen jag bifogar."
-          className="rounded-lg border border-line bg-white px-4 py-3 text-ink placeholder:text-muted focus:border-brand focus:outline-none"
+          placeholder="Platta på mark 8 × 10 m, nät 6150 + kantjärn Ø12. Leverans vecka 42."
+          className="w-full min-w-0 rounded-lg border border-line bg-white px-4 py-3 text-ink placeholder:text-muted focus:border-brand focus:outline-none"
         />
       </div>
 
       {/* Bifoga ritning/bockningslista – både i hero och full form */}
-      <div className="grid gap-1.5">
+      <div className="grid min-w-0 gap-1.5">
         <label htmlFor="drawing" className="text-sm font-medium text-ink">
           Ritning / bockningslista <span className="font-normal text-muted">(valfritt)</span>
         </label>
@@ -113,14 +113,14 @@ export function ContactForm({
           name="drawing"
           type="file"
           accept=".pdf,.dwg,.dxf,.xls,.xlsx,.csv,.doc,.docx,.png,.jpg,.jpeg,.zip"
-          className="rounded-lg border border-line bg-white px-4 py-2.5 text-sm text-ink-soft file:mr-3 file:rounded-md file:border-0 file:bg-brand-light file:px-3 file:py-1.5 file:text-sm file:font-semibold file:text-brand hover:file:bg-orange-100 focus:border-brand focus:outline-none"
+          className="w-full min-w-0 max-w-full rounded-lg border border-line bg-white px-4 py-2.5 text-sm text-ink-soft file:mr-3 file:rounded-md file:border-0 file:bg-brand-light file:px-3 file:py-1.5 file:text-sm file:font-semibold file:text-brand hover:file:bg-orange-100 focus:border-brand focus:outline-none"
         />
         <p className="text-xs text-muted">PDF, DWG/DXF, Excel, bild eller zip. Max ca 10 MB.</p>
       </div>
 
       <label className="flex items-start gap-2 text-sm text-ink-soft">
         <input type="checkbox" name="consent" required className="mt-1 h-4 w-4 accent-[var(--color-brand)]" />
-        <span>
+        <span className="min-w-0">
           Jag godkänner att mina uppgifter behandlas enligt{" "}
           <a href="/integritetspolicy/" className="text-brand underline">integritetspolicyn</a>.
         </span>
@@ -157,7 +157,7 @@ function Field({
   required?: boolean;
 }) {
   return (
-    <div className="grid gap-1.5">
+    <div className="grid min-w-0 gap-1.5">
       <label htmlFor={name} className="text-sm font-medium text-ink">
         {label} {required && <span className="text-brand">*</span>}
       </label>
@@ -167,7 +167,7 @@ function Field({
         type={type}
         required={required}
         placeholder={placeholder}
-        className="h-12 rounded-lg border border-line bg-white px-4 text-ink placeholder:text-muted focus:border-brand focus:outline-none"
+        className="h-12 w-full min-w-0 rounded-lg border border-line bg-white px-4 text-ink placeholder:text-muted focus:border-brand focus:outline-none"
       />
     </div>
   );

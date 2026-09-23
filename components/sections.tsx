@@ -50,9 +50,20 @@ export function Hero({
         <RebarMeshPattern className="pointer-events-none absolute inset-0 h-full w-full text-white opacity-[0.07]" />
       )}
       <Container className="relative grid grid-cols-1 gap-10 py-16 sm:py-20 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
-        <div className="text-white">
-          <h1 className="text-4xl font-bold leading-tight tracking-tight drop-shadow-[0_2px_12px_rgba(0,0,0,0.55)] sm:text-5xl">{title}</h1>
+        <div className="min-w-0 text-white">
+          <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-sm font-medium text-orange-200">
+            <IconStar className="h-4 w-4 shrink-0 text-brand" /> Kamstål B500B enligt svensk standard
+          </span>
+          <h1 className="mt-5 text-4xl font-bold leading-tight tracking-tight drop-shadow-[0_2px_12px_rgba(0,0,0,0.55)] sm:text-5xl">{title}</h1>
           <p className="mt-5 max-w-xl text-lg leading-relaxed text-slate-100 drop-shadow-[0_1px_8px_rgba(0,0,0,0.5)]">{intro}</p>
+
+          <ul className="mt-7 grid gap-3 sm:grid-cols-2">
+            {["Märkt och sorterat per position", "Alla typformer A–XX", "Ritning, bockningslista eller bara mått", "Kostnadsfri offert"].map((t) => (
+              <li key={t} className="flex items-center gap-2 text-slate-50 drop-shadow-[0_1px_6px_rgba(0,0,0,0.5)]">
+                <IconCheck className="h-5 w-5 shrink-0 text-brand" /> {t}
+              </li>
+            ))}
+          </ul>
 
           <div className="mt-8 flex flex-wrap items-center gap-4">
             {/* På mobil ligger formuläret direkt under – då är denna knapp överflödig.
@@ -66,7 +77,7 @@ export function Hero({
           </div>
         </div>
 
-        <div className="rounded-2xl bg-white p-6 shadow-xl sm:p-8">
+        <div className="min-w-0 rounded-2xl bg-white p-6 shadow-xl sm:p-8">
           <h2 className="text-xl font-bold text-ink">Få en offert på din armering</h2>
           <p className="mt-1 text-sm text-ink-soft">Fyll i formuläret så återkommer vi snabbt.</p>
           <div className="mt-5">
