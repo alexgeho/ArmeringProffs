@@ -43,7 +43,17 @@ export default function ProdukterPage() {
         </figure>
         <div className="mt-10 grid gap-6 lg:grid-cols-2">
           {products.map((p) => (
-            <div key={p.slug} className="flex flex-col rounded-xl border border-line p-6 sm:p-8">
+            <div key={p.slug} className="flex flex-col overflow-hidden rounded-xl border border-line p-6 sm:p-8">
+              <div className="-mx-6 -mt-6 mb-6 aspect-[16/9] overflow-hidden border-b border-line bg-slate-100 sm:-mx-8 sm:-mt-8">
+                <Image
+                  src={`/images/illustrationer/${p.slug}.webp`}
+                  alt={`${p.name} – illustration`}
+                  width={1280}
+                  height={720}
+                  sizes="(min-width: 1024px) 560px, 100vw"
+                  className="h-full w-full object-cover"
+                />
+              </div>
               <h2 className="text-xl font-bold text-ink">
                 <Link href={`/produkter/${p.slug}`} className="hover:text-brand">{p.name}</Link>
               </h2>

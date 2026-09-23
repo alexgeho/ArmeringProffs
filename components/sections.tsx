@@ -10,7 +10,7 @@ import { Button, Container, Section, SectionHeading } from "./ui";
 import { ContactForm } from "./ContactForm";
 import {
   IconPhone, IconCheck, IconShield, IconStar,
-  IconTruck, IconTools, IconLayers, IconRuler, IconArrow, IconChevron,
+  IconTruck, IconTools, IconRuler, IconArrow, IconChevron,
 } from "./icons";
 import { RebarMeshPattern } from "./illustrations";
 
@@ -118,7 +118,6 @@ export function UspBar() {
 }
 
 /* ---------- Products grid ---------- */
-const productIcons = [IconRuler, IconLayers, IconTools, IconShield, IconCheck];
 
 export function ProductsGrid() {
   return (
@@ -129,18 +128,24 @@ export function ProductsGrid() {
         intro="Klippt & bockad armering, armeringskorgar, svetsad armering och nät, kamstål och distanser – tillverkat efter din ritning och levererat i hela Sverige."
       />
       <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {products.map((p, i) => {
-          const Icon = productIcons[i % productIcons.length];
+        {products.map((p) => {
           return (
             <Link
               key={p.slug}
               href={`/produkter/${p.slug}`}
-              className="group flex flex-col rounded-xl border border-line bg-white p-6 transition-all hover:border-brand hover:shadow-md"
+              className="group flex flex-col overflow-hidden rounded-xl border border-line bg-white p-6 transition-all hover:border-brand hover:shadow-md"
             >
-              <span className="flex h-12 w-12 items-center justify-center rounded-lg bg-brand-light text-brand">
-                <Icon className="h-6 w-6" />
-              </span>
-              <h3 className="mt-4 text-lg font-semibold text-ink">{p.name}</h3>
+              <div className="-mx-6 -mt-6 mb-5 aspect-[16/9] overflow-hidden border-b border-line bg-slate-100">
+                <Image
+                  src={`/images/illustrationer/${p.slug}.webp`}
+                  alt={`${p.name} – illustration`}
+                  width={1280}
+                  height={720}
+                  sizes="(min-width: 1024px) 560px, 100vw"
+                  className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.03]"
+                />
+              </div>
+              <h3 className="text-lg font-semibold text-ink">{p.name}</h3>
               <p className="mt-2 flex-1 text-sm leading-relaxed text-ink-soft">{p.intro}</p>
               <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-brand">
                 Läs mer <IconArrow className="h-4 w-4 transition-transform group-hover:translate-x-1" />
