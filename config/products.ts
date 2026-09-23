@@ -115,6 +115,8 @@ export const products: Product[] = [
     includes: [
       "Balk-, pelar- och pålkorgar efter ritning",
       "Svetsade eller bundna korgar",
+      "Punktsvetsade korgar för balkar och pelare",
+      "Montering av pelarskor och konsoler",
       "Byglar och huvudjärn i B500B",
       "Plint- och brunnsarmering",
       "Tillverkning mot konstruktionsritning",
@@ -290,6 +292,174 @@ export const products: Product[] = [
     faqs: [
       { q: "Varför behövs distanser?", a: "Distanser håller armeringen på rätt höjd så att betongens täckskikt blir korrekt, vilket skyddar armeringen mot korrosion och säkrar konstruktionens hållbarhet." },
       { q: "Vilken distanshöjd ska jag välja?", a: "Distanshöjden styrs av det täckskikt som konstruktionsritningen anger. Hör av dig med dina uppgifter så hjälper vi dig att välja rätt distanser." },
+    ],
+  },
+  {
+    slug: "byglar-och-hakar",
+    name: "Byglar & hakar",
+    h1: "Byglar och hakar – U-byglar, trappbyglar och slutna byglar i serie",
+    metaTitle: "Byglar & hakar | U-byglar, trappbyglar, slutna byglar – hela Sverige",
+    metaDescription:
+      "Armeringsbyglar och hakar i serie: U-byglar, trappbyglar, slutna och fyrkantiga byglar i B500B Ø6–Ø12. Tillverkade efter dina mått, levererade på pall i hela Sverige. Begär offert.",
+    intro:
+      "Vi tillverkar byglar och hakar i stora serier – U-byglar, trappbyglar, slutna och fyrkantiga byglar i B500B. Bockade från rulle i automatiska maskiner, med jämna mått och leverans på pall till bygget eller elementfabriken.",
+    keywords: [
+      "armeringsbyglar",
+      "byglar armering",
+      "u-bygel",
+      "sluten bygel",
+      "trappbygel",
+      "armeringshake",
+      "kantbalksbygel",
+      "bygel b500b",
+    ],
+    includes: [
+      "U-byglar, trappbyglar och hakar",
+      "Slutna och fyrkantiga byglar med 135°-krokar",
+      "B500B, Ø6–Ø12 mm bockat från rulle",
+      "Serietillverkning med jämna mått",
+      "Buntat och levererat på pall",
+      "Leverans i hela Sverige",
+    ],
+    body: [
+      {
+        heading: "Byglar i serie – samma mått varje gång",
+        text: "Byglar och hakar går åt i stora mängder i balkar, pelare, kantbalkar och prefabelement. Vi bockar dem från rulle i automatiska bockmaskiner, vilket ger samma mått på varje bygel och korta ledtider även för tusentals stycken. Du anger typform och mått enligt bockningslistan – vi tillverkar, buntar och märker.",
+      },
+      {
+        heading: "Vilka former tillverkar vi?",
+        text: "Vanligast är U-byglar, slutna byglar (typform N) med 135°-krokar, kantbalksbyglar, trappbyglar och enkla hakar. Även specialformer enligt ritning. Se alla standardformer med bokstavskod i vår översikt över typformer – och ange koden och måtten när du begär offert.",
+      },
+      {
+        heading: "Leverans på pall",
+        text: "Byglarna buntas per position och levereras på pall, redo att lyftas in på bygget eller i elementfabriken. Vi levererar i hela Sverige och samordnar gärna leveransen med övrig armering, korgar och nät.",
+      },
+    ],
+    faqs: [
+      { q: "Vilka dimensioner kan byglar tillverkas i?", a: "Byglar och hakar bockas normalt i B500B Ø6–Ø12 mm från rulle. Grövre byglar tillverkar vi av raka stänger. Ange dimension och mått per position i din bockningslista." },
+      { q: "Hur många byglar måste jag beställa?", a: "Vi tillverkar både mindre partier och stora serier. Ju större serie, desto bättre pris per styck – begär offert så får du pris och leveranstid." },
+      { q: "Hur anger jag formen?", a: "Enklast med typformens bokstavskod (t.ex. N för sluten bygel, C för U-järn) och måtten a, b, c … Se vår översikt över typformer för bockning." },
+    ],
+  },
+  {
+    slug: "lyftoglor",
+    name: "Lyftöglor & lyftkrokar",
+    h1: "Lyftöglor och lyftkrokar för betongelement",
+    metaTitle: "Lyftöglor & lyftkrokar | Lyftbyglar för betongelement – hela Sverige",
+    metaDescription:
+      "Lyftöglor och lyftkrokar av rundstål för prefabricerade betongelement, bockade efter din ritning. Tillverkning och leverans i hela Sverige. Begär offert.",
+    intro:
+      "Vi bockar lyftöglor och lyftkrokar av rundstål för betongelement, trappor, balkar och andra prefabdelar – efter konstruktörens ritning och i den serie du behöver.",
+    keywords: [
+      "lyftöglor",
+      "lyftögla betong",
+      "lyftkrok",
+      "lyftbygel",
+      "lyftöglor betongelement",
+      "ingjutningsögla",
+    ],
+    includes: [
+      "Lyftöglor och lyftkrokar av rundstål",
+      "Bockade efter konstruktörens ritning",
+      "För betongelement, trappor och balkar",
+      "Små och stora serier",
+      "Märkt och sorterat per position",
+      "Leverans i hela Sverige",
+    ],
+    body: [
+      {
+        heading: "Lyftöglor efter ritning",
+        text: "Lyftöglor gjuts in i betongelement för att elementet ska kunna lyftas säkert vid tillverkning, transport och montage. Form, dimension och förankringslängd bestäms av konstruktören utifrån elementets vikt och lyftsätt. Vi bockar öglorna exakt efter ritningen i den mängd du behöver.",
+      },
+      {
+        heading: "För elementfabriker och byggen",
+        text: "Vi levererar lyftöglor till elementfabriker, betongstationer och byggen som gjuter egna element på plats. Beställ gärna tillsammans med övrig armering till elementen så kommer allt i samma leverans.",
+      },
+    ],
+    faqs: [
+      { q: "Vem bestämmer lyftöglans dimension?", a: "Dimension, form och förankring bestäms alltid av konstruktören utifrån elementets vikt och hur det ska lyftas. Vi tillverkar exakt efter ritningen." },
+      { q: "Vilket material används?", a: "Lyftöglor bockas normalt av slätt rundstål enligt konstruktörens specifikation. Ange materialkrav i förfrågan så återkommer vi med offert." },
+    ],
+  },
+  {
+    slug: "armering-i-ringar",
+    name: "Armering i ringar",
+    h1: "Armering i ringar – kamstål B500B på rulle",
+    metaTitle: "Armering i ringar | Kamstål B500B på rulle Ø8–Ø16 – hela Sverige",
+    metaDescription:
+      "Kamstål B500B i ringar (på rulle) Ø8–Ø16 mm för bockmaskiner och egen tillverkning. Leverans i hela Sverige. Begär offert på armering i ringar.",
+    intro:
+      "Vi levererar kamstål B500B i ringar – armering på rulle för dig som bockar själv i egen maskin, till exempel elementfabriker och armeringsverkstäder.",
+    keywords: [
+      "armering i ringar",
+      "kamstål ringar",
+      "armering på rulle",
+      "rullarmering",
+      "b500b ringar",
+      "kamstål rulle",
+    ],
+    includes: [
+      "Kamstål B500B i ringar",
+      "Dimensioner Ø8–Ø16 mm",
+      "För automatiska bock- och rätningsmaskiner",
+      "Leverans per ring eller i större partier",
+      "Kan kombineras med raka stänger och prefab",
+      "Leverans i hela Sverige",
+    ],
+    body: [
+      {
+        heading: "Kamstål på rulle för egen tillverkning",
+        text: "Armering i ringar används i automatiska rätnings- och bockmaskiner. Materialet rätas och kapas i maskinen, vilket ger minimalt spill och gör det effektivt att tillverka byglar och korta järn i stora serier. Passar elementfabriker, armeringsverkstäder och större byggen med egen bockning.",
+      },
+      {
+        heading: "Ringar, raka stänger eller färdigt bockat",
+        text: "Vill du hellre slippa bocka själv tillverkar vi byglarna och järnen åt dig. Du kan också kombinera: ringar till egen produktion och färdigt klippt och bockat för resten – i samma leverans.",
+      },
+    ],
+    faqs: [
+      { q: "Vilka dimensioner finns i ringar?", a: "Kamstål B500B i ringar levereras normalt i Ø8–Ø16 mm. Hör av dig med dimension och mängd så får du pris och leveranstid." },
+      { q: "Vad väger en ring?", a: "Ringvikten varierar med dimension och tillverkare, vanligen ett par ton per ring. Ange vilken ringvikt din maskin hanterar i förfrågan." },
+    ],
+  },
+  {
+    slug: "3d-bockning",
+    name: "3D- & bågbockning",
+    h1: "3D-bockning och bågbockning av armering",
+    metaTitle: "3D-bockning & bågbockning av armering | Specialformer – hela Sverige",
+    metaDescription:
+      "Rumsbockade 3D-former och bågformad armering, t.ex. till runda fundament och vindkraftsfundament. Bockat efter ritning i B500B, levererat i hela Sverige. Begär offert.",
+    intro:
+      "Vi bockar armering i tre dimensioner och i bågar – rumsbockade specialformer och bågformade järn till runda konstruktioner som brunnar, tankar, cirkulära fundament och vindkraftsfundament.",
+    keywords: [
+      "3d bockning armering",
+      "rumsbockad armering",
+      "bågbockning armering",
+      "bågformad armering",
+      "armering vindkraftsfundament",
+      "armering runt fundament",
+      "specialbockning armering",
+    ],
+    includes: [
+      "Rumsbockade 3D-former (t.ex. typform SX, X, XX)",
+      "Bågformade järn med valfri radie",
+      "Armering till runda fundament och brunnar",
+      "Armering till vindkraftsfundament",
+      "Tillverkning efter ritning, B500B",
+      "Leverans i hela Sverige",
+    ],
+    body: [
+      {
+        heading: "Former som inte ligger i ett plan",
+        text: "Vissa konstruktioner kräver järn som är bockade i flera plan – rumsbockade former där benen pekar åt olika håll. Vi tillverkar dem exakt efter ritningen så att de passar direkt i formen, utan justering på bygget.",
+      },
+      {
+        heading: "Bågar till runda konstruktioner",
+        text: "Till brunnar, tankar, runda plintar och cirkulära fundament bockar vi järn i bågar med den radie konstruktionen kräver. Vid stora radier, som i vindkraftsfundament, levereras bågarna märkta per position så att monteringen går snabbt.",
+      },
+    ],
+    faqs: [
+      { q: "Hur anger jag en bågformad eller 3D-bockad form?", a: "Ange typform (t.ex. Q för bågformad stång, SX/X/XX för rumsbockade) med mått, eller bifoga ritningen. Specialformer tillverkar vi direkt efter ritning." },
+      { q: "Tillverkar ni armering till vindkraftsfundament?", a: "Ja, vi bockar bågformade järn och specialformer till runda fundament, inklusive vindkraftsfundament. Skicka ritning och bockningslista så återkommer vi med offert." },
     ],
   },
 ];
