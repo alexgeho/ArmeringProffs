@@ -65,15 +65,9 @@ export function Hero({
             ))}
           </ul>
 
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-4 lg:justify-start">
-            {/* På mobil ligger formuläret direkt under – då är denna knapp överflödig.
-                Visas därför bara från sm och uppåt (där formuläret står bredvid). */}
-            <span className="hidden sm:inline-flex">
-              <Button href="/offert">Begär offert <IconArrow className="h-4 w-4" /></Button>
-            </span>
-            <a href={site.phoneHref} className="inline-flex h-12 items-center gap-2 rounded-lg border border-white/20 px-5 font-semibold text-white hover:bg-white/10">
-              <IconPhone className="h-4 w-4 text-brand" /> {site.phone}
-            </a>
+          {/* På mobil ligger formuläret direkt under – då är knappen överflödig. */}
+          <div className="mt-8 hidden justify-center sm:flex lg:justify-start">
+            <Button href="/offert">Begär offert <IconArrow className="h-4 w-4" /></Button>
           </div>
         </div>
 
