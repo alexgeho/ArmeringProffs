@@ -89,7 +89,17 @@ export default async function ServicePage({
           <Container className="py-10">
             <div>
               <h2 className="text-2xl font-bold text-ink">{tool.title}</h2>
-              <p className="mt-1 mb-6 max-w-3xl text-sm text-muted">{tool.text}</p>
+              <p className="mt-1 max-w-3xl text-sm text-muted">{tool.text}</p>
+              <a
+                href="/downloads/typformer-bockning-armeringsproffs.pdf"
+                download
+                className="mt-2 mb-6 inline-flex items-center gap-1.5 text-sm font-semibold text-brand hover:underline"
+              >
+                <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.8" className="h-4 w-4" aria-hidden="true">
+                  <path d="M10 3v10m0 0l-4-4m4 4l4-4M4 16h12" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+                Ladda ner alla typformer som PDF (A4, 3 sidor)
+              </a>
               <AnimatedScene>{tool.node}</AnimatedScene>
             </div>
             {/* Rubrik + ingress (SEO) under verktyget */}

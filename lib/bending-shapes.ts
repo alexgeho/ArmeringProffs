@@ -402,7 +402,7 @@ function roundedPath(pts: [number, number][], r = 7): string {
   return `${d} L ${f(last[0])} ${f(last[1])}`;
 }
 
-export type DimLine = { line: string; ext: string; lx: number; ly: number; angle: number; label: string };
+export type DimLine = { line: string; ext: string; lx: number; ly: number; angle: number; label: string; key: string };
 
 export function layoutShape(def: ShapeDef, box = { x: 40, y: 40, w: 300, h: 220 }, params = def.params) {
   if (!def.build) return null;
@@ -447,6 +447,7 @@ export function layoutShape(def: ShapeDef, box = { x: 40, y: 40, w: 300, h: 220 
       ly: (a2[1] + b2[1]) / 2 + py * 10,
       angle,
       label: `${k} = ${v}`,
+      key: k,
     };
   });
 

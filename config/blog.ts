@@ -869,6 +869,7 @@ export const posts: Post[] = [
     excerpt:
       "En bockningslista är receptet för din armering: varje position med form, mått, dimension och antal. Så gör du en – och så slipper du om vi tar fram den åt dig.",
     date: "2026-09-08",
+    updated: "2026-09-23",
     readingMinutes: 5,
     keywords: [
       "bockningslista",
@@ -893,6 +894,7 @@ export const posts: Post[] = [
       ] },
 
       { type: "figure", illustration: "bending-shapes", caption: "Vanliga bockningsformer – raka längder, byglar, U- och L-former." },
+      { type: "p", text: "Alla standardformer med bokstavskod och måttbeteckningar finns som utskrivbart blad: [ladda ner typformer för bockning (PDF)](/downloads/typformer-bockning-armeringsproffs.pdf). Vill du prova formerna med egna mått och skicka listan direkt, använd [verktyget för typformer](/tjanster/bockningslista)." },
 
       { type: "h2", text: "Steg för steg" },
       { type: "ol", items: [
