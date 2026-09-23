@@ -23,7 +23,7 @@ export function Footer() {
         <div>
           <Image src="/images/logo-agry-dark.png" alt={`${site.brand} – AGRY OÜ`} width={520} height={480} className="h-auto w-40" />
           <p className="mt-4 text-sm leading-relaxed text-slate-400">
-            Prefabricerad armering – klippt & bockad, armeringskorgar, svetsad armering och nät. Tillverkning, leverans och montage i {site.regionInflected}.
+            Tillverkning, leverans och montage i {site.regionInflected}.
           </p>
         </div>
 

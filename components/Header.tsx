@@ -22,9 +22,9 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-line bg-white/90 backdrop-blur">
-      <div className="mx-auto flex h-16 w-full max-w-6xl items-center justify-between px-4 sm:px-6">
+      <div className="mx-auto flex h-[76px] w-full max-w-6xl items-center justify-between px-4 sm:px-6">
         <Link href="/" aria-label={site.brand} className="flex items-center font-bold text-ink" onClick={() => setOpen(false)}>
-          <Image src="/images/logo-emblem.png" alt={site.brand} width={56} height={56} className="h-14 w-14 shrink-0" priority />
+          <Image src="/images/logo-agry-light.png" alt={`${site.brand} – AGRY OÜ`} width={260} height={240} className="h-[68px] w-auto shrink-0" priority />
         </Link>
 
         <nav className="hidden items-center gap-7 md:flex">
