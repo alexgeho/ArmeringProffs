@@ -31,8 +31,9 @@
 > 🔜 Шаг 2 (обсудить): посетитель вводит свои позиции (код + мм) → видит форму → отправляет список в offert.
 >
 > **🆕 2026-09-23 — логотип:** новый логотип AGRY OÜ («KLIPPT · BOCKAD · PREFAB ARMERING», трафаретный шрифт), финальная
-> версия владельца из Figma. Шапка: `public/images/logo-emblem.png` (только круг), подвал: `public/images/logo-agry.png`
-> на белой плашке. Мастер-SVG у владельца (`~/Desktop/Agry_OU_logo.svg`). ⚠️ favicon/`app/icon.png`/OG-картинка ещё СТАРЫЕ.
+> версия владельца из Figma. Две мастер-версии SVG у владельца на Desktop: `Agry_OU_logo_ljus-bakgrund.svg` (slate #475569)
+> и `Agry_OU_logo_mork-bakgrund.svg` (#E2E8F0). Шапка: `public/images/logo-emblem.png` (круг, светлый фон); подвал:
+> `public/images/logo-agry-dark.png` прямо на тёмном фоне; favicon `app/icon.png`, `app/apple-icon.png` и OG-картинка — новый эмблем.
 > **CI:** smoke дважды 23.09 падал на «stad-länk saknas» с раннера (локально зелёный) → в `scripts/smoke.sh` добавлен DIAG-вывод.
 >
 > **⚠️ Öppna frågor / väntar på [OWNER]:**
