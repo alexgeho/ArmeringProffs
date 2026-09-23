@@ -261,7 +261,8 @@ export const SHAPES: ShapeDef[] = [
   {
     code: "U", group: "3–4", name: "Sluten bygel, sexkantig", params: { x: 700, y: 360, c: 120 },
     build: ({ x, y, c }) => {
-      const k = 130;
+      const k = Math.min(130, x * 0.25);
+      c = Math.min(c, y);
       const m = y / 2;
       return {
         pts: closed([P(k, y), P(0, m + c / 2), P(0, m - c / 2), P(k, 0), P(x - k, 0), P(x, m - c / 2), P(x, m + c / 2), P(x - k, y)]),
@@ -272,7 +273,7 @@ export const SHAPES: ShapeDef[] = [
   {
     code: "V", group: "3–4", name: "Sluten bygel, fasade hörn", params: { a: 440, x: 600, y: 350 },
     build: ({ a, x, y }) => {
-      const k = (x - a) / 2;
+      const k = Math.max(0, Math.min((x - a) / 2, y / 2));
       return {
         pts: closed([P(k, y), P(0, y - k), P(0, k), P(k, 0), P(x - k, 0), P(x, k), P(x, y - k), P(x - k, y)]),
         dims: [dim(P(k, y), P(x - k, y), 1, "a", a), dim(P(0, 0), P(x, 0), -1, "x", x), dim(P(x, 0), P(x, y), -1, "y", y)],
@@ -329,7 +330,7 @@ export const SHAPES: ShapeDef[] = [
     code: "Q", group: "5", name: "Bågformad stång", params: { a: 1500, x: 900 },
     note: "a = båglängd, x = yttre radie",
     build: ({ a, x }) => {
-      const th = ((a / x) * 180) / Math.PI;
+      const th = Math.min(((a / x) * 180) / Math.PI, 340);
       return {
         pts: arc(0, 0, x, 90 + th / 2, 90 - th / 2, 28),
         dims: [dim3(P(0, 0), P(0, x), [0, 0, 0], "x", x)],
@@ -403,9 +404,9 @@ function roundedPath(pts: [number, number][], r = 7): string {
 
 export type DimLine = { line: string; ext: string; lx: number; ly: number; angle: number; label: string };
 
-export function layoutShape(def: ShapeDef, box = { x: 40, y: 40, w: 300, h: 220 }) {
+export function layoutShape(def: ShapeDef, box = { x: 40, y: 40, w: 300, h: 220 }, params = def.params) {
   if (!def.build) return null;
-  const { pts, dims, notes = [], fit = [] } = def.build(def.params);
+  const { pts, dims, notes = [], fit = [] } = def.build(params);
   const view = def.iso ? iso : front;
   const proj = pts.map(view);
   const all = [...proj, ...[...fit, ...notes.map((nt) => nt.p), ...dims.flatMap((d) => [d.a, d.b])].map(view)];
@@ -459,10 +460,18 @@ export function layoutShape(def: ShapeDef, box = { x: 40, y: 40, w: 300, h: 220 
   };
 }
 
-/** Alla mått att visa i listan (inmatade + härledda). */
-export function shapeParams(def: ShapeDef): [string, string][] {
-  const all = { ...def.params, ...(def.derived?.(def.params) ?? {}) };
-  return Object.entries(all)
-    .sort(([a], [b]) => a.localeCompare(b))
-    .map(([k, v]) => [k, ["v", "u", "s"].includes(k) ? `${v}°` : k === "x" && def.code === "O" ? `${v} varv` : `${v} mm`]);
+/** Vinklar anges i grader, O:s x i antal varv – allt annat i mm. */
+export const isAngle = (k: string) => ["v", "u", "s"].includes(k);
+export const unitOf = (def: ShapeDef, k: string) => (isAngle(k) ? "°" : def.code === "O" && k === "x" ? "varv" : "mm");
+
+/** Rimliga gränser för inmatade mått. */
+export function clampParam(def: ShapeDef, k: string, v: number): number {
+  if (isAngle(k)) return Math.min(175, Math.max(5, v));
+  if (def.code === "O" && k === "x") return Math.min(30, Math.max(1, Math.round(v)));
+  return Math.min(20000, Math.max(10, v));
+}
+
+/** Härledda mått (visas men matas inte in). */
+export function derivedParams(def: ShapeDef, params = def.params): [string, string][] {
+  return Object.entries(def.derived?.(params) ?? {}).map(([k, v]) => [k, `${v} ${unitOf(def, k)}`]);
 }

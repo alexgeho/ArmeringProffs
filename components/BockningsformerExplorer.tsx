@@ -1,12 +1,13 @@
 "use client";
 
 import { useState } from "react";
-import { SHAPES, layoutShape, shapeParams } from "@/lib/bending-shapes";
+import { SHAPES, clampParam, derivedParams, layoutShape, unitOf } from "@/lib/bending-shapes";
 import { ACCENT, FONT, INK, SteelBar, at } from "@/components/steel-scenes";
 
 /**
  * Typformer för bockning: välj en bokstavskod → formen ritas i stål med sina
- * mått (a, b, c … enligt standardens beteckningar). Geometrin räknas fram i
+ * mått (a, b, c … enligt standardens beteckningar). Måtten kan ändras och
+ * ritningen följer med direkt. Geometrin räknas fram i
  * lib/bending-shapes.ts. Läggs i <AnimatedScene>: första uppspelningen vid
  * scroll, därefter ritas formen om vid varje val (nytt `key`).
  */
@@ -16,9 +17,24 @@ const GROUPS = ["1–2", "3–4", "5"] as const;
 export function BockningsformerExplorer() {
   const [code, setCode] = useState("N");
   const [clicked, setClicked] = useState(false);
+  // Inmatad text per kod och mått (tomt/ogiltigt → standardmåttet används).
+  const [input, setInput] = useState<Record<string, Record<string, string>>>({});
   const def = SHAPES.find((s) => s.code === code) ?? SHAPES[0];
-  const shape = layoutShape(def, { x: 50, y: 68, w: 300, h: 196 });
-  const params = shapeParams(def);
+  const typed = input[code] ?? {};
+  const values = Object.fromEntries(
+    Object.entries(def.params).map(([k, d]) => {
+      const n = Number((typed[k] ?? "").replace(",", "."));
+      return [k, typed[k] && Number.isFinite(n) && n > 0 ? clampParam(def, k, n) : d];
+    }),
+  );
+  const edited = Object.keys(typed).length > 0;
+  const shape = layoutShape(def, { x: 50, y: 68, w: 300, h: 196 }, values);
+  const derived = derivedParams(def, values);
+  const params: [string, string][] = [
+    ...Object.entries(values).map(([k, v]) => [k, `${v} ${unitOf(def, k)}`] as [string, string]),
+    ...derived,
+  ];
+  const setVal = (k: string, v: string) => setInput((prev) => ({ ...prev, [code]: { ...prev[code], [k]: v } }));
   const t0 = clicked ? 0.05 : 0.9;
 
   return (
@@ -61,19 +77,45 @@ export function BockningsformerExplorer() {
             <span className="text-2xl font-bold text-brand">{def.code}</span>
             <span className="font-semibold text-ink">{def.name}</span>
           </div>
-          {params.length > 0 && (
-            <dl className="mt-3 grid grid-cols-[repeat(auto-fill,minmax(7.5rem,1fr))] gap-x-4 gap-y-1 text-sm tabular-nums">
-              {params.map(([k, v]) => (
-                <div key={k} className="flex justify-between border-b border-line py-1">
-                  <dt className="font-semibold text-ink-soft">{k}</dt>
-                  <dd className="text-ink">{v}</dd>
+          {Object.keys(def.params).length > 0 && (
+            <div className="mt-3 grid grid-cols-[repeat(auto-fill,minmax(8.5rem,1fr))] gap-x-4 gap-y-2 text-sm tabular-nums">
+              {Object.entries(def.params).map(([k, d]) => (
+                <label key={k} className="flex items-center gap-2 border-b border-line py-1">
+                  <span className="w-5 font-semibold text-ink-soft">{k}</span>
+                  <input
+                    type="text"
+                    inputMode="decimal"
+                    value={typed[k] ?? String(d)}
+                    onChange={(e) => setVal(k, e.target.value)}
+                    onBlur={() => typed[k] !== undefined && setVal(k, String(values[k]))}
+                    aria-label={`Mått ${k} (${unitOf(def, k)})`}
+                    className="w-full min-w-0 rounded-md border border-line bg-surface px-2 py-1 text-right text-ink focus:border-brand focus:bg-white focus:outline-none"
+                  />
+                  <span className="w-8 shrink-0 text-xs text-muted">{unitOf(def, k)}</span>
+                </label>
+              ))}
+              {derived.map(([k, v]) => (
+                <div key={k} className="flex items-center justify-between gap-2 border-b border-line py-1 text-muted">
+                  <span className="font-semibold">{k}</span>
+                  <span>{v}</span>
                 </div>
               ))}
-            </dl>
+            </div>
           )}
           {def.note && <p className="mt-3 text-sm text-muted">{def.note}</p>}
-          {params.length > 0 && (
-            <p className="mt-3 text-xs text-slate-400">Exempelmått. Ange kod och mått per position i din bockningslista.</p>
+          {Object.keys(def.params).length > 0 && (
+            <div className="mt-3 flex items-center justify-between gap-3">
+              <p className="text-xs text-slate-400">Skriv in dina egna mått – ritningen uppdateras direkt.</p>
+              {edited && (
+                <button
+                  type="button"
+                  onClick={() => setInput((prev) => ({ ...prev, [code]: {} }))}
+                  className="shrink-0 text-xs font-semibold text-brand hover:underline"
+                >
+                  Återställ
+                </button>
+              )}
+            </div>
           )}
         </div>
       </div>
