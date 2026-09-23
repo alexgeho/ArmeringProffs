@@ -16,6 +16,7 @@ export function ContactForm({
   defaultMessage?: string;
 }) {
   const [status, setStatus] = useState<Status>("idle");
+  const [fileName, setFileName] = useState("");
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -30,6 +31,7 @@ export function ContactForm({
       if (!res.ok) throw new Error("bad response");
       setStatus("sent");
       form.reset();
+      setFileName("");
       // GA4-konvertering: mät varje skickad offertförfrågan (om gtag finns).
       const gtag = (window as unknown as { gtag?: (...args: unknown[]) => void }).gtag;
       gtag?.("event", "generate_lead", { form_source: source });
@@ -59,38 +61,27 @@ export function ContactForm({
         <input id="company_website" name="company_website" type="text" tabIndex={-1} autoComplete="off" />
       </div>
 
-      {/* Namn – alltid full bredd, valfritt */}
-      <Field name="name" label="Namn / företag" placeholder="Anna Svensson, Bygg AB" />
+      {/* Minimalistiskt: bara placeholder synlig, etiketten finns för skärmläsare (sr-only). */}
+      <Field name="name" label="Namn / företag" />
 
       {compact ? (
-        /* Ett kombinerat kontaktfält – telefon eller e-post */
-        <Field
-          name="contact"
-          label="Telefon eller e-post"
-          placeholder="070-123 45 67"
-          required
-        />
+        <Field name="contact" label="Telefon eller e-post" required />
       ) : (
-        /* Full form: telefon + e-post var för sig */
         <div className="grid gap-4 sm:grid-cols-2">
-          <Field name="phone" label="Telefon" type="tel" placeholder="070-123 45 67" required />
-          <Field name="email" label="E-post" type="email" placeholder="anna@byggab.se" required />
+          <Field name="phone" label="Telefon" type="tel" required />
+          <Field name="email" label="E-post" type="email" required />
         </div>
       )}
 
-      {/* Extra fält bara i den fulla formen (offert/kontakt) */}
       {!compact && (
         <div className="grid gap-4 sm:grid-cols-2">
-          <Field name="location" label="Leveransort" placeholder="Göteborg" />
-          <Field name="quantity" label="Mängd / dimension" placeholder="Ø12 kamstål, ca 2 ton" />
+          <Field name="location" label="Leveransort" />
+          <Field name="quantity" label="Mängd / dimension" />
         </div>
       )}
 
-      {/* Meddelande – både i hero och full form */}
-      <div className="grid min-w-0 gap-1.5">
-        <label htmlFor="message" className="text-sm font-medium text-ink">
-          Beskriv ditt projekt
-        </label>
+      <div className="grid min-w-0">
+        <label htmlFor="message" className="sr-only">Beskriv ditt projekt</label>
         <textarea
           id="message"
           name="message"
@@ -98,31 +89,31 @@ export function ContactForm({
           // key gör att fältet uppdateras när en ny beräkning skickas in från kalkylatorn.
           key={defaultMessage}
           defaultValue={defaultMessage}
-          placeholder="Platta på mark 8 × 10 m, nät 6150 + kantjärn Ø12. Leverans vecka 42."
+          placeholder="Beskriv ditt projekt"
           className="w-full min-w-0 rounded-lg border border-line bg-white px-4 py-3 text-ink placeholder:text-muted focus:border-brand focus:outline-none"
         />
       </div>
 
-      {/* Bifoga ritning/bockningslista – både i hero och full form */}
-      <div className="grid min-w-0 gap-1.5">
-        <label htmlFor="drawing" className="text-sm font-medium text-ink">
-          Ritning / bockningslista <span className="font-normal text-muted">(valfritt)</span>
-        </label>
+      {/* Bifoga ritning/bockningslista: egen knapp i stället för webbläsarens "Choose File". */}
+      <label className="flex min-w-0 cursor-pointer items-center gap-2 rounded-lg border border-dashed border-line px-4 py-3 text-sm text-ink-soft hover:border-brand focus-within:border-brand">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="h-4 w-4 shrink-0 text-brand" aria-hidden="true">
+          <path d="M21.44 11.05l-9.19 9.19a6 6 0 01-8.49-8.49l9.19-9.19a4 4 0 015.66 5.66l-9.2 9.19a2 2 0 01-2.83-2.83l8.49-8.48" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+        <span className="min-w-0 truncate">{fileName || "Bifoga ritning eller bockningslista"}</span>
         <input
           id="drawing"
           name="drawing"
           type="file"
           accept=".pdf,.dwg,.dxf,.xls,.xlsx,.csv,.doc,.docx,.png,.jpg,.jpeg,.zip"
-          className="w-full min-w-0 max-w-full rounded-lg border border-line bg-white px-4 py-2.5 text-sm text-ink-soft file:mr-3 file:rounded-md file:border-0 file:bg-brand-light file:px-3 file:py-1.5 file:text-sm file:font-semibold file:text-brand hover:file:bg-orange-100 focus:border-brand focus:outline-none"
+          onChange={(e) => setFileName(e.target.files?.[0]?.name ?? "")}
+          className="sr-only"
         />
-        <p className="text-xs text-muted">PDF, DWG/DXF, Excel, bild eller zip. Max ca 10 MB.</p>
-      </div>
+      </label>
 
-      <label className="flex items-start gap-2 text-sm text-ink-soft">
-        <input type="checkbox" name="consent" required className="mt-1 h-4 w-4 accent-[var(--color-brand)]" />
+      <label className="flex items-center gap-2 text-sm text-ink-soft">
+        <input type="checkbox" name="consent" required className="h-4 w-4 shrink-0 accent-[var(--color-brand)]" />
         <span className="min-w-0">
-          Jag godkänner att mina uppgifter behandlas enligt{" "}
-          <a href="/integritetspolicy/" className="text-brand underline">integritetspolicyn</a>.
+          Jag godkänner <a href="/integritetspolicy/" className="text-brand underline">integritetspolicyn</a>
         </span>
       </label>
 
@@ -147,26 +138,22 @@ function Field({
   name,
   label,
   type = "text",
-  placeholder,
   required,
 }: {
   name: string;
   label: string;
   type?: string;
-  placeholder?: string;
   required?: boolean;
 }) {
   return (
-    <div className="grid min-w-0 gap-1.5">
-      <label htmlFor={name} className="text-sm font-medium text-ink">
-        {label} {required && <span className="text-brand">*</span>}
-      </label>
+    <div className="grid min-w-0">
+      <label htmlFor={name} className="sr-only">{label}</label>
       <input
         id={name}
         name={name}
         type={type}
         required={required}
-        placeholder={placeholder}
+        placeholder={required ? `${label} *` : label}
         className="h-12 w-full min-w-0 rounded-lg border border-line bg-white px-4 text-ink placeholder:text-muted focus:border-brand focus:outline-none"
       />
     </div>
