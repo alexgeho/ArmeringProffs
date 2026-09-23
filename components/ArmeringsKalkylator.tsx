@@ -282,13 +282,19 @@ function SelectField({
   return (
     <div className="grid min-w-0 gap-1.5">
       <label className="text-sm font-medium text-ink">{label}</label>
-      <select
-        value={value}
-        onChange={(e) => onChange(e.target.value)}
-        className="h-12 w-full min-w-0 rounded-lg border border-line bg-white px-3 text-ink focus:border-brand focus:outline-none"
-      >
-        {children}
-      </select>
+      {/* Egen pil: samma avstånd till högerkanten som texten har till vänsterkanten (16 px). */}
+      <div className="relative min-w-0">
+        <select
+          value={value}
+          onChange={(e) => onChange(e.target.value)}
+          className="h-12 w-full min-w-0 appearance-none truncate rounded-lg border border-line bg-white pl-4 pr-10 text-ink focus:border-brand focus:outline-none"
+        >
+          {children}
+        </select>
+        <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true" className="pointer-events-none absolute right-4 top-1/2 h-4 w-4 -translate-y-1/2 text-muted">
+          <path d="M5 7.5l5 5 5-5" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+      </div>
     </div>
   );
 }
