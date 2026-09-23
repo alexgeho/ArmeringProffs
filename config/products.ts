@@ -298,7 +298,7 @@ export const products: Product[] = [
     slug: "byglar-och-hakar",
     name: "Byglar & hakar",
     h1: "Byglar och hakar – U-byglar, trappbyglar och slutna byglar i serie",
-    metaTitle: "Byglar & hakar | U-byglar, trappbyglar, slutna byglar – hela Sverige",
+    metaTitle: "Byglar & hakar – färdiga armeringsbyglar",
     metaDescription:
       "Armeringsbyglar och hakar i serie: U-byglar, trappbyglar, slutna och fyrkantiga byglar i B500B Ø6–Ø12. Tillverkade efter dina mått, levererade på pall i hela Sverige. Begär offert.",
     intro:
@@ -352,11 +352,10 @@ export const products: Product[] = [
       "Vi bockar lyftöglor och lyftkrokar av rundstål för betongelement, trappor, balkar och andra prefabdelar – efter konstruktörens ritning och i den serie du behöver.",
     keywords: [
       "lyftöglor",
-      "lyftögla betong",
       "lyftkrok",
-      "lyftbygel",
-      "lyftöglor betongelement",
-      "ingjutningsögla",
+      "beställa lyftöglor",
+      "lyftöglor prefab",
+      "lyftöglor rundstål",
     ],
     includes: [
       "Lyftöglor och lyftkrokar av rundstål",
@@ -377,8 +376,8 @@ export const products: Product[] = [
       },
     ],
     faqs: [
-      { q: "Vem bestämmer lyftöglans dimension?", a: "Dimension, form och förankring bestäms alltid av konstruktören utifrån elementets vikt och hur det ska lyftas. Vi tillverkar exakt efter ritningen." },
-      { q: "Vilket material används?", a: "Lyftöglor bockas normalt av slätt rundstål enligt konstruktörens specifikation. Ange materialkrav i förfrågan så återkommer vi med offert." },
+      { q: "Vad behöver ni för att tillverka lyftöglor?", a: "Ritning eller mått, material, dimension och antal. Vi bockar exakt efter konstruktörens specifikation – läs mer om dimension och placering i guiden om lyftögla i betong." },
+      { q: "Vilket material används?", a: "Lyftöglor bockas normalt av slätt, segt rundstål (t.ex. S235) enligt konstruktörens specifikation – inte av kamstål. Ange materialkrav i förfrågan så återkommer vi med offert." },
     ],
   },
   {

@@ -36,14 +36,22 @@ export const posts: Post[] = [
   {
     slug: "armering-till-betongplatta",
     title: "Armering till betongplatta – vilken typ och hur mycket?",
-    metaTitle: "Armering till betongplatta | Vilken & hur mycket 2026",
+    metaTitle: "Armering betongplatta – typ & mängd",
     metaDescription:
       "Vilken armering behöver du till en betongplatta och hur mycket går det åt? Guide om armeringsnät, kamjärn, dimensioner, täckskikt, överlapp och åtgång per m².",
     excerpt:
       "Rätt armering håller ihop betongplattan och tar upp dragkrafterna som betongen själv inte klarar. Här går vi igenom vilken armering du behöver, hur mycket som går åt och hur den placeras rätt.",
     date: "2026-08-31",
+    updated: "2026-09-23",
     readingMinutes: 8,
     keywords: [
+      "armera betongplatta",
+      "armering av platta på mark",
+      "armering grundplatta",
+      "armeringsnät platta på mark",
+      "armeringsritning platta på mark",
+      "armera grund",
+      "platta på mark armering",
       "armering till betongplatta",
       "armering platta på mark",
       "vilken armering betongplatta",
@@ -55,6 +63,7 @@ export const posts: Post[] = [
       { type: "p", text: "Betong är starkt i tryck men svagt i drag. Armeringen – stål som gjuts in i plattan – tar upp dragkrafterna, fördelar laster och begränsar sprickor. Utan rätt armering spricker och sätter sig plattan. Här går vi igenom vilken armering du behöver till en betongplatta, hur mycket som går åt och hur den ska placeras." },
 
       { type: "h2", text: "Vilken armering används till en platta på mark?" },
+      { type: "p", text: "Kantbalken armeras med längsgående kantjärn och byglar – läs mer i [kantbalksbygel](/blogg/kantbalksbygel). Skarvlängder och nätets överlapp hittar du i [skarvlängd och överlapp](/blogg/skarvlangd-armering)." },
       { type: "p", text: "Till de flesta plattor på mark används svetsat armeringsnät (armeringsmatta) som huvudarmering, ofta kompletterat med lösa kamjärn (armeringsjärn) i kanter och där lasterna är stora. Nätet ger en jämn armering över hela ytan, medan kamjärnen förstärker punktvis." },
       { type: "ul", items: [
         "Armeringsnät – svetsat rutnät, huvudarmering i plattans yta.",
@@ -91,6 +100,7 @@ export const posts: Post[] = [
       { type: "p", text: "Vi levererar armering till betongplattor i hela landet – från [Stockholm](/armering/stockholm) i öster till [Göteborg](/armering/goteborg) i väster och orterna däremellan." },
     ],
     faqs: [
+      { q: "Behöver jag en armeringsritning till platta på mark?", a: "För en husgrund ska armeringen följa konstruktörens ritning. Den anger nät, kantjärn, kantbalksbyglar, täckskikt och skarvlängder. Har du ritningen tar vi fram bockningslistan åt dig." },
       { q: "Vilken armering behövs till en betongplatta?", a: "Till platta på mark används oftast svetsat armeringsnät (Ø5–6 mm, 150 mm rutor) som huvudarmering, kompletterat med lösa kamjärn (Ø10–12 mm) i kanter och under bärande väggar. Exakt val ska följa konstruktionsritning." },
       { q: "Hur mycket armeringsnät går åt per kvadratmeter?", a: "Räkna med cirka plattans yta plus 10–15 % extra för överlapp mellan näten. Nät levereras i standardformat, t.ex. 2,0 × 5,0 m, så en del spill uppstår vid kapning." },
       { q: "Hur mycket ska armeringsnät överlappa?", a: "Vanlig praxis är att näten överlappar minst två rutor – för 150-nät cirka 300–400 mm – och binds ihop så att de ligger stilla under gjutningen. Ritningen gäller." },
@@ -311,14 +321,17 @@ export const posts: Post[] = [
   {
     slug: "distanser-tackskikt-armering",
     title: "Distanser och täckskikt – så placeras armeringen rätt",
-    metaTitle: "Distanser & täckskikt armering | Rätt placering 2026",
+    metaTitle: "Täckskikt armering – distanser & placering",
     metaDescription:
       "Vad är täckskikt och varför behövs distanser till armeringen? Guide om hur du lyfter armeringen till rätt höjd och får rätt betongtäckning så stålet inte rostar.",
     excerpt:
       "Armeringen måste ligga inne i betongen med rätt täckskikt – annars rostar den. Här förklarar vi distanser, täckskikt och hur armeringen placeras rätt.",
     date: "2026-08-31",
+    updated: "2026-09-23",
     readingMinutes: 4,
     keywords: [
+      "täckskikt armering betong",
+      "täckskikt betong",
       "täckskikt armering",
       "distanser armering",
       "armering placering",
@@ -352,6 +365,7 @@ export const posts: Post[] = [
       { type: "p", text: "Vi skickar distanser och armering ända upp till [Umeå](/armering/umea) och [Sundsvall](/armering/sundsvall) – hela Sverige, även norrut." },
     ],
     faqs: [
+      { q: "Hur stort täckskikt ska armering ha i betong?", a: "Det beror på exponeringsklass och konstruktionens livslängd och anges på ritningen. Gjuts betongen direkt mot jord krävs minst 75 mm enligt Eurokod 2. Distanser med rätt höjd säkrar att täckskiktet blir som ritningen anger." },
       { q: "Vad är täckskikt på armering?", a: "Täckskiktet är betonglagret mellan armeringen och ytan. Det skyddar stålet mot fukt och korrosion. För platta på mark används ofta minst 25–35 mm, och mer i fuktig miljö som pooler." },
       { q: "Varför behövs distanser till armeringen?", a: "Distanser lyfter armeringen från underlaget så att den hamnar på rätt höjd inne i betongen med rätt täckskikt. Utan distanser sjunker armeringen ner mot botten och förlorar sin funktion." },
       { q: "Vad händer om täckskiktet är för litet?", a: "Då kan armeringen rosta, och rosten spränger loss betongen (spjälkning). Det försämrar hållfastheten och kan skada plattan över tid." },
@@ -420,17 +434,22 @@ export const posts: Post[] = [
   },
   {
     slug: "armeringskorgar-palarmering",
-    title: "Armeringskorgar – till pålar, pelare och balkar",
-    metaTitle: "Armeringskorgar | Prefab till pålar, pelare & balk 2026",
+    title: "Armeringskorg – typer, beställning och prefab till pålar, pelare och balkar",
+    metaTitle: "Armeringskorg – typer, beställning & prefab",
     metaDescription:
-      "Vad är en armeringskorg och när används den? Guide om prefab armeringskorgar till pålar, pelare, balkar och plintar – svetsade eller bundna, byglar, täckskikt och montage.",
+      "Vad är en armeringskorg? Typer för pålar, pelare och balkar, svetsad eller bunden, vad du anger vid beställning och varför färdiga armeringskorgar sparar tid.",
     excerpt:
       "En armeringskorg är färdigmonterad armering för ett bärande element. Här går vi igenom vad korgar är, var de används och varför prefab sparar tid på bygget.",
     date: "2026-09-05",
-    readingMinutes: 5,
+    updated: "2026-09-23",
+    readingMinutes: 6,
     keywords: [
-      "armeringskorgar",
       "armeringskorg",
+      "armeringskorgar",
+      "färdiga armeringskorgar",
+      "prefabricerad armering",
+      "pelarkorg",
+      "pålkorg",
       "pålarmering",
       "pelararmering",
       "balkkorg",
@@ -461,8 +480,22 @@ export const posts: Post[] = [
         ],
       },
 
-      { type: "h2", text: "Svetsad eller bunden korg?" },
-      { type: "p", text: "Korgar kan svetsas eller bindas. Svetsade korgar blir styva och lätta att hantera och lyfta, medan bundna korgar används där föreskriften kräver det. Vilket utförande som passar avgörs av konstruktionen och gällande normer." },
+      { type: "h2", text: "Svetsad eller bunden armeringskorg?" },
+      { type: "p", text: "Korgar kan bindas med najtråd eller punktsvetsas (häftsvetsas). Svetsade korgar blir styva och lätta att lyfta, men svetsning av armering ska utföras enligt SS-EN ISO 17660 och får bara användas där konstruktören tillåter det – svetsen kan påverka stålets egenskaper. Bundna korgar används där svetsning inte är tillåten. Konstruktionsritningen avgör." },
+
+      { type: "h2", text: "Beställa färdiga armeringskorgar – det här anger du" },
+      { type: "ul", items: [
+        "Typ och mått – pelare, balk, påle eller plint, korgens längd och tvärsnitt (yttermått).",
+        "Huvudjärn – antal, dimension och placering.",
+        "Byglar – typform, dimension och bygelavstånd (c/c), se [armeringsbyglar](/blogg/armeringsbyglar).",
+        "Täckskikt – så att korgen får rätt yttermått i formen.",
+        "Skarvar och utstickande järn (startjärn) mot anslutande delar.",
+        "Lyftpunkter och antal korgar per position.",
+      ] },
+      { type: "p", text: "Enklast är att skicka konstruktionsritningen eller en [bockningslista](/blogg/bockningslista-sa-gor-du) – då tar vi fram korgarna direkt efter den." },
+
+      { type: "h2", text: "Lyft och montage" },
+      { type: "p", text: "En färdig korg lyfts på plats med kran och placeras på distanser i formen eller över startjärnen. Längre korgar lyfts i flera punkter så att de inte deformeras. Vi kan också ta hand om [armeringsmontaget](/tjanster/armeringsmontage) på plats." },
 
       { type: "h2", text: "Därför lönar sig prefab" },
       { type: "ul", items: [
@@ -477,6 +510,7 @@ export const posts: Post[] = [
       { type: "p", text: "Vi levererar färdiga armeringskorgar till bland annat [Malmö](/armering/malmo) och [Uppsala](/armering/uppsala) – och resten av landet." },
     ],
     faqs: [
+      { q: "Vad kostar en armeringskorg?", a: "Priset beror på mängden stål, antal byglar, om korgen svetsas eller binds och hur många korgar som beställs. Skicka ritningen så får du ett fast pris och leveranstid." },
       { q: "Vad är en armeringskorg?", a: "En armeringskorg är färdigmonterad armering för ett bärande element som en pelare, balk eller påle – huvudjärn och byglar sammanfogade till en korg som lyfts på plats och gjuts in." },
       { q: "Vad är pålarmering?", a: "Pålarmering är armeringskorgen som gjuts in i en betongpåle, oftast med längsgående huvudjärn och spiral- eller enkelbyglar. Utförandet dimensioneras efter pålens laster och längd enligt ritning." },
       { q: "Är armeringskorgar svetsade eller bundna?", a: "Båda förekommer. Svetsade korgar blir styva och lätta att hantera, medan bundna korgar används där föreskriften kräver det. Valet styrs av konstruktionen och gällande normer." },
@@ -486,14 +520,18 @@ export const posts: Post[] = [
   {
     slug: "bestalla-armering",
     title: "Beställa armering – så går det till steg för steg",
-    metaTitle: "Beställa armering | Så beställer du prefab armering 2026",
+    metaTitle: "Beställa armering – steg för steg",
     metaDescription:
       "Så beställer du armering – från bockningslista och ritning till offert och leverans. Guide om vad en armeringsleverantör behöver, vad som påverkar priset och hur du får rätt armering.",
     excerpt:
       "Ska du beställa armering till ett bygge? Här går vi igenom steg för steg vad som behövs, vad leverantören behöver veta och hur du får en offert snabbt.",
     date: "2026-09-05",
+    updated: "2026-09-23",
     readingMinutes: 5,
     keywords: [
+      "köp armeringsjärn",
+      "armering leverans",
+      "beställa armering online",
       "beställa armering",
       "armeringsleverantör",
       "köpa armering",
@@ -536,6 +574,7 @@ export const posts: Post[] = [
       { type: "p", text: "Beställer du från [Västerås](/armering/vasteras), [Örebro](/armering/orebro) eller annan ort spelar ingen roll – vi levererar i hela Sverige." },
     ],
     faqs: [
+      { q: "Kan jag köpa armering direkt utan offert?", a: "Vi arbetar med offert eftersom pris och leveranstid beror på mängd, förädling och ort. Skicka mängd, ritning eller bockningslista så får du ett fast pris snabbt." },
       { q: "Vad behöver jag för att beställa armering?", a: "Bäst är en bockningslista eller konstruktionsritning, men det räcker ofta med mått och en beskrivning av vad som ska armeras. Då kan leverantören räkna fram ett förslag och en offert." },
       { q: "Kan jag beställa armering utan bockningslista?", a: "Ja. Ange mått, typ av konstruktion och önskad mängd, så hjälper vi dig att ta fram en bockningslista utifrån ritningen. Du kan också använda vår armeringskalkylator för att uppskatta åtgången." },
       { q: "Vad påverkar priset på armering?", a: "Priset styrs främst av mängd (ton/löpmeter/m²), dimensioner, hur mycket kapning och bockning som krävs, samt frakt till leveransorten. Läs mer i guiden om vad armering kostar." },
@@ -545,14 +584,16 @@ export const posts: Post[] = [
   {
     slug: "armering-till-garage",
     title: "Armering till garageplatta – så armerar du rätt",
-    metaTitle: "Armering till garage | Rätt armering i garageplatta 2026",
+    metaTitle: "Armering garageplatta – så armerar du",
     metaDescription:
       "Vilken armering behövs till en garageplatta? Guide om armeringsnät, kantjärn, dimensioner och täckskikt till garage – och hur mycket armering som går åt.",
     excerpt:
       "En garageplatta ska bära bilar och ibland bärande väggar. Här går vi igenom vilken armering som behövs, vanliga dimensioner och hur mycket som går åt.",
     date: "2026-09-05",
+    updated: "2026-09-23",
     readingMinutes: 5,
     keywords: [
+      "armeringsnät garageplatta",
       "armering till garage",
       "armering garageplatta",
       "garageplatta armering",
@@ -593,6 +634,7 @@ export const posts: Post[] = [
       { type: "p", text: "Vi levererar armering till garageplattor i bland annat [Helsingborg](/armering/helsingborg) och [Linköping](/armering/linkoping)." },
     ],
     faqs: [
+      { q: "Vilket armeringsnät till garageplatta?", a: "Vanligen nät med Ø6 mm tråd och 150 mm rutor (6150), kompletterat med kantjärn och kantbalksbyglar. Tyngre fordon kan kräva grövre nät eller två lager – ritningen gäller." },
       { q: "Vilken armering behövs till en garageplatta?", a: "Vanligtvis armeringsnät 6×150 (Ø6 mm) som huvudarmering, kompletterat med kamjärn Ø10–12 mm i kanter och under bärande väggar. Exakt val ska följa konstruktionsritning." },
       { q: "Hur mycket armeringsnät går åt till ett garage?", a: "Räkna med plattans yta plus 10–15 % för överlapp. En garageplatta på 36 m² kräver alltså ungefär 40–41 m² nät, plus kantjärn efter omkretsen." },
       { q: "Vilket täckskikt ska armeringen ha i ett garage?", a: "Ofta minst 25–35 mm betong runt armeringen. I ett ouppvärmt eller fuktigt garage är täckskiktet extra viktigt så att stålet inte rostar – lägg armeringen på distanser." },
@@ -602,14 +644,20 @@ export const posts: Post[] = [
   {
     slug: "vad-kostar-armering",
     title: "Vad kostar armering? Så påverkas priset",
-    metaTitle: "Vad kostar armering? | Pris & vad som styr det 2026",
+    metaTitle: "Vad kostar armering? Pris per kg",
     metaDescription:
       "Vad kostar armering? Guide om vad som påverkar priset på armering – mängd, dimensioner, kapning och bockning, prefab och frakt – och hur du får ett exakt pris.",
     excerpt:
       "Priset på armering beror på flera saker: mängd, dimensioner, hur mycket bearbetning som krävs och frakt. Här går vi igenom vad som styr priset och hur du får ett exakt besked.",
     date: "2026-09-05",
+    updated: "2026-09-23",
     readingMinutes: 4,
     keywords: [
+      "armering pris per kg",
+      "armeringsstål pris",
+      "kamstål pris",
+      "pris armeringsstål",
+      "köp armeringsjärn",
       "vad kostar armering",
       "armering pris",
       "pris armering",
@@ -620,6 +668,7 @@ export const posts: Post[] = [
       { type: "p", text: "Vad armering kostar går inte att svara på med en enda siffra – priset beror på ditt projekt. Stålpriset varierar dessutom över tid. Däremot går det att förstå vad som styr kostnaden, så att du kan jämföra offerter och få ett exakt pris snabbt." },
 
       { type: "h2", text: "Det här påverkar priset" },
+      { type: "p", text: "Om själva stålet – B500B, K500C-T, vikt per meter och längder – läser du i [armeringsstål](/blogg/armeringsstal)." },
       { type: "ul", items: [
         "Mängd – armering prissätts ofta per ton, löpmeter eller kvadratmeter nät. Större volym ger oftast lägre styckpris.",
         "Dimensioner – grövre kamstål och tätare nät väger mer och kostar mer.",
@@ -644,6 +693,7 @@ export const posts: Post[] = [
       { type: "p", text: "Oavsett om bygget ligger i [Jönköping](/armering/jonkoping), [Norrköping](/armering/norrkoping) eller längre bort räknar vi fram pris och frakt till din ort." },
     ],
     faqs: [
+      { q: "Vad kostar armering per kg?", a: "Priset per kilo följer världsmarknaden för stål och beror på mängd, dimension och förädling (raka järn, bockat eller korgar). Vi lämnar fast pris per projekt – skicka mängd eller bockningslista så får du offert." },
       { q: "Vad kostar armering?", a: "Priset beror på mängd, dimensioner, hur mycket kapning och bockning som krävs samt frakt. Stålpriset varierar dessutom över tid. Skicka mått eller bockningslista så får du ett exakt pris i en offert." },
       { q: "Prissätts armering per kilo eller per meter?", a: "Det varierar: kamstål prissätts ofta per ton eller kilo, kantjärn per löpmeter och armeringsnät per kvadratmeter. Prefab-detaljer och korgar prissätts utifrån tillverkningen." },
       { q: "Är prefab armering dyrare?", a: "Prefab kan ha ett högre kilopris men blir ofta billigare totalt, eftersom du sparar arbetstid, minskar spill och får färre fel på bygget. Räkna på helheten, inte bara materialpriset." },
@@ -653,14 +703,21 @@ export const posts: Post[] = [
   {
     slug: "armering-till-plintar",
     title: "Armering till plintar och plintgrund",
-    metaTitle: "Armering till plintar | Rätt armering i plintgrund 2026",
+    metaTitle: "Armering plintar – plintgrund & plintkorg",
     metaDescription:
       "Hur armeras en plint? Guide om armering till plintar och plintgrund – armeringskorg, byglar, dimensioner och täckskikt till altan, attefallshus och carport.",
     excerpt:
       "Plintar bär upp altaner, attefallshus och carportar. Här går vi igenom hur en plint armeras, vilken korg som används och vad du behöver tänka på.",
     date: "2026-09-05",
+    updated: "2026-09-23",
     readingMinutes: 4,
     keywords: [
+      "armering plintar",
+      "armering plint",
+      "armera betongplint",
+      "gjuta plintar armering",
+      "gjuta plintar utan armering",
+      "armeringsjärn plintar",
       "armering till plintar",
       "plintgrund armering",
       "armera plint",
@@ -689,6 +746,7 @@ export const posts: Post[] = [
       { type: "p", text: "Vi skickar färdiga plintkorgar även till norra Sverige – bland annat [Umeå](/armering/umea) och [Sundsvall](/armering/sundsvall)." },
     ],
     faqs: [
+      { q: "Kan man gjuta plintar utan armering?", a: "Små, lätt belastade plintar – till exempel för en altan – gjuts ibland oarmerade om konstruktionen tillåter det. Armering minskar ändå risken för sprickor, och bärande plintar ska alltid armeras enligt ritning." },
       { q: "Hur armeras en plint?", a: "Oftast med en liten armeringskorg – längsgående kamjärn (ofta Ø10–16 mm) som huvudarmering och byglar som håller ihop korgen. Bredare plintsulor kan även armeras med nät. Dimensioner ska följa konstruktionsritning." },
       { q: "Behöver en plint armering?", a: "Bärande plintar armeras normalt för att fördela laster och begränsa sprickor. Utförandet beror på last och markförhållanden och ska dimensioneras enligt ritning." },
       { q: "Vilket täckskikt ska en plint ha?", a: "Eftersom plintar ofta står i fuktig mark är täckskiktet extra viktigt så att armeringen inte rostar. Lägg korgen på distanser så att täckskiktet blir jämnt och tillräckligt stort för markmiljön." },
@@ -698,14 +756,17 @@ export const posts: Post[] = [
   {
     slug: "armera-stodmur",
     title: "Armering till stödmur och L-stöd",
-    metaTitle: "Armering till stödmur | Rätt armering i L-stöd 2026",
+    metaTitle: "Armering stödmur – så armeras L-stöd",
     metaDescription:
       "Hur armeras en stödmur? Guide om armering till stödmur och L-stöd i betong – huvudarmering, byglar, täckskikt och varför murar måste dimensioneras rätt.",
     excerpt:
       "En stödmur håller emot jordtryck och måste armeras rätt för att inte spricka eller välta. Så armeras en gjuten stödmur och ett L-stöd.",
     date: "2026-09-05",
+    updated: "2026-09-23",
     readingMinutes: 4,
     keywords: [
+      "stödmur armering",
+      "gjuta stödmur armering",
       "armering stödmur",
       "armera stödmur",
       "stödmur betong armering",
@@ -737,6 +798,7 @@ export const posts: Post[] = [
       { type: "p", text: "Vi levererar armering till stödmurar och L-stöd i bland annat [Stockholm](/armering/stockholm) och [Göteborg](/armering/goteborg)." },
     ],
     faqs: [
+      { q: "Vilka armeringsjärn används i en stödmur?", a: "Oftast kamstål Ø10–Ø16 i vertikal och horisontell riktning, med startjärn från sulan upp i muren. Dimension och c/c-avstånd står på konstruktionsritningen." },
       { q: "Hur armeras en betongstödmur?", a: "Med huvudarmering på murens dragsida, horisontell fördelningsarmering och förankringsjärn mellan bottensula och vägg. Byglar binder ihop det kritiska partiet där sula och mur möts. Utförandet ska dimensioneras av en konstruktör." },
       { q: "Varför måste en stödmur armeras?", a: "En stödmur tar upp jordtryck som vill skjuta och välta muren. Armeringen håller emot dragkrafterna som betongen själv inte klarar. Utan rätt armering kan muren spricka, luta eller välta." },
       { q: "På vilken sida ska armeringen i en stödmur sitta?", a: "Huvudarmeringen ska sitta på dragsidan – normalt sidan bort från jordtrycket – där betongen annars skulle spricka. Exakt placering framgår av konstruktionsritningen." },
@@ -960,7 +1022,7 @@ export const posts: Post[] = [
     title: "Armeringsbyglar – typer, mått och när de används",
     metaTitle: "Armeringsbyglar – U-bygel, sluten & mått",
     metaDescription:
-      "Armeringsbyglar förklarade: U-bygel, sluten bygel och kantbalksbygel – typkoder, mått, krokar och bygelavstånd. Beställ färdiga byglar i serie.",
+      "Armeringsbyglar förklarade: U-bygel, sluten bygel och öppen bygel – typkoder, mått, krokar och bygelavstånd. Beställ färdiga byglar i serie.",
     excerpt:
       "Byglar håller ihop armeringen i balkar, pelare och kantbalkar och tar upp tvärkrafter. Här går vi igenom de vanligaste bygeltyperna, hur måtten anges, krokar, bygelavstånd och vad du ska tänka på när du beställer.",
     date: "2026-09-23",
@@ -970,8 +1032,6 @@ export const posts: Post[] = [
       "bygel armering",
       "u-bygel armering",
       "sluten bygel",
-      "kantbalksbygel",
-      "villabygel",
       "färdiga armeringsbyglar",
       "armeringsjärn byglar",
       "bygelavstånd",
@@ -991,12 +1051,12 @@ export const posts: Post[] = [
       ] },
       { type: "p", text: "Hur många byglar som behövs, vilken dimension de ska ha och hur tätt de ska sitta bestäms alltid av konstruktören och står på armeringsritningen." },
 
-      { type: "h2", text: "Typer av armeringsbyglar – U-bygel, sluten bygel, kantbalksbygel" },
+      { type: "h2", text: "Typer av armeringsbyglar – U-bygel, sluten bygel, K-bygel" },
       { type: "p", text: "I Sverige anges bockade former med en bokstavskod enligt Typblad för bockning av stänger (2A 1979). Koden gör det enkelt att beskriva formen i en bockningslista. Här är de byglar som används mest:" },
       { type: "table", head: ["Typ", "Kod", "Form", "Typisk användning"], rows: [
         ["Sluten bygel", "N", "Rektangel med två krokar (ofta 135°) i samma hörn", "Balkar och pelare – omsluter huvudjärnen"],
         ["U-bygel / U-järn", "C", "Öppen U-form med tre ben", "Kantbalkar, skarvar, bjälklagskanter"],
-        ["Öppen bygel (villabygel)", "K", "U-form med ett extra invikt ben", "Kantbalk i platta på mark, balkar"],
+        ["Öppen bygel (K-bygel)", "K", "Öppen bygel med ett extra ben – som villabygel med förlängt ben in i plattan", "Kantbalk i platta på mark, balkar"],
         ["Bygel med överlapp", "L", "Sluten form där benen överlappar", "Balkar och pelare där krokar inte får plats"],
         ["Sluten bygel med sned sida", "NX", "Fyrsidig bygel där en sida är sned", "Balkar med sned kant, konsoler"],
         ["Hårnål", "S", "Två parallella ben med 180° rund bock", "Förankring och kantförstärkning"],
@@ -1006,8 +1066,8 @@ export const posts: Post[] = [
       { type: "h3", text: "U-bygel – armering eller infästning?" },
       { type: "p", text: "Ordet U-bygel används också om gängade U-bultar för infästning av rör och avgassystem. I armeringssammanhang betyder U-bygel ett U-format armeringsjärn av kamstål (typform C) utan gängor. Ange typform och mått när du beställer, så blir det inga missförstånd." },
 
-      { type: "h2", text: "Kantbalksbygel – platta på mark" },
-      { type: "p", text: "En kantbalksbygel sitter i den förstärkta kanten (kantbalken) runt en platta på mark. Den håller ihop kantbalkens längsgående järn – ofta Ø12 eller Ø16 i över- och underkant. Vanligast är den öppna bygeln K, som säljs som villabygel, eller en sluten bygel N. Måtten följer kantbalkens tvärsnitt minus täckskikt. Läs mer i [armering till betongplatta](/blogg/armering-till-betongplatta)." },
+      { type: "h2", text: "Byglar i kantbalk" },
+      { type: "p", text: "I kantbalken runt en platta på mark används oftast en öppen K-bygel (villabygel) eller en sluten bygel. Mått, antal och montage går vi igenom i guiden [kantbalksbygel](/blogg/kantbalksbygel)." },
 
       { type: "h2", text: "Så anges måtten på en bygel" },
       { type: "p", text: "Måtten anges som yttermått per ben i millimeter (a, b, c …), tillsammans med dimension (Ø), stålkvalitet och antal. Exempel på rader i en [bockningslista](/blogg/bockningslista-sa-gor-du):" },
@@ -1043,7 +1103,7 @@ export const posts: Post[] = [
     ],
     faqs: [
       { q: "Vad är skillnaden mellan en U-bygel och en sluten bygel?", a: "En U-bygel (typform C) är öppen och har tre ben. En sluten bygel (typform N) omsluter armeringen helt och förankras med krokar i ett hörn. Slutna byglar används där bygeln ska hålla ihop huvudjärnen i balkar och pelare." },
-      { q: "Vad är en kantbalksbygel?", a: "En bygel i kantbalken runt en platta på mark. Oftast används den öppna villabygeln (typform K) eller en sluten bygel (N), med mått efter kantbalkens tvärsnitt minus täckskikt." },
+      { q: "Vad är en K-bygel?", a: "En öppen bygel (typform K) med ett extra ben. Den vanligaste varianten i villagrunder är villabygeln, där benet är förlängt in i plattan – se guiden om kantbalksbygel." },
       { q: "Hur tätt ska byglar sitta?", a: "Bygelavståndet står på ritningen. Eurokod 2 anger största avstånd 0,75 × d i balkar och i pelare det minsta av 20 × huvudjärnets diameter, pelarens minsta sida och 400 mm." },
       { q: "Vilken dimension har armeringsbyglar?", a: "Oftast Ø6–Ø12 mm kamstål B500B, i grövre konstruktioner även Ø16. Rätt dimension står på konstruktionsritningen." },
       { q: "Kan man köpa färdiga armeringsbyglar?", a: "Ja. Vi tillverkar färdigbockade byglar i serie efter dina mått och levererar i hela Sverige." },
@@ -1293,6 +1353,141 @@ export const posts: Post[] = [
       { q: "Vad väger armeringsjärn 12 mm?", a: "Ø12 väger 0,888 kg per meter – en 6-metersstång drygt 5,3 kg och en 12-metersstång knappt 10,7 kg." },
       { q: "Vad är SS 212540?", a: "En svensk produktspecifikation som används tillsammans med SS-EN 10080. Den anger egenskaper för armeringsstål med sträckgräns 500 MPa i duktilitetsklasserna A, AB, B och C, t.ex. K500C-T." },
       { q: "Vilken längd ska jag välja – 6 eller 12 meter?", a: "12 meter är standardlagerlängd och ger färre skarvar, 6 meter är lättare att hantera. Vid större mängder är klippt och bockat efter bockningslista ofta mest effektivt." },
+    ],
+  },
+
+  {
+    slug: "kantbalksbygel",
+    title: "Kantbalksbygel – mått, villabygel och montage i platta på mark",
+    metaTitle: "Kantbalksbygel – mått, villabygel & antal",
+    metaDescription:
+      "Vad är en kantbalksbygel och vilka mått ska den ha? Om villabygel (K-bygel), täckskikt, antal per meter, kantelement av cellplast och montage i platta på mark.",
+    excerpt:
+      "Kantbalksbyglar håller ihop armeringen i den förstärkta kanten runt en platta på mark. Här går vi igenom formerna, hur du räknar ut mått och antal och hur byglarna monteras.",
+    date: "2026-09-23",
+    readingMinutes: 6,
+    keywords: [
+      "kantbalksbygel",
+      "kantbalksbyglar",
+      "villabygel",
+      "k-bygel",
+      "kantbalk armering",
+      "armering kantbalk platta på mark",
+    ],
+    content: [
+      { type: "p", text: "En platta på mark har nästan alltid en förstärkt kant – en kantbalk – där plattan är tjockare och bär väggarnas last. Kantbalken armeras med längsgående järn i över- och underkant som hålls ihop av byglar. Det är de byglarna som kallas kantbalksbyglar." },
+
+      { type: "h2", text: "Vilken form har en kantbalksbygel?" },
+      { type: "table", head: ["Form", "Kod", "Beskrivning"], rows: [
+        ["Villabygel / förlängd K-bygel", "K", "Öppen bygel där ett ben är förlängt in i plattan – vanligast i villagrunder, finns som lagervara"],
+        ["Sluten bygel", "N", "Omsluter kantbalkens järn helt, förankras med krokar"],
+        ["U-bygel", "C", "Öppen U-form, används ibland tillsammans med raka järn"],
+      ], caption: "Vilken form som gäller står på konstruktionsritningen. Se alla former i [typformer för bockning](/tjanster/bockningslista)." },
+      { type: "p", text: "Villabyglar finns som lagervara, till exempel 800 × 200 × 300 × 200 mm i Ø8 – där det förlängda benet går in i plattan – anpassade för cirka 400 mm hög kantbalk. Stämmer inte standardmåttet med din kantbalk tillverkas byglarna efter mått. Villabygel® är ett inarbetat produktnamn för den här bygeltypen." },
+
+      { type: "h2", text: "Så räknar du ut måtten" },
+      { type: "p", text: "Bygelns yttermått ska vara kantbalkens mått minus täckskiktet på varje sida. Exempel med 50 mm täckskikt, vanligt när betongen gjuts mot cellplast eller form:" },
+      { type: "ul", items: [
+        "Kantbalk 300 mm bred och 400 mm hög (inklusive plattan).",
+        "Bygelns yttermått blir 300 − 2 × 50 = 200 mm i bredd och 400 − 2 × 50 = 300 mm i höjd.",
+        "Täckskiktet kan skilja mellan över- och underkant. Gjuts betongen direkt mot jord krävs minst 75 mm (Eurokod 2, 4.4.1.3). Följ ritningen.",
+      ] },
+      { type: "p", text: "Läs mer om varför täckskiktet är så viktigt i [distanser och täckskikt](/blogg/distanser-tackskikt-armering)." },
+
+      { type: "h2", text: "Kantbalksbygel i kantelement av cellplast" },
+      { type: "p", text: "I de flesta villagrunder formas kantbalken av L-formade kantelement av cellplast. Byglarna ska då rymmas inuti kantelementet med rätt täckskikt mot cellplasten, och det förlängda benet ska nå in i plattan så att kantbalk och platta binds ihop. Kontrollera kantelementets invändiga mått innan du beställer byglarna." },
+
+      { type: "h2", text: "Hur många kantbalksbyglar behövs?" },
+      { type: "p", text: "Kantbalken går runt hela plattan, så antalet är omkretsen delat med bygelavståndet – plus eventuella extra byglar i hörnen. En platta på 10 × 12 meter har 44 meters omkrets; med byglar c/c 300 mm blir det cirka 147 byglar. Bygelavstånd och dimension (ofta Ø8 eller Ø10) står på ritningen." },
+
+      { type: "h2", text: "Montage i kantbalken" },
+      { type: "ol", items: [
+        "Lägg ut distanser för underkantsjärnen.",
+        "Placera byglarna med rätt avstånd längs hela kantbalken.",
+        "Trä in och bind de längsgående kantjärnen i byglarnas hörn.",
+        "Lägg hörnjärn (L-järn) så att kantjärnen går runt hörnet.",
+        "Anslut plattans armeringsnät till kantbalken enligt ritningen.",
+        "Kontrollera täckskiktet mot form och mark innan gjutning.",
+      ] },
+
+      { type: "h2", text: "Bocka själv eller köpa färdiga kantbalksbyglar?" },
+      { type: "p", text: "En villagrund kräver ofta 100–200 kantbalksbyglar. Att [bocka armeringsjärn](/blogg/bocka-armeringsjarn) för hand i den mängden tar tid och ger ojämna mått. Vi tillverkar kantbalksbyglar i serie efter dina mått tillsammans med kantjärn och hörnjärn – se [byglar och hakar](/produkter/byglar-och-hakar), alla bygeltyper i [armeringsbyglar](/blogg/armeringsbyglar) och helheten i [armering till betongplatta](/blogg/armering-till-betongplatta)." },
+    ],
+    faqs: [
+      { q: "Vad är en kantbalksbygel?", a: "En bygel som håller ihop de längsgående järnen i kantbalken runt en platta på mark. Vanligast är villabygeln – en öppen K-bygel med ett förlängt ben in i plattan." },
+      { q: "Vilket mått ska en kantbalksbygel ha?", a: "Kantbalkens bredd och höjd minus täckskiktet på varje sida. Vid 300 × 400 mm kantbalk och 50 mm täckskikt blir bygeln 200 × 300 mm." },
+      { q: "Vilket bygelavstånd i kantbalk?", a: "Det står på ritningen. I villagrunder är c/c 300 mm vanligt, vilket ger drygt tre byglar per meter." },
+      { q: "Kan man köpa kantbalksbyglar färdiga?", a: "Ja. Villabyglar finns i standardmått, och vi tillverkar kantbalksbyglar efter dina mått i serie och levererar i hela Sverige." },
+    ],
+  },
+
+  {
+    slug: "lyftoglor-betong",
+    title: "Lyftögla i betong – material, dimension och placering",
+    metaTitle: "Lyftögla i betong – dimension & placering",
+    metaDescription:
+      "Lyftögla i betong: material, dimension, förankring och placering – plus hur lyftvinkeln påverkar lasten och vem som ansvarar. För betongelement och prefab.",
+    excerpt:
+      "Lyftöglor gjuts in i betongelement så att de kan lyftas säkert. Här går vi igenom material, dimension, förankring, lyftvinkel och vilka regler som gäller.",
+    date: "2026-09-23",
+    readingMinutes: 6,
+    keywords: [
+      "lyftögla betong",
+      "lyftöglor betong",
+      "lyftögla dimension",
+      "lyftbygel",
+      "ingjutningsögla",
+      "lyftöglor betongelement",
+    ],
+    content: [
+      { type: "p", text: "Prefabricerade betongelement – trappor, balkar, väggelement, brunnslock och plintar – måste kunna lyftas vid avformning, transport och montage. Det görs med lyftöglor (ingjutningsöglor) som gjuts in i elementet. En lyftögla som är fel dimensionerad eller fel förankrad kan släppa, så den ska alltid följa konstruktörens ritning eller lyftsystemets anvisning." },
+
+      { type: "h2", text: "Vilket material ska en lyftögla ha?" },
+      { type: "p", text: "Ingjutna lyftöglor tillverkas av slätt, segt rundstål – till exempel S235 – bockat med föreskriven bockningsradie. Kamstål (B500B) används inte till lyftöglor: det är mindre segt i bockar och kan spricka sprött vid stötar och kyla." },
+
+      { type: "h2", text: "Lyftögla, lyftbygel eller lyftankare?" },
+      { type: "ul", items: [
+        "Lyftögla / lyftbygel – bockad ögla av rundstål som gjuts in och sticker upp ur elementet.",
+        "Lyftankare och lyfthylsor – färdiga lyftsystem från specialiserade tillverkare, med typgodkända lastvärden och tillhörande lyftdon.",
+      ] },
+
+      { type: "h2", text: "Vad avgör lyftöglans dimension?" },
+      { type: "ul", items: [
+        "Elementets vikt och antal lyftpunkter – med fyra öglor räknas ofta bara två som bärande.",
+        "Lyftvinkeln – ju större vinkel mellan stropparna, desto större kraft i varje ögla.",
+        "Vidhäftning mot formen vid avformning ger en extra last.",
+        "Betongens hållfasthet vid lyftet – vid avformning har betongen ännu inte full hållfasthet.",
+        "Förankringslängd, kantavstånd och armering runt öglan.",
+      ] },
+      { type: "table", head: ["Vinkel mellan stropparna", "Kraft per ögla jämfört med rakt lyft"], rows: [
+        ["0° (lodrätt)", "1,0 ×"],
+        ["60°", "ca 1,15 ×"],
+        ["90°", "ca 1,41 ×"],
+        ["120°", "ca 2,0 ×"],
+      ], caption: "Snedlyft ökar kraften kraftigt. Följ alltid tillverkarens största tillåtna vinkel." },
+
+      { type: "h2", text: "Förankring och placering av lyftöglor" },
+      { type: "ul", items: [
+        "Öglan ska förankras tillräckligt djupt och gärna runt elementets armering.",
+        "Placeringen styrs av elementets tyngdpunkt så att det hänger rätt i lyftet.",
+        "Utstickande öglor kapas eller korrosionsskyddas efter montage.",
+      ] },
+
+      { type: "h2", text: "Säkerhet och regler" },
+      { type: "p", text: "Lyftöglor ska dimensioneras av en konstruktör. Vägledning finns i SIS-CEN/TR 15728 om ingjutna lyftinsatser för prefabricerade betongelement och i tyska VDI/BV-BS 6205. Lyftarbetet omfattas av Arbetsmiljöverkets föreskrifter AFS 2023:11 (kapitlet om lyftanordningar och lyftredskap; tidigare AFS 2006:6)." },
+      { type: "ul", items: [
+        "Svetsa aldrig på lyftöglor.",
+        "Räta inte ut och bocka inte om en ögla, och återanvänd den inte.",
+        "Lyft inte snedare än tillverkarens angivna största vinkel.",
+      ] },
+
+      { type: "h2", text: "Beställ lyftöglor efter ritning" },
+      { type: "p", text: "Vi bockar [lyftöglor och lyftkrokar](/produkter/lyftoglor) efter konstruktörens ritning, i små och stora serier, och levererar dem tillsammans med övrig armering till elementen – till exempel [armeringskorgar](/blogg/armeringskorgar-palarmering)." },
+    ],
+    faqs: [
+      { q: "Får man använda armeringsjärn som lyftögla?", a: "Nej, normalt inte. Ingjutna lyftöglor görs av slätt, segt rundstål (t.ex. S235) eller som färdiga lyftsystem. Kamstål är mindre segt i bockar och kan spricka sprött." },
+      { q: "Hur många lyftöglor behövs?", a: "Det bestämmer konstruktören utifrån elementets vikt och form. Med fyra öglor räknas ofta bara två som bärande, eftersom lasten sällan fördelas jämnt." },
+      { q: "Vad är skillnaden på lyftögla och lyftbygel?", a: "Det är i stort sett samma sak – en bockad ögla av rundstål som gjuts in i elementet. Lyftankare och lyfthylsor är färdiga system med typgodkända lastvärden." },
     ],
   },
 
