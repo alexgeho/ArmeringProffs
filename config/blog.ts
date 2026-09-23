@@ -387,7 +387,7 @@ export const posts: Post[] = [
         caption: "Exempel på detaljer vi kapar och bockar efter bockningslista (Ø6–Ø32 mm, B500B).",
         head: ["Detalj", "Typisk användning"],
         rows: [
-          ["Byglar (B-bygel, N-bygel)", "Balkar, pelare och korgar – tar upp tvärkrafter"],
+          ["Byglar (U-bygel C, sluten bygel N)", "Balkar, pelare och korgar – tar upp tvärkrafter"],
           ["Kramlor", "Förbinder och förankrar armering"],
           ["Kantjärn / L-form", "Kanter och hörn på plattor"],
           ["Förankringsjärn", "Förankring i anslutningar och skarvar"],
@@ -953,6 +953,181 @@ export const posts: Post[] = [
       { q: "Vilket armeringsnät ska jag ha i ett garagegolv?", a: "Mindre garagegolv armeras normalt med ett armeringsnät. Vid tunga laster eller större ytor kan dubbla lager eller specialnät behövas – exakt val framgår av konstruktionsritningen." },
       { q: "Var i golvet ska armeringen ligga?", a: "Armeringen ska ligga där dragkrafterna är störst, ofta i eller strax under överkant för att begränsa krympsprickor. Rätt höjd säkras med distanser – armeringen får inte ligga i botten av gjutningen." },
       { q: "Kan ni leverera armering till industrigolv?", a: "Ja, vi tillverkar och levererar armeringsnät, specialnät och kamjärn till betong- och industrigolv i hela Sverige, och kan även sköta montaget." },
+    ],
+  },
+  {
+    slug: "armeringsbyglar",
+    title: "Armeringsbyglar – typer, mått och när de används",
+    metaTitle: "Armeringsbyglar – U-bygel, sluten & mått",
+    metaDescription:
+      "Armeringsbyglar förklarade: U-bygel, sluten bygel och kantbalksbygel – typkoder, mått, krokar och bygelavstånd. Beställ färdiga byglar i serie.",
+    excerpt:
+      "Byglar håller ihop armeringen i balkar, pelare och kantbalkar och tar upp tvärkrafter. Här går vi igenom de vanligaste bygeltyperna, hur måtten anges, krokar, bygelavstånd och vad du ska tänka på när du beställer.",
+    date: "2026-09-23",
+    readingMinutes: 6,
+    keywords: [
+      "armeringsbyglar",
+      "bygel armering",
+      "u-bygel armering",
+      "sluten bygel",
+      "kantbalksbygel",
+      "villabygel",
+      "färdiga armeringsbyglar",
+      "armeringsjärn byglar",
+      "bygelavstånd",
+      "n bygel armering",
+      "c bygel armering",
+      "k bygel armering",
+    ],
+    content: [
+      { type: "p", text: "En armeringsbygel är ett bockat armeringsjärn som omsluter eller förbinder längsgående armering. Byglar finns i nästan alla betongkonstruktioner: i balkar och pelare, i kantbalkar runt en platta på mark och i prefabricerade element. De håller huvudjärnen på plats vid gjutningen och tar i den färdiga konstruktionen upp tvärkrafter och förhindrar att tryckta järn knäcks ut." },
+
+      { type: "h2", text: "Vad gör en bygel?" },
+      { type: "ul", items: [
+        "Tar upp tvärkraft (skjuvning) i balkar – betongen bildar trycksträvor och byglarna verkar som dragband.",
+        "Håller längsgående armering på rätt plats under gjutningen.",
+        "Förhindrar att tryckt armering i pelare knäcks ut (omslutande byglar).",
+        "Binder ihop över- och underkantsarmering i kantbalkar och bjälklag.",
+      ] },
+      { type: "p", text: "Hur många byglar som behövs, vilken dimension de ska ha och hur tätt de ska sitta bestäms alltid av konstruktören och står på armeringsritningen." },
+
+      { type: "h2", text: "Typer av armeringsbyglar – U-bygel, sluten bygel, kantbalksbygel" },
+      { type: "p", text: "I Sverige anges bockade former med en bokstavskod enligt Typblad för bockning av stänger (2A 1979). Koden gör det enkelt att beskriva formen i en bockningslista. Här är de byglar som används mest:" },
+      { type: "table", head: ["Typ", "Kod", "Form", "Typisk användning"], rows: [
+        ["Sluten bygel", "N", "Rektangel med två krokar (ofta 135°) i samma hörn", "Balkar och pelare – omsluter huvudjärnen"],
+        ["U-bygel / U-järn", "C", "Öppen U-form med tre ben", "Kantbalkar, skarvar, bjälklagskanter"],
+        ["Öppen bygel (villabygel)", "K", "U-form med ett extra invikt ben", "Kantbalk i platta på mark, balkar"],
+        ["Bygel med överlapp", "L", "Sluten form där benen överlappar", "Balkar och pelare där krokar inte får plats"],
+        ["Sluten bygel med sned sida", "NX", "Fyrsidig bygel där en sida är sned", "Balkar med sned kant, konsoler"],
+        ["Hårnål", "S", "Två parallella ben med 180° rund bock", "Förankring och kantförstärkning"],
+      ], caption: "Vanliga bygeltyper. Koderna används i bockningslistan tillsammans med måtten a, b, c … (yttermått)." },
+      { type: "p", text: "Du kan se alla standardformer med bokstavskod och prova egna mått i vårt verktyg för [typformer för bockning](/tjanster/bockningslista)." },
+
+      { type: "h3", text: "U-bygel – armering eller infästning?" },
+      { type: "p", text: "Ordet U-bygel används också om gängade U-bultar för infästning av rör och avgassystem. I armeringssammanhang betyder U-bygel ett U-format armeringsjärn av kamstål (typform C) utan gängor. Ange typform och mått när du beställer, så blir det inga missförstånd." },
+
+      { type: "h2", text: "Kantbalksbygel – platta på mark" },
+      { type: "p", text: "En kantbalksbygel sitter i den förstärkta kanten (kantbalken) runt en platta på mark. Den håller ihop kantbalkens längsgående järn – ofta Ø12 eller Ø16 i över- och underkant. Vanligast är den öppna bygeln K, som säljs som villabygel, eller en sluten bygel N. Måtten följer kantbalkens tvärsnitt minus täckskikt. Läs mer i [armering till betongplatta](/blogg/armering-till-betongplatta)." },
+
+      { type: "h2", text: "Så anges måtten på en bygel" },
+      { type: "p", text: "Måtten anges som yttermått per ben i millimeter (a, b, c …), tillsammans med dimension (Ø), stålkvalitet och antal. Exempel på rader i en [bockningslista](/blogg/bockningslista-sa-gor-du):" },
+      { type: "table", head: ["Pos", "Typform", "Ø", "Mått (mm)", "Antal"], rows: [
+        ["1", "N – sluten bygel", "Ø10 B500B", "a = 300, b = 200", "120 st"],
+        ["2", "C – U-bygel", "Ø8 B500B", "a = 150, b = 400, c = 150", "300 st"],
+      ] },
+      { type: "ul", items: [
+        "Bockningsmåtten avser ytterkonturen – ange tydligt om ritningen använder innermått.",
+        "Krokar och krokvinkel (90° eller 135°) framgår av ritningen. I bockningslistan anges ändkrok med L (vänd som i typfiguren) eller M (motsatt håll).",
+        "Minsta dorndiameter beror på dimensionen (SS-EN 1992-1-1 tabell 8.1N) – ritningen kan kräva större. Se [bocka armeringsjärn](/blogg/bocka-armeringsjarn).",
+      ] },
+
+      { type: "h2", text: "Krokar på slutna byglar" },
+      { type: "p", text: "Slutna byglar förankras med krokar som bockas in mot bygelns insida. Enligt Eurokod 2 (SS-EN 1992-1-1:2005, avsnitt 8.5, figur 8.5) ska en 135°-krok ha en rak ände på minst 5 × Ø och minst 50 mm, och en 90°-bock minst 10 × Ø och minst 70 mm. Ett längsgående järn ska ligga inuti kroken. Byt aldrig en 135°-krok mot 90° utan konstruktörens godkännande – vid vridning krävs till exempel 135°-krok eller omlott." },
+
+      { type: "h2", text: "Bygelavstånd och antal byglar" },
+      { type: "p", text: "Bygelavståndet (s) står på ritningen. Som riktvärden anger Eurokod 2 ett största avstånd i balkar på 0,75 × d (d = balkens effektiva höjd) och i pelare det minsta av 20 × minsta huvudjärnets diameter, pelarens minsta sida och 400 mm. Det är gränsvärden – inte en dimensionering." },
+      { type: "p", text: "Antalet byglar räknar du ungefär som längd / bygelavstånd + 1. En 6 meter lång balk med byglar c/c 200 mm behöver alltså cirka 31 byglar." },
+
+      { type: "h2", text: "Dimensioner och stålkvalitet" },
+      { type: "p", text: "Byglar tillverkas oftast i kamstål B500B (SS 212540) i dimensionerna Ø6–Ø12 mm, i grövre konstruktioner även Ø16. Små dimensioner bockas från ringar i automatiska maskiner, vilket ger mycket jämna mått. De grövsta dimensionerna bockas oftast av raka stänger." },
+
+      { type: "h2", text: "Bocka själv eller beställa färdiga byglar?" },
+      { type: "p", text: "Några enstaka byglar går att bocka för hand, men byglar går åt i stora mängder – en enda balk kan kräva hundratals. Att bocka dem på bygget tar tid och ger varierande mått. Färdiga armeringsbyglar från en bockningsverkstad är lika i varje exemplar, märkta per position och levereras buntade." },
+      { type: "ul", items: [
+        "Jämna mått – bygeln passar huvudjärnen utan justering.",
+        "Snabbare montage – ingen bockning på plats.",
+        "Rätt bockningsradie och krok enligt ritning.",
+        "Leverans på pall tillsammans med övrig armering och [armeringskorgar](/blogg/armeringskorgar-palarmering).",
+      ] },
+      { type: "p", text: "Vi tillverkar [färdiga armeringsbyglar](/produkter/byglar-och-hakar) i serie efter din bockningslista – skicka listan eller ritningen så återkommer vi med pris och leveranstid." },
+    ],
+    faqs: [
+      { q: "Vad är skillnaden mellan en U-bygel och en sluten bygel?", a: "En U-bygel (typform C) är öppen och har tre ben. En sluten bygel (typform N) omsluter armeringen helt och förankras med krokar i ett hörn. Slutna byglar används där bygeln ska hålla ihop huvudjärnen i balkar och pelare." },
+      { q: "Vad är en kantbalksbygel?", a: "En bygel i kantbalken runt en platta på mark. Oftast används den öppna villabygeln (typform K) eller en sluten bygel (N), med mått efter kantbalkens tvärsnitt minus täckskikt." },
+      { q: "Hur tätt ska byglar sitta?", a: "Bygelavståndet står på ritningen. Eurokod 2 anger största avstånd 0,75 × d i balkar och i pelare det minsta av 20 × huvudjärnets diameter, pelarens minsta sida och 400 mm." },
+      { q: "Vilken dimension har armeringsbyglar?", a: "Oftast Ø6–Ø12 mm kamstål B500B, i grövre konstruktioner även Ø16. Rätt dimension står på konstruktionsritningen." },
+      { q: "Kan man köpa färdiga armeringsbyglar?", a: "Ja. Vi tillverkar färdigbockade byglar i serie efter dina mått och levererar i hela Sverige." },
+    ],
+  },
+
+  {
+    slug: "bocka-armeringsjarn",
+    title: "Bocka armeringsjärn – för hand, med verktyg och rätt bockningsradie",
+    metaTitle: "Bocka armeringsjärn – för hand & tabell",
+    metaDescription:
+      "Så bockar du armeringsjärn: verktyg, bockning för hand och minsta bockningsradie enligt Eurokod 2 i tabell. Plus klipplängd och vanliga misstag.",
+    excerpt:
+      "Armeringsjärn kan bockas för hand med rätt verktyg – men bara med rätt bockningsradie. Här är tabellen över minsta dorndiameter, hur du räknar klipplängd och när det lönar sig att beställa färdigbockat.",
+    date: "2026-09-23",
+    readingMinutes: 6,
+    keywords: [
+      "bocka armeringsjärn",
+      "bocka armering",
+      "bocka armeringsjärn för hand",
+      "verktyg bocka armeringsjärn",
+      "bockningsradie armering",
+      "bockningsradie armering tabell",
+      "minsta bockningsradie armering",
+      "armeringsjärn bockning",
+    ],
+    content: [
+      { type: "p", text: "Att bocka armeringsjärn handlar om mer än att vika stålet i rätt vinkel. Bockas järnet för skarpt kan stålet spricka och betongen innanför bocken krossas. Här går vi igenom hur du bockar armeringsjärn för hand, vilka verktyg som behövs, vilken bockningsradie som gäller och när det lönar sig att köpa armeringen färdigbockad." },
+
+      { type: "h2", text: "Verktyg för att bocka armeringsjärn" },
+      { type: "ul", items: [
+        "Bockjärn / armeringsbockare (bocknyckel) – enkel hävstång för tunna dimensioner, ungefär Ø6–Ø12. Ett rör som förlängning ger mer hävkraft.",
+        "Bockbord med tappar – järnet läggs mot en tapp (dorn) med rätt diameter, ger jämnare radie.",
+        "Kombinerad kap- och bockmaskin (manuell eller elektrisk) – för större mängder och för Ø16 och grövre, som i praktiken inte går att bocka för hand.",
+        "Bultsax eller kapmaskin för att kapa järnen till rätt längd innan bockning.",
+      ] },
+      { type: "p", text: "Använd skyddshandskar och skyddsglasögon. Ett armeringsjärn som slinter ur verktyget kan fjädra tillbaka med stor kraft." },
+
+      { type: "h2", text: "Så bockar du armeringsjärn för hand" },
+      { type: "ol", items: [
+        "Kapa järnet till rätt klipplängd (kaplängd), se nedan.",
+        "Markera var bocken ska börja – mät från järnets ände.",
+        "Lägg järnet mot en dorn eller tapp med rätt diameter för dimensionen.",
+        "Bocka med jämn kraft i en rörelse – några grader förbi önskad vinkel, eftersom stålet fjädrar tillbaka lite.",
+        "Kontrollera vinkel och mått mot ritningen innan nästa bock.",
+      ] },
+      { type: "p", text: "Bocka i kallt tillstånd. Värm inte armeringsjärnet för att underlätta bockningen – värme förändrar stålets egenskaper, och enligt SS-EN 13670 är det inte tillåtet om arbetsbeskrivningen inte uttryckligen medger det. Bocka inte heller i sträng kyla: under −5 °C får armering bara bockas om arbetsbeskrivningen tillåter det och särskilda försiktighetsåtgärder vidtas. Att räta ut och bocka om ett järn som redan är bockat är likaså inte tillåtet utan uttryckligt medgivande – stålet kan spricka i bocken." },
+
+      { type: "h2", text: "Minsta bockningsradie – tabell" },
+      { type: "p", text: "Hur snävt ett järn får bockas styrs av dorndiametern – diametern på den tapp järnet bockas runt. Enligt Eurokod 2 (SS-EN 1992-1-1, tabell 8.1N) är minsta dorndiameter för bockar, krokar och öglor 4 × Ø upp till Ø16 och 7 × Ø för grövre dimensioner. Bockningsradien (innerradien) är hälften av dorndiametern. För svetsad armering och nät som bockas efter svetsning gäller större värden." },
+      { type: "table", head: ["Dimension", "Minsta dorndiameter", "Inre bockningsradie"], rows: [
+        ["Ø6", "24 mm (4Ø)", "12 mm"],
+        ["Ø8", "32 mm (4Ø)", "16 mm"],
+        ["Ø10", "40 mm (4Ø)", "20 mm"],
+        ["Ø12", "48 mm (4Ø)", "24 mm"],
+        ["Ø16", "64 mm (4Ø)", "32 mm"],
+        ["Ø20", "140 mm (7Ø)", "70 mm"],
+        ["Ø25", "175 mm (7Ø)", "87,5 mm"],
+        ["Ø32", "224 mm (7Ø)", "112 mm"],
+      ], caption: "Minsta dorndiameter för bockar, krokar och öglor enligt SS-EN 1992-1-1:2005 tabell 8.1N. Konstruktionsritningen kan kräva större radie." },
+      { type: "p", text: "För bockade huvudjärn kan konstruktören behöva kontrollera att betongen innanför bocken inte krossas (Eurokod 2, avsnitt 8.3(3)) och då kräva större radie än tabellvärdet. Följ alltid ritningen. Värdena gäller SS-EN 1992-1-1:2005 tills den nya generationen Eurokod (EN 1992-1-1:2023) införs i svenska regler. Dimensioner och vikter hittar du i [armeringsjärn – dimensioner](/blogg/armeringsjarn-dimensioner)." },
+
+      { type: "h2", text: "Klipplängd – hur långt ska järnet vara?" },
+      { type: "p", text: "Ett bockat järn blir något kortare än summan av yttermåtten, eftersom järnet följer en radie i varje bock. Den exakta klipplängden beror på dimension, bockningsradie och vinkel. Som tumregel vid minsta bockningsradie drar du av ungefär 2 × Ø per 90°-bock från summan av yttermåtten. Exempel: ett L-järn Ø10 med yttermåtten 300 + 500 mm → 800 − 20 ≈ 780 mm klipplängd. För byglar i serie måste klipplängden räknas ut exakt – annars stämmer inte måtten. Bockningsverkstäder räknar fram den automatiskt ur måtten i [bockningslistan](/blogg/bockningslista-sa-gor-du)." },
+
+      { type: "h2", text: "Vanliga misstag" },
+      { type: "ul", items: [
+        "För snäv bockning – stålet kan spricka i bocken.",
+        "Omböjning – att räta ut och bocka om samma ställe.",
+        "Värma järnet för att det ska bli lättare att bocka.",
+        "Mäta innermått när ritningen anger yttermått (eller tvärtom).",
+        "Glömma krokarna på slutna [armeringsbyglar](/blogg/armeringsbyglar) – bygeln får då ingen förankring.",
+      ] },
+
+      { type: "h2", text: "När lönar det sig att köpa bockat?" },
+      { type: "p", text: "Några enstaka järn till ett mindre projekt går bra att bocka själv. Men redan vid ett par dussin byglar går det snabbare, blir jämnare och ofta billigare totalt att beställa [klippt och bockad armering](/produkter/klippt-och-bockad) efter en [bockningslista](/tjanster/bockningslista). Då bockas varje järn i maskin med rätt radie, märks per position och levereras klart att montera." },
+    ],
+    faqs: [
+      { q: "Vilket verktyg behövs för att bocka armeringsjärn?", a: "För tunna dimensioner (ca Ø6–Ø12) räcker ett bockjärn/armeringsbockare, gärna på ett bockbord med tappar i rätt diameter. Ø16 och grövre bockas i maskin." },
+      { q: "Hur räknar man ut klipplängden?", a: "Summera yttermåtten och dra av ungefär 2 × Ø per 90°-bock vid minsta bockningsradie. Ett L-järn Ø10 med 300 + 500 mm blir cirka 780 mm. För serier räknas den exakt." },
+      { q: "Hur bockar man armeringsjärn för hand?", a: "Kapa järnet till rätt längd, markera bocken och bocka kallt runt en dorn med rätt diameter i en jämn rörelse. Använd en handbockare eller ett bockbord för tunna dimensioner." },
+      { q: "Vilken är minsta bockningsradie för armering?", a: "Enligt Eurokod 2 är minsta dorndiameter för bockar, krokar och öglor 4 × Ø upp till Ø16 och 7 × Ø för grövre järn. Bockningsradien är halva dorndiametern, t.ex. 24 mm för Ø12. Ritningen kan kräva större radie." },
+      { q: "Får man värma armeringsjärn för att bocka det?", a: "Nej, inte om arbetsbeskrivningen inte uttryckligen tillåter det. Armeringsjärn ska bockas kallt – värme förändrar stålets egenskaper. Under −5 °C krävs också särskilt medgivande." },
+      { q: "Får man räta ut ett bockat armeringsjärn?", a: "Nej, inte utan att det uttryckligen tillåts i arbetsbeskrivningen – då krävs särskild utrustning och en fastställd metod. Stålet kan annars spricka i bocken. Fråga konstruktören." },
     ],
   },
 ];
