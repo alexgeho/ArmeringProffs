@@ -46,7 +46,12 @@
 > skarvlangd-armering, armeringsstal, kantbalksbygel, lyftoglor-betong) + 8 обновлённых; каждая прошла факт-чек по нормам и
 > язык/SEO-ревью субагентами. Найдены и исправлены старые ошибки: stödmur (арматура на стороне грунта), täckskikt 25–35 мм
 > → уточнено (мот cellplast/form; makadam ≥40, jord ≥75 мм), нахлёст сетки унифицирован (≥2 ячейки, ~300–400 мм).
-> 4 новых продукта (byglar-och-hakar, lyftoglor, armering-i-ringar, 3d-bockning). 🔜 Request Indexing в GSC для новых URL.
+> 4 новых продукта (byglar-och-hakar, lyftoglor, armering-i-ringar, 3d-bockning).
+> **GSC 23.09:** sitemap переотправлен; Request Indexing ✅ `/blogg/armeringsbyglar/`, `/blogg/bocka-armeringsjarn/`,
+> `/blogg/skarvlangd-armering/` → на `/blogg/armeringsstal/` **Quota Exceeded**. 🔜 **24.09+ дослать 7 URL:**
+> `/blogg/armeringsstal/`, `/blogg/kantbalksbygel/`, `/blogg/lyftoglor-betong/`, `/produkter/byglar-och-hakar/`,
+> `/produkter/lyftoglor/`, `/produkter/armering-i-ringar/`, `/produkter/3d-bockning/` (+ старый хвост из 🟢-раздела).
+> Как: GSC → поле «Inspect any URL» (кликнуть в пустое место, потом в поле, ввести URL, Enter) → REQUEST INDEXING → Dismiss.
 >
 > **⚠️ Öppna frågor / väntar på [OWNER]:**
 > - **Проверить, что лид-мейл реально доходит** (`/offert` с вложением → `offert@armeringproffs.se`). P0, висит с 08.09.
