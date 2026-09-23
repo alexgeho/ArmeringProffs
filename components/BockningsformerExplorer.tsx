@@ -175,8 +175,8 @@ export function BockningsformerExplorer() {
                 <g className="s-fade" style={at(t0)}>
                   <ellipse cx={shape.shadow.cx} cy={shape.shadow.cy} rx={shape.shadow.rx} ry="7" fill="#0f172a" opacity="0.06" />
                 </g>
-                <SteelBar d={shape.d} w={9} delay={t0} dur={1.2} />
-                <g className="s-fade" style={at(t0 + 1.2)} stroke={ACCENT} strokeWidth="1.2" fill="none">
+                <SteelBar d={shape.d} w={9} delay={t0} dur={0.8} />
+                <g className="s-fade" style={at(t0 + 0.8)} stroke={ACCENT} strokeWidth="1.2" fill="none">
                   {shape.dims.map((m, i) => (
                     <g key={i}>
                       {m.ext && <path d={m.ext} opacity="0.5" />}
@@ -184,7 +184,7 @@ export function BockningsformerExplorer() {
                     </g>
                   ))}
                 </g>
-                <g className="s-fade" style={at(t0 + 1.3)} fontFamily={FONT} fontSize="11.5" fontWeight="700" fill={ACCENT} textAnchor="middle">
+                <g className="s-fade" style={at(t0 + 0.9)} fontFamily={FONT} fontSize="11.5" fontWeight="700" fill={ACCENT} textAnchor="middle">
                   {shape.dims.map((m, i) => (
                     <text key={i} transform={`translate(${m.lx.toFixed(1)} ${m.ly.toFixed(1)}) rotate(${m.angle.toFixed(1)})`} dominantBaseline="middle" paintOrder="stroke" stroke="#fff" strokeWidth="3">
                       {m.label}
