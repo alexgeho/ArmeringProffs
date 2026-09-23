@@ -36,6 +36,12 @@
 > `public/images/logo-agry-dark.png` прямо на тёмном фоне; favicon `app/icon.png`, `app/apple-icon.png` и OG-картинка — новый эмблем.
 > **CI:** smoke дважды 23.09 падал на «stad-länk saknas» с раннера (локально зелёный) → в `scripts/smoke.sh` добавлен DIAG-вывод.
 >
+> **🆕 2026-09-23 — калькулятор усилен (по deep-research: оставить и доработать, не удалять):** режимы «Armeringsnät»
+> (листы 2,35×5 м, нахлёст/слои, кг, kantjärn) и «Kamjärn c/c» (Ø6–32, c/c, слои, täckskikt, 6/12 м, skarv ≈50·Ø → шт/lpm/кг);
+> таблица «vikt per meter» (#vikt-per-meter); всё в offert-форму, без цен. Логика: `lib/rebar-calc.ts`.
+> 🔜 Шаг 3: режим фундаментной балки/ленты + связка с типформами → список позиций в offert. Открыто: какой нахлёст
+> по умолчанию (сейчас 300 мм сетка / 50·Ø стержни) и текст дисклеймера — показать конструктору.
+>
 > **⚠️ Öppna frågor / väntar på [OWNER]:**
 > - **Проверить, что лид-мейл реально доходит** (`/offert` с вложением → `offert@armeringproffs.se`). P0, висит с 08.09.
 > - **GA4:** пометить `generate_lead` как conversion (только через UI GA4).
