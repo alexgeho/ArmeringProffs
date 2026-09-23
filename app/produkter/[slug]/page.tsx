@@ -8,7 +8,6 @@ import { faq } from "@/config/faq";
 import { site } from "@/config/site";
 import { Section, SectionHeading, Button, Container } from "@/components/ui";
 import { Breadcrumbs, CtaBanner, LeveransSection, Process, CityLinks } from "@/components/sections";
-import { ContactForm } from "@/components/ContactForm";
 import { FaqAccordion } from "@/components/FaqAccordion";
 import { IconCheck, IconArrow, IconPhone } from "@/components/icons";
 import {
@@ -76,24 +75,16 @@ export default async function ProductPage({
         items={[{ name: "Hem", href: "/" }, { name: "Produkter", href: "/produkter" }, { name: p.name }]}
       />
 
-      {/* Hero */}
-      <section className="bg-ink text-white">
-        <Container className="grid grid-cols-1 gap-10 py-14 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
-          <div>
-            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">{p.h1}</h1>
-            <p className="mt-5 max-w-xl text-lg text-slate-300">{p.intro}</p>
-            <div className="mt-8 flex flex-wrap gap-4">
-              <Button href="/offert">Begär offert <IconArrow className="h-4 w-4" /></Button>
-              <a href={site.phoneHref} className="inline-flex h-12 items-center gap-2 rounded-lg border border-white/20 px-5 font-semibold text-white hover:bg-white/10">
-                <IconPhone className="h-4 w-4 text-brand" /> {site.phone}
-              </a>
-            </div>
-          </div>
-          <div className="rounded-2xl bg-white p-6 text-ink shadow-xl sm:p-8">
-            <h2 className="text-lg font-bold">Offert efter din ritning</h2>
-            <div className="mt-4">
-              <ContactForm compact source={`produkt-${p.slug}`} />
-            </div>
+      {/* Huvud: ljust, utan formulär (offert via knappen) */}
+      <section className="border-b border-line bg-surface">
+        <Container className="py-12">
+          <h1 className="max-w-3xl text-4xl font-bold tracking-tight text-ink sm:text-5xl">{p.h1}</h1>
+          <p className="mt-5 max-w-3xl text-lg text-ink-soft">{p.intro}</p>
+          <div className="mt-8 flex flex-wrap gap-4">
+            <Button href="/offert">Begär offert <IconArrow className="h-4 w-4" /></Button>
+            <a href={site.phoneHref} className="inline-flex h-12 items-center gap-2 rounded-lg border border-line px-5 font-semibold text-ink hover:border-brand">
+              <IconPhone className="h-4 w-4 text-brand" /> {site.phone}
+            </a>
           </div>
         </Container>
       </section>
