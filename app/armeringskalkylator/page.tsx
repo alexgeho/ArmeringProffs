@@ -52,13 +52,8 @@ export default function KalkylatorPage() {
 
       <section className="border-b border-line bg-surface">
         <Container className="py-12 sm:py-14">
-          <h1 className="max-w-3xl text-4xl font-bold tracking-tight text-ink sm:text-5xl">
-            Armeringskalkylator – räkna nät, kamjärn och vikt
-          </h1>
-          <p className="mt-5 max-w-2xl text-lg text-ink-soft">
-            Hur mycket armering går åt? Fyll i måtten så räknar vi antal armeringsnät eller kamjärn,
-            löpmeter och vikt i kg – och du kan skicka beräkningen som offertförfrågan direkt.
-          </p>
+          <h1 className="max-w-3xl text-4xl font-bold tracking-tight text-ink sm:text-5xl">Armeringskalkylator</h1>
+          <p className="mt-4 max-w-2xl text-xl text-ink-soft">Räkna nät, kamjärn och vikt</p>
         </Container>
       </section>
 
