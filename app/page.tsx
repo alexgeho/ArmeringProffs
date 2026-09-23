@@ -5,7 +5,7 @@ import { Section, SectionHeading } from "@/components/ui";
 import {
   Hero, UspBar, ProductsGrid, Process, LeveransSection, Reviews, CtaBanner, KalkylatorPromo, GuidesTeaser,
 } from "@/components/sections";
-import { RebarCageIllustration } from "@/components/illustrations";
+import Image from "next/image";
 import { FaqAccordion } from "@/components/FaqAccordion";
 import { IconArrow } from "@/components/icons";
 import { JsonLd, faqSchema, serviceSchema } from "@/lib/jsonld";
@@ -37,7 +37,14 @@ export default function HomePage() {
             />
           </div>
           <div className="rounded-2xl border border-line bg-white p-6 shadow-sm">
-            <RebarCageIllustration className="h-auto w-full" />
+            <Image
+              src="/images/illustrationer/intro-armeringskorg.webp"
+              alt="Prefabricerad armeringskorg i kamstål B500B på trästöd, med bockade byglar bredvid"
+              width={1200}
+              height={900}
+              sizes="(min-width: 1024px) 480px, 100vw"
+              className="h-auto w-full"
+            />
             <p className="mt-4 text-center text-sm text-muted">
               Armeringskorg – svetsad prefab efter dina mått
             </p>
