@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { ContactForm } from "@/components/ContactForm";
 import { SHAPES, clampParam, derivedParams, layoutShape, unitOf } from "@/lib/bending-shapes";
 import { DIAMETERS } from "@/lib/rebar-calc";
@@ -43,10 +43,34 @@ export function BockningsformerExplorer() {
   const [dia, setDia] = useState(10);
   const [qty, setQty] = useState("10");
   const [list, setList] = useState<Pos[]>([]);
+  // Återkoppling vid tillägg: knappen visar "✓ Tillagd", korgraden pulsar.
+  const [added, setAdded] = useState(0); // räknare → triggar puls
+  const [justAdded, setJustAdded] = useState<number | null>(null);
+  const listRef = useRef<HTMLDivElement>(null);
+  const [listVisible, setListVisible] = useState(false);
   const addPos = () => {
     const n = Math.max(1, Math.round(Number(qty.replace(",", ".")) || 1));
-    setList((l) => [...l, { code, name: def.name, dia, qty: n, dims: dimText(def, values) }]);
+    setList((l) => {
+      setJustAdded(l.length + 1);
+      return [...l, { code, name: def.name, dia, qty: n, dims: dimText(def, values) }];
+    });
+    setAdded((a) => a + 1);
   };
+  useEffect(() => {
+    if (justAdded === null) return;
+    const t = setTimeout(() => setJustAdded(null), 1600);
+    return () => clearTimeout(t);
+  }, [justAdded, added]);
+  // Dölj den flytande korgraden när själva listan syns på skärmen.
+  useEffect(() => {
+    const el = listRef.current;
+    if (!el) return;
+    const io = new IntersectionObserver(([e]) => setListVisible(e.isIntersecting), { threshold: 0.15 });
+    io.observe(el);
+    return () => io.disconnect();
+  }, [list.length > 0]);
+  const totalQty = list.reduce((sum, p) => sum + p.qty, 0);
+  const showList = () => listRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
   const spec = useMemo(() => bockningslistaText(list), [list]);
 
   return (
@@ -158,9 +182,11 @@ export function BockningsformerExplorer() {
             <button
               type="button"
               onClick={addPos}
-              className="h-10 flex-1 rounded-lg bg-brand px-4 text-sm font-semibold text-white transition-colors hover:bg-brand-dark"
+              className={`h-10 flex-1 rounded-lg px-4 text-sm font-semibold text-white transition-colors ${
+                justAdded ? "bg-emerald-600" : "bg-brand hover:bg-brand-dark"
+              }`}
             >
-              + Lägg till i listan
+              {justAdded ? `✓ Tillagd som pos ${justAdded}` : "+ Lägg till i listan"}
             </button>
           </div>
         </div>
@@ -215,7 +241,7 @@ export function BockningsformerExplorer() {
 
       {/* Din bockningslista – visas först när minst en position lagts till */}
       {list.length > 0 && (
-      <div className="order-4 rounded-xl border border-line bg-white p-4 sm:p-5 lg:col-span-2">
+      <div ref={listRef} className="order-4 scroll-mt-32 rounded-xl border-2 border-brand/40 bg-white p-4 sm:p-5 lg:col-span-2">
         <div className="flex items-baseline justify-between gap-3">
           <h3 className="text-lg font-bold text-ink">Din bockningslista</h3>
           {list.length > 0 && (
@@ -282,6 +308,27 @@ export function BockningsformerExplorer() {
             </div>
           </div>
       </div>
+      )}
+
+      {/* Flytande "korg" – syns när listan har positioner men själva listan inte är på skärmen */}
+      {list.length > 0 && !listVisible && (
+        <div className="fixed inset-x-0 bottom-4 z-40 flex justify-center px-4">
+          <button
+            key={added}
+            type="button"
+            onClick={showList}
+            className="cart-pop flex w-full max-w-md items-center gap-3 rounded-2xl bg-ink px-4 py-3 text-left text-white shadow-2xl ring-1 ring-white/10"
+          >
+            <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand text-lg font-bold">{list.length}</span>
+            <span className="min-w-0 flex-1">
+              <span className="block text-sm font-semibold">Din bockningslista</span>
+              <span className="block truncate text-xs text-slate-300">
+                {list.length} {list.length === 1 ? "position" : "positioner"} · {totalQty} st
+              </span>
+            </span>
+            <span className="shrink-0 rounded-lg bg-brand px-3 py-2 text-sm font-semibold">Visa & skicka ↓</span>
+          </button>
+        </div>
       )}
     </div>
   );
