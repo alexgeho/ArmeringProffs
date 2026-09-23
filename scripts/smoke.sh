@@ -19,9 +19,15 @@ NOCACHE=(-H 'Cache-Control: no-cache' -H 'Pragma: no-cache')
 # 1) Startsidan + alla 12 orter länkade (= färsk build + hel stads-graf).
 home="$(curl -fsS "${NOCACHE[@]}" "$BASE/?$cb" || true)"
 if [ -z "$home" ]; then say "FEL: startsidan svarade inte"; fail=1; fi
+missing=0
 for c in stockholm goteborg malmo uppsala vasteras orebro linkoping helsingborg jonkoping norrkoping umea sundsvall; do
-  printf '%s' "$home" | grep -q "/armering/$c/" || { say "FEL: stad-länk saknas på startsidan: $c"; fail=1; }
+  printf '%s' "$home" | grep -q "/armering/$c/" || { say "FEL: stad-länk saknas på startsidan: $c"; fail=1; missing=1; }
 done
+# Diagnos: vad fick vi egentligen? (storlek, <title>, första tecknen)
+if [ "$missing" = 1 ]; then
+  say "DIAG startsida: $(printf '%s' "$home" | wc -c) byte, title: $(printf '%s' "$home" | grep -o '<title>[^<]*' | head -1)"
+  say "DIAG början: $(printf '%s' "$home" | head -c 300 | tr '\n' ' ')"
+fi
 
 # 2) Stadssidor svarar 200 (särskilt tidigare föräldralösa umeå/sundsvall).
 for c in stockholm umea sundsvall; do
