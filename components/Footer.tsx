@@ -21,7 +21,7 @@ export function Footer() {
     <footer className="border-t border-line bg-ink text-slate-300">
       <div className="mx-auto grid w-full max-w-6xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-4">
         <div>
-          <Image src="/images/logo-agry-dark.png" alt={`${site.brand} – AGRY OÜ`} width={520} height={480} className="h-auto w-40" />
+          <Image src="/images/logo-agry-dark.png" alt={`${site.brand} – AGRY OÜ`} width={520} height={480} className="h-auto w-40 md:mx-auto" />
         </div>
 
         <div>
