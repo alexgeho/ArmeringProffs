@@ -161,7 +161,7 @@ export default async function ServicePage({
             )}
           </div>
           <aside>
-            <div className="sticky top-24 rounded-xl border border-line bg-surface p-6">
+            <div className="sticky top-28 rounded-xl border border-line bg-surface p-6">
               <h3 className="font-bold text-ink">Det här ingår</h3>
               <ul className="mt-4 space-y-2.5">
                 {s.includes.map((it) => (
