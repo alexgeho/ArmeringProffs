@@ -5,7 +5,7 @@ import { services, getService } from "@/config/services";
 import { posts } from "@/config/blog";
 import { site } from "@/config/site";
 import { Section, SectionHeading, Container } from "@/components/ui";
-import { Breadcrumbs, CtaBanner, Process, CityLinks } from "@/components/sections";
+import { Breadcrumbs, CtaBanner, Process, CityLinks, PhotoBg, glassCard } from "@/components/sections";
 import { ContactForm } from "@/components/ContactForm";
 import { FaqAccordion } from "@/components/FaqAccordion";
 import { IconCheck, IconArrow, IconPhone } from "@/components/icons";
@@ -104,8 +104,9 @@ export default async function ServicePage({
         </section>
       ) : (
         /* Hero med offertformulär */
-        <section className="bg-ink text-white">
-          <Container className="grid grid-cols-1 gap-10 py-14 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
+        <section className="relative overflow-hidden bg-ink text-white">
+          <PhotoBg src="/images/distanser-armeringsnat.webp" alt="Armeringsnät på distanser inför gjutning" />
+          <Container className="relative grid grid-cols-1 gap-10 py-14 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
             <div>
               <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">{s.h1}</h1>
               <p className="mt-5 max-w-xl text-lg text-slate-300">{s.intro}</p>
@@ -122,10 +123,10 @@ export default async function ServicePage({
                 </a>
               </div>
             </div>
-            <div className="rounded-2xl bg-white p-6 text-ink shadow-xl sm:p-8">
-              <h2 className="text-lg font-bold">Begär offert</h2>
+            <div className={glassCard}>
+              <h2 className="text-xl font-bold text-white">Begär offert</h2>
               <div className="mt-4">
-                <ContactForm compact source={`tjanst-${s.slug}`} />
+                <ContactForm compact onDark source={`tjanst-${s.slug}`} />
               </div>
             </div>
           </Container>

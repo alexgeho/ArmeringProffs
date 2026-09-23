@@ -15,6 +15,20 @@ import {
 import { RebarMeshPattern } from "./illustrations";
 
 /* ---------- Hero ---------- */
+/** Fotobakgrund med samma mörka läsbarhets-overlay som startsidans hero. */
+export function PhotoBg({ src, alt = "" }: { src: string; alt?: string }) {
+  return (
+    <>
+      <Image src={src} alt={alt} fill priority sizes="100vw" className="pointer-events-none absolute inset-0 h-full w-full object-cover" />
+      <div className="pointer-events-none absolute inset-0 bg-ink/60" />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-ink via-ink/90 via-55% to-transparent" />
+    </>
+  );
+}
+
+/** Formkortet i hero: transparent "mörkt glas". */
+export const glassCard = "mx-auto w-full min-w-0 max-w-xl rounded-2xl border border-white/20 bg-white/5 p-6 shadow-xl backdrop-blur-sm sm:p-8 lg:max-w-none";
+
 export function Hero({
   title,
   intro,
@@ -31,21 +45,7 @@ export function Hero({
   return (
     <section className="relative overflow-hidden bg-ink">
       {bgImage ? (
-        <>
-          <Image
-            src={bgImage}
-            alt={bgAlt}
-            fill
-            priority
-            sizes="100vw"
-            className="pointer-events-none absolute inset-0 h-full w-full object-cover"
-          />
-          {/* Läsbarhets-overlay i två lager så texten alltid har kontrast:
-              1) en måttlig mörk bas som tonar ner fotots högdagrar (skyddar mobil + orange accent),
-              2) en kraftig mörk vänster (bakom rubrik/text) som tonar ut åt höger där fotot får synas. */}
-          <div className="pointer-events-none absolute inset-0 bg-ink/60" />
-          <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-ink via-ink/90 via-55% to-transparent" />
-        </>
+        <PhotoBg src={bgImage} alt={bgAlt} />
       ) : (
         <RebarMeshPattern className="pointer-events-none absolute inset-0 h-full w-full text-white opacity-[0.07]" />
       )}
@@ -71,7 +71,7 @@ export function Hero({
           </div>
         </div>
 
-        <div className="mx-auto w-full min-w-0 max-w-xl rounded-2xl border border-white/20 bg-white/5 p-6 shadow-xl backdrop-blur-sm sm:p-8 lg:max-w-none">
+        <div className={glassCard}>
           <h2 className="text-xl font-bold text-white">Få en offert på din armering</h2>
           <div className="mt-5">
             <ContactForm compact onDark source={formSource} />

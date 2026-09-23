@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { site } from "@/config/site";
 import Link from "next/link";
 import { Section, Container } from "@/components/ui";
-import { Breadcrumbs } from "@/components/sections";
+import { Breadcrumbs, PhotoBg, glassCard } from "@/components/sections";
 import { ContactForm } from "@/components/ContactForm";
 import { IconCheck, IconPhone, IconRuler, IconArrow } from "@/components/icons";
 import { JsonLd, breadcrumbSchema } from "@/lib/jsonld";
@@ -29,8 +29,9 @@ export default function OffertPage() {
   return (
     <>
       <Breadcrumbs items={[{ name: "Hem", href: "/" }, { name: "Begär offert" }]} />
-      <section className="bg-ink text-white">
-        <Container className="grid grid-cols-1 gap-10 py-14 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+      <section className="relative overflow-hidden bg-ink text-white">
+        <PhotoBg src="/images/om-oss-armeringsverkstad.webp" alt="Armeringsverkstad med prefabricerade armeringskorgar" />
+        <Container className="relative grid grid-cols-1 gap-10 py-14 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
           <div>
             <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">Begär offert på prefab armering</h1>
             <p className="mt-5 text-lg text-slate-300">
@@ -49,10 +50,10 @@ export default function OffertPage() {
               <IconPhone className="h-4 w-4 text-brand" /> Ring oss: {site.phone}
             </a>
           </div>
-          <div className="rounded-2xl bg-white p-6 text-ink shadow-xl sm:p-8">
-            <h2 className="text-xl font-bold">Fyll i dina uppgifter</h2>
+          <div className={glassCard}>
+            <h2 className="text-xl font-bold text-white">Fyll i dina uppgifter</h2>
             <div className="mt-5">
-              <ContactForm source="offertsida" />
+              <ContactForm onDark source="offertsida" />
             </div>
           </div>
         </Container>

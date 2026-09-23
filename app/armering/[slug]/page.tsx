@@ -6,7 +6,7 @@ import { products } from "@/config/products";
 import { site } from "@/config/site";
 import type { Faq } from "@/config/faq";
 import { Section, Container, Button, SectionHeading } from "@/components/ui";
-import { Breadcrumbs, CtaBanner, KalkylatorPromo, GuidesTeaser } from "@/components/sections";
+import { Breadcrumbs, CtaBanner, KalkylatorPromo, GuidesTeaser, PhotoBg, glassCard } from "@/components/sections";
 import { ContactForm } from "@/components/ContactForm";
 import { FaqAccordion } from "@/components/FaqAccordion";
 import { IconCheck, IconArrow, IconPhone, IconTruck } from "@/components/icons";
@@ -91,8 +91,9 @@ export default async function CityPage({
       />
 
       {/* Hero */}
-      <section className="bg-ink text-white">
-        <Container className="grid grid-cols-1 gap-10 py-14 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
+      <section className="relative overflow-hidden bg-ink text-white">
+        <PhotoBg src="/images/armeringsjarn-kamstal.webp" alt="Armeringsjärn och betong på byggarbetsplats" />
+        <Container className="relative grid grid-cols-1 gap-10 py-14 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
           <div>
             <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
               Armering i {c.name}
@@ -114,11 +115,10 @@ export default async function CityPage({
               </a>
             </div>
           </div>
-          <div className="rounded-2xl bg-white p-6 text-ink shadow-xl sm:p-8">
-            <h2 className="text-xl font-bold">Offert på armering i {c.name}</h2>
-            <p className="mt-1 text-sm text-ink-soft">Fyll i formuläret så återkommer vi snabbt.</p>
+          <div className={glassCard}>
+            <h2 className="text-xl font-bold text-white">Offert på armering i {c.name}</h2>
             <div className="mt-5">
-              <ContactForm compact source={`stad-${c.slug}`} />
+              <ContactForm compact onDark source={`stad-${c.slug}`} />
             </div>
           </div>
         </Container>
