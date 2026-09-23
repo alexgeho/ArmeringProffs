@@ -10,7 +10,7 @@ import { ContactForm } from "@/components/ContactForm";
 import { FaqAccordion } from "@/components/FaqAccordion";
 import { IconCheck, IconArrow, IconPhone } from "@/components/icons";
 import { AnimatedScene } from "@/components/AnimatedScene";
-import { BockningslistaExplorer } from "@/components/BockningslistaExplorer";
+import { BockningsformerExplorer } from "@/components/BockningsformerExplorer";
 import { JsonLd, serviceSchema, faqSchema, breadcrumbSchema } from "@/lib/jsonld";
 
 export function generateStaticParams() {
@@ -54,11 +54,12 @@ function relatedGuides(keywords: string[], n = 3) {
     .map((r) => r.post);
 }
 
-/** Animerad förklarande scen per tjänst (valfri). */
-const scenes: Record<string, { svg: React.ReactNode; caption: string }> = {
+/** Tjänster som visar ett interaktivt verktyg i stället för hero med formulär. */
+const tools: Record<string, { title: string; text: string; node: React.ReactNode }> = {
   bockningslista: {
-    svg: <BockningslistaExplorer />,
-    caption: "Varje rad i bockningslistan blir en färdig detalj – kapad och bockad efter dina mått. Klicka på en rad för att se formen.",
+    title: "Typformer för bockning – välj en kod",
+    text: "Alla standardformer med bokstavskod och måttbeteckningar (a, b, c …). Klicka på en kod för att se formen och vilka mått du anger i bockningslistan.",
+    node: <BockningsformerExplorer />,
   },
 };
 
@@ -74,7 +75,7 @@ export default async function ServicePage({
   const url = `${site.url}/tjanster/${s.slug}`;
   const others = services.filter((x) => x.slug !== s.slug);
   const guides = relatedGuides(s.keywords, 3);
-  const scene = scenes[s.slug];
+  const tool = tools[s.slug];
 
   return (
     <>
@@ -82,44 +83,61 @@ export default async function ServicePage({
         items={[{ name: "Hem", href: "/" }, { name: "Tjänster", href: "/tjanster" }, { name: s.name }]}
       />
 
-      {/* Hero */}
-      <section className="bg-ink text-white">
-        <Container className="grid grid-cols-1 gap-10 py-14 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
-          <div>
-            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">{s.h1}</h1>
-            <p className="mt-5 max-w-xl text-lg text-slate-300">{s.intro}</p>
-            <ul className="mt-7 grid gap-3 sm:grid-cols-2">
-              {s.includes.slice(0, 4).map((it) => (
-                <li key={it} className="flex items-center gap-2 text-slate-200">
-                  <IconCheck className="h-5 w-5 shrink-0 text-brand" /> {it}
-                </li>
-              ))}
-            </ul>
-            <div className="mt-8 flex flex-wrap gap-4">
-              <a href={site.phoneHref} className="inline-flex h-12 items-center gap-2 rounded-lg border border-white/20 px-5 font-semibold text-white hover:bg-white/10">
+      {tool ? (
+        /* Verktygssida: ljust huvud + interaktivt verktyg i stället för mörk hero med formulär */
+        <section className="border-b border-line bg-surface">
+          <Container className="py-12">
+            <h1 className="max-w-3xl text-4xl font-bold tracking-tight text-ink sm:text-5xl">{s.h1}</h1>
+            <p className="mt-5 max-w-3xl text-lg text-ink-soft">{s.intro}</p>
+            <div className="mt-10 rounded-2xl border border-line bg-white p-4 shadow-sm sm:p-6">
+              <h2 className="text-xl font-bold text-ink">{tool.title}</h2>
+              <p className="mt-1 mb-6 max-w-3xl text-sm text-muted">{tool.text}</p>
+              <AnimatedScene>{tool.node}</AnimatedScene>
+            </div>
+            <div className="mt-8 flex flex-wrap items-center gap-4">
+              <Link href="/offert" className="inline-flex h-12 items-center rounded-lg bg-brand px-6 font-semibold text-white hover:bg-brand-dark">
+                Skicka din bockningslista – begär offert
+              </Link>
+              <a href={site.phoneHref} className="inline-flex h-12 items-center gap-2 rounded-lg border border-line px-5 font-semibold text-ink hover:border-brand">
                 <IconPhone className="h-4 w-4 text-brand" /> {site.phone}
               </a>
             </div>
-          </div>
-          <div className="rounded-2xl bg-white p-6 text-ink shadow-xl sm:p-8">
-            <h2 className="text-lg font-bold">Begär offert</h2>
-            <div className="mt-4">
-              <ContactForm compact source={`tjanst-${s.slug}`} />
+          </Container>
+        </section>
+      ) : (
+        /* Hero med offertformulär */
+        <section className="bg-ink text-white">
+          <Container className="grid grid-cols-1 gap-10 py-14 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
+            <div>
+              <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">{s.h1}</h1>
+              <p className="mt-5 max-w-xl text-lg text-slate-300">{s.intro}</p>
+              <ul className="mt-7 grid gap-3 sm:grid-cols-2">
+                {s.includes.slice(0, 4).map((it) => (
+                  <li key={it} className="flex items-center gap-2 text-slate-200">
+                    <IconCheck className="h-5 w-5 shrink-0 text-brand" /> {it}
+                  </li>
+                ))}
+              </ul>
+              <div className="mt-8 flex flex-wrap gap-4">
+                <a href={site.phoneHref} className="inline-flex h-12 items-center gap-2 rounded-lg border border-white/20 px-5 font-semibold text-white hover:bg-white/10">
+                  <IconPhone className="h-4 w-4 text-brand" /> {site.phone}
+                </a>
+              </div>
             </div>
-          </div>
-        </Container>
-      </section>
+            <div className="rounded-2xl bg-white p-6 text-ink shadow-xl sm:p-8">
+              <h2 className="text-lg font-bold">Begär offert</h2>
+              <div className="mt-4">
+                <ContactForm compact source={`tjanst-${s.slug}`} />
+              </div>
+            </div>
+          </Container>
+        </section>
+      )}
 
       {/* Body */}
       <Section>
         <div className="grid gap-12 lg:grid-cols-[1.4fr_0.6fr]">
           <div className="prose-body max-w-none">
-            {scene && (
-              <figure className="mb-10 rounded-2xl border border-line bg-surface p-4 sm:p-6">
-                <AnimatedScene>{scene.svg}</AnimatedScene>
-                <figcaption className="mt-3 text-sm text-muted">{scene.caption}</figcaption>
-              </figure>
-            )}
             {s.body.map((b) => (
               <div key={b.heading} className="mb-8">
                 <h2 className="text-2xl font-bold text-ink">{b.heading}</h2>

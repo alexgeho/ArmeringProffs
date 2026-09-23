@@ -23,7 +23,12 @@
 > (rak/vinkel/bygel/U/Z/krok), клик → форма рисуется в стали с размерами. Геометрия параметрическая
 > (`lib/rebar-shapes.ts`: форма + мм → изометрический path + размерные линии) — Recraft для этого НЕ нужен.
 > Попутно: фикс горизонтального скролла на мобиле (hero-grid `grid-cols-1`) на tjanster/produkter/armering/offert/kontakt.
-> 🔜 Шаг 2 (обсудить): посетитель сам вводит позиции → видит форму → «Skicka som offertförfrågan» (мини-конфигуратор = лиды).
+> ✅ Затем (тот же день) заменено на **все типформы по буквам** стандарта «Förteckning över bockning av stänger 2A, 1979»
+> (A…XX + Special, 30 шт) — `components/BockningsformerExplorer.tsx` + `lib/bending-shapes.ts` (плоские — вид спереди,
+> как в стандарте; SX/O/X/XX — изометрия). Рисунки свои, из стандарта только коды и буквы размеров.
+> На `/tjanster/bockningslista` **тёмный hero с формой убран по просьбе владельца** → светлый H1+intro + инструмент +
+> CTA «Skicka din bockningslista – begär offert» (/offert). Остальные tjanster-страницы — с прежним hero.
+> 🔜 Шаг 2 (обсудить): посетитель вводит свои позиции (код + мм) → видит форму → отправляет список в offert.
 >
 > **⚠️ Öppna frågor / väntar på [OWNER]:**
 > - **Проверить, что лид-мейл реально доходит** (`/offert` с вложением → `offert@armeringproffs.se`). P0, висит с 08.09.
