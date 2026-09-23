@@ -22,9 +22,6 @@ export function Footer() {
       <div className="mx-auto grid w-full max-w-6xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-4">
         <div>
           <Image src="/images/logo-agry-dark.png" alt={`${site.brand} – AGRY OÜ`} width={520} height={480} className="h-auto w-40" />
-          <p className="mt-4 text-sm leading-relaxed text-slate-400">
-            Tillverkning, leverans och montage i {site.regionInflected}.
-          </p>
         </div>
 
         <div>
