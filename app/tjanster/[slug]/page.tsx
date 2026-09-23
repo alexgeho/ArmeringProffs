@@ -87,8 +87,8 @@ export default async function ServicePage({
         /* Verktygssida: ljust huvud + interaktivt verktyg i stället för mörk hero med formulär */
         <section className="border-b border-line bg-surface">
           <Container className="py-10">
-            <div className="rounded-2xl border border-line bg-white p-4 shadow-sm sm:p-6">
-              <h2 className="text-xl font-bold text-ink">{tool.title}</h2>
+            <div>
+              <h2 className="text-2xl font-bold text-ink">{tool.title}</h2>
               <p className="mt-1 mb-6 max-w-3xl text-sm text-muted">{tool.text}</p>
               <AnimatedScene>{tool.node}</AnimatedScene>
             </div>
