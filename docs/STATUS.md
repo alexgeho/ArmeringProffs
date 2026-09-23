@@ -30,6 +30,11 @@
 > CTA «Skicka din bockningslista – begär offert» (/offert). Остальные tjanster-страницы — с прежним hero.
 > 🔜 Шаг 2 (обсудить): посетитель вводит свои позиции (код + мм) → видит форму → отправляет список в offert.
 >
+> **🆕 2026-09-23 — логотип:** новый логотип AGRY OÜ («KLIPPT · BOCKAD · PREFAB ARMERING», трафаретный шрифт), финальная
+> версия владельца из Figma. Шапка: `public/images/logo-emblem.png` (только круг), подвал: `public/images/logo-agry.png`
+> на белой плашке. Мастер-SVG у владельца (`~/Desktop/Agry_OU_logo.svg`). ⚠️ favicon/`app/icon.png`/OG-картинка ещё СТАРЫЕ.
+> **CI:** smoke дважды 23.09 падал на «stad-länk saknas» с раннера (локально зелёный) → в `scripts/smoke.sh` добавлен DIAG-вывод.
+>
 > **⚠️ Öppna frågor / väntar på [OWNER]:**
 > - **Проверить, что лид-мейл реально доходит** (`/offert` с вложением → `offert@armeringproffs.se`). P0, висит с 08.09.
 > - **GA4:** пометить `generate_lead` как conversion (только через UI GA4).
