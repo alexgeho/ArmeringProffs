@@ -22,25 +22,25 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-line bg-white/90 backdrop-blur">
-      <div className="mx-auto flex h-[80px] w-full max-w-6xl items-center justify-between px-4 sm:h-[96px] sm:px-6">
-        <Link href="/" aria-label={site.brand} className="flex items-center font-bold text-ink" onClick={() => setOpen(false)}>
-          <Image src="/images/logo-agry-light.png" alt={`${site.brand} – AGRY OÜ`} width={260} height={240} className="h-[72px] w-auto shrink-0 sm:h-[88px]" priority />
+      <div className="mx-auto flex h-[84px] w-full max-w-6xl items-center justify-between gap-4 px-4 sm:h-[100px] sm:px-6 lg:h-[116px]">
+        <Link href="/" aria-label={site.brand} className="flex shrink-0 items-center font-bold text-ink" onClick={() => setOpen(false)}>
+          <Image src="/images/logo-agry-light.png" alt={`${site.brand} – AGRY OÜ`} width={390} height={360} className="h-[76px] w-auto max-w-none shrink-0 object-contain sm:h-[92px] lg:h-[104px]" priority />
         </Link>
 
-        <nav className="hidden items-center gap-7 md:flex">
+        <nav className="hidden items-center gap-5 lg:flex xl:gap-7">
           {nav.map((n) => (
-            <Link key={n.href} href={n.href} className="text-sm font-medium text-ink-soft transition-colors hover:text-brand">
+            <Link key={n.href} href={n.href} className="whitespace-nowrap text-sm font-medium text-ink-soft transition-colors hover:text-brand">
               {n.label}
             </Link>
           ))}
         </nav>
 
-        <div className="hidden items-center gap-3 md:flex">
-          <a href={site.phoneHref} className="flex items-center gap-2 text-sm font-semibold text-ink hover:text-brand">
+        <div className="hidden shrink-0 items-center gap-3 lg:flex">
+          <a href={site.phoneHref} aria-label={`Ring ${site.phone}`} className="flex items-center gap-2 whitespace-nowrap text-sm font-semibold text-ink hover:text-brand">
             <IconPhone className="h-4 w-4 text-brand" />
-            {site.phone}
+            <span className="hidden xl:inline">{site.phone}</span>
           </a>
-          <Link href="/offert" className="inline-flex h-10 items-center rounded-lg bg-brand px-4 text-sm font-semibold text-white transition-colors hover:bg-brand-dark">
+          <Link href="/offert" className="inline-flex h-10 items-center whitespace-nowrap rounded-lg bg-brand px-4 text-sm font-semibold text-white transition-colors hover:bg-brand-dark">
             Begär offert
           </Link>
         </div>
@@ -50,7 +50,7 @@ export function Header() {
           aria-label="Meny"
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
-          className="flex h-10 w-10 items-center justify-center rounded-lg border border-line md:hidden"
+          className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-line lg:hidden"
         >
           <span className="sr-only">Öppna meny</span>
           <div className="space-y-1.5">
@@ -62,7 +62,7 @@ export function Header() {
       </div>
 
       {open && (
-        <div className="border-t border-line bg-white md:hidden">
+        <div className="border-t border-line bg-white lg:hidden">
           <nav className="mx-auto flex w-full max-w-6xl flex-col px-4 py-3 sm:px-6">
             {nav.map((n) => (
               <Link

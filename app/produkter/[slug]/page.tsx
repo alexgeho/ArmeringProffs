@@ -128,7 +128,7 @@ export default async function ProductPage({
             )}
           </div>
           <aside>
-            <div className="sticky top-28 rounded-xl border border-line bg-surface p-6">
+            <div className="sticky top-32 rounded-xl border border-line bg-surface p-6">
               <h3 className="font-bold text-ink">Egenskaper</h3>
               <ul className="mt-4 space-y-2.5">
                 {p.includes.map((it) => (
