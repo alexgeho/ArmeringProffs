@@ -160,10 +160,10 @@ export function ProductsGrid() {
 
 /* ---------- Process ---------- */
 const steps = [
-  { n: "1", title: "Skicka ritning eller bockningslista", text: "Ladda upp din bockningslista, konstruktionsritning eller mängd – så återkommer vi." },
-  { n: "2", title: "Offert & leveranstid", text: "Du får ett tydligt pris och besked om leveranstid. Saknar du bockningslista hjälper vi till." },
-  { n: "3", title: "Tillverkning", text: "Vi kapar, bockar och svetsar armeringen i B500B, märker och sorterar per element." },
-  { n: "4", title: "Leverans & montage", text: "Vi levererar i hela Sverige – och kan även lägga armeringen på plats." },
+  { n: "1", img: "steg-1-ritning", title: "Skicka ritning eller bockningslista", text: "Ladda upp din bockningslista, konstruktionsritning eller mängd – så återkommer vi." },
+  { n: "2", img: "steg-2-offert", title: "Offert & leveranstid", text: "Du får ett tydligt pris och besked om leveranstid. Saknar du bockningslista hjälper vi till." },
+  { n: "3", img: "steg-3-tillverkning", title: "Tillverkning", text: "Vi kapar, bockar och svetsar armeringen i B500B, märker och sorterar per element." },
+  { n: "4", img: "steg-4-leverans", title: "Leverans & montage", text: "Vi levererar i hela Sverige – och kan även lägga armeringen på plats." },
 ];
 
 export function Process() {
@@ -172,7 +172,17 @@ export function Process() {
       <SectionHeading eyebrow="Så går det till" title="Från bockningslista till färdig leverans" />
       <div className="mt-10 grid gap-6 md:grid-cols-4">
         {steps.map((s) => (
-          <div key={s.n} className="relative rounded-xl border border-line p-6">
+          <div key={s.n} className="relative overflow-hidden rounded-xl border border-line p-6">
+            <div className="-mx-6 -mt-6 mb-5 aspect-[16/9] overflow-hidden border-b border-line bg-slate-100">
+              <Image
+                src={`/images/illustrationer/${s.img}.webp`}
+                alt=""
+                width={1280}
+                height={720}
+                sizes="(min-width: 768px) 300px, 100vw"
+                className="h-full w-full object-cover"
+              />
+            </div>
             <span className="flex h-10 w-10 items-center justify-center rounded-full bg-brand text-lg font-bold text-white">
               {s.n}
             </span>

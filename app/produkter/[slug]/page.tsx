@@ -156,7 +156,17 @@ export default async function ProductPage({
         <SectionHeading eyebrow="Fler produkter" title="Hela armeringspaketet från en leverantör" />
         <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {others.map((o) => (
-            <Link key={o.slug} href={`/produkter/${o.slug}`} className="rounded-xl border border-line bg-white p-5 transition-colors hover:border-brand">
+            <Link key={o.slug} href={`/produkter/${o.slug}`} className="overflow-hidden rounded-xl border border-line bg-white p-5 transition-colors hover:border-brand">
+              <div className="-mx-5 -mt-5 mb-4 aspect-[16/9] overflow-hidden border-b border-line bg-slate-100">
+                <Image
+                  src={`/images/illustrationer/${o.slug}.webp`}
+                  alt=""
+                  width={1280}
+                  height={720}
+                  sizes="(min-width: 1024px) 280px, 50vw"
+                  className="h-full w-full object-cover"
+                />
+              </div>
               <h3 className="font-semibold text-ink">{o.name}</h3>
               <span className="mt-2 inline-flex items-center gap-1 text-sm font-semibold text-brand">
                 Läs mer <IconArrow className="h-4 w-4" />
