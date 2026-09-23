@@ -18,7 +18,12 @@
 > Recraft — только эскиз композиции, финал — ручной SVG. Сделана сцена A «bockningslista → bygel» на
 > `/tjanster/bockningslista` (`components/steel-scenes.tsx` + `components/AnimatedScene.tsx`, CSS в `globals.css`,
 > десктоп + отдельная мобильная раскладка). Дальше по плану: D (montage/плита), C (маршрут Эстония→паром→Швеция, УТП срок),
-> возможно галерея стандартных форм byglar (как у armeringdirekt, но статично). Эскизы Recraft — у владельца на Desktop.
+> Эскизы Recraft — у владельца на Desktop.
+> ✅ Сцена A заменена на **кликабельную bockningslista** (`components/BockningslistaExplorer.tsx`): 6 позиций
+> (rak/vinkel/bygel/U/Z/krok), клик → форма рисуется в стали с размерами. Геометрия параметрическая
+> (`lib/rebar-shapes.ts`: форма + мм → изометрический path + размерные линии) — Recraft для этого НЕ нужен.
+> Попутно: фикс горизонтального скролла на мобиле (hero-grid `grid-cols-1`) на tjanster/produkter/armering/offert/kontakt.
+> 🔜 Шаг 2 (обсудить): посетитель сам вводит позиции → видит форму → «Skicka som offertförfrågan» (мини-конфигуратор = лиды).
 >
 > **⚠️ Öppna frågor / väntar på [OWNER]:**
 > - **Проверить, что лид-мейл реально доходит** (`/offert` с вложением → `offert@armeringproffs.se`). P0, висит с 08.09.

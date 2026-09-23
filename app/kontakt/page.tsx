@@ -22,7 +22,7 @@ export default function KontaktPage() {
     <>
       <Breadcrumbs items={[{ name: "Hem", href: "/" }, { name: "Kontakt" }]} />
       <Section>
-        <div className="grid gap-12 lg:grid-cols-2">
+        <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
           <div>
             <SectionHeading
               eyebrow="Kontakt"

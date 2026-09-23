@@ -92,7 +92,7 @@ export default async function CityPage({
 
       {/* Hero */}
       <section className="bg-ink text-white">
-        <Container className="grid gap-10 py-14 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
+        <Container className="grid grid-cols-1 gap-10 py-14 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
           <div>
             <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
               Armering i {c.name}

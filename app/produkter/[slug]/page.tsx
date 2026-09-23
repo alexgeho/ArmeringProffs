@@ -78,7 +78,7 @@ export default async function ProductPage({
 
       {/* Hero */}
       <section className="bg-ink text-white">
-        <Container className="grid gap-10 py-14 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
+        <Container className="grid grid-cols-1 gap-10 py-14 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
           <div>
             <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">{p.h1}</h1>
             <p className="mt-5 max-w-xl text-lg text-slate-300">{p.intro}</p>

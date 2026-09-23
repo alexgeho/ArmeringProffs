@@ -30,7 +30,7 @@ export default function OffertPage() {
     <>
       <Breadcrumbs items={[{ name: "Hem", href: "/" }, { name: "Begär offert" }]} />
       <section className="bg-ink text-white">
-        <Container className="grid gap-10 py-14 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+        <Container className="grid grid-cols-1 gap-10 py-14 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
           <div>
             <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">Begär offert på prefab armering</h1>
             <p className="mt-5 text-lg text-slate-300">

@@ -10,7 +10,7 @@ import { ContactForm } from "@/components/ContactForm";
 import { FaqAccordion } from "@/components/FaqAccordion";
 import { IconCheck, IconArrow, IconPhone } from "@/components/icons";
 import { AnimatedScene } from "@/components/AnimatedScene";
-import { BockningslistaScene } from "@/components/steel-scenes";
+import { BockningslistaExplorer } from "@/components/BockningslistaExplorer";
 import { JsonLd, serviceSchema, faqSchema, breadcrumbSchema } from "@/lib/jsonld";
 
 export function generateStaticParams() {
@@ -57,8 +57,8 @@ function relatedGuides(keywords: string[], n = 3) {
 /** Animerad förklarande scen per tjänst (valfri). */
 const scenes: Record<string, { svg: React.ReactNode; caption: string }> = {
   bockningslista: {
-    svg: <BockningslistaScene className="h-auto w-full" />,
-    caption: "Från rad i bockningslistan till färdig bygel – kapad och bockad efter dina mått.",
+    svg: <BockningslistaExplorer />,
+    caption: "Varje rad i bockningslistan blir en färdig detalj – kapad och bockad efter dina mått. Klicka på en rad för att se formen.",
   },
 };
 
@@ -84,7 +84,7 @@ export default async function ServicePage({
 
       {/* Hero */}
       <section className="bg-ink text-white">
-        <Container className="grid gap-10 py-14 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
+        <Container className="grid grid-cols-1 gap-10 py-14 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
           <div>
             <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">{s.h1}</h1>
             <p className="mt-5 max-w-xl text-lg text-slate-300">{s.intro}</p>
