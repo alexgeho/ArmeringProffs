@@ -219,7 +219,7 @@ export const products: Product[] = [
       "beställa armeringsjärn",
     ],
     includes: [
-      "Kamstål B500B enligt SS 212540",
+      "Kamstål B500B / K500C-T enligt SS 212540",
       "Dimensioner Ø6, Ø8, Ø10, Ø12, Ø16, Ø20, Ø25, Ø32 mm",
       "Raka längder och rullat material",
       "Kapning på begäran",

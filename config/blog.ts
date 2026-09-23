@@ -81,7 +81,7 @@ export const posts: Post[] = [
       { type: "ul", items: [
         "Lägg nätet på distanser så det hamnar inne i betongen, inte mot underlaget.",
         "Placera huvudarmeringen där dragkrafterna är störst – i platta på mark oftast i nedre tredjedelen.",
-        "Överlappa nätskarvar med minst 1,5–2 rutor (ca 200–300 mm) och bind ihop dem.",
+        "Överlappa nätskarvar med minst två rutor (ca 300–400 mm för 150-nät) och bind ihop dem. Se [skarvlängd och överlapp](/blogg/skarvlangd-armering).",
         "Håll ett täckskikt av betong (ofta minst 25–35 mm) runt all armering – annars rostar stålet.",
         "Förstärk kanter och hörn med extra kamjärn där lasterna koncentreras.",
       ] },
@@ -93,7 +93,7 @@ export const posts: Post[] = [
     faqs: [
       { q: "Vilken armering behövs till en betongplatta?", a: "Till platta på mark används oftast svetsat armeringsnät (Ø5–6 mm, 150 mm rutor) som huvudarmering, kompletterat med lösa kamjärn (Ø10–12 mm) i kanter och under bärande väggar. Exakt val ska följa konstruktionsritning." },
       { q: "Hur mycket armeringsnät går åt per kvadratmeter?", a: "Räkna med cirka plattans yta plus 10–15 % extra för överlapp mellan näten. Nät levereras i standardformat, t.ex. 2,0 × 5,0 m, så en del spill uppstår vid kapning." },
-      { q: "Hur mycket ska armeringsnät överlappa?", a: "Skarvar mellan armeringsnät bör överlappa minst 1,5–2 rutor, ungefär 200–300 mm, och bindas ihop med bindtråd så att de ligger stilla under gjutningen." },
+      { q: "Hur mycket ska armeringsnät överlappa?", a: "Vanlig praxis är att näten överlappar minst två rutor – för 150-nät cirka 300–400 mm – och binds ihop så att de ligger stilla under gjutningen. Ritningen gäller." },
       { q: "Var i plattan ska armeringen ligga?", a: "Armeringen ska ligga inne i betongen på distanser, inte mot underlaget. I en platta på mark placeras huvudarmeringen vanligtvis i nedre tredjedelen, med minst 25–35 mm betongtäckning runt stålet så att det inte rostar." },
       { q: "Behöver en liten platta armering?", a: "Ja, även en mindre platta bör armeras med ett nät för att fördela laster och begränsa sprickor. Undantag kan finnas för mycket små, olastade ytor, men för garage, uterum och husgrund krävs armering enligt ritning." },
     ],
@@ -141,7 +141,7 @@ export const posts: Post[] = [
       ] },
 
       { type: "h2", text: "Överlapp och placering" },
-      { type: "p", text: "Skarvar mellan nät ska överlappa minst 1,5–2 rutor (ca 200–300 mm) och bindas ihop. Nätet läggs på distanser så att det hamnar inne i betongen med tillräckligt täckskikt (ofta minst 25–35 mm). Läs mer i vår guide om [armering till betongplatta](/blogg/armering-till-betongplatta)." },
+      { type: "p", text: "Skarvar mellan nät ska överlappa minst två rutor (ca 300–400 mm för 150-nät) och bindas ihop – se [skarvlängd och överlapp](/blogg/skarvlangd-armering). Nätet läggs på distanser så att det hamnar inne i betongen med tillräckligt täckskikt (ofta minst 25–35 mm). Läs mer i vår guide om [armering till betongplatta](/blogg/armering-till-betongplatta)." },
 
       { type: "figure", illustration: "mesh-overlap", caption: "Två armeringsnät skarvas med överlapp på ca 200–300 mm som binds ihop." },
 
@@ -153,13 +153,13 @@ export const posts: Post[] = [
       { q: "Vad betyder 5x150 på ett armeringsnät?", a: "Det betyder att nätet har Ø5 mm tråd med 150 mm mellan trådarna, alltså 150 mm rutor. Första siffran är trådens diameter i mm, andra är rutstorleken." },
       { q: "Vilket armeringsnät ska jag ha till en garageplatta?", a: "Till en garageplatta används vanligtvis nät med Ø6 mm tråd och 150 mm rutor, ofta kompletterat med extra kamjärn i kanterna. Exakt val beror på laster och ska följa konstruktionsritning." },
       { q: "Vilka mått har ett armeringsnät?", a: "Näten säljs i standardformat, ett vanligt format är omkring 2,0 × 5,0 m, men storleken varierar mellan leverantörer. Behöver du andra mått går det att tillverka specialnät efter ritning." },
-      { q: "Hur mycket ska armeringsnät överlappa?", a: "Överlappet mellan två nät bör vara minst 1,5–2 rutor, ungefär 200–300 mm, och skarvarna bör bindas ihop så att näten ligger stilla vid gjutning." },
+      { q: "Hur mycket ska armeringsnät överlappa?", a: "Vanlig praxis är minst två rutor – för 150-nät cirka 300–400 mm – och skarvarna binds ihop så att näten ligger stilla vid gjutning. Ritningen gäller." },
     ],
   },
   {
     slug: "armeringsjarn-dimensioner",
     title: "Armeringsjärn – dimensioner och när du använder vad",
-    metaTitle: "Armeringsjärn dimensioner (6–32 mm) | Guide 2026",
+    metaTitle: "Armeringsjärn dimensioner – vilken till vad",
     metaDescription:
       "Armeringsjärn (kamstål B500B) finns i dimensioner från 6 till 32 mm. Guide om vilken dimension du använder till platta, kantbalk och husgrund – och hur järnen placeras.",
     excerpt:
@@ -174,7 +174,7 @@ export const posts: Post[] = [
       "armeringsstål",
     ],
     content: [
-      { type: "p", text: "Armeringsjärn – även kallat kamstål eller armeringsstål – är räfflade stålstänger som gjuts in i betong för att ta upp dragkrafter. Kammarna (räfflorna) gör att stålet biter fast i betongen. I Sverige används normalt kvaliteten B500B. Här går vi igenom dimensionerna och när du använder vilken." },
+      { type: "p", text: "Armeringsjärn – även kallat kamstål eller armeringsstål – är räfflade stålstänger som gjuts in i betong för att ta upp dragkrafter. Kammarna (räfflorna) gör att stålet biter fast i betongen. I Sverige används normalt kvaliteten B500B. Här går vi igenom dimensionerna och när du använder vilken. Om själva stålet – B500B, K500C-T, vikt per meter och längder – läser du i [armeringsstål](/blogg/armeringsstal)." },
 
       { type: "h2", text: "Vanliga dimensioner" },
       { type: "table",
@@ -277,7 +277,7 @@ export const posts: Post[] = [
       { type: "p", text: "Innan du beställer armering vill du veta ungefär hur mycket som går åt. Här är enkla tumregler för armeringsnät och kamjärn – exakt mängd ska alltid följa konstruktionsritning. Vill du räkna automatiskt? Använd vår [armeringskalkylator](/armeringskalkylator)." },
 
       { type: "h2", text: "Armeringsnät" },
-      { type: "p", text: "Åtgången av nät motsvarar plattans yta plus spill för överlapp. Eftersom skarvar ska överlappa 1,5–2 rutor räknar man normalt med cirka 10–15 % extra utöver kvadratmeterytan. En platta på 40 m² kräver alltså ungefär 44–46 m² nät." },
+      { type: "p", text: "Åtgången av nät motsvarar plattans yta plus spill för överlapp. Eftersom skarvar ska överlappa minst två rutor räknar man normalt med cirka 10–15 % extra utöver kvadratmeterytan. En platta på 40 m² kräver alltså ungefär 44–46 m² nät." },
       { type: "table",
         caption: "Riktvärde för nätåtgång inkl. överlapp och spill.",
         head: ["Plattans yta", "Nät att beställa (ca)"],
@@ -305,7 +305,7 @@ export const posts: Post[] = [
     faqs: [
       { q: "Hur mycket armeringsnät går åt per m²?", a: "Räkna med plattans yta plus cirka 10–15 % extra för överlapp och spill. En platta på 40 m² kräver alltså ungefär 44–46 m² armeringsnät." },
       { q: "Hur räknar man ut åtgången av kamjärn?", a: "Kamjärn till kanter beräknas efter plattans omkrets gånger antal järn per kantbalk, plus överlapp i skarvar och förstärkningar. En platta på 6 × 8 m har 28 m omkrets, vilket med två järn runt om ger cirka 56 löpmeter." },
-      { q: "Hur mycket ska man räkna med för spill?", a: "För armeringsnät räknar man normalt med 10–15 % extra utöver plattans yta, eftersom skarvar ska överlappa 1,5–2 rutor och nät kapas till." },
+      { q: "Hur mycket ska man räkna med för spill?", a: "För armeringsnät räknar man normalt med 10–15 % extra utöver plattans yta, eftersom skarvar ska överlappa minst två rutor och nät kapas till." },
     ],
   },
   {
@@ -1130,6 +1130,172 @@ export const posts: Post[] = [
       { q: "Får man räta ut ett bockat armeringsjärn?", a: "Nej, inte utan att det uttryckligen tillåts i arbetsbeskrivningen – då krävs särskild utrustning och en fastställd metod. Stålet kan annars spricka i bocken. Fråga konstruktören." },
     ],
   },
+  {
+    slug: "skarvlangd-armering",
+    title: "Skarvlängd och överlapp för armering – tabell och beräkning",
+    metaTitle: "Skarvlängd armering – tabell Ø8–Ø25",
+    metaDescription:
+      "Skarvlängd för armeringsjärn Ø8–Ø25 i tabell, hur du beräknar den enligt Eurokod 2 och hur mycket armeringsnät ska överlappa. Ritningen gäller alltid.",
+    excerpt:
+      "Armeringsjärn och nät måste skarvas med tillräcklig överlappning för att krafterna ska föras över. Här är riktvärden för skarvlängd, hur den beräknas och hur mycket armeringsnät ska överlappa.",
+    date: "2026-09-23",
+    readingMinutes: 7,
+    keywords: [
+      "skarvlängd armering",
+      "skarvlängder armering",
+      "beräkna skarvlängd armering",
+      "skarvlängd armering 10mm",
+      "skarvlängd armering 12mm",
+      "skarvlängd armering 16mm",
+      "skarvlängd armeringsjärn",
+      "överlapp armeringsjärn",
+      "överlapp armeringsnät",
+      "hur mycket överlapp armeringsnät",
+    ],
+    content: [
+      { type: "p", text: "Armeringsjärn levereras i begränsade längder, oftast 6 eller 12 meter, och armeringsnät i ark. När armeringen behöver vara längre skarvas den genom att två järn får överlappa varandra – en omlottskarv. Kraften förs då över från det ena järnet till det andra via betongen. Är överlappningen för kort fungerar skarven inte." },
+
+      { type: "h2", text: "Vad är skarvlängd?" },
+      { type: "p", text: "Skarvlängden (l₀) är den sträcka där två järn ligger omlott. Den bestäms av konstruktören och står på armeringsritningen. Enligt Eurokod 2 (SS-EN 1992-1-1, avsnitt 8.7) beror den på:" },
+      { type: "ul", items: [
+        "Järnets diameter – grövre järn behöver längre skarv.",
+        "Hur hårt järnet är belastat (spänningen) och om det är rakt eller bockat.",
+        "Betongens hållfasthetsklass – starkare betong ger kortare skarv.",
+        "Vidhäftningsförhållandena – järn i överkant av en hög gjutning får sämre vidhäftning.",
+        "Hur stor andel av järnen som skarvas i samma snitt.",
+        "Täckskikt och avstånd mellan järnen.",
+        "Om järnet är tryckt eller draget – tryckskarvar kan göras kortare.",
+      ] },
+
+      { type: "h2", text: "Riktvärden för skarvlängd – tabell Ø8–Ø25" },
+      { type: "p", text: "Beräknat enligt Eurokod blir skarvlängden för dragna järn i betong C25/30 ofta 40–60 × Ø vid god vidhäftning och upp mot 85 × Ø vid dålig vidhäftning (t.ex. överkant i höga gjutningar) eller om alla järn skarvas i samma snitt. Tabellen visar spannet 40–60 × Ø. Värdena är riktvärden för överslag och ersätter inte konstruktionsritningen." },
+      { type: "table", head: ["Dimension", "Riktvärde 40–60 × Ø", "Absolut golv (15Ø / 200 mm)"], rows: [
+        ["Ø8", "320–480 mm", "200 mm"],
+        ["Ø10", "400–600 mm", "200 mm"],
+        ["Ø12", "480–720 mm", "200 mm"],
+        ["Ø16", "640–960 mm", "240 mm"],
+        ["Ø20", "800–1 200 mm", "300 mm"],
+        ["Ø25", "1 000–1 500 mm", "375 mm"],
+      ], caption: "Golvvärdet gäller oavsett beräkning (Eurokod 2 anger också 0,3·α6·lb,rqd som kan bli större), men den beräknade skarvlängden blir nästan alltid betydligt längre. Den verkliga skarvlängden står på ritningen." },
+      { type: "p", text: "I vår [armeringskalkylator](/armeringskalkylator) används 50 × Ø som standard när du räknar kamjärn med skarvar – du kan skriva in skarvlängden från din ritning." },
+
+      { type: "h2", text: "Så beräknas skarvlängden enligt Eurokod 2" },
+      { type: "p", text: "Först beräknas den erforderliga förankringslängden lb,rqd = (Ø / 4) · (σsd / fbd), där σsd är spänningen i järnet och fbd vidhäftningshållfastheten. Skarvlängden blir sedan l₀ = α1 · α2 · α3 · α5 · α6 · lb,rqd, där α-faktorerna tar hänsyn till bland annat form, täckskikt och andel skarvade järn (α6 = 1,0–1,5)." },
+      { type: "p", text: "Exempel: Ø12 i C25/30 med god vidhäftning och fullt utnyttjat järn ger fbd ≈ 2,7 MPa och σsd ≈ 435 MPa. Då blir lb,rqd ≈ 3 × 161 ≈ 480 mm (40 × Ø). Skarvas alla järn i samma snitt (α6 = 1,5) blir skarvlängden cirka 725 mm – ungefär 60 × Ø. Beräkningen görs av konstruktören." },
+
+      { type: "h2", text: "Överlapp för armeringsnät – hur mycket?" },
+      { type: "p", text: "Svetsade armeringsnät skarvas genom att arken läggs omlott. En vanlig praxis är att nätet överlappar minst två maskor (rutor) – för 150-nät i praktiken cirka 300–400 mm. Överlappa i båda riktningarna och klipp bort hörnet där fyra ark möts, så att det inte blir fyra lager nät på samma ställe. Eurokod 2 anger minsta skarvlängd för nätets fördelningsjärn:" },
+      { type: "table", head: ["Tråddiameter (fördelningsjärn)", "Minsta skarvlängd", "Minst antal maskdelningar i skarven"], rows: [
+        ["Ø ≤ 6 mm", "≥ 150 mm", "1"],
+        ["6 < Ø ≤ 8,5 mm", "≥ 250 mm", "2"],
+        ["8,5 < Ø ≤ 12 mm", "≥ 350 mm", "2"],
+      ], caption: "Minsta skarvlängd för fördelningsjärn i armeringsnät enligt SS-EN 1992-1-1 tabell 8.4. Huvudarmeringen i nätet skarvas enligt särskilda regler i avsnitt 8.7.5.1." },
+      { type: "p", text: "Läs mer om nät i guiden [armeringsnät – storlekar och mått](/blogg/armeringsnat-storlekar-och-matt)." },
+
+      { type: "h2", text: "Så placerar du skarvarna rätt" },
+      { type: "ul", items: [
+        "Förskjut skarvarna – skarva inte alla järn i samma snitt.",
+        "Undvik skarvar där belastningen är störst, t.ex. mitt i ett spann eller över ett stöd.",
+        "Järnen i en skarv ska ligga tätt ihop – högst 4 × Ø eller 50 mm fritt avstånd, annars ska skarven förlängas.",
+        "Bind ihop skarven så att järnen inte glider isär vid gjutningen.",
+        "Kontrollera [täckskiktet](/blogg/distanser-tackskikt-armering) även i skarven – två järn omlott tar mer plats.",
+        "Alternativ till omlottskarv är mekaniska skarvar (skruvskarvar) och svetsade skarvar – enligt konstruktörens anvisning.",
+      ] },
+
+      { type: "h2", text: "Skarvarna påverkar hur mycket armering du beställer" },
+      { type: "p", text: "Varje skarv innebär extra stål. I en lång platta med Ø12 i 6-metersstänger och 600 mm skarv går det åt ungefär 10 % extra stål för skarvarna (0,6 m per 6-metersstång). För en enskild 10 meter lång rad blir det 10,6 m järn – alltså två stänger. Räkna med skarvarna i mängdberäkningen, eller låt oss göra det i offerten utifrån din [bockningslista](/tjanster/bockningslista)." },
+    ],
+    faqs: [
+      { q: "Hur lång ska skarven vara på armeringsjärn?", a: "Skarvlängden står på ritningen. Beräknat enligt Eurokod 2 blir den för dragna järn i C25/30 ofta 40–60 × Ø vid god vidhäftning, t.ex. 480–720 mm för Ø12. Eurokod 2 anger dessutom ett absolut golv: det största av 15 × Ø, 200 mm och 0,3·α6·lb,rqd." },
+      { q: "Vad är skarvlängden för 10, 12 och 16 mm armering?", a: "Som riktvärde 40–60 × Ø: Ø10 ca 400–600 mm, Ø12 ca 480–720 mm och Ø16 ca 640–960 mm. Dålig vidhäftning eller alla järn skarvade i samma snitt ger längre skarv. Ritningen gäller." },
+      { q: "Hur mycket ska armeringsnät överlappa?", a: "Vanlig praxis är minst två maskor – för 150-nät cirka 300–400 mm. Eurokod 2 anger minsta skarvlängd för nätets fördelningsjärn från 150 mm (tråd ≤ 6 mm) till 350 mm (tråd upp till 12 mm)." },
+      { q: "Varför får inte alla skarvar ligga i samma snitt?", a: "Om alla järn skarvas på samma ställe blir konstruktionen svag just där och skarvlängden måste ökas. Skarvarna förskjuts så att bara en del av järnen skarvas i varje snitt." },
+    ],
+  },
+
+  {
+    slug: "armeringsstal",
+    title: "Armeringsstål – B500B, K500C-T, vikt per meter och längder",
+    metaTitle: "Armeringsstål B500B – vikt, längd & pris",
+    metaDescription:
+      "Armeringsstål B500B och K500C-T: vikt per meter i tabell, längder 6 och 12 m, vad SS 212540 innebär och vad som styr priset. Ø12 – den vanligaste dimensionen.",
+    excerpt:
+      "Armeringsstål, armeringsjärn, kamstål – samma sak. Här reder vi ut beteckningarna B500B och K500C-T, vad järnen väger, vilka längder som finns och vad som påverkar priset.",
+    date: "2026-09-23",
+    readingMinutes: 6,
+    keywords: [
+      "armeringsstål",
+      "armerings stål",
+      "armeringsjärn 12 mm",
+      "12 mm armeringsjärn",
+      "armeringsstål 12mm",
+      "armeringsstål 10mm",
+      "armeringsstål 6mm",
+      "armeringsjärn 6 meter",
+      "ss 212540",
+      "k500c-t",
+      "b500b",
+      "vikt armeringsjärn per meter",
+      "armeringsstål pris",
+    ],
+    content: [
+      { type: "p", text: "Armeringsstål är det stål som gjuts in i betong för att ta upp dragkrafter. I Sverige kallas det också armeringsjärn eller kamstål – kamstål efter de kammar (ribbor) på ytan som ger god vidhäftning mot betongen. Vi levererar [armeringsjärn och kamstål](/produkter/armeringsjarn) i alla vanliga dimensioner i hela Sverige." },
+
+      { type: "h2", text: "B500B – vad betyder beteckningen?" },
+      { type: "ul", items: [
+        "B – armeringsstål (från tyska Betonstahl), enligt SS-EN 10080.",
+        "500 – karakteristisk sträckgräns fyk = 500 MPa.",
+        "B – duktilitetsklass B, dvs. hur mycket stålet kan töjas innan brott (klass C är segare).",
+      ] },
+
+      { type: "h2", text: "SS 212540 och K500C-T" },
+      { type: "p", text: "I Sverige gäller SS-EN 10080 tillsammans med produktspecifikationen SS 212540 (senaste utgåva 2014). Den omfattar armeringsstål med sträckgräns 500 MPa i duktilitetsklasserna A, AB, B och C. Stålet betecknas där till exempel K500B-T eller K500C-T: K = kamstång, 500 = sträckgräns, B/C = duktilitetsklass och T = varmvalsat och värmebehandlat. Beteckningarna ersatte äldre svenska stålsorter som Ks 400 och Ks 500." },
+      { type: "p", text: "På ritningar anges ofta B500B, men det som lagerförs i Sverige är i regel K500C-T (klass C), som uppfyller kraven för B500B. Klass C får alltid ersätta klass B – men inte tvärtom. Stålet ska vara märkt med tillverkarens valsmärke och levereras med leveransintyg, så att det går att spåra." },
+
+      { type: "h2", text: "Vikt per meter – tabell" },
+      { type: "p", text: "Armeringsstål anges med nominell diameter (Ø) i millimeter. Vikten per meter räknas som 0,00617 × Ø² kg/m." },
+      { type: "table", head: ["Dimension", "Vikt kg/m", "6-metersstång", "12-metersstång", "Vanlig användning"], rows: [
+        ["Ø6", "0,222", "1,33 kg", "2,66 kg", "Byglar, nät"],
+        ["Ø8", "0,395", "2,37 kg", "4,74 kg", "Byglar, lätta plattor"],
+        ["Ø10", "0,617", "3,70 kg", "7,40 kg", "Byglar, plattor"],
+        ["Ø12", "0,888", "5,33 kg", "10,66 kg", "Plattor, kantbalkar"],
+        ["Ø16", "1,58", "9,48 kg", "18,96 kg", "Balkar, grundsulor"],
+        ["Ø20", "2,47", "14,82 kg", "29,64 kg", "Balkar, pelare"],
+        ["Ø25", "3,85", "23,10 kg", "46,20 kg", "Tunga konstruktioner"],
+        ["Ø32", "6,31", "37,86 kg", "75,72 kg", "Anläggning"],
+      ], caption: "Teoretisk vikt för kamstål. Räkna åtgång i [armeringskalkylatorn](/armeringskalkylator#vikt-per-meter). Vilken dimension som passar vad: [armeringsjärn – dimensioner](/blogg/armeringsjarn-dimensioner)." },
+
+      { type: "h2", text: "Armeringsjärn 6 eller 12 meter – eller ringar" },
+      { type: "ul", items: [
+        "12 meter – standardlängd i lager, färre skarvar i stora konstruktioner. Andra längder, upp till cirka 18 m, kan specialbeställas.",
+        "6 meter – lätt att hantera och transportera, vanligt i byggvaruhandeln och för mindre projekt.",
+        "Ringar (rulle) – för bockmaskiner, vanligen Ø6–Ø12, ibland upp till Ø16. Se [armering i ringar](/produkter/armering-i-ringar).",
+        "Kapat och bockat – järnen levereras färdiga efter bockningslistan, se [klippt och bockad armering](/produkter/klippt-och-bockad).",
+      ] },
+      { type: "p", text: "Kortare stänger betyder fler skarvar – se [skarvlängd och överlapp](/blogg/skarvlangd-armering)." },
+
+      { type: "h2", text: "Armeringsjärn 12 mm – den vanligaste dimensionen" },
+      { type: "p", text: "Ø12 är den dimension som oftast används i villagrunder, kantbalkar och plattor på mark. En 6-metersstång väger drygt 5 kg och ett ton Ø12 motsvarar ungefär 1 125 löpmeter. Behöver du räkna åtgång – antal stänger, löpmeter och vikt – använd [armeringskalkylatorn](/armeringskalkylator)." },
+
+      { type: "h2", text: "Vad kostar armeringsstål?" },
+      { type: "p", text: "Armeringsstål prissätts oftast per ton eller per kilo. Priset följer världsmarknaden för stål och varierar över tid. Därtill påverkas totalpriset av:" },
+      { type: "ul", items: [
+        "Mängd – större beställningar ger lägre pris per kilo.",
+        "Förädling – raka järn, kapat, bockat eller färdiga korgar.",
+        "Dimension – små dimensioner kostar ofta mer per kilo.",
+        "Leverans – ort, mängd och om leveransen samordnas med övrig armering.",
+      ] },
+      { type: "p", text: "Läs mer i [vad kostar armering](/blogg/vad-kostar-armering) eller [begär offert](/offert) på din mängd – vi svarar med pris och leveranstid för hela Sverige." },
+    ],
+    faqs: [
+      { q: "Vad är skillnaden mellan armeringsstål, armeringsjärn och kamstål?", a: "Det är samma sak. Armeringsstål och armeringsjärn är allmänna namn, kamstål syftar på kammarna på ytan som ger vidhäftning mot betongen." },
+      { q: "Vad är skillnaden mellan B500B och K500C-T?", a: "B500B anger sträckgräns 500 MPa och duktilitetsklass B. K500C-T är den svenska beteckningen enligt SS 212540 för kamstång i klass C, som är segare och uppfyller kraven för B500B. Klass C får ersätta klass B, inte tvärtom." },
+      { q: "Vad väger armeringsjärn 12 mm?", a: "Ø12 väger 0,888 kg per meter – en 6-metersstång drygt 5,3 kg och en 12-metersstång knappt 10,7 kg." },
+      { q: "Vad är SS 212540?", a: "En svensk produktspecifikation som används tillsammans med SS-EN 10080. Den anger egenskaper för armeringsstål med sträckgräns 500 MPa i duktilitetsklasserna A, AB, B och C, t.ex. K500C-T." },
+      { q: "Vilken längd ska jag välja – 6 eller 12 meter?", a: "12 meter är standardlagerlängd och ger färre skarvar, 6 meter är lättare att hantera. Vid större mängder är klippt och bockat efter bockningslista ofta mest effektivt." },
+    ],
+  },
+
 ];
 
 export const getPost = (slug: string) => posts.find((p) => p.slug === slug);

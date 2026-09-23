@@ -102,7 +102,7 @@ function renderBlock(b: Block, i: number) {
             ))}
           </tbody>
         </table>
-        {b.caption && <figcaption className="mt-2 text-sm text-muted">{b.caption}</figcaption>}
+        {b.caption && <figcaption className="mt-2 text-sm text-muted">{renderText(b.caption)}</figcaption>}
       </figure>
     );
   if (b.type === "figure") {
@@ -110,7 +110,7 @@ function renderBlock(b: Block, i: number) {
     return (
       <figure key={i} className="mt-8 rounded-xl border border-line bg-surface p-5 sm:p-8">
         <Illustration className="mx-auto h-auto w-full max-w-lg" />
-        {b.caption && <figcaption className="mt-4 text-center text-sm text-muted">{b.caption}</figcaption>}
+        {b.caption && <figcaption className="mt-4 text-center text-sm text-muted">{renderText(b.caption)}</figcaption>}
       </figure>
     );
   }

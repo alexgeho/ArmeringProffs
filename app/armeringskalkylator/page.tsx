@@ -29,7 +29,7 @@ const faqs: Faq[] = [
   },
   {
     q: "Hur mycket armering går åt till min betongplatta?",
-    a: "Armeringsnät köps i hela ark, i Sverige oftast 2,35 × 5 m. Antalet ark beror på plattans mått och överlappet mellan arken – minst en maskvidd, dock minst 300 mm. Kalkylatorn räknar antal ark, vikt och kantjärn när du fyller i längd och bredd. Med lösa kamjärn räknas antal stänger utifrån diameter och centrumavstånd (c/c). Exakt mängd ska följa konstruktionsritningen.",
+    a: "Armeringsnät köps i hela ark, i Sverige oftast 2,35 × 5 m. Antalet ark beror på plattans mått och överlappet mellan arken – vanligen minst två rutor, ca 300 mm för 150-nät. Kalkylatorn räknar antal ark, vikt och kantjärn när du fyller i längd och bredd. Med lösa kamjärn räknas antal stänger utifrån diameter och centrumavstånd (c/c). Exakt mängd ska följa konstruktionsritningen.",
   },
   {
     q: "Är värdena från kalkylatorn exakta?",
@@ -66,7 +66,8 @@ export default function KalkylatorPage() {
           <h2 className="text-2xl font-bold text-ink">Så räknar kalkylatorn</h2>
           <p className="mt-4 text-lg leading-relaxed text-ink-soft">
             <strong className="text-ink">Armeringsnät:</strong> nätet köps i hela ark, 2,35 × 5 m. Kalkylatorn lägger arken
-            med det överlapp du anger (standard 300 mm – minst en maskvidd, dock minst 300 mm) och väljer den riktning som
+            med det överlapp du anger (standard 300 mm – vanligen minst två rutor för 150-nät, se{" "}
+            <Link href="/blogg/skarvlangd-armering" className="text-brand underline underline-offset-2 hover:no-underline">skarvlängd och överlapp</Link>) och väljer den riktning som
             ger minst antal ark. Vikten räknas på trådarna i båda riktningar. Kantjärn räknas på plattans omkrets gånger
             antal järn, med skarvar på ca 50 × diametern.
           </p>

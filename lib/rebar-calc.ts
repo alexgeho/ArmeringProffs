@@ -6,7 +6,7 @@
  *
  * Källor/tumregler:
  * - Vikt per meter kamstål: 0,00617 · d² kg/m (stålets densitet 7 850 kg/m³).
- * - Armeringsnät: standardark 2,35 × 5,0 m; överlapp minst en maskvidd, dock minst 300 mm.
+ * - Armeringsnät: standardark 2,35 × 5,0 m; överlapp vanligen minst två rutor (≈300 mm för 150-nät).
  * - Omlottskarv för stänger: tumregel ca 50 · Ø (verklig längd enligt SS-EN 1992 / ritning).
  */
 
