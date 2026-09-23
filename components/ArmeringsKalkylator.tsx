@@ -78,7 +78,7 @@ export function ArmeringsKalkylator() {
   }, [r, L, W, mesh, meshLayers, meshLap, kantAntal, dia, cc, barLayers, cover, stock, ort]);
 
   return (
-    <div className="grid gap-8 lg:grid-cols-2 lg:items-start">
+    <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:items-start">
       {/* Inmatning */}
       <div className="rounded-2xl border border-line bg-white p-6 sm:p-8">
         <div role="tablist" aria-label="Vad vill du räkna på?" className="grid grid-cols-2 gap-1 rounded-xl bg-surface p-1">
@@ -253,7 +253,7 @@ function NumField({
   text?: boolean;
 }) {
   return (
-    <div className="grid gap-1.5">
+    <div className="grid min-w-0 gap-1.5">
       <label className="text-sm font-medium text-ink">{label}</label>
       <input
         inputMode={text ? undefined : "decimal"}
@@ -262,7 +262,7 @@ function NumField({
         disabled={disabled}
         placeholder={placeholder}
         onChange={(e) => onChange(e.target.value)}
-        className="h-12 rounded-lg border border-line bg-white px-4 text-ink placeholder:text-muted focus:border-brand focus:outline-none disabled:cursor-not-allowed disabled:bg-surface disabled:text-muted"
+        className="h-12 w-full min-w-0 rounded-lg border border-line bg-white px-4 text-ink placeholder:text-muted focus:border-brand focus:outline-none disabled:cursor-not-allowed disabled:bg-surface disabled:text-muted"
       />
     </div>
   );
@@ -280,12 +280,12 @@ function SelectField({
   children: React.ReactNode;
 }) {
   return (
-    <div className="grid gap-1.5">
+    <div className="grid min-w-0 gap-1.5">
       <label className="text-sm font-medium text-ink">{label}</label>
       <select
         value={value}
         onChange={(e) => onChange(e.target.value)}
-        className="h-12 rounded-lg border border-line bg-white px-3 text-ink focus:border-brand focus:outline-none"
+        className="h-12 w-full min-w-0 rounded-lg border border-line bg-white px-3 text-ink focus:border-brand focus:outline-none"
       >
         {children}
       </select>

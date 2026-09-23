@@ -18,7 +18,7 @@ export default function HomePage() {
     <>
       <Hero
         title={<>Prefab armering i <span className="text-brand">hela Sverige</span></>}
-        intro="Vi tillverkar prefabricerad armering – klippt & bockad, armeringskorgar, svetsad armering och nät – efter din bockningslista eller ritning. Full cykel: tillverkning, leverans och montage i hela landet."
+        intro="Klippt och bockad armering, armeringskorgar och svetsat nät – tillverkat efter din bockningslista eller ritning och levererat färdigt till bygget."
         formSource="startsida-hero"
         bgImage="/images/hero-armeringskorgar.webp"
         bgAlt="Prefabricerade armeringskorgar staplade på en byggarbetsplats"
