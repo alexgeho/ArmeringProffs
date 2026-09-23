@@ -50,9 +50,9 @@ export function BockningsformerExplorer() {
   const spec = useMemo(() => bockningslistaText(list), [list]);
 
   return (
-    <div className="grid gap-6 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:grid-rows-[auto_1fr]">
-      {/* Koder */}
-      <div className="s-fade" style={at(0)}>
+    <div className="grid gap-6 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:grid-rows-[auto_1fr] lg:items-start">
+      {/* Koder (vänster kolumn, hela höjden) */}
+      <div className="s-fade lg:col-start-1 lg:row-span-2 lg:row-start-1" style={at(0)}>
         {GROUPS.map((g) => (
           <div key={g} className="mb-4">
             <p className="mb-2 text-xs font-bold tracking-[0.15em] text-muted">GRUPP {g}</p>
@@ -83,8 +83,8 @@ export function BockningsformerExplorer() {
         ))}
       </div>
 
-      {/* Vald form – mått (mobil: under ritningen) */}
-      <div className="s-fade order-3 lg:order-none" style={at(0.1)}>
+      {/* Vald form – mått + lägg till (höger, ovanför ritningen) */}
+      <div className="s-fade order-2 lg:order-none lg:col-start-2 lg:row-start-1" style={at(0.1)}>
         <div className="rounded-xl border border-line bg-white p-4" aria-live="polite">
           <div className="flex items-baseline gap-3">
             <span className="text-2xl font-bold text-brand">{def.code}</span>
@@ -166,8 +166,8 @@ export function BockningsformerExplorer() {
         </div>
       </div>
 
-      {/* Ritning (mobil: direkt under koderna) */}
-      <div className="order-2 self-start rounded-xl border border-line bg-white lg:order-none lg:col-start-2 lg:row-span-2 lg:row-start-1">
+      {/* Ritning (under måttkortet) */}
+      <div className="order-3 self-start rounded-xl border border-line bg-white lg:order-none lg:col-start-2 lg:row-start-2">
         <svg viewBox="0 0 400 300" className="h-auto w-full" role="img" aria-label={`Typform ${def.code}: ${def.name}. ${params.map(([k, v]) => `${k} ${v}`).join(", ")}.`}>
           <g key={code}>
             {shape ? (
