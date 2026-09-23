@@ -1,7 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { useMemo, useState } from "react";
+import { ContactForm } from "@/components/ContactForm";
 import { SHAPES, clampParam, derivedParams, layoutShape, unitOf } from "@/lib/bending-shapes";
+import { DIAMETERS } from "@/lib/rebar-calc";
 import { ACCENT, FONT, INK, SteelBar, at } from "@/components/steel-scenes";
 
 /**
@@ -37,6 +39,16 @@ export function BockningsformerExplorer() {
   const setVal = (k: string, v: string) => setInput((prev) => ({ ...prev, [code]: { ...prev[code], [k]: v } }));
   const t0 = clicked ? 0.05 : 0.9;
 
+  // Positionslista ("korg") → skickas som offertförfrågan.
+  const [dia, setDia] = useState(10);
+  const [qty, setQty] = useState("10");
+  const [list, setList] = useState<Pos[]>([]);
+  const addPos = () => {
+    const n = Math.max(1, Math.round(Number(qty.replace(",", ".")) || 1));
+    setList((l) => [...l, { code, name: def.name, dia, qty: n, dims: dimText(def, values) }]);
+  };
+  const spec = useMemo(() => bockningslistaText(list), [list]);
+
   return (
     <div className="grid gap-6 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:grid-rows-[auto_1fr]">
       {/* Koder */}
@@ -44,7 +56,7 @@ export function BockningsformerExplorer() {
         {GROUPS.map((g) => (
           <div key={g} className="mb-4">
             <p className="mb-2 text-xs font-bold tracking-[0.15em] text-muted">GRUPP {g}</p>
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-1.5">
               {SHAPES.filter((s) => s.group === g).map((s) => {
                 const on = s.code === code;
                 return (
@@ -57,10 +69,11 @@ export function BockningsformerExplorer() {
                       setCode(s.code);
                       setClicked(true);
                     }}
-                    className={`h-11 min-w-11 rounded-lg border px-2 text-sm font-bold transition-colors ${
-                      on ? "border-brand bg-brand text-white" : "border-line bg-white text-ink hover:border-brand hover:text-brand"
+                    className={`flex w-[4.25rem] flex-col items-center gap-0.5 rounded-lg border px-1 pb-1 pt-1.5 text-xs font-bold transition-colors ${
+                      on ? "border-brand bg-brand-light text-brand ring-1 ring-brand" : "border-line bg-white text-ink hover:border-brand hover:text-brand"
                     }`}
                   >
+                    <Thumb code={s.code} />
                     {s.code}
                   </button>
                 );
@@ -117,6 +130,39 @@ export function BockningsformerExplorer() {
               )}
             </div>
           )}
+
+          {/* Lägg till position */}
+          <div className="mt-4 flex flex-wrap items-end gap-3 border-t border-line pt-4">
+            <label className="grid gap-1 text-xs font-semibold text-ink-soft">
+              Ø
+              <select
+                value={dia}
+                onChange={(e) => setDia(Number(e.target.value))}
+                className="h-10 rounded-md border border-line bg-white px-2 text-sm text-ink focus:border-brand focus:outline-none"
+              >
+                {DIAMETERS.map((d) => (
+                  <option key={d} value={d}>Ø{d}</option>
+                ))}
+              </select>
+            </label>
+            <label className="grid gap-1 text-xs font-semibold text-ink-soft">
+              Antal
+              <input
+                type="text"
+                inputMode="numeric"
+                value={qty}
+                onChange={(e) => setQty(e.target.value)}
+                className="h-10 w-20 rounded-md border border-line bg-white px-2 text-right text-sm text-ink focus:border-brand focus:outline-none"
+              />
+            </label>
+            <button
+              type="button"
+              onClick={addPos}
+              className="h-10 flex-1 rounded-lg bg-brand px-4 text-sm font-semibold text-white transition-colors hover:bg-brand-dark"
+            >
+              + Lägg till i listan
+            </button>
+          </div>
         </div>
       </div>
 
@@ -166,6 +212,112 @@ export function BockningsformerExplorer() {
           </g>
         </svg>
       </div>
+
+      {/* Din bockningslista */}
+      <div className="order-4 rounded-xl border border-line bg-white p-4 sm:p-5 lg:col-span-2">
+        <div className="flex items-baseline justify-between gap-3">
+          <h3 className="text-lg font-bold text-ink">Din bockningslista</h3>
+          {list.length > 0 && (
+            <button type="button" onClick={() => setList([])} className="text-xs font-semibold text-muted hover:text-brand">
+              Töm listan
+            </button>
+          )}
+        </div>
+        {list.length === 0 ? (
+          <p className="mt-2 text-sm text-muted">Välj form, ange mått, Ø och antal – och lägg till positionerna här.</p>
+        ) : (
+          <div className="mt-3 grid gap-6 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)]">
+            <div className="min-w-0 overflow-x-auto">
+              <table className="w-full text-left text-sm tabular-nums">
+                <thead className="text-xs text-muted">
+                  <tr className="border-b border-line">
+                    <th className="py-2 pr-2 font-semibold">Pos</th>
+                    <th className="py-2 pr-2 font-semibold">Form</th>
+                    <th className="py-2 pr-2 font-semibold">Ø</th>
+                    <th className="py-2 pr-2 font-semibold">Mått</th>
+                    <th className="py-2 pr-2 text-right font-semibold">Antal</th>
+                    <th className="py-2" />
+                  </tr>
+                </thead>
+                <tbody>
+                  {list.map((p, i) => (
+                    <tr key={i} className="border-b border-line">
+                      <td className="py-2 pr-2 text-muted">{i + 1}</td>
+                      <td className="py-2 pr-2">
+                        <span className="inline-flex items-center gap-2 font-semibold text-ink">
+                          <Thumb code={p.code} small /> {p.code}
+                        </span>
+                      </td>
+                      <td className="py-2 pr-2">Ø{p.dia}</td>
+                      <td className="py-2 pr-2 text-ink-soft">{p.dims || "–"}</td>
+                      <td className="py-2 pr-2 text-right">
+                        <input
+                          type="text"
+                          inputMode="numeric"
+                          value={p.qty}
+                          aria-label={`Antal pos ${i + 1}`}
+                          onChange={(e) => {
+                            const n = Math.max(1, Math.round(Number(e.target.value) || 1));
+                            setList((l) => l.map((x, j) => (j === i ? { ...x, qty: n } : x)));
+                          }}
+                          className="h-8 w-16 rounded-md border border-line px-2 text-right focus:border-brand focus:outline-none"
+                        />
+                      </td>
+                      <td className="py-2 text-right">
+                        <button
+                          type="button"
+                          aria-label={`Ta bort pos ${i + 1}`}
+                          onClick={() => setList((l) => l.filter((_, j) => j !== i))}
+                          className="h-8 w-8 rounded-md text-muted hover:bg-surface hover:text-brand"
+                        >
+                          ✕
+                        </button>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <div className="min-w-0 rounded-xl bg-surface p-4">
+              <p className="mb-3 text-sm font-semibold text-ink">Skicka listan som offertförfrågan</p>
+              <ContactForm compact source="bockningslista-verktyg" defaultMessage={spec} />
+            </div>
+          </div>
+        )}
+      </div>
     </div>
+  );
+}
+
+type Pos = { code: string; name: string; dia: number; qty: number; dims: string };
+
+function dimText(def: (typeof SHAPES)[number], values: Record<string, number>) {
+  return Object.entries(values)
+    .map(([k, v]) => `${k}=${v}${unitOf(def, k) === "mm" ? "" : unitOf(def, k) === "°" ? "°" : " " + unitOf(def, k)}`)
+    .join(" ");
+}
+
+function bockningslistaText(list: Pos[]) {
+  if (list.length === 0) return undefined;
+  return [
+    "Bockningslista (från typformsverktyget på armeringproffs.se), mått i mm:",
+    ...list.map((p, i) => `Pos ${i + 1}: typform ${p.code} (${p.name}), Ø${p.dia} B500B, ${p.dims || "enligt ritning"}, ${p.qty} st`),
+    "",
+    "Leveransort: ",
+  ].join("\n");
+}
+
+/** Liten stålritning av formen (standardmått) – för kodknappar och listan. */
+function Thumb({ code, small = false }: { code: string; small?: boolean }) {
+  const def = SHAPES.find((s) => s.code === code);
+  const shape = def ? layoutShape(def, { x: 6, y: 6, w: 88, h: 48 }) : null;
+  return (
+    <svg viewBox="0 0 100 60" className={small ? "h-5 w-8" : "h-7 w-12"} aria-hidden="true">
+      {shape ? (
+        <path d={shape.d} fill="none" stroke="currentColor" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
+      ) : (
+        <rect x="20" y="12" width="60" height="36" rx="5" fill="none" stroke="currentColor" strokeWidth="3" strokeDasharray="6 5" />
+      )}
+    </svg>
   );
 }

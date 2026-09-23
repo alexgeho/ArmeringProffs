@@ -57,8 +57,8 @@ function relatedGuides(keywords: string[], n = 3) {
 /** Tjänster som visar ett interaktivt verktyg i stället för hero med formulär. */
 const tools: Record<string, { title: string; text: string; node: React.ReactNode }> = {
   bockningslista: {
-    title: "Typformer för bockning – välj en kod",
-    text: "Alla standardformer med bokstavskod och måttbeteckningar (a, b, c …). Klicka på en kod för att se formen och vilka mått du anger i bockningslistan.",
+    title: "Välj form, ange mått och antal",
+    text: "Klicka på en typform, skriv in dina mått, välj Ø och antal – lägg till i listan och skicka som offertförfrågan.",
     node: <BockningsformerExplorer />,
   },
 };
@@ -86,21 +86,19 @@ export default async function ServicePage({
       {tool ? (
         /* Verktygssida: ljust huvud + interaktivt verktyg i stället för mörk hero med formulär */
         <section className="border-b border-line bg-surface">
-          <Container className="py-12">
-            <h1 className="max-w-3xl text-4xl font-bold tracking-tight text-ink sm:text-5xl">{s.h1}</h1>
-            <p className="mt-5 max-w-3xl text-lg text-ink-soft">{s.intro}</p>
-            <div className="mt-10 rounded-2xl border border-line bg-white p-4 shadow-sm sm:p-6">
+          <Container className="py-10">
+            <h1 className="max-w-3xl text-3xl font-bold tracking-tight text-ink sm:text-4xl">{s.h1}</h1>
+            <div className="mt-6 rounded-2xl border border-line bg-white p-4 shadow-sm sm:p-6">
               <h2 className="text-xl font-bold text-ink">{tool.title}</h2>
               <p className="mt-1 mb-6 max-w-3xl text-sm text-muted">{tool.text}</p>
               <AnimatedScene>{tool.node}</AnimatedScene>
             </div>
-            <div className="mt-8 flex flex-wrap items-center gap-4">
+            {/* Ingress (SEO) under verktyget */}
+            <p className="mt-10 max-w-3xl text-lg leading-relaxed text-ink-soft">{s.intro}</p>
+            <div className="mt-6 flex flex-wrap items-center gap-4">
               <Link href="/offert" className="inline-flex h-12 items-center rounded-lg bg-brand px-6 font-semibold text-white hover:bg-brand-dark">
-                Skicka din bockningslista – begär offert
+                Har du redan en lista? Skicka den – begär offert
               </Link>
-              <a href={site.phoneHref} className="inline-flex h-12 items-center gap-2 rounded-lg border border-line px-5 font-semibold text-ink hover:border-brand">
-                <IconPhone className="h-4 w-4 text-brand" /> {site.phone}
-              </a>
             </div>
           </Container>
         </section>

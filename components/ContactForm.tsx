@@ -113,12 +113,8 @@ export function ContactForm({
         />
       </label>
 
-      <label className={`flex items-center gap-2 text-sm ${onDark ? "text-slate-100" : "text-ink-soft"}`}>
-        <input type="checkbox" name="consent" required className="h-4 w-4 shrink-0 accent-[var(--color-brand)]" />
-        <span className="min-w-0">
-          Jag godkänner <a href="/integritetspolicy/" className="text-brand underline">integritetspolicyn</a>
-        </span>
-      </label>
+      {/* Samtycke ges genom att skicka (texten under knappen) – sendmail.php kräver fältet. */}
+      <input type="hidden" name="consent" value="1" />
 
       <button
         type="submit"
@@ -127,6 +123,11 @@ export function ContactForm({
       >
         {status === "sending" ? "Skickar..." : "Skicka förfrågan"}
       </button>
+
+      <p className={`-mt-1 text-xs ${onDark ? "text-slate-300" : "text-muted"}`}>
+        Genom att skicka godkänner du vår{" "}
+        <a href="/integritetspolicy/" className="underline hover:text-brand">integritetspolicy</a>.
+      </p>
 
       {status === "error" && (
         <p className="text-sm text-red-600">
