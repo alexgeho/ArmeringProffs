@@ -9,8 +9,8 @@ import { cities } from "@/config/cities";
 import { Button, Container, Section, SectionHeading } from "./ui";
 import { ContactForm } from "./ContactForm";
 import {
-  IconPhone, IconCheck, IconShield, IconStar,
-  IconTruck, IconTools, IconRuler, IconArrow, IconChevron,
+  IconPhone, IconCheck, IconStar,
+  IconTruck, IconRuler, IconArrow, IconChevron,
 } from "./icons";
 import { RebarMeshPattern } from "./illustrations";
 
@@ -84,10 +84,10 @@ export function Hero({
 
 /* ---------- USP / trust bar ---------- */
 const usps = [
-  { img: "usp-prefab", icon: IconTools, title: "Prefab-tillverkning", text: "Kapat, bockat och svetsat efter din bockningslista." },
-  { img: "usp-ritning", icon: IconRuler, title: "Efter ritning", text: "Vi tillverkar på mått enligt konstruktionsritning." },
-  { img: "usp-leverans", icon: IconTruck, title: "Korta leveranstider", text: "Snabb leverans till bygget i hela Sverige – vi håller både pris och leveranstid." },
-  { img: "usp-montage", icon: IconShield, title: "Montage & rådgivning", text: "Vi kan även lägga armeringen och hjälpa dig rätt." },
+  { img: "usp-prefab", title: "Prefab-tillverkning", text: "Kapat, bockat och svetsat efter din bockningslista." },
+  { img: "usp-ritning", title: "Efter ritning", text: "Vi tillverkar på mått enligt konstruktionsritning." },
+  { img: "usp-leverans", title: "Korta leveranstider", text: "Snabb leverans till bygget i hela Sverige – vi håller både pris och leveranstid." },
+  { img: "usp-montage", title: "Montage & rådgivning", text: "Vi kan även lägga armeringen och hjälpa dig rätt." },
 ];
 
 export function UspBar() {
@@ -106,10 +106,7 @@ export function UspBar() {
                 className="h-full w-full object-cover"
               />
             </div>
-            <div className="flex items-center gap-2">
-              <u.icon className="h-5 w-5 shrink-0 text-brand" />
-              <h3 className="font-semibold text-ink">{u.title}</h3>
-            </div>
+            <h3 className="font-semibold text-ink">{u.title}</h3>
             <p className="mt-1.5 text-sm text-ink-soft">{u.text}</p>
           </div>
         ))}
