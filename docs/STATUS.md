@@ -1,73 +1,44 @@
 # Armeringsproffs — статус проекта (handoff)
 
-> ## ▶️ HANDOFF — НАЧНИ ОТСЮДА (последняя сессия: 2026-09-20, GSC)
+> ## ▶️ HANDOFF — НАЧНИ ОТСЮДА (последняя сессия: 2026-09-23, большая: дизайн + инструменты + контент)
 >
-> **KLART denna session:** 3 реальных фикса в sitemap/ссылках (коммит `88d5faf`, задеплоено) +
-> 10 × Request Indexing в GSC + sitemap переотправлен (47→48 URL). Детали — в «🗒️ Лог сессии 2026-09-20» ниже.
+> **KLART 23.09 (детали — «🗒️ Лог сессии 2026-09-23» ниже):** ✅ **P0 закрыт — лид-мейл доходит** (тест владельца 22:43).
+> Логотип AGRY OÜ (светлый/тёмный), hero на всех страницах с формой (фото + «стекло»), форма минималистичная без галочки,
+> **bockningslista = инструмент**: 30 типформ A–XX с миниатюрами, свои размеры, список позиций («корзина») → offert,
+> PDF всех форм. Калькулятор усилен (листы сетки + кг, kamjärn c/c, вес/метр). 4 новых продукта (byglar, lyftöglor,
+> ringar, 3D). 6 новых статей + 8 обновлённых по Keyword Planner, все с факт-чеком по нормам.
 >
-> **🔜 NÄSTA STEG (по порядку, можно брать холодным стартом):**
-> 1. **Дослать Request Indexing на 17 URL** — квота Google ~10-11/сутки, 20.09 исчерпана.
->    Точный список и процесс — в «🟢 Что могу сделать САМ» ниже. Кода не трогать, только GSC UI.
-> 2. **Проверить результат** (не раньше 23-27.09): GSC → Indexing → Pages. Ждём рост «indexed»
->    (база 20.09: **28 indexed / 29 not indexed**) и что `lastmod` начал подтягивать краул.
-> 3. **Усилить `/blogg/bockningslista-sa-gor-du/`** — GSC сам подсветил её как страницу со всплеском
->    показов. Единственный живой трафик-сигнал на сайте (всего 19 кликов). Контент + перелинковка.
->
-> **🆕 2026-09-23 — анимированные «стальные» сцены на услугах (ТЗ `docs/tz-animationer-tjanster.md`):**
-> ресёрч (NN/g и др.): картинка должна ОБЪЯСНЯТЬ, анимация — 1 раз при скролле, без scrolljacking/циклов;
-> Recraft — только эскиз композиции, финал — ручной SVG. Сделана сцена A «bockningslista → bygel» на
-> `/tjanster/bockningslista` (`components/steel-scenes.tsx` + `components/AnimatedScene.tsx`, CSS в `globals.css`,
-> десктоп + отдельная мобильная раскладка). Дальше по плану: D (montage/плита), C (маршрут Эстония→паром→Швеция, УТП срок),
-> Эскизы Recraft — у владельца на Desktop.
-> ✅ Сцена A заменена на **кликабельную bockningslista** (`components/BockningslistaExplorer.tsx`): 6 позиций
-> (rak/vinkel/bygel/U/Z/krok), клик → форма рисуется в стали с размерами. Геометрия параметрическая
-> (`lib/rebar-shapes.ts`: форма + мм → изометрический path + размерные линии) — Recraft для этого НЕ нужен.
-> Попутно: фикс горизонтального скролла на мобиле (hero-grid `grid-cols-1`) на tjanster/produkter/armering/offert/kontakt.
-> ✅ Затем (тот же день) заменено на **все типформы по буквам** стандарта «Förteckning över bockning av stänger 2A, 1979»
-> (A…XX + Special, 30 шт) — `components/BockningsformerExplorer.tsx` + `lib/bending-shapes.ts` (плоские — вид спереди,
-> как в стандарте; SX/O/X/XX — изометрия). Рисунки свои, из стандарта только коды и буквы размеров.
-> На `/tjanster/bockningslista` **тёмный hero с формой убран по просьбе владельца** → светлый H1+intro + инструмент +
-> CTA «Skicka din bockningslista – begär offert» (/offert). Остальные tjanster-страницы — с прежним hero.
-> 🔜 Шаг 2 (обсудить): посетитель вводит свои позиции (код + мм) → видит форму → отправляет список в offert.
->
-> **🆕 2026-09-23 — логотип:** новый логотип AGRY OÜ («KLIPPT · BOCKAD · PREFAB ARMERING», трафаретный шрифт), финальная
-> версия владельца из Figma. Две мастер-версии SVG у владельца на Desktop: `Agry_OU_logo_ljus-bakgrund.svg` (slate #475569)
-> и `Agry_OU_logo_mork-bakgrund.svg` (#E2E8F0). Шапка: `public/images/logo-emblem.png` (круг, светлый фон); подвал:
-> `public/images/logo-agry-dark.png` прямо на тёмном фоне; favicon `app/icon.png`, `app/apple-icon.png` и OG-картинка — новый эмблем.
-> **CI:** smoke дважды 23.09 падал на «stad-länk saknas» с раннера (локально зелёный) → в `scripts/smoke.sh` добавлен DIAG-вывод.
->
-> **🆕 2026-09-23 — калькулятор усилен (по deep-research: оставить и доработать, не удалять):** режимы «Armeringsnät»
-> (листы 2,35×5 м, нахлёст/слои, кг, kantjärn) и «Kamjärn c/c» (Ø6–32, c/c, слои, täckskikt, 6/12 м, skarv ≈50·Ø → шт/lpm/кг);
-> таблица «vikt per meter» (#vikt-per-meter); всё в offert-форму, без цен. Логика: `lib/rebar-calc.ts`.
-> 🔜 Шаг 3: режим фундаментной балки/ленты + связка с типформами → список позиций в offert. Открыто: какой нахлёст
-> по умолчанию (сейчас 300 мм сетка / 50·Ø стержни) и текст дисклеймера — показать конструктору.
->
-> **🆕 2026-09-23 — контент по Keyword Planner (`docs/ARTIKELPLAN.md`):** 6 новых статей (armeringsbyglar, bocka-armeringsjarn,
-> skarvlangd-armering, armeringsstal, kantbalksbygel, lyftoglor-betong) + 8 обновлённых; каждая прошла факт-чек по нормам и
-> язык/SEO-ревью субагентами. Найдены и исправлены старые ошибки: stödmur (арматура на стороне грунта), täckskikt 25–35 мм
-> → уточнено (мот cellplast/form; makadam ≥40, jord ≥75 мм), нахлёст сетки унифицирован (≥2 ячейки, ~300–400 мм).
-> 4 новых продукта (byglar-och-hakar, lyftoglor, armering-i-ringar, 3d-bockning).
-> **GSC 23.09:** sitemap переотправлен; Request Indexing ✅ `/blogg/armeringsbyglar/`, `/blogg/bocka-armeringsjarn/`,
-> `/blogg/skarvlangd-armering/` → на `/blogg/armeringsstal/` **Quota Exceeded**. 🔜 **24.09+ дослать 7 URL:**
-> `/blogg/armeringsstal/`, `/blogg/kantbalksbygel/`, `/blogg/lyftoglor-betong/`, `/produkter/byglar-och-hakar/`,
-> `/produkter/lyftoglor/`, `/produkter/armering-i-ringar/`, `/produkter/3d-bockning/` (+ старый хвост из 🟢-раздела).
-> Как: GSC → поле «Inspect any URL» (кликнуть в пустое место, потом в поле, ввести URL, Enter) → REQUEST INDEXING → Dismiss.
+> **🔜 NÄSTA STEG (по порядку, можно холодным стартом):**
+> 1. **GSC Request Indexing — 7 URL** (квота 23.09 кончилась после 3): `/blogg/armeringsstal/`, `/blogg/kantbalksbygel/`,
+>    `/blogg/lyftoglor-betong/`, `/produkter/byglar-och-hakar/`, `/produkter/lyftoglor/`, `/produkter/armering-i-ringar/`,
+>    `/produkter/3d-bockning/`. Затем старый хвост (🟢-раздел ниже). Как: GSC → клик в пустое место → поле «Inspect any URL»
+>    (найти через find, координаты плывут) → URL → Enter → REQUEST INDEXING → Dismiss. Квота ~3–10/день.
+> 2. **SEO-ядро по конкурентам** (владелец спросил 23.09, НЕ сделано): (а) выдача google.se по 15–20 коммерч. запросам →
+>    кто в топе; (б) Keyword Planner «Start with a website» по доменам конкурентов (armeringdirekt, 7-steelservice, begroup,
+>    armeco, thuresson, rebar.one, byggmax/bauhaus категории) → CSV; (в) gap-анализ → новые страницы в `docs/ARTIKELPLAN.md`.
+>    Спросить про Ahrefs/Semrush (платно, даёт позиции). Владелец положил `~/Downloads/Real Marketing s. r. o. (1).pdf` —
+>    **не смогли прочитать (macOS EPERM)**: попросить перенести на Desktop, прочитать до ядра.
+> 3. **Ссылки на инструмент типформ**: пункт в меню + со страницы `/produkter/klippt-och-bockad` («Se alla typformer A–XX»).
+> 4. Проверить в GSC через 2–4 недели показы по новым статьям; `/blogg/bockningslista-sa-gor-du/` — единственный растущий
+>    сигнал: встроить туда инструмент/CTA «собери список».
 >
 > **⚠️ Öppna frågor / väntar på [OWNER]:**
-> - ✅ **Лид-мейл доходит** — проверено владельцем 2026-09-23 (заявка из bockningslista-verktyg пришла на offert@, 22:43). Вложение отдельно ещё не тестировали.
-> - **GA4:** пометить `generate_lead` как conversion (только через UI GA4).
-> - **Реальные отзывы** в `config/reviews.ts` + `verified: true` → схема звёзд включится сама.
-> - Решение по городам: **НЕ расширяем** (владелец, 08.09). Новые города не предлагать.
+> - **Реальные мощности** для продуктов (вес бухты, шт/паллета, макс. размер каркаса) и **оборудование** (станки/фото) —
+>   цифры rebar.one НЕ копировали. Фото своего производства (исследование: для B2B фото > иллюстрации).
+> - Тест отправки заявки **с вложением** (PDF) — само письмо доходит, файл не проверен.
+> - Нахлёст по умолчанию в калькуляторе (300 мм сетка / 50·Ø) и текст дисклеймера — показать конструктору.
+> - GA4: `generate_lead` как conversion (UI). Реальные отзывы в `config/reviews.ts`. GBP/каталоги (hitta, eniro, allabolag).
+> - Города НЕ расширяем (решение 08.09). Цвета: логотип серый, CTA оранжевые (обсуждали 23.09, оставили).
 >
-> **⚠️ При правке контента** — бампни соответствующую константу `UPDATED` в `app/sitemap.ts`,
-> иначе `lastmod` начнёт врать и Google перестанет ему верить.
-
+> **⚠️ Правила:** картинки — только по `docs/BILDSTIL.md` (Recraft → `scripts/normalisera-bild.py`), контактный лист до
+> выбора, после выбора — сразу деплой. При правке контента бампать `UPDATED` в `app/sitemap.ts`. Новые формы/контакты →
+> пересобрать PDF: `npx tsx scripts/typformer-pdf.ts`. Мобайл: всегда проверять 375px (hero-grid `grid-cols-1`, `min-w-0`).
 ---
 
 > **Главная цель: ЛИДЫ** (offertförfrågningar на prefab-арматуру по всей Швеции).
 > **Лид = заполненная offert-форма** (с bockningslista/ritning) или звонок.
 > Модель: **offert/под заказ, НЕ webshop, БЕЗ фиксированных цен** (решение владельца 2026-09-05).
-> Обновлено: **2026-09-20** (сессия GSC: 3 фикса в коде + 10 Request Indexing). Сайт живой: **https://armeringproffs.se**.
+> Обновлено: **2026-09-23** (большая сессия: инструменты, продукты, контент). Сайт живой: **https://armeringproffs.se**.
 >
 > ⚙️ **АРХИТЕКТУРА (с 2026-09-08): ПОЛНОСТЬЮ СТАТИЧЕСКАЯ** (Next `output: 'export'` → `out/`) + PHP-мейлер.
 > НЕТ Node/Passenger, НЕТ API-роутов, НЕТ `server.js`/`proxy.ts`. Форма постит на `public/sendmail.php`.
@@ -226,6 +197,33 @@ Stockholm, Göteborg, Malmö, Uppsala, Västerås, Örebro, Linköping, Helsingb
 - Локальный прогон: `npm run build` → статика в `out/`; предпросмотр `npx serve out`. (Нет server.js/Node.)
 
 ---
+
+## 🗒️ Лог сессии 2026-09-23 (дизайн, инструменты, продукты, контент — ~50 коммитов)
+- **Анимации/иллюстрации:** ресёрч (NN/g): картинка объясняет, анимация 1 раз, без scrolljacking. Стальные SVG
+  (`components/steel-scenes.tsx`, `AnimatedScene.tsx`). Стиль картинок зафиксирован в `docs/BILDSTIL.md` (другая сессия).
+  Карточки USP на главной с Recraft-иллюстрациями (`public/images/illustrationer/usp-*.webp`).
+- **Bockningslista-инструмент** (`/tjanster/bockningslista`, `components/BockningsformerExplorer.tsx`,
+  `lib/bending-shapes.ts`): 30 типформ «Förteckning över bockning av stänger 2A 1979» (свои рисунки), миниатюры над
+  буквами, окно размеров над рисунком, Ø + antal → «Lägg till i listan» → «Din bockningslista» + плавающая корзина →
+  предзаполненная форма (source `bockningslista-verktyg`). PDF: `public/downloads/typformer-bockning-armeringsproffs.pdf`.
+  Hero убран, H1+intro под инструментом.
+- **Калькулятор** (`lib/rebar-calc.ts`): deep-research «оставить и усилить»; режимы nät (листы 2,35×5, нахлёст, кг) и
+  kamjärn c/c; таблица vikt per meter (#vikt-per-meter).
+- **Бренд:** логотип AGRY OÜ (трафарет, «KLIPPT · BOCKAD · PREFAB ARMERING»), мастер-SVG на Desktop
+  (`Agry_OU_logo_ljus-bakgrund.svg`, `…_mork-bakgrund.svg`); шапка — полный лого (адаптивная, меню с lg),
+  подвал — тёмная версия; favicon/OG — эмблема.
+- **Hero/формы:** все hero с формой как на главной (`PhotoBg` + `glassCard` в `components/sections.tsx`), разные фото;
+  форма: только placeholder, своя кнопка «Bifoga…», согласие текстом (hidden consent=1), нет галочки. Продуктовые
+  страницы без hero-формы. Горизонтальный скролл на 375px вычищен на всех типах страниц.
+- **Продукты (+4):** byglar-och-hakar, lyftoglor, armering-i-ringar, 3d-bockning (по rebar.one, 7/7 групп покрыты);
+  korgar + häftsvetsning/pelarskor.
+- **Контент** (`docs/ARTIKELPLAN.md` из 8 CSV Keyword Planner): 6 новых статей + 8 обновлённых; каждую проверяли
+  субагенты (факт-чек EC2/SS-EN 13670/SS 212540/AFS 2023:11 + язык/SEO). Исправлены и старые ошибки: stödmur
+  (арматура на стороне грунта), täckskikt (≥40 makadam / ≥75 jord), нахлёст сетки везде «≥2 ячейки ≈300–400 мм»,
+  16 meta-title ≤43 символов (layout добавляет « | Armeringsproffs»).
+- **GSC:** sitemap переотправлен; индексация 3 статей; 7 URL ждут квоту.
+- **CI:** smoke иногда падает «stad-länk saknas» с раннера, повторный прогон зелёный; в `scripts/smoke.sh` DIAG-вывод.
+  Одно падение было из-за SSH к Inleed (rsync 255) — хостинг, не код.
 
 ## 🗒️ Лог сессии 2026-09-20 (GSC: 3 фикса в коде + 10 Request Indexing)
 **Задача:** «GSC — иди и чини/улучшай».
