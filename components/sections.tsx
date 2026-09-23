@@ -57,7 +57,7 @@ export function Hero({
           <h1 className="mt-5 text-4xl font-bold leading-tight tracking-tight drop-shadow-[0_2px_12px_rgba(0,0,0,0.55)] sm:text-5xl">{title}</h1>
           <p className="mx-auto mt-5 max-w-xl text-lg leading-relaxed lg:mx-0 text-slate-100 drop-shadow-[0_1px_8px_rgba(0,0,0,0.5)]">{intro}</p>
 
-          <ul className="mx-auto mt-7 grid w-fit grid-cols-1 gap-x-8 gap-y-3 text-left sm:grid-cols-2 lg:mx-0 lg:w-auto">
+          <ul className="mx-auto mt-7 grid w-fit grid-cols-1 gap-x-10 gap-y-3 text-left sm:grid-cols-[auto_auto] lg:mx-0">
             {["Kamstål B500B", "Märkt och sorterat per position", "Alla typformer A–XX", "Kostnadsfri offert"].map((t) => (
               <li key={t} className="flex items-center gap-2 text-slate-50 drop-shadow-[0_1px_6px_rgba(0,0,0,0.5)]">
                 <IconCheck className="h-5 w-5 shrink-0 text-brand" /> {t}
