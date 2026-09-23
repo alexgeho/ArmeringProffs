@@ -71,10 +71,10 @@ export function Hero({
           </div>
         </div>
 
-        <div className="mx-auto w-full min-w-0 max-w-xl rounded-2xl border border-white/40 bg-white/80 p-6 shadow-xl backdrop-blur-md sm:p-8 lg:max-w-none">
-          <h2 className="text-xl font-bold text-ink">Få en offert på din armering</h2>
+        <div className="mx-auto w-full min-w-0 max-w-xl rounded-2xl border border-white/20 bg-white/5 p-6 shadow-xl backdrop-blur-sm sm:p-8 lg:max-w-none">
+          <h2 className="text-xl font-bold text-white">Få en offert på din armering</h2>
           <div className="mt-5">
-            <ContactForm compact source={formSource} />
+            <ContactForm compact onDark source={formSource} />
           </div>
         </div>
       </Container>

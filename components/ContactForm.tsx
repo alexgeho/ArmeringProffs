@@ -9,11 +9,14 @@ export function ContactForm({
   compact = false,
   source = "webbformulär",
   defaultMessage,
+  onDark = false,
 }: {
   compact?: boolean;
   source?: string;
   /** Förifylld text i meddelandefältet (t.ex. en beräkning från kalkylatorn). */
   defaultMessage?: string;
+  /** Formuläret ligger direkt på mörk bakgrund (transparent kort i hero). */
+  onDark?: boolean;
 }) {
   const [status, setStatus] = useState<Status>("idle");
   const [fileName, setFileName] = useState("");
@@ -95,7 +98,7 @@ export function ContactForm({
       </div>
 
       {/* Bifoga ritning/bockningslista: egen knapp i stället för webbläsarens "Choose File". */}
-      <label className="flex min-w-0 cursor-pointer items-center gap-2 rounded-lg border border-dashed border-line px-4 py-3 text-sm text-ink-soft hover:border-brand focus-within:border-brand">
+      <label className={`flex min-w-0 cursor-pointer items-center gap-2 rounded-lg border border-dashed px-4 py-3 text-sm hover:border-brand focus-within:border-brand ${onDark ? "border-white/40 text-slate-100" : "border-line text-ink-soft"}`}>
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="h-4 w-4 shrink-0 text-brand" aria-hidden="true">
           <path d="M21.44 11.05l-9.19 9.19a6 6 0 01-8.49-8.49l9.19-9.19a4 4 0 015.66 5.66l-9.2 9.19a2 2 0 01-2.83-2.83l8.49-8.48" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
@@ -110,7 +113,7 @@ export function ContactForm({
         />
       </label>
 
-      <label className="flex items-center gap-2 text-sm text-ink-soft">
+      <label className={`flex items-center gap-2 text-sm ${onDark ? "text-slate-100" : "text-ink-soft"}`}>
         <input type="checkbox" name="consent" required className="h-4 w-4 shrink-0 accent-[var(--color-brand)]" />
         <span className="min-w-0">
           Jag godkänner <a href="/integritetspolicy/" className="text-brand underline">integritetspolicyn</a>
