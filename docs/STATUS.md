@@ -8,6 +8,10 @@
 > PDF всех форм. Калькулятор усилен (листы сетки + кг, kamjärn c/c, вес/метр). 4 новых продукта (byglar, lyftöglor,
 > ringar, 3D). 6 новых статей + 8 обновлённых по Keyword Planner, все с факт-чеком по нормам.
 >
+> **KLART 24.09:** подписи Roundcube (alexander@, jorgen@, juri@ — HTML, лого 150px, без «--»). Главная: блок
+> `PrefabShowcase` сразу под hero (6 изделий; pål/plint/vägg = старые рендеры AGRY из `~/Desktop/agry-shop-arkiv`,
+> перерисованы в стиле сайта). ❓ Открыто: делаем ли fästdon/ingjutningsgods → если да, страница.
+>
 > **🔜 NÄSTA STEG (по порядку, можно холодным стартом):**
 > 1. **GSC Request Indexing — 7 URL** (квота 23.09 кончилась после 3): `/blogg/armeringsstal/`, `/blogg/kantbalksbygel/`,
 >    `/blogg/lyftoglor-betong/`, `/produkter/byglar-och-hakar/`, `/produkter/lyftoglor/`, `/produkter/armering-i-ringar/`,
