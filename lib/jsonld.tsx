@@ -2,14 +2,19 @@ import { site } from "@/config/site";
 import type { Faq } from "@/config/faq";
 import type { Review } from "@/config/reviews";
 
+/** Sajtens sid-URL:er slutar på "/" (trailingSlash: true). Utan snedstreck i schemat
+ *  valde Google fel canonical (".../klippt-och-bockad" i stället för ".../klippt-och-bockad/"),
+ *  så alla egna sid-URL:er normaliseras här. Filer (punkt i sista ledet) och #-ankare lämnas. */
+function withSlash(v: string) {
+  if (!v.startsWith(site.url) || v.includes("#") || v.includes("?")) return v;
+  const last = v.slice(site.url.length).split("/").pop() ?? "";
+  return v.endsWith("/") || last.includes(".") || last === "opengraph-image" ? v : `${v}/`;
+}
+
 /** Renderar ett JSON-LD-script (strukturerad data för Google). */
 export function JsonLd({ data }: { data: object }) {
-  return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
-    />
-  );
+  const json = JSON.stringify(data, (_k, v) => (typeof v === "string" ? withSlash(v) : v));
+  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: json }} />;
 }
 
 /** Organisation/leverantör – huvudschema för hela sajten (prefab armering, hela Sverige).
