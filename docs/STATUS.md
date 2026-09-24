@@ -10,7 +10,8 @@
 >
 > **KLART 24.09:** подписи Roundcube (alexander@, jorgen@, juri@ — HTML, лого 150px, без «--»). Главная: блок
 > `PrefabShowcase` сразу под hero (6 изделий; pål/plint/vägg = старые рендеры AGRY из `~/Desktop/agry-shop-arkiv`,
-> перерисованы в стиле сайта). ❓ Открыто: делаем ли fästdon/ingjutningsgods → если да, страница.
+> перерисованы в стиле сайта). Offert-мейл теперь содержит «Trafikkälla» (kom från / första sida / UTM) — без cookies.
+> GA видит лишь ~12 польз./28д (только принявшие cookies) → источник лида смотреть в письме. ❓ Открыто: делаем ли fästdon/ingjutningsgods → если да, страница.
 >
 > **🔜 NÄSTA STEG (по порядку, можно холодным стартом):**
 > 1. **GSC Request Indexing — 7 URL** (квота 23.09 кончилась после 3): `/blogg/armeringsstal/`, `/blogg/kantbalksbygel/`,
@@ -31,7 +32,7 @@
 >   цифры rebar.one НЕ копировали. Фото своего производства (исследование: для B2B фото > иллюстрации).
 > - Тест отправки заявки **с вложением** (PDF) — само письмо доходит, файл не проверен.
 > - Нахлёст по умолчанию в калькуляторе (300 мм сетка / 50·Ø) и текст дисклеймера — показать конструктору.
-> - GA4: `generate_lead` как conversion (UI). Реальные отзывы в `config/reviews.ts`. GBP/каталоги (hitta, eniro, allabolag).
+> - ✅ GA4: `generate_lead` = key event (24.09; свойство **ArmeringProffs.se p552370838**, НЕ «ByggExp NO»). Реальные отзывы в `config/reviews.ts`. GBP/каталоги (hitta, eniro, allabolag).
 > - Города НЕ расширяем (решение 08.09). Цвета: логотип серый, CTA оранжевые (обсуждали 23.09, оставили).
 >
 > **⚠️ Правила:** картинки — только по `docs/BILDSTIL.md` (Recraft → `scripts/normalisera-bild.py`), контактный лист до
