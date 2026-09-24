@@ -52,6 +52,11 @@ $quantity = field('quantity');
 $message  = field('message');
 $source   = field('source') !== '' ? field('source') : 'webbformulär';
 $consent  = isset($_POST['consent']);
+// Varifrån besökaren kom (sparas i sessionStorage av VisitSourceRecorder).
+$page     = substr(field('page'), 0, 300);
+$landing  = substr(field('landing'), 0, 300);
+$referrer = substr(field('referrer'), 0, 500);
+$utm      = substr(field('utm'), 0, 500);
 
 // Kompakt hero-form skickar ett kombinerat fält "contact" (telefon ELLER e-post).
 if ($contact !== '') {
@@ -122,6 +127,15 @@ if ($message !== '') {
     $lines[] = 'Meddelande:';
     $lines[] = $message;
 }
+// Trafikkälla – för att se vad som ger leads.
+$refHost = $referrer !== '' ? (parse_url($referrer, PHP_URL_HOST) ?: $referrer) : '';
+$lines[] = '';
+$lines[] = '--- Trafikkälla ---';
+$lines[] = 'Kom från: ' . ($refHost !== '' ? $refHost : 'direkt / okänd');
+if ($referrer !== '' && $referrer !== 'https://' . $refHost . '/') $lines[] = 'Referrer: ' . $referrer;
+if ($landing !== '')  $lines[] = 'Första sida: ' . $landing;
+if ($page !== '')     $lines[] = 'Skickat från: ' . $page;
+if ($utm !== '')      $lines[] = 'Kampanj: ' . $utm;
 $body = implode("\r\n", $lines);
 
 $fromHeader  = clean_header($FROM);

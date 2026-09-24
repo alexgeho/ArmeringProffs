@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { IconCheck } from "./icons";
+import { readVisitSource } from "./VisitSource";
 
 type Status = "idle" | "sending" | "sent" | "error";
 
@@ -26,6 +27,13 @@ export function ContactForm({
     const form = e.currentTarget;
     const data = new FormData(form);
     data.append("source", source);
+    const visit = readVisitSource();
+    if (visit) {
+      data.append("landing", visit.landing);
+      data.append("referrer", visit.referrer);
+      data.append("utm", visit.utm);
+    }
+    data.append("page", window.location.pathname);
     setStatus("sending");
     try {
       // Statisk sajt: formuläret postar till en PHP-mejlare (sendmail.php) i docroot.

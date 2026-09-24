@@ -26,7 +26,10 @@ export default function IntegritetspolicyPage() {
         <p className="mt-3 text-ink-soft">
           När du fyller i vårt offertformulär samlar vi in namn eller företag, telefonnummer,
           e-postadress, leveransort, mängd och den information du lämnar om ditt projekt – samt en
-          eventuell ritning eller bockningslista som du väljer att bifoga.
+          eventuell ritning eller bockningslista som du väljer att bifoga. Med förfrågan skickas
+          också vilken sida du kom in på och varifrån (t.ex. en sökmotor), så att vi vet vilka av
+          våra sidor som hjälper kunder. Uppgiften sparas bara i din webbläsarflik tills du skickar
+          formuläret – ingen cookie används för detta.
         </p>
 
         <h2 className="mt-8 text-2xl font-bold text-ink">Hur vi använder uppgifterna</h2>

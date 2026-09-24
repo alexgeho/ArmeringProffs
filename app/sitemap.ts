@@ -21,7 +21,7 @@ export const dynamic = "force-static";
 const UPDATED = {
   // app/page.tsx, /leverans, /om-oss, /kontakt, /offert, /vanliga-fragor,
   // /omdomen, /armeringskalkylator, /integritetspolicy – senast ändrade 2026-09-08.
-  static: "2026-09-24", // startsidan: PrefabShowcase (2026-09-24)
+  static: "2026-09-24", // startsidan: PrefabShowcase + integritetspolicy trafikkälla (2026-09-24)
   products: "2026-09-24", // config/products.ts (väggkorgar i armeringskorgar 2026-09-24)
   services: "2026-09-23", // config/services.ts + animerad scen på /tjanster/bockningslista (2026-09-23)
   cities: "2026-09-08", // app/armering/[slug]/page.tsx (GuidesTeaser tillagd)

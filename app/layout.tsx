@@ -5,6 +5,7 @@ import { site } from "@/config/site";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { CookieConsent } from "@/components/CookieConsent";
+import { VisitSourceRecorder } from "@/components/VisitSource";
 import { PhoneClickTracker } from "@/components/PhoneClickTracker";
 import { JsonLd, localBusinessSchema, websiteSchema } from "@/lib/jsonld";
 
@@ -60,6 +61,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <main className="flex-1">{children}</main>
         <Footer />
         <CookieConsent gaId={site.gaId} metaPixelId={site.metaPixelId} />
+        <VisitSourceRecorder />
         <PhoneClickTracker />
       </body>
     </html>
