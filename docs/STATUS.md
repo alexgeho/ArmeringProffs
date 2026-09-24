@@ -1,6 +1,6 @@
 # Armeringsproffs — статус проекта (handoff)
 
-> ## ▶️ HANDOFF — НАЧНИ ОТСЮДА (последняя сессия: 2026-09-23, большая: дизайн + инструменты + контент)
+> ## ▶️ HANDOFF — НАЧНИ ОТСЮДА (последняя сессия: 2026-09-24: почта, prefab-витрина, источник лидов, GSC-фикс)
 >
 > **KLART 23.09 (детали — «🗒️ Лог сессии 2026-09-23» ниже):** ✅ **P0 закрыт — лид-мейл доходит** (тест владельца 22:43).
 > Логотип AGRY OÜ (светлый/тёмный), hero на всех страницах с формой (фото + «стекло»), форма минималистичная без галочки,
@@ -8,10 +8,11 @@
 > PDF всех форм. Калькулятор усилен (листы сетки + кг, kamjärn c/c, вес/метр). 4 новых продукта (byglar, lyftöglor,
 > ringar, 3D). 6 новых статей + 8 обновлённых по Keyword Planner, все с факт-чеком по нормам.
 >
-> **KLART 24.09:** подписи Roundcube (alexander@, jorgen@, juri@ — HTML, лого 150px, без «--»). Главная: блок
+> **KLART 24.09 (детали — «🗒️ Лог сессии 2026-09-24»):** подписи Roundcube (alexander@, jorgen@, juri@ — HTML, лого 150px, без «--»). Главная: блок
 > `PrefabShowcase` сразу под hero (6 изделий; pål/plint/vägg = старые рендеры AGRY из `~/Desktop/agry-shop-arkiv`,
 > перерисованы в стиле сайта). Offert-мейл теперь содержит «Trafikkälla» (kom från / första sida / UTM) — без cookies.
-> GA видит лишь ~12 польз./28д (только принявшие cookies) → источник лида смотреть в письме. ❓ Открыто: делаем ли fästdon/ingjutningsgods → если да, страница.
+> GA видит лишь ~12 польз./28д (только принявшие cookies) → источник лида смотреть в письме. **GSC-фикс:** canonical
+> (слэш в JSON-LD) + 301 www→без www — 3 страницы были «Duplicate».
 >
 > **🔜 NÄSTA STEG (по порядку, можно холодным стартом):**
 > 1. **GSC Request Indexing** (24.09: квота кончилась после 4). ✅ Запрошено 24.09: klippt-och-bockad, armeringsjarn,
@@ -27,10 +28,15 @@
 >    Спросить про Ahrefs/Semrush (платно, даёт позиции). Владелец положил `~/Downloads/Real Marketing s. r. o. (1).pdf` —
 >    **не смогли прочитать (macOS EPERM)**: попросить перенести на Desktop, прочитать до ядра.
 > 3. **Ссылки на инструмент типформ**: пункт в меню + со страницы `/produkter/klippt-och-bockad` («Se alla typformer A–XX»).
-> 4. Проверить в GSC через 2–4 недели показы по новым статьям; `/blogg/bockningslista-sa-gor-du/` — единственный растущий
+> 4. **Лиды 21.09 — довести до offert:** Christian Sandberg (Beddingestrand, нужен размер листа сетки 6150 — письмо
+>    ушло с alexander@), Gustav Bengtsson / Deramont (Malmö, ждём чертежи — письмо-ответ написано). Проверить ответы.
+> 5. Проверить в GSC через 2–4 недели показы по новым статьям; `/blogg/bockningslista-sa-gor-du/` — единственный растущий
 >    сигнал: встроить туда инструмент/CTA «собери список».
 >
 > **⚠️ Öppna frågor / väntar på [OWNER]:**
+> - **Fästdon / ingjutningsgods** (закладные) — производим? Если да → 7-я карточка в PrefabShowcase + страница.
+> - **Телефон на сайте** `+46 72 858 99 75` = теперь номер коллеги **Juri Rumjantsev** (juri@); у Александра новый
+>   `+46 70 757 75 75`. Какой номер главный на сайте (`config/site.ts`)? Ящик jorgen@ — удалить/очистить подпись?
 > - **Реальные мощности** для продуктов (вес бухты, шт/паллета, макс. размер каркаса) и **оборудование** (станки/фото) —
 >   цифры rebar.one НЕ копировали. Фото своего производства (исследование: для B2B фото > иллюстрации).
 > - Тест отправки заявки **с вложением** (PDF) — само письмо доходит, файл не проверен.
@@ -205,6 +211,23 @@ Stockholm, Göteborg, Malmö, Uppsala, Västerås, Örebro, Linköping, Helsingb
 - Локальный прогон: `npm run build` → статика в `out/`; предпросмотр `npx serve out`. (Нет server.js/Node.)
 
 ---
+
+## 🗒️ Лог сессии 2026-09-24 (почта, prefab-витрина, источник лидов, GSC)
+- **Roundcube-подписи** (prime6.inleed.net/webmail): alexander@, jorgen@, juri@ — HTML-таблица, Projektledare, лого
+  `logo-agry-light.png` 150px внизу, реквизиты AGRY OÜ; prefs: HTML always, ответ над цитатой, без «--». Паролей не вводим —
+  владелец логинится сам, потом я настраиваю.
+- **PrefabShowcase** (`components/sections.tsx`, сразу под Hero на `/`): 6 карточек. Новые картинки
+  `prefab-palkorg/plintkorg/vaggkorg.webp` = старые рендеры AGRY (`~/Desktop/agry-shop-arkiv`, архив shop.agry.se) через
+  Recraft `image_edit` (nano_banana_pro, «keep exact shape, restyle dark steel + orange tag») → «flatten bg» → normalisera.
+  Коммит a525b9f. Väggkorgar добавлены в armeringskorgar.
+- **Trafikkälla в лид-мейле** (db19e80): `components/VisitSource.tsx` (sessionStorage, без cookie) → ContactForm →
+  `sendmail.php` блок «--- Trafikkälla ---». Integritetspolicy обновлена.
+- **GA4:** наше свойство = ArmeringProffs.se (p552370838). `generate_lead` → key event. 3 generate_lead = тесты (Direct);
+  реальные лиды 21.09 в GA не видны (не приняли cookies).
+- **GSC** (cade6ee): «Duplicate, Google chose different canonical» для klippt-och-bockad / armeringsjarn / vad-kostar-armering —
+  Google выбрал URL без слэша, т.к. JSON-LD (breadcrumbs, product url) был без «/». Фикс: `withSlash()` в `lib/jsonld.tsx`.
+  `www.` отдавал 200 → 301 в `.htaccess`. Request Indexing: 4 URL (квота). Sitemap OK (58).
+- Клиентские письма (шведский): уточнение сетки 6150 для Christian; ответ Gustav/Deramont (контакт + ждём чертежи).
 
 ## 🗒️ Лог сессии 2026-09-23 (дизайн, инструменты, продукты, контент — ~50 коммитов)
 - **Анимации/иллюстрации:** ресёрч (NN/g): картинка объясняет, анимация 1 раз, без scrolljacking. Стальные SVG
