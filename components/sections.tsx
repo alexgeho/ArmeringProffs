@@ -115,6 +115,56 @@ export function UspBar() {
   );
 }
 
+/* ---------- Prefab-showcase (startsidan, direkt under hero) ---------- */
+const prefabItems = [
+  { img: "prefab-palkorg", title: "Pål- & pelarkorgar", text: "Runda och fyrkantiga korgar med spiral eller byglar.", href: "/produkter/armeringskorgar" },
+  { img: "prefab-plintkorg", title: "Plint- & fundamentkorgar", text: "Bottenarmering med uppstickande startjärn till pelare.", href: "/produkter/armeringskorgar" },
+  { img: "prefab-vaggkorg", title: "Väggkorgar", text: "Dubbelsidig väggarmering med U-byglar och startjärn.", href: "/produkter/armeringskorgar" },
+  { img: "armeringskorgar", title: "Balkkorgar", text: "Kant-, sockel- och bärbalkar – svetsade eller bundna.", href: "/produkter/armeringskorgar" },
+  { img: "klippt-och-bockad", title: "Byglar & specialformer", text: "Alla typformer A–XX efter din bockningslista.", href: "/tjanster/bockningslista" },
+  { img: "3d-bockning", title: "3D- & bågbockning", text: "Rumsbockade former och bågar till runda fundament.", href: "/produkter/3d-bockning" },
+];
+
+export function PrefabShowcase() {
+  return (
+    <Section id="prefab">
+      <SectionHeading
+        eyebrow="Det här tillverkar vi"
+        title="Färdig prefab – rakt från ritning till bygget"
+        intro="Vi bygger armeringen färdig i verkstad: korgar, byglar och specialformer i B500B, märkta per position. Ni lyfter på plats och gjuter."
+      />
+      <div className="mt-10 grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-3">
+        {prefabItems.map((it) => (
+          <Link
+            key={it.title}
+            href={it.href}
+            className="group flex min-w-0 flex-col overflow-hidden rounded-xl border border-line bg-white transition-all hover:border-brand hover:shadow-md"
+          >
+            <div className="aspect-[16/9] overflow-hidden border-b border-line bg-slate-100">
+              <Image
+                src={`/images/illustrationer/${it.img}.webp`}
+                alt={`${it.title} – prefabricerad armering`}
+                width={1280}
+                height={720}
+                sizes="(min-width: 1024px) 400px, 50vw"
+                className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.04]"
+              />
+            </div>
+            <div className="flex flex-1 flex-col p-3 sm:p-5">
+              <h3 className="text-sm font-semibold text-ink sm:text-lg">{it.title}</h3>
+              <p className="mt-1 hidden flex-1 text-sm text-ink-soft sm:block">{it.text}</p>
+            </div>
+          </Link>
+        ))}
+      </div>
+      <div className="mt-8 flex flex-col items-start gap-3 sm:flex-row sm:items-center">
+        <Button href="/offert">Skicka ritning – få offert</Button>
+        <p className="text-sm text-muted">Står inte ert element här? Vi tillverkar efter valfri konstruktionsritning.</p>
+      </div>
+    </Section>
+  );
+}
+
 /* ---------- Products grid ---------- */
 
 export function ProductsGrid() {

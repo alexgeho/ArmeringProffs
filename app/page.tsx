@@ -3,7 +3,7 @@ import { site } from "@/config/site";
 import { faq } from "@/config/faq";
 import { Section, SectionHeading } from "@/components/ui";
 import {
-  Hero, UspBar, ProductsGrid, Process, LeveransSection, Reviews, CtaBanner, KalkylatorPromo, GuidesTeaser,
+  Hero, UspBar, PrefabShowcase, ProductsGrid, Process, LeveransSection, Reviews, CtaBanner, KalkylatorPromo, GuidesTeaser,
 } from "@/components/sections";
 import Image from "next/image";
 import { FaqAccordion } from "@/components/FaqAccordion";
@@ -24,6 +24,7 @@ export default function HomePage() {
         bgAlt="Prefabricerade armeringskorgar staplade på en byggarbetsplats"
       />
 
+      <PrefabShowcase />
       <UspBar />
 
       {/* Intro/SEO-text */}

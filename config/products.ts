@@ -119,6 +119,7 @@ export const products: Product[] = [
       "Montering av pelarskor och konsoler",
       "Byglar och huvudjärn i B500B",
       "Plint- och brunnsarmering",
+      "Väggkorgar – dubbelsidig väggarmering med startjärn",
       "Tillverkning mot konstruktionsritning",
       "Färdiga korgar levererade i hela Sverige",
     ],
