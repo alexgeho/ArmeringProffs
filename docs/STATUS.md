@@ -14,10 +14,13 @@
 > GA видит лишь ~12 польз./28д (только принявшие cookies) → источник лида смотреть в письме. ❓ Открыто: делаем ли fästdon/ingjutningsgods → если да, страница.
 >
 > **🔜 NÄSTA STEG (по порядку, можно холодным стартом):**
-> 1. **GSC Request Indexing — 7 URL** (квота 23.09 кончилась после 3): `/blogg/armeringsstal/`, `/blogg/kantbalksbygel/`,
->    `/blogg/lyftoglor-betong/`, `/produkter/byglar-och-hakar/`, `/produkter/lyftoglor/`, `/produkter/armering-i-ringar/`,
->    `/produkter/3d-bockning/`. Затем старый хвост (🟢-раздел ниже). Как: GSC → клик в пустое место → поле «Inspect any URL»
->    (найти через find, координаты плывут) → URL → Enter → REQUEST INDEXING → Dismiss. Квота ~3–10/день.
+> 1. **GSC Request Indexing** (24.09: квота кончилась после 4). ✅ Запрошено 24.09: klippt-och-bockad, armeringsjarn,
+>    vad-kostar-armering (были «Duplicate – Google chose /без слэша/» → починено: слэш в JSON-LD + 301 www→без www),
+>    blogg/armeringsnat-storlekar-och-matt. Новые продукты (byglar, lyftöglor…) уже в индексе.
+>    **Дальше «Discovered – not indexed» (18):** blogg/armeringsjarn-dimensioner, /leverans/, /vanliga-fragor/, /kontakt/,
+>    /om-oss/, blogg/armering-till-garage, blogg/armering-till-pool, /blogg/, города (uppsala, linkoping, norrkoping,
+>    jonkoping, helsingborg, umea, sundsvall), /omdomen/. Через ~1 нед. проверить Pages → Duplicate должно уйти.
+>    Как: клик в поле «Inspect any URL» (2 клика, потом type) → Enter → REQUEST INDEXING (≈1235,320) → Dismiss.
 > 2. **SEO-ядро по конкурентам** (владелец спросил 23.09, НЕ сделано): (а) выдача google.se по 15–20 коммерч. запросам →
 >    кто в топе; (б) Keyword Planner «Start with a website» по доменам конкурентов (armeringdirekt, 7-steelservice, begroup,
 >    armeco, thuresson, rebar.one, byggmax/bauhaus категории) → CSV; (в) gap-анализ → новые страницы в `docs/ARTIKELPLAN.md`.
