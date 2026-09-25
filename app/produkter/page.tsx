@@ -27,6 +27,7 @@ export default function ProdukterPage() {
       <Breadcrumbs items={[{ name: "Hem", href: "/" }, { name: "Produkter" }]} />
       <Section>
         <SectionHeading
+          as="h1"
           eyebrow="Produkter"
           title="Prefabricerad armering – hela sortimentet"
           intro={`Vi tillverkar och levererar prefab armering i ${site.regionInflected}. Välj en kategori för mer information och begär en offert efter din bockningslista eller ritning.`}

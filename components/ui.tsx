@@ -67,16 +67,19 @@ export function SectionHeading({
   title,
   intro,
   center = false,
+  as: Heading = "h2",
 }: {
   eyebrow?: string;
   title: ReactNode;
   intro?: ReactNode;
   center?: boolean;
+  /** "h1" på sidor utan Hero – varje sida ska ha exakt en H1. */
+  as?: "h1" | "h2";
 }) {
   return (
     <div className={`max-w-2xl ${center ? "mx-auto text-center" : ""}`}>
       {eyebrow && <Eyebrow>{eyebrow}</Eyebrow>}
-      <h2 className="mt-3 text-3xl font-bold tracking-tight text-ink sm:text-4xl">{title}</h2>
+      <Heading className="mt-3 text-3xl font-bold tracking-tight text-ink sm:text-4xl">{title}</Heading>
       {intro && <p className="mt-4 text-lg leading-relaxed text-ink-soft">{intro}</p>}
     </div>
   );

@@ -30,7 +30,7 @@ export default function OmOssPage() {
       <Section>
         <div className="grid items-start gap-10 lg:grid-cols-[1fr_1.45fr] lg:items-center">
           <div>
-            <SectionHeading eyebrow="Om oss" title={`${site.company}`} />
+            <SectionHeading as="h1" eyebrow="Om oss" title={`Om ${site.company} – prefab armering i hela Sverige`} />
             <div className="prose-body mt-6 space-y-4 text-lg">
               <p>
                 Vi är specialiserade på prefabricerad armering – klippt och bockad armering,

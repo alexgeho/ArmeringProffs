@@ -18,11 +18,12 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: `${site.company} | ${site.tagline}`,
+    // Sökord först – Google kapar titlar efter ~60 tecken.
+    default: `Prefab armering – klippt & bockad i hela Sverige | ${site.company}`,
     template: `%s | ${site.company}`,
   },
   description:
-    "Prefabricerad armering i hela Sverige – klippt & bockad armering, armeringskorgar, svetsad armering och armeringsnät, kamstål B500B och distanser. Tillverkning efter bockningslista, leverans och montage. Begär offert.",
+    "Prefab armering i hela Sverige – klippt & bockad efter bockningslista, armeringskorgar, nät och kamstål B500B. Leverans och montage. Begär kostnadsfri offert.",
   keywords: [
     "prefab armering",
     "prefabricerad armering",

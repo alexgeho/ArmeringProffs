@@ -25,8 +25,9 @@ export default function OmdomenPage() {
 
       <Section>
         <SectionHeading
+          as="h1"
           eyebrow="Omdömen"
-          title="Vad kunderna säger"
+          title="Omdömen – vad kunderna säger"
           intro="Vi levererar prefab armering till bygg- och anläggningsprojekt i hela Sverige – från enskilda betongplattor till större entreprenader. Här är omdömen från kunder om leverans, kvalitet och service."
         />
 

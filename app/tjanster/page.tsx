@@ -27,6 +27,7 @@ export default function TjansterPage() {
       <Breadcrumbs items={[{ name: "Hem", href: "/" }, { name: "Tjänster" }]} />
       <Section>
         <SectionHeading
+          as="h1"
           eyebrow="Tjänster"
           title="Mer än material – vi tar hela armeringsjobbet"
           intro={`Utöver att tillverka och leverera prefab armering hjälper vi dig med själva jobbet: vi lägger armeringen på plats och tar fram bockningslistan från din ritning. Allt i ${site.regionInflected}.`}

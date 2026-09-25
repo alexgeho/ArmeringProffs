@@ -46,8 +46,9 @@ export default function BloggPage() {
       <Breadcrumbs items={[{ name: "Hem", href: "/" }, { name: "Guider" }]} />
       <Section>
         <SectionHeading
+          as="h1"
           eyebrow="Guider"
-          title="Allt om armering"
+          title="Guider om armering"
           intro="Praktiska guider och svar på vanliga frågor om armeringsnät, armeringsjärn, dimensioner, klippt & bockad armering, distanser och täckskikt – så väljer och beställer du rätt armering."
         />
         <div className="mt-8 flex flex-col items-start gap-4 rounded-xl border border-brand/30 bg-brand-light p-6 sm:flex-row sm:items-center sm:justify-between sm:p-8">

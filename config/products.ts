@@ -28,7 +28,7 @@ export const products: Product[] = [
     slug: "klippt-och-bockad",
     name: "Klippt & bockad armering",
     h1: "Klippt & bockad armering efter bockningslista",
-    metaTitle: "Klippt & bockad armering | Prefab efter ritning – hela Sverige",
+    metaTitle: "Klippt & bockad armering – prefab efter ritning",
     metaDescription:
       "Klippt och bockad armering tillverkad efter din bockningslista eller ritning. Kapat och bockat kamstål B500B, märkt och sorterat, levererat i hela Sverige. Begär offert.",
     intro:
@@ -94,7 +94,7 @@ export const products: Product[] = [
     slug: "armeringskorgar",
     name: "Armeringskorgar",
     h1: "Armeringskorgar – prefab till balk, pelare och pålar",
-    metaTitle: "Armeringskorgar | Prefab balk- & pelarkorgar – hela Sverige",
+    metaTitle: "Armeringskorgar – prefab balk- & pelarkorgar",
     metaDescription:
       "Prefabricerade armeringskorgar till balkar, pelare, pålar och grundplintar. Svetsade eller bundna korgar efter ritning, levererade färdiga i hela Sverige. Begär offert.",
     intro:
@@ -148,7 +148,7 @@ export const products: Product[] = [
     slug: "svetsad-armering",
     name: "Svetsad armering & nät",
     h1: "Svetsad armering – armeringsnät och specialnät",
-    metaTitle: "Svetsad armering & armeringsnät | Nät och specialnät – Sverige",
+    metaTitle: "Svetsad armering & armeringsnät – specialnät",
     metaDescription:
       "Svetsad armering: armeringsnät, specialnät och svetsade mattor efter mått. Standardnät och nät tillverkade efter ritning, levererade i hela Sverige. Begär offert.",
     intro:
@@ -198,7 +198,7 @@ export const products: Product[] = [
     slug: "armeringsjarn",
     name: "Armeringsjärn & kamstål",
     h1: "Armeringsjärn och kamstål B500B",
-    metaTitle: "Armeringsjärn & kamstål B500B | Dim 6–32 mm – hela Sverige",
+    metaTitle: "Armeringsjärn & kamstål B500B – Ø6–32 mm",
     metaDescription:
       "Armeringsjärn i kamstål B500B, dimension 6–32 mm. Raka längder och rullat material som komplement till prefab armering. Levereras i hela Sverige. Begär offert.",
     intro:
@@ -251,7 +251,7 @@ export const products: Product[] = [
     slug: "distanser",
     name: "Distanser & tillbehör",
     h1: "Distanser och tillbehör för armering",
-    metaTitle: "Distanser & armeringstillbehör | Rätt täckskikt – hela Sverige",
+    metaTitle: "Distanser & armeringstillbehör – täckskikt",
     metaDescription:
       "Distanser, klossar, bockstöd och bindtråd för rätt placering och täckskikt av armeringen. Tillbehör till din prefab armering, levererat i hela Sverige. Begär offert.",
     intro:
@@ -346,7 +346,7 @@ export const products: Product[] = [
     slug: "lyftoglor",
     name: "Lyftöglor & lyftkrokar",
     h1: "Lyftöglor och lyftkrokar för betongelement",
-    metaTitle: "Lyftöglor & lyftkrokar | Lyftbyglar för betongelement – hela Sverige",
+    metaTitle: "Lyftöglor & lyftkrokar för betongelement",
     metaDescription:
       "Lyftöglor och lyftkrokar av rundstål för prefabricerade betongelement, bockade efter din ritning. Tillverkning och leverans i hela Sverige. Begär offert.",
     intro:
@@ -385,7 +385,7 @@ export const products: Product[] = [
     slug: "armering-i-ringar",
     name: "Armering i ringar",
     h1: "Armering i ringar – kamstål B500B på rulle",
-    metaTitle: "Armering i ringar | Kamstål B500B på rulle Ø8–Ø16 – hela Sverige",
+    metaTitle: "Armering i ringar – kamstål B500B Ø8–Ø16",
     metaDescription:
       "Kamstål B500B i ringar (på rulle) Ø8–Ø16 mm för bockmaskiner och egen tillverkning. Leverans i hela Sverige. Begär offert på armering i ringar.",
     intro:
@@ -425,7 +425,7 @@ export const products: Product[] = [
     slug: "3d-bockning",
     name: "3D- & bågbockning",
     h1: "3D-bockning och bågbockning av armering",
-    metaTitle: "3D-bockning & bågbockning av armering | Specialformer – hela Sverige",
+    metaTitle: "3D-bockning & bågbockning av armering",
     metaDescription:
       "Rumsbockade 3D-former och bågformad armering, t.ex. till runda fundament och vindkraftsfundament. Bockat efter ritning i B500B, levererat i hela Sverige. Begär offert.",
     intro:

@@ -25,8 +25,9 @@ export default function KontaktPage() {
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
           <div>
             <SectionHeading
+              as="h1"
               eyebrow="Kontakt"
-              title="Hör av dig"
+              title="Kontakta oss om prefab armering"
               intro="Ring oss eller fyll i formuläret så återkommer vi med en kostnadsfri offert. Vi bokar gärna ett platsbesök."
             />
             <ul className="mt-8 space-y-5">

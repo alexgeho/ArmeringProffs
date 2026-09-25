@@ -21,6 +21,7 @@ export default function VanligaFragorPage() {
 
       <Section>
         <SectionHeading
+          as="h1"
           eyebrow="Vanliga frågor"
           title="Frågor och svar om prefab armering"
           intro="Här har vi samlat de vanligaste frågorna vi får om prefabricerad armering – från offert och underlag till kvalitet, leverans och montage. Hittar du inte svaret? Hör av dig så hjälper vi dig."

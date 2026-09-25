@@ -27,6 +27,7 @@ export default function LeveransPage() {
       <Breadcrumbs items={[{ name: "Hem", href: "/" }, { name: "Leverans" }]} />
       <Section>
         <SectionHeading
+          as="h1"
           eyebrow="Leverans"
           title="Armering levererad i hela Sverige"
           intro="Oavsett var i landet ditt bygg- eller anläggningsprojekt ligger tillverkar vi armeringen efter din bockningslista eller ritning och levererar den till arbetsplatsen. Ange leveransort och mängd i offertförfrågan så räknar vi fram frakt och leveranstid."

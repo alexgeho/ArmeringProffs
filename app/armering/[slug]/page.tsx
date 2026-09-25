@@ -25,8 +25,8 @@ export async function generateMetadata({
   const c = getCity(slug);
   if (!c) return {};
   return {
-    title: `Armering i ${c.name} – prefab, klippt & bockad, korgar & nät`,
-    description: `Prefab armering i ${c.name} och ${c.lan}. Vi tillverkar klippt & bockad armering, armeringskorgar, svetsad armering och nät efter din ritning och levererar till ${c.name}. Begär offert.`,
+    title: `Armering i ${c.name} – klippt & bockad, prefab`,
+    description: `Armering i ${c.name}: klippt & bockad efter din ritning, armeringskorgar och nät – levererat till ${c.name} och ${c.lan}. Begär offert.`,
     alternates: { canonical: `/armering/${c.slug}` },
     openGraph: {
       title: `Armering i ${c.name} | ${site.company}`,

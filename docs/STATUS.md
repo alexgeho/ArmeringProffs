@@ -14,6 +14,12 @@
 > GA видит лишь ~12 польз./28д (только принявшие cookies) → источник лида смотреть в письме. **GSC-фикс:** canonical
 > (слэш в JSON-LD) + 301 www→без www — 3 страницы были «Duplicate».
 >
+> **KLART 25.09 (облачная сессия, ветка `claude/trusting-einstein-km0fbs`, ждёт merge в main → деплой):** SEO-аудит собранного `out/`.
+> 8 страниц были **без H1** (/blogg, /kontakt, /leverans, /om-oss, /omdomen, /produkter, /tjanster, /vanliga-fragor – почти все
+> в «Discovered – not indexed») → `SectionHeading as="h1"`. Titles укорочены до ≤~65 симв. (были до 89: главная, продукты, города),
+> убран дубль бренда на /tjanster/bockningslista. GSC 3 мес: armeringsspecifikation 55 + armeringsspec 36 + armeringsritning 38 показов,
+> 0 кликов → title/description/раздел/FAQ на /tjanster/bockningslista. Через 2–3 нед. сверить CTR этих запросов + armeringskorgar (85 показов/1 клик).
+>
 > **🔜 NÄSTA STEG (по порядку, можно холодным стартом):**
 > 1. **GSC Request Indexing** (24.09: квота кончилась после 4). ✅ Запрошено 24.09: klippt-och-bockad, armeringsjarn,
 >    vad-kostar-armering (были «Duplicate – Google chose /без слэша/» → починено: слэш в JSON-LD + 301 www→без www),
