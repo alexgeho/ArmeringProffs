@@ -113,7 +113,7 @@ export const posts: Post[] = [
     title: "Armeringsnät – storlekar, mått och rätt val till plattan",
     metaTitle: "Armeringsnät – storlekar & mått",
     metaDescription:
-      "Armeringsnät i olika storlekar och mått – förklaring av beteckningar (t.ex. 5x150), standardformat, överlapp och vilket nät du väljer till platta, garage och husgrund.",
+      "Armeringsnät – storlekar, mått och beteckningar (t.ex. 5x150), standardformat, överlapp och vilket nät du väljer till platta, garage och husgrund.",
     excerpt:
       "Armeringsnät finns i flera dimensioner och format. Här förklarar vi beteckningarna, vanliga mått och hur du väljer rätt nät till din betongplatta.",
     date: "2026-08-31",
@@ -171,7 +171,7 @@ export const posts: Post[] = [
     title: "Armeringsjärn – dimensioner och när du använder vad",
     metaTitle: "Armeringsjärn dimensioner – vilken till vad",
     metaDescription:
-      "Armeringsjärn (kamstål B500B) finns i dimensioner från 6 till 32 mm. Guide om vilken dimension du använder till platta, kantbalk och husgrund – och hur järnen placeras.",
+      "Armeringsjärn i kamstål B500B finns från 6 till 32 mm. Så väljer du dimension till platta, kantbalk och husgrund – och placerar järnen rätt.",
     excerpt:
       "Armeringsjärn finns i många dimensioner, från 6 till 32 mm. Här går vi igenom vad de olika grovlekarna används till och hur du väljer rätt kamstål.",
     date: "2026-08-31",
@@ -323,7 +323,7 @@ export const posts: Post[] = [
     title: "Distanser och täckskikt – så placeras armeringen rätt",
     metaTitle: "Täckskikt armering – distanser & placering",
     metaDescription:
-      "Vad är täckskikt och varför behövs distanser till armeringen? Guide om hur du lyfter armeringen till rätt höjd och får rätt betongtäckning så stålet inte rostar.",
+      "Vad är täckskikt och varför behövs distanser? Så lyfter du armeringen till rätt höjd och får rätt betongtäckning så att stålet inte rostar.",
     excerpt:
       "Armeringen måste ligga inne i betongen med rätt täckskikt – annars rostar den. Här förklarar vi distanser, täckskikt och hur armeringen placeras rätt.",
     date: "2026-08-31",
@@ -434,8 +434,8 @@ export const posts: Post[] = [
   },
   {
     slug: "armeringskorgar-palarmering",
-    title: "Armeringskorg – typer, beställning och prefab till pålar, pelare och balkar",
-    metaTitle: "Armeringskorg – typer, beställning & prefab",
+    title: "Armeringskorg – typer och användning i pålar, pelare och balkar",
+    metaTitle: "Armeringskorg – typer för pålar, pelare & balkar",
     metaDescription:
       "Vad är en armeringskorg? Typer för pålar, pelare och balkar, svetsad eller bunden, vad du anger vid beställning och varför färdiga armeringskorgar sparar tid.",
     excerpt:
@@ -522,7 +522,7 @@ export const posts: Post[] = [
     title: "Beställa armering – så går det till steg för steg",
     metaTitle: "Beställa armering – steg för steg",
     metaDescription:
-      "Så beställer du armering – från bockningslista och ritning till offert och leverans. Guide om vad en armeringsleverantör behöver, vad som påverkar priset och hur du får rätt armering.",
+      "Så beställer du armering – från bockningslista och ritning till offert och leverans. Vad leverantören behöver och vad som påverkar priset.",
     excerpt:
       "Ska du beställa armering till ett bygge? Här går vi igenom steg för steg vad som behövs, vad leverantören behöver veta och hur du får en offert snabbt.",
     date: "2026-09-05",
@@ -1278,7 +1278,7 @@ export const posts: Post[] = [
   {
     slug: "armeringsstal",
     title: "Armeringsstål – B500B, K500C-T, vikt per meter och längder",
-    metaTitle: "Armeringsstål B500B – vikt, längd & pris",
+    metaTitle: "Armeringsstål B500B – vikt per meter & längder",
     metaDescription:
       "Armeringsstål B500B och K500C-T: vikt per meter i tabell, längder 6 och 12 m, vad SS 212540 innebär och vad som styr priset. Ø12 – den vanligaste dimensionen.",
     excerpt:

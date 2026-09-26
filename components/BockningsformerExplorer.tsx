@@ -62,13 +62,14 @@ export function BockningsformerExplorer() {
     return () => clearTimeout(t);
   }, [justAdded, added]);
   // Dölj den flytande korgraden när själva listan syns på skärmen.
+  const hasItems = list.length > 0;
   useEffect(() => {
     const el = listRef.current;
     if (!el) return;
     const io = new IntersectionObserver(([e]) => setListVisible(e.isIntersecting), { threshold: 0.15 });
     io.observe(el);
     return () => io.disconnect();
-  }, [list.length > 0]);
+  }, [hasItems]);
   const totalQty = list.reduce((sum, p) => sum + p.qty, 0);
   const showList = () => listRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
   const spec = useMemo(() => bockningslistaText(list), [list]);

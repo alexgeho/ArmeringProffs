@@ -13,6 +13,7 @@ import { IconCheck, IconArrow, IconPhone } from "@/components/icons";
 import {
   JsonLd, serviceSchema, faqSchema, breadcrumbSchema,
 } from "@/lib/jsonld";
+import { renderText } from "@/lib/renderText";
 
 export function generateStaticParams() {
   return products.map((p) => ({ slug: p.slug }));
@@ -108,7 +109,7 @@ export default async function ProductPage({
             {p.body.map((b) => (
               <div key={b.heading} className="mb-8">
                 <h2 className="text-2xl font-bold text-ink">{b.heading}</h2>
-                <p className="mt-3 text-lg leading-relaxed text-ink-soft">{b.text}</p>
+                <p className="mt-3 text-lg leading-relaxed text-ink-soft">{renderText(b.text)}</p>
               </div>
             ))}
 

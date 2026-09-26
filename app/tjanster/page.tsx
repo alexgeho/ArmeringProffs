@@ -11,7 +11,7 @@ import { JsonLd, breadcrumbSchema } from "@/lib/jsonld";
 export const metadata: Metadata = {
   title: "Tjänster – armeringsmontage & bockningslista",
   description:
-    "Våra tjänster utöver material: armeringsmontage (vi lägger armeringen på plats) och hjälp att ta fram bockningslista från din ritning. Tillverkning, leverans och montage i hela Sverige.",
+    "Armeringsmontage och hjälp med bockningslista från din ritning – utöver materialet. Tillverkning, leverans och montage i hela Sverige.",
   alternates: { canonical: "/tjanster" },
   openGraph: {
     title: "Tjänster – armeringsmontage & bockningslista | Armeringsproffs",

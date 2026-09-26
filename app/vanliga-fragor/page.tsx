@@ -10,7 +10,7 @@ import { IconArrow } from "@/components/icons";
 export const metadata: Metadata = {
   title: "Vanliga frågor om prefab armering",
   description:
-    "Svar på vanliga frågor om prefabricerad armering – klippt & bockad armering, armeringskorgar, svetsad armering och nät, offert, leverans, kvalitet och montage i hela Sverige.",
+    "Vanliga frågor om prefab armering – klippt & bockad, armeringskorgar, svetsad armering, offert, leverans, kvalitet och montage.",
   alternates: { canonical: "/vanliga-fragor" },
 };
 

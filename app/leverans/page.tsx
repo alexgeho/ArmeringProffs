@@ -11,7 +11,7 @@ import { JsonLd, serviceSchema, breadcrumbSchema } from "@/lib/jsonld";
 export const metadata: Metadata = {
   title: "Leverans av armering i hela Sverige",
   description:
-    "Vi tillverkar och levererar prefab armering – klippt & bockad, korgar och nät – i hela Sverige. Frakt och leveranstid anpassas efter mängd och ort. Begär offert.",
+    "Vi levererar prefab armering – klippt & bockad, korgar och nät – i hela Sverige. Frakt och leveranstid efter mängd och ort. Begär offert.",
   alternates: { canonical: "/leverans" },
   openGraph: {
     title: "Leverans av armering i hela Sverige | Armeringsproffs",

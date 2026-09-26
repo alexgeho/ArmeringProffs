@@ -5,11 +5,12 @@ import { site } from "@/config/site";
 import { Section, SectionHeading, Button } from "@/components/ui";
 import { Breadcrumbs, CtaBanner } from "@/components/sections";
 import { IconArrow, IconClock } from "@/components/icons";
+import { JsonLd, breadcrumbSchema } from "@/lib/jsonld";
 
 export const metadata: Metadata = {
   title: "Guider om armering",
   description:
-    "Guider om armering – armeringsnät, armeringsjärn och dimensioner, klippt & bockad armering, distanser och täckskikt, samt hur mycket armering som går åt. Allt om rätt armering till din betong.",
+    "Guider om armering: armeringsnät, armeringsjärn och dimensioner, klippt & bockad armering, täckskikt och hur mycket armering som går åt.",
   alternates: { canonical: "/blogg" },
   openGraph: {
     title: `Guider om armering | ${site.company}`,
@@ -69,6 +70,12 @@ export default function BloggPage() {
         </div>
       </Section>
       <CtaBanner />
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: "Hem", url: site.url },
+          { name: "Guider", url: `${site.url}/blogg/` },
+        ])}
+      />
     </>
   );
 }

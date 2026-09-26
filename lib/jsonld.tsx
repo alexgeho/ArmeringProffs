@@ -32,7 +32,8 @@ export function localBusinessSchema() {
     legalName: site.legalName,
     vatID: site.vat,
     image: `${site.url}/opengraph-image`,
-    logo: `${site.url}/opengraph-image`,
+    // Kvadratisk logotyp (Google kräver ≥112 px, helst kvadrat) – inte OG-bilden.
+    logo: `${site.url}/images/logo-emblem.png`,
     url: site.url,
     ...(hasPhone ? { telephone: site.phone } : {}),
     email: site.email,
@@ -132,11 +133,14 @@ export function articleSchema(opts: {
     url: opts.url,
     datePublished: opts.datePublished,
     dateModified: opts.dateModified ?? opts.datePublished,
-    author: { "@type": "Organization", name: site.company },
+    mainEntityOfPage: opts.url,
+    // Artiklarna har SVG-illustrationer; sajtens OG-bild (1200×630 PNG) krävs som image för rich results.
+    image: `${site.url}/opengraph-image`,
+    author: { "@type": "Organization", name: site.company, url: site.url },
     publisher: {
       "@type": "Organization",
       name: site.company,
-      logo: { "@type": "ImageObject", url: `${site.url}/opengraph-image` },
+      logo: { "@type": "ImageObject", url: `${site.url}/images/logo-emblem.png` },
     },
   };
 }

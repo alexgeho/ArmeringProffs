@@ -30,7 +30,7 @@ export const products: Product[] = [
     h1: "Klippt & bockad armering efter bockningslista",
     metaTitle: "Klippt & bockad armering – prefab efter ritning",
     metaDescription:
-      "Klippt och bockad armering tillverkad efter din bockningslista eller ritning. Kapat och bockat kamstål B500B, märkt och sorterat, levererat i hela Sverige. Begär offert.",
+      "Klippt och bockad armering efter din bockningslista eller ritning – kamstål B500B, märkt och sorterat, levererat i hela Sverige. Begär offert.",
     intro:
       "Vi tillverkar klippt och bockad armering efter din bockningslista eller konstruktionsritning. Varje järn kapas och bockas till rätt längd och form i B500B, märks och sorteras – redo att läggas direkt på bygget. Vi levererar i hela Sverige.",
     image: {
@@ -64,7 +64,7 @@ export const products: Product[] = [
       },
       {
         heading: "Från bockningslista till färdig leverans",
-        text: "Skicka din bockningslista eller konstruktionsritning (PDF, DWG, Excel eller bild) så tar vi fram en offert. Vi tillverkar varje position i rätt dimension, form och antal, märker och buntar per element och levererar sorterat till bygget. Har du ingen färdig bockningslista hjälper vi till att ta fram den utifrån ritningen.",
+        text: "Skicka din bockningslista eller konstruktionsritning (PDF, DWG, Excel eller bild) så tar vi fram en offert. Vi tillverkar varje position i rätt dimension, form och antal, märker och buntar per element och levererar sorterat till bygget. Har du ingen färdig bockningslista hjälper vi till att ta fram den utifrån ritningen – eller bygg den själv i vårt [verktyg för typformer A–XX](/tjanster/bockningslista): välj form, ange mått och skicka listan direkt.",
       },
       {
         heading: "Kvalitet och standard",
@@ -96,7 +96,7 @@ export const products: Product[] = [
     h1: "Armeringskorgar – prefab till balk, pelare och pålar",
     metaTitle: "Armeringskorgar – prefab balk- & pelarkorgar",
     metaDescription:
-      "Prefabricerade armeringskorgar till balkar, pelare, pålar och grundplintar. Svetsade eller bundna korgar efter ritning, levererade färdiga i hela Sverige. Begär offert.",
+      "Prefab armeringskorgar till balkar, pelare, pålar och plintar – svetsade eller bundna efter ritning, levererade färdiga i hela Sverige. Begär offert.",
     intro:
       "Vi tillverkar prefabricerade armeringskorgar till balkar, pelare, pålar, plintar och brunnar. Korgarna byggs efter din ritning – svetsade eller bundna – och levereras färdiga till bygget så att montaget går snabbt och rätt.",
     // TODO [OWNER]: lägg produktfoto. Skicka horisontell bild ≥1600px (rebar cage /
@@ -134,7 +134,7 @@ export const products: Product[] = [
       },
       {
         heading: "Till grund, stomme och anläggning",
-        text: "Armeringskorgar används i husgrunder, stommar, broar, stödmurar och anläggning. Vanliga tillämpningar är kantbalkar, sockelbalkar, pelare, plintar, pålar och rörbrunnar. Berätta om ditt projekt så föreslår vi rätt utförande.",
+        text: "Armeringskorgar används i husgrunder, stommar, broar, stödmurar och anläggning. Vanliga tillämpningar är kantbalkar, sockelbalkar, pelare, plintar, pålar och rörbrunnar – se till exempel [armering till garage](/blogg/armering-till-garage) och [armera en stödmur](/blogg/armera-stodmur). Berätta om ditt projekt så föreslår vi rätt utförande.",
       },
     ],
     faqs: [
@@ -150,7 +150,7 @@ export const products: Product[] = [
     h1: "Svetsad armering – armeringsnät och specialnät",
     metaTitle: "Svetsad armering & armeringsnät – specialnät",
     metaDescription:
-      "Svetsad armering: armeringsnät, specialnät och svetsade mattor efter mått. Standardnät och nät tillverkade efter ritning, levererade i hela Sverige. Begär offert.",
+      "Svetsad armering: armeringsnät, specialnät och svetsade mattor – standardnät eller efter ritning, levererat i hela Sverige. Begär offert.",
     intro:
       "Vi levererar svetsad armering – standardarmeringsnät, specialnät och svetsade mattor tillverkade efter dina mått och ritningar. Nät ger snabb och jämn armering av plattor, väggar och golv, och specialnät sparar tid när standardformat inte räcker.",
     // TODO [OWNER]: lägg produktfoto. Skicka horisontell bild ≥1600px (welded wire
@@ -185,7 +185,7 @@ export const products: Product[] = [
       },
       {
         heading: "Rätt nät till rätt konstruktion",
-        text: "Vi hjälper dig att välja nät utifrån konstruktionens krav på bärighet och täckskikt. Kombinera gärna nät med klippt och bockad armering och distanser för ett komplett armeringspaket.",
+        text: "Vi hjälper dig att välja nät utifrån konstruktionens krav på bärighet och täckskikt. Kombinera gärna nät med klippt och bockad armering och distanser för ett komplett armeringspaket. Se också vår guide om [armering till betonggolv](/blogg/armering-till-betonggolv).",
       },
     ],
     faqs: [
@@ -253,7 +253,7 @@ export const products: Product[] = [
     h1: "Distanser och tillbehör för armering",
     metaTitle: "Distanser & armeringstillbehör – täckskikt",
     metaDescription:
-      "Distanser, klossar, bockstöd och bindtråd för rätt placering och täckskikt av armeringen. Tillbehör till din prefab armering, levererat i hela Sverige. Begär offert.",
+      "Distanser, klossar, bockstöd och bindtråd för rätt täckskikt – tillbehör till din prefab armering, levererat i hela Sverige. Begär offert.",
     intro:
       "Vi levererar distanser och tillbehör som håller armeringen på rätt plats och ger korrekt täckskikt. Distansklossar, distanslister, bockstöd, bindtråd och nätstöd – allt du behöver för att montera armeringen rätt.",
     image: {
@@ -301,7 +301,7 @@ export const products: Product[] = [
     h1: "Byglar och hakar – U-byglar, trappbyglar och slutna byglar i serie",
     metaTitle: "Byglar & hakar – färdiga armeringsbyglar",
     metaDescription:
-      "Armeringsbyglar och hakar i serie: U-byglar, trappbyglar, slutna och fyrkantiga byglar i B500B Ø6–Ø12. Tillverkade efter dina mått, levererade på pall i hela Sverige. Begär offert.",
+      "Armeringsbyglar och hakar i serie: U-byglar, trappbyglar och slutna byglar i B500B Ø6–Ø12, efter dina mått och på pall. Begär offert.",
     intro:
       "Vi tillverkar byglar och hakar i stora serier – U-byglar, trappbyglar, slutna och fyrkantiga byglar i B500B. Bockade från rulle i automatiska maskiner, med jämna mått och leverans på pall till bygget eller elementfabriken.",
     keywords: [
@@ -329,7 +329,7 @@ export const products: Product[] = [
       },
       {
         heading: "Vilka former tillverkar vi?",
-        text: "Vanligast är U-byglar, slutna byglar (typform N) med 135°-krokar, kantbalksbyglar, trappbyglar och enkla hakar. Även specialformer enligt ritning. Se alla standardformer med bokstavskod i vår översikt över typformer – och ange koden och måtten när du begär offert.",
+        text: "Vanligast är U-byglar, slutna byglar (typform N) med 135°-krokar, kantbalksbyglar, trappbyglar och enkla hakar. Även specialformer enligt ritning. Se alla standardformer med bokstavskod i vår [översikt över typformer](/tjanster/bockningslista) – och ange koden och måtten när du begär offert. Läs mer om [armeringsbyglar och bygelavstånd](/blogg/armeringsbyglar).",
       },
       {
         heading: "Leverans på pall",
@@ -373,7 +373,7 @@ export const products: Product[] = [
       },
       {
         heading: "För elementfabriker och byggen",
-        text: "Vi levererar lyftöglor till elementfabriker, betongstationer och byggen som gjuter egna element på plats. Beställ gärna tillsammans med övrig armering till elementen så kommer allt i samma leverans.",
+        text: "Vi levererar lyftöglor till elementfabriker, betongstationer och byggen som gjuter egna element på plats. Beställ gärna tillsammans med övrig armering till elementen så kommer allt i samma leverans. Läs mer om typer och dimensionering i guiden [lyftöglor i betong](/blogg/lyftoglor-betong).",
       },
     ],
     faqs: [
@@ -427,7 +427,7 @@ export const products: Product[] = [
     h1: "3D-bockning och bågbockning av armering",
     metaTitle: "3D-bockning & bågbockning av armering",
     metaDescription:
-      "Rumsbockade 3D-former och bågformad armering, t.ex. till runda fundament och vindkraftsfundament. Bockat efter ritning i B500B, levererat i hela Sverige. Begär offert.",
+      "Rumsbockade 3D-former och bågformad armering, t.ex. till runda fundament och vindkraftsfundament. Bockat efter ritning i B500B. Begär offert.",
     intro:
       "Vi bockar armering i tre dimensioner och i bågar – rumsbockade specialformer och bågformade järn till runda konstruktioner som brunnar, tankar, cirkulära fundament och vindkraftsfundament.",
     keywords: [

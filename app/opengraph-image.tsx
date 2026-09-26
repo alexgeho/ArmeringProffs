@@ -29,7 +29,7 @@ export default function OpengraphImage() {
         }}
       >
         <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>
-          {/* eslint-disable-next-line @next/next/no-img-element -- ImageResponse kräver <img> */}
+          { }
           <img src={emblem} width={96} height={96} alt="" />
           <div style={{ color: "white", fontSize: "38px", fontWeight: 700 }}>{site.company}</div>
         </div>

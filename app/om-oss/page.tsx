@@ -4,10 +4,11 @@ import { site } from "@/config/site";
 import { Section, SectionHeading } from "@/components/ui";
 import { Breadcrumbs, UspBar, Process, CtaBanner, Reviews } from "@/components/sections";
 import { IconCheck } from "@/components/icons";
+import { JsonLd, breadcrumbSchema } from "@/lib/jsonld";
 
 export const metadata: Metadata = {
   title: "Om oss",
-  description: `${site.company} är specialister på prefabricerad armering – klippt & bockad, armeringskorgar och svetsad armering – med tillverkning, leverans och montage i hela Sverige. Läs mer om oss.`,
+  description: `${site.company} är specialister på prefab armering – klippt & bockad, korgar och svetsad armering – med tillverkning, leverans och montage i hela Sverige.`,
   alternates: { canonical: "/om-oss" },
   openGraph: {
     title: `Om oss | ${site.company}`,
@@ -68,6 +69,12 @@ export default function OmOssPage() {
       <Process />
       <Reviews />
       <CtaBanner />
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: "Hem", url: site.url },
+          { name: "Om oss", url: `${site.url}/om-oss/` },
+        ])}
+      />
     </>
   );
 }

@@ -9,7 +9,7 @@ import { JsonLd, breadcrumbSchema } from "@/lib/jsonld";
 
 export const metadata: Metadata = {
   title: "Begär offert på prefab armering",
-  description: `Begär offert på prefab armering – klippt & bockad, korgar och nät. Ladda upp din bockningslista eller ritning så återkommer ${site.company} snabbt med pris och leveranstid för hela Sverige.`,
+  description: "Begär offert på prefab armering – klippt & bockad, korgar och nät. Ladda upp bockningslista eller ritning så får du pris och leveranstid.",
   alternates: { canonical: "/offert" },
   openGraph: {
     title: `Begär offert på prefab armering | ${site.company}`,

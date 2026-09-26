@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
-import type { ReactNode } from "react";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { posts, getPost, type Block, type Post } from "@/config/blog";
 import { site } from "@/config/site";
 import { Section, Container, Button } from "@/components/ui";
-import { Breadcrumbs, CtaBanner, CityLinks } from "@/components/sections";
+import { Breadcrumbs, CtaBanner } from "@/components/sections";
 import { FaqAccordion } from "@/components/FaqAccordion";
 import { IconClock, IconArrow, IconCheck } from "@/components/icons";
 import { figures } from "@/components/illustrations";
 import { JsonLd, articleSchema, breadcrumbSchema, faqSchema } from "@/lib/jsonld";
+import { renderText } from "@/lib/renderText";
 
 export function generateStaticParams() {
   return posts.map((p) => ({ slug: p.slug }));
@@ -36,28 +36,6 @@ export async function generateMetadata({
       modifiedTime: p.updated ?? p.date,
     },
   };
-}
-
-/** Gör om inline-länkar i markdown-stil [text](/sökväg) till klickbara länkar. */
-function renderText(text: string): ReactNode {
-  const parts: ReactNode[] = [];
-  const regex = /\[([^\]]+)\]\(([^)]+)\)/g;
-  let last = 0;
-  let m: RegExpExecArray | null;
-  let key = 0;
-  while ((m = regex.exec(text)) !== null) {
-    if (m.index > last) parts.push(text.slice(last, m.index));
-    const [, label, href] = m;
-    const cls = "text-brand underline underline-offset-2 hover:no-underline";
-    parts.push(
-      href.startsWith("/")
-        ? <Link key={key++} href={href} className={cls}>{label}</Link>
-        : <a key={key++} href={href} className={cls} rel="noopener">{label}</a>
-    );
-    last = m.index + m[0].length;
-  }
-  if (last < text.length) parts.push(text.slice(last));
-  return parts.length ? parts : text;
 }
 
 function renderBlock(b: Block, i: number) {
@@ -200,7 +178,6 @@ export default async function PostPage({
         </Section>
       )}
 
-      <CityLinks title="Vi levererar armering i hela Sverige" eyebrow="Leverans" />
 
       <CtaBanner />
 

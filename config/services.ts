@@ -30,7 +30,7 @@ export const services: Service[] = [
     h1: "Armeringsmontage – vi lägger armeringen på plats",
     metaTitle: "Armeringsmontage – vi lägger armeringen",
     metaDescription:
-      "Armeringsmontage i hela Sverige – vi lägger och binder armeringen på plats efter ritning. Prefab armering tillverkad, levererad och monterad av samma leverantör. Begär offert.",
+      "Armeringsmontage i hela Sverige – vi lägger och binder armeringen efter ritning. Tillverkat, levererat och monterat av samma leverantör. Begär offert.",
     intro:
       "Vi utför armeringsmontage – lägger, binder och fixerar armeringen på plats efter din konstruktionsritning. Eftersom vi tillverkar och levererar prefab armering själva får du hela kedjan från en leverantör: rätt detaljer, rätt täckskikt och rätt tidplan utan att du behöver koordinera flera aktörer.",
     keywords: [
@@ -81,7 +81,7 @@ export const services: Service[] = [
     h1: "Bockningslista – vi tar fram den från din ritning",
     metaTitle: "Bockningslista & armeringsspecifikation",
     metaDescription:
-      "Bockningslista (armeringsspecifikation) från din armeringsritning – vi tar fram den åt dig, eller ladda ner vår gratis mall. Underlag för offert och tillverkning.",
+      "Bockningslista (armeringsspecifikation) från din ritning – vi tar fram den, eller bygg den själv med typformer A–XX och vår gratis mall.",
     intro:
       "En bockningslista är receptet för din armering – varje position med form, mått, dimension och antal. Har du redan en lista tillverkar vi direkt efter den. Har du bara en konstruktionsritning tar vi fram bockningslistan åt dig, så att du får rätt armering och ett tydligt underlag för offerten.",
     keywords: [

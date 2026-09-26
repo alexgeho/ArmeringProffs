@@ -11,7 +11,7 @@ import { JsonLd, breadcrumbSchema } from "@/lib/jsonld";
 export const metadata: Metadata = {
   title: "Produkter – prefab armering",
   description:
-    "Vårt sortiment av prefabricerad armering: klippt & bockad armering, armeringskorgar, svetsad armering och armeringsnät, armeringsjärn i kamstål samt distanser. Tillverkning och leverans i hela Sverige.",
+    "Prefab armering: klippt & bockad, armeringskorgar, svetsad armering och nät, armeringsjärn i kamstål och distanser. Leverans i hela Sverige.",
   alternates: { canonical: "/produkter" },
   openGraph: {
     title: "Produkter – prefab armering | Armeringsproffs",

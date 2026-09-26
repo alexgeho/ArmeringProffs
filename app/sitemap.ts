@@ -46,7 +46,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: u("/kontakt"), lastModified: UPDATED.static, changeFrequency: "yearly", priority: 0.6 },
     { url: u("/offert"), lastModified: UPDATED.static, changeFrequency: "yearly", priority: 0.8 },
     // Sidan finns och länkas från formulär/cookie-banner – ska inte saknas i sitemap.
-    { url: u("/integritetspolicy"), lastModified: UPDATED.static, changeFrequency: "yearly", priority: 0.3 },
+    // /integritetspolicy är noindex – hör inte hemma i sitemap.
   ];
 
   const productPages: MetadataRoute.Sitemap = products.map((p) => ({
