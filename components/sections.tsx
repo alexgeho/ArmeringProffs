@@ -3,7 +3,7 @@ import Image from "next/image";
 import type { ReactNode } from "react";
 import { site } from "@/config/site";
 import { products } from "@/config/products";
-import { reviews } from "@/config/reviews";
+import { verifiedReviews } from "@/config/reviews";
 import { posts, type Post } from "@/config/blog";
 import { cities } from "@/config/cities";
 import { Button, Container, Section, SectionHeading } from "./ui";
@@ -292,11 +292,13 @@ export function LeveransSection({ heading = true }: { heading?: boolean }) {
 
 /* ---------- Reviews ---------- */
 export function Reviews() {
+  // Bara äkta, verifierade omdömen visas – exempeltexter ska aldrig synas för kunder.
+  if (verifiedReviews.length === 0) return null;
   return (
     <Section muted>
       <SectionHeading eyebrow="Vad kunderna säger" title="Nöjda kunder i hela Sverige" center />
       <div className="mt-10 grid gap-6 md:grid-cols-3">
-        {reviews.map((r, i) => (
+        {verifiedReviews.map((r, i) => (
           <figure key={i} className="rounded-xl border border-line bg-white p-6">
             <div className="flex gap-0.5 text-brand">
               {Array.from({ length: r.rating }).map((_, j) => (

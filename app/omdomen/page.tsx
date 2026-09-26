@@ -11,6 +11,8 @@ export const metadata: Metadata = {
   description:
     "Vad kunderna säger om vår prefabricerade armering – klippt & bockad armering, armeringskorgar och svetsade nät levererade i hela Sverige.",
   alternates: { canonical: "/omdomen" },
+  // Dold tills det finns riktiga omdömen (beslut 2026-09-26).
+  robots: { index: false, follow: true },
 };
 
 // Visa exempel-notisen så länge det inte finns några verifierade (äkta) omdömen.

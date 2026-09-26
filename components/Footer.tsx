@@ -8,7 +8,6 @@ import { IconPhone, IconMail, IconMapPin } from "./icons";
 
 const footerLinks = [
   { href: "/om-oss", label: "Om oss" },
-  { href: "/omdomen", label: "Omdömen" },
   { href: "/vanliga-fragor", label: "Vanliga frågor" },
   { href: "/kontakt", label: "Kontakt" },
   { href: "/integritetspolicy", label: "Integritetspolicy" },

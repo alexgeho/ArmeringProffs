@@ -41,7 +41,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: u("/armeringskalkylator"), lastModified: UPDATED.static, changeFrequency: "monthly", priority: 0.8 },
     { url: u("/blogg"), lastModified: UPDATED.static, changeFrequency: "weekly", priority: 0.7 },
     { url: u("/om-oss"), lastModified: UPDATED.static, changeFrequency: "yearly", priority: 0.5 },
-    { url: u("/omdomen"), lastModified: UPDATED.static, changeFrequency: "monthly", priority: 0.5 },
     { url: u("/vanliga-fragor"), lastModified: UPDATED.static, changeFrequency: "monthly", priority: 0.6 },
     { url: u("/kontakt"), lastModified: UPDATED.static, changeFrequency: "yearly", priority: 0.6 },
     { url: u("/offert"), lastModified: UPDATED.static, changeFrequency: "yearly", priority: 0.8 },
