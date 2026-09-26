@@ -1,5 +1,9 @@
 # Armeringsproffs — статус проекта (handoff)
 
+> ## 🟢 2026-09-26 (вечер) — отзывы скрыты + smoke-тест
+> Решение владельца: примеры «Kund (exempel)» скрыть до реальных отзывов → блок Reviews рендерит только `verified: true` (сейчас скрыт на / и /om-oss), /omdomen noindex, убрана из футера и sitemap (`69a06b7`). Вернуть: добавить реальные отзывы с `verified: true` в config/reviews.ts + вернуть ссылку в Footer/sitemap.
+> Smoke-тест: анти-бот Inleed («One moment, please...») → предупреждение, а не красный деплой.
+>
 > ## 🟢 2026-09-26 — SEO-аудит: фиксы live (`340d461`)
 > Аудит → `~/sites-hub/audits/2026-09-26/armeringproffs-audit.md`. Сделано и проверено live (57 URL = 200):
 > hero 608 → 120 КБ (LCP главной был 6,2 s), остальные фото ×2–3 легче; тексты продуктов/услуг поддерживают `[text](/link)`
