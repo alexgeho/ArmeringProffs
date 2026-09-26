@@ -19,6 +19,15 @@ NOCACHE=(-H 'Cache-Control: no-cache' -H 'Pragma: no-cache')
 # 1) Startsidan + alla 12 orter länkade (= färsk build + hel stads-graf).
 home="$(curl -fsS "${NOCACHE[@]}" "$BASE/?$cb" || true)"
 if [ -z "$home" ]; then say "FEL: startsidan svarade inte"; fail=1; fi
+
+# Inleeds bot-skydd (LiteSpeed) svarar ibland GitHub-runnern med en
+# "One moment, please..."-sida i stället för sajten. Då går det inte att
+# verifiera något härifrån – varna och avsluta utan fel (exit 3 = oklart),
+# i stället för att markera en lyckad deploy som misslyckad.
+if printf '%s' "$home" | grep -q "<title>One moment, please"; then
+  say "VARNING: Inleeds bot-skydd blockerade runnern – smoke kunde inte verifieras."
+  exit 3
+fi
 missing=0
 for c in stockholm goteborg malmo uppsala vasteras orebro linkoping helsingborg jonkoping norrkoping umea sundsvall; do
   printf '%s' "$home" | grep -q "/armering/$c/" || { say "FEL: stad-länk saknas på startsidan: $c"; fail=1; missing=1; }

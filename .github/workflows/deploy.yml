@@ -81,10 +81,18 @@ jobs:
       - name: Smoke test (fresh static build live)
         run: |
           # Vänta in ev. cache/propagering och kör smoke med några försök.
+          blocked=0
           for i in 1 2 3 4 5; do
-            if bash scripts/smoke.sh "$SITE_URL"; then exit 0; fi
+            bash scripts/smoke.sh "$SITE_URL"; rc=$?
+            if [ "$rc" = 0 ]; then exit 0; fi
+            if [ "$rc" = 3 ]; then blocked=1; else blocked=0; fi
             echo "Smoke-försök $i misslyckades, väntar 15s ..."
             sleep 15
           done
+          # Bara bot-skyddet i vägen (inte ett riktigt fel) → varning, inte röd deploy.
+          if [ "$blocked" = 1 ]; then
+            echo "::warning::Smoke kunde inte verifieras (Inleeds bot-skydd). Kontrollera sajten manuellt."
+            exit 0
+          fi
           echo "Smoke-test misslyckades efter flera försök."
           exit 1
