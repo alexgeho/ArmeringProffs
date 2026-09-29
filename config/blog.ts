@@ -863,13 +863,13 @@ export const posts: Post[] = [
   {
     slug: "bockningslista-sa-gor-du",
     title: "Bockningslista – så gör du en, steg för steg",
-    metaTitle: "Bockningslista – så gör du (+ mall)",
+    metaTitle: "Bockningslista (armeringsspecifikation) + mall",
     metaDescription:
-      "Vad är en bockningslista och hur gör du en? Guide om bockningslista för armering – positioner, former, mått och dimensioner – med gratis mall att ladda ner.",
+      "Bockningslista, armeringsspecifikation eller armeringsförteckning – så gör du listan för armering: positioner, former, mått, Ø och antal. Gratis mall att ladda ner.",
     excerpt:
       "En bockningslista är receptet för din armering: varje position med form, mått, dimension och antal. Så gör du en – och så slipper du om vi tar fram den åt dig.",
     date: "2026-09-08",
-    updated: "2026-09-23",
+    updated: "2026-09-29",
     readingMinutes: 5,
     keywords: [
       "bockningslista",
@@ -878,6 +878,8 @@ export const posts: Post[] = [
       "göra bockningslista",
       "armeringsritning",
       "bockningsschema",
+      "armeringsspecifikation",
+      "armeringsförteckning",
     ],
     content: [
       { type: "p", text: "En bockningslista (kallas ibland bockningsschema eller armeringsspecifikation) är sammanställningen av all armering i ett projekt. Den talar om exakt vilka järn som ska kapas och bockas: form, mått, dimension och antal per position. Med en tydlig bockningslista får du rätt armering, ett korrekt pris och en leverans som är märkt och sorterad – redo att monteras." },
@@ -890,11 +892,14 @@ export const posts: Post[] = [
         "Mått per skänkel – längderna på formens sträckor, i mm.",
         "Dimension (Ø) – järnets diameter i mm, t.ex. Ø10 eller Ø16.",
         "Antal – hur många likadana järn positionen omfattar.",
-        "Gärna även täckskikt och bockningsradie där det är kritiskt.",
+        "Gärna även täckskikt och bockningsradie där det är kritiskt – se [minsta bockningsradie i tabell](/blogg/bocka-armeringsjarn).",
       ] },
 
       { type: "figure", illustration: "bending-shapes", caption: "Vanliga bockningsformer – raka längder, byglar, U- och L-former." },
       { type: "p", text: "Alla standardformer med bokstavskod och måttbeteckningar finns som utskrivbart blad: [ladda ner typformer för bockning (PDF)](/downloads/typformer-bockning-armeringsproffs.pdf). Vill du prova formerna med egna mått och skicka listan direkt, använd [verktyget för typformer](/tjanster/bockningslista)." },
+
+      { type: "h2", text: "Bockningslista, armeringsspecifikation eller armeringsförteckning?" },
+      { type: "p", text: "Begreppen används ofta om samma sak: listan över all armering i ett projekt, position för position. Armeringsspecifikation och bockningsschema är vanliga synonymer, och på konstruktionsritningen står listan ofta som armeringsförteckning. Innehållet är detsamma – form, mått, Ø och antal per position – och det är det underlaget vi tillverkar efter." },
 
       { type: "h2", text: "Steg för steg" },
       { type: "ol", items: [
