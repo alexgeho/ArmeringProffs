@@ -1,5 +1,13 @@
 # next-level-brief — worklog (2026-09-08)
 
+## 🟢 SESSION 2026-09-29 — bockningslista (GSC)
+### KLART
+- ✅ `12bc30e` bockningslista-sa-gor-du: visningarna kom från "armeringsspecifikation" (57) och "bockningsradie armering (tabell)" (~80) → synonymer i title/description + eget avsnitt; bockningsradie länkar bocka-armeringsjarn (har tabellen).
+- ✅ Kontrollerat: /omdomen noindex utan länkar; /armeringskalkylator → / 301 redan.
+### 🔜 NÄSTA STEG
+1. ~13.10: CTR för bockningslista/armeringsspecifikation.
+2. Kannibalisering blogg ↔ produkt (armeringskorgar m.fl., audit 2026-09-26 p.6).
+
 Автономное выполнение `docs/next-level-brief.md`. Каждый чанк: build ✓ + lint (0 errors) + commit + push (autodeploy).
 
 ## Выполнено
