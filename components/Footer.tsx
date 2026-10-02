@@ -92,7 +92,10 @@ export function Footer() {
           </nav>
           <div className="mt-5 flex flex-col gap-2 text-xs text-slate-500 sm:flex-row sm:items-center sm:justify-between">
             <p>
-              © {year} {site.company} · Drivs av {site.legalName} · Reg.nr {site.regNumber} · VAT {site.vat}
+              © {year} {site.company} · Drivs av {site.legalName} · Reg.nr {site.regNumber} · VAT {site.vat} · Webbplats av{" "}
+              <a href="https://nordkod.se/" className="text-slate-400 hover:text-white">
+                Nordkod
+              </a>
             </p>
             <p>Klippt & bockad · Armeringskorgar · Svetsad armering · {site.region}</p>
           </div>
