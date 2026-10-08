@@ -1,5 +1,16 @@
 # next-level-brief — worklog (2026-09-08)
 
+## 🟢 SESSION 2026-10-08 — GSC-genomgång + CTR/länkar (`915c243`)
+GSC 28 d (vs föreg. 28 d): 156 klick (2) / 6,73K visn. (206) / CTR 2,3 % / pos 9,8 (28,5). Index 45 / ej 25 (16 Discovered, 6 redirect, 2 Duplicate: produkter/armeringsjarn + klippt-och-bockad crawlade 24.09 före fix, 1 Crawled).
+### KLART (live, verifierat med curl)
+- metaTitle: klippt-bockad-armering → "Bockning av armering – klippt & bockad efter lista" (462 visn, 0 klick, frågor "bockning (av) armering"); armeringsbyglar → "typer (U-, N-, K-bygel) & mått" (533 visn, 1,3 %); armeringskorgar-palarmering → plural "Armeringskorgar" (fråga armeringskorgar 145 visn, pos 8); bocka-armeringsjarn → "bockningsradie & tabell" (bockningsradie-frågor 166 visn, 0,6 %).
+- Interna länkar till Discovered: armering-till-garage + armering-till-pool (från betongplatta, åtgång/m²), armeringsstal + armeringsjarn-dimensioner (från bocka, skarvlängd).
+- Request Indexing: armering-till-pool ✅, sedan kvoten slut.
+### 🔜 NÄSTA STEG
+1. 09.10: Request Indexing armeringsstal, armering-till-garage, klippt-bockad-armering, armeringsbyglar, bocka-armeringsjarn, produkter/armeringsjarn, produkter/klippt-och-bockad.
+2. ~22.10: CTR för de 4 nya titlarna.
+3. Kannibalisering: fråga "armeringskorgar" → blogg pos 7,5 vs /produkter/armeringskorgar pos 21,9; "bockad armering" → blogg vs /produkter/klippt-och-bockad (pos 27).
+
 ## 🟢 SESSION 2026-09-29 — bockningslista (GSC)
 ### KLART
 - ✅ `12bc30e` bockningslista-sa-gor-du: visningarna kom från "armeringsspecifikation" (57) och "bockningsradie armering (tabell)" (~80) → synonymer i title/description + eget avsnitt; bockningsradie länkar bocka-armeringsjarn (har tabellen).

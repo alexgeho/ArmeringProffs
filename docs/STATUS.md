@@ -1,5 +1,7 @@
 # Armeringsproffs — статус проекта (handoff)
 
+> ## 🟢 2026-10-08 — GSC: 156 кл / 6,73K / CTR 2,3 % / поз. 9,8 (28 дн); CTR-titles 4 статей + ссылки на Discovered (`915c243`). Request Indexing — 09.10 (список в next-level-worklog).
+>
 > ## 🟢 2026-09-26 (вечер) — отзывы скрыты + smoke-тест
 > Решение владельца: примеры «Kund (exempel)» скрыть до реальных отзывов → блок Reviews рендерит только `verified: true` (сейчас скрыт на / и /om-oss), /omdomen noindex, убрана из футера и sitemap (`69a06b7`). Вернуть: добавить реальные отзывы с `verified: true` в config/reviews.ts + вернуть ссылку в Footer/sitemap.
 > Smoke-тест: анти-бот Inleed («One moment, please...») → предупреждение, а не красный деплой.
