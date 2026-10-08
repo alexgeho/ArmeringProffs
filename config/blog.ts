@@ -42,7 +42,7 @@ export const posts: Post[] = [
     excerpt:
       "Rätt armering håller ihop betongplattan och tar upp dragkrafterna som betongen själv inte klarar. Här går vi igenom vilken armering du behöver, hur mycket som går åt och hur den placeras rätt.",
     date: "2026-08-31",
-    updated: "2026-09-23",
+    updated: "2026-10-08",
     readingMinutes: 8,
     keywords: [
       "armera betongplatta",
@@ -97,6 +97,7 @@ export const posts: Post[] = [
 
       { type: "h2", text: "Köpa själv eller beställa prefab?" },
       { type: "p", text: "Armering går att köpa styckvis, men rätt dimensionering, kapning, bockning och placering är avgörande för att plattan ska hålla. Vi tillverkar prefab armering efter din bockningslista eller ritning – [klippt och bockad armering](/produkter/klippt-och-bockad), [svetsad armering och nät](/produkter/svetsad-armering) och [armeringskorgar](/produkter/armeringskorgar) – och levererar i hela Sverige. Begär en kostnadsfri offert så tar vi fram rätt armering till din platta." },
+      { type: "p", text: "Ska plattan bära ett garage eller en pool? Se [armering till garageplatta](/blogg/armering-till-garage) och [armering till pool](/blogg/armering-till-pool)." },
       { type: "p", text: "Vi levererar armering till betongplattor i hela landet – från [Stockholm](/armering/stockholm) i öster till [Göteborg](/armering/goteborg) i väster och orterna däremellan." },
     ],
     faqs: [
@@ -276,6 +277,7 @@ export const posts: Post[] = [
     excerpt:
       "Ska du beställa armering behöver du veta åtgången. Här visar vi hur du räknar ut hur mycket armeringsnät och kamjärn som går åt till plattan.",
     date: "2026-08-31",
+    updated: "2026-10-08",
     readingMinutes: 4,
     keywords: [
       "armering åtgång",
@@ -309,7 +311,7 @@ export const posts: Post[] = [
       ] },
 
       { type: "h2", text: "Vi räknar exakt åt dig" },
-      { type: "p", text: "Vi räknar fram armeringen efter din ritning och levererar [nät](/produkter/svetsad-armering), [kamjärn](/produkter/armeringsjarn) och [bockade detaljer](/produkter/klippt-och-bockad) i hela Sverige. Se även våra guider om [armering till betongplatta](/blogg/armering-till-betongplatta) och [armeringsnät](/blogg/armeringsnat-storlekar-och-matt). Begär en kostnadsfri offert." },
+      { type: "p", text: "Vi räknar fram armeringen efter din ritning och levererar [nät](/produkter/svetsad-armering), [kamjärn](/produkter/armeringsjarn) och [bockade detaljer](/produkter/klippt-och-bockad) i hela Sverige. Se även våra guider om [armering till betongplatta](/blogg/armering-till-betongplatta), [armering till garageplatta](/blogg/armering-till-garage), [armering till pool](/blogg/armering-till-pool) och [armeringsnät](/blogg/armeringsnat-storlekar-och-matt). Begär en kostnadsfri offert." },
       { type: "p", text: "Vi räknar åtgången och levererar färdig armering till bland annat [Jönköping](/armering/jonkoping) och [Norrköping](/armering/norrkoping)." },
     ],
     faqs: [
@@ -375,9 +377,9 @@ export const posts: Post[] = [
   {
     slug: "klippt-bockad-armering",
     title: "Klippt och bockad armering – vad är det?",
-    metaTitle: "Klippt & bockad armering – fördelar",
+    metaTitle: "Bockning av armering – klippt & bockad efter lista",
     metaDescription:
-      "Vad betyder klippt och bockad armering? Guide om färdigkapad och bockad armering – hur det fungerar, fördelarna och när det passar ditt projekt.",
+      "Bockning av armering i maskin: vad klippt och bockad armering är, vilka detaljer som bockas, fördelarna och när det lönar sig jämfört med att bocka själv.",
     excerpt:
       "Klippt och bockad armering levereras färdigkapad och böjd efter ritning. Här förklarar vi vad det är, hur det beställs och när det lönar sig.",
     date: "2026-08-31",
@@ -435,7 +437,7 @@ export const posts: Post[] = [
   {
     slug: "armeringskorgar-palarmering",
     title: "Armeringskorg – typer och användning i pålar, pelare och balkar",
-    metaTitle: "Armeringskorg – typer för pålar, pelare & balkar",
+    metaTitle: "Armeringskorgar – typer för pålar, pelare & balkar",
     metaDescription:
       "Vad är en armeringskorg? Typer för pålar, pelare och balkar, svetsad eller bunden, vad du anger vid beställning och varför färdiga armeringskorgar sparar tid.",
     excerpt:
@@ -1027,7 +1029,7 @@ export const posts: Post[] = [
   {
     slug: "armeringsbyglar",
     title: "Armeringsbyglar – typer, mått och när de används",
-    metaTitle: "Armeringsbyglar – U-bygel, sluten & mått",
+    metaTitle: "Armeringsbyglar – typer (U-, N-, K-bygel) & mått",
     metaDescription:
       "Armeringsbyglar förklarade: U-bygel, sluten bygel och öppen bygel – typkoder, mått, krokar och bygelavstånd. Beställ färdiga byglar i serie.",
     excerpt:
@@ -1120,12 +1122,13 @@ export const posts: Post[] = [
   {
     slug: "bocka-armeringsjarn",
     title: "Bocka armeringsjärn – för hand, med verktyg och rätt bockningsradie",
-    metaTitle: "Bocka armeringsjärn – för hand & tabell",
+    metaTitle: "Bocka armeringsjärn – bockningsradie & tabell",
     metaDescription:
       "Så bockar du armeringsjärn: verktyg, bockning för hand och minsta bockningsradie enligt Eurokod 2 i tabell. Plus klipplängd och vanliga misstag.",
     excerpt:
       "Armeringsjärn kan bockas för hand med rätt verktyg – men bara med rätt bockningsradie. Här är tabellen över minsta dorndiameter, hur du räknar klipplängd och när det lönar sig att beställa färdigbockat.",
     date: "2026-09-23",
+    updated: "2026-10-08",
     readingMinutes: 6,
     keywords: [
       "bocka armeringsjärn",
@@ -1187,6 +1190,7 @@ export const posts: Post[] = [
 
       { type: "h2", text: "När lönar det sig att köpa bockat?" },
       { type: "p", text: "Några enstaka järn till ett mindre projekt går bra att bocka själv. Men redan vid ett par dussin byglar går det snabbare, blir jämnare och ofta billigare totalt att beställa [klippt och bockad armering](/produkter/klippt-och-bockad) efter en [bockningslista](/tjanster/bockningslista). Då bockas varje järn i maskin med rätt radie, märks per position och levereras klart att montera." },
+      { type: "p", text: "Vikt per meter och stånglängder hittar du i [armeringsstål – B500B](/blogg/armeringsstal) och dimensionerna i [armeringsjärn dimensioner](/blogg/armeringsjarn-dimensioner)." },
     ],
     faqs: [
       { q: "Vilket verktyg behövs för att bocka armeringsjärn?", a: "För tunna dimensioner (ca Ø6–Ø12) räcker ett bockjärn/armeringsbockare, gärna på ett bockbord med tappar i rätt diameter. Ø16 och grövre bockas i maskin." },
@@ -1206,6 +1210,7 @@ export const posts: Post[] = [
     excerpt:
       "Armeringsjärn och nät måste skarvas med tillräcklig överlappning för att krafterna ska föras över. Här är riktvärden för skarvlängd, hur den beräknas och hur mycket armeringsnät ska överlappa.",
     date: "2026-09-23",
+    updated: "2026-10-08",
     readingMinutes: 7,
     keywords: [
       "skarvlängd armering",
@@ -1270,7 +1275,7 @@ export const posts: Post[] = [
       ] },
 
       { type: "h2", text: "Skarvarna påverkar hur mycket armering du beställer" },
-      { type: "p", text: "Varje skarv innebär extra stål. I en lång platta med Ø12 i 6-metersstänger och 600 mm skarv går det åt ungefär 10 % extra stål för skarvarna (0,6 m per 6-metersstång). För en enskild 10 meter lång rad blir det 10,6 m järn – alltså två stänger. Räkna med skarvarna i mängdberäkningen, eller låt oss göra det i offerten utifrån din [bockningslista](/tjanster/bockningslista)." },
+      { type: "p", text: "Varje skarv innebär extra stål. I en lång platta med Ø12 i 6-metersstänger och 600 mm skarv går det åt ungefär 10 % extra stål för skarvarna (0,6 m per 6-metersstång). För en enskild 10 meter lång rad blir det 10,6 m järn – alltså två stänger. Räkna med skarvarna i mängdberäkningen, eller låt oss göra det i offerten utifrån din [bockningslista](/tjanster/bockningslista). Stånglängder och vikt per meter finns i [armeringsstål – B500B](/blogg/armeringsstal)." },
     ],
     faqs: [
       { q: "Hur lång ska skarven vara på armeringsjärn?", a: "Skarvlängden står på ritningen. Beräknat enligt Eurokod 2 blir den för dragna järn i C25/30 ofta 40–60 × Ø vid god vidhäftning, t.ex. 480–720 mm för Ø12. Eurokod 2 anger dessutom ett absolut golv: det största av 15 × Ø, 200 mm och 0,3·α6·lb,rqd." },
