@@ -3,6 +3,7 @@
 ## 🟢 2026-10-09 — GSC Product snippets / Merchant listings
 Письма GSC про Product/Offer без price/image — это старый обход 03.09 `/produkter/klippt-och-bockad` (первая версия с `offers` без цены). Сейчас Product-схемы на сайте нет (проверено curl по всему sitemap: только Service). Validate fix запущен 09.10: Product snippets (price) + Merchant listings (price, image). Код не менялся. ~через неделю проверить, что ошибки ушли.
 Request Indexing 09.10: квота GSC уже исчерпана (Quota Exceeded с первой же ссылки) → **перенос на 10.10**, тот же список из 7 URL (со слэшем). armeringsstal: «URL is unknown to Google».
+**Ny sida live:** `/produkter/armeringsnat/` (K2 из `docs/SEO-KARNA-kommersiell.md`); svetsad-armering → фокус specialnät; ссылки «nät/armeringsnät» из блога → новая страница. 10.10 запросить индексацию и её ПЕРВОЙ. Дальше по ядру: grundarmering → ILF на klippt-och-bockad → pålarmering.
 
 ## 🟢 SESSION 2026-10-08 — GSC-genomgång + CTR/länkar (`915c243`)
 GSC 28 d (vs föreg. 28 d): 156 klick (2) / 6,73K visn. (206) / CTR 2,3 % / pos 9,8 (28,5). Index 45 / ej 25 (16 Discovered, 6 redirect, 2 Duplicate: produkter/armeringsjarn + klippt-och-bockad crawlade 24.09 före fix, 1 Crawled).
