@@ -1,5 +1,7 @@
 # Armeringsproffs — статус проекта (handoff)
 
+> ## 🟢 2026-10-09 — +100 страниц (план docs/PLAN-sidor-2026-10.md) + 145 картинок live, sitemap 158 URL. Детали и NÄSTA — next-level-worklog.md.
+>
 > ## 🟢 2026-10-08 — GSC: 156 кл / 6,73K / CTR 2,3 % / поз. 9,8 (28 дн); CTR-titles 4 статей + ссылки на Discovered (`915c243`). Request Indexing — 09.10 (список в next-level-worklog).
 >
 > ## 🟢 2026-09-26 (вечер) — отзывы скрыты + smoke-тест
