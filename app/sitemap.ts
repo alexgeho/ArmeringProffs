@@ -22,7 +22,7 @@ const UPDATED = {
   // app/page.tsx, /leverans, /om-oss, /kontakt, /offert, /vanliga-fragor,
   // /omdomen, /armeringskalkylator, /integritetspolicy – senast ändrade 2026-09-08.
   static: "2026-09-25", // H1 på listsidor + kortare titlar (2026-09-25)
-  products: "2026-09-25", // config/products.ts (kortare metaTitle 2026-09-25)
+  products: "2026-10-09", // config/products.ts (ny sida armeringsnat 2026-10-09)
   services: "2026-09-25", // config/services.ts (armeringsspecifikation på bockningslista 2026-09-25)
   cities: "2026-09-08", // app/armering/[slug]/page.tsx (GuidesTeaser tillagd)
 } as const;

@@ -145,10 +145,63 @@ export const products: Product[] = [
     featured: true,
   },
   {
+    slug: "armeringsnat",
+    name: "Armeringsnät",
+    h1: "Armeringsnät – lagernät och nät efter mått",
+    metaTitle: "Armeringsnät 5150, 6150, 8150 – leverans",
+    metaDescription:
+      "Armeringsnät i B500A/B: 5150, 6150, 8150 och fingerskarvnät till platta, garage och husgrund. Leverans i hela Sverige. Begär offert.",
+    intro:
+      "Vi levererar armeringsnät till plattor, golv och grunder – lagernät i vanliga dimensioner och nät tillverkade efter dina mått. Skicka ytan eller ritningen så räknar vi fram antal nät, skarvar och distanser och levererar allt i samma leverans, i hela Sverige.",
+    keywords: [
+      "armeringsnät",
+      "armeringsnat",
+      "armeringsnät 6150",
+      "armeringsnät 5150",
+      "armeringsnät 8150",
+      "köpa armeringsnät",
+      "armeringsnät leverans",
+      "fingerskarvnät",
+      "armeringsmatta",
+    ],
+    includes: [
+      "Lagernät 5150, 6150, 7150 och 8150",
+      "Fingerskarvnät för mindre överlapp",
+      "Nät efter mått och ritning",
+      "Uträkning av antal nät och skarvar",
+      "Distanser och kantjärn i samma leverans",
+      "Leverans i hela Sverige",
+    ],
+    body: [
+      {
+        heading: "Vilket armeringsnät behöver du?",
+        text: "Beteckningen anger tråd och ruta: 6150 betyder Ø6 mm tråd med 150 mm mellan trådarna. Mindre plattor och uterum armeras ofta med 5150, garage- och villaplattor med 6150 och hårt belastade plattor med 8150 eller dubbla nätlager. Ritningen avgör – se guiden [armeringsnät – storlekar och mått](/blogg/armeringsnat-storlekar-och-matt).",
+      },
+      {
+        heading: "Rätt antal nät – utan onödigt spill",
+        text: "Vi räknar fram hur många nät ytan kräver inklusive överlapp (minst två rutor, ca 300 mm för 150-nät). Fingerskarvnät har utstickande trådar i kanterna och ger kortare överlapp, vilket sparar material på stora ytor. Vill du räkna själv först? Testa [armeringskalkylatorn](/armeringskalkylator).",
+      },
+      {
+        heading: "Nät efter mått",
+        text: "När lagerformaten inte passar tillverkar vi nät med anpassade yttermått, maskvidder och trådgrovlekar – läs mer om [specialnät och svetsade mattor](/produkter/svetsad-armering). Kompletterande [kantjärn och byglar](/produkter/klippt-och-bockad) och [distanser](/produkter/distanser) levereras tillsammans med näten.",
+      },
+      {
+        heading: "Pris och leverans",
+        text: "Priset beror på nättyp, antal och leveransort. Vi anger nät, tillbehör och frakt i en samlad offert – ingen fast fraktavgift, och vi levererar i hela Sverige, även norrut. Skicka yta, ritning eller materiallista så får du ett tydligt pris.",
+      },
+    ],
+    faqs: [
+      { q: "Vilket armeringsnät till garageplatta?", a: "Vanligtvis 6150 (Ø6 mm tråd, 150 mm rutor), kompletterat med kantjärn och kantbalksbyglar. Tyngre laster kan kräva grövre nät eller två lager – konstruktionsritningen gäller." },
+      { q: "Hur mycket ska armeringsnät överlappa?", a: "Minst två rutor, för 150-nät ca 300 mm, och skarven binds ihop. Fingerskarvnät ger kortare överlapp." },
+      { q: "Kan ni räkna ut hur många nät jag behöver?", a: "Ja. Skicka mått på plattan eller ritningen så räknar vi fram antal nät inklusive överlapp, samt kantjärn och distanser, och skickar en samlad offert." },
+      { q: "Levererar ni armeringsnät i hela Sverige?", a: "Ja, vi levererar armeringsnät i hela Sverige. Frakten räknas efter mängd och ort och anges i offerten." },
+    ],
+  },
+  {
     slug: "svetsad-armering",
     name: "Svetsad armering & nät",
     h1: "Svetsad armering – armeringsnät och specialnät",
-    metaTitle: "Svetsad armering & armeringsnät – specialnät",
+    metaTitle: "Svetsad armering – specialnät & svetsade mattor efter mått",
     metaDescription:
       "Svetsad armering: armeringsnät, specialnät och svetsade mattor – standardnät eller efter ritning, levererat i hela Sverige. Begär offert.",
     intro:
@@ -158,8 +211,6 @@ export const products: Product[] = [
     //   image: { src: "/images/svetsad-armering-nat.webp", alt: "...", width: 1400, height: 788 },
     keywords: [
       "svetsad armering",
-      "armeringsnät",
-      "armeringsnat",
       "specialnät armering",
       "svetsat nät",
       "nätarmering",
@@ -167,7 +218,7 @@ export const products: Product[] = [
       "prefab armering",
     ],
     includes: [
-      "Standardarmeringsnät (t.ex. NPS 500)",
+      "Specialnät och standardnät",
       "Specialnät efter mått och ritning",
       "Svetsade mattor och plattnät",
       "Anpassade maskvidder och trådgrovlekar",
@@ -177,7 +228,7 @@ export const products: Product[] = [
     body: [
       {
         heading: "Armeringsnät för plattor och väggar",
-        text: "Svetsad armering, oftast i form av armeringsnät, är ett rutnät av kamstål svetsat i korsningarna. Nät används för att armera betongplattor, golv, väggar och bjälklag snabbt och med jämn kvalitet. Standardnät levereras i fasta format medan specialnät tillverkas efter dina mått.",
+        text: "Svetsad armering, oftast i form av armeringsnät, är ett rutnät av kamstål svetsat i korsningarna. Nät används för att armera betongplattor, golv, väggar och bjälklag snabbt och med jämn kvalitet. Standardnät levereras i fasta format – se [armeringsnät 5150–8150](/produkter/armeringsnat) – medan specialnät tillverkas efter dina mått.",
       },
       {
         heading: "Specialnät sparar tid och material",

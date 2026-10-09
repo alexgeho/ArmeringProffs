@@ -157,7 +157,7 @@ export const posts: Post[] = [
       { type: "figure", illustration: "mesh-overlap", caption: "Två armeringsnät skarvas med överlapp på ca 300–400 mm (minst två rutor) som binds ihop." },
 
       { type: "h2", text: "Osäker på valet?" },
-      { type: "p", text: "Vill du inte räkna själv? Vi tillverkar [svetsad armering och specialnät](/produkter/svetsad-armering) efter dina mått och levererar i hela Sverige. Begär en kostnadsfri offert." },
+      { type: "p", text: "Vill du inte räkna själv? Vi levererar [armeringsnät](/produkter/armeringsnat) i lagerdimensioner, tillverkar [specialnät](/produkter/svetsad-armering) efter dina mått och levererar i hela Sverige. Begär en kostnadsfri offert." },
       { type: "p", text: "Behöver du nät på annan ort? Vi skickar armeringsnät bland annat till [Malmö](/armering/malmo) och [Uppsala](/armering/uppsala) – och resten av landet." },
     ],
     faqs: [
@@ -311,7 +311,7 @@ export const posts: Post[] = [
       ] },
 
       { type: "h2", text: "Vi räknar exakt åt dig" },
-      { type: "p", text: "Vi räknar fram armeringen efter din ritning och levererar [nät](/produkter/svetsad-armering), [kamjärn](/produkter/armeringsjarn) och [bockade detaljer](/produkter/klippt-och-bockad) i hela Sverige. Se även våra guider om [armering till betongplatta](/blogg/armering-till-betongplatta), [armering till garageplatta](/blogg/armering-till-garage), [armering till pool](/blogg/armering-till-pool) och [armeringsnät](/blogg/armeringsnat-storlekar-och-matt). Begär en kostnadsfri offert." },
+      { type: "p", text: "Vi räknar fram armeringen efter din ritning och levererar [nät](/produkter/armeringsnat), [kamjärn](/produkter/armeringsjarn) och [bockade detaljer](/produkter/klippt-och-bockad) i hela Sverige. Se även våra guider om [armering till betongplatta](/blogg/armering-till-betongplatta), [armering till garageplatta](/blogg/armering-till-garage), [armering till pool](/blogg/armering-till-pool) och [armeringsnät](/blogg/armeringsnat-storlekar-och-matt). Begär en kostnadsfri offert." },
       { type: "p", text: "Vi räknar åtgången och levererar färdig armering till bland annat [Jönköping](/armering/jonkoping) och [Norrköping](/armering/norrkoping)." },
     ],
     faqs: [
@@ -691,7 +691,7 @@ export const posts: Post[] = [
       { type: "p", text: "Läs mer om hur en beställning går till i guiden [beställa armering](/blogg/bestalla-armering)." },
 
       { type: "h2", text: "Begär pris på din armering" },
-      { type: "p", text: "Vi räknar fram ett tydligt pris på din [klippt och bockade armering](/produkter/klippt-och-bockad), [armeringskorgar](/produkter/armeringskorgar), [nät](/produkter/svetsad-armering) och [kamstål](/produkter/armeringsjarn) – med leverans i hela Sverige. [Begär en kostnadsfri offert](/offert) så återkommer vi snabbt." },
+      { type: "p", text: "Vi räknar fram ett tydligt pris på din [klippt och bockade armering](/produkter/klippt-och-bockad), [armeringskorgar](/produkter/armeringskorgar), [nät](/produkter/armeringsnat) och [kamstål](/produkter/armeringsjarn) – med leverans i hela Sverige. [Begär en kostnadsfri offert](/offert) så återkommer vi snabbt." },
       { type: "p", text: "Oavsett om bygget ligger i [Jönköping](/armering/jonkoping), [Norrköping](/armering/norrkoping) eller längre bort räknar vi fram pris och frakt till din ort." },
     ],
     faqs: [
@@ -796,7 +796,7 @@ export const posts: Post[] = [
       ] },
 
       { type: "h2", text: "Prefabricera murens armering" },
-      { type: "p", text: "Vi tillverkar armeringen till stödmurar och L-stöd – [klippt och bockad armering](/produkter/klippt-och-bockad), [armeringskorgar](/produkter/armeringskorgar) och [nät](/produkter/svetsad-armering) – efter konstruktörens ritning, och levererar i hela Sverige. Se även guiden om [armeringsjärn dimensioner](/blogg/armeringsjarn-dimensioner). Begär en kostnadsfri offert på din mur." },
+      { type: "p", text: "Vi tillverkar armeringen till stödmurar och L-stöd – [klippt och bockad armering](/produkter/klippt-och-bockad), [armeringskorgar](/produkter/armeringskorgar) och [nät](/produkter/armeringsnat) – efter konstruktörens ritning, och levererar i hela Sverige. Se även guiden om [armeringsjärn dimensioner](/blogg/armeringsjarn-dimensioner). Begär en kostnadsfri offert på din mur." },
       { type: "p", text: "Vi levererar armering till stödmurar och L-stöd i bland annat [Stockholm](/armering/stockholm) och [Göteborg](/armering/goteborg)." },
     ],
     faqs: [
@@ -999,7 +999,7 @@ export const posts: Post[] = [
       { type: "p", text: "Ett betonggolv – i garage, verkstad, lager eller industri – armeras för att begränsa sprickor från krympning och för att ta upp de laster golvet utsätts för. Hur mycket och vilken typ av armering som behövs beror på laster, underlag och golvets funktion. Kraftigt belastade industrigolv ska alltid dimensioneras av en konstruktör." },
 
       { type: "h2", text: "Nät eller kamjärn i golvet?" },
-      { type: "p", text: "De flesta betonggolv armeras med [armeringsnät](/produkter/svetsad-armering) som ger jämn armering över hela ytan. I golv med stora eller koncentrerade laster kompletteras nätet med [kamjärn](/produkter/armeringsjarn) i fält och vid pelare eller portöppningar. Läs mer i guiden [armeringsnät eller armeringsjärn](/blogg/armeringsnat-eller-armeringsjarn)." },
+      { type: "p", text: "De flesta betonggolv armeras med [armeringsnät](/produkter/armeringsnat) som ger jämn armering över hela ytan. I golv med stora eller koncentrerade laster kompletteras nätet med [kamjärn](/produkter/armeringsjarn) i fält och vid pelare eller portöppningar. Läs mer i guiden [armeringsnät eller armeringsjärn](/blogg/armeringsnat-eller-armeringsjarn)." },
       { type: "table",
         caption: "Riktlinje – dimensionering ska följa konstruktionsritning.",
         head: ["Golvtyp", "Vanlig armering"],
