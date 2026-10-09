@@ -13,6 +13,7 @@ import { AnimatedScene } from "@/components/AnimatedScene";
 import { BockningsformerExplorer } from "@/components/BockningsformerExplorer";
 import { JsonLd, serviceSchema, faqSchema, breadcrumbSchema } from "@/lib/jsonld";
 import { renderText } from "@/lib/renderText";
+import { foto } from "@/lib/foto";
 
 export function generateStaticParams() {
   return services.map((s) => ({ slug: s.slug }));
@@ -116,7 +117,7 @@ export default async function ServicePage({
       ) : (
         /* Hero med offertformulär */
         <section className="relative overflow-hidden bg-ink text-white">
-          <PhotoBg src="/images/distanser-armeringsnat.webp" alt="Armeringsnät på distanser inför gjutning" />
+          <PhotoBg src={foto(s.slug) ?? "/images/distanser-armeringsnat.webp"} alt={foto(s.slug) ? s.h1 : "Armeringsnät på distanser inför gjutning"} />
           <Container className="relative grid grid-cols-1 gap-10 py-14 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
             <div>
               <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">{s.h1}</h1>

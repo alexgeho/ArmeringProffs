@@ -228,7 +228,7 @@ export function ArmeringsKalkylator() {
   );
 }
 
-function Row({ term, value, strong }: { term: string; value: string; strong?: boolean }) {
+export function Row({ term, value, strong }: { term: string; value: string; strong?: boolean }) {
   return (
     <div className="flex items-center justify-between gap-4 py-2.5">
       <dt className="text-ink-soft">{term}</dt>
@@ -237,7 +237,7 @@ function Row({ term, value, strong }: { term: string; value: string; strong?: bo
   );
 }
 
-function NumField({
+export function NumField({
   label,
   value,
   onChange,
@@ -268,7 +268,7 @@ function NumField({
   );
 }
 
-function SelectField({
+export function SelectField({
   label,
   value,
   onChange,

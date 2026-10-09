@@ -7,6 +7,7 @@
  */
 
 import type { Faq } from "@/config/faq";
+import { extraServices } from "@/config/services-extra";
 
 export type Service = {
   slug: string;
@@ -23,7 +24,7 @@ export type Service = {
   resource?: { href: string; label: string };
 };
 
-export const services: Service[] = [
+const baseServices: Service[] = [
   {
     slug: "armeringsmontage",
     name: "Armeringsmontage",
@@ -79,9 +80,9 @@ export const services: Service[] = [
     slug: "bockningslista",
     name: "Bockningslista & armeringsritning",
     h1: "Bockningslista – vi tar fram den från din ritning",
-    metaTitle: "Bockningslista & armeringsspecifikation",
+    metaTitle: "Bockningslista – typformer A–XX och gratis mall",
     metaDescription:
-      "Bockningslista (armeringsspecifikation) från din ritning – vi tar fram den, eller bygg den själv med typformer A–XX och vår gratis mall.",
+      "Bockningslista för armering – bygg den själv med typformer A–XX och vår gratis mall, eller skicka ritningen så tar vi fram listan. Begär offert.",
     intro:
       "En bockningslista är receptet för din armering – varje position med form, mått, dimension och antal. Har du redan en lista tillverkar vi direkt efter den. Har du bara en konstruktionsritning tar vi fram bockningslistan åt dig, så att du får rätt armering och ett tydligt underlag för offerten.",
     keywords: [
@@ -90,7 +91,6 @@ export const services: Service[] = [
       "armeringsritning",
       "bockningsschema",
       "ta fram bockningslista",
-      "armeringsspecifikation",
       "bockningslista armering",
     ],
     includes: [
@@ -104,11 +104,11 @@ export const services: Service[] = [
     body: [
       {
         heading: "Vad är en bockningslista?",
-        text: "En bockningslista (kallas ibland bockningsschema eller armeringsspecifikation) listar varje armeringsdetalj i ett projekt: positionsnummer, form (rak, bygel, U, L, krok), mått per skänkel, dimension i mm och antal. Den är underlaget som gör att armeringen kan kapas och bockas exakt rätt – och att du får ett korrekt pris.",
+        text: "En bockningslista (kallas ibland bockningsschema) listar varje armeringsdetalj i ett projekt: positionsnummer, form (rak, bygel, U, L, krok), mått per skänkel, dimension i mm och antal. Den är underlaget som gör att armeringen kan kapas och bockas exakt rätt – och att du får ett korrekt pris.",
       },
       {
-        heading: "Armeringsritning och armeringsspecifikation – vad är skillnaden?",
-        text: "Armeringsritningen är konstruktörens ritning som visar var armeringen ska ligga – dimensioner, c/c-avstånd, skarvar och täckskikt. Armeringsspecifikationen (armeringsspec, bockningslista) är förteckningen som räknas fram ur ritningen: varje position med form, mått, dimension och antal. Det är specifikationen vi tillverkar efter – ritningen visar hur armeringen monteras.",
+        heading: "Armeringsritning och bockningslista – vad är skillnaden?",
+        text: "Armeringsritningen är konstruktörens ritning som visar var armeringen ska ligga – dimensioner, c/c-avstånd, skarvar och täckskikt. Bockningslistan är förteckningen som räknas fram ur ritningen: varje position med form, mått, dimension och antal. Det är listan vi tillverkar efter – ritningen visar hur armeringen monteras. Har du bara ritning? Då tar vi fram hela [armeringsspecifikationen](/tjanster/armeringsspecifikation) åt dig.",
       },
       {
         heading: "Har du bara en ritning? Vi gör listan",
@@ -125,7 +125,7 @@ export const services: Service[] = [
     ],
     faqs: [
       { q: "Kan ni ta fram en bockningslista från min ritning?", a: "Ja. Skicka din konstruktionsritning (PDF, DWG, Excel eller foto) så tar vi fram en komplett bockningslista med former, mått, dimensioner och antal per position – du får godkänna den innan tillverkning." },
-      { q: "Är armeringsspecifikation samma sak som bockningslista?", a: "I praktiken ja. Armeringsspecifikation, armeringsspec, bockningsschema och bockningslista används för samma sak: en lista över alla armeringspositioner med form, mått, dimension och antal. Den tas fram ur armeringsritningen." },
+      { q: "Vad är skillnaden mellan bockningsschema och bockningslista?", a: "Ingen – orden används för samma sak: en lista över alla armeringspositioner med form, mått, dimension och antal, framtagen ur armeringsritningen. Har du bara ritningen kan vi ta fram hela armeringsspecifikationen åt dig." },
       { q: "Finns det en mall för bockningslista?", a: "Ja, vi har en gratis mall du kan ladda ner och fylla i själv. Skicka den ifyllda mallen så tar vi fram en offert." },
       { q: "Vad ska en bockningslista innehålla?", a: "Positionsnummer, form (rak, bygel, U, L, krok), mått per skänkel, dimension i mm (Ø) och antal – samt gärna information om täckskikt och bockningsradie." },
       { q: "Vad kostar det att få hjälp med bockningslistan?", a: "Att ta fram bockningslistan är en del av vår service när du beställer armering. Kontakta oss med din ritning så återkommer vi med upplägg och offert." },
@@ -133,5 +133,7 @@ export const services: Service[] = [
     resource: { href: "/bockningslista-mall.csv", label: "Ladda ner bockningslista-mall (CSV)" },
   },
 ];
+
+export const services: Service[] = [...baseServices, ...extraServices];
 
 export const getService = (slug: string) => services.find((s) => s.slug === slug);

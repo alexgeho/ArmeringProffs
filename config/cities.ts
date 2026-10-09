@@ -11,6 +11,8 @@
  * `regions` (namn-listan) används fortfarande i sidfot och på /leverans.
  */
 
+import type { Faq } from "@/config/faq";
+
 export type City = {
   slug: string;
   name: string;
@@ -24,6 +26,10 @@ export type City = {
   intro2: string;
   /** Lokala användningsområden (unika, sanna regionala förhållanden). */
   sectors: string[];
+  /** Lokal mark, klimat och grundläggning (unik, sann) – valfri. */
+  ground?: string;
+  /** Extra lokala frågor – läggs till sidans FAQ. */
+  faqs?: Faq[];
 };
 
 export const cities: City[] = [
@@ -34,10 +40,15 @@ export const cities: City[] = [
     landsdel: "Svealand",
     nearby: ["Solna", "Sundbyberg", "Nacka", "Täby", "Södertälje", "Huddinge"],
     angle:
-      "Stockholm är en av Sveriges mest aktiva byggmarknader med omfattande bostads-, kontors- och anläggningsbyggande. Vi levererar prefab armering till både storskaliga projekt och mindre plattor i hela Storstockholm.",
+      "Stockholm är landets största byggmarknad – från tunnelbaneutbyggnaden och Förbifart Stockholm till nya bostadskvarter och villagrunder i kranskommunerna. Vi levererar prefab armering till stora och små projekt i hela Storstockholm.",
     intro2:
-      "I en tät storstadsmiljö som Stockholm är prefab armering särskilt värdefullt – korta byggtider, trånga arbetsplatser och höga logistikkrav gör att färdigkapad och bockad armering sparar både tid och yta på bygget.",
-    sectors: ["Flerbostadshus och bostadsrätter", "Kontor och kommersiella fastigheter", "Infrastruktur och anläggning", "Grundläggning och betongplattor"],
+      "Innerstadens byggarbetsplatser är trånga, med begränsade lossningstider och lite upplagsyta. Därför är klippt och bockad armering, märkt per position, extra värdefull här: armeringen kan lyftas direkt till rätt våning eller form utan kapning och bockning på plats.",
+    sectors: ["Flerbostadshus och förtätning i innerstaden", "Tunnel-, bro- och anläggningsprojekt", "Villagrunder i kranskommunerna", "Kontor och kommersiella fastigheter"],
+    ground:
+      "Marken i Stockholmsområdet växlar snabbt mellan berg i dagen, morän och lerområden – ibland på samma tomt. På berg och morän gjuts ofta platta på mark direkt, medan lera kan kräva pålning med pålarmering och pålplintar. Konstruktören avgör grundläggningen; vi tillverkar armeringen efter ritningen.",
+    faqs: [
+      { q: "Vilken armering behövs till en villagrund i Stockholmsområdet?", a: "Oftast armeringsnät i plattan, kantbalksbyglar och kantjärn i kantbalken samt extra järn under bärande väggar. Grundläggningen beror på om tomten är berg, morän eller lera – konstruktionsritningen avgör." },
+    ],
   },
   {
     slug: "goteborg",
@@ -46,10 +57,15 @@ export const cities: City[] = [
     landsdel: "Götaland",
     nearby: ["Mölndal", "Partille", "Kungälv", "Lerum", "Borås", "Kungsbacka"],
     angle:
-      "Göteborg med hamn, industri och stora infrastrukturprojekt har en ständig efterfrågan på armering. Vi levererar klippt och bockad armering, korgar och nät till bygg- och anläggningsprojekt i hela Göteborgsregionen.",
+      "Göteborg bygger i stor skala – Västlänken, Älvstaden och nya bostäder längs Göta älv – och har Skandinaviens största hamn. Vi levererar klippt och bockad armering, korgar och nät till bygg- och anläggningsprojekt i hela Göteborgsregionen.",
     intro2:
-      "Göteborgsregionens hamn-, industri- och infrastrukturprojekt kräver robust armering i stora volymer. Vi levererar allt från armeringskorgar till balkar och pelare fram till kajer, industrigolv och bostadsprojekt.",
-    sectors: ["Hamn- och industribyggnation", "Infrastruktur och broar", "Bostäder i Göteborgsregionen", "Industrigolv och plattor"],
+      "Stora delar av centrala Göteborg och älvdalen står på mäktiga lerlager, så grundläggning med pålar, pålplattor och pålplintar är vanlig. Det betyder mycket armering i pålfundament och grundbalkar – detaljer som lämpar sig väl för prefab efter ritning.",
+    sectors: ["Grundläggning på lera med pålar och pålplintar", "Infrastruktur och tunnlar", "Bostäder längs Göta älv", "Hamn-, industri- och logistikbyggnation"],
+    ground:
+      "Leran i Göteborg kan på sina ställen vara tiotals meter djup och är sättningskänslig, därför bärs många byggnader av pålar ner till fast botten. Klimatet vid västkusten är milt men fuktigt och salthaltigt nära havet – exponeringsklass och täckskikt bestäms av konstruktören.",
+    faqs: [
+      { q: "Levererar ni armering till pålplintar och pålfundament i Göteborg?", a: "Ja. Vi tillverkar plintkorgar, pålarmering och bockade detaljer till pålfundament efter konstruktionsritningen och levererar till arbetsplatsen i Göteborgsregionen." },
+    ],
   },
   {
     slug: "malmo",
@@ -58,10 +74,15 @@ export const cities: City[] = [
     landsdel: "Götaland",
     nearby: ["Lund", "Landskrona", "Trelleborg", "Vellinge", "Kävlinge", "Staffanstorp"],
     angle:
-      "Malmö och Öresundsregionen växer snabbt med mycket bostads- och stadsutveckling. Vi levererar prefab armering efter din bockningslista eller ritning till projekt i hela sydvästra Skåne.",
+      "Malmö och Öresundsregionen växer med stadsdelar som Hyllie, Västra hamnen och Nyhamnen. Vi levererar prefab armering efter din bockningslista eller ritning till projekt i hela sydvästra Skåne.",
     intro2:
-      "I Öresundsregionen byggs det tätt och högt, ofta på lera som ställer krav på grundläggningen. Prefab armering passar väl i Malmös stadsutvecklingsprojekt där byggtid och arbetsmiljö är avgörande.",
-    sectors: ["Stadsutveckling och flerbostadshus", "Kontor och handel", "Grundläggning på lera", "Anläggning i Öresundsregionen"],
+      "Skånes milda klimat ger kortare tjäldjup än i resten av landet och en lång byggsäsong. Närheten till havet ställer i stället krav på betongens beständighet: i kust- och hamnnära konstruktioner styr kloridexponeringen täckskiktet och därmed hur armeringen ska placeras.",
+    sectors: ["Stadsutveckling i Hyllie och hamnområdena", "Kust- och hamnnära konstruktioner", "Flerbostadshus och kontor", "Villagrunder i sydvästra Skåne"],
+    ground:
+      "Under Malmö ligger kalksten, och ovanpå den lerig morän som bär de flesta grunder. Tjäldjupet är bland de minsta i Sverige, men för konstruktioner nära havet ger salt och klorider högre krav på täckskikt (exponeringsklass XS) – det anges på konstruktionsritningen.",
+    faqs: [
+      { q: "Behövs större täckskikt nära havet i Malmö?", a: "Ofta ja. Konstruktioner som utsätts för saltvatten eller havsluft hamnar i exponeringsklass XS enligt Eurokod 2, vilket normalt kräver större täckskikt. Konstruktören anger värdet – vi levererar distanser i rätt höjd." },
+    ],
   },
   {
     slug: "uppsala",
@@ -154,10 +175,15 @@ export const cities: City[] = [
     landsdel: "Norrland",
     nearby: ["Skellefteå", "Örnsköldsvik", "Vännäs", "Robertsfors", "Holmsund"],
     angle:
-      "Umeå är norra Sveriges tillväxtmotor och regionen har stora industri- och samhällsprojekt på gång. Vi levererar armering även långt norrut – leveranstid planeras utifrån ort och mängd.",
+      "Umeå är Norrlands största stad och växer med nya bostäder, samhällsbyggen och Norrbotniabanan mot Skellefteå. Vi levererar prefab armering hela vägen till Västerbotten – frakt räknas efter mängd och ort.",
     intro2:
-      "Umeå och Norrland har stora industri- och samhällsinvesteringar på gång. Vi planerar tillverkning och transport så att prefab armering finns på plats i tid, även på längre avstånd och i kallt klimat.",
-    sectors: ["Industri- och samhällsprojekt", "Bostäder i norra Sverige", "Anläggning i kallt klimat", "Grundläggning och plattor"],
+      "I Umeå är byggsäsongen kort och vintrarna långa. Färdig armering, kapad, bockad och märkt per position, gör att formen kan armeras snabbt när vädret tillåter – och minskar tiden med kapning och bockning ute i kylan.",
+    sectors: ["Järnvägs- och anläggningsprojekt i Västerbotten", "Bostäder och samhällsfastigheter", "Hamn och industri i Holmsund", "Grundläggning med tjälskydd"],
+    ground:
+      "Umeå ligger på sand- och siltavlagringar längs Umeälven, och silt är mycket tjälfarligt. Tjäldjupet är betydligt större än i södra Sverige, så grunder kräver tjälisolering eller tillräckligt grundläggningsdjup. Vintergjutning ställer dessutom krav på uppvärmning och skydd av betongen – armeringen påverkas inte av kylan, men leveransen bör planeras mot gjutningen.",
+    faqs: [
+      { q: "Kan ni leverera armering till Umeå på vintern?", a: "Ja, vi levererar året runt. Frakt och leveranstid till Umeå anges i offerten utifrån mängd och ort, så att armeringen finns på plats till gjutningen." },
+    ],
   },
   {
     slug: "sundsvall",
@@ -166,10 +192,15 @@ export const cities: City[] = [
     landsdel: "Norrland",
     nearby: ["Timrå", "Härnösand", "Söderhamn", "Hudiksvall", "Matfors"],
     angle:
-      "Sundsvall är en industri- och logistikstad vid Bottenhavet med aktiv byggmarknad. Vi levererar prefab armering till projekt i Sundsvallsregionen – transport och leveranstid anpassas för Norrland.",
+      "Sundsvall är Mittnorrlands nav för industri och logistik, med hamn vid Bottenhavet och korsningen mellan E4 och E14. Vi levererar prefab armering till projekt i hela Sundsvallsregionen och vidare inåt landet.",
     intro2:
-      "Sundsvalls industri och logistik vid Bottenhavet driver en aktiv byggmarknad. Vi anpassar transport och leveranstid för Norrland så att armeringen kommer fram planenligt.",
-    sectors: ["Industri- och logistikbyggnation", "Bostäder i Sundsvallsregionen", "Anläggning vid Bottenhavet", "Grundläggning och plattor"],
+      "Kuperad terräng mellan Norra och Södra stadsberget och närheten till havet ger många stödmurar, grundsulor och anläggningskonstruktioner. Prefab armering efter ritning – byglar, korgar och bockade järn – gör montaget snabbare på branta och trånga tomter.",
+    sectors: ["Industri och processanläggningar", "Hamn och logistik vid Bottenhavet", "Stödmurar och grundläggning i sluttning", "Bostäder i Sundsvall, Timrå och Härnösand"],
+    ground:
+      "Sundsvall har norrländskt klimat med långa vintrar och stort tjäldjup, och marken växlar mellan berg, morän och finkorniga jordar i dalgångarna. Tjälskydd, dränering och grundläggningsdjup bestäms av konstruktören – vi tillverkar armeringen efter ritningen.",
+    faqs: [
+      { q: "Levererar ni armering till industriprojekt i Sundsvall?", a: "Ja. Vi tillverkar klippt och bockad armering, armeringskorgar och nät efter konstruktionsritningen och levererar till arbetsplatsen. Frakt efter mängd och ort anges i offerten." },
+    ],
   },
 ];
 

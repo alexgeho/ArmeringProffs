@@ -59,6 +59,7 @@ function localFaqs(c: City): Faq[] {
       q: `Vad kostar armering i ${c.name}?`,
       a: `Priset beror på mängd, dimensioner, hur mycket kapning och bockning som krävs samt frakt till ${c.name}. Skicka bockningslista eller mått så får du ett exakt pris i en offert.`,
     },
+    ...(c.faqs ?? []),
   ];
 }
 
@@ -132,6 +133,7 @@ export default async function CityPage({
           intro={`Vi tillverkar prefabricerad armering och levererar den till bygg- och anläggningsprojekt i ${c.name} och ${c.lan}. Skicka din bockningslista eller ritning så tar vi fram en offert med pris och leveranstid.`}
         />
         <p className="mt-6 max-w-3xl text-lg leading-relaxed text-ink-soft">{c.intro2}</p>
+        {c.ground && <p className="mt-4 max-w-3xl text-lg leading-relaxed text-ink-soft">{c.ground}</p>}
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {products.map((p) => (
             <Link
@@ -174,6 +176,11 @@ export default async function CityPage({
                   : `Vi levererar prefab armering till ${c.name} med anpassad transport. Frakt och leveranstid anges i offerten utifrån mängd och dimension.`
               }
             />
+            {norrland && (
+              <Link href="/armering-norrland" className="mt-4 inline-flex items-center gap-1 font-semibold text-brand hover:underline">
+                Armering i Norrland <IconArrow className="h-4 w-4" />
+              </Link>
+            )}
             <p className="mt-6 font-semibold text-ink">Vi levererar bland annat till:</p>
             <div className="mt-3 flex flex-wrap gap-2">
               {[c.name, ...c.nearby].map((o) => (

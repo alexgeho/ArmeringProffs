@@ -10,6 +10,8 @@ import { IconClock, IconArrow, IconCheck } from "@/components/icons";
 import { figures } from "@/components/illustrations";
 import { JsonLd, articleSchema, breadcrumbSchema, faqSchema } from "@/lib/jsonld";
 import { renderText } from "@/lib/renderText";
+import { foto } from "@/lib/foto";
+import Image from "next/image";
 
 export function generateStaticParams() {
   return posts.map((p) => ({ slug: p.slug }));
@@ -127,6 +129,7 @@ export default async function PostPage({
 
   const url = `${site.url}/blogg/${p.slug}`;
   const more = relatedPosts(p, posts, 3);
+  const bild = foto(p.slug);
 
   return (
     <>
@@ -140,6 +143,16 @@ export default async function PostPage({
           </div>
           <h1 className="mt-3 text-4xl font-bold tracking-tight text-ink">{p.title}</h1>
           <p className="mt-4 text-xl leading-relaxed text-ink-soft">{p.excerpt}</p>
+          {bild && (
+            <figure className="mt-8 overflow-hidden rounded-2xl border border-line">
+              <Image src={bild} alt={p.title} width={1600} height={900} priority sizes="(min-width: 768px) 768px, 100vw" className="h-auto w-full object-cover" />
+            </figure>
+          )}
+          {p.target && (
+            <Link href={p.target.href} className="mt-6 inline-flex items-center gap-1 font-semibold text-brand hover:underline">
+              {p.target.label} <IconArrow className="h-4 w-4" />
+            </Link>
+          )}
 
           <div className="mt-8">
             {p.content.map((b, i) => renderBlock(b, i))}
@@ -157,8 +170,13 @@ export default async function PostPage({
           <div className="mt-10 rounded-xl border border-line bg-surface p-6">
             <h2 className="text-lg font-bold text-ink">Behöver du armering till ditt projekt?</h2>
             <p className="mt-2 text-ink-soft">Vi tillverkar och levererar prefab armering i hela Sverige. Skicka din bockningslista för offert.</p>
-            <div className="mt-4">
+            <div className="mt-4 flex flex-wrap items-center gap-4">
               <Button href="/offert">Begär offert <IconArrow className="h-4 w-4" /></Button>
+              {p.target && (
+                <Link href={p.target.href} className="inline-flex items-center gap-1 font-semibold text-brand hover:underline">
+                  {p.target.label} <IconArrow className="h-4 w-4" />
+                </Link>
+              )}
             </div>
           </div>
         </Container>

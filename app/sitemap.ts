@@ -4,6 +4,7 @@ import { products } from "@/config/products";
 import { services } from "@/config/services";
 import { posts } from "@/config/blog";
 import { cities } from "@/config/cities";
+import { landings } from "@/config/landings";
 
 // Krävs för statisk export (output: export): generera sitemap.xml vid build.
 export const dynamic = "force-static";
@@ -21,10 +22,11 @@ export const dynamic = "force-static";
 const UPDATED = {
   // app/page.tsx, /leverans, /om-oss, /kontakt, /offert, /vanliga-fragor,
   // /omdomen, /armeringskalkylator, /integritetspolicy – senast ändrade 2026-09-08.
-  static: "2026-09-25", // H1 på listsidor + kortare titlar (2026-09-25)
-  products: "2026-10-09", // config/products.ts (ny sida armeringsnat 2026-10-09)
-  services: "2026-09-25", // config/services.ts (armeringsspecifikation på bockningslista 2026-09-25)
-  cities: "2026-09-08", // app/armering/[slug]/page.tsx (GuidesTeaser tillagd)
+  static: "2026-10-09", // H1 på listsidor + kortare titlar (2026-09-25)
+  products: "2026-10-09", // config/products.ts (våg 1–6, 2026-10-09)
+  services: "2026-10-09", // config/services.ts (armeringsspecifikation på bockningslista 2026-09-25)
+  cities: "2026-10-09", // app/armering/[slug]/page.tsx (GuidesTeaser tillagd)
+  tools: "2026-10-09", // /viktkalkylator, /natkalkylator, /forankringslangd (components/SmaKalkylatorer.tsx)
 } as const;
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -39,6 +41,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: u("/tjanster"), lastModified: UPDATED.services, changeFrequency: "monthly", priority: 0.8 },
     { url: u("/leverans"), lastModified: UPDATED.static, changeFrequency: "monthly", priority: 0.7 },
     { url: u("/armeringskalkylator"), lastModified: UPDATED.static, changeFrequency: "monthly", priority: 0.8 },
+    { url: u("/viktkalkylator"), lastModified: UPDATED.tools, changeFrequency: "monthly", priority: 0.7 },
+    { url: u("/natkalkylator"), lastModified: UPDATED.tools, changeFrequency: "monthly", priority: 0.7 },
+    { url: u("/forankringslangd"), lastModified: UPDATED.tools, changeFrequency: "monthly", priority: 0.7 },
     { url: u("/blogg"), lastModified: UPDATED.static, changeFrequency: "weekly", priority: 0.7 },
     { url: u("/om-oss"), lastModified: UPDATED.static, changeFrequency: "yearly", priority: 0.5 },
     { url: u("/vanliga-fragor"), lastModified: UPDATED.static, changeFrequency: "monthly", priority: 0.6 },
@@ -76,5 +81,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  return [...staticPages, ...productPages, ...servicePages, ...blogPages, ...cityPages];
+  const landingPages: MetadataRoute.Sitemap = landings.map((l) => ({
+    url: u(`/${l.slug}`),
+    lastModified: UPDATED.products,
+    changeFrequency: "monthly",
+    priority: 0.8,
+  }));
+
+  return [...staticPages, ...productPages, ...servicePages, ...landingPages, ...blogPages, ...cityPages];
 }

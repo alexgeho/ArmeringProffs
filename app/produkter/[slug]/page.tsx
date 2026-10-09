@@ -14,6 +14,7 @@ import {
   JsonLd, serviceSchema, faqSchema, breadcrumbSchema,
 } from "@/lib/jsonld";
 import { renderText } from "@/lib/renderText";
+import { foto } from "@/lib/foto";
 
 export function generateStaticParams() {
   return products.map((p) => ({ slug: p.slug }));
@@ -64,6 +65,8 @@ export default async function ProductPage({
   const { slug } = await params;
   const p = getProduct(slug);
   if (!p) notFound();
+  const fotoSrc = foto(p.slug);
+  const img = p.image ?? (fotoSrc ? { src: fotoSrc, alt: p.h1, width: 1600, height: 900 } : null);
 
   const url = `${site.url}/produkter/${p.slug}`;
   const others = products.filter((x) => x.slug !== p.slug).slice(0, 4);
@@ -94,13 +97,13 @@ export default async function ProductPage({
       <Section>
         <div className="grid gap-12 lg:grid-cols-[1.4fr_0.6fr]">
           <div className="prose-body max-w-none">
-            {p.image && (
+            {img && (
               <figure className="mb-8 overflow-hidden rounded-2xl border border-line">
                 <Image
-                  src={p.image.src}
-                  alt={p.image.alt}
-                  width={p.image.width}
-                  height={p.image.height}
+                  src={img.src}
+                  alt={img.alt}
+                  width={img.width}
+                  height={img.height}
                   sizes="(min-width: 1024px) 60vw, 100vw"
                   className="h-auto w-full object-cover"
                 />

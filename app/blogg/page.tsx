@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { posts } from "@/config/blog";
+import { posts, type PostCategory } from "@/config/blog";
 import { site } from "@/config/site";
 import { Section, SectionHeading, Button } from "@/components/ui";
 import { Breadcrumbs, CtaBanner } from "@/components/sections";
@@ -19,6 +19,13 @@ export const metadata: Metadata = {
   },
 };
 
+const groups: { key: PostCategory; title: string }[] = [
+  { key: "guider", title: "Guider" },
+  { key: "armering-till", title: "Armering till ditt projekt" },
+  { key: "dimensioner", title: "Dimensioner och nät" },
+  { key: "branscher", title: "För företag" },
+];
+
 function formatDate(iso: string) {
   return new Date(iso).toLocaleDateString("sv-SE", { year: "numeric", month: "long", day: "numeric" });
 }
@@ -30,9 +37,9 @@ function PostCard({ p }: { p: (typeof posts)[number] }) {
         <time dateTime={p.date}>{formatDate(p.date)}</time>
         <span className="flex items-center gap-1"><IconClock className="h-3.5 w-3.5" /> {p.readingMinutes} min</span>
       </div>
-      <h2 className="mt-3 text-lg font-bold text-ink">
+      <h3 className="mt-3 text-lg font-bold text-ink">
         <Link href={`/blogg/${p.slug}`} className="hover:text-brand">{p.title}</Link>
-      </h2>
+      </h3>
       <p className="mt-2 flex-1 text-sm leading-relaxed text-ink-soft">{p.excerpt}</p>
       <Link href={`/blogg/${p.slug}`} className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-brand">
         Läs guiden <IconArrow className="h-4 w-4" />
@@ -65,9 +72,18 @@ export default function BloggPage() {
           </Button>
         </div>
 
-        <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {posts.map((p) => <PostCard key={p.slug} p={p} />)}
-        </div>
+        {groups.map((g) => {
+          const list = posts.filter((p) => (p.category ?? "guider") === g.key);
+          if (list.length === 0) return null;
+          return (
+            <div key={g.key} className="mt-12">
+              <h2 className="text-2xl font-bold text-ink">{g.title}</h2>
+              <div className="mt-6 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                {list.map((p) => <PostCard key={p.slug} p={p} />)}
+              </div>
+            </div>
+          );
+        })}
       </Section>
       <CtaBanner />
       <JsonLd
