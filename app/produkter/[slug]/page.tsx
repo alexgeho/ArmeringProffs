@@ -1,15 +1,14 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import Link from "next/link";
 import Image from "next/image";
 import { products, getProduct } from "@/config/products";
 import { posts } from "@/config/blog";
 import { faq } from "@/config/faq";
 import { site } from "@/config/site";
-import { Section, SectionHeading, Button, Container } from "@/components/ui";
+import { Section, SectionHeading, Button, PageHeader, Panel, CheckList, ArrowLink, Card } from "@/components/ui";
 import { Breadcrumbs, CtaBanner, LeveransSection, Process, CityLinks } from "@/components/sections";
 import { FaqAccordion } from "@/components/FaqAccordion";
-import { IconCheck, IconArrow, IconPhone } from "@/components/icons";
+import { IconArrow, IconPhone } from "@/components/icons";
 import {
   JsonLd, serviceSchema, faqSchema, breadcrumbSchema,
 } from "@/lib/jsonld";
@@ -80,75 +79,65 @@ export default async function ProductPage({
       />
 
       {/* Huvud: ljust, utan formulär (offert via knappen) */}
-      <section className="border-b border-line bg-surface">
-        <Container className="py-12">
-          <h1 className="max-w-3xl text-4xl font-bold tracking-tight text-ink sm:text-5xl">{p.h1}</h1>
-          <p className="mt-5 max-w-3xl text-lg text-ink-soft">{p.intro}</p>
-          <div className="mt-8 flex flex-wrap gap-4">
+      <PageHeader
+        title={p.h1}
+        intro={p.intro}
+        actions={
+          <>
             <Button href="/offert">Begär offert <IconArrow className="h-4 w-4" /></Button>
-            <a href={site.phoneHref} className="inline-flex h-12 items-center gap-2 rounded-lg border border-line px-5 font-semibold text-ink hover:border-brand">
-              <IconPhone className="h-4 w-4 text-brand" /> {site.phone}
-            </a>
-          </div>
-        </Container>
-      </section>
+            <Button href={site.phoneHref} variant="secondary">
+              <IconPhone className="h-4 w-4 text-accent" /> {site.phone}
+            </Button>
+          </>
+        }
+      />
 
       {/* Body */}
       <Section>
         <div className="grid gap-12 lg:grid-cols-[1.4fr_0.6fr]">
-          <div className="prose-body max-w-none">
+          <div className="min-w-0">
             {img && (
-              <figure className="mb-8 overflow-hidden rounded-2xl border border-line">
+              <figure className="mb-10 overflow-hidden rounded-panel border border-line">
                 <Image
                   src={img.src}
                   alt={img.alt}
                   width={img.width}
                   height={img.height}
-                  sizes="(min-width: 1024px) 60vw, 100vw"
+                  sizes="(min-width: 1024px) 640px, 100vw"
                   className="h-auto w-full object-cover"
                 />
               </figure>
             )}
-            {p.body.map((b) => (
-              <div key={b.heading} className="mb-8">
-                <h2 className="text-2xl font-bold text-ink">{b.heading}</h2>
-                <p className="mt-3 text-lg leading-relaxed text-ink-soft">{renderText(b.text)}</p>
-              </div>
-            ))}
+            <div className="prose-body">
+              {p.body.map((b) => [
+                <h2 key={`${b.heading}-h`}>{b.heading}</h2>,
+                <p key={`${b.heading}-p`}>{renderText(b.text)}</p>,
+              ])}
+            </div>
 
             {guides.length > 0 && (
-              <div className="mt-4 rounded-xl border border-line bg-surface p-6">
-                <h3 className="font-bold text-ink">Guider som hjälper dig vidare</h3>
-                <ul className="mt-3 space-y-2">
+              <Panel className="mt-10">
+                <h2 className="type-h4 text-ink">Guider som hjälper dig vidare</h2>
+                <ul className="mt-3 grid gap-1">
                   {guides.map((g) => (
                     <li key={g.slug}>
-                      <Link href={`/blogg/${g.slug}`} className="inline-flex items-center gap-1 text-brand underline underline-offset-2 hover:no-underline">
-                        {g.title} <IconArrow className="h-4 w-4" />
-                      </Link>
+                      <ArrowLink href={`/blogg/${g.slug}`} className="min-h-11 font-medium">{g.title}</ArrowLink>
                     </li>
                   ))}
                 </ul>
-              </div>
+              </Panel>
             )}
           </div>
           <aside>
-            <div className="sticky top-32 rounded-xl border border-line bg-surface p-6">
-              <h3 className="font-bold text-ink">Egenskaper</h3>
-              <ul className="mt-4 space-y-2.5">
-                {p.includes.map((it) => (
-                  <li key={it} className="flex items-start gap-2 text-sm text-ink-soft">
-                    <IconCheck className="mt-0.5 h-4 w-4 shrink-0 text-brand" /> {it}
-                  </li>
-                ))}
-              </ul>
+            <Panel sticky>
+              <h2 className="type-h4 text-ink">Egenskaper</h2>
+              <CheckList size="sm" items={p.includes} className="mt-4" />
               <div className="mt-6 border-t border-line pt-5">
                 <p className="text-sm font-semibold text-ink">Osäker på mängden?</p>
                 <p className="mt-1 text-sm text-ink-soft">Räkna ut åtgången i vår kalkylator.</p>
-                <Link href="/armeringskalkylator" className="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-brand hover:underline">
-                  Öppna armeringskalkylatorn <IconArrow className="h-4 w-4" />
-                </Link>
+                <ArrowLink href="/armeringskalkylator" className="mt-3 text-sm">Öppna armeringskalkylatorn</ArrowLink>
               </div>
-            </div>
+            </Panel>
           </aside>
         </div>
       </Section>
@@ -158,24 +147,15 @@ export default async function ProductPage({
       {/* Other products */}
       <Section muted>
         <SectionHeading eyebrow="Fler produkter" title="Hela armeringspaketet från en leverantör" />
-        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {others.map((o) => (
-            <Link key={o.slug} href={`/produkter/${o.slug}`} className="overflow-hidden rounded-xl border border-line bg-white p-5 transition-colors hover:border-brand">
-              <div className="-mx-5 -mt-5 mb-4 aspect-[16/9] overflow-hidden border-b border-line bg-slate-100">
-                <Image
-                  src={`/images/illustrationer/${o.slug}.webp`}
-                  alt=""
-                  width={1280}
-                  height={720}
-                  sizes="(min-width: 1024px) 280px, 50vw"
-                  className="h-full w-full object-cover"
-                />
-              </div>
-              <h3 className="font-semibold text-ink">{o.name}</h3>
-              <span className="mt-2 inline-flex items-center gap-1 text-sm font-semibold text-brand">
-                Läs mer <IconArrow className="h-4 w-4" />
-              </span>
-            </Link>
+            <Card
+              key={o.slug}
+              href={`/produkter/${o.slug}`}
+              title={o.name}
+              cta="Läs mer"
+              image={{ src: `/images/illustrationer/${o.slug}.webp`, alt: "", sizes: "(min-width: 1024px) 270px, (min-width: 640px) 50vw, 100vw" }}
+            />
           ))}
         </div>
       </Section>
@@ -184,7 +164,7 @@ export default async function ProductPage({
       <CityLinks muted title={`${p.name} – levereras i hela Sverige`} />
 
       {/* FAQ */}
-      <Section muted>
+      <Section>
         <SectionHeading center eyebrow="Vanliga frågor" title="Frågor och svar" />
         <div className="mt-10">
           <FaqAccordion items={faqs} />

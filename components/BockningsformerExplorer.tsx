@@ -94,8 +94,8 @@ export function BockningsformerExplorer() {
                       setCode(s.code);
                       setClicked(true);
                     }}
-                    className={`flex w-[4.25rem] flex-col items-center gap-0.5 rounded-lg border px-1 pb-1 pt-1.5 text-xs font-bold transition-colors ${
-                      on ? "border-brand bg-brand-light text-brand ring-1 ring-brand" : "border-line bg-white text-ink hover:border-brand hover:text-brand"
+                    className={`flex w-[4.25rem] flex-col items-center gap-0.5 rounded-control border px-1 pb-1 pt-1.5 text-xs font-bold transition-colors ${
+                      on ? "border-brand bg-brand-light text-brand ring-1 ring-brand" : "border-line bg-card text-ink hover:border-brand hover:text-brand"
                     }`}
                   >
                     <Thumb code={s.code} />
@@ -110,7 +110,7 @@ export function BockningsformerExplorer() {
 
       {/* Vald form – mått + lägg till (höger, ovanför ritningen) */}
       <div className="s-fade order-2 lg:order-none lg:col-start-2 lg:row-start-1" style={at(0.1)}>
-        <div className="rounded-xl border border-line bg-white p-4" aria-live="polite">
+        <div className="rounded-card border border-line bg-card p-4" aria-live="polite">
           <div className="flex items-baseline gap-3">
             <span className="text-2xl font-bold text-brand">{def.code}</span>
             <span className="font-semibold text-ink">{def.name}</span>
@@ -127,7 +127,7 @@ export function BockningsformerExplorer() {
                     onChange={(e) => setVal(k, e.target.value)}
                     onBlur={() => typed[k] !== undefined && setVal(k, String(values[k]))}
                     aria-label={`Mått ${k} (${unitOf(def, k)})`}
-                    className="w-full min-w-0 rounded-md border border-line bg-surface px-2 py-1 text-right text-ink focus:border-brand focus:bg-white focus:outline-none"
+                    className="w-full min-w-0 rounded-md border border-field bg-surface px-2 py-1 text-right text-ink focus:border-accent focus:bg-card"
                   />
                   <span className="w-8 shrink-0 text-xs text-muted">{unitOf(def, k)}</span>
                 </label>
@@ -143,7 +143,7 @@ export function BockningsformerExplorer() {
           {def.note && <p className="mt-3 text-sm text-muted">{def.note}</p>}
           {Object.keys(def.params).length > 0 && (
             <div className="mt-3 flex items-center justify-between gap-3">
-              <p className="text-xs text-slate-400">Skriv in dina egna mått – ritningen uppdateras direkt.</p>
+              <p className="text-xs text-muted">Skriv in dina egna mått – ritningen uppdateras direkt.</p>
               {edited && (
                 <button
                   type="button"
@@ -163,7 +163,7 @@ export function BockningsformerExplorer() {
               <select
                 value={dia}
                 onChange={(e) => setDia(Number(e.target.value))}
-                className="h-10 rounded-md border border-line bg-white px-2 text-sm text-ink focus:border-brand focus:outline-none"
+                className="h-11 rounded-control border border-field bg-card px-2 text-sm text-ink focus:border-accent"
               >
                 {DIAMETERS.map((d) => (
                   <option key={d} value={d}>Ø{d}</option>
@@ -177,14 +177,14 @@ export function BockningsformerExplorer() {
                 inputMode="numeric"
                 value={qty}
                 onChange={(e) => setQty(e.target.value)}
-                className="h-10 w-20 rounded-md border border-line bg-white px-2 text-right text-sm text-ink focus:border-brand focus:outline-none"
+                className="h-11 w-20 rounded-control border border-field bg-card px-2 text-right text-sm text-ink focus:border-accent"
               />
             </label>
             <button
               type="button"
               onClick={addPos}
-              className={`h-10 flex-1 rounded-lg px-4 text-sm font-semibold text-white transition-colors ${
-                justAdded ? "bg-emerald-600" : "bg-brand hover:bg-brand-dark"
+              className={`h-11 flex-1 rounded-control px-4 text-sm font-semibold text-white transition-colors ${
+                justAdded ? "bg-success-fill" : "bg-cta hover:bg-cta-hover"
               }`}
             >
               {justAdded ? `✓ Tillagd som pos ${justAdded}` : "+ Lägg till i listan"}
@@ -194,7 +194,7 @@ export function BockningsformerExplorer() {
       </div>
 
       {/* Ritning (under måttkortet) */}
-      <div className="order-3 self-start rounded-xl border border-line bg-white lg:order-none lg:col-start-2 lg:row-start-2">
+      <div className="light-scope order-3 self-start overflow-hidden rounded-card border border-line bg-card lg:order-none lg:col-start-2 lg:row-start-2">
         <svg viewBox="0 0 400 300" className="h-auto w-full" role="img" aria-label={`Typform ${def.code}: ${def.name}. ${params.map(([k, v]) => `${k} ${v}`).join(", ")}.`}>
           <g key={code}>
             {shape ? (
@@ -242,7 +242,7 @@ export function BockningsformerExplorer() {
 
       {/* Din bockningslista – visas först när minst en position lagts till */}
       {list.length > 0 && (
-      <div ref={listRef} className="order-4 scroll-mt-32 rounded-xl border-2 border-brand/40 bg-white p-4 sm:p-5 lg:col-span-2">
+      <div ref={listRef} className="order-4 scroll-mt-32 rounded-card border-2 border-brand/40 bg-card p-4 sm:p-5 lg:col-span-2">
         <div className="flex items-baseline justify-between gap-3">
           <h3 className="text-lg font-bold text-ink">Din bockningslista</h3>
           {list.length > 0 && (
@@ -285,7 +285,7 @@ export function BockningsformerExplorer() {
                             const n = Math.max(1, Math.round(Number(e.target.value) || 1));
                             setList((l) => l.map((x, j) => (j === i ? { ...x, qty: n } : x)));
                           }}
-                          className="h-8 w-16 rounded-md border border-line px-2 text-right focus:border-brand focus:outline-none"
+                          className="h-10 w-16 rounded-control border border-field bg-card px-2 text-right focus:border-accent"
                         />
                       </td>
                       <td className="py-2 text-right">
@@ -293,7 +293,7 @@ export function BockningsformerExplorer() {
                           type="button"
                           aria-label={`Ta bort pos ${i + 1}`}
                           onClick={() => setList((l) => l.filter((_, j) => j !== i))}
-                          className="h-8 w-8 rounded-md text-muted hover:bg-surface hover:text-brand"
+                          className="h-10 w-10 rounded-control text-muted hover:bg-surface hover:text-brand"
                         >
                           ✕
                         </button>
@@ -303,7 +303,7 @@ export function BockningsformerExplorer() {
                 </tbody>
               </table>
             </div>
-            <div className="min-w-0 rounded-xl bg-surface p-4">
+            <div className="min-w-0 rounded-card bg-surface p-4">
               <p className="mb-3 text-sm font-semibold text-ink">Skicka listan som offertförfrågan</p>
               <ContactForm compact source="bockningslista-verktyg" defaultMessage={spec} />
             </div>
@@ -313,21 +313,21 @@ export function BockningsformerExplorer() {
 
       {/* Flytande "korg" – syns när listan har positioner men själva listan inte är på skärmen */}
       {list.length > 0 && !listVisible && (
-        <div className="fixed inset-x-0 bottom-4 z-40 flex justify-center px-4">
+        <div className="fixed inset-x-0 bottom-4 z-overlay flex justify-center px-4">
           <button
             key={added}
             type="button"
             onClick={showList}
-            className="cart-pop flex w-full max-w-md items-center gap-3 rounded-2xl bg-ink px-4 py-3 text-left text-white shadow-2xl ring-1 ring-white/10"
+            className="cart-pop flex w-full max-w-md items-center gap-3 rounded-panel bg-night px-4 py-3 text-left text-white shadow-2xl ring-1 ring-white/10"
           >
-            <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand text-lg font-bold">{list.length}</span>
+            <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-cta text-lg font-bold">{list.length}</span>
             <span className="min-w-0 flex-1">
               <span className="block text-sm font-semibold">Din bockningslista</span>
               <span className="block truncate text-xs text-slate-300">
                 {list.length} {list.length === 1 ? "position" : "positioner"} · {totalQty} st
               </span>
             </span>
-            <span className="shrink-0 rounded-lg bg-brand px-3 py-2 text-sm font-semibold">Visa & skicka ↓</span>
+            <span className="shrink-0 rounded-control bg-cta px-3 py-2 text-sm font-semibold">Visa & skicka ↓</span>
           </button>
         </div>
       )}

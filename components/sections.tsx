@@ -6,7 +6,7 @@ import { products } from "@/config/products";
 import { verifiedReviews } from "@/config/reviews";
 import { posts, type Post } from "@/config/blog";
 import { cities } from "@/config/cities";
-import { Button, Container, Section, SectionHeading } from "./ui";
+import { ArrowLink, Button, Card, CheckList, ChipLink, Container, Section, SectionHeading, cardClass } from "./ui";
 import { ContactForm } from "./ContactForm";
 import {
   IconPhone, IconCheck, IconStar,
@@ -20,14 +20,68 @@ export function PhotoBg({ src, alt = "" }: { src: string; alt?: string }) {
   return (
     <>
       <Image src={src} alt={alt} fill priority sizes="100vw" className="pointer-events-none absolute inset-0 h-full w-full object-cover" />
-      <div className="pointer-events-none absolute inset-0 bg-ink/60" />
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-ink via-ink/90 via-55% to-transparent" />
+      <div className="pointer-events-none absolute inset-0 bg-night/60" />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-night via-night/90 via-55% to-transparent" />
     </>
   );
 }
 
 /** Formkortet i hero: transparent "mörkt glas". */
-export const glassCard = "mx-auto w-full min-w-0 max-w-xl rounded-2xl border border-white/20 bg-white/5 p-6 shadow-xl backdrop-blur-sm sm:p-8 lg:max-w-none";
+export const glassCard = "mx-auto w-full min-w-0 max-w-xl rounded-panel border border-white/20 bg-white/5 p-6 shadow-xl backdrop-blur-sm sm:p-8 lg:max-w-none";
+
+/**
+ * Foto-hero med offertformulär (landnings-, tjänste-, stads- och offertsidor).
+ * Vänster: H1, ingress, bocklista, sekundär handling. Höger: formulär (huvudhandlingen).
+ */
+export function PhotoHero({
+  title,
+  intro,
+  points,
+  bgImage,
+  bgAlt,
+  formTitle = "Begär offert",
+  formSource,
+  fullForm = false,
+  actions,
+  cols = "lg:grid-cols-[1.1fr_0.9fr]",
+}: {
+  title: ReactNode;
+  intro: ReactNode;
+  points?: string[];
+  bgImage: string;
+  bgAlt: string;
+  formTitle?: string;
+  formSource: string;
+  fullForm?: boolean;
+  actions?: ReactNode;
+  cols?: string;
+}) {
+  return (
+    <section className="relative overflow-hidden bg-night text-white">
+      <PhotoBg src={bgImage} alt={bgAlt} />
+      <Container className={`relative grid grid-cols-1 gap-10 py-14 lg:items-start ${cols}`}>
+        <div className="min-w-0">
+          <h1 className="type-h1">{title}</h1>
+          <p className="mt-5 max-w-xl text-lead text-slate-300">{intro}</p>
+          {points && points.length > 0 && <CheckList onDark items={points} className="mt-7 sm:grid-cols-2" />}
+          <div className="mt-8 flex flex-wrap items-center gap-4">
+            {actions ?? (
+              <Button href={site.phoneHref} variant="onDark">
+                <IconPhone className="h-4 w-4 text-accent" /> {site.phone}
+              </Button>
+            )}
+          </div>
+        </div>
+        <div className={glassCard}>
+          <h2 className="text-xl font-bold text-white">{formTitle}</h2>
+          <div className="mt-5">
+            <ContactForm compact={!fullForm} onDark source={formSource} />
+          </div>
+        </div>
+      </Container>
+    </section>
+  );
+}
 
 export function Hero({
   title,
@@ -43,7 +97,7 @@ export function Hero({
   bgAlt?: string;
 }) {
   return (
-    <section className="relative overflow-hidden bg-ink">
+    <section className="relative overflow-hidden bg-night">
       {bgImage ? (
         <PhotoBg src={bgImage} alt={bgAlt} />
       ) : (
@@ -52,23 +106,18 @@ export function Hero({
       <Container className="relative grid grid-cols-1 gap-10 py-16 sm:py-20 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
         <div className="min-w-0 px-2 text-center text-white sm:px-8 lg:px-0 lg:text-left">
           <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-sm font-medium text-orange-200">
-            <IconStar className="h-4 w-4 shrink-0 text-brand" /> Leverans och montage i hela Sverige
+            <IconStar className="h-4 w-4 shrink-0 text-accent" /> Leverans och montage i hela Sverige
           </span>
-          <h1 className="mt-5 text-4xl font-bold leading-tight tracking-tight drop-shadow-[0_2px_12px_rgba(0,0,0,0.55)] sm:text-5xl">{title}</h1>
-          <p className="mx-auto mt-5 max-w-xl text-lg leading-relaxed lg:mx-0 text-slate-100 drop-shadow-[0_1px_8px_rgba(0,0,0,0.5)]">{intro}</p>
+          <h1 className="type-h1 mt-5 drop-shadow-[0_2px_12px_rgba(0,0,0,0.55)]">{title}</h1>
+          <p className="mx-auto mt-5 max-w-xl text-lead text-slate-100 drop-shadow-[0_1px_8px_rgba(0,0,0,0.5)] lg:mx-0">{intro}</p>
 
           <ul className="mx-auto mt-7 grid w-fit grid-cols-1 gap-x-10 gap-y-3 text-left sm:grid-cols-[auto_auto] lg:mx-0">
             {["Kamstål B500B", "Märkt och sorterat per position", "Alla typformer A–XX", "Kostnadsfri offert"].map((t) => (
               <li key={t} className="flex items-center gap-2 text-slate-50 drop-shadow-[0_1px_6px_rgba(0,0,0,0.5)]">
-                <IconCheck className="h-5 w-5 shrink-0 text-brand" /> {t}
+                <IconCheck className="h-5 w-5 shrink-0 text-accent" /> {t}
               </li>
             ))}
           </ul>
-
-          {/* På mobil ligger formuläret direkt under – då är knappen överflödig. */}
-          <div className="mt-8 hidden justify-center sm:flex lg:justify-start">
-            <Button href="/offert">Begär offert <IconArrow className="h-4 w-4" /></Button>
-          </div>
         </div>
 
         <div className={glassCard}>
@@ -93,22 +142,16 @@ const usps = [
 export function UspBar() {
   return (
     <Section>
+      <h2 className="sr-only">Därför väljer kunder oss</h2>
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
         {usps.map((u) => (
-          <div key={u.title} className="overflow-hidden rounded-xl border border-line bg-white p-5">
-            <div className="-mx-5 -mt-5 mb-4 aspect-[16/9] overflow-hidden border-b border-line bg-slate-100">
-              <Image
-                src={`/images/illustrationer/${u.img}.webp`}
-                alt=""
-                width={1280}
-                height={720}
-                sizes="(min-width: 1024px) 280px, (min-width: 640px) 50vw, 100vw"
-                className="h-full w-full object-cover"
-              />
-            </div>
-            <h3 className="font-semibold text-ink">{u.title}</h3>
-            <p className="mt-1.5 text-sm text-ink-soft">{u.text}</p>
-          </div>
+          <Card
+            key={u.title}
+            title={u.title}
+            image={{ src: `/images/illustrationer/${u.img}.webp`, alt: "", sizes: "(min-width: 1024px) 280px, (min-width: 640px) 50vw, 100vw" }}
+          >
+            {u.text}
+          </Card>
         ))}
       </div>
     </Section>
@@ -135,26 +178,15 @@ export function PrefabShowcase() {
       />
       <div className="mt-10 grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-3">
         {prefabItems.map((it) => (
-          <Link
+          <Card
             key={it.title}
             href={it.href}
-            className="group flex min-w-0 flex-col overflow-hidden rounded-xl border border-line bg-white transition-all hover:border-brand hover:shadow-md"
+            compact
+            title={it.title}
+            image={{ src: `/images/illustrationer/${it.img}.webp`, alt: `${it.title} – prefabricerad armering`, sizes: "(min-width: 1024px) 400px, 50vw" }}
           >
-            <div className="aspect-[16/9] overflow-hidden border-b border-line bg-slate-100">
-              <Image
-                src={`/images/illustrationer/${it.img}.webp`}
-                alt={`${it.title} – prefabricerad armering`}
-                width={1280}
-                height={720}
-                sizes="(min-width: 1024px) 400px, 50vw"
-                className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.04]"
-              />
-            </div>
-            <div className="flex flex-1 flex-col p-3 sm:p-5">
-              <h3 className="text-sm font-semibold text-ink sm:text-lg">{it.title}</h3>
-              <p className="mt-1 hidden flex-1 text-sm text-ink-soft sm:block">{it.text}</p>
-            </div>
-          </Link>
+            {it.text}
+          </Card>
         ))}
       </div>
       <div className="mt-8 flex flex-col items-start gap-3 sm:flex-row sm:items-center">
@@ -176,31 +208,17 @@ export function ProductsGrid() {
         intro="Klippt & bockad armering, armeringskorgar, svetsad armering och nät, kamstål och distanser – tillverkat efter din ritning och levererat i hela Sverige."
       />
       <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {products.map((p) => {
-          return (
-            <Link
-              key={p.slug}
-              href={`/produkter/${p.slug}`}
-              className="group flex flex-col overflow-hidden rounded-xl border border-line bg-white p-6 transition-all hover:border-brand hover:shadow-md"
-            >
-              <div className="-mx-6 -mt-6 mb-5 aspect-[16/9] overflow-hidden border-b border-line bg-slate-100">
-                <Image
-                  src={`/images/illustrationer/${p.slug}.webp`}
-                  alt={`${p.name} – illustration`}
-                  width={1280}
-                  height={720}
-                  sizes="(min-width: 1024px) 560px, 100vw"
-                  className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.03]"
-                />
-              </div>
-              <h3 className="text-lg font-semibold text-ink">{p.name}</h3>
-              <p className="mt-2 flex-1 text-sm leading-relaxed text-ink-soft">{p.intro}</p>
-              <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-brand">
-                Läs mer <IconArrow className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </span>
-            </Link>
-          );
-        })}
+        {products.map((p) => (
+          <Card
+            key={p.slug}
+            href={`/produkter/${p.slug}`}
+            title={p.name}
+            cta="Läs mer"
+            image={{ src: `/images/illustrationer/${p.slug}.webp`, alt: `${p.name} – illustration`, sizes: "(min-width: 1024px) 360px, (min-width: 640px) 50vw, 100vw" }}
+          >
+            {p.intro}
+          </Card>
+        ))}
       </div>
     </Section>
   );
@@ -218,27 +236,29 @@ export function Process() {
   return (
     <Section>
       <SectionHeading eyebrow="Så går det till" title="Från bockningslista till färdig leverans" />
-      <div className="mt-10 grid gap-6 md:grid-cols-4">
+      <ol className="mt-10 grid gap-6 md:grid-cols-4">
         {steps.map((s) => (
-          <div key={s.n} className="relative overflow-hidden rounded-xl border border-line p-6">
-            <div className="-mx-6 -mt-6 mb-5 aspect-[16/9] overflow-hidden border-b border-line bg-slate-100">
+          <li key={s.n} className={`flex flex-col overflow-hidden ${cardClass}`}>
+            <div className="aspect-[16/9] overflow-hidden border-b border-line bg-paper">
               <Image
                 src={`/images/illustrationer/${s.img}.webp`}
                 alt=""
                 width={1280}
                 height={720}
-                sizes="(min-width: 768px) 300px, 100vw"
-                className="h-full w-full object-cover"
+                sizes="(min-width: 768px) 270px, 100vw"
+                className="h-full w-full object-cover dark:brightness-90"
               />
             </div>
-            <span className="flex h-10 w-10 items-center justify-center rounded-full bg-brand text-lg font-bold text-white">
-              {s.n}
-            </span>
-            <h3 className="mt-4 font-semibold text-ink">{s.title}</h3>
-            <p className="mt-2 text-sm text-ink-soft">{s.text}</p>
-          </div>
+            <div className="p-(--space-card)">
+              <span aria-hidden="true" className="flex h-10 w-10 items-center justify-center rounded-full bg-cta text-lg font-bold text-white">
+                {s.n}
+              </span>
+              <h3 className="mt-4 font-semibold text-ink"><span className="sr-only">Steg {s.n}: </span>{s.title}</h3>
+              <p className="mt-2 text-sm text-ink-soft">{s.text}</p>
+            </div>
+          </li>
         ))}
-      </div>
+      </ol>
     </Section>
   );
 }
@@ -251,9 +271,9 @@ const leveransPoints = [
   "Snabb leveranstid efter godkänd offert",
 ];
 
-export function LeveransSection({ heading = true }: { heading?: boolean }) {
+export function LeveransSection({ heading = true, muted = false }: { heading?: boolean; muted?: boolean }) {
   return (
-    <Section id="leverans">
+    <Section id="leverans" muted={muted}>
       <div className="grid items-center gap-10 lg:grid-cols-2">
         <div>
           {heading && (
@@ -263,20 +283,14 @@ export function LeveransSection({ heading = true }: { heading?: boolean }) {
               intro="Vi tillverkar och levererar prefabricerad armering till bygg- och anläggningsprojekt i hela landet. Berätta leveransort och mängd så räknar vi fram frakt och leveranstid i offerten."
             />
           )}
-          <ul className="mt-6 space-y-3">
-            {leveransPoints.map((t) => (
-              <li key={t} className="flex items-center gap-3 text-ink-soft">
-                <IconCheck className="h-5 w-5 text-brand" /> {t}
-              </li>
-            ))}
-          </ul>
+          <CheckList items={leveransPoints} className="mt-6" />
           <div className="mt-8">
             <Button href="/offert">Begär offert med leveransort <IconArrow className="h-4 w-4" /></Button>
           </div>
         </div>
-        <div className="rounded-2xl border border-line bg-surface p-8">
-          <IconTruck className="h-10 w-10 text-brand" />
-          <p className="mt-4 text-2xl font-bold text-ink">Hela landet</p>
+        <div className={`rounded-panel border border-line p-8 ${muted ? "bg-card" : "bg-surface"}`}>
+          <IconTruck className="h-10 w-10 text-accent" />
+          <p className="type-h3 mt-4 text-ink">Hela landet</p>
           <p className="mt-2 text-ink-soft">
             Från Skåne i söder till Norrland i norr – vi levererar armering till din arbetsplats
             oavsett var i Sverige projektet ligger.
@@ -299,8 +313,8 @@ export function Reviews() {
       <SectionHeading eyebrow="Vad kunderna säger" title="Nöjda kunder i hela Sverige" center />
       <div className="mt-10 grid gap-6 md:grid-cols-3">
         {verifiedReviews.map((r, i) => (
-          <figure key={i} className="rounded-xl border border-line bg-white p-6">
-            <div className="flex gap-0.5 text-brand">
+          <figure key={i} className={`${cardClass} p-(--space-card)`}>
+            <div className="flex gap-0.5 text-accent" role="img" aria-label={`${r.rating} av 5 stjärnor`}>
               {Array.from({ length: r.rating }).map((_, j) => (
                 <IconStar key={j} className="h-4 w-4" />
               ))}
@@ -313,12 +327,7 @@ export function Reviews() {
         ))}
       </div>
       <div className="mt-8 text-center">
-        <Link
-          href="/omdomen"
-          className="inline-flex items-center gap-1 text-sm font-semibold text-brand hover:text-brand-dark"
-        >
-          Läs fler omdömen <IconArrow className="h-4 w-4" />
-        </Link>
+        <ArrowLink href="/omdomen" className="text-sm">Läs fler omdömen</ArrowLink>
       </div>
     </Section>
   );
@@ -328,15 +337,15 @@ export function Reviews() {
 export function KalkylatorPromo() {
   return (
     <Section>
-      <div className="grid items-center gap-8 rounded-2xl border border-brand/25 bg-brand-light p-8 sm:p-10 lg:grid-cols-[1.2fr_0.8fr]">
+      <div className="grid items-center gap-8 rounded-panel border border-brand/25 bg-brand-light p-8 sm:p-10 lg:grid-cols-[1.2fr_0.8fr]">
         <div>
-          <span className="inline-flex items-center gap-2 rounded-full bg-white px-3 py-1 text-sm font-semibold text-brand">
+          <span className="inline-flex items-center gap-2 rounded-full bg-card px-3 py-1 text-sm font-semibold text-brand">
             <IconRuler className="h-4 w-4" /> Gratis verktyg
           </span>
-          <h2 className="mt-4 text-3xl font-bold tracking-tight text-ink sm:text-4xl">
+          <h2 className="type-h2 mt-4 text-ink">
             Räkna ut armeringen till din betongplatta
           </h2>
-          <p className="mt-4 text-lg leading-relaxed text-ink-soft">
+          <p className="mt-4 text-lead text-ink-soft">
             Fyll i plattans mått i vår armeringskalkylator och få ungefärlig åtgång av armeringsnät,
             kantjärn och distanser på sekunder – och begär offert direkt på din beräkning.
           </p>
@@ -350,8 +359,8 @@ export function KalkylatorPromo() {
             "Baserat på samma tumregler som våra guider",
             "Offertformuläret förifylls med din beräkning",
           ].map((t) => (
-            <li key={t} className="flex items-start gap-3 rounded-xl bg-white p-4 text-ink-soft">
-              <IconCheck className="mt-0.5 h-5 w-5 shrink-0 text-brand" /> {t}
+            <li key={t} className="flex items-start gap-3 rounded-card bg-card p-4 text-ink-soft">
+              <IconCheck className="mt-0.5 h-5 w-5 shrink-0 text-accent" /> {t}
             </li>
           ))}
         </ul>
@@ -391,23 +400,13 @@ export function GuidesTeaser({
       <SectionHeading eyebrow={eyebrow} title={title} />
       <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
         {list.map((p) => (
-          <Link
-            key={p.slug}
-            href={`/blogg/${p.slug}`}
-            className="group flex flex-col rounded-xl border border-line bg-white p-6 transition-all hover:border-brand hover:shadow-md"
-          >
-            <h3 className="text-base font-semibold text-ink">{p.title}</h3>
-            <p className="mt-2 flex-1 text-sm leading-relaxed text-ink-soft">{p.excerpt}</p>
-            <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-brand">
-              Läs guiden <IconArrow className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-            </span>
-          </Link>
+          <Card key={p.slug} href={`/blogg/${p.slug}`} title={p.title} cta="Läs guiden">
+            {p.excerpt}
+          </Card>
         ))}
       </div>
       <div className="mt-8 text-center">
-        <Link href="/blogg" className="inline-flex items-center gap-1 text-sm font-semibold text-brand hover:text-brand-dark">
-          Se alla guider <IconArrow className="h-4 w-4" />
-        </Link>
+        <ArrowLink href="/blogg" className="text-sm">Se alla guider</ArrowLink>
       </div>
     </Section>
   );
@@ -430,20 +429,9 @@ export function CityLinks({
       <SectionHeading eyebrow={eyebrow} title={title} />
       <div className="mt-8 flex flex-wrap gap-3">
         {cities.map((c) => (
-          <Link
-            key={c.slug}
-            href={`/armering/${c.slug}`}
-            className="rounded-lg border border-line bg-white px-4 py-2.5 text-sm font-medium text-ink transition-colors hover:border-brand hover:text-brand"
-          >
-            Armering i {c.name}
-          </Link>
+          <ChipLink key={c.slug} href={`/armering/${c.slug}`}>Armering i {c.name}</ChipLink>
         ))}
-        <Link
-          href="/leverans"
-          className="rounded-lg border border-line bg-white px-4 py-2.5 text-sm font-medium text-brand transition-colors hover:border-brand"
-        >
-          Leverans i hela Sverige →
-        </Link>
+        <ChipLink href="/leverans" accent>Leverans i hela Sverige →</ChipLink>
       </div>
     </Section>
   );
@@ -452,21 +440,19 @@ export function CityLinks({
 /* ---------- CTA banner ---------- */
 export function CtaBanner() {
   return (
-    <section className="bg-ink">
-      <Container className="flex flex-col items-center gap-6 py-14 text-center sm:py-16">
-        <h2 className="max-w-2xl text-3xl font-bold text-white sm:text-4xl">
+    <section className="bg-night">
+      <Container className="flex flex-col items-center gap-6 py-(--space-section) text-center">
+        <h2 className="type-h2 max-w-2xl text-white">
           Skicka din bockningslista – få offert på prefab armering
         </h2>
-        <p className="max-w-xl text-lg text-slate-300">
+        <p className="max-w-xl text-lead text-slate-300">
           Vi svarar snabbt med pris och leveranstid för hela Sverige.
         </p>
         <div className="flex flex-wrap justify-center gap-4">
-          <Link href="/offert" className="inline-flex h-12 items-center gap-2 rounded-lg bg-brand px-6 font-semibold text-white hover:bg-brand-dark">
-            Begär offert <IconArrow className="h-4 w-4" />
-          </Link>
-          <a href={site.phoneHref} className="inline-flex h-12 items-center gap-2 rounded-lg border border-white/25 px-6 font-semibold text-white hover:bg-white/10">
-            <IconPhone className="h-4 w-4 text-brand" /> {site.phone}
-          </a>
+          <Button href="/offert">Begär offert <IconArrow className="h-4 w-4" /></Button>
+          <Button href={site.phoneHref} variant="onDark">
+            <IconPhone className="h-4 w-4 text-accent" /> {site.phone}
+          </Button>
         </div>
       </Container>
     </section>
@@ -477,17 +463,19 @@ export function CtaBanner() {
 export function Breadcrumbs({ items }: { items: { name: string; href?: string }[] }) {
   return (
     <nav aria-label="Brödsmulor" className="border-b border-line bg-surface">
-      <Container className="flex flex-wrap items-center gap-1.5 py-3 text-sm text-muted">
-        {items.map((it, i) => (
-          <span key={i} className="flex items-center gap-1.5">
-            {it.href ? (
-              <Link href={it.href} className="hover:text-brand">{it.name}</Link>
-            ) : (
-              <span className="text-ink">{it.name}</span>
-            )}
-            {i < items.length - 1 && <IconChevron className="h-3.5 w-3.5 -rotate-90" />}
-          </span>
-        ))}
+      <Container>
+        <ol className="flex flex-wrap items-center gap-x-1.5 text-sm text-muted">
+          {items.map((it, i) => (
+            <li key={i} className="flex min-h-11 items-center gap-1.5">
+              {it.href ? (
+                <Link href={it.href} className="inline-flex min-h-11 items-center hover:text-brand hover:underline">{it.name}</Link>
+              ) : (
+                <span aria-current="page" className="text-ink">{it.name}</span>
+              )}
+              {i < items.length - 1 && <IconChevron className="h-3.5 w-3.5 -rotate-90" />}
+            </li>
+          ))}
+        </ol>
       </Container>
     </nav>
   );

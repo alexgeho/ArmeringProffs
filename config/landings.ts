@@ -38,23 +38,23 @@ const baseLandings: Landing[] = [
     body: [
       {
         heading: "En leverantör från ritning till bygge",
-        text: "För en entreprenör är armering en kedja: specning, tillverkning, leverans och montage. Vi tar hela kedjan eller de delar ni behöver. Har ni bara konstruktionsritningen tar vi fram [armeringsspecifikationen](/tjanster/armeringsspecifikation). Har ni färdig spec tillverkar vi direkt som [inläggningsfärdig ILF-armering](/tjanster/ilf-armering) – märkt, buntad och sorterad per element. Ni får en kontakt för hela leveransen – från första frågan om ritningen till sista bunten på bygget.",
+        text: "För en entreprenör är armering en kedja: specning, tillverkning, leverans och montage. Vi tar hela kedjan eller de delar ni behöver. Har ni bara konstruktionsritningen tar vi fram [armeringsspecifikationen](/tjanster/armeringsspecifikation). Har ni färdig spec tillverkar vi direkt som [inläggningsfärdig ILF-armering](/tjanster/ilf-armering) – märkt, buntad och sorterad per element. Ni har en kontakt från första frågan om ritningen till sista bunten på bygget.",
       },
       {
         heading: "Volymer och sortiment",
-        text: "Vi levererar det som stommen och grunden kräver: [klippt och bockad armering](/produkter/klippt-och-bockad) Ø6–Ø32, [pelar- och balkkorgar](/produkter/pelar-och-balkkorgar), [pålarmering](/produkter/palarmering), [armeringsnät](/produkter/armeringsnat) och [specialnät](/produkter/svetsad-armering). Allt i kamstål B500B enligt SS 212540. Hela sortimentet finns samlat under [prefab armering](/prefab-armering). Mängder och leveransupplägg anpassas efter projektet – från en enstaka grund till löpande leveranser till flera arbetsplatser. Vi lämnar offert på hela projektets armering eller per etapp, beroende på hur ni handlar upp.",
+        text: "Vi levererar det som stommen och grunden kräver: [klippt och bockad armering](/produkter/klippt-och-bockad) Ø6–Ø32, [pelar- och balkkorgar](/produkter/pelar-och-balkkorgar), [pålarmering](/produkter/palarmering), [armeringsnät](/produkter/armeringsnat) och [specialnät](/produkter/svetsad-armering). Allt i kamstål B500B enligt SS 212540. Hela sortimentet finns samlat under [prefab armering](/prefab-armering). Vi lämnar offert på hela projektets armering eller per etapp, beroende på hur ni handlar upp. Mer om hur vi jobbar med [byggentreprenörer](/armering-for-byggentreprenorer), [markentreprenörer](/armering-for-markentreprenorer) och [betongelementfabriker](/armering-for-prefabindustri).",
       },
       {
         heading: "Leveransplan efter er tidplan",
-        text: "Stora projekt gjuts i etapper – då ska armeringen komma i samma takt. Vi planerar leveranser per etapp, bjälklag eller element enligt överenskommelse, så att arbetsplatsen inte fylls med material som ligger i vägen. Leveranstider och upplägg anges i offerten utifrån projektets omfattning och ort. Ändras tidplanen stämmer vi av nästa leverans, så att armeringen kommer när formen är klar och inte veckor innan.",
+        text: "Stora projekt gjuts i etapper – då ska armeringen komma i samma takt. Vi planerar leveranser per etapp, bjälklag eller element enligt överenskommelse, så att arbetsplatsen inte fylls med material som ligger i vägen. Leveranstider och upplägg anges i offerten utifrån projektets omfattning och ort. Ändras tidplanen stämmer vi av nästa leverans, så att armeringen kommer när formen är klar.",
       },
       {
         heading: "Märkning som sparar tid på plats",
-        text: "Varje bunt och korg märks med positionsnummer, dimension och form – samma nummer som på ritningen. Montörerna hittar rätt detalj direkt och kontrollen före gjutning går snabbare. Behöver ni folk på plats erbjuder vi även [armeringsmontage](/tjanster/armeringsmontage). Leveransen sorteras per element eller etapp, så att det som ska läggas först ligger lättast åtkomligt. Det minskar hanteringen på arbetsplatsen och gör det enklare att stämma av mot följesedeln.",
+        text: "Varje bunt och korg märks med positionsnummer, dimension och form – samma nummer som på ritningen. Montörerna hittar rätt detalj direkt och kontrollen före gjutning går snabbare. Behöver ni folk på plats erbjuder vi även [armeringsmontage](/tjanster/armeringsmontage). Leveransen sorteras per element eller etapp, så att det som ska läggas först ligger överst.",
       },
       {
         heading: "Hela Sverige – även norrut",
-        text: "Vi levererar till arbetsplatser i hela landet, inklusive [Norrland](/armering-norrland). Frakten räknas efter mängd och ort och anges i offerten – ingen fast fraktavgift. Skicka ritning, spec eller förfrågningsunderlag så återkommer vi med pris och leveransupplägg. Vi lämnar gärna pris på hela projekt och på enskilda etapper, med frakt specificerad per leverans. Läs gärna [så räknas armeringens pris](/armering-pris) eller [begär offert](/offert) direkt.",
+        text: "Vi levererar till arbetsplatser i hela landet, inklusive [Norrland](/armering-norrland). Frakten räknas efter mängd och ort och anges i offerten – ingen fast fraktavgift. Läs [så räknas armeringens pris](/armering-pris), eller skicka ritning, spec eller förfrågningsunderlag och [få offert med leveransplan](/offert).",
       },
     ],
     faqs: [
@@ -93,30 +93,30 @@ const baseLandings: Landing[] = [
     body: [
       {
         heading: "Varför prefab?",
-        text: "Att kapa och bocka armering på bygget tar tid, kräver utrymme och ger spill. Med prefab görs jobbet i verkstad efter ritningen, och på bygget återstår bara att lägga och naja. Det ger jämnare kvalitet, rätt mått och kortare montagetid. Grunden är [klippt och bockad armering](/produkter/klippt-och-bockad) i kamstål B500B – levererat märkt per position, eller som [inläggningsfärdig ILF-armering](/tjanster/ilf-armering). Det passar både villabyggare och entreprenörer.",
+        text: "Att kapa och bocka armering på bygget tar tid, kräver utrymme och ger spill. Med prefab görs jobbet i verkstad efter ritningen, och på bygget återstår bara att lägga och naja. Det ger rätt mått, mindre spill och kortare montagetid. Grunden är [klippt och bockad armering](/produkter/klippt-och-bockad) i kamstål B500B – levererat märkt per position, eller som [inläggningsfärdig ILF-armering](/tjanster/ilf-armering). Det passar både villabyggare och entreprenörer.",
       },
       {
         heading: "Till grund och platta",
-        text: "För platta på mark levererar vi [grundarmering](/produkter/grundarmering) som paket: [armeringsnät](/produkter/armeringsnat), [kantbalkskorgar](/produkter/villakorg-kantbalksarmering), [distanser](/produkter/distanser) och [najtråd](/produkter/najtrad-och-tillbehor). Plintar och stolpfundament får färdiga [plintkorgar](/produkter/plintkorgar), och pooler en komplett [poolarmering](/produkter/poolarmering). Allt tillverkas i kamstål B500B efter ritning, mängdberäknas med överlapp och levereras i en samlad leverans, märkt per position. Du får en offert för hela grunden i stället för att beställa från flera håll, med frakt efter mängd och ort.",
+        text: "För platta på mark levererar vi [grundarmering](/produkter/grundarmering) som paket: [armeringsnät](/produkter/armeringsnat), [kantbalkskorgar](/produkter/villakorg-kantbalksarmering), [distanser](/produkter/distanser) och [najtråd](/produkter/najtrad-och-tillbehor). Plintar och stolpfundament får färdiga [plintkorgar](/produkter/plintkorgar), och pooler en komplett [poolarmering](/produkter/poolarmering). Nätmängden räknas med överlapp, och allt kommer i en leverans märkt per position. Du får en offert för hela grunden i stället för att beställa från flera håll.",
       },
       {
         heading: "Till stomme och anläggning",
-        text: "För stommar tillverkar vi [pelar- och balkkorgar](/produkter/pelar-och-balkkorgar) och övriga [armeringskorgar](/produkter/armeringskorgar), för grundläggning på pålar [pålarmering](/produkter/palarmering). Specialformer bockas med [3D-bockning](/produkter/3d-bockning), nät efter mått levereras som [svetsad armering](/produkter/svetsad-armering) och betongelement kan förses med [lyftöglor](/produkter/lyftoglor). Korgarna byggs efter konstruktionsritningen, svetsade eller najade enligt föreskrift, och märks per element. För entreprenörer med större volymer finns mer under [armeringsleverantör](/armeringsleverantor). Offerten anger vikt per element och frakt.",
+        text: "För stommar tillverkar vi [pelar- och balkkorgar](/produkter/pelar-och-balkkorgar) och övriga [armeringskorgar](/produkter/armeringskorgar), för grundläggning på pålar [pålarmering](/produkter/palarmering). Specialformer bockas med [3D-bockning](/produkter/3d-bockning), nät efter mått levereras som [svetsad armering](/produkter/svetsad-armering) och betongelement kan förses med [lyftöglor](/produkter/lyftoglor). Korgarna byggs efter konstruktionsritningen, svetsade eller najade, och märks per element. För entreprenörer med större volymer finns mer under [armeringsleverantör](/armeringsleverantor).",
       },
       {
         heading: "Råmaterial och enskilda detaljer",
-        text: "Behöver du bara raka järn eller byglar? Vi levererar [armeringsjärn](/produkter/armeringsjarn) i standardlängder, [byglar och hakar](/produkter/byglar-och-hakar) efter mått och [armering i ringar](/produkter/armering-i-ringar) för egen bockning. Allt kan kombineras i samma leverans med frakt efter mängd och ort. Raka järn passar dig som har egen bockningsmaskin eller bara behöver kompletteringar. Allt är kamstål B500B enligt SS 212540 i dimensionerna Ø6–Ø32, och allt kan levereras tillsammans med distanser och najtråd.",
+        text: "Behöver du bara raka järn eller byglar? Vi levererar [armeringsjärn](/produkter/armeringsjarn) i standardlängder, [byglar och hakar](/produkter/byglar-och-hakar) efter mått och [armering i ringar](/produkter/armering-i-ringar) för egen bockning. Raka järn passar dig som har egen bockningsmaskin eller bara behöver komplettera. Allt är kamstål B500B enligt SS 212540, Ø6–Ø32, och kan levereras tillsammans med distanser och najtråd.",
       },
       {
         heading: "Så beställer du",
-        text: "Skicka bockningslista, spec eller ritning. Har du bara ritningen tar vi fram [armeringsspecifikationen](/tjanster/armeringsspecifikation), har du måtten kan du bygga listan i vårt [bockningslisteverktyg](/tjanster/bockningslista). Leverans sker i hela Sverige, även norrut, och frakten anges separat. Ingen fast fraktavgift. Leveranstid anges i offerten utifrån mängd, bearbetning och ort. Du får en offert med pris och frakt – läs [vad som påverkar priset](/armering-pris) eller [begär offert](/offert) direkt.",
+        text: "Skicka bockningslista, spec eller ritning. Har du bara ritningen tar vi fram [armeringsspecifikationen](/tjanster/armeringsspecifikation), har du måtten kan du bygga listan i vårt [bockningslisteverktyg](/tjanster/bockningslista). Frakten räknas efter mängd och ort, utan fast avgift, och leveranstiden står i offerten. Läs [vad som påverkar priset](/armering-pris) eller [skicka underlaget och få offert](/offert).",
       },
     ],
     faqs: [
       { q: "Vad är prefab armering?", a: "Armering som tillverkas färdig i verkstad – kapad, bockad, sammanfogad till korgar eller svetsad till nät – och levereras märkt så att den bara ska läggas på bygget." },
-      { q: "Är prefab armering dyrare än att bocka själv?", a: "Materialet kostar ungefär detsamma, men prefab tillkommer bearbetning. Samtidigt sparas arbetstid, verktyg och spill på bygget – vad som lönar sig beror på projektet." },
+      { q: "Är prefab armering dyrare än att bocka själv?", a: "Stålet kostar detsamma, men för prefab tillkommer bearbetningen. I gengäld sparar du arbetstid, verktyg och spill på bygget. Vad som lönar sig beror på projektet." },
       { q: "Kan jag beställa prefab armering som privatperson?", a: "Ja, vi levererar till både privatpersoner och företag i hela Sverige." },
-      { q: "Vad behöver ni för att lämna offert?", a: "Bockningslista, armeringsspecifikation eller konstruktionsritning. Har du bara mått på en platta kan vi ta fram ett förslag på mängder." },
+      { q: "Vad behöver ni för att lämna offert?", a: "Bockningslista, armeringsspecifikation eller konstruktionsritning. Har du bara mått på en platta hjälper vi dig att ta fram mängderna." },
     ],
   },
   {
@@ -147,11 +147,11 @@ const baseLandings: Landing[] = [
     body: [
       {
         heading: "Mängd i kilo – grunden för priset",
-        text: "Armering prissätts i första hand efter vikt. Vikten räknas som längd gånger vikt per meter: Ø8 väger 0,395 kg/m, Ø10 0,617, Ø12 0,888 och Ø16 1,58 kg/m. Tio meter Ø12 är alltså knappt 9 kg. Därför börjar varje offert med en mängdberäkning från ritningen eller [armeringsspecifikationen](/tjanster/armeringsspecifikation). Vill du uppskatta själv, prova [armeringskalkylatorn](/armeringskalkylator). Även Ø20 (2,47 kg/m) och Ø25 (3,85 kg/m) räknas på samma sätt.",
+        text: "Armering prissätts i första hand efter vikt. Vikten räknas som längd gånger vikt per meter: Ø8 väger 0,395 kg/m, Ø10 0,617, Ø12 0,888 och Ø16 1,58 kg/m. Tio meter Ø12 är alltså knappt 9 kg. Ø20 väger 2,47 kg/m och Ø25 3,85 kg/m. Därför börjar varje offert med en mängdberäkning från ritningen eller [armeringsspecifikationen](/tjanster/armeringsspecifikation). Vill du uppskatta själv, prova [armeringskalkylatorn](/armeringskalkylator).",
       },
       {
         heading: "Dimensioner och bearbetning",
-        text: "Raka järn i standardlängder är enklast att leverera. Varje kapning, bockning och korgmontering är bearbetning som tillkommer – en ordertyp med många små byglar kostar mer per kilo än raka järn. Samtidigt sparar [klippt och bockad armering](/produkter/klippt-och-bockad) arbetstid och spill på bygget. Färdiga [korgar](/produkter/armeringskorgar) har högst bearbetningsgrad men kortast montagetid. Antalet unika positioner påverkar också, eftersom varje ny form innebär omställning i tillverkningen.",
+        text: "Raka järn i standardlängder är enklast att leverera. Varje kapning, bockning och korgmontering är bearbetning som tillkommer, så en order med många små byglar kostar mer per kilo än raka järn. Samtidigt sparar [klippt och bockad armering](/produkter/klippt-och-bockad) arbetstid och spill på bygget. Färdiga [korgar](/produkter/armeringskorgar) har högst bearbetningsgrad men kortast montagetid. Antalet unika positioner påverkar också, eftersom varje ny form innebär omställning i tillverkningen.",
       },
       {
         heading: "Frakt efter mängd och ort",
@@ -159,11 +159,11 @@ const baseLandings: Landing[] = [
       },
       {
         heading: "Jämför offerter rätt",
-        text: "När du jämför priser: kontrollera att samma mängd, dimensioner och bearbetning ingår, och om frakt, distanser och najtråd är med. Ett lågt kilopris på raka järn kan bli dyrt om du själv ska kapa och bocka. Mer om prisnivåer och marknad finns i guiden [vad kostar armering](/blogg/vad-kostar-armering). Fråga också vem som tar fram bockningslistan, och om märkning per position ingår – det påverkar tiden på bygget mer än många tror.",
+        text: "När du jämför priser: kontrollera att samma mängd, dimensioner och bearbetning ingår, och om frakt, distanser och najtråd är med. Ett lågt kilopris på raka järn kan bli dyrt om du själv ska kapa och bocka. Mer om prisnivåer och marknad finns i guiden [vad kostar armering](/blogg/vad-kostar-armering). Fråga också vem som tar fram bockningslistan och om märkning per position ingår. Det påverkar tiden på bygget.",
       },
       {
         heading: "Så får du ett exakt pris",
-        text: "Skicka bockningslista, spec eller ritning – eller mått på plattan om det gäller en [grundarmering](/produkter/grundarmering). Vi räknar mängd, bearbetning och frakt och skickar en samlad offert med leveranstid. Offerten specificerar mängd per dimension, bearbetning, tillbehör och frakt var för sig, så att du kan jämföra med andra leverantörer. Saknar du underlag hjälper vi till att ta fram det från ritningen. [Begär offert här](/offert).",
+        text: "Skicka bockningslista, spec eller ritning – eller mått på plattan om det gäller en [grundarmering](/produkter/grundarmering). Offerten specificerar mängd per dimension, bearbetning, tillbehör och frakt var för sig, så att du kan jämföra med andra leverantörer. Saknar du underlag hjälper vi till att ta fram det från ritningen. [Skicka underlaget och få ditt pris](/offert).",
       },
     ],
     faqs: [
@@ -206,19 +206,19 @@ const baseLandings: Landing[] = [
       },
       {
         heading: "Frakt efter mängd och ort",
-        text: "Vi har ingen fast fraktavgift – vi räknar frakten efter mängd och leveransort och anger den i offerten. Det gör att du ser exakt vad transporten kostar, oavsett om det gäller en villagrund i Östersund eller en stomme i Luleå. Läs mer om [hur priset räknas](/armering-pris). Samla gärna flera beställningar i samma leverans för att hålla fraktkostnaden per kilo nere.",
+        text: "Vi har ingen fast fraktavgift – vi räknar frakten efter mängd och leveransort och anger den i offerten. Det gör att du ser exakt vad transporten kostar, oavsett om det gäller en villagrund i Östersund eller en stomme i Luleå. Läs mer om [hur priset räknas](/armering-pris).",
       },
       {
         heading: "Planera för säsong och avstånd",
-        text: "Längre transporter och kort byggsäsong gör att planeringen är viktigare i norr. Beställ i god tid och samla gärna armering, [distanser](/produkter/distanser) och [najtråd](/produkter/najtrad-och-tillbehor) i samma leverans. För större projekt kan leveranser delas upp per etapp – se [armeringsleverantör för entreprenörer](/armeringsleverantor). Leveranstid anges i offerten. Tjäle och snö påverkar när det går att gjuta – stäm av leveransdatum mot din gjutning.",
+        text: "Längre transporter och kort byggsäsong gör att planeringen är viktigare i norr. Beställ i god tid och samla armering, [distanser](/produkter/distanser) och [najtråd](/produkter/najtrad-och-tillbehor) i samma leverans, så blir frakten per kilo lägre. För större projekt kan leveranser delas upp per etapp – se [armeringsleverantör för entreprenörer](/armeringsleverantor). Leveranstid anges i offerten. Tjäle och snö påverkar när det går att gjuta – stäm av leveransdatum mot din gjutning.",
       },
       {
         heading: "Från villagrund till industri",
-        text: "Privatpersoner beställer ofta [grundarmering](/produkter/grundarmering) till platta på mark eller garage. Entreprenörer och industri beställer [klippt och bockad armering](/produkter/klippt-och-bockad), [pelar- och balkkorgar](/produkter/pelar-och-balkkorgar) och [pålarmering](/produkter/palarmering) efter ritning. Allt märks per position så att montaget går fort även när säsongen är kort. Kamstålet är B500B enligt SS 212540 oavsett leveransort, med samma märkning och sortering som i resten av landet. Behöver du hjälp att lägga armeringen kan du fråga om [armeringsmontage](/tjanster/armeringsmontage).",
+        text: "Privatpersoner beställer ofta [grundarmering](/produkter/grundarmering) till platta på mark eller garage. Entreprenörer och industri beställer [klippt och bockad armering](/produkter/klippt-och-bockad), [pelar- och balkkorgar](/produkter/pelar-och-balkkorgar) och [pålarmering](/produkter/palarmering) efter ritning. Allt märks per position så att montaget går fort även när säsongen är kort. Behöver du hjälp att lägga armeringen kan du fråga om [armeringsmontage](/tjanster/armeringsmontage).",
       },
       {
         heading: "Begär offert",
-        text: "Skicka ritning, bockningslista eller mått tillsammans med leveransort. Har du bara konstruktionsritningen tar vi fram [armeringsspecifikationen](/tjanster/armeringsspecifikation). Ange leveransadress och önskat leveransdatum, så planerar vi transporten därefter. Offerten specificerar mängd, bearbetning och frakt var för sig, så att du ser vad transporten norrut kostar. Har du flera leveransadresser kan de samlas i samma förfrågan. Du får en offert med pris, frakt och leveranstid – [begär offert](/offert).",
+        text: "Skicka ritning, bockningslista eller mått tillsammans med leveransort. Har du bara konstruktionsritningen tar vi fram [armeringsspecifikationen](/tjanster/armeringsspecifikation). Ange leveransadress och önskat datum. Har du flera adresser kan de samlas i samma förfrågan. Offerten visar frakten norrut som egen post – [begär offert med leveransort](/offert).",
       },
     ],
     faqs: [

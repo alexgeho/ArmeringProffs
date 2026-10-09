@@ -32,7 +32,7 @@ export default function OmOssPage() {
         <div className="grid items-start gap-10 lg:grid-cols-[1fr_1.45fr] lg:items-center">
           <div>
             <SectionHeading as="h1" eyebrow="Om oss" title={`Om ${site.company} – prefab armering i hela Sverige`} />
-            <div className="prose-body mt-6 space-y-4 text-lg">
+            <div className="prose-body mt-6">
               <p>
                 Vi är specialiserade på prefabricerad armering – klippt och bockad armering,
                 armeringskorgar, svetsad armering och nät, kamstål och distanser. Vi tillverkar efter
@@ -48,12 +48,12 @@ export default function OmOssPage() {
             <ul className="mt-8 grid gap-3 sm:grid-cols-2">
               {values.map((v) => (
                 <li key={v} className="flex items-start gap-2 text-ink-soft">
-                  <IconCheck className="mt-0.5 h-5 w-5 shrink-0 text-brand" /> {v}
+                  <IconCheck className="mt-0.5 h-5 w-5 shrink-0 text-accent" /> {v}
                 </li>
               ))}
             </ul>
           </div>
-          <figure className="overflow-hidden rounded-2xl border border-line">
+          <figure className="overflow-hidden rounded-panel border border-line">
             <Image
               src="/images/om-oss-armeringsverkstad.webp"
               alt="Armeringsverkstad med prefabricerade armeringskorgar, kamstål och skyddshjälm"

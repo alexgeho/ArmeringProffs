@@ -14,16 +14,16 @@ export default function IntegritetspolicyPage() {
   return (
     <>
       <Breadcrumbs items={[{ name: "Hem", href: "/" }, { name: "Integritetspolicy" }]} />
-      <Container className="prose-body max-w-3xl py-14">
-        <h1 className="text-4xl font-bold text-ink">Integritetspolicy</h1>
-        <p className="mt-4 text-ink-soft">
+      <Container className="prose-body max-w-3xl py-(--space-section)">
+        <h1 className="type-h1 text-ink">Integritetspolicy</h1>
+        <p>
           {site.company} (drivs av {site.legalName}, reg.nr {site.regNumber}, VAT {site.vat}) värnar om
           din integritet. Här beskriver vi hur vi behandlar dina personuppgifter enligt
           dataskyddsförordningen (GDPR).
         </p>
 
-        <h2 className="mt-8 text-2xl font-bold text-ink">Vilka uppgifter vi samlar in</h2>
-        <p className="mt-3 text-ink-soft">
+        <h2>Vilka uppgifter vi samlar in</h2>
+        <p>
           När du fyller i vårt offertformulär samlar vi in namn eller företag, telefonnummer,
           e-postadress, leveransort, mängd och den information du lämnar om ditt projekt – samt en
           eventuell ritning eller bockningslista som du väljer att bifoga. Med förfrågan skickas
@@ -32,14 +32,14 @@ export default function IntegritetspolicyPage() {
           formuläret – ingen cookie används för detta.
         </p>
 
-        <h2 className="mt-8 text-2xl font-bold text-ink">Hur vi använder uppgifterna</h2>
-        <p className="mt-3 text-ink-soft">
+        <h2>Hur vi använder uppgifterna</h2>
+        <p>
           Uppgifterna används enbart för att kontakta dig, lämna offert och utföra det arbete du
           efterfrågar. Vi delar aldrig dina uppgifter med tredje part för marknadsföring.
         </p>
 
-        <h2 className="mt-8 text-2xl font-bold text-ink">Dina rättigheter</h2>
-        <p className="mt-3 text-ink-soft">
+        <h2>Dina rättigheter</h2>
+        <p>
           Du har rätt att begära ut, rätta eller radera dina uppgifter. Kontakta oss på{" "}
           <a href={`mailto:${site.email}`} className="text-brand underline">{site.email}</a>.
         </p>

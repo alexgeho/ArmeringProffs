@@ -34,7 +34,7 @@ export default function OmdomenPage() {
         />
 
         {arExempel && (
-          <p className="mx-auto mt-6 max-w-3xl rounded-lg border border-line bg-surface px-4 py-3 text-sm text-muted">
+          <p className="mx-auto mt-6 max-w-3xl rounded-control border border-line bg-surface px-4 py-3 text-sm text-muted">
             Obs: exemplen nedan visar hur omdömen presenteras. Vi publicerar riktiga kundomdömen
             löpande i takt med att projekten slutförs.
           </p>
@@ -42,8 +42,8 @@ export default function OmdomenPage() {
 
         <div className="mt-10 grid gap-6 md:grid-cols-3">
           {reviews.map((r, i) => (
-            <figure key={i} className="flex flex-col rounded-xl border border-line bg-white p-6">
-              <div className="flex gap-0.5 text-brand">
+            <figure key={i} className="flex flex-col rounded-card border border-line bg-card p-(--space-card)">
+              <div className="flex gap-0.5 text-accent" role="img" aria-label={`${r.rating} av 5 stjärnor`}>
                 {Array.from({ length: r.rating }).map((_, j) => (
                   <IconStar key={j} className="h-4 w-4" />
                 ))}
@@ -73,18 +73,18 @@ export default function OmdomenPage() {
                 "Leverans i hela Sverige, med montage vid behov",
               ].map((t) => (
                 <li key={t} className="flex items-center gap-3 text-ink-soft">
-                  <IconCheck className="h-5 w-5 shrink-0 text-brand" /> {t}
+                  <IconCheck className="h-5 w-5 shrink-0 text-accent" /> {t}
                 </li>
               ))}
             </ul>
           </div>
 
-          <div className="rounded-2xl border border-line bg-white p-8">
-            <h3 className="text-xl font-bold text-ink">Är du kund hos oss?</h3>
+          <div className="rounded-panel border border-line bg-card p-8">
+            <h3 className="type-h4 text-ink">Är du kund hos oss?</h3>
             <p className="mt-3 text-ink-soft">
               Vi blir glada för din feedback. Har du fått armering levererad och vill lämna ett
               omdöme? Hör av dig på{" "}
-              <a href={`mailto:${site.email}`} className="text-brand underline">
+              <a href={`mailto:${site.email}`} className="text-brand underline underline-offset-2 hover:text-brand-dark">
                 {site.email}
               </a>{" "}
               så publicerar vi det gärna här.
@@ -93,7 +93,7 @@ export default function OmdomenPage() {
               <Button href="/offert">
                 Begär offert <IconArrow className="h-4 w-4" />
               </Button>
-              <Button href="/om-oss" variant="outline">
+              <Button href="/om-oss" variant="secondary">
                 Om oss
               </Button>
             </div>

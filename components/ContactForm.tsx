@@ -1,7 +1,10 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { IconCheck } from "./icons";
+import { TextField, TextArea } from "./form";
+import { Button } from "./ui";
 import { readVisitSource } from "./VisitSource";
 
 type Status = "idle" | "sending" | "sent" | "error";
@@ -53,8 +56,8 @@ export function ContactForm({
 
   if (status === "sent") {
     return (
-      <div className="flex flex-col items-center gap-3 rounded-xl bg-brand-light p-8 text-center">
-        <span className="flex h-12 w-12 items-center justify-center rounded-full bg-brand text-white">
+      <div role="status" className="flex flex-col items-center gap-3 rounded-card bg-brand-light p-8 text-center">
+        <span className="flex h-12 w-12 items-center justify-center rounded-full bg-cta text-white">
           <IconCheck className="h-6 w-6" />
         </span>
         <h3 className="text-xl font-bold text-ink">Tack för din förfrågan!</h3>
@@ -91,23 +94,20 @@ export function ContactForm({
         </div>
       )}
 
-      <div className="grid min-w-0">
-        <label htmlFor="message" className="sr-only">Beskriv ditt projekt</label>
-        <textarea
-          id="message"
-          name="message"
-          rows={compact ? 3 : 4}
-          // key gör att fältet uppdateras när en ny beräkning skickas in från kalkylatorn.
-          key={defaultMessage}
-          defaultValue={defaultMessage}
-          placeholder="Beskriv ditt projekt"
-          className="w-full min-w-0 rounded-lg border border-line bg-white px-4 py-3 text-ink placeholder:text-muted focus:border-brand focus:outline-none"
-        />
-      </div>
+      <TextArea
+        name="message"
+        label="Beskriv ditt projekt"
+        hideLabel
+        rows={compact ? 3 : 4}
+        // key gör att fältet uppdateras när en ny beräkning skickas in från kalkylatorn.
+        key={defaultMessage}
+        defaultValue={defaultMessage}
+        placeholder="Beskriv ditt projekt"
+      />
 
       {/* Bifoga ritning/bockningslista: egen knapp i stället för webbläsarens "Choose File". */}
-      <label className={`flex min-w-0 cursor-pointer items-center gap-2 rounded-lg border border-dashed px-4 py-3 text-sm hover:border-brand focus-within:border-brand ${onDark ? "border-white/40 text-slate-100" : "border-line text-ink-soft"}`}>
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="h-4 w-4 shrink-0 text-brand" aria-hidden="true">
+      <label className={`flex min-h-12 min-w-0 cursor-pointer items-center gap-2 rounded-control border border-dashed px-4 py-3 text-sm hover:border-accent focus-within:border-accent focus-within:outline-2 focus-within:outline-accent ${onDark ? "border-white/40 text-slate-100" : "border-field text-ink-soft"}`}>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="h-4 w-4 shrink-0 text-accent" aria-hidden="true">
           <path d="M21.44 11.05l-9.19 9.19a6 6 0 01-8.49-8.49l9.19-9.19a4 4 0 015.66 5.66l-9.2 9.19a2 2 0 01-2.83-2.83l8.49-8.48" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
         <span className="min-w-0 truncate">{fileName || "Bifoga ritning eller bockningslista"}</span>
@@ -124,21 +124,17 @@ export function ContactForm({
       {/* Samtycke ges genom att skicka (texten under knappen) – sendmail.php kräver fältet. */}
       <input type="hidden" name="consent" value="1" />
 
-      <button
-        type="submit"
-        disabled={status === "sending"}
-        className="inline-flex h-12 items-center justify-center rounded-lg bg-brand px-6 font-semibold text-white transition-colors hover:bg-brand-dark disabled:opacity-60"
-      >
-        {status === "sending" ? "Skickar..." : "Skicka förfrågan"}
-      </button>
+      <Button type="submit" loading={status === "sending"}>
+        {status === "sending" ? "Skickar…" : "Skicka förfrågan"}
+      </Button>
 
       <p className={`-mt-1 text-xs ${onDark ? "text-slate-300" : "text-muted"}`}>
         Genom att skicka godkänner du vår{" "}
-        <a href="/integritetspolicy/" className="underline hover:text-brand">integritetspolicy</a>.
+        <Link href="/integritetspolicy" className={`underline ${onDark ? "hover:text-white" : "hover:text-brand"}`}>integritetspolicy</Link>.
       </p>
 
       {status === "error" && (
-        <p className="text-sm text-red-600">
+        <p role="alert" className={`text-sm ${onDark ? "text-red-300" : "text-danger"}`}>
           Något gick fel. Ring oss gärna direkt så hjälper vi dig.
         </p>
       )}
@@ -157,17 +153,16 @@ function Field({
   type?: string;
   required?: boolean;
 }) {
+  const auto: Record<string, string> = { name: "name", phone: "tel", email: "email", contact: "on" };
   return (
-    <div className="grid min-w-0">
-      <label htmlFor={name} className="sr-only">{label}</label>
-      <input
-        id={name}
-        name={name}
-        type={type}
-        required={required}
-        placeholder={required ? `${label} *` : label}
-        className="h-12 w-full min-w-0 rounded-lg border border-line bg-white px-4 text-ink placeholder:text-muted focus:border-brand focus:outline-none"
-      />
-    </div>
+    <TextField
+      name={name}
+      label={label}
+      hideLabel
+      type={type}
+      required={required}
+      autoComplete={auto[name]}
+      placeholder={required ? `${label} *` : label}
+    />
   );
 }

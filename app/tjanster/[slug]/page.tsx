@@ -1,14 +1,11 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import Link from "next/link";
 import { services, getService } from "@/config/services";
 import { posts } from "@/config/blog";
 import { site } from "@/config/site";
-import { Section, SectionHeading, Container } from "@/components/ui";
-import { Breadcrumbs, CtaBanner, Process, CityLinks, PhotoBg, glassCard } from "@/components/sections";
-import { ContactForm } from "@/components/ContactForm";
+import { Section, SectionHeading, Container, Button, Panel, CheckList, ArrowLink, Card } from "@/components/ui";
+import { Breadcrumbs, CtaBanner, Process, CityLinks, PhotoHero } from "@/components/sections";
 import { FaqAccordion } from "@/components/FaqAccordion";
-import { IconCheck, IconArrow, IconPhone } from "@/components/icons";
 import { AnimatedScene } from "@/components/AnimatedScene";
 import { BockningsformerExplorer } from "@/components/BockningsformerExplorer";
 import { JsonLd, serviceSchema, faqSchema, breadcrumbSchema } from "@/lib/jsonld";
@@ -90,12 +87,12 @@ export default async function ServicePage({
         <section className="border-b border-line bg-surface">
           <Container className="py-10">
             <div>
-              <h2 className="text-2xl font-bold text-ink">{tool.title}</h2>
+              <p className="type-h3 text-ink">{tool.title}</p>
               <p className="mt-1 max-w-3xl text-sm text-muted">{tool.text}</p>
               <a
                 href="/downloads/typformer-bockning-armeringsproffs.pdf"
                 download
-                className="mt-2 mb-6 inline-flex items-center gap-1.5 text-sm font-semibold text-brand hover:underline"
+                className="mt-2 mb-6 inline-flex min-h-11 items-center gap-1.5 text-sm font-semibold text-brand hover:underline"
               >
                 <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.8" className="h-4 w-4" aria-hidden="true">
                   <path d="M10 3v10m0 0l-4-4m4 4l4-4M4 16h12" strokeLinecap="round" strokeLinejoin="round" />
@@ -105,102 +102,64 @@ export default async function ServicePage({
               <AnimatedScene>{tool.node}</AnimatedScene>
             </div>
             {/* Rubrik + ingress (SEO) under verktyget */}
-            <h1 className="mt-12 max-w-3xl text-3xl font-bold tracking-tight text-ink sm:text-4xl">{s.h1}</h1>
-            <p className="mt-4 max-w-3xl text-lg leading-relaxed text-ink-soft">{s.intro}</p>
-            <div className="mt-6 flex flex-wrap items-center gap-4">
-              <Link href="/offert" className="inline-flex h-12 items-center rounded-lg bg-brand px-6 font-semibold text-white hover:bg-brand-dark">
-                Har du redan en lista? Skicka den – begär offert
-              </Link>
+            <h1 className="type-h2 mt-12 max-w-3xl text-ink">{s.h1}</h1>
+            <p className="mt-4 max-w-3xl text-lead text-ink-soft">{s.intro}</p>
+            <div className="mt-6">
+              <Button href="/offert" className="h-auto min-h-12 py-3 !whitespace-normal text-center">Har du redan en lista? Skicka den – begär offert</Button>
             </div>
           </Container>
         </section>
       ) : (
-        /* Hero med offertformulär */
-        <section className="relative overflow-hidden bg-ink text-white">
-          <PhotoBg src={foto(s.slug) ?? "/images/distanser-armeringsnat.webp"} alt={foto(s.slug) ? s.h1 : "Armeringsnät på distanser inför gjutning"} />
-          <Container className="relative grid grid-cols-1 gap-10 py-14 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
-            <div>
-              <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">{s.h1}</h1>
-              <p className="mt-5 max-w-xl text-lg text-slate-300">{s.intro}</p>
-              <ul className="mt-7 grid gap-3 sm:grid-cols-2">
-                {s.includes.slice(0, 4).map((it) => (
-                  <li key={it} className="flex items-center gap-2 text-slate-200">
-                    <IconCheck className="h-5 w-5 shrink-0 text-brand" /> {it}
-                  </li>
-                ))}
-              </ul>
-              <div className="mt-8 flex flex-wrap gap-4">
-                <a href={site.phoneHref} className="inline-flex h-12 items-center gap-2 rounded-lg border border-white/20 px-5 font-semibold text-white hover:bg-white/10">
-                  <IconPhone className="h-4 w-4 text-brand" /> {site.phone}
-                </a>
-              </div>
-            </div>
-            <div className={glassCard}>
-              <h2 className="text-xl font-bold text-white">Begär offert</h2>
-              <div className="mt-4">
-                <ContactForm compact onDark source={`tjanst-${s.slug}`} />
-              </div>
-            </div>
-          </Container>
-        </section>
+        <PhotoHero
+          title={s.h1}
+          intro={s.intro}
+          points={s.includes.slice(0, 4)}
+          bgImage={foto(s.slug) ?? "/images/distanser-armeringsnat.webp"}
+          bgAlt={foto(s.slug) ? s.h1 : "Armeringsnät på distanser inför gjutning"}
+          formSource={`tjanst-${s.slug}`}
+        />
       )}
 
       {/* Body */}
       <Section>
         <div className="grid gap-12 lg:grid-cols-[1.4fr_0.6fr]">
-          <div className="prose-body max-w-none">
-            {s.body.map((b) => (
-              <div key={b.heading} className="mb-8">
-                <h2 className="text-2xl font-bold text-ink">{b.heading}</h2>
-                <p className="mt-3 text-lg leading-relaxed text-ink-soft">{renderText(b.text)}</p>
-              </div>
-            ))}
+          <div className="min-w-0">
+            <div className="prose-body">
+              {s.body.map((b) => [
+                <h2 key={`${b.heading}-h`}>{b.heading}</h2>,
+                <p key={`${b.heading}-p`}>{renderText(b.text)}</p>,
+              ])}
+            </div>
 
             {guides.length > 0 && (
-              <div className="mt-4 rounded-xl border border-line bg-surface p-6">
-                <h3 className="font-bold text-ink">Guider som hjälper dig vidare</h3>
-                <ul className="mt-3 space-y-2">
+              <Panel className="mt-10">
+                <h2 className="type-h4 text-ink">Guider som hjälper dig vidare</h2>
+                <ul className="mt-3 grid gap-1">
                   {guides.map((g) => (
                     <li key={g.slug}>
-                      <Link href={`/blogg/${g.slug}`} className="inline-flex items-center gap-1 text-brand underline underline-offset-2 hover:no-underline">
-                        {g.title} <IconArrow className="h-4 w-4" />
-                      </Link>
+                      <ArrowLink href={`/blogg/${g.slug}`} className="min-h-11 font-medium">{g.title}</ArrowLink>
                     </li>
                   ))}
                 </ul>
-              </div>
+              </Panel>
             )}
           </div>
           <aside>
-            <div className="sticky top-32 rounded-xl border border-line bg-surface p-6">
-              <h3 className="font-bold text-ink">Det här ingår</h3>
-              <ul className="mt-4 space-y-2.5">
-                {s.includes.map((it) => (
-                  <li key={it} className="flex items-start gap-2 text-sm text-ink-soft">
-                    <IconCheck className="mt-0.5 h-4 w-4 shrink-0 text-brand" /> {it}
-                  </li>
-                ))}
-              </ul>
+            <Panel sticky>
+              <h2 className="type-h4 text-ink">Det här ingår</h2>
+              <CheckList size="sm" items={s.includes} className="mt-4" />
               {s.resource && (
                 <div className="mt-6 border-t border-line pt-5">
                   <p className="text-sm font-semibold text-ink">Gör-det-själv</p>
-                  <a
-                    href={s.resource.href}
-                    download
-                    className="mt-2 inline-flex items-center gap-1 text-sm font-semibold text-brand hover:underline"
-                  >
-                    {s.resource.label} <IconArrow className="h-4 w-4" />
-                  </a>
+                  <ArrowLink href={s.resource.href} download className="mt-2 text-sm">{s.resource.label}</ArrowLink>
                 </div>
               )}
               <div className="mt-6 border-t border-line pt-5">
                 <p className="text-sm font-semibold text-ink">Osäker på mängden?</p>
                 <p className="mt-1 text-sm text-ink-soft">Räkna ut åtgången i vår kalkylator.</p>
-                <Link href="/armeringskalkylator" className="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-brand hover:underline">
-                  Öppna armeringskalkylatorn <IconArrow className="h-4 w-4" />
-                </Link>
+                <ArrowLink href="/armeringskalkylator" className="mt-3 text-sm">Öppna armeringskalkylatorn</ArrowLink>
               </div>
-            </div>
+            </Panel>
           </aside>
         </div>
       </Section>
@@ -211,15 +170,11 @@ export default async function ServicePage({
       {others.length > 0 && (
         <Section muted>
           <SectionHeading eyebrow="Fler tjänster" title="Hela armeringsjobbet från en leverantör" />
-          <div className="mt-8 grid gap-4 sm:grid-cols-2">
+          <div className="mt-10 grid gap-6 sm:grid-cols-2">
             {others.map((o) => (
-              <Link key={o.slug} href={`/tjanster/${o.slug}`} className="rounded-xl border border-line bg-white p-5 transition-colors hover:border-brand">
-                <h3 className="font-semibold text-ink">{o.name}</h3>
-                <p className="mt-2 text-sm text-ink-soft">{o.intro.slice(0, 120)}…</p>
-                <span className="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-brand">
-                  Läs mer <IconArrow className="h-4 w-4" />
-                </span>
-              </Link>
+              <Card key={o.slug} href={`/tjanster/${o.slug}`} title={o.name} cta="Läs mer">
+                {o.intro.slice(0, 120)}…
+              </Card>
             ))}
           </div>
         </Section>

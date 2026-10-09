@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { site } from "@/config/site";
-import { Section, Container } from "@/components/ui";
+import { Section, PageHeader, inlineLink } from "@/components/ui";
 import { Breadcrumbs, CtaBanner } from "@/components/sections";
 import { ViktKalkylator } from "@/components/SmaKalkylatorer";
 import { FaqAccordion } from "@/components/FaqAccordion";
@@ -38,43 +38,38 @@ const faqs: Faq[] = [
   },
 ];
 
-const link = "text-brand underline underline-offset-2 hover:no-underline";
-const prose = "mt-4 text-lg leading-relaxed text-ink-soft";
+const link = inlineLink;
 
 export default function ViktkalkylatorPage() {
   return (
     <>
       <Breadcrumbs items={[{ name: "Hem", href: "/" }, { name: "Armeringskalkylator", href: "/armeringskalkylator" }, { name: "Viktkalkylator" }]} />
 
-      <section className="border-b border-line bg-surface">
-        <Container className="py-12 sm:py-14">
-          <h1 className="max-w-3xl text-4xl font-bold tracking-tight text-ink sm:text-5xl">{name}</h1>
-        </Container>
-      </section>
+      <PageHeader title={name} />
 
       <Section>
         <ViktKalkylator />
       </Section>
 
-      <Section muted>
-        <div className="mx-auto max-w-3xl">
-          <h2 className="text-2xl font-bold text-ink">Så räknas vikten</h2>
-          <p className={prose}>
+      <Section muted narrow>
+        <div className="prose-body">
+          <h2>Så räknas vikten</h2>
+          <p>
             Kamstål har teoretisk vikt 0,00617 × d² kg per meter, vilket motsvarar stålets densitet 7 850 kg/m³.
             Ø10 väger 0,617 kg/m, Ø12 0,888 kg/m och Ø16 1,58 kg/m. Kalkylatorn multiplicerar med längd och antal för
             varje rad och summerar. Hela tabellen Ø6–Ø32 finns i{" "}
             <Link href="/armeringskalkylator#vikt-per-meter" className={link}>armeringskalkylatorn</Link>.
           </p>
 
-          <h2 className="mt-12 text-2xl font-bold text-ink">När behöver du vikten?</h2>
-          <p className={prose}>
+          <h2>När behöver du vikten?</h2>
+          <p>
             Armering prissätts och fraktas efter vikt. Vikten styr också lyft, lossning och hur mycket som kan bäras för
             hand på bygget. Har du en bockningslista räknar vi vikten per position åt dig – se{" "}
             <Link href="/tjanster/bockningslista" className={link}>bockningslista</Link>.
           </p>
 
-          <h2 className="mt-12 text-2xl font-bold text-ink">Raka järn eller bockade</h2>
-          <p className={prose}>
+          <h2>Raka järn eller bockade</h2>
+          <p>
             Vi levererar <Link href="/produkter/armeringsjarn" className={link}>armeringsjärn i kamstål B500B</Link> i 6
             och 12 m eller kapade till mått, och{" "}
             <Link href="/produkter/klippt-och-bockad" className={link}>klippt och bockad armering</Link> efter din
@@ -83,12 +78,10 @@ export default function ViktkalkylatorPage() {
         </div>
       </Section>
 
-      <Section>
-        <div className="mx-auto max-w-3xl">
-          <h2 className="text-2xl font-bold text-ink">Vanliga frågor</h2>
-          <div className="mt-6">
-            <FaqAccordion items={faqs} />
-          </div>
+      <Section narrow>
+        <h2 className="type-h2 text-ink">Vanliga frågor</h2>
+        <div className="mt-10">
+          <FaqAccordion items={faqs} />
         </div>
       </Section>
 

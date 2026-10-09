@@ -38,7 +38,7 @@ const jarn: Post[] = [
         ["Löpmeter per ton", "ca 4 500 m"],
         ["Stänger 12 m per ton", "ca 375 st"],
         ["Minsta dorndiameter", "24 mm (4 × Ø)"],
-        ["Stålkvalitet", "Kamstål, normalt B500B – anges i offerten"],
+        ["Stålkvalitet", "B500B enligt SS 212540"],
       ], caption: "Vikt och area enligt nominell diameter. Dorndiameter enligt SS-EN 1992-1-1 tabell 8.1N." },
 
       { type: "h2", text: "Vad används 6 mm armering till?" },
@@ -74,8 +74,8 @@ const jarn: Post[] = [
       { type: "h2", text: "Kontroll vid leverans" },
       { type: "p", text: "Kontrollera att etiketten på varje bunt stämmer med positionen i bockningslistan och att antalet byglar är rätt. Mät ett par byglar – yttermåtten ska stämma inom normala toleranser. Ø6 är lätt att böja av misstag vid lossning, så förvara buntarna plant och skyddat tills de monteras." },
 
-      { type: "h2", text: "Beställ Ø6 färdigbockat" },
-      { type: "p", text: "Vi tillverkar byglar, hakar och kompletteringsjärn i Ø6 kamstål B500B efter din bockningslista eller ritning. Allt märks och sorteras per position och levereras i hela Sverige. Skicka listan via [klippt och bockad armering](/produkter/klippt-och-bockad) eller direkt till [offert](/offert) – pris och leveranstid anges i offerten." },
+      { type: "h2", text: "Skicka bygellistan – få Ø6 färdigbockat" },
+      { type: "p", text: "Vi bockar byglar, hakar och kompletteringsjärn i Ø6 efter din bockningslista eller ritning. Varje bunt märks med positionsnummer, så att rätt bygel hamnar i rätt balk. Har du bara ritningen tar vi fram listan åt dig. Skicka underlaget via [klippt och bockad armering](/produkter/klippt-och-bockad) eller [offert](/offert)." },
     ],
     faqs: [
       { q: "Hur mycket väger armeringsjärn 6 mm?", a: "0,222 kg per meter. En 6-metersstång väger cirka 1,33 kg och en 12-metersstång cirka 2,66 kg." },
@@ -157,14 +157,15 @@ const jarn: Post[] = [
       { type: "h2", text: "Vanliga misstag med Ø8" },
       { type: "p", text: "Det vanligaste felet är att byglarna bockas med innermått när ritningen anger yttermått – då blir korgen för stor och täckskiktet för litet. Ett annat är att Ø8 används som längsarmering där ritningen kräver Ø10 eller grövre för att det råkar finnas på plats. Byt aldrig dimension utan konstruktörens godkännande. Kontrollera också att varje bygel har krok i rätt hörn och att den ligger kvar på distanser under gjutningen." },
 
-      { type: "h2", text: "Beställ armeringsjärn 8 mm" },
-      { type: "p", text: "Skicka ritning eller bockningslista så tar vi fram raka stänger, byglar och kompletteringsjärn i Ø8. Frakten beräknas efter mängd och ort, och vi levererar i hela Sverige. Begär pris via [armeringsjärn](/produkter/armeringsjarn) eller direkt till [offert](/offert)." },
+      { type: "h2", text: "Kantbalksbyglar i Ø8 – skicka ritningen" },
+      { type: "p", text: "Skicka grundritningen så räknar vi ut antal kantbalksbyglar, kantjärn och hörnjärn i Ø8 och tillverkar allt efter samma lista. Raka stänger i 6 eller 12 m går också bra. Frakt efter mängd och ort, i hela Sverige. Begär pris via [armeringsjärn](/produkter/armeringsjarn) eller [offert](/offert)." },
     ],
     faqs: [
       { q: "Hur mycket väger armeringsjärn 8 mm?", a: "0,395 kg per meter. En 6-metersstång väger cirka 2,4 kg och en 12-metersstång cirka 4,7 kg." },
       { q: "Hur många meter Ø8 går det på ett ton?", a: "Cirka 2 530 löpmeter, vilket motsvarar ungefär 211 stänger à 12 meter." },
       { q: "Är Ø8 tillräckligt till kantbalksbyglar?", a: "I många villagrunder ja – villabygeln tillverkas ofta i Ø8. Dimension och bygelavstånd står på konstruktionsritningen." },
       { q: "Vilken bockningsradie gäller för 8 mm armering?", a: "Minsta dorndiameter är 32 mm (4 × Ø), vilket ger en inre bockningsradie på 16 mm enligt Eurokod 2." },
+      { q: "Kan jag beställa byglar utan bockningslista?", a: "Ja. Skicka konstruktionsritningen så tar vi fram bockningslistan och räknar antal byglar åt dig." },
     ],
     target: { href: "/produkter/armeringsjarn", label: "Beställ armeringsjärn Ø8" },
     category: "dimensioner",
@@ -216,7 +217,7 @@ const jarn: Post[] = [
       { type: "h2", text: "Area per meter – Ø10 vid olika centrumavstånd" },
       { type: "table", head: ["Ø10 c/c", "Area per meter", "Stänger per meter", "Vikt per m²*"], rows: [
         ["100 mm", "785 mm²/m", "10", "ca 6,2 kg"],
-        ["150 mm", "523 mm²/m", "6,7", "ca 4,1 kg"],
+        ["150 mm", "524 mm²/m", "6,7", "ca 4,1 kg"],
         ["200 mm", "392 mm²/m", "5", "ca 3,1 kg"],
         ["300 mm", "262 mm²/m", "3,3", "ca 2,1 kg"],
       ], caption: "*En riktning, ett lager. Ø10 s150 i båda riktningar motsvarar nät 10150." },
@@ -239,12 +240,12 @@ const jarn: Post[] = [
       { type: "h2", text: "Ø10 i väggar och pool" },
       { type: "p", text: "I väggar läggs Ø10 ofta vertikalt och horisontellt i båda sidor, hållna isär av hakar. I poolväggar och källarväggar mot jord är täckskiktet extra viktigt eftersom väggen är fuktig hela tiden. Ett vanligt upplägg är raka stänger horisontellt och L-järn som uppstickare från bottenplattan – allt tillverkat efter samma bockningslista." },
 
-      { type: "h2", text: "Beställ armeringsjärn 10 mm" },
-      { type: "p", text: "Vi levererar Ø10 som raka stänger, kapat i längd eller bockat efter din lista – märkt per position och sorterat för montage. Leverans i hela Sverige, frakt efter mängd och ort. Begär pris via [armeringsjärn](/produkter/armeringsjarn) eller [offert](/offert)." },
+      { type: "h2", text: "Ø10 till platta, vägg eller pool" },
+      { type: "p", text: "Vi levererar Ø10 som raka stänger, kapat i längd eller bockat till L-järn och uppstickare. Allt märks per position. Ange centrumavstånd och ytans mått, så räknar vi antal stänger och skarvar. Begär pris via [armeringsjärn](/produkter/armeringsjarn) eller [offert](/offert)." },
     ],
     faqs: [
       { q: "Hur mycket väger armeringsjärn 10 mm?", a: "0,617 kg per meter. En 12-metersstång väger cirka 7,4 kg och en 6-metersstång cirka 3,7 kg." },
-      { q: "Hur mycket area ger Ø10 s150?", a: "Cirka 523 mm² per meter bredd. Ø10 s200 ger 392 mm²/m." },
+      { q: "Hur mycket area ger Ø10 s150?", a: "Cirka 524 mm² per meter bredd. Ø10 s200 ger 392 mm²/m." },
       { q: "Hur lång förankring behöver Ø10?", a: "Grundvärdet för fullt utnyttjat järn är cirka 360–580 mm beroende på betongklass och vidhäftning. Konstruktören anger den slutliga längden." },
       { q: "Kan man bocka 10 mm armering för hand?", a: "Ja, med en handbockare och rätt dorn (40 mm). För serier av byglar och kantjärn är maskinbockat snabbare och jämnare." },
     ],
@@ -305,7 +306,15 @@ const jarn: Post[] = [
         ["5", "565 mm²", "4,44 kg"],
         ["6", "678 mm²", "5,33 kg"],
       ], caption: "Skarvar och hörnjärn tillkommer. Antal och placering står på ritningen." },
-      { type: "p", text: "Exempel: en platta på 10 × 12 m har 44 m omkrets. Med 2 Ø12 i överkant och 2 Ø12 i underkant går det åt 176 m kantjärn, plus skarvar – drygt 155 kg innan skarvarna räknats in. [Armeringskalkylatorn](/armeringskalkylator) räknar skarvarna åt dig." },
+      { type: "h3", text: "Räkneexempel: villagrund 9 × 15 m" },
+      { type: "ol", items: [
+        "Omkrets: 2 × (9 + 15) = 48 m.",
+        "2 Ø12 i överkant + 2 Ø12 i underkant: 4 × 48 = 192 m ≈ 171 kg.",
+        "Långsidorna (15 m) är längre än en 12-metersstång: 8 skarvar à 600 mm (50 × Ø) = 4,8 m ≈ 4 kg.",
+        "Hörnjärn: 16 st à ca 1,18 m klipplängd ≈ 17 kg.",
+        "Summa: cirka 190 kg Ø12 – före byglar och distanser.",
+      ] },
+      { type: "p", text: "Skarvlängden ovan är ett riktvärde; ritningen gäller. [Armeringskalkylatorn](/armeringskalkylator) räknar din egen platta." },
 
       { type: "h2", text: "Bockning, krokar och förankring" },
       { type: "ul", items: [
@@ -325,8 +334,8 @@ const jarn: Post[] = [
       { type: "h2", text: "Vanliga fel med Ø12 i kantbalken" },
       { type: "p", text: "Kantjärn som slutar i hörnet utan hörnjärn är det vanligaste felet. Ett annat är att alla skarvar hamnar på samma ställe, vilket ritningen sällan tillåter. Kontrollera också att underkantsjärnen ligger på distanser med rätt täckskikt mot mark – minst 75 mm om betongen gjuts direkt mot jord. Och byt inte Ø12 mot Ø10 för att det finns på plats." },
 
-      { type: "h2", text: "Beställ armeringsjärn 12 mm" },
-      { type: "p", text: "Skicka ritningen så tar vi fram kantjärn, hörnjärn och byglar i Ø12 – märkt per position och levererat i hela Sverige. Begär pris via [armeringsjärn](/produkter/armeringsjarn) eller direkt på [offert](/offert)." },
+      { type: "h2", text: "Få kantjärn och hörnjärn i Ø12 klara att lägga" },
+      { type: "p", text: "Skicka grundritningen så kapar vi kantjärnen, bockar hörnjärnen och märker allt per position. Du slipper kapa och bocka på plats. Leverans i hela Sverige, även Norrland. Begär pris via [armeringsjärn](/produkter/armeringsjarn) eller [offert](/offert)." },
     ],
     faqs: [
       { q: "Hur mycket väger Ø12 armering?", a: "0,888 kg per meter. En 12-metersstång väger cirka 10,7 kg och ett ton motsvarar ungefär 1 125 löpmeter." },
@@ -409,8 +418,8 @@ const jarn: Post[] = [
       { type: "h2", text: "Ø16 i bjälklag och väggar" },
       { type: "p", text: "I bjälklag läggs Ø16 i underkant i huvudriktningen och ofta klenare järn i andra riktningen. Stöden får överkantsarmering som förankras in i fältet. Eftersom stängerna är tunga lönar det sig att få dem kapade i exakta längder så att de kan läggas ut direkt utan kapning på bjälklaget." },
 
-      { type: "h2", text: "Beställ Ø16 klippt och bockat" },
-      { type: "p", text: "Vi tillverkar Ø16 efter bockningslista: kapat i exakta längder, bockat med rätt dorn och märkt per position. Leverans i hela Sverige, frakt efter mängd och ort. Skicka underlaget via [klippt och bockad armering](/produkter/klippt-och-bockad) eller [offert](/offert)." },
+      { type: "h2", text: "Ø16 kapat i exakta längder" },
+      { type: "p", text: "Vi kapar och bockar Ø16 efter bockningslistan, med rätt dorn och märkning per position. Stängerna kan läggas ut direkt på bjälklaget utan kapning. Saknas lista hjälper vi till att ta fram den ur ritningen. Skicka underlaget via [klippt och bockad armering](/produkter/klippt-och-bockad) eller [offert](/offert)." },
     ],
     faqs: [
       { q: "Hur mycket väger armeringsjärn 16 mm?", a: "1,58 kg per meter. En 12-metersstång väger cirka 19 kg." },
@@ -492,10 +501,10 @@ const jarn: Post[] = [
       { type: "p", text: "En 12-metersstång Ø20 väger nästan 30 kg och är svår att bära ensam. Kapade och bockade järn i rätt längd minskar lyft och spill. Märkta buntar per position gör att rätt järn hamnar på rätt plats direkt från lastbilen." },
 
       { type: "h2", text: "Ø20 i pelare och fundament" },
-      { type: "p", text: "I pelare med Ø20 som huvudjärn ska byglarna vara minst 6 mm och minst en fjärdedel av huvudjärnets diameter – Ø6 räcker alltså, men Ø8 är vanligare för stabilitetens skull. Startjärn från fundamentet bockas ofta som L-järn med fot, och den stora dornen gör att foten tar mer plats än man tror. Rita in radien när du kontrollerar måtten." },
+      { type: "p", text: "I pelare med Ø20 som huvudjärn ska byglarna vara minst 6 mm och minst en fjärdedel av huvudjärnets diameter – Ø6 räcker alltså formellt, men Ø8 är vanligt i praktiken – ritningen avgör. Startjärn från fundamentet bockas ofta som L-järn med fot, och den stora dornen gör att foten tar mer plats än man tror. Rita in radien när du kontrollerar måtten." },
 
-      { type: "h2", text: "Beställ Ø20 klippt och bockat" },
-      { type: "p", text: "Vi tillverkar Ø20 efter din bockningslista med rätt dorn, märkt och sorterat per position. Leverans i hela Sverige, frakt efter mängd och ort. Skicka underlaget via [klippt och bockad armering](/produkter/klippt-och-bockad) eller [offert](/offert)." },
+      { type: "h2", text: "Ø20 bockat med 7Ø-dorn" },
+      { type: "p", text: "Vi bockar Ø20 i maskin med rätt dorn och räknar klipplängden efter den större radien, så att yttermåtten stämmer. Buntarna märks per position. Skicka bockningslistan via [klippt och bockad armering](/produkter/klippt-och-bockad) eller [offert](/offert)." },
     ],
     faqs: [
       { q: "Hur mycket väger armeringsjärn 20 mm?", a: "2,47 kg per meter. En 12-metersstång väger cirka 29,6 kg och en 6-metersstång cirka 14,8 kg." },
@@ -571,9 +580,8 @@ const jarn: Post[] = [
       { type: "h2", text: "Bockning och byglar" },
       { type: "ul", items: [
         "Dorn minst 175 mm (7 × Ø) – innerradien blir 87,5 mm.",
-        "En 90°-bock på en bygel behöver minst 250 mm rak ände (10 × Ø).",
+        "Bockad ände i plint: rak del efter bocken minst 5 × Ø = 125 mm (figur 8.1). Ritningen anger oftast mer.",
         "Byglar i pelare med Ø25 som huvudjärn måste vara minst Ø8 – en fjärdedel av 25 mm är mer än 6 mm (Eurokod 2, 9.5.3).",
-        "Täckskiktet ska vara minst 25 mm bara för vidhäftningen; exponeringsklassen ger ofta mer.",
       ] },
 
       { type: "figure", illustration: "rebar-diameters", caption: "Ø25 är fyra gånger så grov i area som Ø12." },
@@ -584,8 +592,8 @@ const jarn: Post[] = [
       { type: "h2", text: "Täckskikt och avstånd för grova järn" },
       { type: "p", text: "För Ø25 ska täckskiktet vara minst 25 mm bara för vidhäftningen, och det fria avståndet mellan järnen minst 25 mm, eller stenstorlek plus 5 mm om det är större. I tätt armerade fundament kan det styra vilken betong som går att använda. Lägg in det i planeringen innan armeringen beställs." },
 
-      { type: "h2", text: "Beställ armeringsjärn 25 mm" },
-      { type: "p", text: "Skicka ritning eller bockningslista så tar vi fram Ø25 raka, kapade eller bockade, gärna tillsammans med byglar och färdiga korgar. Leverans i hela Sverige. Begär pris via [armeringsjärn](/produkter/armeringsjarn) eller [offert](/offert)." },
+      { type: "h2", text: "Ø25 till plintar och fundament" },
+      { type: "p", text: "Skicka ritning eller bockningslista så tar vi fram Ø25 raka, kapade eller bockade, gärna tillsammans med byglar eller som färdiga [plintkorgar](/produkter/plintkorgar). Buntarna märks per plint. Begär pris via [armeringsjärn](/produkter/armeringsjarn) eller [offert](/offert)." },
     ],
     faqs: [
       { q: "Hur mycket väger armeringsjärn 25 mm?", a: "3,85 kg per meter. En 12-metersstång väger cirka 46 kg." },
@@ -664,14 +672,14 @@ const jarn: Post[] = [
       ] },
 
       { type: "h2", text: "Lyft och leverans" },
-      { type: "p", text: "Ett ton Ø32 är bara ett tiotal 12-metersstänger, men varje stång kräver lyfthjälp. Därför lönar det sig att få järnen kapade och bockade i exakta längder, märkta per position och buntade så att de kan lyftas direkt till rätt plats." },
+      { type: "p", text: "Ett ton Ø32 är bara cirka 13 stänger à 12 m, men varje stång kräver lyfthjälp. Därför lönar det sig att få järnen kapade och bockade i exakta längder, märkta per position och buntade så att de kan lyftas direkt till rätt plats." },
       { type: "p", text: "Ange i bockningslistan hur buntarna ska märkas och i vilken ordning de behövs. Då kan lossningen planeras så att järnen lyfts direkt till rätt del av fundamentet." },
 
       { type: "h2", text: "Planera Ø32 tidigt" },
       { type: "p", text: "Ø32 kräver planering långt innan leverans: lyftutrustning, upplag för buntarna och plats för långa förankringar och stora bockradier. Kontrollera att ritningens mått går att bocka med 112 mm innerradie och att skarvarna inte hamnar där armeringen redan är tät. Ju tidigare bockningslistan är klar, desto enklare blir resten." },
 
-      { type: "h2", text: "Beställ Ø32 klippt och bockat" },
-      { type: "p", text: "Vi tillverkar Ø32 efter ritning eller bockningslista och levererar i hela Sverige – frakt efter mängd och ort. Skicka underlaget via [klippt och bockad armering](/produkter/klippt-och-bockad) eller direkt till [offert](/offert)." },
+      { type: "h2", text: "Skicka listan för Ø32 i god tid" },
+      { type: "p", text: "Vi tillverkar Ø32 efter ritning eller bockningslista och buntar järnen i den ordning de ska monteras. Frakt efter mängd och ort, i hela Sverige. Skicka underlaget via [klippt och bockad armering](/produkter/klippt-och-bockad) eller [offert](/offert) – leveranstid anges i offerten." },
     ],
     faqs: [
       { q: "Hur mycket väger armeringsjärn 32 mm?", a: "6,31 kg per meter. En 12-metersstång väger cirka 75,7 kg." },
@@ -748,21 +756,22 @@ const nat: Post[] = [
         "Plattans yta: 20 m².",
         "Lägg till 10–15 % för överlapp: cirka 23 m².",
         "Räknat med ark på 2 × 5 m: tre ark.",
-        "Vikt: cirka 23 m² × 2,05 kg ≈ 47 kg.",
+        "Vikt: tre ark à ca 21 kg ≈ 62 kg levererat, varav cirka 47 kg ligger i plattan.",
       ] },
       { type: "p", text: "Kantförstärkning med kamjärn och distanser tillkommer. Räkna din egen yta i [armeringskalkylatorn](/armeringskalkylator)." },
 
       { type: "h2", text: "Vanliga misstag med 5150" },
       { type: "p", text: "Det vanligaste felet är att nätet läggs direkt på cellplasten eller marken och sedan dras upp under gjutningen – det hamnar sällan rätt. Lägg det på distanser från början. Ett annat är att 5150 används i garage eller under bärande väggar för att det är billigare. Där krävs grövre nät eller kompletterande kamjärn. Kontrollera också att skarvarna binds så att arken inte glider isär när betongen läggs ut." },
 
-      { type: "h2", text: "Beställ armeringsnät 5150" },
-      { type: "p", text: "Vi levererar 5150 i lagerformat eller specialnät efter dina mått, tillsammans med distanser och kantjärn. Frakt efter mängd och ort, leverans i hela Sverige. Begär pris via [armeringsnät](/produkter/armeringsnat) eller [offert](/offert)." },
+      { type: "h2", text: "5150 till uterum eller altan" },
+      { type: "p", text: "Ange plattans mått så räknar vi antal ark, distanser och kantjärn. Även små beställningar går bra – frakten beräknas efter mängd och ort, utan fast avgift. Begär pris via [armeringsnät](/produkter/armeringsnat) eller [offert](/offert)." },
     ],
     faqs: [
       { q: "Hur mycket väger armeringsnät 5150?", a: "Cirka 2,05 kg per m². Ett ark på 2 × 5 m väger runt 21 kg." },
       { q: "Räcker 5150 till en garageplatta?", a: "Oftast inte. Garageplattor ritas normalt med 6150 eller grövre. Konstruktionsritningen avgör." },
       { q: "Hur mycket ska 5150 överlappa?", a: "Eurokod 2 anger minst 150 mm och en maska för Ø5-tråd. I praktiken läggs ofta två rutor, cirka 300 mm, omlott. Ritningen gäller." },
       { q: "Hur många ark 5150 går det åt?", a: "Plattans yta plus 10–15 % för överlapp, delat med arkets yta. Ett uterum på 20 m² kräver cirka 23 m² nät, alltså tre ark på 2 × 5 m." },
+      { q: "Kan man beställa bara några ark?", a: "Ja. Frakten räknas efter mängd och ort, utan fast fraktavgift, så även små beställningar går att offerera." },
     ],
     target: { href: "/produkter/armeringsnat", label: "Beställ armeringsnät 5150" },
     category: "dimensioner",
@@ -828,7 +837,7 @@ const nat: Post[] = [
         "Plattans yta: 48 m².",
         "Plus cirka 15 % för överlapp: 55 m².",
         "Räknat med ark på 2 × 5 m: sex ark.",
-        "Vikt: 55 m² × 2,96 kg ≈ 163 kg nät.",
+        "Vikt: sex ark à ca 30 kg ≈ 178 kg levererat (cirka 163 kg i plattan inkl. överlapp).",
       ] },
       { type: "p", text: "Till det kommer kantjärn, byglar och distanser. En garageplatta med 6150 och kantbalk ryms ofta på en och samma leverans." },
 
@@ -839,8 +848,8 @@ const nat: Post[] = [
       { type: "h2", text: "Distanser och täckskikt" },
       { type: "p", text: "Nätet ska ligga på distanser med rätt höjd. I en platta på mark mot cellplast är 25–35 mm täckskikt vanligt, mot makadam minst 40 mm och direkt mot jord minst 75 mm (Eurokod 2). Med 6150 räcker oftast distanser med 0,8–1 m avstånd, men tätare där man går mycket under gjutningen. Kontrollera höjden innan betongen kommer – efteråt går det inte att rätta till." },
 
-      { type: "h2", text: "Beställ armeringsnät 6150" },
-      { type: "p", text: "Skicka ritning eller plattans mått så räknar vi antal ark, kantjärn och distanser. Leverans i hela Sverige – frakt efter mängd och ort. Begär pris via [armeringsnät](/produkter/armeringsnat) eller [offert](/offert)." },
+      { type: "h2", text: "Hela garageplattan i en leverans" },
+      { type: "p", text: "Skicka ritning eller plattans mått så räknar vi ark 6150, kantjärn, kantbalksbyglar och distanser och levererar allt samtidigt. Leverans i hela Sverige. Begär pris via [armeringsnät](/produkter/armeringsnat) eller [offert](/offert)." },
     ],
     faqs: [
       { q: "Hur mycket väger armeringsnät 6150?", a: "Cirka 2,96 kg per m². Ett ark på 2 × 5 m väger runt 30 kg." },
@@ -921,8 +930,8 @@ const nat: Post[] = [
       { type: "h2", text: "Vanliga misstag med 7150" },
       { type: "p", text: "Ett vanligt fel är att 7150 skarvas som 6150, med bara en maska omlott. För Ø7 krävs två maskor och minst 250 mm. Ett annat är att nätet byts mot 6150 för att det finns i lager – då minskar stålmängden med en fjärdedel. Kontrollera alltid beteckningen på leveransen mot ritningen innan nätet läggs ut." },
 
-      { type: "h2", text: "Beställ armeringsnät 7150" },
-      { type: "p", text: "Skicka ritning eller mått så tar vi fram nät, kantjärn och distanser till plattan. Leverans i hela Sverige. Begär pris via [armeringsnät](/produkter/armeringsnat) eller [offert](/offert)." },
+      { type: "h2", text: "7150 i lager- eller specialformat" },
+      { type: "p", text: "Skicka ritning eller mått så föreslår vi det format som ger minst kapning och spill, och tar med kantjärn och distanser. Begär pris via [armeringsnät](/produkter/armeringsnat) eller [offert](/offert)." },
     ],
     faqs: [
       { q: "Hur mycket väger armeringsnät 7150?", a: "Cirka 4,03 kg per m². Ett ark på 2 × 5 m väger runt 40 kg." },
@@ -1004,8 +1013,8 @@ const nat: Post[] = [
       { type: "h2", text: "Vanliga misstag med 8150" },
       { type: "p", text: "I två lager är det vanligaste felet att överlagret trycks ned så att avståndet till underlagret blir för litet. Nätstöden måste vara tillräckligt många och stabila för att bära både nätet och folk som går på det. Ett annat fel är att skarvarna i över- och underlagret hamnar rakt ovanför varandra – förskjut dem om ritningen inte säger annat." },
 
-      { type: "h2", text: "Beställ armeringsnät 8150" },
-      { type: "p", text: "Vi levererar 8150 i lagerformat eller som specialnät, med nätstöd och distanser i samma leverans. Frakt efter mängd och ort, i hela Sverige. Begär pris via [armeringsnät](/produkter/armeringsnat) eller [offert](/offert)." },
+      { type: "h2", text: "8150 med nätstöd i samma leverans" },
+      { type: "p", text: "Ange plattans mått, tjocklek och om nätet ligger i ett eller två lager. Då räknar vi ark, nätstöd i rätt höjd och distanser. Frakt efter mängd och ort, i hela Sverige. Begär pris via [armeringsnät](/produkter/armeringsnat) eller [offert](/offert)." },
     ],
     faqs: [
       { q: "Hur mycket väger armeringsnät 8150?", a: "Cirka 5,27 kg per m². Ett ark på 2 × 5 m väger runt 53 kg." },
@@ -1086,8 +1095,8 @@ const nat: Post[] = [
       { type: "h2", text: "Vanliga misstag med 10150" },
       { type: "p", text: "Det vanligaste felet är för kort skarv: två rutor räcker inte för Ø10. Ett annat är att arken lyfts fel så att de böjs och inte ligger plant – en böjd 10-mm-tråd är svår att räta. Planera lossning, lyftpunkter och upplag innan leverans, och lägg nätstöd som klarar vikten." },
 
-      { type: "h2", text: "Beställ armeringsnät 10150" },
-      { type: "p", text: "Skicka ritning eller plattans mått så tar vi fram nät i rätt format, nätstöd och kompletterande järn. Leverans i hela Sverige, frakt efter mängd och ort. Begär pris via [armeringsnät](/produkter/armeringsnat) eller [offert](/offert)." },
+      { type: "h2", text: "10150 som specialnät efter dina mått" },
+      { type: "p", text: "Skicka ritning eller plattans mått så tar vi fram nät i format som passar lyft och plattan, plus nätstöd och kompletterande järn. Begär pris via [armeringsnät](/produkter/armeringsnat) eller [offert](/offert)." },
     ],
     faqs: [
       { q: "Hur mycket väger armeringsnät 10150?", a: "Cirka 8,23 kg per m². Ett ark på 2 × 5 m väger runt 82 kg." },
@@ -1131,7 +1140,7 @@ const byglar: Post[] = [
         ["b", "Ryggen, yttermått mellan benen", "130 mm"],
         ["c", "Andra benet, yttermått", "300 mm"],
         ["Ø", "Dimension", "Ø10 B500B"],
-      ], caption: "Typform C enligt svensk typbladsstandard. Måtten avser ytterkonturen om inget annat anges." },
+      ], caption: "Typform C i bockningslistan. Måtten avser ytterkonturen om inget annat anges." },
 
       { type: "figure", illustration: "bending-shapes", caption: "U-järn (typform C) jämfört med andra vanliga bockformer." },
 
@@ -1171,14 +1180,15 @@ const byglar: Post[] = [
       { type: "h2", text: "Kontroll innan gjutning" },
       { type: "p", text: "Kontrollera att U-byglarna ligger med rätt avstånd, att benen når den skarvlängd ritningen anger och att täckskiktet mot formen stämmer runt ryggen. U-byglar i väggändar ska omsluta de yttersta vertikaljärnen i båda sidor – sitter de för långt in tappar de sin funktion." },
 
-      { type: "h2", text: "Beställ U-byglar i serie" },
-      { type: "p", text: "En vägg på 20 meter med U-byglar c/c 200 i båda ändar och vid öppningar kan kräva hundratals byglar. Vi bockar dem i maskin med samma mått i varje exemplar, märkta per position. Skicka bockningslistan via [byglar och hakar](/produkter/byglar-och-hakar) eller [offert](/offert)." },
+      { type: "h2", text: "U-byglar i serie – lika i varje exemplar" },
+      { type: "p", text: "En 20 meter lång vägg med U-byglar c/c 200 i ändar och öppningar kan kräva hundratals byglar. Vi bockar dem i maskin efter din lista och märker dem per position. Skicka listan via [byglar och hakar](/produkter/byglar-och-hakar) eller [offert](/offert)." },
     ],
     faqs: [
       { q: "Vad är en U-bygel i armering?", a: "Ett armeringsjärn bockat till U-form – typform C – med två ben (a, c) och en rygg (b). Den används i väggändar, kantbalkar och skarvar." },
       { q: "Hur räknar man klipplängd på en U-bygel?", a: "Summera yttermåtten a + b + c och dra av cirka 2 × Ø per 90°-bock. En U-bygel Ø10 med 300 + 130 + 300 mm får cirka 690 mm klipplängd." },
       { q: "Är U-bygel och C-bygel samma sak?", a: "Formen är densamma – typform C. Namnet C-bygel används ofta i bockningslistor och handeln, U-bygel på bygget." },
       { q: "Kan man beställa U-byglar efter mått?", a: "Ja. Vi tillverkar U-byglar i serie efter din bockningslista och levererar i hela Sverige." },
+      { q: "Vad behöver jag skicka?", a: "Dimension, måtten a, b och c samt antal per position. Har du bara ritningen tar vi fram listan." },
     ],
     target: { href: "/produkter/byglar-och-hakar", label: "Beställ U-byglar" },
     category: "dimensioner",
@@ -1329,14 +1339,14 @@ const byglar: Post[] = [
       { type: "ul", items: [
         "NX – sluten bygel med en sned sida, till balkar med sned kant.",
         "L – bygel med överlapp i stället för krokar, där krokar inte får plats.",
-        "U och V – sexkantiga eller fasade byglar för speciella tvärsnitt.",
+        "U (sexkantig) och V (fasade hörn) – slutna byglar för speciella tvärsnitt. Typform U är alltså inte samma sak som den öppna U-bygeln på bygget, som är typform C.",
       ] },
 
       { type: "h2", text: "Vanliga misstag" },
       { type: "p", text: "N-byglar som bockats med innermått i stället för yttermått gör korgen för stor och täckskiktet för litet. Ett annat fel är att alla krokar placeras i samma hörn i en pelare. Kontrollera också att byglarna tätas vid pelarändar och skarvar enligt ritningen – det är där de behövs mest." },
 
-      { type: "h2", text: "Beställ N-byglar" },
-      { type: "p", text: "Vi bockar N-byglar i maskin, lika i varje exemplar och märkta per position – eller svetsar ihop dem till färdiga pelar- och balkkorgar. Skicka listan via [byglar och hakar](/produkter/byglar-och-hakar) eller [offert](/offert)." },
+      { type: "h2", text: "N-byglar eller färdiga korgar" },
+      { type: "p", text: "Skicka tvärsnitt, täckskikt och bygelavstånd så tar vi fram N-byglar efter mått – eller svetsar ihop dem till färdiga [pelar- och balkkorgar](/produkter/pelar-och-balkkorgar). Begär pris via [byglar och hakar](/produkter/byglar-och-hakar) eller [offert](/offert)." },
     ],
     faqs: [
       { q: "Vad är en N-bygel?", a: "En sluten rektangulär bygel – typform N – som omsluter huvudjärnen i balkar och pelare och förankras med krokar i ett hörn." },
@@ -1419,8 +1429,8 @@ const byglar: Post[] = [
       { type: "h2", text: "Vanliga misstag" },
       { type: "p", text: "Ett vanligt fel är att fria kanter armeras med bara raka järn, utan byglar som binder ihop över- och underkanten. Ett annat är att hårnålar bockas snävare än dornen tillåter för att få plats – då kan stålet spricka i bocken eller betongen krossas. Behöver formen ändras, fråga konstruktören." },
 
-      { type: "h2", text: "Beställ C-byglar och hårnålar" },
-      { type: "p", text: "Vi bockar C-byglar och hårnålar efter din bockningslista, med rätt dorn och märkta per position. Leverans i hela Sverige. Skicka underlaget via [byglar och hakar](/produkter/byglar-och-hakar) eller [offert](/offert)." },
+      { type: "h2", text: "C-byglar och hårnålar med rätt dorn" },
+      { type: "p", text: "Vi bockar C-byglar och hårnålar efter din bockningslista med den dorn ritningen anger, märkta per position. Skicka underlaget via [byglar och hakar](/produkter/byglar-och-hakar) eller [offert](/offert)." },
     ],
     faqs: [
       { q: "Vad är en C-bygel?", a: "En U-formad bygel – typform C. Namnet används ofta om byglar som stänger fria kanter i plattor och väggar." },
@@ -1490,8 +1500,8 @@ const byglar: Post[] = [
       { type: "h2", text: "Vanliga misstag" },
       { type: "p", text: "Hakar som är för långa sticker ut mot formen och ger för litet täckskikt. Hakar som är för korta går inte att trä på. Därför är exakta mått viktigare för hakar än för de flesta andra järn. Ett annat fel är att hakarna inte griper om de yttersta järnen utan bara hängs på nätet – då håller de inte ihop lagren." },
 
-      { type: "h2", text: "Beställ S-hakar och kramlor" },
-      { type: "p", text: "Hakar går åt i hundratal och ska vara exakt lika långa för att passa mellan lagren. Vi bockar dem i maskin och levererar buntade per position i hela Sverige. Skicka listan via [byglar och hakar](/produkter/byglar-och-hakar) eller [offert](/offert)." },
+      { type: "h2", text: "Hakar som passar mellan lagren" },
+      { type: "p", text: "Hakar går åt i hundratal och måste vara exakt lika långa. Ange väggtjocklek, täckskikt och järnens dimension så räknar vi måttet. Skicka listan via [byglar och hakar](/produkter/byglar-och-hakar) eller [offert](/offert)." },
     ],
     faqs: [
       { q: "Vad är en S-hake i armering?", a: "Ett kort järn med krok i båda ändar åt motsatt håll, som griper om armeringen i väggens båda sidor och binder ihop lagren." },
@@ -1537,7 +1547,7 @@ const byglar: Post[] = [
       { type: "ol", items: [
         "Plattans omkrets: 10 × 12 m → 44 m.",
         "Antal kantjärn: 4 (2 i överkant, 2 i underkant) → 176 m.",
-        "Skarvar: med 12 m stänger blir det cirka en skarv per järn och långsida – räkna 50 × Ø per skarv.",
+        "Skarvar: sidor upp till 12 m klaras med en hel stång per järn. Längre sidor kräver skarv – räkna cirka 50 × Ø per skarv om ritningen inte anger annat.",
         "Hörnjärn: 4 per hörn → 16 st, ben enligt skarvlängden.",
         "Ø12: 176 m × 0,888 kg/m ≈ 156 kg plus skarvar och hörnjärn.",
       ] },
@@ -1572,14 +1582,15 @@ const byglar: Post[] = [
       { type: "h2", text: "Kontroll innan gjutning" },
       { type: "p", text: "Kontrollera att kantjärnen ligger i byglarnas hörn, att hörnjärnen är på plats i alla hörn och att skarvarna är förskjutna enligt ritningen. Mät uppstickarnas läge och längd mot väggarnas placering innan betongen kommer. Ett uppstickande järn på fel plats går sällan att rätta utan att borra." },
 
-      { type: "h2", text: "Beställ kantjärn och förankringsjärn" },
-      { type: "p", text: "Vi kapar kantjärn och bockar hörnjärn och uppstickare efter ritningen, märkta per position och levererade tillsammans med byglar och nät i hela Sverige. Begär pris via [villakorg och kantbalksarmering](/produkter/villakorg-kantbalksarmering) eller [offert](/offert)." },
+      { type: "h2", text: "Kantbalken komplett – skicka grundritningen" },
+      { type: "p", text: "Vi kapar kantjärn och bockar hörnjärn, byglar och uppstickare efter ritningen och märker allt per position. Behöver du hjälp på plats finns [armeringsmontage](/tjanster/armeringsmontage). Begär pris via [villakorg och kantbalksarmering](/produkter/villakorg-kantbalksarmering) eller [offert](/offert)." },
     ],
     faqs: [
       { q: "Vad är kantjärn?", a: "De längsgående armeringsjärnen i kantbalken runt en platta på mark, i över- och underkant. Ofta Ø10–Ø12 i villagrunder." },
       { q: "Hur mycket kantjärn behövs?", a: "Omkretsen gånger antalet järn, plus skarvar och hörnjärn. En platta på 10 × 12 m med 4 Ø12 kräver cirka 156 kg före skarvar." },
       { q: "Vad är ett förankringsjärn?", a: "Ett järn som gjuts in i en konstruktion och sticker ut för att skarvas mot nästa gjutning, till exempel uppstickare från platta till vägg." },
       { q: "Hur fäster man armering i befintlig betong?", a: "Järnen borras in och limmas med ett godkänt injekteringssystem. Förankringslängd och borrhål följer systemets anvisningar och konstruktörens beräkning." },
+      { q: "Jag har bara en grundritning – räcker det?", a: "Ja. Vi läser ut kantjärn, hörnjärn och byglar ur ritningen, tar fram bockningslistan och lämnar offert på hela kantbalken." },
     ],
     target: { href: "/produkter/villakorg-kantbalksarmering", label: "Beställ kantbalksarmering" },
     category: "dimensioner",

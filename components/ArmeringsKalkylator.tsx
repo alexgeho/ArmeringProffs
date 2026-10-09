@@ -1,9 +1,10 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import Link from "next/link";
 import { ContactForm } from "./ContactForm";
-import { IconCheck, IconArrow } from "./icons";
+import { IconCheck } from "./icons";
+import { TextField, SelectField } from "./form";
+import { ArrowLink } from "./ui";
 import { DIAMETERS, MESHES, calcBars, calcEdgeBars, calcMesh, fmt, kgPerM } from "@/lib/rebar-calc";
 
 /**
@@ -80,8 +81,8 @@ export function ArmeringsKalkylator() {
   return (
     <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:items-start">
       {/* Inmatning */}
-      <div className="rounded-2xl border border-line bg-white p-6 sm:p-8">
-        <div role="tablist" aria-label="Vad vill du räkna på?" className="grid grid-cols-2 gap-1 rounded-xl bg-surface p-1">
+      <div className="rounded-panel border border-line bg-card p-6 sm:p-8">
+        <div role="tablist" aria-label="Vad vill du räkna på?" className="grid grid-cols-2 gap-1 rounded-card bg-surface p-1">
           {([
             ["nat", "Armeringsnät"],
             ["stang", "Kamjärn c/c"],
@@ -92,7 +93,7 @@ export function ArmeringsKalkylator() {
               role="tab"
               aria-selected={mode === k}
               onClick={() => setMode(k)}
-              className={`h-11 rounded-lg text-sm font-semibold transition-colors ${mode === k ? "bg-white text-ink shadow-sm" : "text-muted hover:text-ink"}`}
+              className={`h-11 rounded-control text-sm font-semibold transition-colors ${mode === k ? "bg-card text-ink shadow-sm" : "text-muted hover:text-ink"}`}
             >
               {label}
             </button>
@@ -172,7 +173,7 @@ export function ArmeringsKalkylator() {
 
       {/* Resultat + offert */}
       <div className="grid gap-6">
-        <div className="rounded-2xl border border-line bg-surface p-6 sm:p-8" aria-live="polite">
+        <div className="rounded-panel border border-line bg-surface p-6 sm:p-8" aria-live="polite">
           <h2 className="text-xl font-bold text-ink">Ungefärlig åtgång</h2>
           {r?.kind === "nat" && (
             <dl className="mt-5 divide-y divide-line">
@@ -202,15 +203,13 @@ export function ArmeringsKalkylator() {
             fram exakt mängd åt dig i offerten.
           </p>
           <p className="mt-3 text-sm">
-            <Link href="/tjanster/bockningslista" className="inline-flex items-center gap-1 font-semibold text-brand hover:underline">
-              Behöver du bockade järn? Se alla typformer A–XX <IconArrow className="h-4 w-4" />
-            </Link>
+            <ArrowLink href="/tjanster/bockningslista">Behöver du bockade järn? Se alla typformer A–XX</ArrowLink>
           </p>
         </div>
 
         {r && (
-          <div className="rounded-2xl border border-brand/30 bg-white p-6 shadow-sm sm:p-8">
-            <div className="flex items-center gap-2 text-brand">
+          <div className="rounded-panel border border-brand/30 bg-card p-6 shadow-sm sm:p-8">
+            <div className="flex items-center gap-2 text-accent">
               <IconCheck className="h-5 w-5" />
               <h2 className="text-lg font-bold text-ink">Skicka som offertförfrågan</h2>
             </div>
@@ -237,6 +236,8 @@ export function Row({ term, value, strong }: { term: string; value: string; stro
   );
 }
 
+export { SelectField };
+
 export function NumField({
   label,
   value,
@@ -253,48 +254,13 @@ export function NumField({
   text?: boolean;
 }) {
   return (
-    <div className="grid min-w-0 gap-1.5">
-      <label className="text-sm font-medium text-ink">{label}</label>
-      <input
-        inputMode={text ? undefined : "decimal"}
-        type={text ? "text" : "text"}
-        value={value}
-        disabled={disabled}
-        placeholder={placeholder}
-        onChange={(e) => onChange(e.target.value)}
-        className="h-12 w-full min-w-0 rounded-lg border border-line bg-white px-4 text-ink placeholder:text-muted focus:border-brand focus:outline-none disabled:cursor-not-allowed disabled:bg-surface disabled:text-muted"
-      />
-    </div>
-  );
-}
-
-export function SelectField({
-  label,
-  value,
-  onChange,
-  children,
-}: {
-  label: string;
-  value: string;
-  onChange: (v: string) => void;
-  children: React.ReactNode;
-}) {
-  return (
-    <div className="grid min-w-0 gap-1.5">
-      <label className="text-sm font-medium text-ink">{label}</label>
-      {/* Egen pil: samma avstånd till högerkanten som texten har till vänsterkanten (16 px). */}
-      <div className="relative min-w-0">
-        <select
-          value={value}
-          onChange={(e) => onChange(e.target.value)}
-          className="h-12 w-full min-w-0 appearance-none truncate rounded-lg border border-line bg-white pl-4 pr-10 text-ink focus:border-brand focus:outline-none"
-        >
-          {children}
-        </select>
-        <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true" className="pointer-events-none absolute right-4 top-1/2 h-4 w-4 -translate-y-1/2 text-muted">
-          <path d="M5 7.5l5 5 5-5" strokeLinecap="round" strokeLinejoin="round" />
-        </svg>
-      </div>
-    </div>
+    <TextField
+      label={label}
+      value={value}
+      onChange={onChange}
+      placeholder={placeholder}
+      disabled={disabled}
+      inputMode={text ? undefined : "decimal"}
+    />
   );
 }

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { site } from "@/config/site";
-import { Section, Container } from "@/components/ui";
+import { Section, PageHeader, inlineLink } from "@/components/ui";
 import { Breadcrumbs, CtaBanner } from "@/components/sections";
 import { ForankringsKalkylator } from "@/components/SmaKalkylatorer";
 import { FaqAccordion } from "@/components/FaqAccordion";
@@ -38,43 +38,38 @@ const faqs: Faq[] = [
   },
 ];
 
-const link = "text-brand underline underline-offset-2 hover:no-underline";
-const prose = "mt-4 text-lg leading-relaxed text-ink-soft";
+const link = inlineLink;
 
 export default function ForankringslangdPage() {
   return (
     <>
       <Breadcrumbs items={[{ name: "Hem", href: "/" }, { name: "Armeringskalkylator", href: "/armeringskalkylator" }, { name: "Förankringslängd" }]} />
 
-      <section className="border-b border-line bg-surface">
-        <Container className="py-12 sm:py-14">
-          <h1 className="max-w-3xl text-4xl font-bold tracking-tight text-ink sm:text-5xl">{name}</h1>
-        </Container>
-      </section>
+      <PageHeader title={name} />
 
       <Section>
         <ForankringsKalkylator />
       </Section>
 
-      <Section muted>
-        <div className="mx-auto max-w-3xl">
-          <h2 className="text-2xl font-bold text-ink">Formeln i Eurokod 2</h2>
-          <p className={prose}>
+      <Section muted narrow>
+        <div className="prose-body">
+          <h2>Formeln i Eurokod 2</h2>
+          <p>
             Enligt SS-EN 1992-1-1, avsnitt 8.4, är grundvärdet lb,rqd = (Ø/4) × (σsd/fbd). Kalkylatorn räknar med full
             spänning σsd = fyd = 500/1,15 ≈ 435 MPa. Vidhäftningshållfastheten fbd = 2,25 × η1 × η2 × fctd, där
             fctd = fctk,0,05/1,5. η1 är 1,0 vid goda och 0,7 vid andra vidhäftningsförhållanden, η2 är 1,0 upp till Ø32.
           </p>
 
-          <h2 className="mt-12 text-2xl font-bold text-ink">Från riktvärde till ritning</h2>
-          <p className={prose}>
+          <h2>Från riktvärde till ritning</h2>
+          <p>
             Dimensionerande förankringslängd lbd får minskas eller ökas med faktorerna α1–α5 för krokar, täckskikt och
             tvärarmering, men aldrig under lb,min = max(0,3·lb,rqd; 10Ø; 100 mm). Skarvlängden l0 = α6 × lbd, där α6 är
             1,0–1,5. Läs mer om <Link href="/blogg/skarvlangd-armering" className={link}>skarvlängd</Link>. Konstruktören
             avgör alltid slutliga längder.
           </p>
 
-          <h2 className="mt-12 text-2xl font-bold text-ink">Färdigt bockad efter ritning</h2>
-          <p className={prose}>
+          <h2>Färdigt bockad efter ritning</h2>
+          <p>
             Förankringar, krokar och byglar tillverkar vi som{" "}
             <Link href="/produkter/klippt-och-bockad" className={link}>klippt och bockad armering</Link> efter din
             bockningslista eller ritning, märkt och sorterad per position. Pris och frakt anges i offerten.
@@ -82,12 +77,10 @@ export default function ForankringslangdPage() {
         </div>
       </Section>
 
-      <Section>
-        <div className="mx-auto max-w-3xl">
-          <h2 className="text-2xl font-bold text-ink">Vanliga frågor</h2>
-          <div className="mt-6">
-            <FaqAccordion items={faqs} />
-          </div>
+      <Section narrow>
+        <h2 className="type-h2 text-ink">Vanliga frågor</h2>
+        <div className="mt-10">
+          <FaqAccordion items={faqs} />
         </div>
       </Section>
 

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { site } from "@/config/site";
-import { Section, Container } from "@/components/ui";
+import { Section, PageHeader, DataTable, inlineLink } from "@/components/ui";
 import { Breadcrumbs, CtaBanner } from "@/components/sections";
 import { ArmeringsKalkylator } from "@/components/ArmeringsKalkylator";
 import { FaqAccordion } from "@/components/FaqAccordion";
@@ -50,81 +50,64 @@ export default function KalkylatorPage() {
     <>
       <Breadcrumbs items={[{ name: "Hem", href: "/" }, { name: "Armeringskalkylator" }]} />
 
-      <section className="border-b border-line bg-surface">
-        <Container className="py-12 sm:py-14">
-          <h1 className="max-w-3xl text-4xl font-bold tracking-tight text-ink sm:text-5xl">Armeringskalkylator</h1>
-          <p className="mt-4 max-w-2xl text-xl text-ink-soft">Räkna nät, kamjärn och vikt</p>
-        </Container>
-      </section>
+      <PageHeader title="Armeringskalkylator" intro="Räkna nät, kamjärn och vikt" />
 
       <Section>
         <ArmeringsKalkylator />
       </Section>
 
-      <Section muted>
-        <div className="mx-auto max-w-3xl">
-          <h2 className="text-2xl font-bold text-ink">Så räknar kalkylatorn</h2>
-          <p className="mt-4 text-lg leading-relaxed text-ink-soft">
+      <Section muted narrow>
+        <div className="prose-body">
+          <h2>Så räknar kalkylatorn</h2>
+          <p>
             <strong className="text-ink">Armeringsnät:</strong> nätet köps i hela ark, 2,35 × 5 m. Kalkylatorn lägger arken
             med det överlapp du anger (standard 300 mm – vanligen minst två rutor för 150-nät, se{" "}
-            <Link href="/blogg/skarvlangd-armering" className="text-brand underline underline-offset-2 hover:no-underline">skarvlängd och överlapp</Link>) och väljer den riktning som
+            <Link href="/blogg/skarvlangd-armering" className={inlineLink}>skarvlängd och överlapp</Link>) och väljer den riktning som
             ger minst antal ark. Vikten räknas på trådarna i båda riktningar. Kantjärn räknas på plattans omkrets gånger
             antal järn, med skarvar på ca 50 × diametern.
           </p>
-          <p className="mt-4 text-lg leading-relaxed text-ink-soft">
+          <p>
             <strong className="text-ink">Kamjärn c/c:</strong> antal stänger = (bredd − 2 × täckskikt) / centrumavstånd + 1, i båda
             riktningar och per lager. Stänger längre än lagerlängden (6 eller 12 m) skarvas med omlottskarv – som tumregel
             ca 50 × Ø om du inte anger något annat. Vikten räknas med 0,00617 × d² kg/m.
           </p>
-          <p className="mt-4 text-lg leading-relaxed text-ink-soft">
+          <p>
             Värdena är riktvärden. Dimension, placering, täckskikt och skarvlängder ska alltid följa en
             konstruktionsritning. Vill du ha det exakt räknar vi fram det åt dig utifrån din ritning eller
             bockningslista.
           </p>
 
-          <h2 id="vikt-per-meter" className="mt-12 text-2xl font-bold text-ink">Armeringsjärn – vikt per meter</h2>
-          <p className="mt-4 text-lg leading-relaxed text-ink-soft">
+          <h2 id="vikt-per-meter">Armeringsjärn – vikt per meter</h2>
+          <p>
             Teoretisk vikt för kamstål (B500B) enligt 0,00617 × d² kg/m.
           </p>
-          <div className="mt-5 overflow-x-auto rounded-xl border border-line bg-white">
-            <table className="w-full text-left text-sm tabular-nums">
-              <thead className="bg-surface text-ink">
-                <tr>
-                  <th className="px-4 py-3 font-semibold">Diameter</th>
-                  <th className="px-4 py-3 font-semibold">kg/m</th>
-                  <th className="px-4 py-3 font-semibold">kg per 6 m-stång</th>
-                  <th className="px-4 py-3 font-semibold">kg per 12 m-stång</th>
-                  <th className="px-4 py-3 font-semibold">m per ton</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-line text-ink-soft">
-                {DIAMETERS.map((d) => (
-                  <tr key={d}>
-                    <td className="px-4 py-2.5 font-semibold text-ink">Ø{d} mm</td>
-                    <td className="px-4 py-2.5">{fmt(kgPerM(d), 3)}</td>
-                    <td className="px-4 py-2.5">{fmt(kgPerM(d) * 6, 2)}</td>
-                    <td className="px-4 py-2.5">{fmt(kgPerM(d) * 12, 2)}</td>
-                    <td className="px-4 py-2.5">{fmt(1000 / kgPerM(d))}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
+          <DataTable
+            className="tabular-nums"
+            caption="Vikt per meter för kamstål B500B"
+            head={["Diameter", "kg/m", "kg per 6 m-stång", "kg per 12 m-stång", "m per ton"]}
+            rows={DIAMETERS.map((d) => [
+              `Ø${d} mm`,
+              fmt(kgPerM(d), 3),
+              fmt(kgPerM(d) * 6, 2),
+              fmt(kgPerM(d) * 12, 2),
+              fmt(1000 / kgPerM(d)),
+            ])}
+          />
 
-          <h3 className="mt-8 text-xl font-bold text-ink">Läs mer</h3>
-          <ul className="mt-4 space-y-2 text-lg text-ink-soft">
+          <h3>Läs mer</h3>
+          <ul className="grid gap-2">
             <li>
-              <Link href="/blogg/armering-atgang-per-m2" className="text-brand underline underline-offset-2 hover:no-underline">
+              <Link href="/blogg/armering-atgang-per-m2" className={inlineLink}>
                 Hur mycket armering går åt per m²?
               </Link>
             </li>
             <li>
-              <Link href="/blogg/armering-till-betongplatta" className="text-brand underline underline-offset-2 hover:no-underline">
+              <Link href="/blogg/armering-till-betongplatta" className={inlineLink}>
                 Armering till betongplatta – vilken typ och hur mycket?
               </Link>
             </li>
             <li>
-              <Link href="/blogg/armeringsnat-storlekar-och-matt" className="text-brand underline underline-offset-2 hover:no-underline">
+              <Link href="/blogg/armeringsnat-storlekar-och-matt" className={inlineLink}>
                 Armeringsnät – storlekar, mått och rätt val
               </Link>
             </li>
@@ -132,12 +115,10 @@ export default function KalkylatorPage() {
         </div>
       </Section>
 
-      <Section>
-        <div className="mx-auto max-w-3xl">
-          <h2 className="text-2xl font-bold text-ink">Vanliga frågor</h2>
-          <div className="mt-6">
-            <FaqAccordion items={faqs} />
-          </div>
+      <Section narrow>
+        <h2 className="type-h2 text-ink">Vanliga frågor</h2>
+        <div className="mt-10">
+          <FaqAccordion items={faqs} />
         </div>
       </Section>
 

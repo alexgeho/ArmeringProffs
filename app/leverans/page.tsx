@@ -32,7 +32,7 @@ export default function LeveransPage() {
           title="Armering levererad i hela Sverige"
           intro="Oavsett var i landet ditt bygg- eller anläggningsprojekt ligger tillverkar vi armeringen efter din bockningslista eller ritning och levererar den till arbetsplatsen. Ange leveransort och mängd i offertförfrågan så räknar vi fram frakt och leveranstid."
         />
-        <figure className="mt-8 overflow-hidden rounded-2xl border border-line">
+        <figure className="mt-8 overflow-hidden rounded-panel border border-line">
           <Image
             src="/images/leverans-betongplatta.webp"
             alt="Färdig armerad betongplatta på ett byggprojekt i Sverige"
@@ -42,17 +42,17 @@ export default function LeveransPage() {
             className="h-auto w-full object-cover"
           />
         </figure>
-        <div className="mt-8">
-          <h2 className="text-lg font-bold text-ink">Armering per ort</h2>
+        <div className="mt-16">
+          <h2 className="type-h3 text-ink">Armering per ort</h2>
           <p className="mt-2 text-ink-soft">Läs mer om leverans av armering till din stad:</p>
           <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
             {cities.map((c) => (
               <Link
                 key={c.slug}
                 href={`/armering/${c.slug}`}
-                className="flex items-center gap-2 rounded-lg border border-line px-4 py-3 text-sm font-medium text-ink transition-colors hover:border-brand hover:text-brand"
+                className="flex min-h-11 items-center gap-2 rounded-control border border-line bg-card px-4 py-3 text-sm font-medium text-ink transition-colors hover:border-brand hover:text-brand"
               >
-                <IconCheck className="h-4 w-4 shrink-0 text-brand" /> Armering i {c.name}
+                <IconCheck className="h-4 w-4 shrink-0 text-accent" /> Armering i {c.name}
               </Link>
             ))}
           </div>
@@ -62,7 +62,7 @@ export default function LeveransPage() {
         </div>
       </Section>
 
-      <LeveransSection heading />
+      <LeveransSection heading muted />
       <CtaBanner />
 
       <JsonLd

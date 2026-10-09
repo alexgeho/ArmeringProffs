@@ -1,15 +1,14 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import Link from "next/link";
 import { cities, getCity, type City } from "@/config/cities";
 import { products } from "@/config/products";
 import { site } from "@/config/site";
 import type { Faq } from "@/config/faq";
-import { Section, Container, Button, SectionHeading } from "@/components/ui";
-import { Breadcrumbs, CtaBanner, KalkylatorPromo, GuidesTeaser, PhotoBg, glassCard } from "@/components/sections";
-import { ContactForm } from "@/components/ContactForm";
+import { Section, Button, SectionHeading, Card, ArrowLink, ChipLink, cardClass, inlineLink } from "@/components/ui";
+import Link from "next/link";
+import { Breadcrumbs, CtaBanner, KalkylatorPromo, GuidesTeaser, PhotoHero } from "@/components/sections";
 import { FaqAccordion } from "@/components/FaqAccordion";
-import { IconCheck, IconArrow, IconPhone, IconTruck } from "@/components/icons";
+import { IconCheck, IconArrow, IconTruck } from "@/components/icons";
 import { JsonLd, faqSchema, breadcrumbSchema } from "@/lib/jsonld";
 
 export function generateStaticParams() {
@@ -91,39 +90,16 @@ export default async function CityPage({
         ]}
       />
 
-      {/* Hero */}
-      <section className="relative overflow-hidden bg-ink text-white">
-        <PhotoBg src="/images/armeringsjarn-kamstal.webp" alt="Armeringsjärn och betong på byggarbetsplats" />
-        <Container className="relative grid grid-cols-1 gap-10 py-14 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
-          <div>
-            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
-              Armering i {c.name}
-            </h1>
-            <p className="mt-5 max-w-xl text-lg text-slate-300">{c.angle}</p>
-            <ul className="mt-7 grid gap-3 sm:grid-cols-2">
-              {["Klippt & bockad efter bockningslista", "Armeringskorgar, nät & kamstål", `Leverans till ${c.name} & ${c.lan}`, "Tillverkning, leverans & montage"].map((t) => (
-                <li key={t} className="flex items-center gap-2 text-slate-200">
-                  <IconCheck className="h-5 w-5 shrink-0 text-brand" /> {t}
-                </li>
-              ))}
-            </ul>
-            <div className="mt-8 flex flex-wrap items-center gap-4">
-              <span className="hidden sm:inline-flex">
-                <Button href="/offert">Begär offert <IconArrow className="h-4 w-4" /></Button>
-              </span>
-              <a href={site.phoneHref} className="inline-flex h-12 items-center gap-2 rounded-lg border border-white/20 px-5 font-semibold text-white hover:bg-white/10">
-                <IconPhone className="h-4 w-4 text-brand" /> {site.phone}
-              </a>
-            </div>
-          </div>
-          <div className={glassCard}>
-            <h2 className="text-xl font-bold text-white">Offert på armering i {c.name}</h2>
-            <div className="mt-5">
-              <ContactForm compact onDark source={`stad-${c.slug}`} />
-            </div>
-          </div>
-        </Container>
-      </section>
+      <PhotoHero
+        title={<>Armering i {c.name}</>}
+        intro={c.angle}
+        points={["Klippt & bockad efter bockningslista", "Armeringskorgar, nät & kamstål", `Leverans till ${c.name} & ${c.lan}`, "Tillverkning, leverans & montage"]}
+        bgImage="/images/armeringsjarn-kamstal.webp"
+        bgAlt="Armeringsjärn och betong på byggarbetsplats"
+        formTitle={`Offert på armering i ${c.name}`}
+        formSource={`stad-${c.slug}`}
+        cols="lg:grid-cols-[1.05fr_0.95fr]"
+      />
 
       {/* Produkter */}
       <Section>
@@ -132,31 +108,25 @@ export default async function CityPage({
           title={`Armering efter din ritning – levererad till ${c.name}`}
           intro={`Vi tillverkar prefabricerad armering och levererar den till bygg- och anläggningsprojekt i ${c.name} och ${c.lan}. Skicka din bockningslista eller ritning så tar vi fram en offert med pris och leveranstid.`}
         />
-        <p className="mt-6 max-w-3xl text-lg leading-relaxed text-ink-soft">{c.intro2}</p>
-        {c.ground && <p className="mt-4 max-w-3xl text-lg leading-relaxed text-ink-soft">{c.ground}</p>}
+        <div className="prose-body mt-6 max-w-3xl">
+          <p>{c.intro2}</p>
+          {c.ground && <p>{c.ground}</p>}
+        </div>
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {products.map((p) => (
-            <Link
-              key={p.slug}
-              href={`/produkter/${p.slug}`}
-              className="group flex flex-col rounded-xl border border-line bg-white p-6 transition-all hover:border-brand hover:shadow-md"
-            >
-              <h3 className="text-lg font-semibold text-ink">{p.name}</h3>
-              <p className="mt-2 flex-1 text-sm leading-relaxed text-ink-soft">{p.intro}</p>
-              <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-brand">
-                Läs mer <IconArrow className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </span>
-            </Link>
+            <Card key={p.slug} href={`/produkter/${p.slug}`} title={p.name} cta="Läs mer">
+              {p.intro}
+            </Card>
           ))}
         </div>
 
-        <div className="mt-12">
-          <h2 className="text-2xl font-bold text-ink">Vanliga användningsområden i {c.name}</h2>
+        <div className="mt-16">
+          <h2 className="type-h3 text-ink">Vanliga användningsområden i {c.name}</h2>
           <p className="mt-2 text-ink-soft">Vi levererar armering till bland annat:</p>
-          <ul className="mt-4 grid gap-3 sm:grid-cols-2">
+          <ul className="mt-6 grid gap-3 sm:grid-cols-2">
             {c.sectors.map((s) => (
-              <li key={s} className="flex items-start gap-2 rounded-lg border border-line bg-white p-4 text-ink-soft">
-                <IconCheck className="mt-0.5 h-5 w-5 shrink-0 text-brand" /> {s}
+              <li key={s} className={`flex items-start gap-2 p-4 text-ink-soft ${cardClass}`}>
+                <IconCheck className="mt-0.5 h-5 w-5 shrink-0 text-accent" /> {s}
               </li>
             ))}
           </ul>
@@ -177,15 +147,13 @@ export default async function CityPage({
               }
             />
             {norrland && (
-              <Link href="/armering-norrland" className="mt-4 inline-flex items-center gap-1 font-semibold text-brand hover:underline">
-                Armering i Norrland <IconArrow className="h-4 w-4" />
-              </Link>
+              <ArrowLink href="/armering-norrland" className="mt-4">Armering i Norrland</ArrowLink>
             )}
             <p className="mt-6 font-semibold text-ink">Vi levererar bland annat till:</p>
             <div className="mt-3 flex flex-wrap gap-2">
               {[c.name, ...c.nearby].map((o) => (
-                <span key={o} className="inline-flex items-center gap-1.5 rounded-lg border border-line bg-white px-3 py-1.5 text-sm text-ink">
-                  <IconCheck className="h-4 w-4 text-brand" /> {o}
+                <span key={o} className="inline-flex items-center gap-1.5 rounded-control border border-line bg-card px-3 py-1.5 text-sm text-ink">
+                  <IconCheck className="h-4 w-4 text-accent" /> {o}
                 </span>
               ))}
             </div>
@@ -193,16 +161,16 @@ export default async function CityPage({
               <Button href="/offert">Begär offert med leveransort <IconArrow className="h-4 w-4" /></Button>
             </div>
           </div>
-          <div className="rounded-2xl border border-line bg-white p-8">
-            <IconTruck className="h-10 w-10 text-brand" />
-            <p className="mt-4 text-2xl font-bold text-ink">{c.name}</p>
+          <div className="rounded-panel border border-line bg-card p-8">
+            <IconTruck className="h-10 w-10 text-accent" />
+            <p className="type-h3 mt-4 text-ink">{c.name}</p>
             <p className="mt-2 text-ink-soft">
               Prefab armering tillverkad efter din bockningslista eller ritning och levererad till
               arbetsplatsen i {c.name}. Vi kan även sköta montaget.
             </p>
             <p className="mt-4 text-sm text-muted">
               Osäker på mängden? Räkna åtgången i vår{" "}
-              <Link href="/armeringskalkylator" className="text-brand underline underline-offset-2 hover:no-underline">armeringskalkylator</Link>.
+              <Link href="/armeringskalkylator" className={inlineLink}>armeringskalkylator</Link>.
             </p>
           </div>
         </div>
@@ -211,12 +179,10 @@ export default async function CityPage({
       <KalkylatorPromo />
 
       {/* FAQ */}
-      <Section>
-        <div className="mx-auto max-w-3xl">
-          <h2 className="text-2xl font-bold text-ink">Vanliga frågor om armering i {c.name}</h2>
-          <div className="mt-6">
-            <FaqAccordion items={faqs} />
-          </div>
+      <Section narrow>
+        <h2 className="type-h2 text-ink">Vanliga frågor om armering i {c.name}</h2>
+        <div className="mt-10">
+          <FaqAccordion items={faqs} />
         </div>
       </Section>
 
@@ -227,20 +193,9 @@ export default async function CityPage({
         <SectionHeading eyebrow="Närliggande orter" title={`Armering i ${c.landsdel} och hela Sverige`} />
         <div className="mt-8 flex flex-wrap gap-3">
           {others.map((o) => (
-            <Link
-              key={o.slug}
-              href={`/armering/${o.slug}`}
-              className="rounded-lg border border-line bg-white px-4 py-2.5 text-sm font-medium text-ink transition-colors hover:border-brand hover:text-brand"
-            >
-              Armering i {o.name}
-            </Link>
+            <ChipLink key={o.slug} href={`/armering/${o.slug}`}>Armering i {o.name}</ChipLink>
           ))}
-          <Link
-            href="/leverans"
-            className="rounded-lg border border-line bg-white px-4 py-2.5 text-sm font-medium text-brand transition-colors hover:border-brand"
-          >
-            Leverans i hela Sverige →
-          </Link>
+          <ChipLink href="/leverans" accent>Leverans i hela Sverige →</ChipLink>
         </div>
       </Section>
 

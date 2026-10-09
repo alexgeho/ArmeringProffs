@@ -1,13 +1,11 @@
-import Link from "next/link";
 import { site } from "@/config/site";
 import { faq } from "@/config/faq";
-import { Section, SectionHeading } from "@/components/ui";
+import { ArrowLink, Section, SectionHeading, cardClass } from "@/components/ui";
 import {
   Hero, UspBar, PrefabShowcase, ProductsGrid, Process, LeveransSection, Reviews, CtaBanner, KalkylatorPromo, GuidesTeaser,
 } from "@/components/sections";
 import Image from "next/image";
 import { FaqAccordion } from "@/components/FaqAccordion";
-import { IconArrow } from "@/components/icons";
 import { JsonLd, faqSchema, serviceSchema } from "@/lib/jsonld";
 
 // Startsidan visar ett urval frågor – fulla listan finns på /vanliga-fragor.
@@ -17,7 +15,7 @@ export default function HomePage() {
   return (
     <>
       <Hero
-        title={<>Prefab armering i <span className="text-brand">hela Sverige</span></>}
+        title={<>Prefab armering i <span className="text-accent">hela Sverige</span></>}
         intro="Klippt och bockad armering, byglar, armeringskorgar, plint- och brunnsarmering, svetsat nät och kamstål Ø6–Ø32."
         formSource="startsida-hero"
         bgImage="/images/hero-armeringskorgar.webp"
@@ -37,19 +35,19 @@ export default function HomePage() {
               intro={`${site.company} tillverkar och levererar prefabricerad armering för bygg och anläggning – klippt och bockad armering, armeringskorgar, svetsad armering och armeringsnät, kamstål B500B och distanser. Vi tar hela cykeln: tillverkning efter bockningslista, leverans i hela Sverige och montage på plats. Skicka din ritning så får du en offert.`}
             />
           </div>
-          <div className="rounded-2xl border border-line bg-white p-6 shadow-sm">
+          <figure className={`${cardClass} p-(--space-card) shadow-card`}>
             <Image
               src="/images/illustrationer/intro-armeringskorg.webp"
               alt="Prefabricerad armeringskorg i kamstål B500B på trästöd, med bockade byglar bredvid"
               width={1200}
               height={900}
               sizes="(min-width: 1024px) 480px, 100vw"
-              className="h-auto w-full"
+              className="h-auto w-full rounded-control dark:brightness-90"
             />
-            <p className="mt-4 text-center text-sm text-muted">
+            <figcaption className="mt-4 text-center text-sm text-muted">
               Armeringskorg – svetsad prefab efter dina mått
-            </p>
-          </div>
+            </figcaption>
+          </figure>
         </div>
       </Section>
 
@@ -67,12 +65,7 @@ export default function HomePage() {
           <FaqAccordion items={faqTeaser} />
         </div>
         <div className="mt-8 text-center">
-          <Link
-            href="/vanliga-fragor"
-            className="inline-flex items-center gap-1 text-sm font-semibold text-brand hover:text-brand-dark"
-          >
-            Se alla vanliga frågor <IconArrow className="h-4 w-4" />
-          </Link>
+          <ArrowLink href="/vanliga-fragor" className="text-sm">Se alla vanliga frågor</ArrowLink>
         </div>
         <JsonLd data={faqSchema(faqTeaser)} />
       </Section>

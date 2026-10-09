@@ -10,7 +10,7 @@ export const armeringTill2: Post[] = [
     title: "Armering till lagerhall – grund, golv och pelarfundament",
     metaTitle: "Armering lagerhall – grund, golv & fundament",
     metaDescription:
-      "Hur armeras grunden till en lagerhall? Kantbalkar, pelarfundament, golvplatta med truck- och ställagelaster – typlösningar, mängder och vad som styr.",
+      "Armering till lagerhall: pelarfundament, kantbalkar och golv för truck och ställage. Typlösningar, mängdexempel och leverans per etapp. Begär offert.",
     excerpt:
       "En lagerhall har tre armerade delar: fundament under stommen, kantbalkar eller sulor under väggarna och en golvplatta som ska tåla truckar och ställage. Så hänger de ihop.",
     date: D,
@@ -24,8 +24,8 @@ export const armeringTill2: Post[] = [
       "grund till lagerhall",
     ],
     content: [
-      { type: "p", text: "En lagerhall ser enkel ut – en stålstomme, plåtväggar och ett stort golv. Men grunden bär stora punktlaster från pelare, vindlaster från väggarna och tunga, rörliga laster från truckar och pallställ. Armeringen är det som får allt detta att samverka utan sprickor och sättningar."  },
-      { type: "p", text: "För byggföretag och markentreprenörer levererar vi hela grundens armering som [armeringsleverantör](/armeringsleverantor) – korgar till fundament, klippt och bockad armering till kantbalkar och nät till golvet, märkt per position och etapp."  },
+      { type: "p", text: "En lagerhall armeras i tre delar: fundament under stommens pelare, kantbalkar under väggarna och en golvplatta som tål truckar och pallställ. Golvet står ofta för den största mängden armering och för de flesta problemen."  },
+      { type: "p", text: "Till hallbyggen levererar vi hela paketet som [armeringsleverantör](/armeringsleverantor): färdiga korgar till fundamenten, bockade järn till kantbalkarna och nät till golvet – sorterat per etapp, så att rätt armering kommer till rätt gjutning."  },
 
       { type: "h2", text: "Tre delar som armeras olika"  },
       { type: "p", text: "Grunden till en lagerhall delas normalt upp i tre konstruktionsdelar. Var och en har sin egen typ av armering och sin egen roll."  },
@@ -52,23 +52,31 @@ export const armeringTill2: Post[] = [
       ] },
       { type: "p", text: "Mer om golvplattans val mellan nät och fiber finns i guiden om [armering till betonggolv](/blogg/armering-till-betonggolv)."  },
 
-      { type: "h2", text: "Ungefärliga mängder"  },
-      { type: "p", text: "Mängden armering varierar mycket med laster, markförhållanden och golvets krav. För en grov uppskattning går det att räkna nätets vikt per m² – ett nät Ø8 c/c 150 väger cirka 5,3 kg/m² (två riktningar à 0,395 kg/m ÷ 0,15 m), plus överlapp. Fundament och kantbalkar räknas per position i bockningslistan. Exakt mängd framgår först av armeringsritningen."  },
+      { type: "h2", text: "Räkneexempel: golv på 2 000 m²"  },
+      { type: "p", text: "Golvet dominerar mängden. Vikt per m² för ett lager i två riktningar räknas som 2 × vikt per meter ÷ c/c:"  },
+      { type: "table", head: ["Golvarmering", "kg/m² (ett lager)", "2 000 m², ett lager", "2 000 m², två lager"], rows: [
+        ["Ø8 c/c 150", "≈ 5,3", "≈ 10,5 t", "≈ 21 t"],
+        ["Ø10 c/c 150", "≈ 8,2", "≈ 16,5 t", "≈ 33 t"],
+        ["Ø12 c/c 150", "≈ 11,8", "≈ 23,7 t", "≈ 47 t"],
+      ], caption: "Exklusive överlapp (räkna 10–15 % extra). Fundament och kantbalkar räknas per position i bockningslistan." },
+      { type: "p", text: "Exemplet visar hur snabbt valet av dimension slår igenom på ett stort golv. Därför lönar det sig att låta konstruktören jämföra nät, två lager och fiber innan armeringen beställs."  },
 
       { type: "h2", text: "Leverans i etapper"  },
       { type: "p", text: "På en hallbyggnad gjuts fundamenten först, sedan kantbalkarna och sist golvet – ofta med veckors mellanrum. Därför är det praktiskt att få armeringen levererad i samma ordning, sorterad och märkt per etapp. Det minskar upplag på bygget och sparar tid vid montaget."  },
 
-      { type: "h2", text: "Underlag till offerten" },
-      { type: "p", text: "För att räkna en lagerhall behöver vi armeringsritningar eller bockningslistor för fundament, kantbalkar och golv, samt uppgift om etapper och leveransadress. Saknas bockningslista kan vi ta fram den från ritningen. Ju tidigare ritningarna är låsta, desto lättare är det att planera tillverkning och leveranser mot gjutningarna." },
-      
-      { type: "h2", text: "Beställ armeringen till hallen"  },
-      { type: "p", text: "Vi tillverkar armeringen till lagerhallar efter konstruktörens ritning eller bockningslista, i kamstål B500B, och levererar i hela Sverige inklusive Norrland. Läs mer om oss som [armeringsleverantör för entreprenörer](/armeringsleverantor) eller skicka ritningarna direkt via [offertformuläret](/offert)."  },
+      { type: "h2", text: "Skicka underlaget – få offert per etapp" },
+      { type: "ul", items: [
+        "Armeringsritningar eller bockningslistor för fundament, kantbalkar och golv.",
+        "Bultritning för pelarfundamenten.",
+        "Tidplan för gjutningarna och leveransadress.",
+      ] },
+      { type: "p", text: "Saknas bockningslista tar vi fram den från ritningen. Skicka underlaget via [offertformuläret](/offert) så får du en offert uppdelad på fundament, kantbalkar och golv, med frakt beräknad efter mängd och ort. Mer om hur vi jobbar med entreprenörer finns under [armeringsleverantör](/armeringsleverantor)." },
     ],
     faqs: [
       { q: "Vilken armering behövs i en lagerhall?", a: "Pelarfundament med korgar eller bottenmattor, kantbalkar eller sulor med längsjärn och byglar samt en golvplatta med nät eller stålfiber. Dimensioner och mängder bestäms av konstruktören utifrån laster och mark." },
       { q: "Räcker ett enkelt nät i lagergolvet?", a: "Sällan. Ställage och truckar ger punktlaster och fogarna belastas hårt. Golvet dimensioneras för de faktiska lasterna och har ofta nät i två lager eller fiberbetong." },
       { q: "Kan ni leverera i etapper?", a: "Ja. Armeringen märks och sorteras per position och etapp, så att fundament, kantbalkar och golv kan levereras i den ordning de gjuts. Frakten beräknas efter mängd och ort." },
-      { q: "Vem tar fram armeringsritningen?", a: "Konstruktören. Vi tillverkar efter ritning eller bockningslista och kan hjälpa till att ta fram bockningslistan från ritningen." },
+      { q: "Hur mycket armering går åt till ett lagergolv?", a: "Ett lager Ø10 c/c 150 i två riktningar väger cirka 8,2 kg/m² plus överlapp. Två lager eller grövre järn ökar mängden snabbt. Ritningen avgör." },
     ],
     target: { href: "/armeringsleverantor", label: "Armering till hallbyggen" },
     category: "armering-till",
@@ -80,7 +88,7 @@ export const armeringTill2: Post[] = [
     title: "Armering till stallgolv och ladugård",
     metaTitle: "Armering stallgolv – ladugård & djurstall",
     metaDescription:
-      "Så armeras golvet i ett stall eller en ladugård: platta, gödselgångar, kanaler och foderbord. Typlösningar, täckskikt i aggressiv miljö och vad som styr.",
+      "Armering till stallgolv och ladugård: gångar, foderbord, gödselkanaler. Täckskikt i aggressiv miljö och mängdexempel. Skicka ritningen för offert.",
     excerpt:
       "Ett stallgolv utsätts för tunga maskiner, djurens vikt och en aggressiv miljö med gödsel och urin. Så väljer du armering som håller i många år.",
     date: D,
@@ -94,8 +102,8 @@ export const armeringTill2: Post[] = [
       "armering gödselgång",
     ],
     content: [
-      { type: "p", text: "Ett stallgolv i betong ska bära djur, inredning, utgödslingsutrustning och ofta en lastmaskin. Samtidigt ligger det i en av de tuffaste miljöerna betong kan utsättas för: gödsel och urin är kemiskt aggressiva, golvet tvättas ofta och fukten är konstant. Armeringen och täckskiktet avgör hur länge golvet håller."  },
-      { type: "p", text: "Till lantbruksbyggen levererar vi armeringen som [armeringsleverantör](/armeringsleverantor) – nät till plattor, klippt och bockad armering till kanaler, kantbalkar och väggar, efter ritning och märkt per del."  },
+      { type: "p", text: "Ett stallgolv armeras normalt med nät i plattan, grövre armering under foderbord och körgångar och bockade järn i gödselkanalerna. Lika viktigt som mängden är täckskiktet: gödsel och urin angriper både betong och stål."  },
+      { type: "p", text: "Vi levererar armering till lantbruksbyggen direkt till gården – nät, bockade kanaljärn och kantbalksarmering, buntat per byggdel. Se hur vi arbetar som [armeringsleverantör](/armeringsleverantor)."  },
 
       { type: "h2", text: "Delarna i ett stallgolv"  },
       { type: "table", head: ["Del", "Belastning", "Typisk armering"], rows: [
@@ -106,7 +114,7 @@ export const armeringTill2: Post[] = [
       ], caption: "Typvärden – konstruktören avgör dimension, c/c och betongkvalitet." },
 
       { type: "h2", text: "Aggressiv miljö kräver tjockare täckskikt"  },
-      { type: "p", text: "Urin och gödsel innehåller ammoniak, syror och salter som angriper betongen och – när de når stålet – orsakar korrosion. Betongen väljs därför för en kemiskt aggressiv exponeringsklass, och täckskiktet görs större än i ett vanligt bostadsgolv. Det är konstruktören som bestämmer exponeringsklass och täckskikt, men i praktiken innebär det:"  },
+      { type: "p", text: "Urin och gödsel innehåller ammoniak, syror och salter som angriper betongen och – när de når stålet – orsakar korrosion. Betongen väljs därför för kemiskt angrepp (någon av XA-klasserna) och täckskiktet görs större än i ett bostadsgolv. Konstruktören bestämmer exponeringsklass och täckskikt. På bygget betyder det:"  },
       { type: "ul", items: [
         "Distanser som håller nätet på rätt höjd även när man går på armeringen under gjutning.",
         "Inga järn som sticker upp nära ytan vid kanaler och brunnar.",
@@ -125,17 +133,15 @@ export const armeringTill2: Post[] = [
       { type: "p", text: "Ett stall består av många olika delar som gjuts vid olika tillfällen. Dela bockningslistan per byggdel – kanaler, plattor, foderbord, kantbalkar – så blir leveransen lätt att hantera på gården. Vi hjälper gärna till att ta fram listan från konstruktörens ritning."  },
 
       { type: "h2", text: "Exempel: åtgång för en gångyta" },
-      { type: "p", text: "Ett räkneexempel för en gång på 3 × 40 m (120 m²) med nät Ø8 c/c 150: nätet väger cirka 5,3 kg/m² (två riktningar à 0,395 kg/m ÷ 0,15 m). Med 10–15 % tillägg för överlapp blir det runt 700–730 kg. Foderbord och körytor med tyngre nät eller två lager räknas separat, liksom kanalernas bockade järn. Exemplet visar hur mängden byggs upp – den verkliga mängden följer ritningen." },
-      { type: "p", text: "Tänk också på att stallbyggen ofta sker medan djuren finns kvar i en annan del av byggnaden. Leverans i mindre etapper, anpassad efter vad som gjuts vecka för vecka, gör det lättare att hålla ordning på gården." },
-
-      { type: "h2", text: "Armering till ditt stall"  },
-      { type: "p", text: "Vi tillverkar armeringen till stall, ladugårdar och maskinhallar i kamstål B500B och levererar i hela Sverige, även till gårdar i Norrland. Se hur vi arbetar som [armeringsleverantör](/armeringsleverantor) eller skicka ritningen via [offertformuläret](/offert)."  },
+      { type: "p", text: "Ett räkneexempel för en gång på 3 × 40 m (120 m²) med nät Ø8 c/c 150: nätet väger cirka 5,3 kg/m² (två riktningar à 0,395 kg/m ÷ 0,15 m). Med 10–20 % tillägg för överlapp blir det runt 700–770 kg. Foderbord och körytor med tyngre nät eller två lager räknas separat, liksom kanalernas bockade järn. Exemplet visar hur mängden byggs upp – den verkliga mängden följer ritningen." },
+      { type: "h2", text: "Leverans till gården i etapper"  },
+      { type: "p", text: "Stall byggs ofta om medan djuren står kvar i en annan del av byggnaden. Då fungerar det bäst med mindre leveranser i den takt som gjuts. Skicka ritningen eller bockningslistan via [offertformuläret](/offert) och ange etapperna – du får en offert per byggdel, med frakt efter mängd och ort, även till gårdar i Norrland."  },
     ],
     faqs: [
       { q: "Hur tjockt ska ett stallgolv vara?", a: "Det beror på laster och djurslag. Gångar och liggytor är ofta tunnare än foderbord och körytor där traktorer går. Konstruktören bestämmer tjocklek och armering utifrån maskinernas axellaster." },
       { q: "Behöver stallgolv armeras?", a: "Ja, normalt. Armeringen fördelar laster från maskiner och begränsar sprickor där vätska annars kan tränga in och angripa stålet." },
       { q: "Varför behövs större täckskikt i ett stall?", a: "Gödsel och urin är kemiskt aggressiva. Ett större täckskikt och tät betong skyddar armeringen mot korrosion. Exponeringsklass och täckskikt bestäms av konstruktören." },
-      { q: "Kan ni leverera till en gård på landsbygden?", a: "Ja, vi levererar i hela Sverige. Frakten beräknas efter mängd och ort och anges i offerten." },
+      { q: "Vi har ingen bockningslista – kan ni hjälpa till?", a: "Ja. Skicka konstruktörens ritning så tar vi fram bockningslistan, uppdelad per byggdel. Leverans till gården i hela Sverige, frakt efter mängd och ort." },
     ],
     target: { href: "/armeringsleverantor", label: "Armering till lantbruksbyggen" },
     category: "armering-till",
@@ -147,7 +153,7 @@ export const armeringTill2: Post[] = [
     title: "Armering till gödselplatta och gödselbrunn",
     metaTitle: "Armering gödselplatta & gödselbrunn",
     metaDescription:
-      "Hur armeras en gödselplatta eller gödselbrunn i betong? Ringarmering, bottenplatta, täthet och täckskikt – typlösningar och vad konstruktören bestämmer.",
+      "Armering till gödselplatta och gödselbrunn: ringarmering, botten, kantmurar och täthet enligt SS-EN 1992-3. Vi bockar ringar efter ritning – begär offert.",
     excerpt:
       "En gödselvårdsanläggning ska vara tät i decennier. Armeringen håller sprickorna små – så armeras en gödselplatta och en platsgjuten gödselbrunn.",
     date: D,
@@ -161,8 +167,8 @@ export const armeringTill2: Post[] = [
       "gödselvårdsanläggning betong",
     ],
     content: [
-      { type: "p", text: "En gödselplatta och en gödselbrunn har samma grundkrav: de ska vara täta. Läckage ger förlust av näring och risk för utsläpp till mark och vatten, och därför ställs krav på att anläggningen är tät och hållbar. I betong betyder det att sprickorna ska hållas så små att vätska inte kan passera – och det är armeringens jobb."  },
-      { type: "p", text: "Vi levererar armeringen till gödselvårdsanläggningar som [armeringsleverantör](/armeringsleverantor) till lantbrukare, markentreprenörer och byggföretag – bockad efter ritning och märkt per del."  },
+      { type: "p", text: "En gödselplatta armeras med nät i plattan och bockade järn i kantmurarna. En rund gödselbrunn armeras med horisontella ringar som tar gödseltrycket, tätast längst ner. Båda ska vara täta i decennier, och det är armeringen som håller sprickorna små nog."  },
+      { type: "p", text: "Ringar med rätt radie är svåra att bocka på plats. Vi tillverkar dem efter ritningen, tillsammans med nät och startjärn, och levererar till lantbrukare och markentreprenörer som [armeringsleverantör](/armeringsleverantor)."  },
 
       { type: "h2", text: "Gödselplatta – för fastgödsel"  },
       { type: "p", text: "En gödselplatta är en platta på mark med kantmurar på tre sidor. Plattan belastas av gödselns vikt och av lastmaskiner som kör upp på den. Kantmurarna tar sidotryck från gödseln och maskinens skopa."  },
@@ -189,6 +195,7 @@ export const armeringTill2: Post[] = [
       { type: "h2", text: "Vanliga fel"  },
       { type: "ul", items: [
         "Ringarmering som skarvas på samma ställe runt hela brunnen – skarvarna ska förskjutas.",
+        "Ringar som märks fel i höjdled – de tätare ringarna hör hemma längst ner.",
         "För korta skarvlängder – se [skarvlängd för armering](/blogg/skarvlangd-armering).",
         "Armering som trycks ner i botten vid gjutning – distanserna ska klara att man går på nätet.",
         "Otät gjutfog mellan botten och vägg – fogband och rätt förankringsjärn behövs.",
@@ -196,17 +203,13 @@ export const armeringTill2: Post[] = [
 
       { type: "h2", text: "Platta eller brunn – vad passar?" },
       { type: "p", text: "Fastgödsel från djupströbädd och hästgödsel lagras ofta på platta, medan flytgödsel från lösgödselsystem kräver brunn. Många gårdar har båda. Plattan är enklare att armera men tar större yta och behöver uppsamling av lakvatten. Brunnen kräver mer armering per kubikmeter men rymmer mycket på liten yta. Volymen styrs av antal djur och lagringstid, och dimensioneras tillsammans med rådgivare och konstruktör." },
-      { type: "p", text: "Oavsett typ ska armeringen ligga still under gjutningen. Kraftiga distanser och ordentlig najning behövs, särskilt i brunnsväggar där betongen fylls på från hög höjd." },
-
-      { type: "p", text: "Kontrollera också att distanserna i botten tål betongens tyngd och att ringarnas skarvar är bundna innan formen stängs – efteråt går det inte att rätta till." },
-      
-      { type: "h2", text: "Beställ armeringen"  },
-      { type: "p", text: "Vi tillverkar ringar, bockade järn och nät till gödselplattor och gödselbrunnar efter ritning, i kamstål B500B, och levererar i hela Sverige. Läs mer om vår roll som [armeringsleverantör](/armeringsleverantor) eller skicka ritningen via [offertformuläret](/offert)."  },
+      { type: "h2", text: "Skicka ritningen – få ringarna färdigbockade"  },
+      { type: "p", text: "Ange brunnens innerradie och väggtjocklek, eller skicka konstruktörens ritning via [offertformuläret](/offert). Ringarna bockas i delar efter radien, märks per höjdnivå och levereras tillsammans med bottennät och startjärn. Frakten räknas efter mängd och ort."  },
     ],
     faqs: [
       { q: "Hur armeras en gödselbrunn?", a: "Med horisontell ringarmering som tar upp gödseltrycket, tätare längst ner, samt vertikal armering och en armerad bottenplatta. Förbindelsen botten–vägg är kritisk. Konstruktören dimensionerar." },
       { q: "Varför måste en gödselplatta vara tät?", a: "För att näring och vätska inte ska läcka ut i mark och vatten. Armeringen håller sprickorna små så att betongen förblir tät." },
-      { q: "Kan ni bocka ringar till en rund brunn?", a: "Ja, vi bockar armering efter den radie som anges på ritningen. Kontakta oss med ritning eller bockningslista så anges det i offerten." },
+      { q: "Kan ni bocka ringar till en rund brunn?", a: "Ja, vi bockar ringarna i delar efter den radie som anges på ritningen och märker dem per höjdnivå. Skicka ritning eller bockningslista så får du offert." },
       { q: "Vilken norm gäller för vätsketäta behållare?", a: "Eurokod 2 del 3, SS-EN 1992-3, som ger skärpta krav på sprickbredd. Konstruktören väljer krav utifrån anläggningens täthetsklass." },
     ],
     target: { href: "/armeringsleverantor", label: "Armering till gödselanläggning" },
@@ -219,7 +222,7 @@ export const armeringTill2: Post[] = [
     title: "Armering till garageuppfart och ramp i betong",
     metaTitle: "Armering garageuppfart & ramp i betong",
     metaDescription:
-      "Så armeras en garageuppfart, infart eller ramp i betong: nät, tjocklek, fogar och täckskikt mot vägsalt. Typlösning med nät och tips för lutande ytor.",
+      "Vilket nät till garageuppfarten? Tjocklek, nät per fordonstyp, fogar och åtgång för 18–60 m². Beställ armeringsnät med distanser – leverans i hela Sverige.",
     excerpt:
       "En gjuten uppfart utsätts för bilar, frost och vägsalt. Rätt nät på rätt höjd och väl placerade fogar gör att den håller sig hel.",
     date: D,
@@ -233,8 +236,8 @@ export const armeringTill2: Post[] = [
       "gjuten ramp armering",
     ],
     content: [
-      { type: "p", text: "En garageuppfart i betong är en platta på mark som ligger utomhus året runt. Den belastas av bilar, fryser och tinar, får vägsalt från bilarnas hjul och ofta en lutning ner mot garaget eller gatan. Armeringen fördelar hjullasterna och håller ihop plattan när den rör sig."  },
-      { type: "p", text: "För de flesta uppfarter räcker [armeringsnät](/produkter/armeringsnat) i ett lager, med extra järn vid kanter och mot garageporten. Själva garageplattan inne i garaget beskrivs i guiden om [armering till garage](/blogg/armering-till-garage)."  },
+      { type: "p", text: "En villauppfart för personbil gjuts normalt 100–120 mm tjock med nät Ø6–Ø8 c/c 150, på distanser och med fogar i rutor. Uppfarten ligger ute året runt och får frost, vägsalt och hjullaster – därför är nätets höjd och fogarna lika viktiga som själva nätet."  },
+      { type: "p", text: "För de flesta uppfarter räcker [armeringsnät](/produkter/armeringsnat) i ett lager, med extra järn vid kanterna. Själva garageplattan inne i garaget beskrivs i guiden om [armering till garage](/blogg/armering-till-garage)."  },
 
       { type: "h2", text: "Typisk uppbyggnad"  },
       { type: "table", head: ["Användning", "Platta (typ)", "Armering (typ)"], rows: [
@@ -247,7 +250,7 @@ export const armeringTill2: Post[] = [
       { type: "h2", text: "Rätt höjd på nätet"  },
       { type: "p", text: "Nätet ska ligga i plattan – inte på botten. Lägg det på distanser så att det hamnar ungefär i mitten eller något ovanför, beroende på vad som ska motverkas. För sprickbegränsning i överytan ska nätet ligga högt, men täckskiktet uppåt får inte bli för litet: vägsalt tränger in i betongen och får stålet att rosta."  },
       { type: "ul", items: [
-        "Använd distanser eller nätstöd i jämn höjd, normalt 4–5 per m².",
+        "Använd distanser eller nätstöd i jämn höjd – 4–5 per m² är en vanlig tumregel.",
         "Skarva näten med tillräckligt överlapp – se [skarvlängd och överlapp](/blogg/skarvlangd-armering).",
         "Håll nätet 50–75 mm från plattans kanter så att inget stål blir synligt.",
         "Välj betong för frost och tösalt – betongleverantören vet vilken klass som gäller.",
@@ -260,21 +263,28 @@ export const armeringTill2: Post[] = [
       { type: "p", text: "En ramp ner till ett garage eller en källare har ofta en kraftig lutning. Betongen gjuts då med styvare konsistens, och nätet måste sitta fast ordentligt på distanserna så att det inte glider ner. Mot garageplattan och vid övre kanten förankras rampen med bockade järn. Har rampen sidomurar räknas de som små stödmurar och armeras enligt ritning."  },
 
       { type: "h2", text: "Hur många nät går åt?"  },
-      { type: "p", text: "Ett standardnät är ofta omkring 2,0 × 5,0 m (10 m²). Räkna med 10–15 % mer yta än uppfartens area för överlapp och kapning. För en uppfart på 6 × 10 m (60 m²) blir det cirka 66–70 m² nät, alltså ungefär sju nät i det formatet."  },
+      { type: "p", text: "Ett vanligt standardformat är 2,35 × 5,0 m (11,75 m²). Räkna med 10–20 % mer yta än uppfartens area för överlapp och kapning."  },
+
+      { type: "table", head: ["Uppfart", "Yta", "Nät inkl. överlapp", "Antal nät 2,35 × 5 m", "Distanser (≈ 4–5/m²)"], rows: [
+        ["3 × 6 m", "18 m²", "≈ 20–22 m²", "2", "≈ 75–90"],
+        ["4 × 8 m", "32 m²", "≈ 35–38 m²", "4", "≈ 130–160"],
+        ["6 × 10 m", "60 m²", "≈ 66–72 m²", "6–7", "≈ 240–300"],
+      ], caption: "Räkneexempel med 10–20 % tillägg. Kapning vid snedda kanter och brunnar kan ge något mer." },
 
       { type: "h2", text: "Anslutning mot garaget och gatan" },
       { type: "p", text: "Mot garageplattan läggs en fog så att uppfarten kan röra sig oberoende av husgrunden. Mot gatan eller trottoaren avslutas plattan med en förstärkt kant, gärna med ett par extra längsgående järn Ø10–Ø12, eftersom kanten får de hårdaste stötarna när bilar kör upp. Brunnar och rännor i uppfarten armeras runt med extra järn i hörnen så att sprickor inte startar där." },
 
-      { type: "p", text: "Ett tips är att lägga nätet så att skarvarna inte hamnar i hjulspåren. Det minskar risken för sprickor just där belastningen är störst." },
-      
-      { type: "h2", text: "Beställ nät till uppfarten"  },
-      { type: "p", text: "Vi levererar [armeringsnät](/produkter/armeringsnat) i standardmått och specialnät, tillsammans med distanser och najtråd, i hela Sverige. Skicka mått och ritning via [offertformuläret](/offert) så räknar vi fram åtgången."  },
+      { type: "p", text: "Lägg gärna näten så att skarvarna inte hamnar i hjulspåren, där belastningen är störst." },
+
+      { type: "h2", text: "Få nät, distanser och najtråd i en leverans"  },
+      { type: "p", text: "Skicka uppfartens mått – en enkel skiss räcker – via [offertformuläret](/offert). Vi räknar antal [armeringsnät](/produkter/armeringsnat), distanser och kantjärn och levererar allt tillsammans. Frakten beräknas efter mängd och ort, så även en liten villaleverans går att beställa."  },
     ],
     faqs: [
       { q: "Vilket nät ska man ha till en garageuppfart?", a: "För en villauppfart med personbilar är nät Ø6–Ø8 c/c 150 vanligt. Tyngre fordon kräver grövre nät och tjockare platta – konstruktören avgör vid tyngre laster." },
       { q: "Hur tjock ska en gjuten uppfart vara?", a: "Ofta 100–120 mm för personbilar och 120–150 mm för tyngre fordon, på ett väl packat bärlager. Exakt tjocklek beror på last och mark." },
       { q: "Måste en uppfart ha fogar?", a: "Ja, större ytor bör delas upp med fogar så att krympsprickor hamnar där du vill. Armeringen begränsar sprickbredden men hindrar inte att betongen krymper." },
       { q: "Kan jag lägga nätet direkt på marken?", a: "Nej. Nätet ska ligga i betongen på distanser. Ligger det på botten gör det nästan ingen nytta och rostar lätt." },
+      { q: "Kan jag beställa nät till bara en uppfart?", a: "Ja. Skicka måtten så räknar vi antal nät och distanser. Frakten beräknas efter mängd och ort och anges i offerten." },
     ],
     target: { href: "/produkter/armeringsnat", label: "Beställ armeringsnät" },
     category: "armering-till",
@@ -286,7 +296,7 @@ export const armeringTill2: Post[] = [
     title: "Armering till betongpelare – längsjärn, byglar och regler",
     metaTitle: "Armering betongpelare – längsjärn & byglar",
     metaDescription:
-      "Hur armeras en betongpelare? Minsta antal längsjärn, bygelavstånd enligt Eurokod 2, skarvar och startjärn – med tabell och exempel på pelarkorg.",
+      "Armering till betongpelare: minsta antal längsjärn, bygelavstånd enligt Eurokod 2, startjärn och skarvar. Med räkneexempel. Beställ färdiga pelarkorgar.",
     excerpt:
       "En pelare bär tryck, men armeringen behövs ändå – för moment, knäckning och sprickor. Här är reglerna för längsjärn och byglar och hur en pelarkorg byggs.",
     date: D,
@@ -309,12 +319,13 @@ export const armeringTill2: Post[] = [
       { type: "p", text: "Eurokod 2 (SS-EN 1992-1-1, avsnitt 9.5) ger minimiregler för pelare. Tabellen visar de rekommenderade värdena – den svenska nationella bilagan och konstruktörens beräkning gäller alltid i det enskilda fallet."  },
       { type: "table", head: ["Regel", "Rekommenderat värde"], rows: [
         ["Minsta diameter på längsjärn", "Ø8 mm (i praktiken ofta Ø12–Ø25)"],
-        ["Minsta antal längsjärn", "4 i rektangulär pelare, 6 i cirkulär"],
+        ["Minsta antal längsjärn", "Minst ett i varje hörn (4 i rektangulär pelare), minst 4 i cirkulär"],
         ["Minsta armeringsmängd", "Det största av 0,10·NEd/fyd och 0,002·Ac"],
         ["Största armeringsmängd", "0,04·Ac utanför skarvar (dubbelt i skarvzon)"],
         ["Bygeldiameter", "Minst 6 mm och minst ¼ av största längsjärnets diameter"],
         ["Största bygelavstånd", "Minsta av 20 × minsta längsjärn, pelarens minsta mått och 400 mm"],
         ["Förtätade byglar", "Avståndet × 0,6 nära balk/platta och i skarvar för järn > Ø14"],
+        ["Ostagade längsjärn", "Högst 150 mm från ett järn som hålls av bygel"],
       ], caption: "SS-EN 1992-1-1 avsnitt 9.5, rekommenderade värden. Konstruktören avgör." },
       { type: "p", text: "Exempel: en pelare 300 × 300 mm med fyra Ø16 får enligt regeln ovan bygelavstånd högst 300 mm (minsta av 20 × 16 = 320, 300 och 400). Nära bjälklaget minskas avståndet till 0,6 × 300 = 180 mm."  },
 
@@ -324,7 +335,7 @@ export const armeringTill2: Post[] = [
       { type: "h2", text: "Hur en pelarkorg är uppbyggd"  },
       { type: "ul", items: [
         "Längsjärn i hörnen – alltid minst ett i varje hörn.",
-        "Extra längsjärn längs sidorna i större pelare, varje tryckt järn ska hållas av en bygel eller ligga nära ett som hålls.",
+        "Extra längsjärn längs sidorna i större pelare – inget tryckt järn får ligga mer än 150 mm från ett järn som hålls av en bygel.",
         "Slutna byglar med krokar som förankras in i betongen (135° är vanligt).",
         "Distanser på utsidan för rätt täckskikt mot formen.",
       ] },
@@ -336,14 +347,18 @@ export const armeringTill2: Post[] = [
       { type: "h2", text: "Vanliga fel" },
       { type: "ul", items: ["Byglar som inte är slutna eller saknar förankrade krokar.", "För få byglar nära bjälklaget, där Eurokod 2 kräver förtätning.", "Startjärn i fel läge – korgen kan inte skarvas utan att järnen bockas om på plats.", "Täckskikt som blir för litet när korgen trycks mot formen."] },
 
-      { type: "h2", text: "Pelare i grunden och i stommen" },
-      { type: "p", text: "Pelare finns både i småhus – till exempel under en bärande balk i en källare eller i ett garage – och i flervåningshus och hallar. I småhus är pelarna korta och lasterna måttliga, men samma regler för längsjärn och byglar gäller. I större stommar är pelarna ofta prefabricerade element från fabrik, medan platsgjutna pelare förekommer i ombyggnader, parkeringshus och mindre projekt där elementleveranser inte lönar sig." },
-      
-      { type: "h2", text: "Beställ pelarkorgar"  },
-      { type: "p", text: "Vi tillverkar [pelar- och balkkorgar](/produkter/pelar-och-balkkorgar) i kamstål B500B efter konstruktörens ritning, märkta per position, med leverans i hela Sverige. Skicka ritningen via [offertformuläret](/offert)."  },
+      { type: "h2", text: "Räkneexempel: tio pelare 300 × 300 mm" },
+      { type: "p", text: "Tio pelare, 3,0 m höga, med 4 Ø16 (inklusive skarv mot startjärn, 3,8 m per järn) och byglar Ø8 c/c 300, förtätade till 180 mm i ändarna. Bygelns längd med 135°-krokar är cirka 1,2 m och det blir ungefär 14 byglar per pelare." },
+      { type: "table", head: ["Position", "Beräkning", "Vikt"], rows: [
+        ["Längsjärn Ø16", "10 × 4 × 3,8 m = 152 m × 1,58 kg/m", "≈ 240 kg"],
+        ["Byglar Ø8", "10 × 14 × 1,2 m = 168 m × 0,395 kg/m", "≈ 66 kg"],
+      ], caption: "Principexempel – antal, dimension och skarvlängd följer ritningen." },
+
+      { type: "h2", text: "Skicka pelarritningen – få korgarna märkta per position"  },
+      { type: "p", text: "Vi tillverkar [pelar- och balkkorgar](/produkter/pelar-och-balkkorgar) efter ritningen, med byglarna förtätade där de ska vara, och märker varje korg med position och våningsplan. Gäller det bara några pelare i en källare eller ett garage går det lika bra. Skicka ritningen via [offertformuläret](/offert)."  },
     ],
     faqs: [
-      { q: "Hur många armeringsjärn ska en pelare ha?", a: "Enligt Eurokod 2:s rekommendation minst fyra längsjärn i en rektangulär pelare och sex i en cirkulär. Antal och dimension bestäms av konstruktören." },
+      { q: "Hur många armeringsjärn ska en pelare ha?", a: "Eurokod 2 kräver minst ett längsjärn i varje hörn, alltså minst fyra i en rektangulär pelare, och minst fyra i en cirkulär. Antal och dimension bestäms av konstruktören." },
       { q: "Hur tätt ska byglarna sitta i en pelare?", a: "Rekommenderat största avstånd är det minsta av 20 gånger minsta längsjärnets diameter, pelarens minsta mått och 400 mm. Nära bjälklag och i skarvar förtätas byglarna." },
       { q: "Vad är startjärn i en pelare?", a: "Järn som gjuts in i fundamentet eller bjälklaget under och sticker upp, så att pelarens längsjärn kan skarvas mot dem." },
       { q: "Kan ni tillverka runda pelarkorgar?", a: "Ja, med längsjärn och spiral- eller ringbyglar efter ritningen. Mått och mängd anges i offerten." },
@@ -358,7 +373,7 @@ export const armeringTill2: Post[] = [
     title: "Armering till betongbalk – huvudjärn, byglar och minimiregler",
     metaTitle: "Armering betongbalk – huvudjärn & byglar",
     metaDescription:
-      "Hur armeras en betongbalk? Underkantsjärn, montagejärn, byglar och minimiarmering enligt Eurokod 2 – med räkneexempel och uppbyggnad av en balkkorg.",
+      "Armering till betongbalk: underkantsjärn, byglar och minimiarmering enligt Eurokod 2 med räkneexempel. Färdiga balkkorgar efter ritning – begär offert.",
     excerpt:
       "En balk böjs av lasten. Underkantsjärnen tar draget, byglarna tar tvärkraften. Här är minimireglerna och hur en balkkorg är uppbyggd.",
     date: D,
@@ -409,15 +424,15 @@ export const armeringTill2: Post[] = [
         "För litet täckskikt mot formens botten – distanser saknas eller trycks ner.",
         "Skarvar placerade i fältmitt där draget är som störst.",
       ] },
-      { type: "p", text: "En prefabricerad, märkt korg minskar risken för alla fyra. Den tillverkas efter ritningen och märks med position och orientering."  },
+      { type: "p", text: "De två första felen syns sällan förrän balken spricker. En korg som tillverkas efter ritningen och märks med position och vilken sida som är upp tar bort dem."  },
 
       { type: "h2", text: "Korgen i formen" },
       { type: "p", text: "Balkkorgen lyfts ner i formen och ställs på distanser som ger täckskiktet i botten och mot sidorna. Vid långa balkar behövs lyftpunkter så att korgen inte deformeras – lyft aldrig enbart i byglarna. Där balken ansluter till pelare eller väggar kan korgen behöva tillverkas i delar och skarvas på plats, så att den kan träs mellan pelarens längsjärn." },
 
-      { type: "p", text: "Kontrollera också att balkens korgar är märkta med vilken ände som är vilken när armeringen inte är symmetrisk – till exempel när ena änden är inspänd." },
-      
-      { type: "h2", text: "Beställ balkkorgar"  },
-      { type: "p", text: "Vi tillverkar [pelar- och balkkorgar](/produkter/pelar-och-balkkorgar) i kamstål B500B efter ritning eller bockningslista och levererar i hela Sverige. Skicka ritningen via [offertformuläret](/offert)."  },
+      { type: "p", text: "Är armeringen osymmetrisk, till exempel när ena änden är inspänd, ska korgen också märkas med vilken ände som är vilken." },
+
+      { type: "h2", text: "Från överliggare till långa balkar"  },
+      { type: "p", text: "Skicka balkritningen eller bockningslistan via [offertformuläret](/offert). Vi tillverkar [balkkorgar](/produkter/pelar-och-balkkorgar) med byglarna förtätade vid upplagen enligt ritningen, delar långa korgar där konstruktören anger skarv och märker varje korg med position och orientering."  },
     ],
     faqs: [
       { q: "Var ska armeringen sitta i en betongbalk?", a: "I en fritt upplagd balk ligger huvudarmeringen i underkant, där balken dras isär. Över mellanstöd i kontinuerliga balkar behövs armering i överkant. Ritningen visar exakt placering." },
@@ -435,7 +450,7 @@ export const armeringTill2: Post[] = [
     title: "Armering till hissgrop – botten, väggar och täthet",
     metaTitle: "Armering hissgrop – botten, väggar & täthet",
     metaDescription:
-      "Hur armeras en hissgrop i betong? Bottenplatta, väggar, hörn och anslutning till grundplattan – typlösning, krav på täthet och tips för prefab armering.",
+      "Armering till hissgrop: botten, dubbelsidiga väggar, hörnjärn och tätade fogar. Typiska mått och vanliga misstag. Beställ armeringen märkt per position.",
     excerpt:
       "En hissgrop är en liten tät betonglåda under grundplattan. Den ska tåla jord- och vattentryck och hissens buffertlaster. Så armeras den.",
     date: D,
@@ -448,7 +463,7 @@ export const armeringTill2: Post[] = [
       "hisschakt grop armering",
     ],
     content: [
-      { type: "p", text: "Hissgropen är den nedsänkta delen av grunden under hisschaktet. Den rymmer buffertar och hissens nedersta del, och den måste vara torr. Konstruktionen är en liten låda med bottenplatta och fyra väggar som tar jordtryck, ofta grundvattentryck och laster från hissens buffertar och styrskenor."  },
+      { type: "p", text: "En hissgrop armeras som en liten tät låda: bottenplatta i två lager, dubbelsidigt armerade väggar, startjärn från botten och hörnjärn som binder ihop väggarna. Den ska tåla jord- och grundvattentryck och hissens buffertlaster – och den måste vara torr."  },
       { type: "p", text: "Armeringen är tät och full av hörn och hakar – ett typiskt fall där prefabricerad armering sparar mycket tid. Vi tillverkar armering till hissgropar som färdiga korgar och bockade järn inom [pelar- och balkkorgar](/produkter/pelar-och-balkkorgar)."  },
 
       { type: "h2", text: "Typisk uppbyggnad"  },
@@ -491,18 +506,16 @@ export const armeringTill2: Post[] = [
       { type: "p", text: "Gå igenom hissleverantörens måttritning tillsammans med armeringsritningen före beställning, så undviks de flesta av dessa fel." },
 
       { type: "h2", text: "Liten grop – många positioner" },
-      { type: "p", text: "En hissgrop på kanske 2 × 2 m kan ändå ha tjugo olika armeringspositioner: botten i två lager och två riktningar, väggar på båda sidor, hörnjärn, startjärn och förankringar mot plattan. Det är därför märkningen är så viktig. När varje bunt är märkt med position och antal går det snabbt att kontrollera att allt finns på plats innan formen stängs." },
-      
-      { type: "p", text: "Hissgropen gjuts ofta tidigt i projektet, innan resten av grunden. Därför är den armering som behövs först – och den som oftast försenar starten om den inte är beställd i tid." },
+      { type: "p", text: "En grop på 2 × 2 m kan ha ett tjugotal positioner: botten i två lager och två riktningar, väggar på båda sidor, hörnjärn, startjärn och förankringar mot plattan. Med varje bunt märkt med position och antal går kontrollen före formstängning snabbt." },
 
-      { type: "h2", text: "Beställ armering till hissgropen"  },
-      { type: "p", text: "Vi tillverkar armering till hissgropar som korgar och klippt och bockad armering efter ritning, märkt per position. Se [pelar- och balkkorgar](/produkter/pelar-och-balkkorgar) eller skicka ritningen via [offertformuläret](/offert)."  },
+      { type: "h2", text: "Beställ gropen först – den gjuts först"  },
+      { type: "p", text: "Hissgropen gjuts ofta före resten av grunden och är därför den armering som oftast försenar starten. Skicka gropens armeringsritning via [offertformuläret](/offert) så fort hissmodellen är låst. Vi tillverkar väggkorgar och bockade järn inom [pelar- och balkkorgar](/produkter/pelar-och-balkkorgar), märkta per position – och kan leverera gropen separat före resten av grundarmeringen."  },
     ],
     faqs: [
       { q: "Hur djup är en hissgrop?", a: "Det bestäms av hissmodellen och hissleverantören. Djupet varierar mellan olika hissar, så armeringsritningen ska bygga på den valda hissen." },
       { q: "Hur armeras en hissgrop?", a: "Med armerad bottenplatta, dubbelsidigt armerade väggar, startjärn från botten upp i väggarna och vinkeljärn i hörnen. Konstruktören dimensionerar för jord-, vatten- och hisslaster." },
       { q: "Måste hissgropen vara vattentät?", a: "Ja, gropen ska vara torr. Den görs tät med tät betong, sprickbegränsande armering och tätade gjutfogar." },
-      { q: "Kan ni leverera färdig armering till hissgropar?", a: "Ja, som korgar och bockade järn efter ritning, märkta per position och leverans i hela Sverige." },
+      { q: "Kan hissgropens armering levereras före resten av grunden?", a: "Ja. Gropen kan beställas och levereras som en egen etapp, märkt per position, så att den kan gjutas först." },
     ],
     target: { href: "/produkter/pelar-och-balkkorgar", label: "Armering till hissgrop" },
     category: "armering-till",
@@ -514,7 +527,7 @@ export const armeringTill2: Post[] = [
     title: "Armering till stolpfundament – carport, staket och skärmtak",
     metaTitle: "Armering stolpfundament – typlösning & mått",
     metaDescription:
-      "Hur armeras ett gjutet stolpfundament för carport, staket, skärmtak eller belysningsstolpe? Typisk korg, mått, frostdjup och ingjutna stolpskor.",
+      "Armering till stolpfundament för carport, staket och skärmtak: typisk korg, rörmått, frostdjup och räkneexempel. Beställ färdiga korgar efter dina mått.",
     excerpt:
       "Ett stolpfundament ska hålla stolpen stilla i vind och tjäle. En liten korg med fyra järn och byglar räcker ofta – men det beror på lasten.",
     date: D,
@@ -558,15 +571,14 @@ export const armeringTill2: Post[] = [
       { type: "p", text: "Ett exempel: åtta fundament till en carport, varje korg 4 Ø10 × 0,9 m plus fem byglar Ø6 med omkrets cirka 0,6 m. Längsjärn: 8 × 4 × 0,9 = 28,8 m × 0,617 kg/m ≈ 18 kg. Byglar: 8 × 5 × 0,6 = 24 m × 0,222 kg/m ≈ 5 kg. Totalt runt 23 kg armering – en liten men noggrann leverans."  },
 
       { type: "h2", text: "Vanliga fel" },
-      { type: "ul", items: ["Fundamentet för grunt – tjälen lyfter stolpen under första vintern.", "Korgen ligger mot rörets vägg och får inget täckskikt.", "Stolpskon placeras efter gjutning och trycks ner bredvid korgen.", "För litet fundament för grindstolpar, som får stora moment när grinden hänger ut."] },
+      { type: "ul", items: ["Fundamentet för grunt – tjälen lyfter stolpen under första vintern.", "Korgen ligger mot rörets vägg och får inget täckskikt.", "Stolpskon placeras efter gjutning och trycks ner bredvid korgen.",
+        "Stolparna inte i liv före gjutning – ett fundament som hamnat fel går inte att flytta.", "För litet fundament för grindstolpar, som får stora moment när grinden hänger ut."] },
       
       { type: "h2", text: "Inköpta plintar eller gjutna?" },
       { type: "p", text: "Färdiga betongplintar från bygghandeln passar för altaner och lätta konstruktioner. När stolpen tar tak-, snö- eller vindlast, eller när du behöver ett fundament med bestämd storlek och bultgrupp, är ett platsgjutet och armerat fundament säkrare. Då kan storleken anpassas efter lasten och marken." },
       
-      { type: "p", text: "Kontrollera också att stolparna står i liv innan gjutning. Ett fundament som har hamnat några centimeter fel går inte att flytta, och en sned carport syns." },
-
-      { type: "h2", text: "Beställ stolpkorgar"  },
-      { type: "p", text: "Vi tillverkar [plintkorgar](/produkter/plintkorgar) till stolpfundament efter dina mått eller ritning, i kamstål B500B, med leverans i hela Sverige. Skicka mått och antal via [offertformuläret](/offert)."  },
+      { type: "h2", text: "Skicka rörmått och antal – få korgarna färdiga"  },
+      { type: "p", text: "Ange rörets diameter, fundamentets höjd och antal, eller skicka carportleverantörens fundamentritning via [offertformuläret](/offert). Vi tillverkar [plintkorgar](/produkter/plintkorgar) som passar röret, så att du bara ställer dem på distanser och gjuter. Små beställningar går bra – frakten räknas efter mängd och ort."  },
     ],
     faqs: [
       { q: "Behöver ett stolpfundament armeras?", a: "Lätta staketstolpar gjuts ofta oarmerade. Fundament för carport, skärmtak, grindar och belysningsstolpar armeras normalt, eftersom de tar vindlast och moment." },
@@ -584,7 +596,7 @@ export const armeringTill2: Post[] = [
     title: "Armering till murfundament – sula under mur och plank",
     metaTitle: "Armering murfundament – sula under mur",
     metaDescription:
-      "Hur armeras grundsulan under en murad mur, ett plank eller en blockmur? Typiska mått, längsjärn, tvärjärn och startjärn – och när det blir ett L-stöd.",
+      "Armering till murfundament: sulmått, längsjärn, tvärjärn och startjärn för blockmur och trädgårdsmur, med mängdexempel. Beställ järnen kapade och bockade.",
     excerpt:
       "En mur är bara så stabil som sitt fundament. Så armeras sulan under en trädgårdsmur, ett plank eller en mur av block – och var gränsen till stödmur går.",
     date: D,
@@ -598,7 +610,7 @@ export const armeringTill2: Post[] = [
       "fundament trädgårdsmur",
     ],
     content: [
-      { type: "p", text: "Ett murfundament är en gjuten sula som bär en mur – en murad trädgårdsmur, en mur av lättbetong- eller betongblock, ett tungt plank eller en friliggande vägg. Muren är tung, den tar vindlast och den ska inte röra sig med tjälen. Sulan fördelar lasten på marken och armeringen gör att den inte spricker när marken ger efter ojämnt."  },
+      { type: "p", text: "Sulan under en fristående mur armeras med 3–4 längsjärn, tvärjärn och – för blockmurar – startjärn upp i blockens kärnor. Armeringen håller ihop sulan när marken ger efter ojämnt, så att muren inte spricker eller lutar."  },
       { type: "p", text: "Sulan armeras med raka järn längs, tvärjärn och startjärn upp i muren. Allt det kan levereras som [klippt och bockad armering](/produkter/klippt-och-bockad), kapat och bockat efter mått och märkt per del."  },
 
       { type: "h2", text: "Fristående mur eller stödmur?"  },
@@ -633,14 +645,14 @@ export const armeringTill2: Post[] = [
       { type: "h2", text: "Murad mur av tegel eller natursten" },
       { type: "p", text: "En murad mur av tegel eller natursten armeras sällan vertikalt, men sulan under den är lika viktig. Här räcker det ofta med längsjärn och tvärjärn i sulan. Sprickor i en murad mur beror oftast på att sulan har satt sig ojämnt – därför ska sulan vara tillräckligt styv och ligga på bärkraftigt, frostfritt underlag." },
       
-      { type: "h2", text: "Beställ armeringen till murfundamentet"  },
-      { type: "p", text: "Vi tillverkar längsjärn, tvärjärn och bockade startjärn som [klippt och bockad armering](/produkter/klippt-och-bockad) efter dina mått, i kamstål B500B, med leverans i hela Sverige. Skicka mått och skiss via [offertformuläret](/offert)."  },
+      { type: "h2", text: "Skicka murens längd och sulmått"  },
+      { type: "p", text: "Murens längd, sulans bredd och höjd och blockens kärnavstånd räcker för att vi ska räkna åtgången. Vi kapar längsjärnen, bockar tvärjärn och startjärn med hake som [klippt och bockad armering](/produkter/klippt-och-bockad) och buntar dem per typ. Skicka en skiss via [offertformuläret](/offert)."  },
     ],
     faqs: [
       { q: "Hur bred ska sulan under en mur vara?", a: "För en låg fristående mur är 400–600 mm vanligt, beroende på murens höjd, vikt och marken. Högre murar och sämre mark kräver bredare sula – konstruktören avgör." },
       { q: "Behöver murfundamentet armeras?", a: "Ja, oftast. Armeringen håller ihop sulan när marken ger efter ojämnt och förankrar muren via startjärn." },
       { q: "Vad är skillnaden mot en stödmur?", a: "En stödmur håller emot jord på ena sidan och dimensioneras för jordtryck. Ett murfundament under en fristående mur bär främst murens vikt och vindlast." },
-      { q: "Kan ni bocka startjärn med hake?", a: "Ja, vi bockar startjärn och andra former efter bockningslista eller skiss." },
+      { q: "Jag har ingen ritning – räcker en skiss?", a: "För en låg fristående mur räcker ofta en skiss med längd, sulmått och blocktyp. Vi bockar startjärn med hake efter den. Högre murar och stödmurar ska dimensioneras av en konstruktör." },
     ],
     target: { href: "/produkter/klippt-och-bockad", label: "Beställ klippt & bockad armering" },
     category: "armering-till",
@@ -652,7 +664,7 @@ export const armeringTill2: Post[] = [
     title: "Armering till yttertrappa och entrétrappa på mark",
     metaTitle: "Armering yttertrappa – trappa på mark",
     metaDescription:
-      "Så armeras en gjuten yttertrappa eller entrétrappa som vilar på mark: grundplatta, steg, trapplan och tjäle. Typlösning med nät och bockade stegjärn.",
+      "Armering till yttertrappa på mark: nät, bockade stegjärn, järn i stegnosen och tjälskydd. Exempel för tre steg. Skicka måtten – vi bockar järnen.",
     excerpt:
       "En entrétrappa utomhus vilar oftast på mark och utsätts för tjäle och salt. Så armeras trappan, stegen och trapplanet.",
     date: D,
@@ -666,7 +678,7 @@ export const armeringTill2: Post[] = [
       "gjuta trappsteg betong",
     ],
     content: [
-      { type: "p", text: "En gjuten entrétrappa utomhus skiljer sig från en trappa inne i huset. Den spänner sällan fritt mellan två bjälklag, utan vilar på mark eller på en grundsula. Problemen är andra: tjäle som lyfter, vatten som fryser i sprickor, salt från skor och halkbekämpning. Armeringen ska hålla ihop trappan när marken rör sig."  },
+      { type: "p", text: "En entrétrappa på mark armeras med nät i botten och trapplanet, bockade järn som följer stegen och ett rakt järn i varje stegnos. Huvudfienden är tjälen, inte lasten – så grundläggningen avgör hur armeringen ska förankras."  },
       { type: "p", text: "Trappans armering – nät, raka järn och bockade stegjärn – levereras som [klippt och bockad armering](/produkter/klippt-och-bockad) efter mått. En fribärande trappa mellan två plan beskrivs i guiden om [armering till betongtrappa](/blogg/armering-till-betongtrappa)."  },
 
       { type: "h2", text: "Tre vanliga utföranden"  },
@@ -693,13 +705,20 @@ export const armeringTill2: Post[] = [
       { type: "p", text: "Ett större trapplan framför dörren armeras som en liten platta på mark. Räckesfästen och ingjutningsgods placeras innan gjutning och får inte krocka med armeringen. Planera också för fall bort från dörren, så att vatten inte rinner mot huset."  },
 
       { type: "h2", text: "Exempel: entrétrappa med tre steg" },
-      { type: "p", text: "En trappa 1,5 m bred med tre steg (steghöjd 160 mm, stegdjup 300 mm) och ett trapplan 1,5 × 1,2 m. Typiskt behövs ett nät för trapplan och botten, sex till sju bockade stegjärn Ø8 och ett rakt järn i varje stegnos. Allt ryms i en liten leverans, men varje järn bockas efter just din trappas mått – därför fungerar det bäst med en skiss som visar steghöjd, stegdjup och bredd." },
+      { type: "p", text: "En trappa 1,5 m bred med tre steg (steghöjd 160 mm, stegdjup 300 mm) och ett trapplan 1,5 × 1,2 m:" },
+
+      { type: "table", head: ["Position", "Antal", "Ungefärlig vikt"], rows: [
+        ["Nät Ø6 c/c 150, trapplan + botten (≈ 3,5 m²)", "1 nät, kapat", "≈ 10 kg"],
+        ["Bockade stegjärn Ø8, c/c 250 över 1,5 m", "7 st à ≈ 2,0 m", "≈ 6 kg"],
+        ["Raka nosjärn Ø8, 1,4 m", "3 st", "≈ 2 kg"],
+      ], caption: "Exempel. Nät Ø6 c/c 150 väger ≈ 3,0 kg/m². Varje stegjärn bockas efter trappans verkliga mått." },
+      { type: "p", text: "Mängden är liten, men varje järn bockas efter just din trappa. Därför räcker det med en skiss som visar steghöjd, stegdjup, bredd och trapplanets mått." },
 
       { type: "h2", text: "Platsgjuten eller prefab?" },
       { type: "p", text: "Prefabricerade trappsteg och trappelement av betong finns i standardmått. En platsgjuten trappa passar när måtten är speciella, när trappan ska gjutas ihop med en platta eller ett trapplan, eller när den ska ha en viss form. Då är det armeringen som anpassas efter trappan, inte tvärtom." },
       
-      { type: "h2", text: "Beställ armeringen till trappan"  },
-      { type: "p", text: "Vi tillverkar nät, raka järn och bockade stegjärn som [klippt och bockad armering](/produkter/klippt-och-bockad) efter mått eller ritning och levererar i hela Sverige. Skicka en skiss med trappans mått via [offertformuläret](/offert)."  },
+      { type: "h2", text: "Skicka trappans mått – få stegjärnen bockade"  },
+      { type: "p", text: "Rita trappan i genomskärning med steghöjd, stegdjup och bredd och skicka den via [offertformuläret](/offert). Vi bockar stegjärnen efter måtten och skickar dem med nät och nosjärn som [klippt och bockad armering](/produkter/klippt-och-bockad), märkt så att du ser vilket järn som hör till vilket steg."  },
     ],
     faqs: [
       { q: "Behöver en yttertrappa på mark armeras?", a: "Ja, normalt. Armeringen håller ihop trappan när marken rör sig och skyddar stegnosarna mot att spjälkas av vid frost." },
@@ -717,7 +736,7 @@ export const armeringTill2: Post[] = [
     title: "Armering till brunn och tank i betong",
     metaTitle: "Armering betongtank & brunn – tät konstruktion",
     metaDescription:
-      "Hur armeras en platsgjuten betongtank, brunn eller vattenmagasin? Ringarmering, väggar, botten och sprickbredd enligt SS-EN 1992-3 – med räkneexempel.",
+      "Armering till betongtank och brunn: ringdrag, sprickbredd enligt SS-EN 1992-3, botten mot grundvatten och räkneexempel. Ringar bockade efter radie.",
     excerpt:
       "En tank eller brunn i betong ska hålla vätska inne och grundvatten ute. Armeringens uppgift är att hålla sprickorna så små att konstruktionen förblir tät.",
     date: D,
@@ -731,7 +750,7 @@ export const armeringTill2: Post[] = [
       "dagvattenmagasin betong armering",
     ],
     content: [
-      { type: "p", text: "Platsgjutna tankar och brunnar finns i många former: vattenreservoarer, dagvattenmagasin, pumpgropar, sedimenteringsbassänger, släckvattentankar och reningsverkens bassänger. Gemensamt är att de är vätskebehållare – betongen ska vara tät, och det är armeringen som bestämmer hur stora sprickorna blir."  },
+      { type: "p", text: "En platsgjuten tank eller brunn armeras för täthet, inte bara för bärförmåga: ringar eller dubbelsidig väggarmering som tar vätsketrycket, en botten som klarar grundvattnets lyftkraft och tätade gjutfogar. Det gäller vattenreservoarer, dagvattenmagasin, pumpgropar och släckvattentankar."  },
       { type: "p", text: "Konstruktionen liknar en pool: botten, väggar och tätade gjutfogar. Därför levererar vi armering till tankar och brunnar på samma sätt som [poolarmering](/produkter/poolarmering) – bockad efter ritning och märkt per del."  },
 
       { type: "h2", text: "Rund eller rektangulär"  },
@@ -763,18 +782,16 @@ export const armeringTill2: Post[] = [
       { type: "h2", text: "Vanliga fel" },
       { type: "ul", items: ["Ringskarvar i samma snitt runt hela tanken.", "Startjärn för korta för skarv med väggarmeringen.", "Distanser som ger för litet täckskikt mot vätskesidan.", "Genomföringar för rör som borras i efterhand genom armeringen i stället för att gjutas in."] },
 
-      { type: "p", text: "Planera genomföringarna tidigt. Ett rör som gjuts in med flänsar eller tätningsringar blir tätt; ett hål som borras i efterhand skär av armeringsjärn och blir en svag punkt." },
-      
-      { type: "p", text: "Tänk också på att tanken provtrycks innan den tas i bruk. Fylls den med vatten och läcker vid en gjutfog eller spricka blir lagningen dyr. Rätt armering, tätade fogar och ordentlig härdning är det billigaste sättet att klara provningen första gången." },
+      { type: "p", text: "Planera genomföringarna tidigt. Ett rör som gjuts in med flänsar eller tätningsringar blir tätt; ett hål som borras i efterhand skär av armeringsjärn och blir en svag punkt. Och tanken provtrycks med vatten innan den tas i bruk – en läckande gjutfog är dyr att laga i efterhand." },
 
-      { type: "h2", text: "Beställ armeringen"  },
-      { type: "p", text: "Vi tillverkar ringar, bockade järn och nät till tankar, brunnar och bassänger i kamstål B500B och levererar i hela Sverige. Se [poolarmering](/produkter/poolarmering) för hur vi levererar till bassänger, eller skicka ritningen via [offertformuläret](/offert)."  },
+      { type: "h2", text: "Ringar, hörnjärn och startjärn efter ritning"  },
+      { type: "p", text: "Skicka tankens armeringsritning eller bockningslista via [offertformuläret](/offert). Ringarna bockas efter radien och märks per höjdnivå, hörn- och startjärn per position. Vi levererar på samma sätt som till bassänger – se [poolarmering](/produkter/poolarmering)."  },
     ],
     faqs: [
       { q: "Hur armeras en rund betongtank?", a: "Med horisontell ringarmering som tar vätsketrycket, tätare längst ner, vertikal armering och en armerad botten med startjärn upp i väggen. Konstruktören dimensionerar." },
       { q: "Vilken norm gäller för betongtankar?", a: "Eurokod 2 del 3, SS-EN 1992-3, för vätskebehållare. Den ger krav på sprickbredd beroende på täthetsklass." },
       { q: "Varför används klena järn tätt i stället för grova?", a: "Många klena järn fördelar sprickorna så att de blir fler men smalare, vilket ger bättre täthet." },
-      { q: "Kan ni bocka ringar efter radie?", a: "Ja, vi bockar järn efter den radie som anges på ritningen eller i bockningslistan." },
+      { q: "Varför lyfts en tom tank av grundvattnet?", a: "Vattnet under bottenplattan trycker uppåt. Om tanken är tom och lätt kan den flyta upp. Konstruktören motverkar det med tjockare botten eller en utskjutande bottenplatta som belastas av jord." },
     ],
     target: { href: "/produkter/poolarmering", label: "Armering till tankar & bassänger" },
     category: "armering-till",
@@ -786,7 +803,7 @@ export const armeringTill2: Post[] = [
     title: "Armering till maskinfundament i industrin",
     metaTitle: "Armering maskinfundament – industri",
     metaDescription:
-      "Hur armeras ett maskinfundament? Ytarmering, ingjutna bultar, vibrationer och massiva gjutningar – typisk uppbyggnad och vad konstruktören behöver veta.",
+      "Armering till maskinfundament: ytarmering mot temperatursprickor, järn kring bultgrupper och vikt per m². Tillverkad efter ritning, märkt per position.",
     excerpt:
       "Pressar, kompressorer, sågverk och kvarnar står på massiva fundament som ska tåla vibrationer i decennier. Så är armeringen uppbyggd.",
     date: D,
@@ -800,7 +817,7 @@ export const armeringTill2: Post[] = [
       "fundament press armering",
     ],
     content: [
-      { type: "p", text: "Ett maskinfundament bär en press, en kompressor, en turbin, en kross eller en annan tung maskin. Det ska ta maskinens vikt, de dynamiska krafterna när den går och ofta stötar vid start och stopp. Samtidigt får fundamentet inte överföra vibrationer till resten av byggnaden. Betongens massa gör jobbet, och armeringen håller ihop massan."  },
+      { type: "p", text: "Ett maskinfundament armeras med ytarmering på alla sidor, grövre bottenarmering, extra järn runt bultgrupperna och genomgående byglar som binder ihop blocket. Det är massan som tar upp vibrationerna från pressen, kompressorn eller krossen – armeringen håller ihop massan och begränsar sprickorna."  },
       { type: "p", text: "Industrifundament har ofta många positioner och ska passa exakt mot bultgrupper och utsparingar. Som [armeringsleverantör](/armeringsleverantor) tillverkar vi armeringen efter konstruktörens ritning och märker varje position, så att montaget går rätt första gången."  },
 
       { type: "h2", text: "Typisk uppbyggnad"  },
@@ -826,17 +843,16 @@ export const armeringTill2: Post[] = [
         "Använd kraftiga stöd för överkantsarmeringen – den bär folk och utrustning under gjutningen.",
         "Märk armeringen per position och lager, särskilt när fundamentet har flera nivåer.",
         "Planera skarvlägen så att de inte sammanfaller med bultgrupperna.",
+        "Be maskinleverantören om fundamentunderlaget tidigt – bultplan, utsparingar och laster styr hela armeringsritningen.",
       ] },
 
       { type: "h2", text: "Mängd och format" },
       { type: "p", text: "Ett stort maskinfundament kan ha både grova raka järn i långa längder och många korta byglar och hakar. Långa järn levereras som raka stänger i den längd ritningen anger, upp till transportens begränsningar, och skarvas där konstruktören bestämt. Byglar och hakar levereras buntade per position. Exempel på vikt: ett järn Ø16 väger 1,58 kg/m och ett Ø20 2,47 kg/m – ytarmering Ø16 c/c 200 i två riktningar väger alltså cirka 15,8 kg per m² och lager." },
 
-      { type: "p", text: "Ett annat tips är att be maskinleverantören om ett fundamentunderlag tidigt i projektet. Det innehåller ofta bultplan, utsparingar och laster som konstruktören behöver – och som styr hela armeringsritningen." },
-      
-      { type: "p", text: "Fundamentets yta mot maskinen undergjuts ofta efter att maskinen är uppriktad. Armeringen i överkant ska därför sluta med tillräckligt täckskikt under den nivå där undergjutningen börjar, så att bultar och lager kan justeras utan att järn är i vägen." },
+      { type: "p", text: "Fundamentets topp undergjuts ofta efter att maskinen är uppriktad. Överkantsarmeringen ska därför sluta med täckskikt under undergjutningens nivå, så att bultar och lager kan justeras utan att järn är i vägen." },
 
-      { type: "h2", text: "Beställ armering till maskinfundament"  },
-      { type: "p", text: "Vi tillverkar armering till industrifundament efter ritning eller bockningslista, i kamstål B500B, och levererar i hela Sverige – också till bruk och industrier i Norrland. Läs mer om oss som [armeringsleverantör](/armeringsleverantor) eller skicka underlaget via [offertformuläret](/offert)."  },
+      { type: "h2", text: "Skicka ritningen och bultplanen"  },
+      { type: "p", text: "Skicka armeringsritning eller bockningslista tillsammans med bultplanen via [offertformuläret](/offert). Vi kontrollerar att positionerna går ihop, tillverkar per lager och levererar i den ordning fundamentet byggs – även till bruk och industrier i Norrland. Mer om hur vi arbetar finns under [armeringsleverantör](/armeringsleverantor)."  },
     ],
     faqs: [
       { q: "Hur armeras ett maskinfundament?", a: "Med ytarmering på alla sidor, bottenarmering, extra järn runt bultgrupper och genomgående byglar som binder ihop blocket. Konstruktören dimensionerar utifrån maskinleverantörens laster." },
@@ -852,9 +868,9 @@ export const armeringTill2: Post[] = [
   {
     slug: "armering-till-vindkraftsfundament",
     title: "Armering till vindkraftsfundament",
-    metaTitle: "Armering vindkraftsfundament – B2B",
+    metaTitle: "Armering vindkraftsfundament – typer & logistik",
     metaDescription:
-      "Hur armeras ett vindkraftsfundament? Gravitations- och bergförankrade fundament, radial- och ringarmering, bultkorg och logistik till vindparker.",
+      "Armering till vindkraftsfundament: radial- och ringarmering, bultkorg, utmattning, vikter Ø20–Ø32. Leverans per fundament till vindparker i hela Sverige.",
     excerpt:
       "Ett vindkraftsfundament innehåller tiotals ton armering, ofta grova dimensioner och tät armering kring bultkorgen. Så är det uppbyggt – och vad som krävs av leveransen.",
     date: D,
@@ -868,8 +884,8 @@ export const armeringTill2: Post[] = [
       "armering vindpark",
     ],
     content: [
-      { type: "p", text: "Ett vindkraftverk ger enorma moment i fundamentet. Tornet är högt, rotorn tar vind och lasten växlar hela tiden riktning. Fundamentet ska hålla tornet stilla i decennier, och armeringen är tät, grov och utmattningsbelastad. För entreprenören handlar det dessutom om logistik: stora mängder, rätt ordning och leverans till platser långt från närmaste stad."  },
-      { type: "p", text: "Vi levererar armering till vindkraftsfundament som [armeringsleverantör](/armeringsleverantor) till anläggnings- och byggentreprenörer – tillverkad efter konstruktörens ritning, märkt per position och skickad till vindparker i hela Sverige, inklusive Norrland."  },
+      { type: "p", text: "Ett vindkraftsfundament armeras med radiella järn och ringar i över- och underkant, skjuvbyglar däremellan och tät armering runt bultkorgen – ofta i Ø20–Ø32 och tiotals ton per fundament. Lasten växlar riktning hela tiden, så fundamentet kontrolleras för utmattning. För entreprenören är logistiken lika avgörande som armeringen."  },
+      { type: "p", text: "Som [armeringsleverantör](/armeringsleverantor) till anläggningsentreprenörer tillverkar vi armeringen efter konstruktörens ritning, märker den per fundament och position och levererar till vindparker i hela Sverige, inklusive Norrland."  },
 
       { type: "h2", text: "Två vanliga fundamenttyper"  },
       { type: "table", head: ["Typ", "Hur det bär", "Armering"], rows: [
@@ -908,10 +924,10 @@ export const armeringTill2: Post[] = [
 
       { type: "p", text: "Med grova dimensioner blir vikterna stora snabbt. Ett enda radialjärn Ø32 som är 10 m långt väger drygt 63 kg. Det påverkar hur buntarna ska packas, hur de lyfts av på plats och hur många transporter som behövs per fundament." },
       
-      { type: "p", text: "Bergförankrade fundament kräver färre ton armering men mer precision. Stagen borras och spänns efter att plattan har gjutits, och armeringen ska lämna fria kanaler för dem. Här är en noggrann bockningslista och tydlig märkning lika viktig som på ett stort gravitationsfundament." },
+      { type: "p", text: "Bergförankrade fundament kräver färre ton men mer precision: armeringen ska lämna fria kanaler för stagen, som borras och spänns efter gjutningen." },
 
-      { type: "h2", text: "Begär offert på vindkraftsprojekt"  },
-      { type: "p", text: "Skicka armeringsritningar eller bockningslistor för fundamenten så räknar vi mängd och leveransplan. Läs mer om oss som [armeringsleverantör](/armeringsleverantor), se [pålarmering](/produkter/palarmering) för pålade fundament, eller använd [offertformuläret](/offert)."  },
+      { type: "h2", text: "Begär offert per fundament"  },
+      { type: "p", text: "Skicka armeringsritningar eller bockningslistor och antal fundament via [offertformuläret](/offert). Du får mängd och leveransplan per fundament, med frakt planerad efter vägen och mottagningen på plats. Pålade fundament hanteras som [pålarmering](/produkter/palarmering)."  },
     ],
     faqs: [
       { q: "Hur mycket armering går det åt till ett vindkraftsfundament?", a: "Ofta tiotals ton per fundament, beroende på turbinstorlek, fundamenttyp och mark. Exakt mängd framgår av armeringsritningen." },
@@ -929,7 +945,7 @@ export const armeringTill2: Post[] = [
     title: "Armering till grund för hus på berg",
     metaTitle: "Grund på berg – armering & dymlingar",
     metaDescription:
-      "Så armeras grunden när huset står på berg: platta på avjämnat berg, kantbalk med dymlingar eller plintar. Typlösningar, borrade förankringsjärn och tips.",
+      "Grund på berg: platta på avjämnat berg, kantbalk med varierande höjd eller plintar – och dymlingar borrade i berget. Beställ grundarmeringen efter ritning.",
     excerpt:
       "Berg är den bästa grunden – men den är ojämn. Så armeras en platta, kantbalk eller plintar när huset ska stå på berg.",
     date: D,
@@ -943,7 +959,7 @@ export const armeringTill2: Post[] = [
       "kantbalk mot berg",
     ],
     content: [
-      { type: "p", text: "Berg sätter sig inte och tjälar inte. Därför är berg i princip en idealisk grund. Utmaningen är att berget sällan är plant: det lutar, har sprickor och svackor, och vatten rinner längs ytan. Grunden ska anpassas till berget, och armeringen följer den anpassningen."  },
+      { type: "p", text: "På berg armeras grunden som en vanlig platta eller som kantbalkar och plintar som följer berget, ofta med dymlingar borrade i berget. Berget sätter sig inte och tjälar inte, men det är sällan plant – och det är lutningen som styr armeringen."  },
       { type: "p", text: "Vi levererar [grundarmering](/produkter/grundarmering) till grunder på berg – nät, kantbalksarmering, dymlingar och bockade järn för kantbalkar med varierande höjd, efter ritning. Plattans grundprinciper beskrivs i guiden om [armering till betongplatta](/blogg/armering-till-betongplatta)."  },
 
       { type: "h2", text: "Tre vanliga lösningar"  },
@@ -978,12 +994,12 @@ export const armeringTill2: Post[] = [
       { type: "h2", text: "Sprängning eller anpassning?" },
       { type: "p", text: "Det går ofta att välja mellan att spränga berget plant och att anpassa grunden efter berget. Sprängning ger en enklare grund och en vanlig platta, men kostar och kan ge sprickor i berget. Att följa berget med kantbalkar och plintar sparar sprängning men ger fler unika armeringsdetaljer. Valet görs tidigt med geotekniker och konstruktör – och påverkar hur bockningslistan ser ut." },
 
-      { type: "p", text: "Eftersom varje bergtomt är unik blir armeringen ofta mer varierad än på en plan tomt. Det är ett skäl till att låta tillverka den efter en bockningslista i stället för att kapa och bocka på plats – varje järn kommer i rätt längd och märkt för sin plats." },
-      
-      { type: "p", text: "Glöm inte att isoleringen under och vid kanten av plattan påverkar höjderna. Kantbalkens armering ska ha rätt täckskikt även där isoleringen är tunn eller där betongen gjuts direkt mot berget." },
+      { type: "h2", text: "Exempel: byglar som följer berget" },
+      { type: "p", text: "En kantbalk på 12 m där berget faller 450 mm. Med byglar c/c 300 blir det 41 byglar. Delas balken i tre sektioner med bygelhöjd 300, 450 och 600 mm bockas tre bygeltyper, märkta per sektion – i stället för 41 byglar som kapas och anpassas på plats. Sektionsindelningen görs av konstruktören eller i bockningslistan." },
+      { type: "p", text: "Isoleringen under och vid plattans kant påverkar höjderna. Kantbalkens armering ska ha rätt täckskikt även där betongen gjuts direkt mot berget." },
 
-      { type: "h2", text: "Beställ grundarmering"  },
-      { type: "p", text: "Vi tillverkar hela grundens armering i kamstål B500B efter ritning och levererar i hela Sverige. Se [grundarmering](/produkter/grundarmering) eller skicka ritningen via [offertformuläret](/offert)."  },
+      { type: "h2", text: "Skicka ritningen – få byglarna per sektion"  },
+      { type: "p", text: "Skicka grundritningen eller bockningslistan via [offertformuläret](/offert). Vi tillverkar nät, kantbalksbyglar i rätt höjd per sektion och dymlingar som [grundarmering](/produkter/grundarmering), märkt så att varje järn hamnar på sin plats på tomten."  },
     ],
     faqs: [
       { q: "Behöver en grund på berg armeras?", a: "Ja. Plattan och kantbalkarna armeras som en vanlig grund. Berget ger bra bärighet men ersätter inte armeringen i betongen." },
@@ -1001,7 +1017,7 @@ export const armeringTill2: Post[] = [
     title: "Armering till platta på pålar",
     metaTitle: "Armering platta på pålar – pålplintar & balkar",
     metaDescription:
-      "Hur armeras en grundplatta på pålar? Pålplintar, grundbalkar, över- och underkantsarmering och genomstansning vid pålhuvuden – typlösning och tips.",
+      "Platta på pålar: armering i över- och underkant, pålplintar, grundbalkar och genomstansning. När plintkorgarna ska beställas. Begär offert på pålarmering.",
     excerpt:
       "På lös lera bärs huset av pålar i stället för av marken. Plattan blir då ett bjälklag över pålarna – och armeras därefter.",
     date: D,
@@ -1015,7 +1031,7 @@ export const armeringTill2: Post[] = [
       "pålgrundläggning armering",
     ],
     content: [
-      { type: "p", text: "När marken består av lös lera eller annan sättningsbenägen jord räcker det inte att lägga plattan direkt på marken. I stället slås eller borras pålar ner till fastare lager, och plattan vilar på pålarna. Plattan bärs då inte längre jämnt av marken – den spänner mellan pålarna som ett bjälklag, och armeringen måste dimensioneras för det."  },
+      { type: "p", text: "En platta på pålar armeras som ett bjälklag: i både över- och underkant, med extra överkantsjärn över pålhuvudena och ofta pålplintar eller grundbalkar. Skälet är att plattan inte längre bärs jämnt av marken utan spänner mellan pålarna, som slås eller borras ner genom lös lera till fastare lager."  },
       { type: "p", text: "Armeringen över pålarna – pålplintar, pålkorgar och förstärkningar – är en specialitet i sig. Vi tillverkar den som [pålarmering](/produkter/palarmering) efter konstruktörens ritning, märkt per påle och position."  },
 
       { type: "h2", text: "Tre sätt att bygga plattan"  },
@@ -1044,16 +1060,14 @@ export const armeringTill2: Post[] = [
       { type: "p", text: "Pålar hamnar sällan exakt där ritningen säger. Efter pålningen mäts pålarnas verkliga läge in, och konstruktören bedömer om avvikelserna kräver extra armering eller ändrade plintar. Beställ därför plintkorgarna när pålarna är inmätta, eller planera en tolerans i korgarnas mått."  },
 
       { type: "h2", text: "Märkning och leverans"  },
-      { type: "p", text: "En pålad grund kan ha hundratals plintar och korgar som liknar varandra men inte är identiska. Märkning per position och plint, och leverans i monteringsordning, sparar mycket tid på bygget. Vi märker och sorterar armeringen per position och levererar i hela Sverige."  },
+      { type: "p", text: "En pålad grund kan ha hundratals plintar som liknar varandra men inte är identiska. Märkning per plint och leverans i monteringsordning sparar mycket tid – särskilt när några plintar har fått ändrade mått efter inmätningen."  },
 
       { type: "h2", text: "Pålar i olika material" },
       { type: "p", text: "Vanliga pålar är slagna betongpålar, stålrörspålar och borrade pålar. Typen påverkar hur pålen ansluts till plattan: en betongpåle kan ha anslutningsjärn som sticker upp, en stålrörspåle kan ha en topplatta eller ingjutet armeringsjärn. Pålleverantören och konstruktören anger detaljen, och plintkorgen anpassas efter den." },
       { type: "p", text: "Grundbalkar mellan pålplintarna armeras som vanliga balkar, med längsjärn och byglar. Läs mer om reglerna i guiden om [armering till balk](/blogg/armering-till-balk). Plattan ovanpå armeras ofta med nät i båda lagren, kompletterat med lösa järn över pålarna och balkarna." },
       
-      { type: "p", text: "En pålad grund är dyrare än en platta på mark, men på lös lera ofta det enda sättet att undvika sättningar. Armeringen står för en mindre del av kostnaden – men ett fel i den kan ge sprickor som är mycket dyra att åtgärda i efterhand." },
-
-      { type: "h2", text: "Beställ pålarmering"  },
-      { type: "p", text: "Vi tillverkar pålplintkorgar, balkkorgar och plattarmering till pålade grunder i kamstål B500B efter ritning. Se [pålarmering](/produkter/palarmering) eller skicka ritningen via [offertformuläret](/offert)."  },
+      { type: "h2", text: "Beställ i två steg"  },
+      { type: "p", text: "Plattans nät och grundbalkarnas korgar kan beställas när ritningen är klar. Plintkorgarna beställs bäst när pålarna är inmätta. Skicka ritningen och, när den finns, inmätningen via [offertformuläret](/offert) – vi tillverkar [pålarmering](/produkter/palarmering), balkkorgar och plattarmering märkt per plint och position."  },
     ],
     faqs: [
       { q: "Varför armeras en platta på pålar i både över- och underkant?", a: "Mellan pålarna får plattan drag i underkant, men över pålarna får den drag i överkant. Båda zonerna behöver armering." },

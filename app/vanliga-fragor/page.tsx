@@ -5,7 +5,6 @@ import { Section, SectionHeading, Button } from "@/components/ui";
 import { Breadcrumbs, CtaBanner } from "@/components/sections";
 import { FaqAccordion } from "@/components/FaqAccordion";
 import { JsonLd, faqSchema, breadcrumbSchema } from "@/lib/jsonld";
-import { IconArrow } from "@/components/icons";
 
 export const metadata: Metadata = {
   title: "Vanliga frågor om prefab armering",
@@ -27,14 +26,11 @@ export default function VanligaFragorPage() {
           intro="Här har vi samlat de vanligaste frågorna vi får om prefabricerad armering – från offert och underlag till kvalitet, leverans och montage. Hittar du inte svaret? Hör av dig så hjälper vi dig."
         />
         <div className="mt-10">
-          <FaqAccordion items={faq} />
+          <FaqAccordion items={faq} headingLevel={2} />
         </div>
 
         <div className="mx-auto mt-10 flex max-w-3xl flex-wrap gap-4">
-          <Button href="/offert">
-            Begär offert <IconArrow className="h-4 w-4" />
-          </Button>
-          <Button href="/armeringskalkylator" variant="outline">
+          <Button href="/armeringskalkylator" variant="secondary">
             Öppna armeringskalkylatorn
           </Button>
         </div>

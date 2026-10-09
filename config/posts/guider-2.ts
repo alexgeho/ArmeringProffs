@@ -22,7 +22,7 @@ export const guider2: Post[] = [
     ],
     content: [
       { type: "p", text: "Hur mycket armering går det åt per kubikmeter betong? Siffran – ofta kallad armeringsgrad eller armeringsmängd i kg/m³ – används för tidiga kalkyler innan konstruktören har tagit fram ritningar. Den är ett riktvärde, inte ett facit. Den exakta mängden räknas fram ur ritningen, och det är den som avgör [priset på armering](/armering-pris)." },
-      { type: "p", text: "Nedan finns typiska intervall per konstruktionsdel, ett räkneexempel och de faktorer som drar siffran uppåt eller nedåt. Vill du ha en exakt mängd och ett pris kan du skicka ritningen till oss och [begära pris på armering](/armering-pris)." },
+      { type: "p", text: "Nedan finns typiska intervall per konstruktionsdel, ett räkneexempel för en villaplatta och de fel som oftast gör tidiga kalkyler för låga. Har du redan ritning behöver du inte räkna själv: vi tar fram exakt vikt per position." },
 
       { type: "h2", text: "Riktvärden: kg armering per m³ betong" },
       { type: "p", text: "Intervallen bygger på vanliga erfarenhetsvärden för konstruktioner i kamstål B500B. Spännvidden är stor eftersom laster, spännvidder, dimensioner och krav på sprickbegränsning varierar mellan projekt." },
@@ -77,17 +77,18 @@ export const guider2: Post[] = [
       { type: "p", text: "Kg/m³ ska heller aldrig användas för att bestämma armeringen. Den siffran är en följd av dimensioneringen, inte ett mått på om konstruktionen håller." },
 
       { type: "h2", text: "Exempel: villaplatta 10 × 12 m" },
-      { type: "p", text: "En platta på 120 m² med 100 mm tjocklek innehåller 12 m³ betong i själva plattan. Med ett nät Ø8 c150 blir det cirka 5,3 kg/m², alltså runt 640 kg nät plus 10–15 % för överlapp – ungefär 700–730 kg. Till det kommer kantbalken. En kantbalk runt hela plattan är 44 m lång, och med fyra längsgående Ø12 och byglar Ø8 c300 hamnar den ofta på 200–300 kg beroende på bygelns storlek. Totalt landar plattan då på knappt ett ton armering, eller runt 50–60 kg per m³ betong om kantbalkens betong räknas in." },
+      { type: "p", text: "En platta på 120 m² med 100 mm tjocklek innehåller 12 m³ betong i själva plattan. Med ett nät Ø8 c150 blir det cirka 5,3 kg/m², alltså runt 640 kg nät plus 10–20 % för överlapp – ungefär 700–770 kg. Till det kommer kantbalken. En kantbalk runt hela plattan är 44 m lång, och med fyra längsgående Ø12 och byglar Ø8 c300 hamnar den ofta på 200–300 kg beroende på bygelns storlek. Totalt landar plattan då på knappt ett ton armering, eller runt 50–60 kg per m³ betong om kantbalkens betong räknas in." },
       { type: "p", text: "Exemplet visar varför riktvärdena har stort spann: en tjockare platta, dubbelt nät eller extra järn under bärande väggar flyttar siffran snabbt. Det är också därför en offert bör bygga på ritningen och inte på ett schablonvärde." },
 
       { type: "h2", text: "Från riktvärde till exakt pris" },
-      { type: "p", text: "När ritningen finns tar vi fram en armeringsspecifikation med exakt vikt per position och tillverkar armeringen klippt, bockad och märkt. Läs mer om [vad som påverkar priset på armering](/armering-pris), eller skicka ritning eller mängd via [offertformuläret](/offert) så får du ett pris med frakt till din ort." },
+      { type: "p", text: "När ritningen finns tar vi fram en armeringsspecifikation med exakt vikt per position och tillverkar armeringen klippt, bockad och märkt. Läs mer om [vad som påverkar priset på armering](/armering-pris), eller skicka ritningen via [offertformuläret](/offert) och få exakt mängd och pris med frakt till din ort." },
     ],
     faqs: [
       { q: "Hur många kg armering går det åt per m³ betong?", a: "Det beror på konstruktionsdel. Riktvärden: platta på mark för villa 30–70 kg/m³, grundbalkar 80–150 kg/m³, bjälklag 80–150 kg/m³, balkar 150–250 kg/m³ och pelare 150–300 kg/m³. Konstruktören och ritningen avgör den verkliga mängden." },
       { q: "Hur räknar man om kg/m² till kg/m³?", a: "Dela vikten per kvadratmeter med plattans tjocklek i meter. Ett nätlager Ø8 c150 väger cirka 5,3 kg/m², vilket i en 100 mm platta motsvarar cirka 53 kg/m³." },
       { q: "Kan man dimensionera armering med kg/m³?", a: "Nej. Kg/m³ är ett riktvärde för tidiga kalkyler. Själva armeringen ska dimensioneras av en konstruktör enligt Eurokod 2." },
-      { q: "Ingår skarvar och spill i riktvärdena?", a: "Räkna med cirka 10–15 % extra för skarvöverlapp och kapning ovanpå den teoretiska mängden, om inte kalkylen redan bygger på en färdig armeringsspecifikation." },
+      { q: "Ingår skarvar och spill i riktvärdena?", a: "Räkna med cirka 10–20 % extra för skarvöverlapp och kapning ovanpå den teoretiska mängden, om inte kalkylen redan bygger på en färdig armeringsspecifikation." },
+      { q: "Kan ni räkna fram mängden från min ritning?", a: "Ja. Skicka konstruktionsritningen så tar vi fram en specifikation med vikt per position och ett pris med frakt till din ort. Finns ingen ritning behöver en konstruktör först dimensionera armeringen." },
     ],
     target: { href: "/armering-pris", label: "Begär pris på armering" },
     category: "guider",
@@ -384,7 +385,7 @@ export const guider2: Post[] = [
       { type: "p", text: "Sedan 2022 ska de flesta nya byggnader som kräver bygglov ha en klimatdeklaration till Boverket. Den omfattar byggskedet och materialen, där armering ingår. Byggherren kan använda generiska värden från Boverkets klimatdatabas eller produktspecifika värden från en EPD. Produktspecifika värden kan ge ett bättre resultat om stålet har lägre klimatpåverkan än det generiska värdet." },
 
       { type: "h2", text: "CBAM – klimattull på importerat stål" },
-      { type: "p", text: "CBAM (Carbon Border Adjustment Mechanism) är EU:s koldioxidjustering vid gränsen. Den gäller import av bland annat järn och stål – inklusive armeringsstänger – från länder utanför EU. Efter en övergångsperiod med enbart rapportering gäller sedan 1 januari 2026 den slutliga ordningen, där importörer ska betala för de inbäddade utsläppen via CBAM-certifikat. Stål som tillverkas inom EU omfattas av EU:s utsläppshandel i stället för CBAM." },
+      { type: "p", text: "CBAM (Carbon Border Adjustment Mechanism) är EU:s koldioxidjustering vid gränsen. Den gäller import av bland annat järn och stål – inklusive armeringsstänger – från länder utanför EU. Övergångsperioden 2023–2025 innebar bara rapportering. Sedan 1 januari 2026 gäller den slutliga perioden: importören ska vara godkänd CBAM-deklarant och betala för de inbäddade utsläppen med CBAM-certifikat. Enligt ändringsförordningen (EU) 2025/2083 säljs certifikaten för 2026 års import från februari 2027, och importörer under 50 ton CBAM-varor per år är undantagna. Stål som tillverkas inom EU omfattas av EU:s utsläppshandel i stället för CBAM. Reglerna justeras fortfarande, så kontrollera aktuellt läge (uppgifterna gäller oktober 2026)." },
       { type: "p", text: "För dig som köpare innebär CBAM framför allt att stålets ursprung och utsläppsdata blir viktigare – och att priset på importerat stål från länder med höga utsläpp kan påverkas." },
 
       { type: "h2", text: "Minska klimatavtrycket i ditt projekt" },
@@ -411,7 +412,7 @@ export const guider2: Post[] = [
     faqs: [
       { q: "Vad är en EPD för armering?", a: "En tredjepartsgranskad miljövarudeklaration enligt SS-EN 15804 som redovisar armeringsstålets miljöpåverkan, oftast per ton. GWP för A1–A3 visar klimatpåverkan fram till fabriksgrind." },
       { q: "Är armering gjord av återvunnet stål?", a: "Det mesta armeringsstålet i Europa tillverkas av skrot i ljusbågsugn och har hög andel återvunnet material. Andelen framgår av tillverkarens EPD." },
-      { q: "Vad är CBAM?", a: "EU:s koldioxidjustering vid gränsen. Importörer av bland annat stål från länder utanför EU ska sedan 2026 betala för de inbäddade utsläppen via CBAM-certifikat." },
+      { q: "Vad är CBAM?", a: "EU:s koldioxidjustering vid gränsen. För stål som importeras från länder utanför EU gäller sedan 2026 att importören betalar för de inbäddade utsläppen via CBAM-certifikat. Certifikaten för 2026 års import köps från 2027, och små importörer under 50 ton per år är undantagna (läget oktober 2026)." },
       { q: "Ingår armering i klimatdeklarationen?", a: "Ja. Klimatdeklarationen omfattar byggskedets material, och armering räknas in med antingen generiska värden från Boverkets klimatdatabas eller produktspecifika EPD-värden." },
       { q: "Hur jämför man två EPD:er för armering?", a: "Jämför samma deklarerade enhet, oftast 1 ton, och samma moduler, till exempel A1–A3. Kontrollera också att båda är giltiga och framtagna enligt SS-EN 15804." },
     ],
@@ -440,8 +441,8 @@ export const guider2: Post[] = [
       { type: "p", text: "”Är armeringen CE-märkt?” är en vanlig fråga i upphandlingar. Svaret överraskar ofta: armeringsstål CE-märks i regel inte i dag. Det betyder inte att det saknas krav – kvaliteten visas i stället genom certifiering och intyg. Det här bör du fråga din [armeringsleverantör](/armeringsleverantor) efter." },
 
       { type: "h2", text: "Varför armeringsstål normalt inte är CE-märkt" },
-      { type: "p", text: "CE-märkning av byggprodukter förutsätter enligt byggproduktförordningen en harmoniserad standard eller en europeisk teknisk bedömning. För armeringsstål finns den europeiska standarden SS-EN 10080, men den är inte harmoniserad. Därför används nationella produktstandarder och certifieringssystem. I Sverige anges egenskaperna för kamstål B500B i SS 212540." },
-      { type: "p", text: "En ny byggproduktförordning har beslutats inom EU och införs stegvis, så läget kan förändras på sikt. Ta därför in aktuella intyg för varje projekt i stället för att förlita dig på en märkning." },
+      { type: "p", text: "CE-märkning av byggprodukter förutsätter enligt byggproduktförordningen en harmoniserad standard eller en europeisk teknisk bedömning. För armeringsstål finns den europeiska standarden SS-EN 10080, men den är inte harmoniserad. EN 10080:2005 togs bort ur EU:s lista över harmoniserade standarder genom kommissionens beslut 2006/893/EG, och en reviderad version är fortfarande under arbete. Därför används nationella produktstandarder och certifieringssystem. I Sverige anges egenskaperna för kamstål B500B i SS 212540." },
+      { type: "p", text: "Den nya byggproduktförordningen (EU) 2024/3110 ersätter den gamla stegvis från 2026, så läget kan förändras när en ny version av EN 10080 blir harmoniserad. Ta därför in aktuella intyg för varje projekt i stället för att förlita dig på en märkning." },
 
       { type: "h2", text: "Intyg och dokument att be om" },
       { type: "table",
@@ -489,7 +490,7 @@ export const guider2: Post[] = [
       { type: "p", text: "Ange vilka intyg du behöver redan i förfrågan, så framgår det av offerten vad som levereras med armeringen. Läs mer om vad du kan förvänta dig av en [armeringsleverantör](/armeringsleverantor) eller skicka underlaget via [offertformuläret](/offert)." },
     ],
     faqs: [
-      { q: "Är armering CE-märkt?", a: "Armeringsstål CE-märks i regel inte i dag, eftersom den europeiska standarden SS-EN 10080 inte är harmoniserad. Kvaliteten visas i stället med certifiering mot nationell produktstandard och intyg, i Sverige SS 212540 för B500B." },
+      { q: "Är armering CE-märkt?", a: "Armeringsstål CE-märks i regel inte i dag, eftersom den europeiska standarden SS-EN 10080 inte är harmoniserad (den drogs tillbaka som harmoniserad standard 2006). Kvaliteten visas i stället med certifiering mot nationell produktstandard och intyg, i Sverige SS 212540 för B500B." },
       { q: "Vad är ett 3.1-intyg för armering?", a: "Ett inspektionsintyg enligt SS-EN 10204 som redovisar provade värden för leveransen eller smältan, till exempel sträckgräns, brottgräns, töjning och kemisk sammansättning." },
       { q: "Vilken standard gäller för svetsad armering?", a: "SS-EN ISO 17660-1 för bärande svetsförband och SS-EN ISO 17660-2 för icke-bärande, till exempel fixeringssvetsning i korgar." },
       { q: "Hur spårar man armering på bygget?", a: "Via etiketter på buntarna, som kopplar till order, position och smälta, och via valsmärkningen i stålets ribbmönster som visar tillverkningsland och stålverk." },
@@ -535,7 +536,7 @@ export const guider2: Post[] = [
         caption: "Exempel på ordning – tider beror på projekt, leverantör och ort.",
         head: ["Steg", "Vem", "När"],
         rows: [
-          ["Konstruktionsritning för grund", "Konstruktör / husleverantör", "Före bygglovsstart eller tidigt"],
+          ["Konstruktionsritning för grund", "Konstruktör / husleverantör", "Före tekniskt samråd och startbesked"],
           ["Armeringsspecifikation", "Konstruktör, leverantör eller du", "När ritningen är fastställd"],
           ["Offert och order", "Du och leverantören", "I god tid före markarbetet är klart"],
           ["Markarbete, isolering, kantelement", "Markentreprenör", "Före leverans"],
@@ -799,9 +800,9 @@ export const guider2: Post[] = [
       },
 
       { type: "h2", text: "Minsta täckskikt med hänsyn till beständighet" },
-      { type: "p", text: "I Sverige anges cmin,dur i EKS, Boverkets tillämpning av Eurokod 2 (tabell D-1 i EKS 12, BFS 2022:4). Värdet beror på exponeringsklass, betongens vattencementtal (vct) och livslängdsklass: L20, L50 eller L100. Utdrag för vanlig armering:" },
+      { type: "p", text: "I Sverige anges cmin,dur i den svenska tillämpningen av Eurokod 2 (EKS tabell D-1, samma värden som i SS 137003). Värdet beror på exponeringsklass, betongens vattencementtal (vct) och livslängdsklass: L20, L50 eller L100. Boverkets nya byggregler (BFS 2024:6) har ersatt EKS för nya projekt efter övergångstiden som gick ut 30 juni 2026. Konstruktören anger vilken regelversion och vilka värden som gäller i ditt projekt. Utdrag för vanlig armering:" },
       { type: "table",
-        caption: "cmin,dur i mm enligt EKS 12 tabell D-1 (utdrag). XC2–XC4 gäller bindemedel med minst 80 % portlandcementklinker. Konstruktören och ritningen avgör.",
+        caption: "cmin,dur i mm enligt EKS tabell D-1 (utdrag). XC2–XC4 gäller bindemedel med minst 80 % portlandcementklinker. XS-värdena gäller kloridhalt i havet upp till 0,4 % (ostkusten). Konstruktören och ritningen avgör.",
         head: ["Klass", "Max vct", "L50", "L100"],
         rows: [
           ["XC1", "0,90", "10", "15"],
@@ -822,7 +823,7 @@ export const guider2: Post[] = [
       { type: "ol", items: [
         "cmin = det största av cmin,b (vidhäftning, normalt minst stångdiametern), cmin,dur och 10 mm.",
         "cnom = cmin + Δcdev, en tolerans för utförandet – normalt 10 mm.",
-        "Gjuts betongen direkt mot jord ska täckskiktet vara minst 75 mm, mot preparerat underlag minst 40 mm.",
+        "Gjuts betongen direkt mot jord rekommenderar Eurokod 2 minst 75 mm nominellt täckskikt, mot avjämnat och förberett underlag minst 40 mm.",
         "Det nominella värdet anges på ritningen och styr valet av distanser.",
       ] },
 
@@ -856,7 +857,7 @@ export const guider2: Post[] = [
       { type: "p", text: "Vi levererar [distanser](/produkter/distanser) i höjder som passar täckskiktet på ritningen, tillsammans med armeringen. Skicka ritning eller mängd via [offertformuläret](/offert)." },
     ],
     faqs: [
-      { q: "Vilket täckskikt krävs i exponeringsklass XC4?", a: "Enligt EKS 12 tabell D-1 är cmin,dur 20 mm för L50 och 25 mm för L100 vid vct 0,55. Med en tolerans på normalt 10 mm blir det nominella täckskiktet cirka 30–35 mm. Ritningen avgör." },
+      { q: "Vilket täckskikt krävs i exponeringsklass XC4?", a: "Enligt EKS tabell D-1 är cmin,dur 20 mm för L50 och 25 mm för L100 vid vct 0,55. Med en tolerans på normalt 10 mm blir det nominella täckskiktet cirka 30–35 mm. Ritningen avgör." },
       { q: "Vilket täckskikt krävs i XD3?", a: "cmin,dur är 35 mm för L50 och 45 mm för L100 vid vct 0,40. Nominellt täckskikt blir normalt 45–55 mm." },
       { q: "Har frostklasserna XF egna täckskikt?", a: "Nej. Frostbeständigheten styrs av betongens sammansättning. Täckskiktet bestäms av den XC-, XD- eller XS-klass som gäller samtidigt." },
       { q: "Vad är skillnaden mellan cmin och cnom?", a: "cmin är minsta täckskikt med hänsyn till vidhäftning och beständighet. cnom är cmin plus en tolerans för utförandet, normalt 10 mm, och är det värde som anges på ritningen." },
@@ -1062,9 +1063,9 @@ export const guider2: Post[] = [
     title: "Armeringsordlista A–Ö – begrepp från bockningslista till täckskikt",
     metaTitle: "Armeringsordlista A–Ö – ord och begrepp",
     metaDescription:
-      "Armeringsordlista A–Ö: 50 vanliga begrepp om armering förklarade – från B500B, bockningslista och byglar till förankringslängd, täckskikt och överlapp.",
+      "Armeringsordlista A–Ö: drygt 50 begrepp om armering förklarade – från B500B, bockningslista och byglar till förankringslängd, täckskikt och överlapp.",
     excerpt:
-      "Armeringsritningar och offerter är fulla av facktermer. Här är 50 vanliga begrepp om armering förklarade kort, från A till Ö.",
+      "Armeringsritningar och offerter är fulla av facktermer. Här är drygt 50 vanliga begrepp om armering förklarade kort, från A till Ö.",
     date: "2026-10-09",
     readingMinutes: 9,
     keywords: [
@@ -1169,7 +1170,7 @@ export const guider2: Post[] = [
       { type: "p", text: "Har du ritning eller bockningslista räknar vi fram mängd och pris för din armering. Läs om [vad armering kostar](/armering-pris) eller skicka underlaget via [offertformuläret](/offert)." },
     ],
     faqs: [
-      { q: "Vad betyder B500B?", a: "B står för armeringsstål (bar), 500 för sträckgränsen 500 MPa och det sista B för duktilitetsklass B, som kräver minst 5 % töjning vid maxlast." },
+      { q: "Vad betyder B500B?", a: "500 anger den karakteristiska sträckgränsen 500 MPa och det sista B duktilitetsklass B, som kräver minst 5 % töjning vid maxlast. I Sverige anges B500B i SS 212540." },
       { q: "Vad är skillnaden mellan armeringsspecifikation och bockningslista?", a: "Begreppen används ofta om samma sak. Specifikationen är förteckningen över all armering i projektet, och bockningslistan är underlaget för att kapa och bocka varje position." },
       { q: "Vad betyder c/c på en armeringsritning?", a: "Centrumavståndet mellan järnen. c150 betyder 150 mm mellan järnens centrum." },
       { q: "Vad är skillnaden mellan täckskikt och distans?", a: "Täckskiktet är betongen mellan armering och yta. Distansen är den detalj som håller armeringen på plats så att täckskiktet blir rätt." },
@@ -1243,7 +1244,7 @@ export const guider2: Post[] = [
       },
 
       { type: "h2", text: "Kvalitet och kontroll" },
-      { type: "p", text: "Oavsett lösning ska armeringen följa ritningen och kontrolleras före gjutning. Med nät och prefab är måtten givna från fabrik och verkstad, och kontrollen handlar mest om läge, täckskikt och skarvar. Med lösa järn tillkommer kontroll av längder, bockar och antal, eftersom de görs på plats. Märkning per position gör kontrollen snabbare – järnen kan prickas av direkt mot bockningslistan." },
+      { type: "p", text: "Alla tre lösningarna ska följa ritningen och kontrolleras före gjutning. Med nät och prefab är måtten givna från fabrik och verkstad, och kontrollen handlar mest om läge, täckskikt och skarvar. Med lösa järn tillkommer kontroll av längder, bockar och antal, eftersom de görs på plats. Märkning per position gör kontrollen snabbare – järnen kan prickas av direkt mot bockningslistan." },
 
       { type: "h2", text: "Att tänka på vid valet" },
       { type: "ol", items: [
@@ -1296,7 +1297,7 @@ export const guider2: Post[] = [
       "dålig armering",
     ],
     content: [
-      { type: "p", text: "Armeringen syns inte när betongen är gjuten, men felen syns till slut – som sprickor, rost och spjälkning. Fel i armering är svåra och dyra att åtgärda i efterhand. Här är de vanligaste felen och hur du undviker dem, oavsett om du armerar själv eller anlitar [armeringsmontage](/tjanster/armeringsmontage)." },
+      { type: "p", text: "Armeringen syns inte när betongen är gjuten, men felen syns till slut – som sprickor, rost och spjälkning. Fel i armering är svåra och dyra att åtgärda i efterhand. Här är de vanligaste felen och hur du undviker dem, både när du armerar själv och när du anlitar [armeringsmontage](/tjanster/armeringsmontage)." },
 
       { type: "h2", text: "Fel i planering och beställning" },
       { type: "ul", items: [
@@ -1359,7 +1360,7 @@ export const guider2: Post[] = [
       { type: "p", text: "Ett fel som upptäcks före gjutning kostar några minuter att rätta. Efter gjutning kan samma fel kräva bilning, borrning och ingjutning av nya järn, eller i värsta fall rivning. Därför är tiden som läggs på planering, rätt underlag och kontroll en av de bästa investeringarna i hela betongarbetet." },
 
       { type: "h2", text: "Fel som syns först efter flera år" },
-      { type: "p", text: "Vissa fel märks direkt, till exempel en kantbalk som spricker vid gjutning. Andra syns först efter flera år. För litet täckskikt i en utomhustrappa eller garageplatta kan ge rostfläckar och spjälkning efter fem till tio år. Saknade hörnjärn ger sprickor som växer när plattan rör sig med temperaturen. Därför är det viktigt att följa ritningen även där det verkar onödigt." },
+      { type: "p", text: "Vissa fel märks direkt, till exempel en kantbalk som spricker vid gjutning. Andra syns först efter flera år. För litet täckskikt i en utomhustrappa eller garageplatta kan ge rostfläckar och spjälkning efter några år, särskilt där tösalt förekommer. Saknade hörnjärn ger sprickor som växer när plattan rör sig med temperaturen. Följ därför ritningen även där en detalj verkar onödig." },
 
       { type: "h2", text: "Låt proffs montera" },
       { type: "p", text: "Vill du slippa riskerna kan vi leverera armeringen och ordna [armeringsmontage](/tjanster/armeringsmontage) efter ritningen. Skicka ritning och ort via [offertformuläret](/offert) så återkommer vi med offert." },

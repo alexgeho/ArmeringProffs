@@ -25,7 +25,7 @@ export const armeringTill1: Post[] = [
       "välja husgrund",
     ],
     content: [
-      { type: "p", text: "Frågan ”vilken armering behöver min husgrund?” går inte att besvara innan grundtypen är vald. En platta på mark, en krypgrund och en källare armeras helt olika – det är grundtypen som avgör om det är nät, kantbalkar, väggar eller plintar som ska armeras. Vi levererar [komplett grundarmering](/produkter/grundarmering) efter ritning för alla vanliga grundtyper." },
+      { type: "p", text: "Armeringen i en husgrund bestäms av grundtypen. En platta på mark armeras med nät och kantbalk, en källare även med väggar i två lager, och en plintgrund plint för plint. Vi tillverkar [komplett grundarmering](/produkter/grundarmering) efter ritning för alla vanliga grundtyper." },
       { type: "p", text: "Grundtypen väljs utifrån markförhållanden, nivåskillnader på tomten, husets vikt och om du vill ha källare. Geotekniker och konstruktör gör valet – men det hjälper att veta vad valet innebär för armeringen." },
 
       { type: "h2", text: "Vanliga grundtyper och deras armering" },
@@ -70,17 +70,32 @@ export const armeringTill1: Post[] = [
         "Armeringen läggs, binds och kontrolleras före gjutning.",
       ] },
 
-      { type: "h2", text: "Konstruktören avgör" },
-      { type: "p", text: "Tabellen visar typiska lösningar, inte en dimensionering. Laster, markens bärighet, tjäldjup och exponeringsklass styr dimensioner, täckskikt och mängder. Följ alltid konstruktionsritningen – den är också underlag för bygglov och kontrollplan." },
+      { type: "h2", text: "Exempel: villa på platta, 10 × 12 m" },
+      { type: "p", text: "Så kan armeringen se ut för en enplansvilla på 120 m² med nät 5150 och 2 + 2 kantjärn Ø12. Siffrorna visar storleksordningen – din ritning ger de verkliga mängderna." },
+      { type: "table",
+        caption: "Räkneexempel före skarvar och spill. Vikter: nät 5150 ca 2,05 kg/m², Ø12 0,888 kg/m.",
+        head: ["Position", "Mängd", "Vikt ca"],
+        rows: [
+          ["Nät 5150 i plattan", "ca 135 m² inkl. överlapp", "275 kg"],
+          ["Kantjärn Ø12, 2 + 2 runt 44 m", "176 m", "156 kg"],
+          ["Kantbalksbyglar Ø8 c/c 250", "ca 176 st", "beror på bygelmått"],
+          ["Hörnjärn", "16 st (4 per hörn)", "enligt ritning"],
+          ["Innerbalkar, distanser, najtråd", "enligt ritning", "–"],
+        ],
+      },
+      { type: "p", text: "Med nät 6150 i stället blir nätet cirka 400 kg. Byter konstruktören till källare tillkommer väggarna, och där blir mängden ofta större än i hela bottenplattan." },
 
-      { type: "h2", text: "Beställ armeringen till husgrunden" },
-      { type: "p", text: "Oavsett grundtyp tillverkar vi armeringen efter din ritning eller bockningslista i kamstål B500B: nät, kantjärn, byglar, korgar och distanser – märkt och sorterat per position och levererat i hela Sverige. Se [grundarmering](/produkter/grundarmering) eller [begär offert](/offert) direkt med ritningen bifogad." },
+      { type: "h2", text: "Tabellerna är ingen dimensionering" },
+      { type: "p", text: "Laster, markens bärighet, tjäldjup och exponeringsklass styr dimensioner, täckskikt och mängder. Följ konstruktionsritningen – den är också underlag för bygglov och kontrollplan." },
+
+      { type: "h2", text: "Skicka grundritningen – få offert på allt" },
+      { type: "p", text: "Bifoga grundritningen så räknar vi fram hela paketet: nät, kantjärn, byglar, korgar och distanser i B500B, märkt per position. Saknar du bockningslista tar vi fram den ur ritningen. [Begär offert](/offert) eller läs mer om [grundarmering](/produkter/grundarmering)." },
     ],
     faqs: [
       { q: "Vilken husgrund är vanligast?", a: "Platta på mark är vanligast för nya villor i Sverige. Krypgrund och källare förekommer framför allt i sluttande tomter eller där man vill ha källarplan. Valet görs av konstruktör och geotekniker." },
       { q: "Vilken armering behöver en husgrund?", a: "Det beror på grundtyp. En platta på mark har nät i plattan och armerad kantbalk, en källare har dessutom armerade väggar, och en plintgrund armeras plint för plint. Mängder och dimensioner står på konstruktionsritningen." },
       { q: "Kan jag beställa all armering till grunden från samma ställe?", a: "Ja. Vi levererar nät, kantjärn, kantbalksbyglar, korgar och distanser som ett paket efter ritning, märkt per position. Pris och leveransdag anges i offerten." },
-      { q: "Vad avgör om det blir platta på mark eller källare?", a: "Främst markförhållanden, nivåskillnader på tomten och om du vill ha källarplan. Geotekniker och konstruktör gör bedömningen." },
+      { q: "Jag har ritning men ingen bockningslista – går det ändå?", a: "Ja. Skicka konstruktionsritningen så gör vi bockningslistan och offererar utifrån den. Du får listan att kontrollera innan tillverkning." },
       { q: "Behövs konstruktionsritning för en husgrund?", a: "Ja, för en husgrund ska armeringen följa en konstruktörs ritning. Den ingår normalt i underlaget till bygglov och kontrollplan." },
     ],
     target: { href: "/produkter/grundarmering", label: "Begär offert på grundarmering" },
@@ -108,7 +123,7 @@ export const armeringTill1: Post[] = [
       "armering kantförstyvning",
     ],
     content: [
-      { type: "p", text: "En platta på mark är en isolerad betongplatta som vilar direkt på ett bärlager. Den är både grund och golv, och armeringen är bara en del av helheten. Förstår du uppbyggnaden blir det också tydligt varför armeringen ser ut som den gör. Vi levererar [grundarmering till platta på mark](/produkter/grundarmering) som ett komplett paket efter ritning." },
+      { type: "p", text: "En platta på mark är en isolerad betongplatta som vilar direkt på ett bärlager och fungerar som både grund och golv. Armeringen är nät i fältet och en armerad kantförstyvning runt om – men hur den ska ligga beror på lagren under. Vi levererar [grundarmering till platta på mark](/produkter/grundarmering) som ett paket efter ritning." },
 
       { type: "h2", text: "Uppbyggnaden lager för lager" },
       { type: "table",
@@ -117,7 +132,7 @@ export const armeringTill1: Post[] = [
         rows: [
           ["Terrass / schaktbotten", "Bär lasterna", "Packad, tjälsäker undergrund"],
           ["Dränerande bärlager", "Bryter kapillär fukt, fördelar last", "Makadam, packad i lager"],
-          ["Cellplast", "Värmeisolering under plattan", "EPS i ett eller flera lager"],
+          ["Cellplast", "Värmeisolering under plattan", "EPS, i nyproduktion ofta 200–300 mm i flera lager"],
           ["Kantelement", "Form och isolering för kantförstyvningen", "L-element av cellplast"],
           ["Armering", "Tar dragkrafter, begränsar sprickor", "Nät i plattan, kantjärn och byglar i kanten"],
           ["Betongplatta", "Grund och golv", "Ofta ca 100 mm i fält, tjockare i kanten"],
@@ -145,7 +160,7 @@ export const armeringTill1: Post[] = [
       { type: "h2", text: "Täckskikt mot cellplast och mark" },
       { type: "p", text: "Armeringen får inte ligga direkt på cellplasten. Täckskiktet i en villaplatta är ofta 25–35 mm mot cellplast eller form. Gjuts betongen direkt mot förberedd mark krävs enligt Eurokod 2 minst 40 mm, och direkt mot jord minst 75 mm. Läs mer om [distanser och täckskikt](/blogg/distanser-tackskikt-armering)." },
 
-      { type: "h2", text: "Arbetsgång" },
+      { type: "h2", text: "Så byggs plattan, steg för steg" },
       { type: "ol", items: [
         "Schakta, lägg och packa bärlagret.",
         "Lägg cellplast och ställ kantelement enligt ritning.",
@@ -155,11 +170,22 @@ export const armeringTill1: Post[] = [
         "Kontrollera armeringen mot ritningen och gjut.",
       ] },
 
-      { type: "h2", text: "Konstruktören avgör" },
-      { type: "p", text: "Isolertjocklek, plattans tjocklek, nättyp, kantjärn och bygelavstånd bestäms av konstruktören utifrån laster, mark och energikrav. Uppgifterna här är typiska exempel för småhus – ritningen gäller alltid." },
+      { type: "h2", text: "Kontrollera före gjutning" },
+      { type: "p", text: "Det mesta som går fel i en villaplatta syns innan betongen kommer. Gå igenom detta med ritningen i handen:" },
+      { type: "ul", items: [
+        "Distanser under nätet hela vägen – även i hörn och längs kantelementen.",
+        "Överlapp i nätskarvar enligt ritningen och skarvarna bundna.",
+        "Hörnjärn på plats i alla hörn, både över- och underkant.",
+        "Innerbalkar under bärande väggar armerade som på ritningen.",
+        "Kantelementen stagade så att de inte trycks ut av betongen.",
+        "Rör och golvvärme fästa så att nätet inte trycks ned vid gjutning.",
+      ] },
 
-      { type: "h2", text: "Beställ armering till plattan" },
-      { type: "p", text: "Vi tillverkar nät, kantjärn, kantbalksbyglar och hörnjärn i B500B efter din ritning och levererar märkt per position i hela Sverige. Se [grundarmering](/produkter/grundarmering) eller skicka ritningen via [offertformuläret](/offert)." },
+      { type: "h2", text: "Ritningen styr måtten" },
+      { type: "p", text: "Isolertjocklek, plattans tjocklek, nättyp, kantjärn och bygelavstånd bestäms av konstruktören utifrån laster, mark och energikrav. Uppgifterna här är typiska för småhus." },
+
+      { type: "h2", text: "Hela plattan i en leverans" },
+      { type: "p", text: "Skicka grundritningen så tillverkar vi nät, kantjärn, kantbalksbyglar och hörnjärn i B500B, med byglar anpassade till ditt kantelement. Allt märkt per position. Se [grundarmering](/produkter/grundarmering) eller [begär offert](/offert)." },
     ],
     faqs: [
       { q: "Hur tjock är en platta på mark?", a: "En villaplatta är ofta cirka 100 mm i fält och tjockare vid kantförstyvningen. Exakt tjocklek, liksom isolertjocklek, bestäms av konstruktören." },
@@ -167,6 +193,7 @@ export const armeringTill1: Post[] = [
       { q: "Ska armeringen ligga direkt på cellplasten?", a: "Nej. Armeringen ska ligga på distanser så att den omsluts av betong. Täckskiktet mot cellplast är ofta 25–35 mm – ritningen anger exakt värde." },
       { q: "Vilket nät används i platta på mark?", a: "Ofta nät 5150 eller 6150 i villaplattor, men tyngre laster kan kräva grövre nät eller två lager. Konstruktören avgör." },
       { q: "Hur skiljer sig platta på mark från en vanlig betongplatta?", a: "Platta på mark är isolerad underifrån och har kantförstyvning som bär väggarna. En oisolerad betongplatta saknar ofta både isolering och kantbalk." },
+      { q: "Kan ni anpassa byglarna efter mitt kantelement?", a: "Ja. Ange fabrikat eller invändiga mått på kantelementet så räknar vi bygelmåtten med rätt täckskikt." },
     ],
     target: { href: "/produkter/grundarmering", label: "Beställ armering till platta på mark" },
     category: "armering-till",
@@ -178,7 +205,7 @@ export const armeringTill1: Post[] = [
     title: "Armera kantbalk – kantjärn, hörnjärn och skarvar",
     metaTitle: "Armera kantbalk – kantjärn, hörn och skarvar",
     metaDescription:
-      "Så armeras en kantbalk i platta på mark: antal och dimension på kantjärn, hörnjärn, skarvlängder och hur byglar och järn bildar en färdig villakorg.",
+      "Så armeras en kantbalk i platta på mark: antal och dimension på kantjärn, hörnjärn, skarvlängder och hur byglar och järn bildar en färdig kantbalkskorg.",
     excerpt:
       "Kantbalken bär ytterväggarna. Här går vi igenom de längsgående kantjärnen, hörnen och skarvarna – det som tillsammans med byglarna blir en färdig kantbalksarmering.",
     date,
@@ -193,7 +220,7 @@ export const armeringTill1: Post[] = [
       "kantbalksarmering",
     ],
     content: [
-      { type: "p", text: "En kantbalk är den förtjockade kanten runt en platta på mark. Den armeras med längsgående kantjärn i över- och underkant, sammanhållna av byglar. Byglarnas form och mått har vi gått igenom i [kantbalksbygel](/blogg/kantbalksbygel) – här handlar det om kantjärnen, hörnen och skarvarna. Allt kan levereras färdigt som [villakorg och kantbalksarmering](/produkter/villakorg-kantbalksarmering)." },
+      { type: "p", text: "En kantbalk är den förtjockade kanten runt en platta på mark. Den armeras med längsgående kantjärn i över- och underkant, sammanhållna av byglar. Byglarnas form och mått har vi gått igenom i [kantbalksbygel](/blogg/kantbalksbygel) – här handlar det om kantjärnen, hörnen och skarvarna. Allt kan levereras färdigt som [kantbalkskorgar och kantbalksarmering](/produkter/villakorg-kantbalksarmering)." },
 
       { type: "h2", text: "Typisk kantbalksarmering i en villaplatta" },
       { type: "table",
@@ -208,8 +235,14 @@ export const armeringTill1: Post[] = [
         ],
       },
 
-      { type: "h2", text: "Kantjärn – längs hela omkretsen" },
-      { type: "p", text: "Kantjärnen löper runt hela plattan. Totallängden blir omkretsen gånger antal järn, plus skarvar. En platta på 10 × 12 m med 2 + 2 kantjärn Ø12 kräver 4 × 44 m = 176 m järn före skarvar, vilket motsvarar cirka 156 kg (Ø12 väger 0,888 kg/m)." },
+      { type: "h2", text: "Räkneexempel: platta 10 × 12 m" },
+      { type: "p", text: "Kantjärnen löper runt hela plattan. Med 2 + 2 kantjärn Ø12 och byglar c/c 250 blir det:" },
+      { type: "ul", items: [
+        "Kantjärn: 4 × 44 m = 176 m, cirka 156 kg (Ø12 väger 0,888 kg/m).",
+        "Byglar: 44 m / 0,25 m ≈ 176 byglar.",
+        "Hörnjärn: ett per kantjärn och hörn, alltså 4 × 4 = 16 st.",
+        "Skarvar: ingen sida är längre än 12 m, så kantjärnen kan gå i hela längder per sida och skarvas bara mot hörnjärnen.",
+      ] },
 
       { type: "h2", text: "Hörnen är den svaga punkten" },
       { type: "p", text: "Kantjärnen får inte bara mötas i hörnet. Kraften måste föras runt hörnet med L-formade hörnjärn som överlappar kantjärnen åt båda håll. Hörnjärn tillverkas bockade efter mått, så att de passar kantelementets inre hörn med rätt täckskikt." },
@@ -220,7 +253,15 @@ export const armeringTill1: Post[] = [
       { type: "h2", text: "Innerbalkar och förstärkningar" },
       { type: "p", text: "Bärande innerväggar och punktlaster från pelare eller trappor kräver ofta en inre kantbalk – en ränna i cellplasten som armeras på samma sätt som kanten. Där innerbalken möter ytterkantbalken binds järnen ihop med bockade anslutningsjärn, så att balkarna samverkar. Vid portöppningar och stora fönsterpartier kan kantbalken behöva extra järn." },
       { type: "p", text: "Ett vanligt fel är att innerbalkarna glöms när armeringen beställs styckvis. Med en komplett bockningslista per position kommer alla delar – ytterbalk, innerbalkar, hörn och anslutningar – i samma leverans." },
-      { type: "h2", text: "Färdig villakorg eller lösa delar?" },
+      { type: "h2", text: "Fel som syns först när det är för sent" },
+      { type: "ul", items: [
+        "Byglarna vänds fel – det förlängda benet ska gå in i plattan, inte ut mot kantelementet.",
+        "Underkantsjärnen ligger direkt på cellplasten i stället för på distanser.",
+        "Kantjärnen möts i hörnet utan hörnjärn.",
+        "Alla skarvar hamnar i samma snitt i stället för att förskjutas.",
+        "Innerbalken slutar mot ytterbalken utan bockade anslutningsjärn.",
+      ] },
+      { type: "h2", text: "Färdig kantbalkskorg eller lösa delar?" },
       { type: "p", text: "Kantbalksarmering kan levereras som lösa byglar och raka järn som monteras på plats, eller som förmonterade korgsektioner. Lösa delar är flexibla och lätta att hantera för hand. Färdiga sektioner sparar tid på bygget men kräver att kantelementens mått är bestämda. Båda tillverkas efter samma ritning." },
       { type: "h2", text: "Montage steg för steg" },
       { type: "ol", items: [
@@ -231,12 +272,12 @@ export const armeringTill1: Post[] = [
         "Kontrollera täckskikt med distanser innan nätet läggs.",
       ] },
 
-      { type: "h2", text: "Konstruktören avgör" },
-      { type: "p", text: "Antal och dimension på kantjärn, bygelavstånd, hörnutformning och skarvlängder står på konstruktionsritningen. Kantbalkens storlek styrs av väggarnas last och markens bärighet – avvik inte från ritningen." },
+      { type: "h2", text: "Avvik inte från ritningen" },
+      { type: "p", text: "Antal och dimension på kantjärn, bygelavstånd, hörnutformning och skarvlängder står på konstruktionsritningen. Kantbalkens storlek styrs av väggarnas last och markens bärighet." },
 
-      { type: "p", text: "Varför prefab? En villaplatta har ofta 100–200 byglar och ett tiotal hörn- och anslutningsjärn. Att bocka dem för hand på plats tar tid, ger ojämna mått och mycket spill. Prefabricerade byglar och järn har samma mått från första till sista, passar kantelementet och kommer märkta per position – montaget går fortare och kontrollen blir enklare." },
-      { type: "h2", text: "Checklista före beställning" },
-      { type: "p", text: "Ju mer av detta som finns med i förfrågan, desto snabbare och mer exakt blir offerten." },
+      { type: "h2", text: "Bocka själv eller köpa färdigt?" },
+      { type: "p", text: "Exemplet ovan ger närmare 200 byglar och 16 hörnjärn. Bockade för hand blir måtten ojämna, och en bygel som är några centimeter för stor ger fel täckskikt mot kantelementet. Fabriksbockade byglar är lika från första till sista och kommer märkta per position." },
+      { type: "h2", text: "Det här behöver vi för offert på kantbalksarmeringen" },
       { type: "ul", items: [
         "Plattans mått och form, gärna som ritning.",
         "Kantelementets typ och invändiga mått.",
@@ -245,14 +286,14 @@ export const armeringTill1: Post[] = [
         "Läge för innerbalkar, portar och punktlaster.",
         "Leveransort och önskad vecka.",
       ] },
-      { type: "h2", text: "Färdig kantbalksarmering" },
-      { type: "p", text: "Vi tillverkar kantjärn, hörnjärn och byglar efter mått i B500B och levererar dem som färdig villakorg, märkt och sorterat per position, i hela Sverige. Se [villakorg och kantbalksarmering](/produkter/villakorg-kantbalksarmering) eller [begär offert](/offert)." },
+      { type: "h2", text: "Beställ kantbalksarmeringen" },
+      { type: "p", text: "Skicka plattans ritning och kantelementets mått – du får kantjärn, hörnjärn och byglar i B500B tillverkade efter mått, sorterade per position. Se [kantbalkskorgar och kantbalksarmering](/produkter/villakorg-kantbalksarmering) eller [begär offert](/offert)." },
     ],
     faqs: [
       { q: "Hur många kantjärn ska en kantbalk ha?", a: "I villaplattor är 2–3 järn Ø10–Ø12 i både över- och underkant vanligt, men antal och dimension står på konstruktionsritningen." },
       { q: "Behövs hörnjärn i kantbalken?", a: "Ja. Hörnjärn för kraften runt hörnet och överlappar kantjärnen åt båda håll. Utan dem blir hörnet en svag punkt." },
       { q: "Hur långt ska kantjärn skarvas?", a: "Ofta 40–60 gånger diametern, för Ø12 alltså cirka 500–700 mm. Skarvlängden beror på betong och läge – ritningen avgör." },
-      { q: "Vad är en villakorg?", a: "En villakorg är kantbalksarmeringen levererad som färdiga delar eller korg: byglar, kantjärn och hörnjärn tillverkade efter mått för en platta på mark." },
+      { q: "Vad är en kantbalkskorg?", a: "En kantbalkskorg (i vardagligt tal ibland villakorg) är kantbalksarmeringen levererad som färdiga delar eller korg: byglar, kantjärn och hörnjärn tillverkade efter mått för en platta på mark." },
       { q: "Behövs kantjärn under bärande innerväggar?", a: "Ofta ja. Under bärande innerväggar görs en inre kantbalk med kantjärn och byglar. Ritningen visar var." },
     ],
     target: { href: "/produkter/villakorg-kantbalksarmering", label: "Beställ kantbalksarmering" },
@@ -302,12 +343,15 @@ export const armeringTill1: Post[] = [
       { type: "h2", text: "Anslutningsjärn – kopplingen till plattan" },
       { type: "p", text: "Anslutningsjärn (startjärn) gjuts in i bottenplattan och sticker upp så att väggens vertikaler kan skarvas mot dem. De måste ligga på rätt plats före plattgjutningen – i efterhand går det inte att rätta. Skarvlängden står på ritningen; läs mer i [skarvlängd armering](/blogg/skarvlangd-armering)." },
 
+      { type: "h2", text: "Exempel: anslutningsjärn till en källare 8 × 10 m" },
+      { type: "p", text: "Anslutningsjärnen är en av de största positionerna i en källare och den som oftast underskattas. Med Ø12 c/c 200 i båda sidor längs en omkrets på 36 m blir det cirka 2 × 180 = 360 järn. Är varje järn cirka 1,2 m blir det drygt 430 m, eller ungefär 380 kg – innan en enda väggjärn är räknad. Längd och form står på ritningen." },
+
       { type: "h2", text: "Fukt, grundvatten och tätning" },
       { type: "p", text: "En källarvägg har jord på ena sidan och ett varmt rum på den andra. Betongen ska vara tät, och sprickor kan släppa in vatten. Därför är sprickbegränsningen lika viktig som bärförmågan. Vid högt grundvatten kan konstruktören kräva tätare armering och vattentät betong, och gjutfogen mellan platta och vägg tätas med fogband eller injekteringsslang." },
       { type: "p", text: "Utvändigt skyddas väggen av isolering, dränering och fuktspärr. Det minskar påverkan från jorden men ersätter inte rätt täckskikt. Armeringen ska ha full betongtäckning även om väggen senare isoleras." },
       { type: "h2", text: "Öppningar och genomföringar" },
       { type: "p", text: "Källarfönster, dörrar och rörgenomföringar bryter armeringen. Runt varje öppning läggs extra järn längs kanterna och diagonaljärn i hörnen. Genomföringar för avlopp, vatten och el ska planeras före gjutning, så att armeringen kan läggas runt dem i stället för att kapas i efterhand." },
-      { type: "h2", text: "Arbetsgång" },
+      { type: "h2", text: "Gjutordning: platta först, sedan väggar" },
       { type: "ol", items: [
         "Placera anslutningsjärnen i bottenplattan enligt ritning och gjut plattan.",
         "Res väggformen på ena sidan.",
@@ -316,12 +360,12 @@ export const armeringTill1: Post[] = [
         "Säkra täckskiktet med distanser mot formen och stäng formen.",
       ] },
 
-      { type: "h2", text: "Konstruktören avgör" },
-      { type: "p", text: "Väggens tjocklek och armering beror på väggens höjd, jordtryck, grundvatten och laster från huset. Täckskikt bestäms av exponeringsklass. Följ konstruktionsritningen – värdena ovan är typiska exempel, inte en dimensionering." },
+      { type: "h2", text: "Värdena är exempel" },
+      { type: "p", text: "Väggens tjocklek och armering beror på höjd, jordtryck, grundvatten och laster från huset. Täckskiktet bestäms av exponeringsklass. Följ konstruktionsritningen." },
 
-      { type: "p", text: "Varför prefab? En källare har många olika positioner: anslutningsjärn, raka väggjärn i olika längder, U-byglar, hörnjärn och öppningsarmering. Levereras de klippta, bockade och märkta per vägg slipper laget mäta, kapa och bocka på plats, och risken att fel järn hamnar i fel vägg minskar. Det sparar mest tid i just väggar, där formen ofta står och väntar på armeringen." },
-      { type: "h2", text: "Checklista före beställning" },
-      { type: "p", text: "Ju mer av detta som finns med i förfrågan, desto snabbare och mer exakt blir offerten." },
+      { type: "h2", text: "Märkt per vägg – formen behöver inte vänta" },
+      { type: "p", text: "En källare har många positioner: anslutningsjärn, raka väggjärn i olika längder, U-byglar, hörnjärn och öppningsarmering. Kommer de klippta, bockade och märkta per vägg slipper laget mäta och kapa på plats, och fel järn hamnar inte i fel vägg." },
+      { type: "h2", text: "Underlag för offert på källararmering" },
       { type: "ul", items: [
         "Bottenplattans och väggarnas armeringsritning.",
         "Väggarnas höjd, tjocklek och längd per vägg.",
@@ -330,8 +374,8 @@ export const armeringTill1: Post[] = [
         "Om bottenplatta och väggar levereras i en eller två omgångar.",
         "Leveransort och lossningsförhållanden.",
       ] },
-      { type: "h2", text: "Beställ armeringen till källaren" },
-      { type: "p", text: "Vi tillverkar anslutningsjärn, raka väggjärn, U-byglar och hörnjärn i B500B efter din ritning och levererar märkt per vägg och position i hela Sverige. Se [grundarmering](/produkter/grundarmering) eller [begär offert](/offert)." },
+      { type: "h2", text: "Beställ platta och väggar på en gång" },
+      { type: "p", text: "Skicka armeringsritningen så offererar vi bottenplatta och källarväggar tillsammans – gärna i två leveranser, så att anslutningsjärnen kommer före plattgjutningen och väggjärnen när formen ska resas. Se [grundarmering](/produkter/grundarmering) eller [begär offert](/offert)." },
     ],
     faqs: [
       { q: "Hur armeras en källarvägg?", a: "Oftast med två lager kamjärn, Ø10–Ø12 c/c 150–200 mm i båda riktningar, plus anslutningsjärn från bottenplattan och byglar i hörn. Konstruktören avgör." },
@@ -339,6 +383,7 @@ export const armeringTill1: Post[] = [
       { q: "Vilket täckskikt behövs på källarväggens utsida?", a: "Ofta 35–50 mm på jordsidan beroende på exponeringsklass. Gjuts betongen direkt mot jord krävs minst 75 mm enligt Eurokod 2." },
       { q: "Är grundmur och stödmur samma sak?", a: "Nej. En grundmur eller källarvägg hålls upptill av bjälklaget, medan en stödmur står fritt och måste klara jordtrycket på egen hand. Armeringen skiljer sig därför." },
       { q: "Kan jag kapa armering för en rörgenomföring?", a: "Inte utan att konstruktören godkänner det. Kapad armering ska ersättas med extra järn runt öppningen." },
+      { q: "Kan bottenplatta och väggar levereras vid olika tillfällen?", a: "Ja. Ofta levereras anslutningsjärn och plattarmering först och väggarmeringen när formen ska resas. Ange etapperna i förfrågan." },
     ],
     target: { href: "/produkter/grundarmering", label: "Begär offert på källararmering" },
     category: "armering-till",
@@ -374,9 +419,13 @@ export const armeringTill1: Post[] = [
         "Exponering: utomhus eller mot jord krävs större täckskikt än inomhus.",
       ] },
 
+      { type: "h2", text: "Minimiarmering enligt Eurokod 2" },
+      { type: "p", text: "Även en lågt belastad vägg ska ha en minsta mängd armering. SS-EN 1992-1-1 rekommenderar minst 0,2 % av betongarean vertikalt och minst 25 % av den vertikala, eller 0,1 % av betongarean, horisontellt. Avståndet mellan järnen får inte vara för stort." },
+      { type: "p", text: "Exempel: en 200 mm tjock vägg har 200 000 mm² betong per meter. Minsta vertikala armering blir då 400 mm²/m, fördelat på båda sidor – till exempel Ø8 c/c 250 i varje sida (201 mm²/m per sida). Konstruktören räknar med de värden som gäller i projektet." },
+
       { type: "h2", text: "Typiska lösningar" },
       { type: "table",
-        caption: "Exempel – vägtjocklek, dimension och avstånd enligt konstruktionsritning.",
+        caption: "Exempel – väggtjocklek, dimension och avstånd enligt konstruktionsritning.",
         head: ["Vägg", "Typisk armering", "Lager"],
         rows: [
           ["Innervägg 150–200 mm", "Ø8–Ø10 c/c 150–200 eller nät", "Ofta två lager, ibland ett centriskt"],
@@ -407,11 +456,10 @@ export const armeringTill1: Post[] = [
         "Kontrollera mot ritningen och stäng formen.",
       ] },
 
-      { type: "h2", text: "Konstruktören avgör" },
-      { type: "p", text: "Väggens armering beräknas enligt Eurokod 2 (SS-EN 1992-1-1) utifrån laster, höjd, exponering och sprickkrav. Utförandet följer SS-EN 13670. Värdena ovan är typiska exempel – ritningen gäller." },
+      { type: "h2", text: "Beräkning och utförande" },
+      { type: "p", text: "Väggens armering beräknas enligt Eurokod 2 utifrån laster, höjd, exponering och sprickkrav. Utförandet följer SS-EN 13670. Värdena ovan är exempel – ritningen gäller." },
 
-      { type: "h2", text: "Checklista före beställning" },
-      { type: "p", text: "Ju mer av detta som finns med i förfrågan, desto snabbare och mer exakt blir offerten." },
+      { type: "h2", text: "Så blir offerten på väggarmering rätt" },
       { type: "ul", items: [
         "Armeringsritning eller bockningslista per vägg.",
         "Gjutetapper – levereras allt på en gång eller per etapp?",
@@ -421,14 +469,15 @@ export const armeringTill1: Post[] = [
         "Leveransort och lossningsförhållanden.",
       ] },
       { type: "h2", text: "Beställ väggarmering efter ritning" },
-      { type: "p", text: "Vi kapar och bockar väggjärn, U-byglar och öppningsarmering i B500B efter din bockningslista och levererar märkt per vägg i hela Sverige. Se [klippt och bockad armering](/produkter/klippt-och-bockad) eller [begär offert](/offert)." },
+      { type: "p", text: "Skicka bockningslistan eller ritningen per vägg. Vi kapar och bockar väggjärn, U-byglar och öppningsarmering i B500B och märker buntarna per vägg och etapp. Se [klippt och bockad armering](/produkter/klippt-och-bockad) eller [begär offert](/offert)." },
     ],
     faqs: [
       { q: "Hur armeras en betongvägg?", a: "Oftast med kamjärn i två lager, vertikalt och horisontellt, Ø8–Ø12 c/c 150–200 mm beroende på tjocklek och last. Konstruktören avgör." },
       { q: "Räcker ett lager armering i en vägg?", a: "I tunna, lågt belastade innerväggar kan ett centriskt lager räcka. Bärande väggar och väggar utomhus eller mot jord har normalt två lager." },
+      { q: "Vad är minimiarmering i en vägg?", a: "Eurokod 2 rekommenderar minst 0,2 % av betongarean vertikalt, för en 200 mm vägg alltså 400 mm²/m fördelat på båda sidor. Konstruktören fastställer värdet." },
       { q: "Varför behövs extra armering runt öppningar?", a: "Spänningarna samlas i öppningens hörn där sprickor annars startar. Extra järn längs kanterna och diagonaljärn i hörnen tar upp dem." },
       { q: "Kan man använda armeringsnät i väggar?", a: "Ja, i raka väggar utan många håltagningar är nät snabbt att montera. Vid öppningar och hörn kompletteras nätet med lösa järn och byglar." },
-      { q: "Hur mycket armering går åt till en betongvägg?", a: "Det beror på tjocklek och c/c-avstånd. En 8 m lång och 2,5 m hög vägg med Ø10 c/c 200 i två lager kräver cirka 255 kg plus skarvar och byglar." },
+      { q: "Hur mycket armering går åt till en betongvägg?", a: "En 8 m lång och 2,5 m hög vägg med Ø10 c/c 200 i två lager kräver cirka 255 kg plus skarvar och byglar." },
     ],
     target: { href: "/produkter/klippt-och-bockad", label: "Beställ väggarmering" },
     category: "armering-till",
@@ -475,6 +524,12 @@ export const armeringTill1: Post[] = [
       },
       { type: "figure", illustration: "rebar-cage", caption: "Balkar under bjälklaget armeras med korgar av längsjärn och byglar." },
 
+      { type: "h2", text: "Hur långt ut går överkantsarmeringen?" },
+      { type: "p", text: "Överkantsjärnen över ett mellanstöd ska täcka området där böjningen är negativ, plus förankringslängd. I kontinuerliga bjälklag hamnar det ofta i storleksordningen en fjärdedel till en tredjedel av spännvidden ut i fältet på var sida. Ritningen anger exakta längder – kapas järnen kortare uppstår sprickor i överkant en bit från stödet." },
+
+      { type: "h2", text: "Räkneexempel: underkant i ett fält 6 × 8 m" },
+      { type: "p", text: "Med Ø10 c/c 150 i båda riktningar blir det 54 järn à 6 m och 41 järn à 8 m – cirka 650 m eller drygt 400 kg (Ø10 väger 0,617 kg/m). Till det kommer överkant över stöd, kantbyglar och skarvar." },
+
       { type: "h2", text: "Platsgjutet eller på plattbärlag?" },
       { type: "p", text: "Ett helt platsgjutet bjälklag kräver form och stämp, och all armering läggs på plats. Med plattbärlag (prefabricerade tunna betongplattor med fackverksbalkar) ligger underkantsarmeringen redan ingjuten i bärlaget. På byggplatsen läggs då skarvarmering över bärlagsfogarna, överkantsarmering och eventuella förstärkningar innan pågjutningen." },
 
@@ -493,12 +548,12 @@ export const armeringTill1: Post[] = [
         "Kontrollera mot ritningen innan gjutning.",
       ] },
 
-      { type: "h2", text: "Konstruktören avgör" },
-      { type: "p", text: "Ett bjälklag är bärande och dimensioneras alltid av konstruktör enligt Eurokod 2. Spännvidd, laster, nedböjning, brandkrav och sprickbredd styr armeringen. Byt aldrig dimension eller avstånd på egen hand." },
+      { type: "h2", text: "Byt aldrig dimension på egen hand" },
+      { type: "p", text: "Ett bjälklag är bärande och dimensioneras av konstruktör enligt Eurokod 2. Spännvidd, laster, nedböjning, brandkrav och sprickbredd styr armeringen." },
 
-      { type: "p", text: "Varför prefab? Ett bjälklag har ofta hundratals positioner med olika längder, och fel järn på fel plats ger fel kapacitet. Med armering klippt och bockad efter ritning, märkt per position och med rätt skarvlängder enligt [skarvlängd armering](/blogg/skarvlangd-armering), blir montaget snabbare och kontrollen före gjutning enklare. Balkkorgar kan levereras färdigsvetsade eller najade och lyftas på plats med kran." },
-      { type: "h2", text: "Checklista före beställning" },
-      { type: "p", text: "Ju mer av detta som finns med i förfrågan, desto snabbare och mer exakt blir offerten." },
+      { type: "h2", text: "Hundratals positioner – märkningen avgör" },
+      { type: "p", text: "Ett bjälklag har ofta hundratals positioner i olika längder, och fel järn på fel plats ger fel kapacitet. Klippt och bockat efter ritning, märkt per position och med skarvlängder enligt [skarvlängd armering](/blogg/skarvlangd-armering), går både montage och kontroll fortare. Balkkorgar kan levereras färdiga att lyftas på plats med kran." },
+      { type: "h2", text: "Underlag för offert på bjälklag" },
       { type: "ul", items: [
         "Armeringsritning för bjälklag, balkar och pelare.",
         "Platsgjutet eller plattbärlag – vilken armering ingår redan i bärlaget?",
@@ -507,8 +562,8 @@ export const armeringTill1: Post[] = [
         "Märkning per bjälklag och etapp.",
         "Leveransort, kranplats och önskad vecka.",
       ] },
-      { type: "h2", text: "Beställ armeringen till bjälklaget" },
-      { type: "p", text: "Vi tillverkar balk- och pelarkorgar, raka och bockade järn, U-byglar och [armeringsnät](/produkter/armeringsnat) efter ritning, märkt per position och levererat i hela Sverige. Se [pelar- och balkkorgar](/produkter/pelar-och-balkkorgar) eller [begär offert](/offert)." },
+      { type: "h2", text: "Korgar, järn och nät efter samma ritning" },
+      { type: "p", text: "Skicka bjälklags- och balkritningarna så offererar vi allt i ett: balk- och pelarkorgar, raka och bockade järn, U-byglar och [armeringsnät](/produkter/armeringsnat), märkt per bjälklag och etapp. Se [pelar- och balkkorgar](/produkter/pelar-och-balkkorgar) eller [begär offert](/offert)." },
     ],
     faqs: [
       { q: "Var ska armeringen ligga i ett bjälklag?", a: "Huvudarmeringen ligger i underkant i fälten, där bjälklaget böjer nedåt. Över mellanstöd och inspända kanter behövs överkantsarmering. Ritningen anger exakt placering." },
@@ -561,7 +616,12 @@ export const armeringTill1: Post[] = [
       },
 
       { type: "h2", text: "Infästning och köldbryggor" },
-      { type: "p", text: "Går balkongens armering rakt igenom ytterväggens isolering blir infästningen en köldbrygga. I nyproduktion används därför ofta bärande isolerelement som för över kraften genom isoleringen. Elementets armering ska passa ihop med balkongens och bjälklagets – stäm av mot elementtillverkarens anvisning och konstruktörens ritning." },
+      { type: "p", text: "Går balkongens armering rakt igenom ytterväggens isolering blir infästningen en köldbrygga. I nyproduktion används därför ofta bärande isolerelement, där drag- och tryckstänger går genom ett isolerskikt. Stängerna i isolerzonen är normalt av rostfritt stål." },
+      { type: "p", text: "Elementets anslutningsjärn ska överlappa balkongens och bjälklagets armering. Därför måste elementtyp och höjd vara bestämda innan armeringen tillverkas – stäm av mot elementtillverkarens anvisning och konstruktörens ritning." },
+
+      { type: "h2", text: "Det farligaste felet: armering i fel kant" },
+      { type: "p", text: "Den som är van vid vanliga plattor lägger instinktivt huvudarmeringen i underkant. I en utkragande balkong gör det plattan nästan oarmerad där den behöver det mest. Lika illa är överkantsjärn som trampas ned vid gjutning. Kontrollera höjden på överkantsarmeringen precis innan betongen kommer." },
+      { type: "p", text: "Exempel: en balkong 4 m bred med huvudarmering Ø12 c/c 150 får cirka 28 överkantsjärn. Varje järn är balkongens djup plus förankringen in i bjälklaget eller elementet – längden står på ritningen." },
 
       { type: "h2", text: "Täckskikt och beständighet" },
       { type: "p", text: "En balkong utsätts för regn, frost och ibland salt. Täckskiktet väljs efter exponeringsklass och livslängd och är större än i en innerplatta. För lite täckskikt ger rostande armering och avspjälkad betong – den vanligaste skadan på äldre balkonger. Läs mer om [distanser och täckskikt](/blogg/distanser-tackskikt-armering)." },
@@ -580,12 +640,12 @@ export const armeringTill1: Post[] = [
         "Låt stämpen stå tills konstruktören anger att plattan får avformas.",
       ] },
 
-      { type: "h2", text: "Konstruktören avgör" },
-      { type: "p", text: "En balkong är en bärande, säkerhetskritisk konstruktion. Armering, förankring, infästning och täckskikt ska alltid dimensioneras av konstruktör och följas exakt." },
+      { type: "h2", text: "Säkerhetskritiskt – följ ritningen exakt" },
+      { type: "p", text: "Armering, förankring, infästning och täckskikt i en balkong ska dimensioneras av konstruktör och följas utan avvikelser." },
 
-      { type: "p", text: "Varför prefab? Balkonger i flerbostadshus är ofta många och likadana. Då lönar det sig att tillverka byglar, överkantsjärn och kantkorgar i serie efter samma ritning. Varje balkong får identisk armering, märkt per position, och montaget på formen går snabbt. Även för en enstaka villabalkong slipper du bocka järn för hand och får rätt mått från början." },
-      { type: "h2", text: "Checklista före beställning" },
-      { type: "p", text: "Ju mer av detta som finns med i förfrågan, desto snabbare och mer exakt blir offerten." },
+      { type: "h2", text: "Många likadana balkonger" },
+      { type: "p", text: "I flerbostadshus är balkongerna ofta identiska. Då tillverkas byglar, överkantsjärn och kantkorgar i serie efter samma ritning, och varje balkong får sin bunt märkt per position. För en enstaka villabalkong får du rätt bockade mått från början." },
+      { type: "h2", text: "Underlag för offert på balkongarmering" },
       { type: "ul", items: [
         "Konstruktionsritning för balkongplatta och infästning.",
         "Typ av infästning eller isolerelement.",
@@ -595,7 +655,7 @@ export const armeringTill1: Post[] = [
         "Leveransort och önskad vecka.",
       ] },
       { type: "h2", text: "Beställ balkongarmering" },
-      { type: "p", text: "Vi tillverkar U-byglar, bockade överkantsjärn, kantbalkskorgar och nät i B500B efter ritning och levererar märkt per balkong i hela Sverige. Se [pelar- och balkkorgar](/produkter/pelar-och-balkkorgar) eller [begär offert](/offert)." },
+      { type: "p", text: "Skicka balkongritningen med infästningstyp – du får U-byglar, överkantsjärn, kantbalkskorgar och nät i B500B, en bunt per balkong. Se [pelar- och balkkorgar](/produkter/pelar-och-balkkorgar) eller [begär offert](/offert)." },
     ],
     faqs: [
       { q: "Var ska armeringen ligga i en balkong?", a: "I en utkragande balkong ligger huvudarmeringen i överkant, eftersom det är där dragkraften uppstår. Den förankras in i bjälklaget eller i en bärande infästning." },
@@ -640,7 +700,7 @@ export const armeringTill1: Post[] = [
           ["Placering", "Centriskt eller i övre halvan av plattan"],
           ["Nätskarv", "Överlapp minst två rutor, ca 300 mm"],
           ["Kant", "Ev. förtjockad kant med 2 kamjärn Ø10"],
-          ["Täckskikt", "Ofta 30–40 mm utomhus"],
+          ["Täckskikt", "Minst 40 mm mot mark, ofta 30–40 mm mot ytan"],
         ],
       },
 
@@ -649,8 +709,15 @@ export const armeringTill1: Post[] = [
 
       { type: "h2", text: "Fogar mot sprickor" },
       { type: "p", text: "En stor betongyta krymper när den torkar och rör sig med temperaturen. Därför delas större uteplatser in i fält med fogar, antingen sågade eller ingjutna. Nätet minskar sprickbredden, men fogarna styr var sprickorna hamnar. Mot husgrunden läggs en rörelsefog." },
+      { type: "ul", items: [
+        "Fältstorlek: en vanlig tumregel är högst cirka 30 gånger plattjockleken – runt 3 × 3 m för en 100 mm platta.",
+        "Fältform: så kvadratiska som möjligt, längd högst cirka 1,5 gånger bredden.",
+        "Sågdjup: ungefär en fjärdedel av plattjockleken.",
+        "Tidpunkt: när ytan bär och kanterna inte river upp, oftast inom första dygnet.",
+        "Inåtgående hörn, till exempel runt en trappa: lägg en fog eller extra järn diagonalt.",
+      ] },
 
-      { type: "h2", text: "Arbetsgång" },
+      { type: "h2", text: "Från schakt till sågade fogar" },
       { type: "ol", items: [
         "Schakta bort matjord, lägg och packa bärlager med fall från huset.",
         "Bygg form och lägg eventuell markisolering.",
@@ -661,18 +728,18 @@ export const armeringTill1: Post[] = [
       ] },
 
       { type: "h2", text: "Täckskikt utomhus" },
-      { type: "p", text: "En uteplats utsätts för regn, frost och ibland tösalt. Täckskiktet ska därför vara större än inomhus – ofta 30–40 mm, och minst 40 mm mot förberedd mark enligt Eurokod 2. Nätet ska ligga på distanser hela vägen, även i kanterna. Där armeringen sticker upp mot ytan börjar den rosta, och rosten spränger loss betongen." },
+      { type: "p", text: "Mot underlaget krävs minst 40 mm täckskikt när betongen gjuts på förberett bärlager enligt Eurokod 2. Mot ytan, som får regn, frost och ibland tösalt, är 30–40 mm vanligt. I en 100 mm platta hamnar nätet då nära mitten. Lägg distanser hela vägen, även i kanterna – järn som ligger för nära ytan rostar och spränger loss betongen." },
       { type: "h2", text: "Ytbehandling och betong" },
       { type: "p", text: "En uteplats ska gjutas med frostbeständig betong, särskilt om ytan saltas. Ytan kan borstas för halkfrihet, stålglättas eller beläggas senare. Valet av ytbehandling påverkar inte armeringen, men plattans tjocklek och fall ska bestämmas innan formen byggs. Vill du ha en tunn platta under plattsättning gäller samma princip – nätet ska ligga i betongen, inte under den." },
       { type: "h2", text: "Hur mycket nät går åt?" },
       { type: "p", text: "Räkna plattans yta plus 10–15 % för överlapp. En uteplats på 4 × 5 m (20 m²) kräver cirka 22–23 m² nät – två eller tre standardnät beroende på format. Snabbräkna i [armeringskalkylatorn](/armeringskalkylator) eller läs [armeringsåtgång per m²](/blogg/armering-atgang-per-m2)." },
 
-      { type: "h2", text: "Konstruktören avgör" },
-      { type: "p", text: "För en enkel uteplats finns sällan en konstruktionsritning, men ska plattan bära tyngre laster – till exempel en spabad, ett växthus eller en bil – ska den dimensioneras. Tjälförhållanden varierar mycket mellan södra Sverige och Norrland." },
+      { type: "h2", text: "När behövs dimensionering?" },
+      { type: "p", text: "För en gångyta finns sällan en konstruktionsritning. Ska plattan bära en spabad, ett växthus eller en bil bör den dimensioneras. En fylld spabad kan väga flera ton på några kvadratmeter." },
 
-      { type: "p", text: "Tänk också på formatet. Standardnät levereras ofta i 2,0–2,4 m bredd och 5–6 m längd, vilket kan vara svårt att hantera på en villatomt med smal infart. Nät kan klippas till mindre format, och vid små ytor kan det vara enklare att beställa färdigklippta nät som passar plattans mått. Det minskar spill och gör arbetet lättare för den som gjuter själv." },
-      { type: "h2", text: "Checklista före beställning" },
-      { type: "p", text: "Ju mer av detta som finns med i förfrågan, desto snabbare och mer exakt blir offerten." },
+      { type: "h2", text: "Nätformat och hantering" },
+      { type: "p", text: "Standardnät är ofta drygt 2 m breda och 5–6 m långa, vilket kan vara svårt att få in på en tomt med smal infart. Behöver du mindre format, ange det i förfrågan så anpassar vi leveransen efter plattans mått och minskar spillet." },
+      { type: "h2", text: "Det här behöver vi veta om uteplatsen" },
       { type: "ul", items: [
         "Uteplatsens mått och form.",
         "Plattjocklek och om kanten ska förtjockas.",
@@ -682,14 +749,14 @@ export const armeringTill1: Post[] = [
         "Leveransort – frakten räknas efter mängd och ort.",
       ] },
       { type: "h2", text: "Beställ nät till uteplatsen" },
-      { type: "p", text: "Vi levererar armeringsnät, kantjärn och distanser till uteplatser och altaner i hela Sverige, med frakt efter mängd och ort. Se [armeringsnät](/produkter/armeringsnat) eller [begär offert](/offert)." },
+      { type: "p", text: "Ange mått och plattjocklek så får du offert på nät, kantjärn och distanser. Även små beställningar skickas – frakten räknas efter mängd och ort, utan fast avgift. Se [armeringsnät](/produkter/armeringsnat) eller [begär offert](/offert)." },
     ],
     faqs: [
       { q: "Behöver en gjuten uteplats armering?", a: "Ja, ett armeringsnät rekommenderas för att hålla ihop plattan och begränsa sprickor. Oftast räcker nät 5150 eller 6150." },
       { q: "Var i plattan ska nätet ligga?", a: "Centriskt eller i övre halvan av plattan, på distanser. Ett nät som ligger i botten gör nästan ingen nytta mot sprickor i ytan." },
       { q: "Hur tjock ska en gjuten uteplats vara?", a: "Ofta 80–120 mm för gångytor. Ska plattan bära tyngre laster behövs dimensionering." },
       { q: "Varför spricker gjutna uteplatser?", a: "Ofta på grund av tjäle, sättningar eller krympning utan fogar. Rätt underarbete och fogindelning är lika viktigt som armeringen." },
-      { q: "Behöver en uteplats fogar?", a: "Större ytor bör delas in i fält med sågade eller ingjutna fogar så att krympsprickor hamnar där du vill. Mot husgrunden läggs en rörelsefog." },
+      { q: "Hur stora fält ska en gjuten uteplats ha?", a: "En vanlig tumregel är högst cirka 30 gånger plattjockleken, alltså runt 3 × 3 m för 100 mm platta. Mot husgrunden läggs en rörelsefog." },
     ],
     target: { href: "/produkter/armeringsnat", label: "Beställ armeringsnät" },
     category: "armering-till",
@@ -734,6 +801,19 @@ export const armeringTill1: Post[] = [
       { type: "h2", text: "Platta – som en enkel garageplatta" },
       { type: "p", text: "Väljer du gjuten platta armeras den i princip som en garageplatta utan väggar: nät i fältet och förstärkt kant med kantjärn under stolpraden. Stolparna förankras med ingjutna stolpskor. Se även [armering till garageplatta](/blogg/armering-till-garage)." },
 
+      { type: "h2", text: "Hur stor last får en stolpe?" },
+      { type: "p", text: "Snölasten på mark varierar i Sverige från cirka 1,0 kN/m² längs sydkusten till över 3 kN/m² i delar av Norrland och ännu mer i fjällen. På ett platt carporttak räknas ungefär 80 % av marksnön." },
+      { type: "table",
+        caption: "Grov uppskattning av karakteristisk snölast på en dubbelcarport 6 × 6 m (36 m²) med sex stolpar. Mittstolparna får mer än hörnen.",
+        head: ["Snölast på mark", "Snö på taket", "Per stolpe i snitt"],
+        rows: [
+          ["1,5 kN/m²", "ca 43 kN (4,4 ton)", "ca 0,7 ton"],
+          ["2,5 kN/m²", "ca 72 kN (7,3 ton)", "ca 1,2 ton"],
+          ["3,5 kN/m²", "ca 100 kN (10 ton)", "ca 1,7 ton"],
+        ],
+      },
+      { type: "p", text: "Siffrorna visar varför plintarna i norr blir större. Taket och konstruktionens egenvikt kommer till, och dimensioneringen görs med säkerhetsfaktorer – lämna den till carportleverantören eller en konstruktör." },
+
       { type: "h2", text: "Exempel på mängder" },
       { type: "p", text: "En dubbelcarport på cirka 6 × 6 m har ofta sex stolpar. Med plintar krävs alltså sex plintkorgar och sex startjärn eller stolpskor – identiska positioner som lämpar sig väl för serietillverkning. Väljer du platta på 36 m² behövs cirka 40–41 m² nät med överlapp och kantjärn längs stolpraderna." },
       { type: "ul", items: [
@@ -752,12 +832,12 @@ export const armeringTill1: Post[] = [
         "Gjut in stolpsko eller ingjutningsgods i rätt höjd och läge.",
       ] },
 
-      { type: "h2", text: "Konstruktören avgör" },
-      { type: "p", text: "Snölasten varierar kraftigt över Sverige – en carport i Norrland får betydligt större last än en i Skåne. Plintstorlek, djup och armering ska anpassas efter snözon, markförhållanden och carportens storlek. Följ tillverkarens eller konstruktörens anvisning." },
+      { type: "h2", text: "Följ leverantörens anvisning" },
+      { type: "p", text: "Plintstorlek, djup och armering anpassas efter snözon, mark och carportens storlek. Har du en carportsats står kraven i monteringsanvisningen." },
 
-      { type: "p", text: "Varför prefab? Plintkorgar och startjärn till en carport är små men många identiska delar. Bockade i serie blir de lika, passar formröret och kommer färdiga att ställa på distanser. Det sparar ett par timmar med bockverktyg på plats och ger jämnare kvalitet än järn bockade för hand – och plattans kantjärn och nät kan komma i samma leverans." },
-      { type: "h2", text: "Checklista före beställning" },
-      { type: "p", text: "Ju mer av detta som finns med i förfrågan, desto snabbare och mer exakt blir offerten." },
+      { type: "h2", text: "Sex likadana plintkorgar" },
+      { type: "p", text: "Plintkorgar och startjärn till en carport är små, men identiska. Bockade i serie blir de lika, passar formröret och är färdiga att ställa på distanser. Plattans kantjärn och nät kan komma i samma leverans." },
+      { type: "h2", text: "Uppgifter till offerten" },
       { type: "ul", items: [
         "Carportens storlek och antal stolpar.",
         "Plintar, platta eller båda.",
@@ -767,7 +847,7 @@ export const armeringTill1: Post[] = [
         "Leveransadress och önskad vecka.",
       ] },
       { type: "h2", text: "Beställ armering till carporten" },
-      { type: "p", text: "Vi tillverkar plintkorgar, startjärn, kantjärn och nät i B500B och levererar i hela Sverige, inklusive Norrland. Se [grundarmering](/produkter/grundarmering) eller [begär offert](/offert)." },
+      { type: "p", text: "Skicka carportens grundritning eller monteringsanvisning med antal stolpar och ort. Du får offert på plintkorgar, startjärn, kantjärn och nät i B500B – levererat i hela Sverige, även till Norrland. Se [grundarmering](/produkter/grundarmering) eller [begär offert](/offert)." },
     ],
     faqs: [
       { q: "Ska carporten stå på plintar eller platta?", a: "Plintar räcker om du inte behöver ett fast golv. Vill du ha gjuten yta under bilen är en platta med förstärkta kanter vanligt. Snölast och mark avgör." },
@@ -775,6 +855,7 @@ export const armeringTill1: Post[] = [
       { q: "Hur armeras en carportplint?", a: "Ofta med ett kryss eller en korg Ø10–Ø12 i botten och järn upp mot stolpinfästningen. Konstruktören eller leverantören anger dimension." },
       { q: "Behöver carportplattan kantbalk?", a: "Ofta förstärks kanten under stolpraden med kantjärn, så att stolplasten sprids. Utförandet ska följa ritningen." },
       { q: "Hur många plintar behöver en carport?", a: "Lika många som stolpar – en dubbelcarport har ofta sex. Carportleverantörens ritning anger antal och placering." },
+      { q: "Påverkar snözonen armeringen?", a: "Ja. Snölasten på mark är ungefär dubbelt så stor i stora delar av Norrland som i södra Sverige, vilket ger större plintar och ibland grövre armering." },
     ],
     target: { href: "/produkter/grundarmering", label: "Begär offert på carportgrund" },
     category: "armering-till",
@@ -800,7 +881,7 @@ export const armeringTill1: Post[] = [
       "attefallshus grund armering",
     ],
     content: [
-      { type: "p", text: "Ett attefallshus får ha en byggarea på högst 30 m² och kräver anmälan och startbesked från kommunen. Många används som gäststuga eller bostad – och då byggs grunden som en isolerad platta på mark, precis som för en villa men mindre. Kantbalken och dess armering levererar vi färdig som [villakorg och kantbalksarmering](/produkter/villakorg-kantbalksarmering)." },
+      { type: "p", text: "Ett attefallshus får ha en byggarea på högst 30 m² och kräver anmälan och startbesked från kommunen. Många används som gäststuga eller bostad – och då byggs grunden som en isolerad platta på mark, precis som för en villa men mindre. Kantbalken och dess armering levererar vi färdig som [kantbalkskorgar och kantbalksarmering](/produkter/villakorg-kantbalksarmering)." },
 
       { type: "h2", text: "Typisk armering till attefallshus" },
       { type: "table",
@@ -824,6 +905,10 @@ export const armeringTill1: Post[] = [
         "Kantjärn Ø12: 88 m × 0,888 kg/m ≈ 78 kg före skarvar.",
       ] },
       { type: "p", text: "Siffrorna är ett exempel. Antal kantjärn och bygelavstånd står på din ritning. Byglarnas form och mått beskrivs i [kantbalksbygel](/blogg/kantbalksbygel)." },
+      { type: "p", text: "Totalt väger armeringen till en sådan platta runt ett kvarts ton: cirka 100 kg nät 6150, knappt 80 kg kantjärn och resten byglar, hörnjärn och distanser. Det går att lossa för hand." },
+
+      { type: "h2", text: "30 m² räknas till ytterväggens utsida" },
+      { type: "p", text: "Byggarean mäts till ytterväggarnas utsida. Plattan får därför inte göras så stor att huset hamnar över 30 m² – en vanlig miss när plattan ritas med extra marginal. Kontrollera måtten mot husleverantörens ritning innan armeringen beställs. Huset ska också placeras minst 4,5 m från tomtgränsen om inte grannen godkänner något annat." },
 
       { type: "h2", text: "Platta eller plintar?" },
       { type: "p", text: "Ett oisolerat förråd kan stå på plintar, men ett attefallshus som ska värmas upp byggs nästan alltid på isolerad platta. Plattan ger varmt golv, enkel golvvärme och ett tätt hus. Hur plattan byggs upp lager för lager visar vi i [platta på mark – uppbyggnad och armering](/blogg/armering-platta-pa-mark)." },
@@ -837,7 +922,7 @@ export const armeringTill1: Post[] = [
         "Rör och golvvärme läggs efter nätet utan att nätet säkras – då trampas det ned.",
       ] },
       { type: "p", text: "Små projekt blir ofta lidande av att armeringen köps i omgångar från olika ställen. Med en bockningslista och en samlad leverans kommer allt på en gång, märkt per position, och plattan kan gjutas utan avbrott." },
-      { type: "h2", text: "Arbetsgång" },
+      { type: "h2", text: "Arbetsgång för attefallsplattan" },
       { type: "ol", items: [
         "Gör anmälan och vänta på startbesked.",
         "Schakta, lägg och packa bärlager, lägg cellplast och kantelement.",
@@ -846,12 +931,12 @@ export const armeringTill1: Post[] = [
         "Kontrollera mot ritningen och gjut.",
       ] },
 
-      { type: "h2", text: "Konstruktören avgör" },
-      { type: "p", text: "Även för ett litet hus ska grunden följa en konstruktionsritning, ofta från husleverantören eller en konstruktör. Den ingår i underlaget till anmälan. Värdena här är typiska exempel." },
+      { type: "h2", text: "Ritningen ingår i anmälan" },
+      { type: "p", text: "Även för ett litet hus ska grunden följa en konstruktionsritning, ofta från husleverantören. Den ingår i underlaget till anmälan, och kontrollansvarig eller byggherren ska kunna visa att armeringen följer den." },
 
-      { type: "p", text: "Varför prefab? En attefallsplatta är liten, men den har samma antal delar som en villaplatta: nät, kantjärn, byglar, hörnjärn och distanser. Att köpa dem styckvis och bocka byglar för hand tar oproportionerligt lång tid. Med prefab kommer allt bockat efter mått och märkt, och plattan kan armeras på en dag av två personer – beroende på storlek och form." },
-      { type: "h2", text: "Checklista före beställning" },
-      { type: "p", text: "Ju mer av detta som finns med i förfrågan, desto snabbare och mer exakt blir offerten." },
+      { type: "h2", text: "Liten platta, lika många delar" },
+      { type: "p", text: "En attefallsplatta har samma delar som en villaplatta: nät, kantjärn, byglar, hörnjärn och distanser. Att köpa dem styckvis och bocka närmare 90 byglar för hand tar oproportionerligt lång tid. Färdigbockat och märkt per position kan du börja montera direkt." },
+      { type: "h2", text: "Det här behöver vi för offerten" },
       { type: "ul", items: [
         "Grundritning för attefallshuset.",
         "Kantelementets typ och invändiga mått.",
@@ -860,15 +945,15 @@ export const armeringTill1: Post[] = [
         "Golvvärme ja eller nej – påverkar antal distanser.",
         "Leveransort och önskad vecka.",
       ] },
-      { type: "h2", text: "Beställ armeringen som paket" },
-      { type: "p", text: "Vi levererar byglar, kantjärn, hörnjärn, nät och distanser till attefallshus som ett paket efter ritning, märkt per position och skickat i hela Sverige. Se [villakorg och kantbalksarmering](/produkter/villakorg-kantbalksarmering) eller [begär offert](/offert)." },
+      { type: "h2", text: "Hela attefallsplattan i ett paket" },
+      { type: "p", text: "Skicka grundritningen från husleverantören så får du byglar, kantjärn, hörnjärn, nät och distanser som ett paket. Frakten räknas efter mängd och ort, så även en liten platta blir rimlig att skicka. Se [kantbalkskorgar och kantbalksarmering](/produkter/villakorg-kantbalksarmering) eller [begär offert](/offert)." },
     ],
     faqs: [
       { q: "Vilken grund passar ett attefallshus?", a: "Ett uppvärmt attefallshus byggs oftast på isolerad platta på mark med kantbalk. Ett oisolerat förråd kan stå på plintar." },
       { q: "Hur mycket armering går åt till ett attefallshus?", a: "För 30 m² ungefär 33–35 m² nät och cirka 90 m kantjärn med 2 + 2 järn, plus byglar och hörnjärn. Ritningen gäller." },
       { q: "Behövs konstruktionsritning för grunden?", a: "Ja, grunden ska följa en konstruktionsritning, som också ingår i underlaget för anmälan och startbesked." },
       { q: "Kan ni leverera hela armeringen till attefallshuset?", a: "Ja, nät, kantbalksbyglar, kantjärn, hörnjärn och distanser som ett paket efter ritning. Pris och leverans anges i offerten." },
-      { q: "Kan jag ha golvvärme i plattan till attefallshuset?", a: "Ja. Slingorna fästs på nätet innan gjutning. Se till att nätet ligger stabilt på distanser." },
+      { q: "Är en så liten beställning värd att skicka?", a: "Ja. Det finns ingen fast fraktavgift – frakten räknas efter mängd och ort och anges i offerten." },
     ],
     target: { href: "/produkter/villakorg-kantbalksarmering", label: "Beställ armering till attefallshus" },
     category: "armering-till",
@@ -905,22 +990,36 @@ export const armeringTill1: Post[] = [
           ["Nät", "5150 eller 6150, ett lager"],
           ["Kant", "Förtjockad kant med 2 kamjärn Ø10"],
           ["Nätskarv", "Överlapp minst två rutor"],
-          ["Täckskikt", "Ofta 30–40 mm, minst 40 mm mot förberedd mark"],
+          ["Täckskikt", "Minst 40 mm mot bärlagret, ofta 30–40 mm mot ytan"],
         ],
       },
+
+      { type: "h2", text: "Reglerna som styr plattans storlek" },
+      { type: "p", text: "En friggebod får ha högst 15 m² byggarea, mätt till ytterväggarnas utsida, och nockhöjd högst 3 m. Den ska stå minst 4,5 m från tomtgränsen om inte grannen godkänner annat. En platta på 3 × 5 m ger alltså exakt 15 m² när väggarnas utsida står i plattans kant – större än så blir det inte en friggebod." },
 
       { type: "h2", text: "Isolerad eller oisolerad platta?" },
       { type: "p", text: "En friggebod som används som förråd klarar sig med en oisolerad platta på packat bärlager, gärna med markisolering runt om mot tjäle. Ska boden värmas upp som ateljé eller kontor bör plattan isoleras som en liten platta på mark med kantelement – då liknar armeringen den i [armering till attefallshus](/blogg/armering-attefallshus)." },
 
-      { type: "h2", text: "Hur mycket nät går åt?" },
-      { type: "p", text: "En platta på 3 × 5 m (15 m²) kräver cirka 17 m² nät med överlapp. Nät 5150 väger cirka 2,05 kg/m² och 6150 cirka 2,96 kg/m². Till kanten behövs två järn runt omkretsen – 16 m gånger två, alltså cirka 32 m plus skarvar. Räkna själv i [armeringskalkylatorn](/armeringskalkylator)." },
+      { type: "h2", text: "Materiallista för en platta 3 × 5 m" },
+      { type: "table",
+        caption: "Exempel med nät 6150 och 2 kantjärn Ø10 runt omkretsen (16 m). Vikter: 6150 ca 2,96 kg/m², Ø10 0,617 kg/m.",
+        head: ["Material", "Mängd", "Vikt ca"],
+        rows: [
+          ["Nät 6150", "ca 17 m² inkl. överlapp", "50 kg"],
+          ["Kantjärn Ø10", "ca 35 m inkl. skarvar", "22 kg"],
+          ["Hörnjärn Ø10", "8 st", "några kg"],
+          ["Distanser", "ca 20–30 st", "–"],
+          ["Najtråd", "en rulle", "–"],
+        ],
+      },
+      { type: "p", text: "Med nät 5150 (ca 2,05 kg/m²) blir nätet cirka 35 kg. Räkna själv i [armeringskalkylatorn](/armeringskalkylator)." },
 
       { type: "h2", text: "Platta eller plintar?" },
       { type: "p", text: "Plintar är snabbare och kräver mindre betong, och golvet blir av trä. En gjuten platta ger ett tåligt golv som klarar gräsklippare, verktyg och fukt bättre. Den kräver mer markarbete och ett ordentligt bärlager. Står boden på mark med tjälrisk är markisolering runt plattan ett billigt skydd mot att plattan lyfts och spricker." },
       { type: "h2", text: "Förankring av boden" },
       { type: "p", text: "Väggarna förankras i plattan med ingjutna bultar eller vinkeljärn i syllen. Bestäm infästningen innan du gjuter, så att ingjutningsgodset hamnar rätt och inte krockar med kantjärnen. En syll på ett fuktspärrande underlag skyddar träet mot fukt från betongen." },
-      { type: "p", text: "Behöver plattan bära tunga saker, till exempel en vedklyv, en motorcykel eller ett gjutet golv i verkstaden, kan ett grövre nät eller en tjockare platta behövas. Fråga gärna – vi hjälper till att ta fram en enkel materiallista." },
-      { type: "h2", text: "Arbetsgång" },
+      { type: "p", text: "Ska plattan bära en vedklyv, en motorcykel eller tunga maskiner kan ett grövre nät eller en tjockare platta behövas." },
+      { type: "h2", text: "Så gjuter du plattan till boden" },
       { type: "ol", items: [
         "Ta bort matjord och lägg ett packat bärlager av makadam.",
         "Bygg form och gräv ur för förtjockad kant.",
@@ -929,12 +1028,11 @@ export const armeringTill1: Post[] = [
         "Gjut, vibrera och håll betongen fuktig de första dygnen.",
       ] },
 
-      { type: "h2", text: "Konstruktören avgör" },
-      { type: "p", text: "För en friggebod finns sällan en konstruktionsritning, men på lös eller tjälfarlig mark, eller om plattan ska bära tunga maskiner, bör en konstruktör titta på grunden. Värdena här är typiska exempel." },
+      { type: "h2", text: "När ska en konstruktör titta på plattan?" },
+      { type: "p", text: "På lös eller tjälfarlig mark, eller om plattan ska bära tunga maskiner. För ett vanligt förråd räcker typiska värden som ovan." },
 
-      { type: "p", text: "Tänk på hanteringen. Ett standardnät på 2 × 5 m väger cirka 20–30 kg beroende på nättyp och kan bäras av två personer. Till en friggebod räcker ofta två eller tre nät, plus några kantjärn och en påse distanser. Behöver du nät klippta i mindre format för att få in dem på tomten går det att ordna i offerten." },
-      { type: "h2", text: "Checklista före beställning" },
-      { type: "p", text: "Ju mer av detta som finns med i förfrågan, desto snabbare och mer exakt blir offerten." },
+      { type: "p", text: "Ett nät på 2 × 5 m väger cirka 20 kg i 5150 och 30 kg i 6150 och bärs lätt av två personer. Ska näten in genom en smal grind kan de levereras i mindre format – ange det i förfrågan." },
+      { type: "h2", text: "Skicka med i förfrågan" },
       { type: "ul", items: [
         "Plattans mått.",
         "Nättyp, till exempel 5150 eller 6150.",
@@ -944,7 +1042,7 @@ export const armeringTill1: Post[] = [
         "Leveransadress.",
       ] },
       { type: "h2", text: "Beställ nät och kantjärn" },
-      { type: "p", text: "Vi levererar armeringsnät, kantjärn och distanser till friggebodar i hela Sverige, med frakt efter mängd och ort. Se [armeringsnät](/produkter/armeringsnat) eller [begär offert](/offert)." },
+      { type: "p", text: "Skicka plattans mått så får du offert på nät, kantjärn och distanser – vi hjälper gärna till med materiallistan. Se [armeringsnät](/produkter/armeringsnat) eller [begär offert](/offert)." },
     ],
     faqs: [
       { q: "Behöver en friggebod en gjuten platta?", a: "Nej, många står på plintar. En gjuten platta är ett bra val om du vill ha ett slitstarkt golv, till exempel i en verkstad." },
@@ -1004,9 +1102,18 @@ export const armeringTill1: Post[] = [
         "Förstärkning vid hörnstolparna och anslutningsjärn mot husgrunden om ritningen anger det.",
       ] },
       { type: "p", text: "Exemplet gäller ett varmt uterum där husväggen utgör den fjärde sidan. Har uterummet egen grund längs huset tillkommer en kantbalk även där." },
+      { type: "h2", text: "Vanliga fel vid uterumsgrunder" },
+      { type: "ul", items: [
+        "Plattan gjuts fast i husgrunden utan att ritningen anger det – plattorna rör sig olika och sprickan hamnar i anslutningen.",
+        "Kantbalken görs lika svag under glaspartiets hörnstolpar som längs resten av kanten.",
+        "Ett kallt uterum får platta utan markisolering och lyfts av tjälen ute i kanten, där huset inte värmer marken.",
+        "Fall saknas utanför glaspartierna, så att vatten rinner in mot husgrunden.",
+        "Plattans höjd räknas fram först när armeringen redan är beställd.",
+      ] },
+
       { type: "h2", text: "Golvbeläggning och höjd" },
       { type: "p", text: "Uterummets golv ska oftast ligga i nivå med husets golv eller något lägre. Höjden på plattan bestäms därför av husets golvnivå minus golvbeläggningens tjocklek. Det påverkar hur högt bärlager och cellplast ska byggas – och därmed kantbalkens höjd och byglarnas mått. Klara ut höjderna innan armeringen beställs." },
-      { type: "h2", text: "Arbetsgång" },
+      { type: "h2", text: "Från bärlager till anslutning mot huset" },
       { type: "ol", items: [
         "Ta bort matjord, lägg och packa bärlager.",
         "Lägg cellplast och kantelement om uterummet ska vara varmt.",
@@ -1015,12 +1122,12 @@ export const armeringTill1: Post[] = [
         "Utför anslutningen mot huset enligt ritning och gjut.",
       ] },
 
-      { type: "h2", text: "Konstruktören avgör" },
+      { type: "h2", text: "Lov, laster och ritning" },
       { type: "p", text: "Uterumsleverantören anger ofta laster och grundkrav, men armeringen ska följa en konstruktionsritning. Ett uterum kan kräva bygglov eller anmälan – kontrollera med kommunen innan du gjuter." },
 
-      { type: "p", text: "Varför prefab? Uterum byggs ofta som ett eget projekt vid sidan av vardagen, och tiden på bygget är begränsad. Med byglar, kantjärn och hörnjärn tillverkade efter mått och märkta per position slipper du kapa och bocka på plats. Det blir rätt mått direkt, och armeringen kan läggas på en dag i stället för flera." },
-      { type: "h2", text: "Checklista före beställning" },
-      { type: "p", text: "Ju mer av detta som finns med i förfrågan, desto snabbare och mer exakt blir offerten." },
+      { type: "h2", text: "Färdigbockat när kvällar och helger är byggtiden" },
+      { type: "p", text: "Uterum byggs ofta vid sidan av vardagen. Med byglar, kantjärn och hörnjärn tillverkade efter mått och märkta per position slipper du kapa och bocka på plats, och måtten mot kantelementet stämmer direkt." },
+      { type: "h2", text: "Det här behöver vi om uterummet" },
       { type: "ul", items: [
         "Uterummets mått och om det är kallt eller varmt.",
         "Grundritning eller uterumsleverantörens grundkrav.",
@@ -1030,7 +1137,7 @@ export const armeringTill1: Post[] = [
         "Leveransort och önskad vecka.",
       ] },
       { type: "h2", text: "Beställ armering till uterummet" },
-      { type: "p", text: "Vi tillverkar nät, kantjärn, byglar och hörnjärn i B500B och levererar som ett paket, märkt per position, i hela Sverige. Se [grundarmering](/produkter/grundarmering) eller [begär offert](/offert)." },
+      { type: "p", text: "Skicka grundritningen eller uterumsleverantörens grundkrav så offererar vi nät, kantjärn, byglar och hörnjärn i B500B som ett paket. Saknas bockningslista tar vi fram den. Se [grundarmering](/produkter/grundarmering) eller [begär offert](/offert)." },
     ],
     faqs: [
       { q: "Vilken grund behövs till ett uterum?", a: "Ett kallt uterum kan stå på en oisolerad platta eller plintar. Ett varmt uterum byggs normalt på isolerad platta på mark med kantbalk." },
@@ -1080,6 +1187,17 @@ export const armeringTill1: Post[] = [
 
       { type: "h2", text: "Golvbrunnen – den svaga punkten" },
       { type: "p", text: "Urtaget för golvbrunnen bryter nätet, och sprickor startar gärna i urtagets hörn. Klipp nätet runt brunnen och lägg extra järn längs urtaget och diagonalt i hörnen. Fallet mot brunnen görs i betongen, så nätet måste ligga på distanser som följer fallet – annars hamnar det för grunt eller för djupt på olika ställen." },
+      { type: "h2", text: "Räkna fallet innan du väljer distanser" },
+      { type: "p", text: "Branschreglerna för våtrum anger fall mot golvbrunnen, närmast brunnen ofta mellan 1:150 och 1:50. Med 1:100 och 1,5 m från vägg till brunn blir höjdskillnaden 15 mm. Distanserna längs väggen ska då vara cirka 15 mm högre än vid brunnen, så att täckskiktet blir lika överallt." },
+      { type: "table",
+        caption: "Höjdskillnad i golvet vid olika fall och avstånd till brunnen.",
+        head: ["Avstånd till brunn", "Fall 1:150", "Fall 1:100", "Fall 1:50"],
+        rows: [
+          ["1,0 m", "7 mm", "10 mm", "20 mm"],
+          ["1,5 m", "10 mm", "15 mm", "30 mm"],
+          ["2,0 m", "13 mm", "20 mm", "40 mm"],
+        ],
+      },
 
       { type: "h2", text: "Fristående bastu" },
       { type: "p", text: "En vedeldad bastustuga vid sjön kan stå på plintar med trägolv, men vill du ha gjutet golv byggs en platta. För en bastu som bara värms vid användning räcker ofta en oisolerad platta med markisolering. En året-runt-uppvärmd bastustuga byggs som en liten platta på mark – se [platta på mark – uppbyggnad och armering](/blogg/armering-platta-pa-mark)." },
@@ -1088,7 +1206,7 @@ export const armeringTill1: Post[] = [
       { type: "p", text: "Ett bastugolv värms upp och svalnar varje gång bastun används. Temperaturrörelserna ger spänningar i plattan, särskilt där golvet möter väggarna och runt aggregatet. Nätet fördelar dessa spänningar så att sprickor blir fina. Ett vedeldat aggregat ska stå på ett underlag som klarar värmen enligt tillverkarens anvisning – ofta är det inte själva plattan som är problemet utan avståndet till brännbart material." },
       { type: "h2", text: "Bastu inomhus" },
       { type: "p", text: "Byggs bastun i ett befintligt badrum eller källarrum gjuts ofta ett tunt avjämnings- eller fallskikt ovanpå befintligt bjälklag. Det tunna skiktet armeras normalt inte med kamjärn, men vid tjockare pågjutningar kan nät behövas. Fråga golvleverantören eller konstruktören vad som gäller för ditt underlag. Är bastun del av en ny platta på mark armeras den med resten av plattan." },
-      { type: "h2", text: "Arbetsgång" },
+      { type: "h2", text: "Ordning kring brunnen" },
       { type: "ol", items: [
         "Bestäm brunnens läge och höjd, och förbered avloppet.",
         "Lägg bärlager, eventuell isolering och form.",
@@ -1097,12 +1215,11 @@ export const armeringTill1: Post[] = [
         "Gjut med fall mot brunnen och låt plattan torka innan tätskikt läggs.",
       ] },
 
-      { type: "h2", text: "Konstruktören avgör" },
-      { type: "p", text: "Fall, tätskikt och golvbrunn ska följa branschregler för våtrum. Plattans armering och tjocklek bestäms av konstruktören eller bastuleverantören. Värdena här är typiska exempel. Bygger du bastun i ett befintligt hus kan bjälklagets bärförmåga också behöva kontrolleras, eftersom en gjuten pågjutning, aggregat och stenar ger en betydande extra last." },
+      { type: "h2", text: "Kontrollera bjälklaget inomhus" },
+      { type: "p", text: "Plattans armering och tjocklek bestäms av konstruktören eller bastuleverantören. Bygger du bastun i ett befintligt hus kan bjälklagets bärförmåga behöva kontrolleras – en 50 mm pågjutning väger runt 120 kg/m², och aggregat och stenar kommer till." },
 
-      { type: "p", text: "Tänk också på hanteringen. Ett bastugolv eller en bastuplatta är ofta liten, och standardnät kan behöva klippas för att få plats. Nät kan levereras klippta efter plattans mått, så att du slipper kapa och får mindre spill. Förstärkningsjärnen runt golvbrunnen kan levereras färdigkapade, och distanser i rätt höjd för fallet ingår om du anger det i förfrågan." },
-      { type: "h2", text: "Checklista före beställning" },
-      { type: "p", text: "Ju mer av detta som finns med i förfrågan, desto snabbare och mer exakt blir offerten." },
+      { type: "p", text: "Ett bastugolv är ofta litet, och standardnät kan behöva klippas. Ange golvets mått och brunnens läge i förfrågan, så räknar vi nät, förstärkningsjärn runt brunnen och distanser för fallet." },
+      { type: "h2", text: "Skicka med i förfrågan" },
       { type: "ul", items: [
         "Golvets eller plattans mått.",
         "Golvbrunnens läge.",
@@ -1112,7 +1229,7 @@ export const armeringTill1: Post[] = [
         "Leveransadress.",
       ] },
       { type: "h2", text: "Beställ armering till bastun" },
-      { type: "p", text: "Vi levererar nät, kantjärn, förstärkningsjärn och distanser till bastugolv och bastuplattor i hela Sverige. Se [grundarmering](/produkter/grundarmering) eller [begär offert](/offert)." },
+      { type: "p", text: "Till en fristående bastustuga levererar vi plattans nät, kantjärn och förstärkningsjärn runt brunnen som ett litet paket – frakten räknas efter mängd och ort. Se [grundarmering](/produkter/grundarmering) eller [begär offert](/offert)." },
     ],
     faqs: [
       { q: "Behöver ett bastugolv armering?", a: "Ett gjutet bastugolv bör armeras med nät för att begränsa sprickor, särskilt runt golvbrunnen där plattan försvagas." },
@@ -1120,6 +1237,7 @@ export const armeringTill1: Post[] = [
       { q: "Vilken grund passar en fristående bastu?", a: "Plintar fungerar med trägolv. Vill du ha gjutet golv byggs en platta – isolerad om bastun ska vara uppvärmd året om." },
       { q: "Vilket nät används i bastugolv?", a: "Ofta 5150 eller 6150. Ritningen eller tillverkarens anvisning gäller." },
       { q: "Klarar betongplattan värmen från bastuaggregatet?", a: "Ja, betong tål bastutemperaturer. Följ aggregattillverkarens anvisning om underlag och avstånd till brännbart material." },
+      { q: "Hur mycket fall ska bastugolvet ha?", a: "Branschreglerna för våtrum anger fall mot brunnen, närmast brunnen ofta 1:150–1:50. Med 1:100 sjunker golvet 10 mm per meter." },
     ],
     target: { href: "/produkter/grundarmering", label: "Begär offert på bastuarmering" },
     category: "armering-till",
@@ -1155,7 +1273,7 @@ export const armeringTill1: Post[] = [
           ["Plattjocklek", "Ofta ca 100 mm i fält"],
           ["Nät", "6150 (Ø6, c/c 150) eller 5150"],
           ["Nätets läge", "På distanser, ofta 25–35 mm över cellplasten"],
-          ["Slingor", "PEX-rör, ofta c/c 200–300 mm, fästa på nätet"],
+          ["Slingor", "PEX-rör, ofta c/c 300 mm, tätare där mer värme behövs"],
           ["Fästning", "Buntband eller rörclips i nätets korsningar"],
           ["Täckning över slingor", "Tillräcklig betong över rören – enligt golvvärmeleverantör"],
         ],
@@ -1163,6 +1281,7 @@ export const armeringTill1: Post[] = [
 
       { type: "h2", text: "Nätet som fästbas" },
       { type: "p", text: "Med 150 mm rutor blir det lätt att lägga slingor i c/c 150 eller 300 mm – röret följer nätets trådar och fästs i korsningarna. Därför är 150-nät standard i golvvärmeplattor. Nätet måste ligga stabilt på distanser innan rören läggs, eftersom det annars trycks ned mot cellplasten när man går på det." },
+      { type: "p", text: "Räkneexempel: med c/c 300 går det åt cirka 3,3 m rör per m². En platta på 120 m² får alltså runt 400 m rör, fördelat på flera slingor från fördelaren. Varje slinga fästs i nätet ungefär var halvmeter och i varje böj." },
 
       { type: "h2", text: "Vanliga misstag" },
       { type: "ul", items: [
@@ -1174,11 +1293,11 @@ export const armeringTill1: Post[] = [
       ] },
 
       { type: "h2", text: "Distanser – fler än du tror" },
-      { type: "p", text: "Nätet bär både sin egen vikt, slingorna och montörerna som går på det. Med för få distanser sjunker nätet mellan stöden. Räkna med distanser i ett tätt rutmönster, ofta med något hundratal millimeter till en meter mellan dem beroende på distanstyp och nät. Fyrkantiga eller linjära distanser för cellplast fördelar trycket och sjunker inte ned i isoleringen." },
+      { type: "p", text: "Nätet bär både sin egen vikt, slingorna och montörerna som går på det. Med för få distanser sjunker nätet mellan stöden. Ett vanligt riktvärde är distanser c/c 0,6–1,0 m i båda riktningar, alltså 1–3 per m², tätare där man går mycket. Distanser med stor fotplatta för cellplast fördelar trycket och sjunker inte ned i isoleringen." },
       { type: "h2", text: "Fogar och sprickor i golvvärmeplattor" },
       { type: "p", text: "Golvvärme ger temperaturrörelser i plattan. En villaplatta gjuts ofta utan sågfogar och litar på nätet för att begränsa sprickor. Är plattan stor eller har ojämn form kan konstruktören föreskriva fogar. Slingorna ska då passera fogen i skyddsrör, och fogens läge måste vara känt innan slingorna läggs." },
       { type: "p", text: "Nätet bör levereras plant och oskadat så att det går att gå på och fästa rören i. Böjda nät är svåra att få att ligga på rätt höjd – en anledning att låta näten levereras på pall direkt till platsen." },
-      { type: "h2", text: "Arbetsgång" },
+      { type: "h2", text: "Ordning på bygget: kantbalk, nät, slingor" },
       { type: "ol", items: [
         "Lägg cellplast och kantelement, montera kantbalksarmeringen.",
         "Lägg distanser och nät med föreskriven överlapp, bind skarvarna.",
@@ -1187,12 +1306,11 @@ export const armeringTill1: Post[] = [
         "Gjut försiktigt så att nät och slingor inte trampas ned.",
       ] },
 
-      { type: "h2", text: "Konstruktören avgör" },
+      { type: "h2", text: "Två ritningar ska stämma" },
       { type: "p", text: "Nättyp, täckskikt och plattans tjocklek bestäms av konstruktören. Slingornas avstånd och täckning bestäms av golvvärmeleverantören. Stäm av ritningarna mot varandra innan bygget – det är lättare än att ändra på plats. Mer om nätets höjd i [distanser och täckskikt](/blogg/distanser-tackskikt-armering)." },
 
       { type: "p", text: "Planera leveransen efter arbetsordningen. Kantbalksarmeringen behövs först, nät och distanser därefter och golvvärmen sist. Kommer allt samtidigt ska det kunna läggas upp så att det inte står i vägen. Märkning per position gör det lätt att plocka rätt delar i rätt ordning." },
-      { type: "h2", text: "Checklista före beställning" },
-      { type: "p", text: "Ju mer av detta som finns med i förfrågan, desto snabbare och mer exakt blir offerten." },
+      { type: "h2", text: "Underlag för offert på golvvärmeplattan" },
       { type: "ul", items: [
         "Grundritning med nät, kantjärn och byglar.",
         "Kantelementets typ.",
@@ -1202,14 +1320,14 @@ export const armeringTill1: Post[] = [
         "Leveransort och önskad vecka.",
       ] },
       { type: "h2", text: "Beställ armering till golvvärmeplattan" },
-      { type: "p", text: "Vi levererar nät, distanser, kantjärn och kantbalksbyglar som ett paket efter ritning, märkt per position, i hela Sverige. Se [grundarmering](/produkter/grundarmering) eller [begär offert](/offert)." },
+      { type: "p", text: "Bifoga grundritningen och gärna golvvärmeritningen, så räknar vi nät, kantjärn, byglar och rätt antal distanser för plattan. Se [grundarmering](/produkter/grundarmering) eller [begär offert](/offert)." },
     ],
     faqs: [
       { q: "Fäster man golvvärme på armeringsnätet?", a: "Ja, vanligen fästs slingorna med buntband eller clips i nätets korsningar. Nätet måste ligga stabilt på distanser innan rören läggs." },
       { q: "Vilket nät passar golvvärme?", a: "150-nät, till exempel 6150, är standard eftersom rutorna passar slingavstånd på 150 eller 300 mm. Konstruktören avgör dimension." },
       { q: "Ska golvvärmen ligga under eller över nätet?", a: "Oftast fästs slingorna ovanpå nätet. Exakt läge och täckning över rören anges av golvvärmeleverantören och konstruktören." },
       { q: "Behöver nätet ligga på distanser när det finns golvvärme?", a: "Ja. Utan distanser trycks nätet ned mot cellplasten, armeringen får för lite täckskikt och slingorna hamnar för lågt." },
-      { q: "Hur många distanser behövs under nätet?", a: "Tillräckligt många för att nätet inte ska sjunka när man går på det – ofta i ett tätt rutmönster. Följ distanstillverkarens anvisning." },
+      { q: "Hur många distanser behövs under nätet?", a: "Ett vanligt riktvärde är c/c 0,6–1,0 m, alltså 1–3 per m², tätare i gångstråk. Följ distanstillverkarens anvisning." },
     ],
     target: { href: "/produkter/grundarmering", label: "Beställ armering till golvvärmeplatta" },
     category: "armering-till",
@@ -1260,11 +1378,17 @@ export const armeringTill1: Post[] = [
         "Fogarmering eller lastöverföring i fogar enligt konstruktörens detaljer.",
       ] },
 
+      { type: "h2", text: "Lastöverföring i fogar" },
+      { type: "p", text: "I ett fogat golv måste truckhjulen kunna passera fogen utan att kanterna knäcks. Därför förs lasten över fogen med släta dymlingar eller fogprofiler, ofta Ø20–Ø25 där ena halvan kan glida så att fogen fortfarande kan öppna sig. Armeringsnätet bryts i fogen – det är dymlingarna, inte nätet, som bär lasten över." },
+
       { type: "h2", text: "Sprickbredd och toleranser" },
       { type: "p", text: "Kraven på industrigolv gäller ofta både sprickbredd och planhet. Armeringens mängd och läge bestämmer sprickbredden enligt Eurokod 2, och toleranser på armeringens läge följer SS-EN 13670. Svenska Betongföreningen ger rekommendationer för industrigolv. I ett fogfritt golv är det särskilt viktigt att överkantsnätet hålls på rätt höjd – distanserna måste klara gångtrafik och gjutning." },
 
+      { type: "h2", text: "Räkneexempel: 2 000 m² med dubbla nät 8150" },
+      { type: "p", text: "Två lager 8150 väger 2 × 5,27 = 10,5 kg/m². På 2 000 m² blir det 21 ton, och med överlapp runt 23 ton – före kantförstärkningar och extra järn vid pelare. Med 10150 i båda lagren blir samma golv cirka 36 ton." },
+
       { type: "h2", text: "Logistik för stora golv" },
-      { type: "p", text: "Ett golv på flera tusen kvadratmeter kräver många ton nät och järn. Leveranserna bör följa gjutordningen, med märkning per etapp och position, så att rätt armering finns på plats till varje gjutning utan att ytan blockeras av material. Specialnät i projekterade format minskar skarvar och spill jämfört med standardnät." },
+      { type: "p", text: "Leveranserna bör följa gjutordningen, med märkning per etapp och position, så att rätt armering finns på plats till varje gjutning utan att ytan blockeras av material. Specialnät i projekterade format, med anpassade trådavstånd och utstickande trådar vid skarvar, ger färre överlapp och mindre spill än standardnät." },
       { type: "p", text: "Projekt i Norrland och på orter långt från större städer kräver samma planering. Vi levererar i hela Sverige, och frakten räknas efter mängd och ort." },
       { type: "h2", text: "Från ritning till leverans" },
       { type: "ol", items: [
@@ -1275,12 +1399,10 @@ export const armeringTill1: Post[] = [
         "Montage sker med vår [armeringsmontage](/tjanster/armeringsmontage) eller egen personal.",
       ] },
 
-      { type: "h2", text: "Konstruktören avgör" },
-      { type: "p", text: "Ett industrigolv ska alltid dimensioneras av konstruktör. Lasterna från ställ och truckar, undergrundens bärighet, fogsystem och sprickkrav avgör armeringen. Värdena ovan är exempel, inte en dimensionering." },
+      { type: "h2", text: "Dimensioneras alltid av konstruktör" },
+      { type: "p", text: "Lasterna från ställ och truckar, undergrundens bärighet, fogsystem och sprickkrav avgör armeringen. Värdena ovan är exempel." },
 
-      { type: "p", text: "Specialnät kan dessutom tillverkas med anpassade trådavstånd och utstickande trådar för skarvning, så att antalet överlapp blir färre och materialet utnyttjas bättre." },
-      { type: "h2", text: "Checklista före beställning" },
-      { type: "p", text: "Ju mer av detta som finns med i förfrågan, desto snabbare och mer exakt blir offerten." },
+      { type: "h2", text: "Underlag för anbud" },
       { type: "ul", items: [
         "Armeringsritning och nätplan.",
         "Gjutetapper och tidplan.",
@@ -1290,7 +1412,7 @@ export const armeringTill1: Post[] = [
         "Leveransadress och kontaktperson på plats.",
       ] },
       { type: "h2", text: "Leverantör till ert golvprojekt" },
-      { type: "p", text: "Vi levererar armeringsnät, specialnät, kamjärn och klippt och bockad armering i B500B till industrigolv i hela Sverige, märkt per etapp och position. Pris och leveransplan anges i offerten. Läs mer om oss som [armeringsleverantör](/armeringsleverantor) eller [begär offert](/offert) med ritningen bifogad." },
+      { type: "p", text: "Skicka nätplan och etappindelning så får ni offert med leveransplan per gjutning: nät, specialnät, kamjärn och klippt och bockad armering i B500B, märkt per etapp. Läs mer om oss som [armeringsleverantör](/armeringsleverantor) eller [begär offert](/offert)." },
     ],
     faqs: [
       { q: "Hur armeras ett industrigolv?", a: "Oftast med ett eller två lager nät, kompletterat med kamjärn vid portar, pelare och punktlaster. Fogfria golv kräver mer armering än fogade. Konstruktören avgör." },

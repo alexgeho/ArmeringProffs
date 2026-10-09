@@ -28,12 +28,12 @@ const baseProducts: Product[] = [
   {
     slug: "klippt-och-bockad",
     name: "Klippt & bockad armering",
-    h1: "Klippt & bockad armering – ILF efter bockningslista",
-    metaTitle: "Klippt & bockad armering (ILF) efter lista",
+    h1: "Klippt och bockad armering – ILF efter din bockningslista",
+    metaTitle: "Klippt och bockad armering (ILF) efter din lista",
     metaDescription:
-      "Klippt och bockad armering, ILF – inläggningsfärdig armering efter din bockningslista eller ritning. Kamstål B500B, märkt per position. Begär offert.",
+      "Klippt och bockad armering i B500B, Ø6–Ø32, tillverkad efter din bockningslista eller ritning och märkt per position. Skicka listan – få offert.",
     intro:
-      "Vi tillverkar klippt och bockad armering – ILF, inläggningsfärdig armering – efter din bockningslista eller konstruktionsritning. Varje järn kapas och bockas till rätt längd och form i B500B, märks och sorteras – färdig bockad armering, redo att läggas direkt på bygget. Vi levererar i hela Sverige.",
+      "Skicka bockningslistan eller ritningen – vi kapar och bockar kamstålet i B500B och levererar det märkt per position, klart att lägga i formen. Ingen kapning eller bockning på bygget, mindre spill och rätt mått från början. Leverans i hela Sverige, även till Norrland.",
     image: {
       src: "/images/klippt-och-bockad-bockning.webp",
       alt: "Kamstål B500B bockas i en bockningsmaskin till rätt form",
@@ -51,60 +51,54 @@ const baseProducts: Product[] = [
       "beställa bockad armering",
     ],
     includes: [
-      "Kapning och bockning i B500B kamstål",
-      "Tillverkning efter bockningslista eller ritning",
+      "Kapning och bockning i kamstål B500B",
+      "Efter bockningslista eller ritning",
       "Dimensioner Ø6–Ø32 mm",
-      "Bygel, kramla, förankringsjärn och specialformer",
-      "Märkning och positionssortering per element",
-      "Leverans i hela Sverige",
+      "Byglar, kramlor, förankringsjärn och specialformer",
+      "Märkt och buntat per position",
+      "Frakt efter mängd och ort",
     ],
     body: [
       {
-        heading: "Vad är klippt och bockad armering?",
-        text: "Klippt och bockad armering (även kallad kapad och bockad armering, ILF eller inläggningsfärdig armering) betyder att kamstålet levereras färdigkapat och böjt till exakt rätt form enligt en bockningslista. I stället för att kapa och bocka järn på arbetsplatsen får du färdiga detaljer – byglar, kramlor, förankringar och raka längder – som bara ska monteras. Det sparar tid, minskar spill och ger rätt mått enligt ritning.",
+        heading: "Det här får du levererat",
+        text: "Varje järn kommer kapat till rätt längd och bockat till rätt form: byglar, kramlor, förankringsjärn, kantjärn, S-, U- och L-former och raka längder. Allt buntas och märks per position, så att montören ser direkt var bunten ska ligga. Branschen kallar det ILF, inläggningsfärdig armering. Hur märkning och etappleveranser fungerar för entreprenörer står under [ILF-armering](/tjanster/ilf-armering).",
       },
       {
-        heading: "ILF – inläggningsfärdig armering",
-        text: "ILF är byggbranschens term för armering som levereras klar att läggas i formen: kapad, bockad, märkt och buntad per position. Det är samma sak som klippt och bockad armering – bockning av armeringsjärn efter lista, utförd i fabrik i stället för på bygget. Läs mer om hur leveransen fungerar för entreprenörer under [ILF-armering](/tjanster/ilf-armering).",
+        heading: "Det här behöver vi för en offert",
+        text: "En bockningslista med position, typform, mått, dimension och antal – eller konstruktionsritningen som PDF, DWG, Excel eller foto. Har du ingen lista tar vi fram den från ritningen, se [armeringsspecifikation](/tjanster/armeringsspecifikation). Vill du bygga listan själv finns vårt [verktyg för typformer A–XX](/tjanster/bockningslista). Ange också leveransort och önskat datum.",
       },
       {
-        heading: "Från bockningslista till färdig leverans",
-        text: "Skicka din bockningslista eller konstruktionsritning (PDF, DWG, Excel eller bild) så tar vi fram en offert. Vi tillverkar varje position i rätt dimension, form och antal, märker och buntar per element och levererar sorterat till bygget. Har du ingen färdig bockningslista hjälper vi till att ta fram den utifrån ritningen – eller bygg den själv i vårt [verktyg för typformer A–XX](/tjanster/bockningslista): välj form, ange mått och skicka listan direkt.",
+        heading: "Bockningsdiameter enligt Eurokod 2",
+        text: "Minsta dorndiameter för kamstål är enligt SS-EN 1992-1-1 4Ø för dimensioner upp till Ø16 och 7Ø för grövre järn. En Ø12 bockas alltså runt minst 48 mm dorn och en Ø20 runt minst 140 mm. Anger ritningen en större radie gäller den. All armering är kamstål B500B enligt SS 212540.",
       },
       {
-        heading: "Kvalitet och standard",
-        text: "All armering är varmvalsat kamstål B500B enligt SS 212540 och tillverkas efter gällande normer. Bockningsradier och former följer bockningslistan så att täckskikt och passform stämmer mot konstruktionen.",
+        heading: "Vanliga fel i bockningslistor",
+        text: "Inner- och yttermått blandas ihop. Ett skänkelmått saknas för typformen. Antalet anges per element men inte totalt. Vi stämmer av sådant innan tillverkning, så att det som kommer till bygget är det du menade – inte det som råkade stå i listan.",
       },
       {
-        heading: "Bockade detaljer vi tillverkar",
-        text: "Vi kapar och bockar alla vanliga detaljer efter din bockningslista: byglar (B-bygel, N-bygel), kramlor, förankringsjärn, kantjärn samt S-, U- och L-former och raka längder. Dimensioner Ø6–Ø32 mm i B500B. Har du många likadana positioner – till exempel byglar till en balk eller kantjärn runt en platta – tillverkar vi dem i serie, märkta och buntade per position så att rätt detalj hamnar på rätt plats.",
-      },
-      {
-        heading: "Pris och frakt – så funkar det",
-        text: "Priset styrs av mängd, dimensioner och hur mycket kapning och bockning som krävs. Frakten räknar vi efter mängd och leveransort och anger den i offerten – du betalar ingen fast fraktavgift oavsett orderstorlek, och vi levererar i hela Sverige, även norrut. Skicka din bockningslista eller mått så får du ett tydligt pris med leveranstid.",
+        heading: "Pris och frakt",
+        text: "Priset styrs av vikt per dimension och hur många kap och bockningar listan innehåller. Frakten räknas efter mängd och ort, utan fast fraktavgift – även mindre order blir rimliga. [Skicka bockningslistan och få offert](/offert) med pris och leveranstid.",
       },
     ],
     faqs: [
-      { q: "Vad betyder klippt och bockad armering?", a: "Att kamstålet levereras färdigkapat och böjt till rätt form enligt en bockningslista, redo att monteras på plats utan kapning eller bockning på bygget." },
-      { q: "Vad är ILF-armering?", a: "ILF står för inläggningsfärdig armering – färdig bockad armering som är kapad, bockad, märkt och sorterad per position efter bockningslista, klar att läggas i formen. Det är samma produkt som klippt och bockad armering." },
-      { q: "Kan ni tillverka efter min ritning eller bockningslista?", a: "Ja. Skicka bockningslista eller konstruktionsritning (PDF, DWG, Excel eller foto) så tar vi fram offert och tillverkar efter den. Saknar du bockningslista hjälper vi dig att ta fram en." },
-      { q: "Vilka dimensioner kan bockas?", a: "Vi kapar och bockar kamstål i B500B från Ø6 till Ø32 mm, med bockningsradier enligt standard och konstruktionsritning." },
-      { q: "Levererar ni i hela Sverige?", a: "Ja, vi tillverkar och levererar klippt och bockad armering i hela Sverige. Leveranstid och frakt anges i offerten utifrån ort och mängd." },
-      { q: "Vad kostar klippt och bockad armering?", a: "Priset beror på mängd, dimensioner och hur mycket kapning och bockning som krävs. Skicka bockningslista eller mått så får du ett exakt pris i en offert." },
-      { q: "Vad kostar frakten?", a: "Vi räknar frakten efter mängd och leveransort och anger den i offerten – ingen fast fraktavgift oavsett orderstorlek. Vi levererar i hela Sverige, även norrut." },
-      { q: "Vilka bockade detaljer kan ni tillverka?", a: "Byglar (B-bygel, N-bygel), kramlor, förankringsjärn, kantjärn samt S-, U- och L-former och raka längder i Ø6–Ø32 mm B500B – allt efter din bockningslista." },
+      { q: "Vad är ILF-armering?", a: "ILF betyder inläggningsfärdig armering: kapad, bockad, märkt och buntad per position efter bockningslista, klar att läggas i formen. Det är samma sak som klippt och bockad armering." },
+      { q: "Kan ni tillverka om jag inte har någon bockningslista?", a: "Ja. Skicka konstruktionsritningen så tar vi fram listan. Du godkänner den innan något tillverkas." },
+      { q: "Vilka dimensioner kan ni bocka?", a: "Kamstål B500B från Ø6 till Ø32 mm, med bockningsradier enligt Eurokod 2 eller ritningen." },
+      { q: "Kan jag beställa en liten mängd?", a: "Ja. Frakten räknas efter mängd och ort, så du betalar ingen fast avgift anpassad för stora leveranser." },
+      { q: "Hur lång är leveranstiden?", a: "Den beror på mängd, antal positioner och leveransort och anges i offerten. Skriv gärna önskat leveransdatum i förfrågan." },
+      { q: "Vad kostar klippt och bockad armering?", a: "Priset beror på vikt, dimensioner och antal bockningar. Skicka bockningslistan eller ritningen så får du pris och frakt i offerten." },
     ],
     featured: true,
   },
   {
     slug: "armeringskorgar",
     name: "Armeringskorgar",
-    h1: "Armeringskorgar – prefab till balk, pelare och pålar",
-    metaTitle: "Armeringskorgar – prefab balk- & pelarkorgar",
+    h1: "Armeringskorgar – prefab korgar till balk, pelare, påle och plint",
+    metaTitle: "Armeringskorgar – prefab korgar efter ritning",
     metaDescription:
-      "Prefab armeringskorgar till balkar, pelare, pålar och plintar – svetsade eller bundna efter ritning, levererade färdiga i hela Sverige. Begär offert.",
+      "Prefab armeringskorgar till balkar, pelare, pålar, plintar och kantbalk – svetsade eller najade efter ritning, märkta per position. Begär offert.",
     intro:
-      "Vi tillverkar prefabricerade armeringskorgar till balkar, pelare, pålar, plintar och brunnar. Korgarna byggs efter din ritning – svetsade eller bundna – och levereras färdiga till bygget så att montaget går snabbt och rätt.",
+      "Vi bygger armeringskorgar efter din konstruktionsritning – huvudjärn och byglar färdigt sammanfogade, så att korgen lyfts på plats och gjuts in. Kortare tid i formen och jämnare kvalitet än att naja allt på bygget. Märkt per position och levererat i hela Sverige.",
     // TODO [OWNER]: lägg produktfoto. Skicka horisontell bild ≥1600px (rebar cage /
     // pålkorg), spara som public/images/armeringskorgar-*.webp och fyll i image nedan:
     //   image: { src: "/images/armeringskorgar-korg.webp", alt: "...", width: 1400, height: 788 },
@@ -119,46 +113,47 @@ const baseProducts: Product[] = [
       "armering balk pelare",
     ],
     includes: [
-      "Balk-, pelar- och pålkorgar efter ritning",
-      "Svetsade eller bundna korgar",
-      "Punktsvetsade korgar för balkar och pelare",
+      "Balk-, pelar-, pål- och plintkorgar",
+      "Kantbalkskorgar till platta på mark",
+      "Väggkorgar med startjärn",
+      "Svetsade eller najade enligt ritning",
       "Montering av pelarskor och konsoler",
-      "Byglar och huvudjärn i B500B",
-      "Plint- och brunnsarmering",
-      "Väggkorgar – dubbelsidig väggarmering med startjärn",
-      "Tillverkning mot konstruktionsritning",
-      "Färdiga korgar levererade i hela Sverige",
+      "Märkt per korg och position",
     ],
     body: [
       {
-        heading: "Prefab armeringskorgar sparar tid på bygget",
-        text: "En armeringskorg är färdigmonterad armering för ett bärande element – till exempel en balk, pelare eller påle. Genom att prefabricera korgen i verkstad i stället för att binda den på plats kortas byggtiden, kvaliteten blir jämnare och arbetsmiljön bättre. Korgen lyfts på plats och gjuts in.",
+        heading: "Välj korgtyp",
+        text: "Korgen ser olika ut beroende på element. Till platta på mark: [kantbalkskorgar](/produkter/villakorg-kantbalksarmering). Till plintar och stolpfundament: [plintkorgar](/produkter/plintkorgar). Till platsgjutna pålar: [pålkorgar](/produkter/palarmering). Till stommen: [pelar- och balkkorgar](/produkter/pelar-och-balkkorgar). Väggkorgar, brunnar och specialelement tillverkar vi också efter ritning.",
       },
       {
-        heading: "Byggda efter din konstruktion",
-        text: "Vi tillverkar korgarna efter konstruktionsritning med rätt huvudjärn, byglar, bygelavstånd och täckskikt. Korgar kan svetsas för styvhet eller bindas enligt föreskrift. Vi märker varje korg med position så att rätt korg hamnar på rätt plats.",
+        heading: "Därför lönar sig prefab",
+        text: "Korgen byggs vid ett bord i fabrik i stället för i formen. Bygelavståndet blir jämnt, täckskiktet lättare att hålla och arbetet på bygget kortare. Vinsten är störst där samma korg upprepas många gånger eller där armeringen är tät. Exempel finns i guiderna [armering till garage](/blogg/armering-till-garage) och [armera en stödmur](/blogg/armera-stodmur).",
       },
       {
-        heading: "Till grund, stomme och anläggning",
-        text: "Armeringskorgar används i husgrunder, stommar, broar, stödmurar och anläggning. Vanliga tillämpningar är kantbalkar, sockelbalkar, pelare, plintar, pålar och rörbrunnar – se till exempel [armering till garage](/blogg/armering-till-garage) och [armera en stödmur](/blogg/armera-stodmur). Berätta om ditt projekt så föreslår vi rätt utförande.",
+        heading: "Svetsad eller najad",
+        text: "Svetsade korgar är styva och klarar lyft och transport bättre. Svetsning av armering görs enligt SS-EN ISO 17660, men konstruktören avgör om korgen får svetsas. Annars najas den. Vi följer ritningen.",
+      },
+      {
+        heading: "Offert på korgarna",
+        text: "Skicka konstruktionsritningen eller armeringsspecifikationen och antal korgar. Saknas spec tar vi fram den. Offerten visar vikt per korg, total mängd och frakt efter mängd och ort. [Skicka ritningen – få offert på korgarna](/offert).",
       },
     ],
     faqs: [
-      { q: "Vad är en armeringskorg?", a: "En armeringskorg är färdigmonterad armering för ett bärande element som en balk, pelare eller påle – huvudjärn och byglar sammanfogade till en korg som lyfts på plats och gjuts in." },
-      { q: "Är korgarna svetsade eller bundna?", a: "Båda utförandena finns. Svetsade korgar blir styva och lätta att hantera, bundna korgar tillverkas där föreskriften kräver det. Vi följer konstruktionsritningen." },
-      { q: "Kan ni tillverka korgar efter vår ritning?", a: "Ja, vi bygger korgarna efter er konstruktionsritning med rätt dimensioner, bygelavstånd och täckskikt, och märker varje korg med position." },
+      { q: "Vad är en armeringskorg?", a: "Färdigmonterad armering till ett bärande element, till exempel balk, pelare, påle eller plint: huvudjärn och byglar sammanfogade till en korg som lyfts på plats och gjuts in." },
+      { q: "Är korgarna svetsade eller najade?", a: "Båda förekommer. Svetsade korgar är styvare vid lyft, najade används där konstruktören inte tillåter svetsning. Ritningen avgör." },
+      { q: "Vilken korg behöver jag?", a: "Det framgår av konstruktionsritningen. Skicka den så går vi igenom vilka korgar och lösa positioner som ingår och lämnar en samlad offert." },
     ],
     featured: true,
   },
   {
     slug: "armeringsnat",
     name: "Armeringsnät",
-    h1: "Armeringsnät – lagernät och nät efter mått",
-    metaTitle: "Armeringsnät 5150, 6150, 8150 – leverans",
+    h1: "Armeringsnät – lagernät 5150–8150 och nät efter mått",
+    metaTitle: "Armeringsnät 5150, 6150 och 8150 – köp med leverans",
     metaDescription:
-      "Armeringsnät i B500A/B: 5150, 6150, 8150 och fingerskarvnät till platta, garage och husgrund. Leverans i hela Sverige. Begär offert.",
+      "Armeringsnät 5150, 6150, 7150 och 8150 till platta, garage och grund. Vi räknar antal nät med överlapp och levererar i hela Sverige. Begär offert.",
     intro:
-      "Vi levererar armeringsnät till plattor, golv och grunder – lagernät i vanliga dimensioner och nät tillverkade efter dina mått. Skicka ytan eller ritningen så räknar vi fram antal nät, skarvar och distanser och levererar allt i samma leverans, i hela Sverige.",
+      "Köp armeringsnät till platta, golv och grund – lagernät 5150–8150 eller nät efter mått. Skicka ytan eller ritningen så räknar vi antal nät med överlapp, lägger till distanser och kantjärn och levererar allt samtidigt i hela Sverige.",
     keywords: [
       "armeringsnät",
       "armeringsnat",
@@ -172,83 +167,92 @@ const baseProducts: Product[] = [
     ],
     includes: [
       "Lagernät 5150, 6150, 7150 och 8150",
-      "Fingerskarvnät för mindre överlapp",
+      "Fingerskarvnät för kortare överlapp",
       "Nät efter mått och ritning",
-      "Uträkning av antal nät och skarvar",
+      "Antal nät räknat med överlapp",
       "Distanser och kantjärn i samma leverans",
-      "Leverans i hela Sverige",
+      "Frakt efter mängd och ort",
     ],
     body: [
       {
-        heading: "Vilket armeringsnät behöver du?",
-        text: "Beteckningen anger tråd och ruta: 6150 betyder Ø6 mm tråd med 150 mm mellan trådarna. Mindre plattor och uterum armeras ofta med 5150, garage- och villaplattor med 6150 och hårt belastade plattor med 8150 eller dubbla nätlager. Ritningen avgör – se guiden [armeringsnät – storlekar och mått](/blogg/armeringsnat-storlekar-och-matt).",
+        heading: "Vilket nät behöver du?",
+        text: "Beteckningen anger tråd och ruta: 6150 är Ø6 mm tråd med 150 mm mellan trådarna. Uterum och mindre plattor armeras ofta med 5150, garage- och villaplattor med 6150 och hårt belastade plattor med 8150 eller två nätlager. Ritningen avgör. Mer om storlekar finns i guiden [armeringsnät – storlekar och mått](/blogg/armeringsnat-storlekar-och-matt).",
       },
       {
-        heading: "Rätt antal nät – utan onödigt spill",
-        text: "Vi räknar fram hur många nät ytan kräver inklusive överlapp (minst två rutor, ca 300 mm för 150-nät). Fingerskarvnät har utstickande trådar i kanterna och ger kortare överlapp, vilket sparar material på stora ytor. Vill du räkna själv först? Testa [armeringskalkylatorn](/armeringskalkylator).",
+        heading: "Vikt per m²",
+        text: "Ett 150-nät har ca 13,3 m tråd per m² (två riktningar). Det ger ungefär 2,1 kg/m² för 5150, 3,0 kg/m² för 6150, 4,0 kg/m² för 7150 och 5,3 kg/m² för 8150, utan överlapp. En platta på 100 m² med 6150 kräver alltså drygt 300 kg nät när skarvarna räknas in.",
       },
       {
-        heading: "Nät efter mått",
-        text: "När lagerformaten inte passar tillverkar vi nät med anpassade yttermått, maskvidder och trådgrovlekar – läs mer om [specialnät och svetsade mattor](/produkter/svetsad-armering). Kompletterande [kantjärn och byglar](/produkter/klippt-och-bockad) och [distanser](/produkter/distanser) levereras tillsammans med näten.",
+        heading: "Rätt antal nät – utan spill",
+        text: "Vi räknar ut hur många nät ytan kräver, med överlapp på minst två rutor (ca 300 mm för 150-nät). Fingerskarvnät har utstickande trådar i kanten och ger kortare överlapp, vilket sparar material på stora ytor. Vill du räkna själv först? Testa [armeringskalkylatorn](/armeringskalkylator).",
+      },
+      {
+        heading: "När lagernät inte passar",
+        text: "Avvikande mått, maskvidd eller tråd? Då tillverkas [specialnät efter mått](/produkter/svetsad-armering). [Kantjärn och byglar](/produkter/klippt-och-bockad) och [distanser](/produkter/distanser) skickas i samma leverans som näten.",
       },
       {
         heading: "Pris och leverans",
-        text: "Priset beror på nättyp, antal och leveransort. Vi anger nät, tillbehör och frakt i en samlad offert – ingen fast fraktavgift, och vi levererar i hela Sverige, även norrut. Skicka yta, ritning eller materiallista så får du ett tydligt pris.",
+        text: "Priset beror på nättyp, antal och leveransort. Nät, tillbehör och frakt står i samma offert, och frakten räknas efter mängd och ort – ingen fast fraktavgift. [Skicka plattans mått – få offert på näten](/offert).",
       },
     ],
     faqs: [
-      { q: "Vilket armeringsnät till garageplatta?", a: "Vanligtvis 6150 (Ø6 mm tråd, 150 mm rutor), kompletterat med kantjärn och kantbalksbyglar. Tyngre laster kan kräva grövre nät eller två lager – konstruktionsritningen gäller." },
-      { q: "Hur mycket ska armeringsnät överlappa?", a: "Minst två rutor, för 150-nät ca 300 mm, och skarven binds ihop. Fingerskarvnät ger kortare överlapp." },
-      { q: "Kan ni räkna ut hur många nät jag behöver?", a: "Ja. Skicka mått på plattan eller ritningen så räknar vi fram antal nät inklusive överlapp, samt kantjärn och distanser, och skickar en samlad offert." },
-      { q: "Levererar ni armeringsnät i hela Sverige?", a: "Ja, vi levererar armeringsnät i hela Sverige. Frakten räknas efter mängd och ort och anges i offerten." },
+      { q: "Vilket armeringsnät till garageplatta?", a: "Ofta 6150, kompletterat med kantjärn och kantbalksbyglar. Tyngre last kan kräva grövre nät eller två lager. Konstruktionsritningen gäller." },
+      { q: "Hur mycket ska armeringsnät överlappa?", a: "Minst två rutor, för 150-nät ca 300 mm, och skarven najas. Fingerskarvnät ger kortare överlapp." },
+      { q: "Kan ni räkna ut hur många nät jag behöver?", a: "Ja. Skicka plattans mått eller ritningen så räknar vi antal nät med överlapp samt kantjärn och distanser, i en samlad offert." },
+      { q: "Kan jag beställa bara några nät?", a: "Ja. Frakten räknas efter mängd och ort, så även en mindre beställning går att leverera." },
+      { q: "Levererar ni armeringsnät i hela Sverige?", a: "Ja, även till Norrland. Frakt och leveranstid anges i offerten." },
     ],
   },
   {
     slug: "svetsad-armering",
-    name: "Svetsad armering & nät",
-    h1: "Svetsad armering – armeringsnät och specialnät",
-    metaTitle: "Svetsad armering – specialnät & svetsade mattor efter mått",
+    name: "Specialnät & svetsad armering",
+    h1: "Svetsad armering – specialnät och svetsade mattor efter mått",
+    metaTitle: "Specialnät och svetsad armering efter mått",
     metaDescription:
-      "Svetsad armering: armeringsnät, specialnät och svetsade mattor – standardnät eller efter ritning, levererat i hela Sverige. Begär offert.",
+      "Specialnät och svetsade mattor med den maskvidd, tråd och de mått ritningen kräver – färre skarvar och mindre kap på bygget. Skicka måtten, få offert.",
     intro:
-      "Vi levererar svetsad armering – standardarmeringsnät, specialnät och svetsade mattor tillverkade efter dina mått och ritningar. Nät ger snabb och jämn armering av plattor, väggar och golv, och specialnät sparar tid när standardformat inte räcker.",
+      "Passar inte lagernäten? Vi levererar specialnät och svetsade mattor med den maskvidd, trådgrovlek och de yttermått ritningen kräver. Det ger färre skarvar och mindre kap på bygget. Leverans i hela Sverige.",
     // TODO [OWNER]: lägg produktfoto. Skicka horisontell bild ≥1600px (welded wire
     // mesh / armeringsnät staplat), spara som public/images/svetsad-armering-*.webp och fyll i image nedan:
     //   image: { src: "/images/svetsad-armering-nat.webp", alt: "...", width: 1400, height: 788 },
     keywords: [
       "svetsad armering",
       "specialnät armering",
+      "specialnät",
       "svetsat nät",
       "nätarmering",
-      "armeringsmatta",
-      "prefab armering",
+      "svetsade mattor",
     ],
     includes: [
-      "Specialnät och standardnät",
       "Specialnät efter mått och ritning",
+      "Anpassad maskvidd och trådgrovlek",
       "Svetsade mattor och plattnät",
-      "Anpassade maskvidder och trådgrovlekar",
-      "Kap och anpassning efter behov",
+      "Utstick och urtag efter ritning",
+      "Märkt per position",
       "Leverans i hela Sverige",
     ],
     body: [
       {
-        heading: "Armeringsnät för plattor och väggar",
-        text: "Svetsad armering, oftast i form av armeringsnät, är ett rutnät av kamstål svetsat i korsningarna. Nät används för att armera betongplattor, golv, väggar och bjälklag snabbt och med jämn kvalitet. Standardnät levereras i fasta format – se [armeringsnät 5150–8150](/produkter/armeringsnat) – medan specialnät tillverkas efter dina mått.",
+        heading: "När specialnät lönar sig",
+        text: "Lagernät finns i fasta format – se [armeringsnät 5150–8150](/produkter/armeringsnat). Specialnät lönar sig när ytan har många urtag, smala remsor eller avvikande c/c-avstånd, eller när ritningen kräver annan tråd än lagernäten har. Ett nät som passar direkt ersätter kap, extra skarvar och lösa järn på bygget.",
       },
       {
-        heading: "Specialnät sparar tid och material",
-        text: "När standardnät inte passar tar vi fram specialnät med rätt maskvidd, trådgrovlek och yttermått. Rätt anpassat nät minskar antalet skarvar och kap på bygget, vilket sparar både tid och material. Skicka mått eller ritning så räknar vi fram ett förslag.",
+        heading: "Det här behöver vi",
+        text: "Yttermått, maskvidd i båda riktningar, tråddimension, eventuella utstick och urtag samt antal per typ. Enklast är att skicka ritningen eller en nätförteckning. Vi stämmer av måtten innan tillverkning.",
       },
       {
-        heading: "Rätt nät till rätt konstruktion",
-        text: "Vi hjälper dig att välja nät utifrån konstruktionens krav på bärighet och täckskikt. Kombinera gärna nät med klippt och bockad armering och distanser för ett komplett armeringspaket. Se också vår guide om [armering till betonggolv](/blogg/armering-till-betonggolv).",
+        heading: "Nät, järn och distanser i en leverans",
+        text: "Specialnät kombineras ofta med [klippt och bockad armering](/produkter/klippt-och-bockad) vid kanter och öppningar och med [distanser](/produkter/distanser) för rätt täckskikt. Allt kommer i samma leverans. Mer om golv finns i guiden [armering till betonggolv](/blogg/armering-till-betonggolv).",
+      },
+      {
+        heading: "Offert på specialnät",
+        text: "Priset beror på nättyp, mängd och leveransort. Frakten räknas efter mängd och ort. [Skicka ritningen – få offert på specialnäten](/offert).",
       },
     ],
     faqs: [
-      { q: "Vad är svetsad armering?", a: "Svetsad armering är kamstål sammanfogat i ett rutnät genom svetsning i korsningarna – vanligast som armeringsnät för att armera plattor, golv och väggar." },
-      { q: "Vad är skillnaden på standardnät och specialnät?", a: "Standardnät levereras i fasta format och maskvidder, medan specialnät tillverkas efter dina mått, maskvidder och trådgrovlekar för att minska skarvar och kap på bygget." },
-      { q: "Kan ni tillverka nät efter mått?", a: "Ja, vi tillverkar specialnät och svetsade mattor efter dina mått och ritningar och levererar i hela Sverige." },
+      { q: "Vad är svetsad armering?", a: "Armering där trådarna svetsas ihop i korsningarna till ett rutnät. Vanligast som armeringsnät till plattor, golv och väggar." },
+      { q: "Vad är skillnaden på lagernät och specialnät?", a: "Lagernät har fasta format och maskvidder. Specialnät tillverkas efter dina mått, maskvidder och trådgrovlekar, så att skarvar och kap på bygget minskar." },
+      { q: "Vad behöver ni för att offerera specialnät?", a: "Yttermått, maskvidd, tråddimension, utstick och antal – eller ritningen. Vi stämmer av måtten innan tillverkning." },
     ],
   },
   {
@@ -259,7 +263,7 @@ const baseProducts: Product[] = [
     metaDescription:
       "Köp armeringsjärn i kamstål B500B: rakstål i 6 och 12 m eller kapat till mått, Ø6–Ø32 mm. Leverans i hela Sverige, frakt efter mängd. Begär offert.",
     intro:
-      "Här köper du armeringsjärn i kamstål B500B – rakstål i standardlängder 6 m och 12 m eller kapat till dina mått, i dimension Ø6–Ø32 mm. Vi levererar till bygget i hela Sverige, gärna i samma leverans som nät och bockade detaljer.",
+      "Köp armeringsjärn i kamstål B500B – rakstål i 6 eller 12 m, eller kapat till dina mått, Ø6–Ø32 mm. Vi levererar till bygget i hela Sverige, gärna i samma leverans som nät och bockade detaljer.",
     image: {
       src: "/images/armeringsjarn-kamstal.webp",
       alt: "Armeringsjärn i kamstål bundna i ett rutnät på bygget",
@@ -277,52 +281,48 @@ const baseProducts: Product[] = [
       "beställa armeringsjärn",
     ],
     includes: [
-      "Kamstål B500B / K500C-T enligt SS 212540",
-      "Dimensioner Ø6, Ø8, Ø10, Ø12, Ø16, Ø20, Ø25, Ø32 mm",
+      "Kamstål B500B enligt SS 212540",
+      "Ø6, Ø8, Ø10, Ø12, Ø16, Ø20, Ø25 och Ø32 mm",
       "Rakstål i 6 m och 12 m",
-      "Kapning till mått på begäran",
-      "Komplement till nät och bockad armering",
-      "Leverans i hela Sverige",
+      "Kapning till mått",
+      "Samleverans med nät och bockat",
+      "Frakt efter mängd och ort",
     ],
     body: [
       {
-        heading: "Kamstål B500B – standarden för armering",
-        text: "Armeringsjärn, eller kamstål, är varmvalsat stål med kammar som ger vidhäftning i betongen. B500B är den vanligaste kvaliteten för husbyggnad och anläggning i Sverige. Dimensionen anges i millimeter, från klena Ø6 för byglar till grova Ø32 för kraftigt belastade konstruktioner.",
+        heading: "Kamstål B500B",
+        text: "Armeringsjärn, eller kamstål, har kammar som ger vidhäftning i betongen. B500B har sträckgräns 500 MPa och god seghet och är den vanligaste kvaliteten för hus och anläggning i Sverige. Klena dimensioner (Ø6–Ø10) används ofta till byglar och komplettering, grövre (Ø12–Ø32) till huvudarmering i balkar, pelare och plattor. Dimension och mängd följer ritningen.",
       },
       {
-        heading: "Rakstål i 6 m och 12 m – eller kapat till mått",
-        text: "Raka armeringsjärn levereras i standardlängderna 6 m och 12 m. 12 m ger färre skarvar i långa plattor och balkar men kräver lyft och plats för lossning; 6 m är lättare att hantera för hand och på trånga tomter. Behöver du andra längder kapar vi till mått, och ska järnen också bockas gör vi det som [klippt och bockad armering](/produkter/klippt-och-bockad).",
+        heading: "6 m eller 12 m?",
+        text: "12 m ger färre skarvar i långa plattor och balkar men kräver plats och oftast lyft vid lossning. 6 m bärs för hand och passar trånga tomter. En 12 m Ø12 väger ca 10,7 kg och en 12 m Ø16 ca 19 kg – samma järn i 6 m väger hälften. Ska järnen också bockas gör vi det som [klippt och bockad armering](/produkter/klippt-och-bockad).",
       },
       {
-        heading: "Rätt dimension till rätt uppgift",
-        text: "Klena dimensioner (Ø6–Ø10) används ofta till byglar och nätkomplettering, medan grövre järn (Ø12–Ø32) tar upp huvudlaster i balkar, pelare och plattor. Dimension och mängd ska följa konstruktionsritningen. Tabeller över [armeringsjärnens dimensioner](/blogg/armeringsjarn-dimensioner) och [vikt per meter för kamstål](/blogg/armeringsstal) finns i våra guider.",
+        heading: "Vikt per meter",
+        text: "Ø6 0,222 kg/m · Ø8 0,395 · Ø10 0,617 · Ø12 0,888 · Ø16 1,58 · Ø20 2,47 · Ø25 3,85 · Ø32 6,31 kg/m. Multiplicera med total längd så får du vikten att jämföra offerter med. Fler tabeller finns i guiderna [armeringsjärn – dimensioner](/blogg/armeringsjarn-dimensioner) och [armeringsstål](/blogg/armeringsstal).",
       },
       {
-        heading: "Leverans till bygget",
-        text: "Vi levererar armeringsjärn i hela Sverige, även till Norrland. Frakten räknas efter mängd och leveransort och anges i offerten – ingen fast fraktavgift. Ange dimension, längd och antal (eller total vikt) så får du pris och leveranstid.",
-      },
-      {
-        heading: "Komplement till prefab",
-        text: "Lösa armeringsjärn passar som komplement när det mesta är nät eller bockade detaljer. Vi levererar gärna järn tillsammans med din klippt och bockade armering, korgar och distanser i samma leverans.",
+        heading: "Beställ och få leverans",
+        text: "Ange dimension, längd och antal (eller total vikt) och leveransort. Frakten räknas efter mängd och ort – ingen fast fraktavgift – och vi levererar i hela Sverige, även till Norrland. [Begär offert på armeringsjärn](/offert).",
       },
     ],
     faqs: [
-      { q: "Vad är B500B?", a: "B500B är en standardkvalitet för armeringsstål (kamstål) med sträckgräns 500 MPa och god duktilitet – den vanligaste kvaliteten för hus och anläggning i Sverige." },
-      { q: "Vilka dimensioner finns?", a: "Vanliga dimensioner är Ø6, Ø8, Ø10, Ø12, Ø16, Ø20, Ø25 och Ø32 mm. Vi levererar raka längder och rullat material samt kapar på begäran." },
-      { q: "Vilka längder har armeringsjärn?", a: "Rakstål levereras normalt i 6 m eller 12 m. Vi kan också kapa till de längder du behöver." },
-      { q: "Hur beställer jag armeringsjärn?", a: "Ange dimension, längd och antal eller total vikt samt leveransort i offertförfrågan. Pris och frakt efter mängd och ort anges i offerten." },
-      { q: "Kan jag beställa både lösa järn och prefab?", a: "Ja, vi levererar gärna lösa armeringsjärn tillsammans med klippt och bockad armering, korgar och nät i samma leverans." },
+      { q: "Vad är B500B?", a: "En standardkvalitet för kamstål med sträckgräns 500 MPa och god duktilitet (klass B). Den vanligaste kvaliteten för hus och anläggning i Sverige." },
+      { q: "Vilka dimensioner finns?", a: "Ø6, Ø8, Ø10, Ø12, Ø16, Ø20, Ø25 och Ø32 mm i raka längder. Vi kapar också till mått." },
+      { q: "Hur tungt är ett armeringsjärn?", a: "En 6 m Ø12 väger ca 5,3 kg och en 12 m Ø12 ca 10,7 kg. Vikten per meter är 0,888 kg för Ø12 och 1,58 kg för Ø16." },
+      { q: "Hur beställer jag?", a: "Ange dimension, längd och antal eller total vikt samt leveransort. Pris och frakt efter mängd och ort står i offerten." },
+      { q: "Kan jag beställa lösa järn och prefab samtidigt?", a: "Ja, lösa armeringsjärn levereras gärna tillsammans med bockade detaljer, korgar och nät i samma leverans." },
     ],
   },
   {
     slug: "distanser",
     name: "Distanser & tillbehör",
     h1: "Distanser för armering – distansklossar och nätstöd",
-    metaTitle: "Distanser – distansklossar och nätstöd",
+    metaTitle: "Distanser för armering – distansklossar och nätstöd",
     metaDescription:
-      "Distanser för armering: distansklossar, distanslister och nätstöd för rätt täckskikt – levereras med din armering i hela Sverige. Begär offert.",
+      "Distansklossar, distanslister och nätstöd för rätt täckskikt – vi väljer höjd efter ritningen och levererar med armeringen i hela Sverige. Begär offert.",
     intro:
-      "Vi levererar distanser och tillbehör som håller armeringen på rätt plats och ger korrekt täckskikt. Distansklossar, distanslister, bockstöd, bindtråd och nätstöd – allt du behöver för att montera armeringen rätt.",
+      "Distanser håller armeringen på rätt höjd så att täckskiktet blir det ritningen anger. Vi levererar distansklossar, distanslister och nätstöd i rätt höjd och antal, i samma leverans som armeringen.",
     image: {
       src: "/images/distanser-armeringsnat.webp",
       alt: "Armeringsnät upplyft på distanser för rätt täckskikt",
@@ -340,31 +340,36 @@ const baseProducts: Product[] = [
       "bockstöd",
     ],
     includes: [
-      "Distansklossar och distanslister i plast/betong",
-      "Bockstöd och nätstöd",
-      "Bindtråd och bindverktyg",
-      "Rätt täckskikt enligt konstruktion",
-      "Tillbehör till plattor, väggar och korgar",
-      "Leverans i hela Sverige",
+      "Distansklossar i plast och betong",
+      "Distanslister för nät på isolering",
+      "Nätstöd och bockstöd för övre lager",
+      "Höjd vald efter ritningens täckskikt",
+      "Till plattor, väggar och korgar",
+      "Levereras med armeringen",
     ],
     body: [
       {
-        heading: "Distanser ger rätt täckskikt",
-        text: "Distanser lyfter och håller armeringen på rätt höjd så att betongens täckskikt blir korrekt. Rätt täckskikt är avgörande för att armeringen ska skyddas mot korrosion och för att konstruktionen ska hålla över tid. Vi hjälper dig att välja distanshöjd efter konstruktionens krav.",
+        heading: "Vilken distans var?",
+        text: "Distansklossar (punktdistanser i plast eller betong) bär underkantsarmeringen och ger täckskiktet mot form eller mark. Distanslister fördelar lasten längs en linje och trycks inte ner i cellplast. Nätstöd, även kallade bockstöd eller stolar, håller överkantsnätet på rätt höjd vid dubbel armering.",
       },
       {
-        heading: "Distansklossar och nätstöd",
-        text: "Distansklossar (punktdistanser i plast eller betong) bär underkantsarmeringen och ger täckskiktet mot formen eller marken. Distanslister fördelar lasten längs en linje och passar under nät på isolering. Nätstöd (bockstöd, \"stolar\") håller överkantsnätet på rätt höjd över underkantsarmeringen. Höjden väljs efter täckskiktet på ritningen – läs mer i guiden om [distanser och täckskikt](/blogg/distanser-tackskikt-armering).",
+        heading: "Täckskikt – typiska värden",
+        text: "Täckskiktet bestäms av exponeringsklass och konstruktör. Mot cellplast i platta på mark anger ritningen ofta 25–35 mm. Gjuts betongen mot förberett underlag, till exempel avjämningsbetong, gäller enligt Eurokod 2 (SS-EN 1992-1-1) minst 40 mm, och direkt mot jord minst 75 mm. Distansens höjd = täckskiktet på ritningen. Läs mer i guiden [distanser och täckskikt](/blogg/distanser-tackskikt-armering).",
       },
       {
-        heading: "Tillbehör för hela armeringsjobbet",
-        text: "Utöver distanser och nätstöd levererar vi najtråd och verktyg – se [najtråd och tillbehör](/produkter/najtrad-och-tillbehor). Beställ tillbehören tillsammans med din armering så får du allt i en leverans.",
+        heading: "Vanligt fel: för få distanser",
+        text: "Nätet trampas ner mellan distanserna när man går på det under gjutningen, och täckskiktet försvinner just där. Tätare placering vid gångstråk och under tunga skarvar håller nätet uppe. Vi räknar antal efter nätets dimension och ytan.",
+      },
+      {
+        heading: "Beställ med armeringen",
+        text: "Distanser följer med armeringsleveransen, tillsammans med [najtråd och tillbehör](/produkter/najtrad-och-tillbehor). Skriv täckskikt och plattans tjocklek i förfrågan så väljer vi höjd. [Lägg till distanser i offerten](/offert).",
       },
     ],
     faqs: [
-      { q: "Varför behövs distanser?", a: "Distanser håller armeringen på rätt höjd så att betongens täckskikt blir korrekt, vilket skyddar armeringen mot korrosion och säkrar konstruktionens hållbarhet." },
-      { q: "Vilken distanshöjd ska jag välja?", a: "Distanshöjden styrs av det täckskikt som konstruktionsritningen anger. Hör av dig med dina uppgifter så hjälper vi dig att välja rätt distanser." },
-      { q: "Vad är skillnaden på distansklossar och nätstöd?", a: "Distansklossar bär den nedre armeringen och ger täckskiktet. Nätstöd (bockstöd) håller det övre nätet på rätt avstånd ovanför den nedre armeringen i plattor med dubbel armering." },
+      { q: "Varför behövs distanser?", a: "De håller armeringen på rätt höjd så att täckskiktet blir korrekt. Det skyddar armeringen mot korrosion och ger den bärförmåga konstruktören räknat med." },
+      { q: "Vilken distanshöjd ska jag välja?", a: "Samma som täckskiktet på ritningen. Skriv täckskikt och plattjocklek i förfrågan så väljer vi distanser." },
+      { q: "Vad är skillnaden på distansklossar och nätstöd?", a: "Distansklossar bär den nedre armeringen och ger täckskiktet. Nätstöd håller det övre nätet på rätt avstånd ovanför det nedre vid dubbel armering." },
+      { q: "Kan jag beställa bara distanser?", a: "Distanserna levereras tillsammans med armering, så att de följer med i samma frakt." },
     ],
   },
   {
@@ -373,9 +378,9 @@ const baseProducts: Product[] = [
     h1: "Armeringsbyglar – färdiga byglar efter mått",
     metaTitle: "Armeringsbyglar – färdiga byglar efter mått",
     metaDescription:
-      "Färdiga armeringsbyglar efter mått: U-byglar, slutna byglar, kantbalksbyglar och hakar i B500B Ø6–Ø12, märkta per position på pall. Begär offert.",
+      "Färdiga armeringsbyglar efter mått: U-byglar, slutna byglar, kantbalksbyglar och hakar i B500B, buntade per position på pall. Skicka måtten – få offert.",
     intro:
-      "Vi tillverkar byglar och hakar i stora serier – U-byglar, trappbyglar, slutna och fyrkantiga byglar i B500B. Bockade från rulle i automatiska maskiner, med jämna mått och leverans på pall till bygget eller elementfabriken.",
+      "Färdiga armeringsbyglar efter dina mått – U-byglar, slutna byglar, kantbalksbyglar, trappbyglar och hakar i B500B. Serietillverkade med samma mått på varje bygel, buntade per position och levererade på pall till bygget eller elementfabriken.",
     keywords: [
       "armeringsbyglar",
       "färdiga armeringsbyglar",
@@ -389,30 +394,34 @@ const baseProducts: Product[] = [
     ],
     includes: [
       "U-byglar, trappbyglar och hakar",
-      "Slutna och fyrkantiga byglar med 135°-krokar",
-      "B500B, Ø6–Ø12 mm bockat från rulle",
-      "Serietillverkning med jämna mått",
-      "Buntat och levererat på pall",
+      "Slutna byglar med 135°-krokar",
+      "Kantbalksbyglar till platta på mark",
+      "B500B, vanligen Ø6–Ø12 mm",
+      "Buntat per position på pall",
       "Leverans i hela Sverige",
     ],
     body: [
       {
-        heading: "Byglar i serie – samma mått varje gång",
-        text: "Byglar och hakar går åt i stora mängder i balkar, pelare, kantbalkar och prefabelement. Vi bockar dem från rulle i automatiska bockmaskiner, vilket ger samma mått på varje bygel och korta ledtider även för tusentals stycken. Du anger typform och mått enligt bockningslistan – vi tillverkar, buntar och märker.",
+        heading: "Vanliga former",
+        text: "U-bygel (typform C), sluten bygel (typform N) med 135°-krokar, kantbalksbyglar, trappbyglar och enkla hakar – och specialformer efter ritning. Alla standardformer med bokstavskod finns i vår [översikt över typformer](/tjanster/bockningslista). Ange kod och mått när du begär offert. Mer om bygelavstånd finns i guiden [armeringsbyglar](/blogg/armeringsbyglar).",
       },
       {
-        heading: "Vilka former tillverkar vi?",
-        text: "Vanligast är U-byglar, slutna byglar (typform N) med 135°-krokar, kantbalksbyglar, trappbyglar och enkla hakar. Även specialformer enligt ritning. Se alla standardformer med bokstavskod i vår [översikt över typformer](/tjanster/bockningslista) – och ange koden och måtten när du begär offert. Läs mer om [armeringsbyglar och bygelavstånd](/blogg/armeringsbyglar).",
+        heading: "Så räknar du antal byglar",
+        text: "Antal = längd / c/c-avstånd + 1. En kantbalk på 40 m med byglar c/c 300 kräver 40 000 / 300 ≈ 133 mellanrum, alltså 134 byglar. Lägg till extra byglar där ritningen anger tätare avstånd, till exempel vid hörn och stöd.",
       },
       {
-        heading: "Leverans på pall",
-        text: "Byglarna buntas per position och levereras på pall, redo att lyftas in på bygget eller i elementfabriken. Vi levererar i hela Sverige och samordnar gärna leveransen med övrig armering, korgar och nät.",
+        heading: "Samma mått i hela serien",
+        text: "Byglar går åt i stora mängder i balkar, pelare, kantbalkar och prefabelement. Serietillverkade byglar får samma mått varje gång, vilket gör att korgen blir rak och täckskiktet jämnt. Byglarna buntas per position och levereras på pall, gärna tillsammans med övrig armering.",
+      },
+      {
+        heading: "Offert på byglar",
+        text: "Skicka typform, mått, dimension och antal per position – eller ritningen. Ju större serie, desto lägre styckpris. [Skicka bygellistan – få offert](/offert).",
       },
     ],
     faqs: [
-      { q: "Vilka dimensioner kan byglar tillverkas i?", a: "Byglar och hakar bockas normalt i B500B Ø6–Ø12 mm från rulle. Grövre byglar tillverkar vi av raka stänger. Ange dimension och mått per position i din bockningslista." },
-      { q: "Hur många byglar måste jag beställa?", a: "Vi tillverkar både mindre partier och stora serier. Ju större serie, desto bättre pris per styck – begär offert så får du pris och leveranstid." },
-      { q: "Hur anger jag formen?", a: "Enklast med typformens bokstavskod (t.ex. N för sluten bygel, C för U-järn) och måtten a, b, c … Se vår översikt över typformer för bockning." },
+      { q: "Vilka dimensioner kan byglar tillverkas i?", a: "Vanligen B500B Ø6–Ø12 mm. Grövre byglar tillverkas av raka stänger. Ange dimension och mått per position." },
+      { q: "Hur många byglar måste jag beställa?", a: "Både mindre partier och stora serier går bra. Ju större serie, desto lägre pris per styck." },
+      { q: "Hur anger jag formen?", a: "Enklast med typformens bokstavskod, till exempel N för sluten bygel och C för U-bygel, och måtten a, b, c. Alla koder finns i vår översikt över typformer." },
     ],
   },
   {
@@ -421,9 +430,9 @@ const baseProducts: Product[] = [
     h1: "Lyftöglor och lyftkrokar för betongelement",
     metaTitle: "Lyftöglor & lyftkrokar för betongelement",
     metaDescription:
-      "Lyftöglor och lyftkrokar av rundstål för prefabricerade betongelement, bockade efter din ritning. Tillverkning och leverans i hela Sverige. Begär offert.",
+      "Lyftöglor och lyftkrokar av rundstål för betongelement, trappor och balkar – bockade efter konstruktörens ritning, i små och stora serier. Begär offert.",
     intro:
-      "Vi bockar lyftöglor och lyftkrokar av rundstål för betongelement, trappor, balkar och andra prefabdelar – efter konstruktörens ritning och i den serie du behöver.",
+      "Vi bockar lyftöglor och lyftkrokar av rundstål till betongelement, trappor, balkar och andra prefabdelar – exakt efter konstruktörens ritning och i den serie du behöver.",
     keywords: [
       "lyftöglor",
       "lyftkrok",
@@ -434,24 +443,29 @@ const baseProducts: Product[] = [
     includes: [
       "Lyftöglor och lyftkrokar av rundstål",
       "Bockade efter konstruktörens ritning",
-      "För betongelement, trappor och balkar",
+      "För element, trappor och balkar",
       "Små och stora serier",
-      "Märkt och sorterat per position",
+      "Märkt per position",
       "Leverans i hela Sverige",
     ],
     body: [
       {
-        heading: "Lyftöglor efter ritning",
-        text: "Lyftöglor gjuts in i betongelement för att elementet ska kunna lyftas säkert vid tillverkning, transport och montage. Form, dimension och förankringslängd bestäms av konstruktören utifrån elementets vikt och lyftsätt. Vi bockar öglorna exakt efter ritningen i den mängd du behöver.",
+        heading: "Tillverkat efter konstruktörens ritning",
+        text: "Lyftöglor gjuts in i elementet så att det kan lyftas säkert vid tillverkning, transport och montage. Form, dimension och förankringslängd bestäms av elementets konstruktör utifrån vikt och lyftsätt. Vi tillverkar exakt efter den specifikationen – dimensioneringen ligger hos konstruktören.",
+      },
+      {
+        heading: "Rundstål, inte kamstål",
+        text: "Lyftöglor bockas normalt av slätt, segt rundstål, till exempel S235, enligt konstruktörens specifikation. Kamstål används normalt inte till lyftöglor. Ange materialkrav i förfrågan. Typer och placering beskrivs i guiden [lyftöglor i betong](/blogg/lyftoglor-betong).",
       },
       {
         heading: "För elementfabriker och byggen",
-        text: "Vi levererar lyftöglor till elementfabriker, betongstationer och byggen som gjuter egna element på plats. Beställ gärna tillsammans med övrig armering till elementen så kommer allt i samma leverans. Läs mer om typer och dimensionering i guiden [lyftöglor i betong](/blogg/lyftoglor-betong).",
+        text: "Vi levererar till elementfabriker och till byggen som gjuter egna element. Beställ öglorna tillsammans med elementens övriga armering, till exempel [byglar](/produkter/byglar-och-hakar), så kommer allt i samma leverans. [Skicka ritningen – få offert på lyftöglorna](/offert).",
       },
     ],
     faqs: [
-      { q: "Vad behöver ni för att tillverka lyftöglor?", a: "Ritning eller mått, material, dimension och antal. Vi bockar exakt efter konstruktörens specifikation – läs mer om dimension och placering i guiden om lyftögla i betong." },
-      { q: "Vilket material används?", a: "Lyftöglor bockas normalt av slätt, segt rundstål (t.ex. S235) enligt konstruktörens specifikation – inte av kamstål. Ange materialkrav i förfrågan så återkommer vi med offert." },
+      { q: "Vad behöver ni för att tillverka lyftöglor?", a: "Ritning eller mått, material, dimension och antal. Vi bockar exakt efter konstruktörens specifikation." },
+      { q: "Vilket material används?", a: "Normalt slätt, segt rundstål, till exempel S235, enligt konstruktörens specifikation – inte kamstål." },
+      { q: "Dimensionerar ni lyftöglorna?", a: "Nej, dimensioneringen görs av elementets konstruktör. Vi tillverkar efter den ritning eller specifikation du skickar." },
     ],
   },
   {
@@ -460,9 +474,9 @@ const baseProducts: Product[] = [
     h1: "Armering i ringar – kamstål B500B på rulle",
     metaTitle: "Armering i ringar – kamstål B500B Ø8–Ø16",
     metaDescription:
-      "Kamstål B500B i ringar (på rulle) Ø8–Ø16 mm för bockmaskiner och egen tillverkning. Leverans i hela Sverige. Begär offert på armering i ringar.",
+      "Kamstål B500B i ringar (på rulle), Ø8–Ø16 mm, för rät- och bockmaskiner i elementfabriker och verkstäder. Leverans i hela Sverige. Begär offert.",
     intro:
-      "Vi levererar kamstål B500B i ringar – armering på rulle för dig som bockar själv i egen maskin, till exempel elementfabriker och armeringsverkstäder.",
+      "Kamstål B500B i ringar, Ø8–Ø16 mm, för dig som rätar och bockar i egen maskin – elementfabriker, armeringsverkstäder och större byggen med egen bockning.",
     keywords: [
       "armering i ringar",
       "kamstål ringar",
@@ -474,24 +488,29 @@ const baseProducts: Product[] = [
     includes: [
       "Kamstål B500B i ringar",
       "Dimensioner Ø8–Ø16 mm",
-      "För automatiska bock- och rätningsmaskiner",
-      "Leverans per ring eller i större partier",
-      "Kan kombineras med raka stänger och prefab",
+      "För rät- och bockmaskiner",
+      "Per ring eller i större partier",
+      "Kombineras med raka stänger och prefab",
       "Leverans i hela Sverige",
     ],
     body: [
       {
-        heading: "Kamstål på rulle för egen tillverkning",
-        text: "Armering i ringar används i automatiska rätnings- och bockmaskiner. Materialet rätas och kapas i maskinen, vilket ger minimalt spill och gör det effektivt att tillverka byglar och korta järn i stora serier. Passar elementfabriker, armeringsverkstäder och större byggen med egen bockning.",
+        heading: "Varför ringar?",
+        text: "I en rät- och bockmaskin rätas materialet och kapas till exakt längd. Det ger nästan inget spill och gör det effektivt att tillverka byglar och korta järn i stora serier – jämfört med raka stänger där restbitar blir över.",
+      },
+      {
+        heading: "Ange det här i förfrågan",
+        text: "Dimension, mängd i ton, vilken ringvikt och vilket innermått maskinen tar samt leveransort. Ringvikten varierar mellan tillverkare, så det är maskinens gränser som styr.",
       },
       {
         heading: "Ringar, raka stänger eller färdigt bockat",
-        text: "Vill du hellre slippa bocka själv tillverkar vi byglarna och järnen åt dig. Du kan också kombinera: ringar till egen produktion och färdigt klippt och bockat för resten – i samma leverans.",
+        text: "Du kan kombinera: ringar till egen produktion och [klippt och bockad armering](/produkter/klippt-och-bockad) eller [färdiga byglar](/produkter/byglar-och-hakar) för det som inte lönar sig att bocka själv – i samma leverans. [Begär offert på armering i ringar](/offert).",
       },
     ],
     faqs: [
-      { q: "Vilka dimensioner finns i ringar?", a: "Kamstål B500B i ringar levereras normalt i Ø8–Ø16 mm. Hör av dig med dimension och mängd så får du pris och leveranstid." },
-      { q: "Vad väger en ring?", a: "Ringvikten varierar med dimension och tillverkare, vanligen ett par ton per ring. Ange vilken ringvikt din maskin hanterar i förfrågan." },
+      { q: "Vilka dimensioner finns i ringar?", a: "Kamstål B500B i ringar levereras normalt i Ø8–Ø16 mm." },
+      { q: "Vad väger en ring?", a: "Det varierar med dimension och tillverkare, ofta ett par ton. Ange vilken ringvikt din maskin hanterar." },
+      { q: "Kan jag kombinera ringar med färdigbockat?", a: "Ja. Ringar, raka stänger och färdigbockade detaljer kan levereras tillsammans." },
     ],
   },
   {
@@ -500,9 +519,9 @@ const baseProducts: Product[] = [
     h1: "3D-bockning och bågbockning av armering",
     metaTitle: "3D-bockning & bågbockning av armering",
     metaDescription:
-      "Rumsbockade 3D-former och bågformad armering, t.ex. till runda fundament och vindkraftsfundament. Bockat efter ritning i B500B. Begär offert.",
+      "Rumsbockade 3D-former och bågformad armering i B500B till runda fundament, brunnar och vindkraftsfundament – bockat efter ritning. Begär offert.",
     intro:
-      "Vi bockar armering i tre dimensioner och i bågar – rumsbockade specialformer och bågformade järn till runda konstruktioner som brunnar, tankar, cirkulära fundament och vindkraftsfundament.",
+      "Vi bockar armering i flera plan och i bågar – rumsbockade specialformer och bågformade järn till brunnar, tankar, runda plintar och vindkraftsfundament. Tillverkat i B500B efter ritning och märkt per position.",
     keywords: [
       "3d bockning armering",
       "rumsbockad armering",
@@ -513,26 +532,30 @@ const baseProducts: Product[] = [
       "specialbockning armering",
     ],
     includes: [
-      "Rumsbockade 3D-former (t.ex. typform SX, X, XX)",
-      "Bågformade järn med valfri radie",
-      "Armering till runda fundament och brunnar",
-      "Armering till vindkraftsfundament",
-      "Tillverkning efter ritning, B500B",
-      "Leverans i hela Sverige",
+      "Rumsbockade former (typform SX, X, XX)",
+      "Bågformade järn efter radie",
+      "Runda fundament, brunnar och tankar",
+      "Vindkraftsfundament",
+      "B500B efter ritning",
+      "Märkt per position",
     ],
     body: [
       {
-        heading: "Former som inte ligger i ett plan",
-        text: "Vissa konstruktioner kräver järn som är bockade i flera plan – rumsbockade former där benen pekar åt olika håll. Vi tillverkar dem exakt efter ritningen så att de passar direkt i formen, utan justering på bygget.",
+        heading: "Former i flera plan",
+        text: "Vissa detaljer har ben som pekar åt olika håll – rumsbockade former. De tillverkas efter ritningen så att de passar direkt i formen, utan justering på bygget. Typformerna SX, X och XX finns i vår [översikt över typformer](/tjanster/bockningslista).",
       },
       {
         heading: "Bågar till runda konstruktioner",
-        text: "Till brunnar, tankar, runda plintar och cirkulära fundament bockar vi järn i bågar med den radie konstruktionen kräver. Vid stora radier, som i vindkraftsfundament, levereras bågarna märkta per position så att monteringen går snabbt.",
+        text: "Till brunnar, tankar, runda plintar och cirkulära fundament bockas järnen i den radie konstruktionen kräver (typform Q). Vid stora fundament, som vindkraftsfundament, märks bågarna per position och radie så att monteringen går snabbt.",
+      },
+      {
+        heading: "Offert på specialbockning",
+        text: "Skicka ritning och bockningslista med radie eller typform och mått. Vi stämmer av geometrin innan tillverkning. [Skicka ritningen – få offert](/offert).",
       },
     ],
     faqs: [
-      { q: "Hur anger jag en bågformad eller 3D-bockad form?", a: "Ange typform (t.ex. Q för bågformad stång, SX/X/XX för rumsbockade) med mått, eller bifoga ritningen. Specialformer tillverkar vi direkt efter ritning." },
-      { q: "Tillverkar ni armering till vindkraftsfundament?", a: "Ja, vi bockar bågformade järn och specialformer till runda fundament, inklusive vindkraftsfundament. Skicka ritning och bockningslista så återkommer vi med offert." },
+      { q: "Hur anger jag en bågformad eller 3D-bockad form?", a: "Ange typform, till exempel Q för bågformad stång eller SX/X/XX för rumsbockade, med mått – eller bifoga ritningen." },
+      { q: "Tillverkar ni armering till vindkraftsfundament?", a: "Ja, bågformade järn och specialformer till runda fundament, inklusive vindkraftsfundament. Skicka ritning och bockningslista så återkommer vi med offert." },
     ],
   },
 ];

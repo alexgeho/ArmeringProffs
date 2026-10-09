@@ -32,37 +32,37 @@ export default function KontaktPage() {
             />
             <ul className="mt-8 space-y-5">
               <li className="flex items-start gap-3">
-                <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-brand-light text-brand"><IconPhone className="h-5 w-5" /></span>
+                <span className="flex h-10 w-10 items-center justify-center rounded-control bg-brand-light text-brand"><IconPhone className="h-5 w-5" /></span>
                 <div>
                   <p className="text-sm text-muted">Telefon</p>
-                  <a href={site.phoneHref} className="font-semibold text-ink hover:text-brand">{site.phone}</a>
+                  <a href={site.phoneHref} className="inline-flex min-h-6 items-center font-semibold text-ink hover:text-brand">{site.phone}</a>
                 </div>
               </li>
               {site.phoneOffice && (
                 <li className="flex items-start gap-3">
-                  <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-brand-light text-brand"><IconPhone className="h-5 w-5" /></span>
+                  <span className="flex h-10 w-10 items-center justify-center rounded-control bg-brand-light text-brand"><IconPhone className="h-5 w-5" /></span>
                   <div>
                     <p className="text-sm text-muted">Kontor</p>
-                    <a href={site.phoneOfficeHref} className="font-semibold text-ink hover:text-brand">{site.phoneOffice}</a>
+                    <a href={site.phoneOfficeHref} className="inline-flex min-h-6 items-center font-semibold text-ink hover:text-brand">{site.phoneOffice}</a>
                   </div>
                 </li>
               )}
               <li className="flex items-start gap-3">
-                <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-brand-light text-brand"><IconMail className="h-5 w-5" /></span>
+                <span className="flex h-10 w-10 items-center justify-center rounded-control bg-brand-light text-brand"><IconMail className="h-5 w-5" /></span>
                 <div>
                   <p className="text-sm text-muted">E-post</p>
-                  <a href={`mailto:${site.email}`} className="font-semibold text-ink hover:text-brand">{site.email}</a>
+                  <a href={`mailto:${site.email}`} className="inline-flex min-h-6 items-center font-semibold text-ink hover:text-brand">{site.email}</a>
                 </div>
               </li>
               <li className="flex items-start gap-3">
-                <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-brand-light text-brand"><IconMapPin className="h-5 w-5" /></span>
+                <span className="flex h-10 w-10 items-center justify-center rounded-control bg-brand-light text-brand"><IconMapPin className="h-5 w-5" /></span>
                 <div>
                   <p className="text-sm text-muted">Leveransområde</p>
                   <p className="font-semibold text-ink">Prefab armering i {site.regionInflected}</p>
                 </div>
               </li>
               <li className="flex items-start gap-3">
-                <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-brand-light text-brand"><IconClock className="h-5 w-5" /></span>
+                <span className="flex h-10 w-10 items-center justify-center rounded-control bg-brand-light text-brand"><IconClock className="h-5 w-5" /></span>
                 <div>
                   <p className="text-sm text-muted">Öppettider</p>
                   <p className="font-semibold text-ink">Vardagar 07:00–16:00</p>
@@ -74,8 +74,8 @@ export default function KontaktPage() {
             </p>
           </div>
 
-          <div className="rounded-2xl border border-line p-6 sm:p-8">
-            <h2 className="text-xl font-bold text-ink">Begär offert</h2>
+          <div className="rounded-panel border border-line bg-card p-6 sm:p-8">
+            <h2 className="type-h4 text-ink">Begär offert</h2>
             <div className="mt-5">
               <ContactForm source="kontaktsida" />
             </div>

@@ -1,55 +1,240 @@
 @import "tailwindcss";
 
 /*
-  Armeringsproffs – designsystem.
+  Armeringsproffs – designsystem (tokens). Dokumentation: docs/DESIGN-SYSTEM.md
   Industriell, förtroendeingivande look: betonggrå neutraler + signalorange CTA.
+
+  Alla färger är semantiska tokens som byter värde i mörkt läge
+  (prefers-color-scheme: dark). Komponenter använder ALDRIG råa färger
+  (bg-white, text-slate-*, #hex) – bara token-klasserna nedan.
+  Kontrast (WCAG AA) uppmätt – se tabellen i DESIGN-SYSTEM.md.
 */
 
-@theme {
-  /* Varumärkesfärger */
-  --color-brand: #ea580c; /* orange-600 – CTA/accent */
-  --color-brand-dark: #c2410c; /* orange-700 – hover */
-  --color-brand-light: #fff7ed; /* orange-50 – ljus bakgrund */
+/* ---------- 1. Råa tokenvärden: ljust tema ---------- */
+:root {
+  --page: #ffffff; /* sidbakgrund */
+  --surface: #f8fafc; /* dämpad sektion, sidopaneler */
+  --card: #ffffff; /* kort, fält, paneler */
+  --paper: #f1f5f9; /* bild-/ritningsyta (samma grå som bildernas bakgrund) – lika i båda teman */
+  --ink: #0f172a; /* rubriker, stark text */
+  --ink-soft: #334155; /* brödtext */
+  --muted: #5b677a; /* metadata, bildtext, placeholder (≥4.5:1 även på tint) */
+  --line: #e2e8f0; /* dekorativa kantlinjer, avdelare */
+  --field: #848fa1; /* kant på formulärfält (≥3:1, WCAG 1.4.11) */
 
-  --color-ink: #0f172a; /* slate-900 – rubriker/text */
-  --color-ink-soft: #334155; /* slate-700 – brödtext */
-  --color-muted: #64748b; /* slate-500 – dämpad text */
-  --color-line: #e2e8f0; /* slate-200 – kantlinjer */
-  --color-surface: #f8fafc; /* slate-50 – sektionsbakgrund */
+  --brand: #c2410c; /* orange text/länkar (5.2:1 på vitt) */
+  --brand-hover: #9a3412;
+  --accent: #ea580c; /* varumärkesorange: ikoner, dekor, fokus (icke-text ≥3:1) */
+  --brand-tint: #fff7ed; /* ljus orange yta */
+  --cta: #c2410c; /* knappfyllnad med vit text (5.2:1) */
+  --cta-hover: #9a3412;
+
+  --night: #0f172a; /* alltid mörka ytor: hero, CTA-banner, footer */
+
+  --success: #15803d;
+  --success-fill: #15803d; /* fyllnad med vit text – lika i båda teman */
+  --warning: #b45309;
+  --danger: #dc2626;
+
+  /* Avstånd (8pt-rutnät) */
+  --space-section: 3.5rem; /* 56 px – luft över = under varje sektion */
+  --space-card: 1.5rem; /* 24 px – inre luft i kort */
+  --space-stack: 2.5rem; /* 40 px – rubrik → innehåll i sektion */
+  --header-h: 84px;
+
+  color-scheme: light;
+}
+
+@media (width >= 40rem) {
+  :root {
+    --space-section: 5rem; /* 80 px */
+    --space-card: 1.5rem;
+    --header-h: 100px;
+  }
+}
+@media (width >= 64rem) {
+  :root { --header-h: 116px; }
+}
+
+/* ---------- 2. Mörkt tema ---------- */
+@media (prefers-color-scheme: dark) {
+  :root:not(.light-scope) {
+    --page: #0b1120;
+    --surface: #0f1729;
+    --card: #131c31;
+    --ink: #f1f5f9;
+    --ink-soft: #cbd5e1;
+    --muted: #94a3b8;
+    --line: #243049;
+    --field: #64748b;
+
+    --brand: #fb923c;
+    --brand-hover: #fdba74;
+    --accent: #f97316;
+    --brand-tint: #2a1709;
+    --cta: #c2410c;
+    --cta-hover: #9a3412;
+
+    --night: #050a16;
+
+    --success: #4ade80;
+    --warning: #fbbf24;
+    --danger: #f87171;
+
+    color-scheme: dark;
+  }
+}
+
+/* Ljus "ö" i mörkt läge: tekniska ritningar (SVG med fasta färger) ligger på papper. */
+.light-scope {
+  --page: #ffffff;
+  --surface: #f8fafc;
+  --card: #ffffff;
+  --ink: #0f172a;
+  --ink-soft: #334155;
+  --muted: #5b677a;
+  --line: #e2e8f0;
+  --field: #848fa1;
+  --brand: #c2410c;
+  --brand-hover: #9a3412;
+  --accent: #ea580c;
+  --brand-tint: #fff7ed;
+  color-scheme: light;
+}
+
+/* ---------- 3. Tailwind-tema (klasser: bg-card, text-ink, border-line …) ---------- */
+@theme inline {
+  --color-page: var(--page);
+  --color-surface: var(--surface);
+  --color-card: var(--card);
+  --color-paper: var(--paper);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-field: var(--field);
+  --color-brand: var(--brand);
+  --color-brand-dark: var(--brand-hover);
+  --color-brand-light: var(--brand-tint);
+  --color-accent: var(--accent);
+  --color-cta: var(--cta);
+  --color-cta-hover: var(--cta-hover);
+  --color-night: var(--night);
+  --color-success: var(--success);
+  --color-success-fill: var(--success-fill);
+  --color-warning: var(--warning);
+  --color-danger: var(--danger);
 
   --font-sans: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
 }
 
-:root {
-  --background: #ffffff;
-  --foreground: var(--color-ink);
-  /* Sajten är designad ljus. Talar om för webbläsaren så att t.ex. Chrome
-     "Auto Dark Mode" inte auto-inverterar färger/foton för besökare. */
-  color-scheme: light;
+@theme {
+  /* Typskala (rem / radhöjd). Rubriker skalar upp från sm via utilities nedan. */
+  --text-caption: 0.75rem;
+  --text-caption--line-height: 1.4;
+  --text-small: 0.875rem;
+  --text-small--line-height: 1.5;
+  --text-body: 1rem;
+  --text-body--line-height: 1.6;
+  --text-lead: 1.125rem;
+  --text-lead--line-height: 1.7;
+
+  /* Radier */
+  --radius-control: 0.5rem; /* knappar, fält, chips */
+  --radius-card: 0.75rem; /* kort, paneler */
+  --radius-panel: 1rem; /* stora block, hero-formulär, figurer */
+
+  /* Skuggor */
+  --shadow-card: 0 1px 2px rgb(15 23 42 / 0.06);
+  --shadow-raised: 0 8px 24px -8px rgb(15 23 42 / 0.18);
+
+  /* Rörelse */
+  --duration-fast: 150ms;
+  --duration-base: 250ms;
+  --ease-out: cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
+/* Rubriker: en klass per nivå (storlek + radhöjd + vikt). */
+@utility type-h1 {
+  font-size: 2.25rem;
+  line-height: 1.15;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  @media (width >= 40rem) { font-size: 3rem; line-height: 1.1; }
+}
+@utility type-h2 {
+  font-size: 1.875rem;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  @media (width >= 40rem) { font-size: 2.25rem; line-height: 1.15; }
+}
+@utility type-h3 {
+  font-size: 1.5rem;
+  line-height: 1.3;
+  font-weight: 700;
+}
+@utility type-h4 {
+  font-size: 1.125rem;
+  line-height: 1.4;
+  font-weight: 600;
+}
+
+/* Z-index-skala */
+@utility z-header { z-index: 50; }
+@utility z-overlay { z-index: 40; }
+@utility z-toast { z-index: 60; }
+
+/* ---------- 4. Bas ---------- */
 html {
   scroll-behavior: smooth;
-  color-scheme: light;
+  scroll-padding-top: calc(var(--header-h) + 1rem);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: var(--page);
+  color: var(--ink);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
 }
 
-/* Läsbar brödtext i artiklar */
-.prose-body p {
-  color: var(--color-ink-soft);
-  line-height: 1.75;
+/* Fokusmarkering för tangentbord – synlig på ljus och mörk yta. */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline-offset: 0;
 }
 
-/* Fokusmarkering för tillgänglighet */
-:focus-visible {
-  outline: 2px solid var(--color-brand);
-  outline-offset: 2px;
+/* Läsbar löptext (artiklar, produkt-/tjänstetext). Ett rytm-system:
+   samma luft över varje h2 (40 px), h3 (32 px) och mellan stycken (16 px). */
+@layer components {
+  .prose-body > * + * { margin-top: 1rem; }
+  .prose-body > h2 { margin-top: 2.5rem; }
+  .prose-body > h3 { margin-top: 2rem; }
+  .prose-body > :first-child { margin-top: 0; }
+  .prose-body > h2 { font-size: 1.5rem; line-height: 1.3; font-weight: 700; color: var(--ink); }
+  .prose-body > h3 { font-size: 1.25rem; line-height: 1.35; font-weight: 700; color: var(--ink); }
+  .prose-body > p,
+  .prose-body > ul > li,
+  .prose-body > ol > li { color: var(--ink-soft); font-size: 1.125rem; line-height: 1.75; }
+  .prose-body > h2 + *,
+  .prose-body > h3 + * { margin-top: 0.75rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
 }
 
 /*
@@ -85,7 +270,7 @@ body {
 
 @media (prefers-reduced-motion: reduce) {
   .scene-ready .s-fade { opacity: 1; animation: none; }
-  .scene-ready .s-draw { stroke-dasharray: none; animation: none; }
+  .scene-ready .s-draw { stroke-dasharray: none; stroke-dashoffset: 0; animation: none; }
   .s-glint { display: none; }
 }
 

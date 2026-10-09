@@ -8,7 +8,7 @@ export const guider1: Post[] = [
     title: "Förankringslängd för armering – tabell och beräkning enligt Eurokod 2",
     metaTitle: "Förankringslängd armering – tabell Ø8–Ø32",
     metaDescription:
-      "Förankringslängd för armeringsjärn Ø8–Ø32 i tabell för C20/25–C30/37, så räknas lb,rqd och lbd enligt Eurokod 2 och när krok eller bock behövs.",
+      "Förankringslängd Ø8–Ø32 i tabell för C20/25–C30/37, räkneexempel enligt Eurokod 2 och när krok kortar längden. Vi bockar ändarna efter din ritning.",
     excerpt:
       "Ett armeringsjärn måste sitta tillräckligt långt in i betongen för att kunna ta upp sin kraft. Här är riktvärden för förankringslängd, hur den räknas och hur bockade ändar kan korta den.",
     date: "2026-10-09",
@@ -23,8 +23,8 @@ export const guider1: Post[] = [
       "förankringslängd 12 mm",
     ],
     content: [
-      { type: "p", text: "Förankringslängden är den sträcka ett armeringsjärn måste gjutas in i betongen för att kraften i järnet ska kunna föras över till betongen via vidhäftningen. Är den för kort dras järnet ut innan stålet når sin hållfasthet. Den står på armeringsritningen, ofta som ett mått på järnets ände förbi ett stöd eller in i en anslutande konstruktion." },
-      { type: "p", text: "Vi tillverkar [klippt och bockad armering](/produkter/klippt-och-bockad) med raka ändar, krokar eller bockar efter din ritning – så att förankringen blir exakt den konstruktören har räknat med." },
+      { type: "p", text: "Snabbsvar: ett fullt utnyttjat rakt järn B500B i C25/30 behöver ungefär 40 × Ø vid god vidhäftning – för Ø12 cirka 485 mm. I överkant av höga gjutningar blir det cirka 57 × Ø. Exakt värde räknar konstruktören fram, och det står på ritningen." },
+      { type: "p", text: "Förankringslängden är sträckan järnet måste sitta i betongen för att kraften ska föras över via vidhäftningen. Är den för kort dras järnet ut innan stålet når sin hållfasthet. Får längden inte plats kan änden bockas – vi tillverkar [klippt och bockad armering](/produkter/klippt-och-bockad) med krokar och vinklar exakt enligt ritningen." },
 
       { type: "h2", text: "Förankringslängd eller skarvlängd?" },
       { type: "p", text: "Förankringslängd gäller ett järn som ska ”fästas” i betongen, till exempel vid ett upplag eller där en vägg ansluter mot en platta. Skarvlängd gäller två järn som ligger omlott och för över kraften mellan sig. Skarvlängden räknas ut från samma grundvärde men blir oftast längre, eftersom en faktor för andelen skarvade järn tillkommer. Riktvärden för skarvar finns i [skarvlängd och överlapp](/blogg/skarvlangd-armering)." },
@@ -50,18 +50,20 @@ export const guider1: Post[] = [
         ["Ø32", "≈ 1 545 mm", "≈ 1 290 mm", "≈ 1 160 mm", "≈ 1 840 mm"],
       ], caption: "lb,rqd = (Ø/4)·(435/fbd) för fullt utnyttjat järn, alla α = 1,0. Riktvärden för överslag – konstruktören/ritningen avgör den verkliga förankringslängden." },
       { type: "p", text: "Är järnet inte fullt utnyttjat blir förankringslängden kortare i proportion till spänningen. Är det en krok eller ett bockat järn kan α1 sänka längden ytterligare. Därför skiljer sig ritningens mått ofta från tabellen – i båda riktningarna." },
+      { type: "h3", text: "Räkneexempel – Ø16 som inte är fullt utnyttjat" },
+      { type: "p", text: "Ø16 i C30/37, god vidhäftning, spänning σsd = 300 MPa: lb,rqd = (16 / 4) · (300 / 3,0) = 400 mm. Minimivärdet för drag är max(0,3 · 400; 10 · 16; 100) = 160 mm, så 400 mm gäller om alla α = 1,0. Med fullt utnyttjat järn hade det blivit 580 mm." },
 
       { type: "h2", text: "God eller dålig vidhäftning?" },
       { type: "p", text: "Vidhäftningen beror på var järnet ligger i gjutningen. Betongen sätter sig och vatten stiger uppåt, så järn högt upp i en hög gjutning får sämre kontakt med betongen. Enligt Eurokod 2 räknas det som dåliga förhållanden bland annat när:" },
       { type: "ul", items: [
-        "Elementet är 250–600 mm högt och järnet ligger mer än 250 mm ovanför gjutningens botten.",
+        "Elementet är högre än 250 mm och järnet ligger mer än 250 mm ovanför gjutningens botten.",
         "Elementet är högre än 600 mm och järnet ligger inom 300 mm från ovansidan.",
-        "Järn som lutar 45° eller mer mot horisontalplanet räknas alltid som god vidhäftning.",
       ] },
+      { type: "p", text: "Järn i element upp till 250 mm, och järn som lutar 45° eller mer mot horisontalplanet, räknas alltid som god vidhäftning." },
       { type: "p", text: "I praktiken innebär det att överkantsarmering i tjocka plattor och höga balkar ofta behöver cirka 40 % längre förankring än underkantsarmeringen." },
 
       { type: "h2", text: "Krok, bock eller rak ände?" },
-      { type: "p", text: "Ett rakt järn kräver hela förankringslängden. Får det inte plats – till exempel vid en smal kantbalk eller ett kort upplag – kan änden bockas som en vinkel, en krok eller en ögla. Med tillräckligt täckskikt vid bocken (cd > 3 × Ø) får α1 sättas till 0,7, vilket kortar förankringen med 30 %. Bocken måste då göras med rätt dorndiameter, se [bocka armeringsjärn](/blogg/bocka-armeringsjarn). Alternativet är svetsade tvärstänger eller mekaniska ankare – enligt konstruktörens anvisning." },
+      { type: "p", text: "Ett rakt järn kräver hela förankringslängden. Får det inte plats – till exempel vid en smal kantbalk eller ett kort upplag – kan änden bockas som en vinkel, en krok eller en ögla. För dragna järn med tillräckligt täckskikt vinkelrätt mot bocken (cd > 3 × Ø) får α1 sättas till 0,7, vilket kortar förankringen med 30 %. För tryckta järn ger krokar ingen minskning. Bocken måste då göras med rätt dorndiameter, se [bocka armeringsjärn](/blogg/bocka-armeringsjarn). Alternativet är svetsade tvärstänger eller mekaniska ankare – enligt konstruktörens anvisning." },
 
       { type: "h2", text: "Vanliga misstag på bygget" },
       { type: "ul", items: [
@@ -73,13 +75,13 @@ export const guider1: Post[] = [
       ] },
 
       { type: "h2", text: "Beställ med rätt förankring från början" },
-      { type: "p", text: "Förankringen avgörs på ritningen, men den ska också gå att bygga. När vi tillverkar [klippt och bockad armering](/produkter/klippt-och-bockad) följer vi måtten och formerna per position, så att varje järn har den förankringslängd och ändform som konstruktören angett. Skicka ritning eller bockningslista via [offertformuläret](/offert) – du får pris och leveransupplägg för hela Sverige." },
+      { type: "p", text: "Förankringen avgörs på ritningen, men den ska också gå att bygga. När vi tillverkar [klippt och bockad armering](/produkter/klippt-och-bockad) följer vi måtten och formerna per position, så att varje järn har den förankringslängd och ändform som konstruktören angett. Skicka ritningen via [offertformuläret](/offert) – du får pris på de bockade positionerna och frakten till din ort." },
     ],
     faqs: [
       { q: "Hur lång ska förankringslängden vara för Ø12?", a: "För ett fullt utnyttjat Ø12 i B500B och C25/30 blir grundvärdet lb,rqd cirka 485 mm vid god vidhäftning och cirka 690 mm vid dålig. Krokar, täckskikt och lägre spänning kan korta den. Ritningen gäller." },
       { q: "Vad är skillnaden mellan förankringslängd och skarvlängd?", a: "Förankringslängden är hur långt ett järn måste gjutas in för att fästa i betongen. Skarvlängden gäller två järn omlott och blir oftast längre, eftersom hänsyn tas till hur många järn som skarvas i samma snitt." },
       { q: "Vad är minsta förankringslängd enligt Eurokod 2?", a: "För dragna järn det största av 0,3 · lb,rqd, 10 × Ø och 100 mm. För tryckta järn det största av 0,6 · lb,rqd, 10 × Ø och 100 mm." },
-      { q: "Blir förankringen kortare med krok?", a: "Ja. Med en bockad ände och tillräckligt täckskikt vid bocken får faktorn α1 sättas till 0,7, alltså 30 % kortare än ett rakt järn. Bocken ska göras med minst den dorndiameter Eurokod 2 anger." },
+      { q: "Blir förankringen kortare med krok?", a: "Ja, för dragna järn. Med en bockad ände och tillräckligt täckskikt vid bocken får faktorn α1 sättas till 0,7, alltså 30 % kortare än ett rakt järn. Bocken ska göras med minst den dorndiameter Eurokod 2 anger." },
     ],
     target: { href: "/produkter/klippt-och-bockad", label: "Beställ klippt och bockad armering" },
     category: "guider",
@@ -154,7 +156,7 @@ export const guider1: Post[] = [
         "Trådändar som sticker ut mot formen – de rostar och ger missfärgning i ytan.",
         "För glest najat överkantsnät som trycks ned när man går på det.",
         "Najning som ersätter distanser – tråden håller ihop, men lyfter inte armeringen.",
-        "Svetsning i stället för najning utan att det är tillåtet – svetsning av armering kräver behörighet enligt SS-EN ISO 17660.",
+        "Svetsning i stället för najning utan konstruktörens tillstånd – svetsning av armering ska utföras enligt SS-EN ISO 17660.",
         "Tunn tråd i korgar som ska lyftas – knutarna släpper.",
         "Najning som görs först efter att alla järn lagts ut – järnen hinner flytta sig när man går på dem.",
       ] },
@@ -168,6 +170,7 @@ export const guider1: Post[] = [
       { q: "Vilket verktyg är bäst för att naja armering?", a: "Najtång räcker för de flesta jobb. Najsnurra med färdig öglenajtråd är enklast för ovana. Vid stora ytor sparar en batteridriven najmaskin mycket tid." },
       { q: "Får man svetsa ihop armeringen i stället för att naja?", a: "Bara om konstruktören tillåter det och svetsningen utförs enligt SS-EN ISO 17660 av behörig svetsare. Felaktig svetsning kan försvaga stålet." },
       { q: "Ersätter najning distanser?", a: "Nej. Najningen håller järnen ihop, distanserna ger rätt höjd och täckskikt. Båda behövs." },
+      { q: "Kan jag få najtråd och tång i samma leverans som armeringen?", a: "Ja. Lägg till najtråd, verktyg och distanser i offertförfrågan, så kommer allt med samma leverans." },
     ],
     target: { href: "/produkter/najtrad-och-tillbehor", label: "Beställ najtråd och tillbehör" },
     category: "guider",
@@ -194,7 +197,7 @@ export const guider1: Post[] = [
       "hur mycket najtråd",
     ],
     content: [
-      { type: "p", text: "Najtråd (bindtråd) är den tunna, mjuka ståltråd som används för att binda ihop armeringen vid korsningar och skarvar. Den ska vara lätt att vrida men tillräckligt stark för att hålla järnen på plats under gjutningen. Valet av tråd påverkar hur snabbt arbetet går – och hur ytan ser ut efteråt." },
+      { type: "p", text: "Najtråd (bindtråd) är den tunna, mjuka ståltråd som används för att binda ihop armeringen vid korsningar och skarvar. Den ska vara lätt att vrida men tillräckligt stark för att hålla järnen på plats under gjutningen. Till en vanlig platta på 100 m² med ett lager s150 går det åt cirka 6–7 kg 1,2 mm-tråd – räknemodellen finns nedan." },
       { type: "p", text: "Vi levererar najtråd tillsammans med armering, distanser och verktyg – se [najtråd och tillbehör](/produkter/najtrad-och-tillbehor)." },
 
       { type: "h2", text: "Typer av najtråd" },
@@ -227,7 +230,7 @@ export const guider1: Post[] = [
       ] },
       { type: "table", head: ["Exempel", "Knutar", "Tråd 1,2 mm"], rows: [
         ["Platta 100 m², ett lager s150, varannan korsning", "≈ 2 200", "≈ 6–7 kg"],
-        ["Platta 100 m², två lager s150, varannan korsning", "≈ 4 400", "≈ 12–14 kg"],
+        ["Platta 100 m², över- och underkant s150, varannan korsning", "≈ 4 400", "≈ 12–14 kg"],
         ["Kantbalk 40 m, byglar s200, 4 hörn per bygel", "≈ 800", "≈ 2–3 kg"],
       ], caption: "Räknat med 0,3 m tråd per knut och cirka 15 % tillägg. Överslag – verklig åtgång beror på knut och hur tätt det najas." },
       { type: "p", text: "Hur tätt du behöver naja i olika delar finns i guiden [naja armering](/blogg/naja-armering)." },
@@ -264,7 +267,7 @@ export const guider1: Post[] = [
     title: "Läsa armeringsritning – beteckningar, mått och förkortningar",
     metaTitle: "Läsa armeringsritning – beteckningar förklarade",
     metaDescription:
-      "Så läser du en armeringsritning: Ø, s150, c/c, ök/uk, positionsnummer, täckskikt och exponeringsklass. Med exempel på hur en beteckning tolkas.",
+      "Så läser du en armeringsritning: Ø, s150, c/c, ök/uk, pos, täckskikt och exponeringsklass – med tolkat exempel. Skicka ritningen, vi gör specen.",
     excerpt:
       "En armeringsritning är kompakt – en rad som ”12 Ø12 s200 uk” säger allt om en hel armeringsgrupp. Här lär du dig läsa beteckningarna och hitta det som behövs för att beställa.",
     date: "2026-10-09",
@@ -279,7 +282,7 @@ export const guider1: Post[] = [
       "tolka armeringsritning",
     ],
     content: [
-      { type: "p", text: "Armeringsritningen är konstruktörens instruktion för var armeringen ska ligga. Den visar dimensioner, avstånd, lägen, skarvar och täckskikt – ofta med korta beteckningar som är obegripliga första gången. Den här guiden går igenom de vanligaste beteckningarna, så att du kan läsa ritningen, kontrollera den på bygget och beställa rätt." },
+      { type: "p", text: "Armeringsritningen är konstruktörens instruktion för var armeringen ska ligga. En rad som ”12 Ø12 s200 uk” betyder tolv järn med diametern 12 mm, 200 mm isär, i underkant. Nedan finns alla vanliga beteckningar i en tabell, ett tolkat exempel och de tre saker som oftast missas när armeringen beställs." },
       { type: "p", text: "Har du ritningen men ingen lista? Vi gör [armeringsspecifikationen från din ritning](/tjanster/armeringsspecifikation) – du behöver inte tolka varje detalj själv." },
 
       { type: "h2", text: "Vad finns på en armeringsritning?" },
@@ -299,7 +302,7 @@ export const guider1: Post[] = [
         ["uk / ök", "Underkant / överkant", "Ø10 s200 ök = i överkant"],
         ["Pos (siffra i ring)", "Positionsnummer – kopplar till förteckningen", "Pos 3 = position 3 i listan"],
         ["B500B / K500C-T", "Armeringsstålets klass", "Kamstål med sträckgräns 500 MPa"],
-        ["C30/37", "Betongens hållfasthetsklass", "Cylinder 30 MPa / kub 37 MPa"],
+        ["C30/37", "Betongens hållfasthetsklass", "Tryckhållfasthet: cylinder 30 MPa, kub 37 MPa"],
         ["XC2, XC4, XD, XF …", "Exponeringsklass – miljön betongen utsätts för", "Styr täckskiktet"],
         ["c / tsk", "Täckskikt i mm", "c = 35 mm"],
         ["l₀ / skarv", "Skarvlängd", "Skarv 600 mm"],
@@ -309,7 +312,7 @@ export const guider1: Post[] = [
 
       { type: "h2", text: "Exempel – så tolkar du en rad" },
       { type: "p", text: "Beteckningen ”12 Ø12 s200 uk, pos 4” betyder: tolv järn med diametern 12 mm, lagda med 200 mm centrumavstånd i plattans underkant, och de finns som position 4 i förteckningen med form och längd. Står det ”Ø10 s150 ök+uk” ska samma armering finnas i både över- och underkant. Står det ”2 lager” eller ”korsande” ligger järnen i två riktningar." },
-      { type: "p", text: "Vid nät står ofta nätbeteckningen direkt, till exempel ”nät 8150” – tråd Ø8 med 150 mm maska. Där måste du också läsa ut överlapp och om nätet ska ligga i ett eller två lager." },
+      { type: "p", text: "Vid nät står ofta nätbeteckningen direkt, till exempel ”nät 8150” eller ”8x150” – tråd Ø8 med 150 mm maska. Där måste du också läsa ut överlapp och om nätet ska ligga i ett eller två lager." },
 
       { type: "h2", text: "Tre saker som ofta missas" },
       { type: "h3", text: "Täckskikt och exponeringsklass" },
@@ -347,7 +350,7 @@ export const guider1: Post[] = [
     title: "Armeringsspecifikation – exempel och mall att utgå från",
     metaTitle: "Armeringsspecifikation – exempel och mall",
     metaDescription:
-      "Se ett komplett exempel på armeringsspecifikation med positioner, typformer, längder och vikt – och hur du räknar ut kilona. Mall att ladda ner.",
+      "Räknat exempel på armeringsspecifikation: positioner, typformer, klipplängder och vikt per dimension. Ladda ner mallen – eller låt oss göra specen.",
     excerpt:
       "Hur ser en färdig armeringsspecifikation ut? Här är ett räknat exempel för en kantbalk med raka järn, byglar och U-järn – kolumn för kolumn – och en mall att utgå från.",
     date: "2026-10-09",
@@ -384,11 +387,12 @@ export const guider1: Post[] = [
         ["3", "80", "10", "C", "a = 300, b = 400, c = 300", "960 mm", "76,8 m", "47,4 kg"],
         ["4", "24", "12", "B", "a = 600, b = 600", "1 176 mm", "28,2 m", "25,1 kg"],
         ["Summa", "", "", "", "", "", "", "385,5 kg"],
-      ], caption: "Exempel: kantbalk med längsjärn (pos 1), slutna byglar (pos 2), U-järn (pos 3) och hörnjärn (pos 4). Klipplängden är räknad med avdrag för bockarna – byglarnas längd inklusive krokar räknas fram ur måtten." },
+      ], caption: "Exempel: kantbalk med längsjärn (pos 1), slutna byglar (pos 2), U-järn (pos 3) och hörnjärn (pos 4). Klipplängden är räknad med avdrag för bockarna och tillägg för bygelns krokar." },
 
       { type: "h3", text: "Så räknas raderna" },
       { type: "ul", items: [
         "Pos 1: 40 × 6,0 m = 240 m × 0,888 kg/m = 213,1 kg.",
+        "Pos 2: omkretsen 2 × (400 + 200) = 1 200 mm, minus 4 bockar à 20 mm, plus två 135°-krokar à cirka 115 mm = 1 350 mm.",
         "Pos 3: yttermåtten 300 + 400 + 300 = 1 000 mm, minus cirka 2 × Ø per 90°-bock (2 bockar × 20 mm) = 960 mm.",
         "Pos 4: 600 + 600 = 1 200 mm minus 2 × 12 mm = 1 176 mm.",
         "Vikten summeras per dimension och totalt – det är den som ligger till grund för priset.",
@@ -442,7 +446,7 @@ export const guider1: Post[] = [
     title: "ILF – vad är inläggningsfärdig armering?",
     metaTitle: "Vad är ILF? Inläggningsfärdig armering förklarad",
     metaDescription:
-      "ILF betyder inläggningsfärdig armering: kapad, bockad, märkt och sorterad per position, klar för formen. Så fungerar flödet och när det lönar sig.",
+      "ILF betyder inläggningsfärdig armering: kapad, bockad och märkt per position, klar för formen. Så fungerar flödet, när det lönar sig och vad vi behöver.",
     excerpt:
       "ILF är branschens förkortning för armering som kommer färdig att lägga in i formen. Här förklarar vi vad som ingår, hur flödet från ritning till bygge ser ut och när ILF lönar sig jämfört med raka järn.",
     date: "2026-10-09",
@@ -553,7 +557,7 @@ export const guider1: Post[] = [
       "typform n armering",
     ],
     content: [
-      { type: "p", text: "I svenska bockningslistor beskrivs armeringens form med en bokstavskod – en typform. I stället för att rita varje järn skriver man formens bokstav och måtten a, b, c och så vidare. Tillverkaren vet då exakt hur järnet ska bockas. Systemet bygger på den svenska förteckningen över bockning av stänger och används av konstruktörer, armerare och bockverkstäder." },
+      { type: "p", text: "I svenska bockningslistor beskrivs armeringens form med en bokstavskod – en typform. I stället för att rita varje järn skriver man formens bokstav och måtten a, b, c och så vidare. Tillverkaren vet då exakt hur järnet ska bockas. Koderna är svensk branschpraxis och används av konstruktörer, armerare och bockverkstäder." },
       { type: "p", text: "Alla former finns med figur och måttfält i vårt verktyg för [bockningslista](/tjanster/bockningslista). Har du bara ritningen tar vi fram [armeringsspecifikationen åt dig](/tjanster/armeringsspecifikation) – med rätt typform för varje position." },
 
       { type: "figure", illustration: "bending-shapes", caption: "Några vanliga typformer: rak stång, vinkel, U-järn och sluten bygel." },
@@ -564,7 +568,6 @@ export const guider1: Post[] = [
         "Små bokstäver (a, b, c, d …) är längden på varje skänkel i mm.",
         "v, u och s är vinklar i grader där formen har sneda ben.",
         "Måtten anges normalt som yttermått. Klipplängden räknas fram av tillverkaren.",
-        "Ändkrokar anges separat i listan och ingår inte i bokstavskoden.",
       ] },
 
       { type: "h2", text: "Grupp 1–2: raka och enkelt bockade järn" },
@@ -672,7 +675,7 @@ export const guider1: Post[] = [
 
       { type: "h2", text: "Så läser du beteckningarna" },
       { type: "ul", items: [
-        "B500B – B = armeringsstål (Betonstahl), 500 = sträckgräns i MPa, B = duktilitetsklass B.",
+        "B500B – första B = armeringsstål, 500 = karakteristisk sträckgräns i MPa, sista B = duktilitetsklass B.",
         "B500C – samma hållfasthet, duktilitetsklass C.",
         "B500A – duktilitetsklass A, vanligt i kallbearbetad tråd och svetsade nät.",
         "K500B-T / K500C-T – svensk beteckning enligt SS 212540: K = kamstång, 500 = sträckgräns, B/C = duktilitetsklass, T = varmvalsat och värmebehandlat.",
@@ -681,7 +684,7 @@ export const guider1: Post[] = [
       { type: "p", text: "Mer om stålet, vikter och längder i [armeringsstål – B500B](/blogg/armeringsstal)." },
 
       { type: "h2", text: "Får K500C-T användas när ritningen säger B500B?" },
-      { type: "p", text: "Ja. Klass C uppfyller alla krav för klass B – och mer därtill – så stål i klass C får alltid ersätta klass B med samma sträckgräns. Det omvända gäller inte: står det B500C på ritningen får du inte leverera klass B. Det är därför K500C-T är det stål som oftast lagerförs i Sverige; det täcker båda behoven." },
+      { type: "p", text: "Ja. Klass C uppfyller alla krav för klass B – och mer därtill – så stål i klass C får alltid ersätta klass B med samma sträckgräns. Det omvända gäller inte: står det B500C på ritningen får du inte leverera klass B. Det är därför K500C-T är vanligt i lager i Sverige: det täcker båda behoven. SS 212540 har även klassen AB, mellan A och B." },
 
       { type: "h2", text: "När spelar klassen roll för konstruktören?" },
       { type: "ul", items: [
@@ -748,7 +751,7 @@ export const guider1: Post[] = [
       ] },
 
       { type: "h2", text: "Täckskikt (avsnitt 4.4)" },
-      { type: "p", text: "Täckskiktet räknas som cnom = cmin + Δcdev. cmin är det största av kravet för vidhäftning (minst järnets diameter) och kravet för beständighet, som beror på exponeringsklass (XC, XD, XS, XF …) och konstruktionens livslängd. Δcdev är en tolerans för utförandet, normalt 10 mm. Gjuts betongen direkt mot jord ska täckskiktet vara minst 75 mm. Mer i [distanser och täckskikt](/blogg/distanser-tackskikt-armering)." },
+      { type: "p", text: "Täckskiktet räknas som cnom = cmin + Δcdev. cmin är det största av kravet för vidhäftning (minst järnets diameter) och kravet för beständighet, som beror på exponeringsklass (XC, XD, XS, XF …) och konstruktionens livslängd. Δcdev är en tolerans för utförandet, normalt 10 mm. Mot förberedd mark (t.ex. avjämningsbetong) krävs minst 40 mm och direkt mot jord minst 75 mm. Mer i [distanser och täckskikt](/blogg/distanser-tackskikt-armering)." },
 
       { type: "figure", illustration: "cover-layer", caption: "Täckskiktet mäts från betongytan till närmaste armeringsjärn – ofta bygeln, inte huvudjärnet." },
 
@@ -769,17 +772,17 @@ export const guider1: Post[] = [
         ["Minsta dorndiameter, Ø > 16", "7 × Ø"],
         ["Förankringslängd lb,rqd, C25/30, god vidhäftning", "≈ 40 × Ø för fullt utnyttjat B500B"],
         ["Minsta förankringslängd, drag", "max(0,3 · lb,rqd; 10Ø; 100 mm)"],
-        ["Skarvlängd l₀", "α6 = 1,0–1,5 × förankringslängden"],
+        ["Skarvlängd l₀", "Som förankringslängden × α6, där α6 = 1,0–1,5 beroende på andel skarvade järn i snittet"],
         ["Minsta skarvlängd", "max(0,3 · α6 · lb,rqd; 15Ø; 200 mm)"],
-      ], caption: "Rekommenderade värden i SS-EN 1992-1-1:2005. Ritningen gäller." },
+      ], caption: "Rekommenderade värden i SS-EN 1992-1-1:2005. EKS kan ange andra nationella värden – ritningen gäller." },
       { type: "p", text: "Tabell för alla dimensioner finns i [förankringslängd – tabell](/blogg/forankringslangd-armering)." },
 
       { type: "h2", text: "Byglar och pelare (9.2.2 och 9.5)" },
       { type: "ul", items: [
         "Balkar: största bygelavstånd i längdled 0,75 · d (för lodräta byglar).",
-        "Pelare: längsgående järn minst Ø8 (rekommenderat värde), minst ett järn i varje hörn.",
+        "Pelare: längsgående järn minst Ø8 (rekommenderat värde), i rektangulära pelare minst fyra järn – ett i varje hörn.",
         "Pelarbyglar: diameter minst 6 mm eller Ø/4 av längsjärnen.",
-        "Pelarbyglar: avstånd högst det minsta av 20 × minsta längsjärnets Ø, pelarens minsta mått och 400 mm – tätare nära balkar och skarvar.",
+        "Pelarbyglar: avstånd högst det minsta av 20 × minsta längsjärnets Ø, pelarens minsta mått och 400 mm. Nära balkar, plattor och skarvar multipliceras avståndet med 0,6.",
         "Byglar förankras med krokar eller svetsade tvärjärn.",
       ] },
 
@@ -792,7 +795,7 @@ export const guider1: Post[] = [
     faqs: [
       { q: "Vad är Eurokod 2?", a: "Eurokod 2, SS-EN 1992-1-1, är den europeiska standarden för dimensionering av betongkonstruktioner. I Sverige gäller den tillsammans med Boverkets nationella val i EKS." },
       { q: "Vilket avstånd får det vara mellan armeringsjärn i en platta?", a: "Enligt rekommenderade värden högst 3 × plattjockleken och 400 mm för huvudarmering och 3,5 × tjockleken och 450 mm för fördelningsarmering. Minsta fria avstånd är det största av Ø, stenstorlek + 5 mm och 20 mm." },
-      { q: "Hur stort täckskikt kräver Eurokod 2?", a: "cnom = cmin + Δcdev, där cmin beror på exponeringsklass, livslängd och järnets diameter och Δcdev normalt är 10 mm. Mot jord krävs minst 75 mm. Ritningen anger värdet." },
+      { q: "Hur stort täckskikt kräver Eurokod 2?", a: "cnom = cmin + Δcdev, där cmin beror på exponeringsklass, livslängd och järnets diameter och Δcdev normalt är 10 mm. Mot förberedd mark krävs minst 40 mm, direkt mot jord minst 75 mm. Ritningen anger värdet." },
       { q: "Vad är minimiarmering enligt Eurokod 2?", a: "As,min = 0,26 · fctm / fyk · bt · d, men minst 0,0013 · bt · d. För C25/30 och B500B motsvarar det cirka 0,135 % av bt · d." },
     ],
     target: { href: "/produkter/armeringsjarn", label: "Beställ armeringsjärn B500B" },
@@ -822,7 +825,7 @@ export const guider1: Post[] = [
       { type: "p", text: "Betong krymper när den härdar och torkar, och den rör sig med temperaturen. När rörelsen hindras – av marken, av formen eller av anslutande delar – uppstår dragspänningar. Betongen tål lite drag, så den spricker. Sprickarmering, eller sprickfördelande armering, är armering som läggs för att styra hur betongen spricker." },
       { type: "p", text: "I plattor och golv är svetsat [armeringsnät](/produkter/armeringsnat) den vanligaste sprickarmeringen – jämnt fördelat stål nära ytan." },
 
-      { type: "h2", text: "Tre sorters sprickor" },
+      { type: "h2", text: "Fem sorters sprickor – och var armering hjälper" },
       { type: "table", head: ["Typ", "När", "Orsak", "Hjälper armering?"], rows: [
         ["Plastiska krympsprickor", "Första timmarna", "Ytan torkar ut innan betongen har härdat – sol, vind, värme", "Knappast – förebyggs med härdningsskydd"],
         ["Sättningssprickor", "Första timmarna", "Betongen sätter sig över armeringsjärn eller formkanter", "Nej – rätt täckskikt och vibrering"],
@@ -837,12 +840,12 @@ export const guider1: Post[] = [
       { type: "h2", text: "Tunt och tätt är bättre än grovt och glest" },
       { type: "p", text: "För sprickfördelning är det inte bara mängden stål som räknas. Tunnare järn med litet avstånd ger fler och finare sprickor än grova järn långt isär – även med ungefär samma stålarea. Det är därför nät med 150 mm maska är så vanligt i golv." },
       { type: "table", head: ["Armering", "Stålarea per meter", "Kommentar"], rows: [
-        ["Nät 5150 (Ø5 s150)", "≈ 131 mm²/m", "Lätt sprickarmering, tunna plattor"],
-        ["Nät 6150 (Ø6 s150)", "≈ 189 mm²/m", "Vanligt i garage- och villagolv"],
-        ["Nät 8150 (Ø8 s150)", "≈ 335 mm²/m", "Plattor på mark, kraftigare krav"],
-        ["Ø8 s150 lösa järn", "≈ 335 mm²/m", "Samma area som 8150"],
+        ["Nät 5x150 (Ø5 s150)", "≈ 131 mm²/m", "Lätt sprickarmering, tunna plattor"],
+        ["Nät 6x150 (Ø6 s150)", "≈ 189 mm²/m", "Vanligt i garage- och villagolv"],
+        ["Nät 8x150 (Ø8 s150)", "≈ 335 mm²/m", "Plattor på mark, kraftigare krav"],
+        ["Ø8 s150 lösa järn", "≈ 335 mm²/m", "Samma area som 8x150"],
         ["Ø12 s300 lösa järn", "≈ 377 mm²/m", "Mer stål men sämre sprickfördelning"],
-        ["Nät 10150 (Ø10 s150)", "≈ 524 mm²/m", "Industrigolv, höga krav"],
+        ["Nät 10x150 (Ø10 s150)", "≈ 524 mm²/m", "Industrigolv, höga krav"],
       ], caption: "Stålarea per meter och riktning = trådens area / c/c. Vilken armering som behövs avgör konstruktören." },
 
       { type: "h2", text: "Var ska sprickarmeringen ligga?" },
@@ -870,7 +873,7 @@ export const guider1: Post[] = [
       { q: "Förhindrar armering att betong spricker?", a: "Nej. Armeringen förhindrar inte att betongen krymper och spricker, men den fördelar sprickorna så att de blir många och fina i stället för få och breda." },
       { q: "Varför får en ny betongplatta krympsprickor?", a: "Oftast för att ytan torkar för snabbt de första timmarna (plastisk krympning) eller för att plattan krymper vid uttorkning och hindras att röra sig. Härdningsskydd, fogar och rätt placerad armering minskar problemet." },
       { q: "Var ska sprickarmering ligga i en platta?", a: "Nära den yta där sprickorna ska begränsas, i en platta på mark oftast ovansidan, med det täckskikt ritningen anger. Ett nät som ligger på marken gör ingen nytta mot ytsprickor." },
-      { q: "Vilket nät används som sprickarmering?", a: "Vanligt är nät med 150 mm maska, t.ex. 6150 eller 8150. Tunna järn tätt fördelar sprickorna bättre än grova järn glest. Konstruktören avgör dimensionen." },
+      { q: "Vilket nät används som sprickarmering?", a: "Vanligt är nät med 150 mm maska, t.ex. 6x150 eller 8x150. Tunna järn tätt fördelar sprickorna bättre än grova järn glest. Konstruktören avgör dimensionen." },
     ],
     target: { href: "/produkter/armeringsnat", label: "Beställ armeringsnät" },
     category: "guider",
@@ -998,9 +1001,9 @@ export const guider1: Post[] = [
         ["Brottbeteende", "Flyter och töjs före brott", "Linjärt elastisk till sprött brott"],
         ["Korrosion", "Rostar om täckskiktet är otillräckligt", "Rostar inte"],
         ["Bockning", "Kan bockas kallt", "Kan inte bockas på bygget – bockade former tillverkas i fabrik"],
-        ["Värme och brand", "Behåller hållfasthet länge", "Matrisen mjuknar vid betydligt lägre temperatur"],
+        ["Värme och brand", "Tappar hållfasthet först vid flera hundra grader", "Plastmatrisen mjuknar redan vid cirka 100–150 °C"],
         ["Elektrisk/magnetisk", "Leder ström, magnetisk", "Isolerande, omagnetisk"],
-        ["Regelverk i Sverige", "Eurokod 2", "Ingår inte i Eurokod 2 (2005) – särskild dimensionering"],
+        ["Regelverk i Sverige", "Eurokod 2", "Ingår inte i SS-EN 1992-1-1:2005 – särskild dimensionering"],
       ], caption: "Värden för GFRP varierar mellan fabrikat – använd tillverkarens deklarerade värden." },
 
       { type: "h2", text: "Fördelar med kompositarmering" },
@@ -1017,7 +1020,7 @@ export const guider1: Post[] = [
         "Inget flytområde – ingen varning före brott, vilket kräver högre säkerhetsmarginaler.",
         "Bockade former måste beställas färdiga; byglar och krokar kan inte göras på plats.",
         "Sämre egenskaper vid brand.",
-        "Ingår inte i Eurokod 2 i den version som tillämpas i Sverige – dimensioneras efter särskilda riktlinjer, t.ex. amerikanska ACI 440 eller tillverkarens produktgodkännande.",
+        "Ingår inte i Eurokod 2 i den version som tillämpas i Sverige. Nya EN 1992-1-1:2023 har en informativ bilaga (R) för FRP-armering, men den är ännu inte införd här. Idag dimensioneras GFRP efter t.ex. amerikanska ACI 440 eller tillverkarens produktgodkännande.",
         "Byte ”järn mot järn” utan beräkning är fel – samma diameter ger inte samma funktion.",
       ] },
 
@@ -1042,8 +1045,8 @@ export const guider1: Post[] = [
     ],
     faqs: [
       { q: "Är kompositarmering bättre än stål?", a: "Inte generellt. GFRP rostar inte och är lätt, men är betydligt mjukare än stål, saknar flytområde och kan inte bockas på bygget. Den passar specialfall som saltmiljö och omagnetiska konstruktioner." },
-      { q: "Kan man byta stålarmering mot glasfiberarmering i samma dimension?", a: "Nej, inte utan ny dimensionering. E-modulen är bara cirka en fjärdedel till en tredjedel av stålets, så nedböjning och sprickor blir större med samma area." },
-      { q: "Får glasfiberarmering användas enligt Eurokod 2?", a: "Kompositarmering ingår inte i SS-EN 1992-1-1:2005. Den dimensioneras efter särskilda riktlinjer, t.ex. ACI 440, eller enligt tillverkarens produktgodkännande." },
+      { q: "Kan man byta stålarmering mot glasfiberarmering i samma dimension?", a: "Nej, inte utan ny dimensionering. E-modulen är bara cirka 20–30 % av stålets, så nedböjning och sprickor blir större med samma area." },
+      { q: "Får glasfiberarmering användas enligt Eurokod 2?", a: "Inte i SS-EN 1992-1-1:2005, som gäller i Sverige idag. Den nya versionen EN 1992-1-1:2023 har en informativ bilaga för FRP-armering, men tills den införs dimensioneras GFRP efter t.ex. ACI 440 eller tillverkarens produktgodkännande." },
       { q: "Kan man bocka glasfiberarmering?", a: "Inte på bygget. Bockade former som byglar och vinklar tillverkas i fabrik innan plasten härdar." },
     ],
     target: { href: "/produkter/armeringsnat", label: "Beställ armeringsnät" },

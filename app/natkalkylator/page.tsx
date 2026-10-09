@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { site } from "@/config/site";
-import { Section, Container } from "@/components/ui";
+import { Section, PageHeader, inlineLink } from "@/components/ui";
 import { Breadcrumbs, CtaBanner } from "@/components/sections";
 import { NatKalkylator } from "@/components/SmaKalkylatorer";
 import { FaqAccordion } from "@/components/FaqAccordion";
@@ -38,28 +38,23 @@ const faqs: Faq[] = [
   },
 ];
 
-const link = "text-brand underline underline-offset-2 hover:no-underline";
-const prose = "mt-4 text-lg leading-relaxed text-ink-soft";
+const link = inlineLink;
 
 export default function NatkalkylatorPage() {
   return (
     <>
       <Breadcrumbs items={[{ name: "Hem", href: "/" }, { name: "Armeringskalkylator", href: "/armeringskalkylator" }, { name: "Nätkalkylator" }]} />
 
-      <section className="border-b border-line bg-surface">
-        <Container className="py-12 sm:py-14">
-          <h1 className="max-w-3xl text-4xl font-bold tracking-tight text-ink sm:text-5xl">{name}</h1>
-        </Container>
-      </section>
+      <PageHeader title={name} />
 
       <Section>
         <NatKalkylator />
       </Section>
 
-      <Section muted>
-        <div className="mx-auto max-w-3xl">
-          <h2 className="text-2xl font-bold text-ink">Så räknar nätkalkylatorn</h2>
-          <p className={prose}>
+      <Section muted narrow>
+        <div className="prose-body">
+          <h2>Så räknar nätkalkylatorn</h2>
+          <p>
             Näten läggs i hela ark, 2,35 × 5 m. Första arket täcker hela sitt mått, varje nytt ark arkets mått minus
             överlappet. Kalkylatorn prövar båda riktningarna och väljer den som ger minst antal ark. Vikten räknas på
             trådarna i båda riktningar. Samma beräkning används i{" "}
@@ -67,16 +62,16 @@ export default function NatkalkylatorPage() {
             distanser.
           </p>
 
-          <h2 className="mt-12 text-2xl font-bold text-ink">Överlapp och nättyp</h2>
-          <p className={prose}>
+          <h2>Överlapp och nättyp</h2>
+          <p>
             Överlappet är vanligen minst två rutor, ca 300 mm för 150-nät – läs mer om{" "}
             <Link href="/blogg/skarvlangd-armering" className={link}>skarvlängd och överlapp</Link>. 5150 används ofta
             till uterum och mindre plattor, 6150 till villa- och garageplattor och grövre nät till tyngre laster.
             Konstruktören avgör.
           </p>
 
-          <h2 className="mt-12 text-2xl font-bold text-ink">Beställ nät</h2>
-          <p className={prose}>
+          <h2>Beställ nät</h2>
+          <p>
             Vi levererar <Link href="/produkter/armeringsnat" className={link}>armeringsnät</Link> i standardformat och
             specialnät efter mått, med kantjärn och distanser i samma leverans i hela Sverige. Pris och frakt anges i
             offerten.
@@ -84,12 +79,10 @@ export default function NatkalkylatorPage() {
         </div>
       </Section>
 
-      <Section>
-        <div className="mx-auto max-w-3xl">
-          <h2 className="text-2xl font-bold text-ink">Vanliga frågor</h2>
-          <div className="mt-6">
-            <FaqAccordion items={faqs} />
-          </div>
+      <Section narrow>
+        <h2 className="type-h2 text-ink">Vanliga frågor</h2>
+        <div className="mt-10">
+          <FaqAccordion items={faqs} />
         </div>
       </Section>
 

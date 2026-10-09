@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import Link from "next/link";
 import { posts, getPost, type Block, type Post } from "@/config/blog";
 import { site } from "@/config/site";
-import { Section, Container, Button } from "@/components/ui";
+import { Section, Container, Button, ArrowLink, Card, Panel, DataTable } from "@/components/ui";
 import { Breadcrumbs, CtaBanner } from "@/components/sections";
 import { FaqAccordion } from "@/components/FaqAccordion";
 import { IconClock, IconArrow, IconCheck } from "@/components/icons";
@@ -41,60 +40,49 @@ export async function generateMetadata({
 }
 
 function renderBlock(b: Block, i: number) {
-  if (b.type === "h2") return <h2 key={i} className="mt-8 text-2xl font-bold text-ink">{b.text}</h2>;
-  if (b.type === "h3") return <h3 key={i} className="mt-6 text-xl font-bold text-ink">{b.text}</h3>;
+  if (b.type === "h2") return <h2 key={i}>{b.text}</h2>;
+  if (b.type === "h3") return <h3 key={i}>{b.text}</h3>;
   if (b.type === "ul")
     return (
-      <ul key={i} className="mt-4 space-y-2">
+      <ul key={i} className="grid gap-2">
         {b.items.map((it) => (
-          <li key={it} className="flex items-start gap-2 text-lg text-ink-soft">
-            <IconCheck className="mt-1.5 h-4 w-4 shrink-0 text-brand" /> <span>{renderText(it)}</span>
+          <li key={it} className="flex items-start gap-2">
+            <IconCheck className="mt-1.5 h-4 w-4 shrink-0 text-accent" /> <span>{renderText(it)}</span>
           </li>
         ))}
       </ul>
     );
   if (b.type === "ol")
     return (
-      <ol key={i} className="mt-4 list-decimal space-y-2 pl-5">
+      <ol key={i} className="grid list-decimal gap-2 pl-5 marker:text-muted">
         {b.items.map((it) => (
-          <li key={it} className="pl-1 text-lg text-ink-soft">{renderText(it)}</li>
+          <li key={it} className="pl-1">{renderText(it)}</li>
         ))}
       </ol>
     );
   if (b.type === "table")
     return (
-      <figure key={i} className="mt-6 overflow-x-auto">
-        <table className="w-full border-collapse text-left text-base">
-          <thead>
-            <tr className="border-b border-line">
-              {b.head.map((h) => (
-                <th key={h} className="py-2 pr-4 font-bold text-ink">{h}</th>
-              ))}
-            </tr>
-          </thead>
-          <tbody>
-            {b.rows.map((row, r) => (
-              <tr key={r} className="border-b border-line">
-                {row.map((cell, c) => (
-                  <td key={c} className="py-2 pr-4 text-ink-soft">{cell}</td>
-                ))}
-              </tr>
-            ))}
-          </tbody>
-        </table>
-        {b.caption && <figcaption className="mt-2 text-sm text-muted">{renderText(b.caption)}</figcaption>}
-      </figure>
+      <DataTable
+        key={i}
+        className="!mt-6"
+        head={b.head}
+        rows={b.rows}
+        caption={b.caption ? renderText(b.caption) : undefined}
+      />
     );
   if (b.type === "figure") {
     const Illustration = figures[b.illustration];
     return (
-      <figure key={i} className="mt-8 rounded-xl border border-line bg-surface p-5 sm:p-8">
-        <Illustration className="mx-auto h-auto w-full max-w-lg" />
-        {b.caption && <figcaption className="mt-4 text-center text-sm text-muted">{renderText(b.caption)}</figcaption>}
+      <figure key={i} className="!mt-8">
+        {/* Ritningarna har fasta färger → ligger på ljust "papper" även i mörkt läge. */}
+        <div className="light-scope rounded-panel border border-line bg-paper p-5 sm:p-8">
+          <Illustration className="mx-auto h-auto w-full max-w-lg" />
+        </div>
+        {b.caption && <figcaption className="mt-3 text-center text-sm text-muted">{renderText(b.caption)}</figcaption>}
       </figure>
     );
   }
-  return <p key={i} className="mt-4 text-lg leading-relaxed text-ink-soft">{renderText(b.text)}</p>;
+  return <p key={i}>{renderText(b.text)}</p>;
 }
 
 function formatDate(iso: string) {
@@ -133,64 +121,59 @@ export default async function PostPage({
 
   return (
     <>
-      <Breadcrumbs items={[{ name: "Hem", href: "/" }, { name: "Blogg", href: "/blogg" }, { name: p.title }]} />
+      <Breadcrumbs items={[{ name: "Hem", href: "/" }, { name: "Guider", href: "/blogg" }, { name: p.title }]} />
 
       <article>
         <Container className="max-w-3xl py-12">
-          <div className="flex items-center gap-3 text-sm text-muted">
+          <div className="flex flex-wrap items-center gap-3 text-sm text-muted">
             <time dateTime={p.date}>{formatDate(p.date)}</time>
             <span className="flex items-center gap-1"><IconClock className="h-4 w-4" /> {p.readingMinutes} min läsning</span>
           </div>
-          <h1 className="mt-3 text-4xl font-bold tracking-tight text-ink">{p.title}</h1>
+          <h1 className="type-h1 mt-3 text-ink">{p.title}</h1>
           <p className="mt-4 text-xl leading-relaxed text-ink-soft">{p.excerpt}</p>
           {bild && (
-            <figure className="mt-8 overflow-hidden rounded-2xl border border-line">
+            <figure className="mt-8 overflow-hidden rounded-panel border border-line">
               <Image src={bild} alt={p.title} width={1600} height={900} priority sizes="(min-width: 768px) 768px, 100vw" className="h-auto w-full object-cover" />
             </figure>
           )}
           {p.target && (
-            <Link href={p.target.href} className="mt-6 inline-flex items-center gap-1 font-semibold text-brand hover:underline">
-              {p.target.label} <IconArrow className="h-4 w-4" />
-            </Link>
+            <ArrowLink href={p.target.href} className="mt-6">{p.target.label}</ArrowLink>
           )}
 
-          <div className="mt-8">
+          <div className="prose-body mt-10">
             {p.content.map((b, i) => renderBlock(b, i))}
           </div>
 
           {p.faqs && p.faqs.length > 0 && (
             <div className="mt-12">
-              <h2 className="text-2xl font-bold text-ink">Vanliga frågor</h2>
+              <h2 className="type-h3 text-ink">Vanliga frågor</h2>
               <div className="mt-6">
                 <FaqAccordion items={p.faqs} />
               </div>
             </div>
           )}
 
-          <div className="mt-10 rounded-xl border border-line bg-surface p-6">
-            <h2 className="text-lg font-bold text-ink">Behöver du armering till ditt projekt?</h2>
+          <Panel className="mt-12">
+            <h2 className="type-h4 text-ink">Behöver du armering till ditt projekt?</h2>
             <p className="mt-2 text-ink-soft">Vi tillverkar och levererar prefab armering i hela Sverige. Skicka din bockningslista för offert.</p>
             <div className="mt-4 flex flex-wrap items-center gap-4">
               <Button href="/offert">Begär offert <IconArrow className="h-4 w-4" /></Button>
               {p.target && (
-                <Link href={p.target.href} className="inline-flex items-center gap-1 font-semibold text-brand hover:underline">
-                  {p.target.label} <IconArrow className="h-4 w-4" />
-                </Link>
+                <ArrowLink href={p.target.href}>{p.target.label}</ArrowLink>
               )}
             </div>
-          </div>
+          </Panel>
         </Container>
       </article>
 
       {more.length > 0 && (
         <Section muted>
-          <h2 className="text-2xl font-bold text-ink">Relaterade guider</h2>
-          <div className="mt-6 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <h2 className="type-h2 text-ink">Relaterade guider</h2>
+          <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {more.map((m) => (
-              <Link key={m.slug} href={`/blogg/${m.slug}`} className="rounded-xl border border-line bg-white p-6 transition-colors hover:border-brand">
-                <h3 className="font-bold text-ink">{m.title}</h3>
-                <p className="mt-2 text-sm text-ink-soft">{m.excerpt}</p>
-              </Link>
+              <Card key={m.slug} href={`/blogg/${m.slug}`} title={m.title} cta="Läs guiden">
+                {m.excerpt}
+              </Card>
             ))}
           </div>
         </Section>
@@ -204,7 +187,7 @@ export default async function PostPage({
       <JsonLd
         data={breadcrumbSchema([
           { name: "Hem", url: site.url },
-          { name: "Blogg", url: `${site.url}/blogg` },
+          { name: "Guider", url: `${site.url}/blogg` },
           { name: p.title, url },
         ])}
       />

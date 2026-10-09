@@ -1,9 +1,9 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import Link from "next/link";
-import { NumField, Row, SelectField } from "./ArmeringsKalkylator";
-import { IconArrow } from "./icons";
+import { NumField, Row } from "./ArmeringsKalkylator";
+import { SelectField, fieldClass } from "./form";
+import { ArrowLink, Button } from "./ui";
 import { DIAMETERS, MESHES, calcMesh, fmt, kgPerM, meshKgPerM2 } from "@/lib/rebar-calc";
 
 /**
@@ -17,24 +17,16 @@ function toNumber(v: string): number {
   return Number.isFinite(n) && n > 0 ? n : 0;
 }
 
-const card = "rounded-2xl border border-line bg-white p-6 sm:p-8";
-const resultCard = "rounded-2xl border border-line bg-surface p-6 sm:p-8";
-const inputCls =
-  "h-12 w-full min-w-0 rounded-lg border border-line bg-white px-4 text-ink placeholder:text-muted focus:border-brand focus:outline-none";
+const card = "rounded-panel border border-line bg-card p-6 sm:p-8";
+const resultCard = "rounded-panel border border-line bg-surface p-6 sm:p-8";
+const inputCls = fieldClass;
 
 /** CTA under resultatet: kommersiell sida (huvudknapp) + offert. */
 function ToolCta({ href, label }: { href: string; label: string }) {
   return (
     <div className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-4">
-      <Link
-        href={href}
-        className="inline-flex h-12 items-center justify-center gap-2 rounded-lg bg-brand px-6 text-[15px] font-semibold text-white shadow-sm shadow-brand/20 transition-colors hover:bg-brand-dark"
-      >
-        {label} <IconArrow className="h-4 w-4" />
-      </Link>
-      <Link href="/offert" className="inline-flex items-center gap-1 font-semibold text-brand hover:underline">
-        Begär offert <IconArrow className="h-4 w-4" />
-      </Link>
+      <Button href={href}>{label}</Button>
+      <ArrowLink href="/offert">Begär offert</ArrowLink>
     </div>
   );
 }
@@ -71,21 +63,11 @@ export function ViktKalkylator() {
           <span />
           {lines.map((l) => (
             <div key={l.id} className="contents">
-              <div className="relative min-w-0">
-                <select
-                  aria-label="Diameter"
-                  value={l.d}
-                  onChange={(e) => update(l.id, { d: Number(e.target.value) })}
-                  className="h-12 w-full min-w-0 appearance-none truncate rounded-lg border border-line bg-white pl-4 pr-10 text-ink focus:border-brand focus:outline-none"
-                >
-                  {DIAMETERS.map((d) => (
-                    <option key={d} value={d}>Ø{d}</option>
-                  ))}
-                </select>
-                <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true" className="pointer-events-none absolute right-4 top-1/2 h-4 w-4 -translate-y-1/2 text-muted">
-                  <path d="M5 7.5l5 5 5-5" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              </div>
+              <SelectField label="Diameter" hideLabel value={String(l.d)} onChange={(v) => update(l.id, { d: Number(v) })}>
+                {DIAMETERS.map((d) => (
+                  <option key={d} value={d}>Ø{d}</option>
+                ))}
+              </SelectField>
               <input aria-label="Längd (m)" inputMode="decimal" value={l.len} placeholder="6" onChange={(e) => update(l.id, { len: e.target.value })} className={inputCls} />
               <input aria-label="Antal" inputMode="numeric" value={l.n} placeholder="50" onChange={(e) => update(l.id, { n: e.target.value })} className={inputCls} />
               {lines.length > 1 ? (
@@ -93,7 +75,7 @@ export function ViktKalkylator() {
                   type="button"
                   aria-label="Ta bort rad"
                   onClick={() => remove(l.id)}
-                  className="flex h-12 w-11 items-center justify-center rounded-lg text-muted hover:bg-surface hover:text-ink"
+                  className="flex h-12 w-11 items-center justify-center rounded-control text-muted hover:bg-surface hover:text-ink"
                 >
                   <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true" className="h-4 w-4">
                     <path d="M5 5l10 10M15 5L5 15" strokeLinecap="round" />
@@ -106,7 +88,7 @@ export function ViktKalkylator() {
           ))}
         </div>
         {lines.length < 12 && (
-          <button type="button" onClick={add} className="mt-5 inline-flex items-center gap-1 font-semibold text-brand hover:underline">
+          <button type="button" onClick={add} className="mt-5 inline-flex min-h-11 items-center gap-1 font-semibold text-brand hover:underline">
             + Lägg till dimension
           </button>
         )}

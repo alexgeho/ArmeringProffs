@@ -55,7 +55,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="sv" className={`${inter.variable} h-full`}>
-      <body className="min-h-full flex flex-col bg-white text-ink">
+      <body className="min-h-full flex flex-col bg-page text-ink">
         <JsonLd data={localBusinessSchema()} />
         <JsonLd data={websiteSchema()} />
         <Header />

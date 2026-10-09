@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Script from "next/script";
 import Link from "next/link";
+import { Button } from "./ui";
 
 /**
  * GDPR-samtycke för cookies. Google Analytics OCH Meta Pixel laddas ENBART efter
@@ -72,10 +73,9 @@ fbq('track', 'PageView');`}
       {/* Samtyckesbanner – visas bara innan besökaren gjort ett val */}
       {mounted && consent === null && (
         <div
-          role="dialog"
-          aria-live="polite"
+          role="region"
           aria-label="Samtycke till cookies"
-          className="fixed inset-x-0 bottom-0 z-[60] border-t border-line bg-white/95 backdrop-blur"
+          className="fixed inset-x-0 bottom-0 z-toast border-t border-line bg-page/95 backdrop-blur"
         >
           <div className="mx-auto flex w-full max-w-6xl flex-col gap-4 px-4 py-4 sm:px-6 md:flex-row md:items-center md:justify-between">
             <p className="text-sm leading-relaxed text-ink-soft">
@@ -87,20 +87,8 @@ fbq('track', 'PageView');`}
               .
             </p>
             <div className="flex shrink-0 gap-3">
-              <button
-                type="button"
-                onClick={() => choose("denied")}
-                className="inline-flex h-10 items-center justify-center rounded-lg border border-line px-4 text-sm font-semibold text-ink hover:border-brand hover:text-brand"
-              >
-                Avböj
-              </button>
-              <button
-                type="button"
-                onClick={() => choose("granted")}
-                className="inline-flex h-10 items-center justify-center rounded-lg bg-brand px-4 text-sm font-semibold text-white hover:bg-brand-dark"
-              >
-                Godkänn
-              </button>
+              <Button variant="secondary" size="sm" onClick={() => choose("denied")}>Avböj</Button>
+              <Button size="sm" onClick={() => choose("granted")}>Godkänn</Button>
             </div>
           </div>
         </div>
