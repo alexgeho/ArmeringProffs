@@ -1,5 +1,8 @@
 # next-level-brief — worklog (2026-09-08)
 
+## 🟢 2026-10-09 — GSC Product snippets / Merchant listings
+Письма GSC про Product/Offer без price/image — это старый обход 03.09 `/produkter/klippt-och-bockad` (первая версия с `offers` без цены). Сейчас Product-схемы на сайте нет (проверено curl по всему sitemap: только Service). Validate fix запущен 09.10: Product snippets (price) + Merchant listings (price, image). Код не менялся. ~через неделю проверить, что ошибки ушли.
+
 ## 🟢 SESSION 2026-10-08 — GSC-genomgång + CTR/länkar (`915c243`)
 GSC 28 d (vs föreg. 28 d): 156 klick (2) / 6,73K visn. (206) / CTR 2,3 % / pos 9,8 (28,5). Index 45 / ej 25 (16 Discovered, 6 redirect, 2 Duplicate: produkter/armeringsjarn + klippt-och-bockad crawlade 24.09 före fix, 1 Crawled).
 ### KLART (live, verifierat med curl)
