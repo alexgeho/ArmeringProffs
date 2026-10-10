@@ -277,7 +277,7 @@ export const armeringTill2: Post[] = [
       { type: "p", text: "Lägg gärna näten så att skarvarna inte hamnar i hjulspåren, där belastningen är störst." },
 
       { type: "h2", text: "Få nät, distanser och najtråd i en leverans"  },
-      { type: "p", text: "Skicka uppfartens mått – en enkel skiss räcker – via [offertformuläret](/offert). Vi räknar antal [armeringsnät](/produkter/armeringsnat), distanser och kantjärn och levererar allt tillsammans. Frakten beräknas efter mängd och ort, så även en liten villaleverans går att beställa."  },
+      { type: "p", text: "Skicka uppfartens mått – ett foto av en skiss räcker – via [offertformuläret](/offert). Vi räknar antal [armeringsnät](/produkter/armeringsnat), distanser och kantjärn och levererar allt tillsammans. Frakten beräknas efter mängd och ort, så även en liten villaleverans går att beställa."  },
     ],
     faqs: [
       { q: "Vilket nät ska man ha till en garageuppfart?", a: "För en villauppfart med personbilar är nät Ø6–Ø8 c/c 150 vanligt. Tyngre fordon kräver grövre nät och tjockare platta – konstruktören avgör vid tyngre laster." },

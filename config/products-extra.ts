@@ -54,9 +54,9 @@ export const extraProducts: Product[] = [
     faqs: [
       { q: "Vad ingår i grundarmering till en platta på mark?", a: "Armeringsnät med överlapp, kantbalksbyglar eller kantbalkskorgar, hörnjärn och förstärkningar enligt ritning, distanser och najtråd." },
       { q: "Kan ni räkna fram armeringen utan ritning?", a: "Vi tar fram ett mängdförslag utifrån plattans mått och tjocklek. Dimensioner och utformning ska stämmas av med konstruktören innan beställning." },
-      { q: "Vad behöver ni för att lämna offert?", a: "Konstruktionsritningen, eller plattans yttermått, tjocklek och kantbalkens sektion, samt leveransort och önskat datum." },
+      { q: "Vad behöver ni för att lämna offert?", a: "Konstruktionsritningen, eller plattans yttermått, tjocklek och kantbalkens sektion, samt leveransort och önskat datum. Ett foto av en skiss räcker för att starta." },
       { q: "Levererar ni allt samtidigt?", a: "Ja, nät, kantbalksarmering, distanser och najtråd kommer i samma leverans. Leveranstid och frakt anges i offerten." },
-      { q: "Kan ni också lägga armeringen?", a: "Ja. Ange det i förfrågan så får du pris på både material och montage." },
+      { q: "Kan ni också lägga armeringen?", a: "Ja, vi utför armeringsmontage i hela Sverige. Du får pris på både material och montage i samma offert." },
     ],
   },
   {

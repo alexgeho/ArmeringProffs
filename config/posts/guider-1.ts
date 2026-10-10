@@ -704,7 +704,7 @@ export const guider1: Post[] = [
       { type: "p", text: "Armeringsstål ska vara märkt med tillverkarens valsmärke – ett mönster i kammarna som identifierar verk och land – och levereras med leveransintyg (provningsintyg) som anger standard, klass och charge. Spara intygen; de behövs vid kontroll och egenkontroll. Dimensioner och vikt per meter finns i [armeringsjärn – dimensioner](/blogg/armeringsjarn-dimensioner)." },
 
       { type: "h2", text: "Beställ rätt klass" },
-      { type: "p", text: "Ange stålklassen från ritningen när du begär pris – står inget särskilt gäller normalt B500B. Vi levererar [armeringsjärn](/produkter/armeringsjarn) och [klippt och bockad armering](/produkter/klippt-och-bockad) i B500B med intyg. Skicka ritning eller lista via [offert](/offert) så får du pris och leveransupplägg för hela Sverige." },
+      { type: "p", text: "Ange stålklassen från ritningen när du begär pris – står inget särskilt gäller normalt B500B. Vi levererar [armeringsjärn](/produkter/armeringsjarn) och [klippt och bockad armering](/produkter/klippt-och-bockad) i B500B med materialcertifikat 3.1 enligt SS-EN 10204. Skicka ritning eller lista via [offert](/offert) så får du pris och leveransupplägg för hela Sverige." },
     ],
     faqs: [
       { q: "Vad är skillnaden mellan B500B och K500C-T?", a: "B500B är europeisk beteckning för armeringsstål med sträckgräns 500 MPa i duktilitetsklass B. K500C-T är den svenska beteckningen enligt SS 212540 för kamstång i klass C, som är segare och uppfyller kraven för B500B." },

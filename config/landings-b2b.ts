@@ -26,7 +26,7 @@ export const b2bLandings: Service[] = [
       "Bunten märkt med positionsnummer",
       "Packat i monteringsordning",
       "Ändrad tidplan? Vi flyttar leveransen",
-      "Montage via egen montagetjänst",
+      "Montage i hela Sverige",
     ],
     body: [
       {
@@ -43,7 +43,7 @@ export const b2bLandings: Service[] = [
       },
       {
         heading: "Tillverkning, eller tillverkning plus montage",
-        text: "Har ni egna armerare köper ni bara tillverkningen. Är bemanningen tunn kan vi lägga armeringen via [armeringsmontage](/tjanster/armeringsmontage). Skicka underlaget för nästa projekt, så får ni [offert](/offert) med mängder per etapp och frakt per leverans.",
+        text: "Har ni egna armerare köper ni bara tillverkningen. Är bemanningen tunn lägger vi armeringen åt er – vi utför [armeringsmontage](/tjanster/armeringsmontage) i hela Sverige. Skicka underlaget för nästa projekt, så får ni [offert](/offert) med mängder per etapp och frakt per leverans.",
       },
     ],
     faqs: [
@@ -192,7 +192,7 @@ export const b2bLandings: Service[] = [
       },
       {
         heading: "Leverans till tomten",
-        text: "Ange adress, önskat datum och om lastbilen kan komma nära plattan. Varje hus levereras separat när grundläggningen är redo. Saknar ni egen grundläggare kan armeringen läggas via [armeringsmontage](/tjanster/armeringsmontage).",
+        text: "Ange adress, önskat datum och om lastbilen kan komma nära plattan. Varje hus levereras separat när grundläggningen är redo. Saknar ni egen grundläggare lägger vi armeringen via [armeringsmontage](/tjanster/armeringsmontage).",
       },
       {
         heading: "Skicka nästa grund",
@@ -363,9 +363,9 @@ export const b2bLandings: Service[] = [
     h1: "Armering till offentliga projekt – med dokumentationen klar",
     metaTitle: "Armering i offentlig upphandling – underlag och offert",
     metaDescription:
-      "Armering till skolor, vårdbyggnader, broar och VA: prefab i B500B efter förfrågningsunderlaget, och svar på dokumentationskraven. Få pris till anbudet.",
+      "Armering till skolor, vårdbyggnader, broar och VA: prefab i B500B efter förfrågningsunderlaget, med 3.1-certifikat och EPD. Få pris till anbudet.",
     intro:
-      "Lämnar ni anbud på ett offentligt projekt? Vi räknar armeringen ur förfrågningsunderlaget, så att ni har ett pris att lägga in, och svarar på de dokumentationskrav som ställs.",
+      "Lämnar ni anbud på ett offentligt projekt? Vi räknar armeringen ur förfrågningsunderlaget, så att ni har ett pris att lägga in. Materialcertifikat 3.1 och EPD levereras med armeringen.",
     keywords: [
       "armering offentlig upphandling",
       "armering offentliga projekt",
@@ -378,7 +378,7 @@ export const b2bLandings: Service[] = [
     includes: [
       "Pris ur förfrågningsunderlaget",
       "Kamstål B500B enligt SS 212540",
-      "Dokumentation på förfrågan",
+      "Certifikat 3.1 och EPD med leveransen",
       "Märkning för spårbarhet per position",
       "Leveransplan per etapp",
       "Leverans i hela Sverige",
@@ -389,8 +389,8 @@ export const b2bLandings: Service[] = [
         text: "Skicka förfrågningsunderlagets konstruktionsritningar och anbudstiden. Vi räknar mängder per dimension och bearbetning och lämnar ett pris ni kan lägga in i anbudet. Typiska poster är [klippt och bockad armering](/produkter/klippt-och-bockad), [armeringsnät](/produkter/armeringsnat), [pelar- och balkkorgar](/produkter/pelar-och-balkkorgar) och [pålarmering](/produkter/palarmering).",
       },
       {
-        heading: "Dokumentation som ofta efterfrågas",
-        text: "Materialcertifikat i form av inspektionsintyg 3.1 enligt SS-EN 10204, som visar stålets provade egenskaper per charge. Intyg om att stålet uppfyller SS 212540 (B500B). Miljövarudeklaration (EPD) till klimatdeklarationen och bedömning i system som Byggvarubedömningen. Ange kraven i förfrågan så svarar vi på vad som kan lämnas.",
+        heading: "Certifikat och EPD följer med leveransen",
+        text: "Med leveransen får ni materialcertifikat 3.1 enligt SS-EN 10204, som visar stålets provade egenskaper per charge och att stålet uppfyller SS 212540 (B500B). Miljövarudeklaration (EPD) kan också levereras, till klimatdeklarationen och bedömning i system som Byggvarubedömningen.",
       },
       {
         heading: "CE-märkning gäller inte armeringsstål",
@@ -402,7 +402,7 @@ export const b2bLandings: Service[] = [
       },
     ],
     faqs: [
-      { q: "Vilka certifikat kan ni visa?", a: "Skicka kraven i förfrågningsunderlaget, så återkommer vi med den dokumentation som kan lämnas för ert projekt." },
+      { q: "Vilka certifikat levererar ni?", a: "Materialcertifikat 3.1 enligt SS-EN 10204 och EPD kan levereras med leveransen. CE-märkning gäller normalt inte armeringsstål." },
       { q: "Är armeringsstål CE-märkt?", a: "Normalt inte. SS-EN 10080 är inte harmoniserad, så CE-märkning och prestandadeklaration gäller i regel inte armeringsstål. I Sverige hänvisas i stället till SS 212540 och materialcertifikat." },
       { q: "Vad är ett inspektionsintyg 3.1?", a: "Ett materialcertifikat enligt SS-EN 10204 där tillverkaren intygar provade egenskaper för den levererade chargen, kontrollerat av en från produktionen oberoende representant." },
       { q: "Kan ni lämna pris innan vi vunnit upphandlingen?", a: "Ja. Vi räknar på förfrågningsunderlaget så att ni har ett armeringspris till anbudet." },

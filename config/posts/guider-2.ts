@@ -406,8 +406,8 @@ export const guider2: Post[] = [
         "Uppgifter om transportsätt till bygget, om modul A4 ska redovisas.",
       ] },
 
-      { type: "h2", text: "Fråga oss om miljödata" },
-      { type: "p", text: "Vill du ha uppgifter om stålets ursprung och miljödata till en klimatdeklaration – ange det i förfrågan så redovisar vi vad som finns för just din leverans. Läs mer om oss som [armeringsleverantör](/armeringsleverantor) eller skicka underlag via [offertformuläret](/offert)." },
+      { type: "h2", text: "EPD med leveransen" },
+      { type: "p", text: "Ska projektet klimatdeklareras levererar vi EPD för stålet tillsammans med materialcertifikat 3.1 enligt SS-EN 10204. Läs mer om oss som [armeringsleverantör](/armeringsleverantor) eller skicka underlag via [offertformuläret](/offert)." },
     ],
     faqs: [
       { q: "Vad är en EPD för armering?", a: "En tredjepartsgranskad miljövarudeklaration enligt SS-EN 15804 som redovisar armeringsstålets miljöpåverkan, oftast per ton. GWP för A1–A3 visar klimatpåverkan fram till fabriksgrind." },
@@ -486,15 +486,15 @@ export const guider2: Post[] = [
       { type: "h2", text: "Kontroll vid leverans" },
       { type: "p", text: "När armeringen kommer till bygget, jämför etiketterna med följesedeln och beställningen. Kontrollera att dimension och stålsort stämmer med ritningen och spara intygen tillsammans med kontrollplanen. Saknas intyg – begär dem innan armeringen gjuts in. I efterhand är det svårt att visa vilken armering som faktiskt ligger i konstruktionen. För offentliga upphandlingar och större projekt brukar kraven på intyg och spårbarhet stå i AMA Anläggning eller AMA Hus och i den tekniska beskrivningen." },
 
-      { type: "h2", text: "Ställ frågan i offerten" },
-      { type: "p", text: "Ange vilka intyg du behöver redan i förfrågan, så framgår det av offerten vad som levereras med armeringen. Läs mer om vad du kan förvänta dig av en [armeringsleverantör](/armeringsleverantor) eller skicka underlaget via [offertformuläret](/offert)." },
+      { type: "h2", text: "Certifikat 3.1 och EPD med leveransen" },
+      { type: "p", text: "Vi levererar materialcertifikat 3.1 enligt SS-EN 10204 med armeringen, och EPD när projektet ska klimatdeklareras. Läs mer om vad du kan förvänta dig av en [armeringsleverantör](/armeringsleverantor) eller skicka underlaget via [offertformuläret](/offert)." },
     ],
     faqs: [
       { q: "Är armering CE-märkt?", a: "Armeringsstål CE-märks i regel inte i dag, eftersom den europeiska standarden SS-EN 10080 inte är harmoniserad (den drogs tillbaka som harmoniserad standard 2006). Kvaliteten visas i stället med certifiering mot nationell produktstandard och intyg, i Sverige SS 212540 för B500B." },
       { q: "Vad är ett 3.1-intyg för armering?", a: "Ett inspektionsintyg enligt SS-EN 10204 som redovisar provade värden för leveransen eller smältan, till exempel sträckgräns, brottgräns, töjning och kemisk sammansättning." },
       { q: "Vilken standard gäller för svetsad armering?", a: "SS-EN ISO 17660-1 för bärande svetsförband och SS-EN ISO 17660-2 för icke-bärande, till exempel fixeringssvetsning i korgar." },
       { q: "Hur spårar man armering på bygget?", a: "Via etiketter på buntarna, som kopplar till order, position och smälta, och via valsmärkningen i stålets ribbmönster som visar tillverkningsland och stålverk." },
-      { q: "Vilka intyg ska följa med armeringen?", a: "Vanligen uppgift om stålsort, inspektionsintyg 3.1 för leveransen och, för svetsad armering, uppgift om svetsning enligt SS-EN ISO 17660. Ange i förfrågan vilka intyg du behöver." },
+      { q: "Vilka intyg ska följa med armeringen?", a: "Vanligen uppgift om stålsort, inspektionsintyg 3.1 för leveransen och, för svetsad armering, uppgift om svetsning enligt SS-EN ISO 17660. Hos oss kan certifikat 3.1 och EPD levereras med leveransen." },
     ],
     target: { href: "/armeringsleverantor", label: "Välj armeringsleverantör" },
     category: "guider",
@@ -1363,7 +1363,7 @@ export const guider2: Post[] = [
       { type: "p", text: "Vissa fel märks direkt, till exempel en kantbalk som spricker vid gjutning. Andra syns först efter flera år. För litet täckskikt i en utomhustrappa eller garageplatta kan ge rostfläckar och spjälkning efter några år, särskilt där tösalt förekommer. Saknade hörnjärn ger sprickor som växer när plattan rör sig med temperaturen. Följ därför ritningen även där en detalj verkar onödig." },
 
       { type: "h2", text: "Låt proffs montera" },
-      { type: "p", text: "Vill du slippa riskerna kan vi leverera armeringen och ordna [armeringsmontage](/tjanster/armeringsmontage) efter ritningen. Skicka ritning och ort via [offertformuläret](/offert) så återkommer vi med offert." },
+      { type: "p", text: "Vill du slippa riskerna levererar vi armeringen och utför [armeringsmontage](/tjanster/armeringsmontage) efter ritningen, i hela Sverige. Skicka ritning och ort via [offertformuläret](/offert) så återkommer vi med offert." },
     ],
     faqs: [
       { q: "Vilket är det vanligaste felet vid armering?", a: "För litet täckskikt – armering som ligger direkt på underlaget eller för nära ytan eftersom distanser saknas eller är för få. Det leder till rost och spjälkning." },

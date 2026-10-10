@@ -29,11 +29,11 @@ const baseServices: Service[] = [
     slug: "armeringsmontage",
     name: "Armeringsmontage",
     h1: "Armeringsmontage – vi lägger armeringen på plats",
-    metaTitle: "Armeringsmontage – vi lägger och najar armeringen",
+    metaTitle: "Armeringsmontage i hela Sverige – vi lägger armeringen",
     metaDescription:
-      "Armeringsmontage efter ritning: vi lägger och najar armeringen vi själva tillverkat – tillverkning, leverans och montage från en leverantör. Begär offert.",
+      "Armeringsmontage i hela Sverige: vi lägger och najar armeringen vi själva tillverkat – tillverkning, leverans och montage från en leverantör. Begär offert.",
     intro:
-      "Vi lägger, najar och fixerar armeringen på plats efter konstruktionsritningen. Eftersom vi också tillverkar och levererar den får du hela kedjan från en leverantör – rätt detaljer, rätt täckskikt och en tidplan utan att du behöver samordna flera aktörer.",
+      "Vi lägger, najar och fixerar armeringen på plats efter konstruktionsritningen – i hela Sverige. Eftersom vi också tillverkar och levererar den får du hela kedjan från en leverantör – rätt detaljer, rätt täckskikt och en tidplan utan att du behöver samordna flera aktörer.",
     keywords: [
       "armeringsmontage",
       "lägga armering",
@@ -42,6 +42,7 @@ const baseServices: Service[] = [
       "armeringsarbete",
       "armera platta på mark",
       "binda armering",
+      "armeringsmontage sverige",
     ],
     includes: [
       "Läggning och najning på plats",
@@ -49,7 +50,7 @@ const baseServices: Service[] = [
       "Distanser för rätt täckskikt",
       "Efter ritning och bockningslista",
       "Tillverkning, leverans och montage i en offert",
-      "Hela eller delar av jobbet",
+      "Montage i hela Sverige",
     ],
     body: [
       {
@@ -72,6 +73,7 @@ const baseServices: Service[] = [
     faqs: [
       { q: "Lägger ni armeringen på plats?", a: "Ja. Vi lägger, najar och fixerar armeringen efter konstruktionsritningen, i kombination med vår tillverkning och leverans." },
       { q: "Kan ni ta bara en del av jobbet?", a: "Ja, till exempel kantbalkar, korgar eller toppnät. Beskriv vad som ska monteras så får du ett upplägg i offerten." },
+      { q: "Monterar ni i hela Sverige?", a: "Ja. Vi utför armeringsmontage i hela Sverige, från Skåne till Norrland." },
       { q: "Vilka konstruktioner monterar ni?", a: "Platta på mark och betongplattor, husgrunder, kantbalkar, pelare, plintar, stödmurar och anläggning." },
       { q: "Vad kostar armeringsmontage?", a: "Priset beror på mängd, konstruktion, tidplan och ort. Skicka ritning eller bockningslista så får du en offert på tillverkning, leverans och montage." },
     ],

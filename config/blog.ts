@@ -149,7 +149,7 @@ const basePosts: Post[] = [
     ],
     content: [
       { type: "p", text: "Ett armeringsnät anges med tråddiameter och rutstorlek. 6150 betyder Ø6 mm tråd med 150 mm mellan trådarna (skrivs även 6x150 eller Ø6 c/c 150). Till uterum och mindre plattor räcker ofta 5150, till garage och villagrund är 6150 vanligast och tyngre golv kräver 8150 eller grövre." },
-      { type: "p", text: "Vi levererar [armeringsnät](/produkter/armeringsnat) i standardformat och tillverkar nät efter mått när arken inte går jämnt ut i plattan." },
+      { type: "p", text: "Vi levererar [armeringsnät](/produkter/armeringsnat) i standardformat och kapar nät till valfria mått när arken inte går jämnt ut i plattan." },
 
       { type: "h2", text: "Storlekar, vikt och användning" },
       { type: "table",
@@ -166,7 +166,7 @@ const basePosts: Post[] = [
       { type: "p", text: "Fördjupning per nät: [5150](/blogg/armeringsnat-5150), [6150](/blogg/armeringsnat-6150), [7150](/blogg/armeringsnat-7150), [8150](/blogg/armeringsnat-8150) och [10150](/blogg/armeringsnat-10150). Vikten är bra att ha när du jämför offerter som anges per kilo med offerter per ark eller m². Arean (mm² stål per meter) är det konstruktören räknar med – två nät med samma area är likvärdiga oavsett tråd och ruta." },
 
       { type: "h2", text: "Arkformat" },
-      { type: "p", text: "Standardnät säljs i ark, ofta cirka 2,35 × 5 m. Formatet varierar mellan leverantörer, så kontrollera måtten innan du räknar antal ark. Går arken dåligt ut i plattans mått blir spillet stort – då kan nät kapade efter mått eller [specialnät](/produkter/svetsad-armering) med annan tråd eller rutstorlek löna sig." },
+      { type: "p", text: "Standardnät säljs i ark, ofta cirka 2,35 × 5 m. Formatet varierar mellan leverantörer, så kontrollera måtten innan du räknar antal ark. Går arken dåligt ut i plattans mått blir spillet stort – då beställer du nät kapade efter mått eller [specialnät](/produkter/svetsad-armering) med annan tråd eller rutstorlek löna sig." },
 
       { type: "h2", text: "Så väljer du nät" },
       { type: "ul", items: [
@@ -188,7 +188,7 @@ const basePosts: Post[] = [
     faqs: [
       { q: "Vad betyder 5x150 eller 5150 på ett armeringsnät?", a: "Ø5 mm tråd med 150 mm mellan trådarna i båda riktningar. Första siffran är tråddiametern, de tre sista rutstorleken i mm." },
       { q: "Vilket armeringsnät ska jag ha till en garageplatta?", a: "Vanligen 6150, med kamstål i kantbalken och vid portöppningen. Tunga fordon kan kräva grövre nät eller två lager – ritningen avgör." },
-      { q: "Vilka mått har ett armeringsnät?", a: "Ett vanligt ark är cirka 2,35 × 5 m, men formatet varierar mellan leverantörer. Nät kan också tillverkas efter mått." },
+      { q: "Vilka mått har ett armeringsnät?", a: "Ett vanligt ark är cirka 2,35 × 5 m, men formatet varierar mellan leverantörer. Vi kapar också nät till valfria mått." },
       { q: "Vad väger ett armeringsnät?", a: "5150 väger cirka 2,05 kg/m² och 6150 cirka 2,96 kg/m². Ett ark 6150 på 2,35 × 5 m väger alltså runt 35 kg." },
     ],
   },
@@ -650,7 +650,7 @@ const basePosts: Post[] = [
       "offert armering",
     ],
     content: [
-      { type: "p", text: "Att beställa armering går till i fyra steg: du skickar underlag, får en offert med pris, frakt och leveranstid, godkänner, och armeringen tillverkas och levereras till bygget. Bästa underlaget är en bockningslista eller konstruktionsritning, men för enklare plattor räcker mått." },
+      { type: "p", text: "Att beställa armering går till i fyra steg: du skickar underlag, får en offert med pris, frakt och leveranstid, godkänner, och armeringen tillverkas och levereras till bygget. Bästa underlaget är en bockningslista eller konstruktionsritning, men ett foto av en skiss räcker för att starta." },
       { type: "p", text: "Har du underlaget redo kan du [begära offert](/offert) direkt och bifoga filerna." },
 
       { type: "h2", text: "1. Skicka underlaget" },
@@ -661,7 +661,7 @@ const basePosts: Post[] = [
           ["Bockningslista", "Offert direkt, position för position"],
           ["Konstruktionsritning (PDF, DWG, DXF)", "Vi tar fram bockningslistan och du godkänner den"],
           ["Mått och typ av konstruktion", "Förslag på nät och kantjärn till enklare plattor"],
-          ["Foto av en handskiss", "Räcker för att börja – vi ställer följdfrågor"],
+          ["Foto av en skiss", "Räcker för att starta förfrågan – vi ställer följdfrågor"],
         ],
       },
       { type: "p", text: "Ange också leveransort, när armeringen behövs och om leveransen ska delas upp per gjutetapp. Vill du ha en uppfattning om mängden först finns [armeringskalkylatorn](/armeringskalkylator)." },
@@ -672,7 +672,7 @@ const basePosts: Post[] = [
         "Bockning, märkning och eventuella korgar är med.",
         "Distanser och najtråd ingår om du behöver dem.",
         "Frakt till din ort och leveranstid står med.",
-        "Montage, om du vill att någon lägger armeringen.",
+        "Montage, om du vill att vi lägger armeringen – vi monterar i hela Sverige.",
       ] },
       { type: "p", text: "Jämför offerter på samma underlag. Ett lågt kilopris på raka järn säger lite om totalkostnaden om du sedan ska kapa och bocka själv – mer i [vad kostar armering](/blogg/vad-kostar-armering)." },
 
@@ -688,7 +688,7 @@ const basePosts: Post[] = [
     ],
     faqs: [
       { q: "Kan jag köpa armering direkt utan offert?", a: "Vi arbetar med offert eftersom pris och leveranstid beror på mängd, bearbetning och ort. Skicka mängd, ritning eller bockningslista så får du ett fast pris för just ditt projekt." },
-      { q: "Kan jag beställa armering utan bockningslista?", a: "Ja. Skicka ritningen så tar vi fram listan, eller mått och typ av konstruktion för en enklare platta." },
+      { q: "Kan jag beställa armering utan bockningslista?", a: "Ja. Skicka ritningen så tar vi fram listan – ett foto av en skiss räcker för att starta." },
       { q: "Kan jag beställa en liten mängd?", a: "Ja. Frakten räknas efter mängd och ort, så offerten visar vad även en mindre beställning kostar levererad." },
       { q: "Levererar ni armering i hela Sverige?", a: "Ja, även till Norrland. Frakt och leveranstid anges i offerten utifrån ort och mängd." },
     ],

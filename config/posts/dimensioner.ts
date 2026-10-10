@@ -843,7 +843,7 @@ const nat: Post[] = [
 
       { type: "h2", text: "Fingerskarvnät och specialnät" },
       { type: "p", text: "Fingerskarvnät har trådar som sticker ut i kanterna så att två ark kan skarvas utan dubbla lager tråd. Det sparar stål och gör plattan jämnare i tjocklek. Specialnät tillverkas med andra yttermått när lagerformatet ger för mycket spill." },
-      { type: "p", text: "Lagerformatet är ofta omkring 2 × 5 m, men utbudet varierar mellan leverantörer. Ange plattans mått när du begär offert, så räknar vi fram det format som ger minst spill." },
+      { type: "p", text: "Lagerformatet är ofta omkring 2 × 5 m, men utbudet varierar mellan leverantörer. Vi kapar näten till valfria mått – ange plattans mått när du begär offert, så räknar vi fram indelningen som ger minst spill." },
 
       { type: "h2", text: "Distanser och täckskikt" },
       { type: "p", text: "Nätet ska ligga på distanser med rätt höjd. I en platta på mark mot cellplast är 25–35 mm täckskikt vanligt, mot makadam minst 40 mm och direkt mot jord minst 75 mm (Eurokod 2). Med 6150 räcker oftast distanser med 0,8–1 m avstånd, men tätare där man går mycket under gjutningen. Kontrollera höjden innan betongen kommer – efteråt går det inte att rätta till." },

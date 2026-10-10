@@ -9,7 +9,7 @@ export const faq: Faq[] = [
   },
   {
     q: "Kan ni tillverka efter min bockningslista eller ritning?",
-    a: "Ja. Skicka din bockningslista eller konstruktionsritning (PDF, DWG, Excel eller foto) så tar vi fram en offert och tillverkar armeringen efter den. Har du ingen färdig bockningslista hjälper vi dig att ta fram en utifrån ritningen.",
+    a: "Ja. Skicka din bockningslista eller konstruktionsritning (PDF, DWG eller Excel) så tar vi fram en offert och tillverkar armeringen efter den. Ett foto av en skiss räcker för att komma igång. Har du ingen färdig bockningslista hjälper vi dig att ta fram en utifrån ritningen.",
   },
   {
     q: "Levererar ni i hela Sverige?",
@@ -21,7 +21,7 @@ export const faq: Faq[] = [
   },
   {
     q: "Ingår montage och armeringsläggning?",
-    a: "Vi erbjuder hela cykeln: tillverkning, leverans och montage. Vill du att vi även lägger armeringen på plats ordnar vi det – ange det i offertförfrågan så tar vi med montaget i offerten.",
+    a: "Ja, om du vill. Vi erbjuder hela cykeln – tillverkning, leverans och armeringsmontage i hela Sverige. Montaget står som en egen post i offerten.",
   },
   {
     q: "Vilken kvalitet och vilka dimensioner tillverkar ni?",
@@ -33,7 +33,7 @@ export const faq: Faq[] = [
   },
   {
     q: "Vilka underlag behöver ni för att räkna på mitt projekt?",
-    a: "Helst en bockningslista eller konstruktionsritning (PDF, DWG/DXF, Excel eller foto). Har du bara mått eller en skiss går det också bra – då hjälper vi dig att ta fram en bockningslista. Ju mer underlag, desto snabbare och mer exakt offert.",
+    a: "Ett foto av en skiss räcker för att starta. Har du bockningslista eller konstruktionsritning (PDF, DWG/DXF, Excel) går det ännu snabbare. Saknas bockningslista tar vi fram den åt dig.",
   },
   {
     q: "Hur märks och levereras armeringen?",
@@ -49,7 +49,7 @@ export const faq: Faq[] = [
   },
   {
     q: "Följer armeringen svenska normer och standarder?",
-    a: "Ja. Vi tillverkar i kamstål B500B och svetsade nät enligt gällande svenska normer och Eurokod, efter din konstruktionsritning. Behöver du intyg eller dokumentation till projektet ordnar vi det.",
+    a: "Ja. Vi tillverkar i kamstål B500B och svetsade nät enligt gällande svenska normer och Eurokod, efter din konstruktionsritning. Materialcertifikat 3.1 enligt SS-EN 10204 och EPD kan levereras med leveransen.",
   },
   {
     q: "Levererar ni även till mindre projekt och privatpersoner?",

@@ -153,7 +153,7 @@ const baseProducts: Product[] = [
     metaDescription:
       "Armeringsnät 5150, 6150, 7150 och 8150 till platta, garage och grund. Vi räknar antal nät med överlapp och levererar i hela Sverige. Begär offert.",
     intro:
-      "Köp armeringsnät till platta, golv och grund – lagernät 5150–8150 eller nät efter mått. Skicka ytan eller ritningen så räknar vi antal nät med överlapp, lägger till distanser och kantjärn och levererar allt samtidigt i hela Sverige.",
+      "Köp armeringsnät till platta, golv och grund – lagernät 5150–8150 eller nät kapade till valfria mått. Skicka ytan eller ritningen så räknar vi antal nät med överlapp, lägger till distanser och kantjärn och levererar allt samtidigt i hela Sverige.",
     keywords: [
       "armeringsnät",
       "armeringsnat",
@@ -163,12 +163,14 @@ const baseProducts: Product[] = [
       "köpa armeringsnät",
       "armeringsnät leverans",
       "fingerskarvnät",
+      "armeringsnät efter mått",
+      "kapat armeringsnät",
       "armeringsmatta",
     ],
     includes: [
       "Lagernät 5150, 6150, 7150 och 8150",
       "Fingerskarvnät för kortare överlapp",
-      "Nät efter mått och ritning",
+      "Nät kapade till valfria mått",
       "Antal nät räknat med överlapp",
       "Distanser och kantjärn i samma leverans",
       "Frakt efter mängd och ort",
@@ -188,7 +190,7 @@ const baseProducts: Product[] = [
       },
       {
         heading: "När lagernät inte passar",
-        text: "Avvikande mått, maskvidd eller tråd? Då tillverkas [specialnät efter mått](/produkter/svetsad-armering). [Kantjärn och byglar](/produkter/klippt-och-bockad) och [distanser](/produkter/distanser) skickas i samma leverans som näten.",
+        text: "Vi kapar näten till valfria mått, så att de går jämnt ut i plattan och du slipper kapa på bygget. Avvikande maskvidd eller tråd? Då tillverkas [specialnät efter mått](/produkter/svetsad-armering). [Kantjärn och byglar](/produkter/klippt-och-bockad) och [distanser](/produkter/distanser) skickas i samma leverans som näten.",
       },
       {
         heading: "Pris och leverans",
@@ -199,6 +201,7 @@ const baseProducts: Product[] = [
       { q: "Vilket armeringsnät till garageplatta?", a: "Ofta 6150, kompletterat med kantjärn och kantbalksbyglar. Tyngre last kan kräva grövre nät eller två lager. Konstruktionsritningen gäller." },
       { q: "Hur mycket ska armeringsnät överlappa?", a: "Minst två rutor, för 150-nät ca 300 mm, och skarven najas. Fingerskarvnät ger kortare överlapp." },
       { q: "Kan ni räkna ut hur många nät jag behöver?", a: "Ja. Skicka plattans mått eller ritningen så räknar vi antal nät med överlapp samt kantjärn och distanser, i en samlad offert." },
+      { q: "Kan ni kapa armeringsnät efter mått?", a: "Ja. Vi kapar nät till valfria mått efter plattan eller ritningen, så att du får färdiga ark utan kapning på bygget." },
       { q: "Kan jag beställa bara några nät?", a: "Ja. Frakten räknas efter mängd och ort, så även en mindre beställning går att leverera." },
       { q: "Levererar ni armeringsnät i hela Sverige?", a: "Ja, även till Norrland. Frakt och leveranstid anges i offerten." },
     ],

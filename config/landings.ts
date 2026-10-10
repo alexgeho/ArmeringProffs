@@ -32,7 +32,7 @@ const baseLandings: Landing[] = [
       "Märkning per position och element",
       "Leveransplan efter er tidplan",
       "Klippt och bockat, korgar och nät",
-      "Montage vid behov",
+      "Montage i hela Sverige",
       "Leverans i hela Sverige inkl. Norrland",
     ],
     body: [
@@ -50,7 +50,7 @@ const baseLandings: Landing[] = [
       },
       {
         heading: "Märkning som sparar tid på plats",
-        text: "Varje bunt och korg märks med positionsnummer, dimension och form – samma nummer som på ritningen. Montörerna hittar rätt detalj direkt och kontrollen före gjutning går snabbare. Behöver ni folk på plats erbjuder vi även [armeringsmontage](/tjanster/armeringsmontage). Leveransen sorteras per element eller etapp, så att det som ska läggas först ligger överst.",
+        text: "Varje bunt och korg märks med positionsnummer, dimension och form – samma nummer som på ritningen. Montörerna hittar rätt detalj direkt och kontrollen före gjutning går snabbare. Behöver ni folk på plats utför vi [armeringsmontage](/tjanster/armeringsmontage) i hela Sverige. Leveransen sorteras per element eller etapp, så att det som ska läggas först ligger överst.",
       },
       {
         heading: "Hela Sverige – även norrut",
@@ -62,6 +62,7 @@ const baseLandings: Landing[] = [
       { q: "Kan leveranserna följa vår tidplan?", a: "Ja, leveranser kan planeras per etapp, bjälklag eller element enligt överenskommelse. Upplägget anges i offerten." },
       { q: "Kan ni ta fram spec från våra ritningar?", a: "Ja. Skicka ritningarna som PDF, DWG eller IFC så tar vi fram armeringsspecifikationen, som ni granskar innan tillverkning." },
       { q: "Hur räknas frakten?", a: "Efter mängd och leveransort, utan fast fraktavgift. Frakten anges i offerten." },
+      { q: "Får vi materialcertifikat?", a: "Ja. Materialcertifikat 3.1 enligt SS-EN 10204 och EPD kan levereras med leveransen." },
     ],
   },
   {
@@ -116,7 +117,7 @@ const baseLandings: Landing[] = [
       { q: "Vad är prefab armering?", a: "Armering som tillverkas färdig i verkstad – kapad, bockad, sammanfogad till korgar eller svetsad till nät – och levereras märkt så att den bara ska läggas på bygget." },
       { q: "Är prefab armering dyrare än att bocka själv?", a: "Stålet kostar detsamma, men för prefab tillkommer bearbetningen. I gengäld sparar du arbetstid, verktyg och spill på bygget. Vad som lönar sig beror på projektet." },
       { q: "Kan jag beställa prefab armering som privatperson?", a: "Ja, vi levererar till både privatpersoner och företag i hela Sverige." },
-      { q: "Vad behöver ni för att lämna offert?", a: "Bockningslista, armeringsspecifikation eller konstruktionsritning. Har du bara mått på en platta hjälper vi dig att ta fram mängderna." },
+      { q: "Vad behöver ni för att lämna offert?", a: "Bockningslista, armeringsspecifikation eller konstruktionsritning. Har du bara mått eller ett foto av en skiss räcker det för att starta – vi tar fram mängderna." },
     ],
   },
   {
@@ -170,7 +171,7 @@ const baseLandings: Landing[] = [
       { q: "Hur räknas priset på armering?", a: "Efter mängd i kilo, dimensioner och bearbetning (kapning, bockning, korgar), plus frakt efter mängd och ort. Allt specificeras i offerten." },
       { q: "Är bockad armering dyrare än raka järn?", a: "Per kilo ja, eftersom bearbetning tillkommer. Totalt kan det ändå bli billigare tack vare mindre arbetstid och spill på bygget." },
       { q: "Har ni en fast fraktavgift?", a: "Nej. Frakten räknas efter mängd och leveransort och anges i offerten." },
-      { q: "Vad behöver jag skicka för att få pris?", a: "Bockningslista, armeringsspecifikation eller konstruktionsritning. För en platta räcker ofta mått, tjocklek och ritning på kantbalken." },
+      { q: "Vad behöver jag skicka för att få pris?", a: "Bockningslista, armeringsspecifikation eller konstruktionsritning – men ett foto av en skiss räcker för att starta förfrågan." },
     ],
   },
   {
