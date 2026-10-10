@@ -7,6 +7,7 @@ import { usePathname } from "next/navigation";
 import { site } from "@/config/site";
 import { IconPhone } from "./icons";
 import { buttonClass } from "./ui";
+import { ThemeToggle } from "./ThemeToggle";
 
 const nav = [
   { href: "/", label: "Hem" },
@@ -48,6 +49,7 @@ export function Header() {
         </nav>
 
         <div className="hidden shrink-0 items-center gap-3 lg:flex">
+          <ThemeToggle />
           <a href={site.phoneHref} aria-label={`Ring ${site.phone}`} className="flex min-h-11 min-w-11 items-center justify-center gap-2 whitespace-nowrap text-sm font-semibold text-ink hover:text-brand">
             <IconPhone className="h-4 w-4 text-accent" />
             <span className="hidden xl:inline">{site.phone}</span>
@@ -57,6 +59,8 @@ export function Header() {
           </Link>
         </div>
 
+        <div className="flex items-center gap-2 lg:hidden">
+        <ThemeToggle />
         <button
           type="button"
           aria-label={open ? "Stäng meny" : "Öppna meny"}
@@ -71,6 +75,7 @@ export function Header() {
             <span className={`block h-0.5 w-5 bg-ink transition ${open ? "-translate-y-2 -rotate-45" : ""}`} />
           </div>
         </button>
+        </div>
       </div>
 
       {open && (

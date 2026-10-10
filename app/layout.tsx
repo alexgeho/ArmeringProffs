@@ -8,6 +8,7 @@ import { CookieConsent } from "@/components/CookieConsent";
 import { VisitSourceRecorder } from "@/components/VisitSource";
 import { PhoneClickTracker } from "@/components/PhoneClickTracker";
 import { JsonLd, localBusinessSchema, websiteSchema } from "@/lib/jsonld";
+import { themeInitScript } from "@/components/ThemeToggle";
 
 const inter = Inter({
   variable: "--font-sans",
@@ -54,7 +55,10 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="sv" className={`${inter.variable} h-full`}>
+    <html lang="sv" className={`${inter.variable} h-full`} suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
+      </head>
       <body className="min-h-full flex flex-col bg-page text-ink">
         <JsonLd data={localBusinessSchema()} />
         <JsonLd data={websiteSchema()} />

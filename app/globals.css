@@ -1,5 +1,13 @@
 @import "tailwindcss";
 
+/* dark: följer valt tema (data-theme) med systemet som fallback */
+@custom-variant dark {
+  &:where([data-theme="dark"], [data-theme="dark"] *) { @slot; }
+  @media (prefers-color-scheme: dark) {
+    &:where(:root:not([data-theme="light"]), :root:not([data-theme="light"]) *) { @slot; }
+  }
+}
+
 /*
   Armeringsproffs – designsystem (tokens). Dokumentation: docs/DESIGN-SYSTEM.md
   Industriell, förtroendeingivande look: betonggrå neutraler + signalorange CTA.
@@ -57,8 +65,9 @@
 }
 
 /* ---------- 2. Mörkt tema ---------- */
+/* Mörkt: följer systemet tills besökaren valt (data-theme sätts av skriptet i <head>). */
 @media (prefers-color-scheme: dark) {
-  :root:not(.light-scope) {
+  :root:not([data-theme="light"]) {
     --page: #0b1120;
     --surface: #0f1729;
     --card: #131c31;
@@ -84,6 +93,31 @@
     color-scheme: dark;
   }
 }
+:root[data-theme="dark"] {
+  --page: #0b1120;
+  --surface: #0f1729;
+  --card: #131c31;
+  --ink: #f1f5f9;
+  --ink-soft: #cbd5e1;
+  --muted: #94a3b8;
+  --line: #243049;
+  --field: #64748b;
+
+  --brand: #fb923c;
+  --brand-hover: #fdba74;
+  --accent: #f97316;
+  --brand-tint: #2a1709;
+  --cta: #c2410c;
+  --cta-hover: #9a3412;
+
+  --night: #050a16;
+
+  --success: #4ade80;
+  --warning: #fbbf24;
+  --danger: #f87171;
+
+  color-scheme: dark;
+  }
 
 /* Ljus "ö" i mörkt läge: tekniska ritningar (SVG med fasta färger) ligger på papper. */
 .light-scope {

@@ -192,3 +192,6 @@ En öppen åt gången, `aria-expanded` + `aria-controls`, svaren finns i DOM (`h
 5. En primärknapp per vy. Rubriker utan hopp. Alla bilder har `alt`, `width`, `height`.
 6. Tangentbord: Tab genom sidan, fokus syns, meny/FAQ fungerar med Enter/Esc.
 7. Skärmdumpar till ägaren (dator + mobil).
+
+## Temaväxling
+Knapp i headern (`components/ThemeToggle.tsx`) växlar ljust/mörkt och sparar valet i `localStorage` ("theme"). Skriptet `themeInitScript` i `<head>` sätter `data-theme` på `<html>` före första målning (sparat val, annars systemets läge) – ingen blink. CSS: `:root[data-theme="dark"]` + systemfallback; Tailwind `dark:` följer `data-theme`.
