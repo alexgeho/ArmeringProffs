@@ -1,5 +1,32 @@
 # next-level-brief — worklog (2026-09-08)
 
+## ▶️ HANDOFF 2026-10-10 — НАЧНИ ОТСЮДА
+**KLART 10.10 (всё live):**
+- Дизайн-система + ревизия всех текстов (маркетолог/копирайтер/критик) → `docs/DESIGN-SYSTEM.md`, CTA #c2410c (WCAG AA). Артефакт: https://claude.ai/artifact/JaKfaoJxhbeL4C3QffJeha
+- Ответы владельца «все да»: nät kapas efter mått, montage i hela Sverige, 3.1-certifikat + EPD, foto av skiss räcker (`6edf701`). villakorg → kantbalkskorg (товарный знак Thuresson).
+- `/produkter/rostfri-armering` — «levereras efter behov» (владелец: достанем по необходимости) + guide rostfri → target (`a6fdcb0`).
+- Переключатель темы светлая/тёмная в хедере (localStorage, без мигания) (`c73fe07`).
+- Request Indexing: grundarmering, armeringsleverantor ✅, дальше Quota Exceeded.
+**Расследование «пропали лиды» (10.10):**
+- Форма и почта работают (curl POST → `{"ok":true}`, письмо пришло в offert@ 07:59). SPF/DKIM/DMARC есть.
+- Реальных лидов за всё время **2**, оба 21.09 (Christian Sandberg — stad-malmo; Deramont — offertsida, Malmö). Остальное — тесты (23–24.09, 06.09). То есть не «падение», а потока ещё не было.
+- GSC 28 дн: 166 кл / 7,1K показов / CTR 2,3 % / поз. 9,8 — трафик не упал, но почти весь DIY/инфо (böja/bocka armeringsjärn, bockningsradie, skarvlängd, täckskikt).
+- Коммерческие запросы — 0 кликов: bockad armering (86 показов, поз. 10,3), armeringsspecifikation (97, 13,4), armeringsritning (85, 29), armering göteborg (62, 17,8), prefabricerad armering (56, 6,8), ilf armering (29, 54), armering malmö (18, 5,6), armeringsleverantör (16, 8,5), armering stockholm (10, 19,5), armeringskorgar (147, 1 клик, 8,0).
+- Новые коммерческие страницы live только с 09.10 → органика даст эффект через 2–6 недель.
+- Телефон на сайте = Juri → часть лидов могла уйти звонками (спросить Juri).
+
+**🔜 NÄSTA STEG (по порядку):**
+1. **Google Ads** на 10–15 коммерческих запросов (bockad armering, prefabricerad armering, armeringsnät leverans, armering + города, armeringsleverantör), 3–5 тыс. kr/мес — предложено владельцу, ждём «да». Я готовлю кампанию, владелец вводит оплату.
+2. **Google Business Profile** + каталоги (hitta, eniro, allabolag).
+3. **Лид-CTA на DIY-статьях** (bocka/böja armeringsjärn, bockningsradie, skarvlängd — там весь трафик): блок «Slipp bocka själv – skicka listan» → /tjanster/bockningslista / klippt-och-bockad.
+4. **Форма на страницах продуктов** (сейчас её там нет — только ссылка на /offert).
+5. **CTR коммерческих страниц**: title/description под prefabricerad armering (поз. 6,8), armering malmö (5,6), armeringsleverantör (8,5), bockad armering (10,3); разнести каннибализацию armeringskorgar (блог vs продукт).
+6. **Request Indexing** 11.10+ (квота ~2–10/день, только «not on Google»): armering-pris, prefab-armering, armering-norrland, tjanster/armeringsspecifikation, tjanster/ilf-armering, produkter/palarmering, produkter/rostfri-armering, дальше старый список (armeringsstal, armering-till-garage, klippt-bockad-armering, armeringsbyglar, bocka-armeringsjarn).
+7. Даты: ~13.10 CTR bockningslista/armeringsspecifikation; ~16.10 результат Validate fix (Product snippets / Merchant listings); ~22.10 CTR 4 titles от 08.10; ~24.10 GSC: индексация 100 новых страниц + первые клики по коммерческим.
+8. [OWNER]: какой телефон главный на сайте (Juri +46 72 858 99 75 или Александр +46 70 757 75 75); спросить Juri о звонках; бесплатна ли armeringsspecifikation; ingjutningsgods; реальные отзывы и референс-проекты.
+
+**Как работать (напоминание):** деплой = push в main (`gh run watch`); бампать `UPDATED` в `app/sitemap.ts`; фото — `scripts/foto-replicate.py` (Replicate) → `public/images/foto/<slug>.webp` подхватываются сами; Roundcube offert@ залогинен в Chrome; GSC — поле «Inspect any URL» кликать по ref.
+
 ## 🟢 SESSION 2026-10-09 (вечер) — 100 новых страниц live + фото
 **KLART:** план `docs/PLAN-sidor-2026-10.md` (утверждён владельцем) выполнен: 7 продуктов (`config/products-extra.ts`), 2 услуги (`services-extra.ts`), 12 лендингов в корне (`config/landings.ts` + `landings-b2b.ts`, маршрут `app/[slug]`), 77 статей (`config/posts/*.ts`, категории на /blogg), 3 калькулятора (/viktkalkylator, /natkalkylator, /forankringslangd). Доработаны существующие (ILF на klippt-och-bockad, каннибализация, 5 городов). У каждой статьи `target` → коммерческая страница (ссылка под ингрессом + CTA).
 Картинки: 10 Recraft (BILDSTIL) + 135 фото Replicate flux-1.1-pro → `public/images/foto/<slug>.webp`, подхватываются автоматически (`lib/foto.ts`: герой лендингов/услуг, фото продукта, фото статьи). Генератор: scratchpad `foto.py` `scripts/foto-replicate.py prompts.json`. Sitemap 158 URL, переотправлен в GSC 09.10.
