@@ -373,4 +373,54 @@ export const extraProducts: Product[] = [
       { q: "Hur hög ska armeringsstolen vara?", a: "Så hög att det övre lagret får ritningens täckskikt i överkant. Den beror på plattans tjocklek, täckskikten och armeringens dimension – skriv måtten i förfrågan så väljer vi höjd." },
     ],
   },
+  {
+    slug: "rostfri-armering",
+    name: "Rostfri armering",
+    h1: "Rostfri armering – levereras efter behov",
+    metaTitle: "Rostfri armering – beställ efter ritning",
+    metaDescription:
+      "Rostfri armering för broar, kajer, parkeringsdäck och saltmiljö. Vi tar fram rätt stålsort efter ritningen och levererar i hela Sverige. Begär offert.",
+    intro:
+      "Står rostfri armering på ritningen tar vi fram den åt dig – i den stålsort konstruktören föreskriver, klippt och bockad efter lista och levererad tillsammans med resten av armeringen. Du får en offert och en leverans i stället för att jaga en specialleverantör.",
+    keywords: [
+      "köpa rostfri armering",
+      "beställa rostfri armering",
+      "rostfri armering leverantör",
+      "rostfria armeringsjärn",
+      "rostfritt armeringsstål pris",
+      "duplex armering",
+    ],
+    includes: [
+      "Stålsort enligt ritning (t.ex. 1.4301, 1.4362, 1.4462)",
+      "Klippt och bockad efter bockningslista",
+      "Kombineras med kamstål B500B i samma leverans",
+      "Materialcertifikat 3.1 med leveransen",
+      "Märkt och sorterat per position",
+      "Leverans i hela Sverige",
+    ],
+    body: [
+      {
+        heading: "När väljs rostfri armering?",
+        text: "Rostfri armering används där klorider från havsvatten eller vägsalt annars skulle bryta ner vanligt stål: broar och kantbalkar, kajer, parkeringsdäck, balkonger vid kusten och konstruktioner i exponeringsklass XD och XS. Ofta behövs den bara i de mest utsatta delarna, medan resten armeras med vanligt kamstål. Läs mer i guiden [rostfri armering – när behövs den](/blogg/rostfri-armering) och om [täckskikt per exponeringsklass](/blogg/tackskikt-exponeringsklass).",
+      },
+      {
+        heading: "Rätt stålsort efter ritningen",
+        text: "Konstruktören anger stålsort och dimension. Vanligast är austenitiskt 1.4301 och duplexstålen 1.4362 och 1.4462, där duplex tål högre kloridhalter. Vi tar fram den sort som står på ritningen – står det ingen, frågar vi konstruktören innan vi räknar. Rostfritt stål kostar flera gånger mer än B500B, så det lönar sig att bara använda det där det behövs.",
+      },
+      {
+        heading: "Klippt, bockat och samlevererat",
+        text: "Den rostfria armeringen kapas och bockas efter samma [bockningslista](/tjanster/bockningslista) som övrig armering och märks per position. Rostfritt och svart stål hålls isär i leveransen och packas separat, så att rätt järn hamnar på rätt plats. Resten – [klippt och bockad armering](/produkter/klippt-och-bockad), [armeringsnät](/produkter/armeringsnat) och [distanser](/produkter/distanser) – kommer i samma leverans.",
+      },
+      {
+        heading: "Offert på rostfri armering",
+        text: "Skicka ritningen eller bockningslistan via [offertformuläret](/offert) och markera vilka positioner som ska vara rostfria. Rostfritt tas fram efter behov, så leveranstiden kan bli längre än för vanligt kamstål – den anges i offerten tillsammans med pris och frakt.",
+      },
+    ],
+    faqs: [
+      { q: "Levererar ni rostfri armering?", a: "Ja, vi tar fram rostfri armering efter behov i den stålsort som står på ritningen och levererar den klippt och bockad tillsammans med övrig armering." },
+      { q: "Vilken stålsort ska jag välja?", a: "Det avgör konstruktören utifrån miljön. Vanligt är 1.4301 samt duplex 1.4362 och 1.4462 för hårdare kloridmiljö. Saknas stålsort på ritningen frågar vi innan vi räknar." },
+      { q: "Kan man blanda rostfri och vanlig armering?", a: "Ja, ofta används rostfritt bara i de mest utsatta zonerna. Hur skarvar och kontakt mellan stålsorterna utförs anges av konstruktören." },
+      { q: "Tar rostfri armering längre tid?", a: "Den tas fram efter behov och kan ha längre leveranstid än kamstål B500B. Exakt tid anges i offerten." },
+    ],
+  },
 ];

@@ -1074,7 +1074,7 @@ export const guider1: Post[] = [
     ],
     content: [
       { type: "p", text: "Vanligt armeringsstål skyddas av betongen. Det basiska porvattnet bildar en skyddande hinna på stålet, och så länge täckskiktet är tätt och tillräckligt tjockt rostar inte armeringen. Men klorider från havsvatten och vägsalt kan tränga in och bryta skyddet. Rostfri armering är ett sätt att göra konstruktionen okänslig för det." },
-      { type: "p", text: "Rostfri armering är en specialprodukt. Står den på din ritning – [fråga oss](/armeringsleverantor) så hjälper vi dig med upplägget för hela leveransen, inklusive vanligt kamstål B500B." },
+      { type: "p", text: "Står rostfri armering på din ritning [levererar vi den efter behov](/produkter/rostfri-armering) – klippt och bockad och samlevererad med vanligt kamstål B500B." },
 
       { type: "h2", text: "När behövs rostfri armering?" },
       { type: "ul", items: [
@@ -1130,7 +1130,7 @@ export const guider1: Post[] = [
       { type: "p", text: "Svaret på frågorna ger konstruktören underlag för att välja mellan större täckskikt, tätare betong, rostfritt i ytzonen eller en kombination." },
 
       { type: "h2", text: "Fråga oss om armeringen" },
-      { type: "p", text: "Har ditt projekt rostfri armering i delar av konstruktionen levererar vi gärna resten – kamstål, klippt och bockat, nät och korgar. [Fråga oss](/armeringsleverantor) om upplägget eller skicka ritningen via [offert](/offert) så återkommer vi med vad vi kan leverera och till vilket pris." },
+      { type: "p", text: "Har ditt projekt rostfri armering i delar av konstruktionen tar vi fram [den rostfria armeringen](/produkter/rostfri-armering) efter behov och levererar resten – kamstål, klippt och bockat, nät och korgar – i samma leverans. Skicka ritningen via [offert](/offert) och markera de rostfria positionerna." },
     ],
     faqs: [
       { q: "När behövs rostfri armering?", a: "Främst i konstruktioner som utsätts för klorider från vägsalt eller havsvatten, som broar, parkeringsdäck och kajer, och där lång livslängd eller tunt täckskikt gör vanligt stål riskabelt. Konstruktören avgör." },
@@ -1138,7 +1138,7 @@ export const guider1: Post[] = [
       { q: "Vilken rostfri stålsort används till armering?", a: "Vanliga sorter är austenitiska 1.4301 och 1.4436 samt duplexstålen 1.4362 och 1.4462. Duplex används ofta i broar och kloridutsatta konstruktioner." },
       { q: "Kan man blanda rostfri och vanlig armering?", a: "Ja, det är vanligt att bara den yttersta armeringen mot den utsatta ytan är rostfri. Konstruktören anger var respektive stål ska ligga." },
     ],
-    target: { href: "/armeringsleverantor", label: "Fråga oss om armering" },
+    target: { href: "/produkter/rostfri-armering", label: "Beställ rostfri armering" },
     category: "guider",
   },
 ];
