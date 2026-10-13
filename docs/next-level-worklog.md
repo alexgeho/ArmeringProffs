@@ -1,5 +1,13 @@
 # next-level-brief — worklog (2026-09-08)
 
+## 🟢 2026-10-13 — GSC-проверки
+- GSC 28 дн: 205 кл / 8,62K показов / CTR 2,4 % / поз. 9,0 (рост vs 10.10: 166 / 7,1K).
+- Validate fix ✅: Product snippets + Merchant listings — письма GSC «successfully fixed» (пункт ~16.10 закрыт).
+- CTR bockningslista (14 дн): 10 кл / 707 показов / 1,4 % / поз. 13,8 — без изменений после 29.09. armeringsspecifikation 79 показов, поз. 12,3, 0 кликов → проблема в позиции, не в title; коммерческий интент → `/tjanster/armeringsspecifikation`.
+- В индексе: armering-pris, prefab-armering, armering-norrland, tjanster/ilf-armering, produkter/palarmering, produkter/rostfri-armering.
+- Request Indexing ✅: tjanster/armeringsspecifikation (Discovered), blogg/armering-till-garage (unknown to Google). Дальше «Something went wrong» (лимит инспекций).
+- **Осталось проверить/запросить:** blogg/klippt-bockad-armering, blogg/armeringsstal, produkter/klippt-och-bockad, produkter/armeringsjarn.
+
 ## ▶️ HANDOFF 2026-10-10 — НАЧНИ ОТСЮДА
 **KLART 10.10 (всё live):**
 - Дизайн-система + ревизия всех текстов (маркетолог/копирайтер/критик) → `docs/DESIGN-SYSTEM.md`, CTA #c2410c (WCAG AA). Артефакт: https://claude.ai/artifact/JaKfaoJxhbeL4C3QffJeha
