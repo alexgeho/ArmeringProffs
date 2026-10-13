@@ -8,6 +8,7 @@ import { site } from "@/config/site";
 import { Section, SectionHeading, Button, PageHeader, Panel, CheckList, ArrowLink, Card } from "@/components/ui";
 import { Breadcrumbs, CtaBanner, LeveransSection, Process, CityLinks } from "@/components/sections";
 import { FaqAccordion } from "@/components/FaqAccordion";
+import { ContactForm } from "@/components/ContactForm";
 import { IconArrow, IconPhone } from "@/components/icons";
 import {
   JsonLd, serviceSchema, faqSchema, breadcrumbSchema,
@@ -78,7 +79,7 @@ export default async function ProductPage({
         items={[{ name: "Hem", href: "/" }, { name: "Produkter", href: "/produkter" }, { name: p.name }]}
       />
 
-      {/* Huvud: ljust, utan formulär (offert via knappen) */}
+      {/* Huvud: ljust; offertformuläret ligger i sidokolumnen */}
       <PageHeader
         title={p.h1}
         intro={p.intro}
@@ -94,7 +95,7 @@ export default async function ProductPage({
 
       {/* Body */}
       <Section>
-        <div className="grid gap-12 lg:grid-cols-[1.4fr_0.6fr]">
+        <div className="grid gap-12 lg:grid-cols-[1.3fr_0.7fr]">
           <div className="min-w-0">
             {img && (
               <figure className="mb-10 overflow-hidden rounded-panel border border-line">
@@ -115,6 +116,12 @@ export default async function ProductPage({
               ])}
             </div>
 
+            <Panel className="mt-10">
+              <h2 className="type-h4 text-ink">Egenskaper</h2>
+              <CheckList size="sm" items={p.includes} className="mt-4" />
+              <ArrowLink href="/armeringskalkylator" className="mt-5 text-sm">Räkna ut åtgången</ArrowLink>
+            </Panel>
+
             {guides.length > 0 && (
               <Panel className="mt-10">
                 <h2 className="type-h4 text-ink">Guider som hjälper dig vidare</h2>
@@ -130,12 +137,9 @@ export default async function ProductPage({
           </div>
           <aside>
             <Panel sticky>
-              <h2 className="type-h4 text-ink">Egenskaper</h2>
-              <CheckList size="sm" items={p.includes} className="mt-4" />
-              <div className="mt-6 border-t border-line pt-5">
-                <p className="text-sm font-semibold text-ink">Osäker på mängden?</p>
-                <p className="mt-1 text-sm text-ink-soft">Räkna ut åtgången i vår kalkylator.</p>
-                <ArrowLink href="/armeringskalkylator" className="mt-3 text-sm">Öppna armeringskalkylatorn</ArrowLink>
+              <h2 className="type-h4 text-ink">Få en offert</h2>
+              <div className="mt-5">
+                <ContactForm compact source={`produkt-${p.slug}`} />
               </div>
             </Panel>
           </aside>
