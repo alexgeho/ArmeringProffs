@@ -8,6 +8,7 @@
 - Request Indexing ✅: tjanster/armeringsspecifikation (Discovered), blogg/armering-till-garage (unknown to Google). Дальше «Something went wrong» (лимит инспекций).
 - Лид-CTA в середине всех статей блога (перед средним h2): «Slipp kapa och bocka själv» + «Skicka listan» → /offert — live (пункт 3 NÄSTA ✅).
 - Форма на всех страницах продуктов: sticky-панель «Få en offert» справа (source `produkt-<slug>`), «Egenskaper» перенесены в основную колонку — live (пункт 4 NÄSTA ✅).
+- CTR-titles live (пункт 5 NÄSTA ✅): 12 городов «Armering <stad> – klippt, bockad & levererad» + «Offert inom en arbetsdag» (malmö поз. 6, 25 показов, 0 кл); bestalla-armering → «från leverantör» (по ней ранжируются armeringsleverantör 8,4 и prefabricerad armering 9,2); каннибализация armeringskorgar (блог 7,4 vs продукт 22,3): блог → «Armeringskorg för påle & pelare – typer och lyft», продукт → «Armeringskorgar – köp prefab korgar efter ritning». bockad armering → blogg/klippt-bockad-armering (title от 08.10, ждём ~22.10). Проверить CTR ~27.10.
 - **Осталось проверить/запросить:** blogg/klippt-bockad-armering, blogg/armeringsstal, produkter/klippt-och-bockad, produkter/armeringsjarn.
 
 ## ▶️ HANDOFF 2026-10-10 — НАЧНИ ОТСЮДА
