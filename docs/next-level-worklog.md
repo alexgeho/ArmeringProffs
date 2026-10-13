@@ -6,6 +6,7 @@
 - CTR bockningslista (14 дн): 10 кл / 707 показов / 1,4 % / поз. 13,8 — без изменений после 29.09. armeringsspecifikation 79 показов, поз. 12,3, 0 кликов → проблема в позиции, не в title; коммерческий интент → `/tjanster/armeringsspecifikation`.
 - В индексе: armering-pris, prefab-armering, armering-norrland, tjanster/ilf-armering, produkter/palarmering, produkter/rostfri-armering.
 - Request Indexing ✅: tjanster/armeringsspecifikation (Discovered), blogg/armering-till-garage (unknown to Google). Дальше «Something went wrong» (лимит инспекций).
+- Лид-CTA в середине всех статей блога (перед средним h2): «Slipp kapa och bocka själv» + «Skicka listan» → /offert — live (пункт 3 NÄSTA ✅).
 - **Осталось проверить/запросить:** blogg/klippt-bockad-armering, blogg/armeringsstal, produkter/klippt-och-bockad, produkter/armeringsjarn.
 
 ## ▶️ HANDOFF 2026-10-10 — НАЧНИ ОТСЮДА
