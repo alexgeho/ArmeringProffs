@@ -7,6 +7,7 @@
 - В индексе: armering-pris, prefab-armering, armering-norrland, tjanster/ilf-armering, produkter/palarmering, produkter/rostfri-armering.
 - Request Indexing ✅: tjanster/armeringsspecifikation (Discovered), blogg/armering-till-garage (unknown to Google). Дальше «Something went wrong» (лимит инспекций).
 - Лид-CTA в середине всех статей блога (перед средним h2): «Slipp kapa och bocka själv» + «Skicka listan» → /offert — live (пункт 3 NÄSTA ✅).
+- Форма на всех страницах продуктов: sticky-панель «Få en offert» справа (source `produkt-<slug>`), «Egenskaper» перенесены в основную колонку — live (пункт 4 NÄSTA ✅).
 - **Осталось проверить/запросить:** blogg/klippt-bockad-armering, blogg/armeringsstal, produkter/klippt-och-bockad, produkter/armeringsjarn.
 
 ## ▶️ HANDOFF 2026-10-10 — НАЧНИ ОТСЮДА
