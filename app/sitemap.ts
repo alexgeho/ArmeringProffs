@@ -23,9 +23,9 @@ const UPDATED = {
   // app/page.tsx, /leverans, /om-oss, /kontakt, /offert, /vanliga-fragor,
   // /omdomen, /armeringskalkylator, /integritetspolicy – senast ändrade 2026-09-08.
   static: "2026-10-09", // H1 på listsidor + kortare titlar (2026-09-25)
-  products: "2026-10-09", // config/products.ts (våg 1–6, 2026-10-09)
+  products: "2026-10-13", // config/products.ts + offertformulär i sidokolumnen (2026-10-13)
   services: "2026-10-09", // config/services.ts (armeringsspecifikation på bockningslista 2026-09-25)
-  cities: "2026-10-09", // app/armering/[slug]/page.tsx (GuidesTeaser tillagd)
+  cities: "2026-10-13", // app/armering/[slug]/page.tsx (CTR-titlar 2026-10-13)
   tools: "2026-10-09", // /viktkalkylator, /natkalkylator, /forankringslangd (components/SmaKalkylatorer.tsx)
 } as const;
 

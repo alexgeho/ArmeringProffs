@@ -94,7 +94,7 @@ const baseProducts: Product[] = [
     slug: "armeringskorgar",
     name: "Armeringskorgar",
     h1: "Armeringskorgar – prefab korgar till balk, pelare, påle och plint",
-    metaTitle: "Armeringskorgar – prefab korgar efter ritning",
+    metaTitle: "Armeringskorgar – köp prefab korgar efter ritning",
     metaDescription:
       "Prefab armeringskorgar till balkar, pelare, pålar, plintar och kantbalk – svetsade eller najade efter ritning, märkta per position. Begär offert.",
     intro:

@@ -548,13 +548,13 @@ const basePosts: Post[] = [
   {
     slug: "armeringskorgar-palarmering",
     title: "Armeringskorg – typer och användning i pålar, pelare och balkar",
-    metaTitle: "Armeringskorg – typer och användning",
+    metaTitle: "Armeringskorg för påle & pelare – typer och lyft",
     metaDescription:
       "Armeringskorgar för pålar, pelare, balkar och plintar: svetsad eller bunden, vad du anger vid beställning och hur korgen lyfts. Få offert efter ritning.",
     excerpt:
       "Huvudjärn och byglar monterade till en färdig korg för påle, pelare, balk eller plint. Typer, svetsad eller bunden, och vad du anger när du beställer.",
     date: "2026-09-05",
-    updated: "2026-10-09",
+    updated: "2026-10-13",
     readingMinutes: 6,
     target: { href: "/produkter/armeringskorgar", label: "Beställ armeringskorgar" },
     keywords: [
@@ -631,13 +631,13 @@ const basePosts: Post[] = [
   {
     slug: "bestalla-armering",
     title: "Beställa armering – så går det till steg för steg",
-    metaTitle: "Beställa armering – steg för steg",
+    metaTitle: "Beställa armering från leverantör – steg för steg",
     metaDescription:
-      "Så beställer du armering: vad du skickar, vad offerten ska innehålla och hur leveransen går till. Ritning, bockningslista eller mått räcker för att börja.",
+      "Så beställer du prefabricerad armering från en armeringsleverantör: vad du skickar, vad offerten ska innehålla och hur leveransen går till. Offert inom en arbetsdag.",
     excerpt:
       "Fyra steg från ritning till leverans – vad du skickar, vad en bra offert innehåller och vad du ska kontrollera innan du godkänner.",
     date: "2026-09-05",
-    updated: "2026-10-09",
+    updated: "2026-10-13",
     readingMinutes: 5,
     target: { href: "/offert", label: "Begär offert" },
     keywords: [
