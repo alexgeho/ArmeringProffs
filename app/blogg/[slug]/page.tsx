@@ -11,6 +11,7 @@ import { JsonLd, articleSchema, breadcrumbSchema, faqSchema } from "@/lib/jsonld
 import { renderText } from "@/lib/renderText";
 import { foto } from "@/lib/foto";
 import Image from "next/image";
+import { Fragment } from "react";
 
 export function generateStaticParams() {
   return posts.map((p) => ({ slug: p.slug }));
@@ -85,6 +86,13 @@ function renderBlock(b: Block, i: number) {
   return <p key={i}>{renderText(b.text)}</p>;
 }
 
+/** Index för mitt-CTA: före den mittersta h2:an (minst efter första avsnittet). */
+function midIndex(content: Block[]): number {
+  const h2 = content.flatMap((b, i) => (b.type === "h2" ? [i] : []));
+  if (h2.length < 2) return -1;
+  return h2[Math.floor(h2.length / 2)];
+}
+
 function formatDate(iso: string) {
   return new Date(iso).toLocaleDateString("sv-SE", { year: "numeric", month: "long", day: "numeric" });
 }
@@ -118,6 +126,7 @@ export default async function PostPage({
   const url = `${site.url}/blogg/${p.slug}`;
   const more = relatedPosts(p, posts, 3);
   const bild = foto(p.slug);
+  const mid = midIndex(p.content);
 
   return (
     <>
@@ -141,7 +150,17 @@ export default async function PostPage({
           )}
 
           <div className="prose-body mt-10">
-            {p.content.map((b, i) => renderBlock(b, i))}
+            {p.content.map((b, i) => (
+              <Fragment key={i}>
+                {i === mid && (
+                  <Panel className="!my-10 flex flex-wrap items-center justify-between gap-4">
+                    <p className="type-h4 !m-0 text-ink">Slipp kapa och bocka själv</p>
+                    <Button href="/offert">Skicka listan <IconArrow className="h-4 w-4" /></Button>
+                  </Panel>
+                )}
+                {renderBlock(b, i)}
+              </Fragment>
+            ))}
           </div>
 
           {p.faqs && p.faqs.length > 0 && (
