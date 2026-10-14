@@ -12,7 +12,7 @@ const path = "/forankringslangd";
 const name = "Förankringslängd armering";
 
 export const metadata: Metadata = {
-  title: "Förankringslängd armering – kalkylator (Eurokod 2)",
+  title: "Förankringslängd armering – kalkylator",
   description:
     "Räkna riktvärde för förankringslängd lb,rqd enligt Eurokod 2: välj diameter, betongklass och vidhäftning. För kamstål B500B – konstruktören avgör.",
   alternates: { canonical: path },

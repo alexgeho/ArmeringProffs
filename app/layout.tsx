@@ -20,11 +20,11 @@ export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
     // Sökord först – Google kapar titlar efter ~60 tecken.
-    default: `Prefab armering – klippt & bockad i hela Sverige | ${site.company}`,
+    default: `Prefab armering – klippt & bockad i Sverige | ${site.company}`,
     template: `%s | ${site.company}`,
   },
   description:
-    "Prefab armering i hela Sverige – klippt & bockad efter bockningslista, armeringskorgar, nät och kamstål B500B. Leverans och montage. Begär kostnadsfri offert.",
+    "Prefab armering i hela Sverige – klippt & bockad efter bockningslista, armeringskorgar, nät och kamstål B500B. Leverans och montage. Begär offert.",
   keywords: [
     "prefab armering",
     "prefabricerad armering",

@@ -6,7 +6,7 @@ export const b2bLandings: Service[] = [
     slug: "armering-for-byggentreprenorer",
     name: "Armering för byggentreprenörer",
     h1: "Armering för byggentreprenörer – levererad etapp för etapp",
-    metaTitle: "Armering för byggentreprenörer – prefab per etapp",
+    metaTitle: "Armering för byggentreprenörer – per etapp",
     metaDescription:
       "Prefab armering till byggentreprenörer: grund, väggar och bjälklag efter bockningslista, märkt per position och levererat per etapp. Begär offert.",
     intro:
@@ -57,7 +57,7 @@ export const b2bLandings: Service[] = [
     slug: "armering-for-markentreprenorer",
     name: "Armering för markentreprenörer",
     h1: "Armering för markentreprenörer – korgar klara att lyfta ner",
-    metaTitle: "Armering för markentreprenörer – plintar och murar",
+    metaTitle: "Armering för markentreprenörer – plintar, murar",
     metaDescription:
       "Plintkorgar, stödmursarmering och fundament för markentreprenörer. Färdiga korgar i B500B, märkta per fundamenttyp. Skicka ritningen för offert.",
     intro:
@@ -259,7 +259,7 @@ export const b2bLandings: Service[] = [
     slug: "armering-for-lantbruk",
     name: "Armering för lantbruk",
     h1: "Armering för lantbruk – stall, gödselbehållare och plansilor",
-    metaTitle: "Armering för lantbruk – stall, gödsel och plansilo",
+    metaTitle: "Armering för lantbruk – stall, gödsel, plansilo",
     metaDescription:
       "Armering till stallgolv, gödselbehållare, plansilor och maskinhallar. Prefab i B500B efter ritning, levererad till gården i etapper. Begär offert.",
     intro:
@@ -310,7 +310,7 @@ export const b2bLandings: Service[] = [
     slug: "armering-for-konstruktorer",
     name: "Armering för konstruktörer",
     h1: "För konstruktörer – vi tillverkar det ni ritar",
-    metaTitle: "Armering för konstruktörer – ritning till prefab",
+    metaTitle: "Armering för konstruktörer – prefab ur ritning",
     metaDescription:
       "Konstruktör? Vi tillverkar prefab armering i B500B direkt från er ritning, med era positionsnummer, och frågar innan vi bockar om något är oklart.",
     intro:
@@ -361,7 +361,7 @@ export const b2bLandings: Service[] = [
     slug: "armering-offentlig-upphandling",
     name: "Armering i offentlig upphandling",
     h1: "Armering till offentliga projekt – med dokumentationen klar",
-    metaTitle: "Armering i offentlig upphandling – underlag och offert",
+    metaTitle: "Armering i offentlig upphandling – offert",
     metaDescription:
       "Armering till skolor, vårdbyggnader, broar och VA: prefab i B500B efter förfrågningsunderlaget, med 3.1-certifikat och EPD. Få pris till anbudet.",
     intro:

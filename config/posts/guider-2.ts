@@ -340,7 +340,7 @@ export const guider2: Post[] = [
   {
     slug: "armering-klimatavtryck",
     title: "Armeringens klimatavtryck – EPD, återvunnet stål och CBAM",
-    metaTitle: "Armering klimatavtryck – EPD och återvunnet stål",
+    metaTitle: "Armering klimatavtryck – EPD & återvunnet stål",
     metaDescription:
       "Vad påverkar armeringens klimatavtryck? Så läser du en EPD, skillnaden mellan skrotbaserat och malmbaserat stål, klimatdeklaration och vad CBAM innebär.",
     excerpt:
