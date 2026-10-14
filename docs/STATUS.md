@@ -1,5 +1,7 @@
 # Armeringsproffs — статус проекта (handoff)
 
+> ## 🟢 2026-10-14 — формы на продуктах, mid-CTA в блоге, CTR-titles, Validate fix ✅. **HANDOFF + NÄSTA → next-level-worklog.md (верх).**
+>
 > ## 🟢 2026-10-10 — дизайн-система, тема светлая/тёмная, rostfri; расследование лидов: реальных лидов было 2 (21.09), форма работает, трафик инфо/DIY. **HANDOFF + NÄSTA → next-level-worklog.md (верх).**
 >
 > ## 🟢 2026-10-09 — +100 страниц (план docs/PLAN-sidor-2026-10.md) + 145 картинок live, sitemap 158 URL. Детали и NÄSTA — next-level-worklog.md.

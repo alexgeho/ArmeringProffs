@@ -1,5 +1,23 @@
 # next-level-brief — worklog (2026-09-08)
 
+## ▶️ HANDOFF 2026-10-14 — НАЧНИ ОТСЮДА
+**KLART 13–14.10 (всё live):**
+- Validate fix GSC ✅ (Product snippets + Merchant listings — письма «successfully fixed»).
+- Лид-CTA в середине всех статей блога «Slipp kapa och bocka själv → Skicka listan» (/offert) — `1642ecd`.
+- Форма заявки на всех страницах продуктов (sticky «Få en offert», source `produkt-<slug>`) — `b680338`.
+- CTR-titles: 12 городов, bestalla-armering, armeringskorgar блог vs продукт — `2b08b7b`. Параллельная сессия 14.10: near-miss/каннибализация + title ≤65 — `8446da4`, `64268b6`, `2e83c0d`.
+- Request Indexing: tjanster/armeringsspecifikation, blogg/armering-till-garage ✅; 6 новых коммерческих страниц уже в индексе.
+**🔜 NÄSTA STEG (по порядку):**
+1. Request Indexing (квота ~10/день на аккаунт, делить с другими сайтами): blogg/klippt-bockad-armering, blogg/armeringsstal, produkter/klippt-och-bockad, produkter/armeringsjarn — сначала инспектировать, запрашивать только «not on Google».
+2. **Google Business Profile** + каталоги (hitta.se, eniro.se, allabolag) — нужен адрес/телефон владельца (см. п. «Ждём»); вводить данные только после «да».
+3. Проверить первые заявки с новых форм: в письмах поле source `produkt-*` и page; GA4 generate_lead по form_source.
+4. ~22.10 CTR bockad armering (title 08.10); ~27–28.10 CTR titles 13–14.10 (города/malmö, bestalla-armering, armeringskorgar) + GSC-срез; ~24.10 индексация 100 новых страниц.
+5. armeringsspecifikation: поз. 12, 0 кл — нужна позиция, не title: внутренние ссылки с bockningslista-sa-gor-du и DIY на /tjanster/armeringsspecifikation.
+**ЖДЁМ / РЕШИТЬ [OWNER]:**
+- Google Ads 3–5 тыс. kr/мес — «да»? (кампанию готовлю я, оплату вводит владелец).
+- Какой телефон главный (Juri +46 72 858 99 75 или Александр +46 70 757 75 75); адрес для GBP; бесплатна ли armeringsspecifikation; реальные отзывы и референс-проекты.
+- Мобильный вид новых блоков (mid-CTA, форма продукта) скриншотом не проверен — окно не ресайзилось; проверить при следующей UI-работе.
+
 ## 🟢 2026-10-13 — GSC-проверки
 - GSC 28 дн: 205 кл / 8,62K показов / CTR 2,4 % / поз. 9,0 (рост vs 10.10: 166 / 7,1K).
 - Validate fix ✅: Product snippets + Merchant listings — письма GSC «successfully fixed» (пункт ~16.10 закрыт).
@@ -11,7 +29,7 @@
 - CTR-titles live (пункт 5 NÄSTA ✅): 12 городов «Armering <stad> – klippt, bockad & levererad» + «Offert inom en arbetsdag» (malmö поз. 6, 25 показов, 0 кл); bestalla-armering → «från leverantör» (по ней ранжируются armeringsleverantör 8,4 и prefabricerad armering 9,2); каннибализация armeringskorgar (блог 7,4 vs продукт 22,3): блог → «Armeringskorg för påle & pelare – typer och lyft», продукт → «Armeringskorgar – köp prefab korgar efter ritning». bockad armering → blogg/klippt-bockad-armering (title от 08.10, ждём ~22.10). Проверить CTR ~27.10.
 - **Осталось проверить/запросить:** blogg/klippt-bockad-armering, blogg/armeringsstal, produkter/klippt-och-bockad, produkter/armeringsjarn.
 
-## ▶️ HANDOFF 2026-10-10 — НАЧНИ ОТСЮДА
+## HANDOFF 2026-10-10 (история)
 **KLART 10.10 (всё live):**
 - Дизайн-система + ревизия всех текстов (маркетолог/копирайтер/критик) → `docs/DESIGN-SYSTEM.md`, CTA #c2410c (WCAG AA). Артефакт: https://claude.ai/artifact/JaKfaoJxhbeL4C3QffJeha
 - Ответы владельца «все да»: nät kapas efter mått, montage i hela Sverige, 3.1-certifikat + EPD, foto av skiss räcker (`6edf701`). villakorg → kantbalkskorg (товарный знак Thuresson).
