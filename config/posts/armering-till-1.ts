@@ -203,12 +203,13 @@ export const armeringTill1: Post[] = [
   {
     slug: "armering-kantbalk",
     title: "Armera kantbalk – kantjärn, hörnjärn och skarvar",
-    metaTitle: "Armera kantbalk – kantjärn, hörn och skarvar",
+    metaTitle: "Kantbalksarmering – kantjärn, hörn och skarvar",
     metaDescription:
       "Så armeras en kantbalk i platta på mark: antal och dimension på kantjärn, hörnjärn, skarvlängder och hur byglar och järn bildar en färdig kantbalkskorg.",
     excerpt:
       "Kantbalken bär ytterväggarna. Här går vi igenom de längsgående kantjärnen, hörnen och skarvarna – det som tillsammans med byglarna blir en färdig kantbalksarmering.",
     date,
+    updated: "2026-10-14",
     readingMinutes: 5,
     keywords: [
       "armera kantbalk",
@@ -580,7 +581,7 @@ export const armeringTill1: Post[] = [
   {
     slug: "armering-balkong",
     title: "Armering till balkong – utkragande platta i betong",
-    metaTitle: "Armering balkong – överkant, infästning, täckskikt",
+    metaTitle: "Armering balkong – överkant och infästning",
     metaDescription:
       "Hur armeras en balkongplatta i betong? Huvudarmering i överkant, infästning mot bjälklaget, kantbyglar och täckskikt utomhus – typiska lösningar.",
     excerpt:

@@ -65,6 +65,8 @@ export const cities: City[] = [
       "Leran i Göteborg kan på sina ställen vara tiotals meter djup och är sättningskänslig, därför bärs många byggnader av pålar ner till fast botten. Klimatet vid västkusten är milt men fuktigt och salthaltigt nära havet – exponeringsklass och täckskikt bestäms av konstruktören.",
     faqs: [
       { q: "Levererar ni armering till pålplintar och pålfundament i Göteborg?", a: "Ja. Vi tillverkar plintkorgar, pålarmering och bockade detaljer till pålfundament efter konstruktionsritningen och levererar till arbetsplatsen i Göteborgsregionen." },
+      { q: "Kan jag köpa armeringsnät i Göteborg?", a: "Ja. Vi levererar armeringsnät, till exempel 5150, 6150 och 8150, till bygget i Göteborg och Västra Götalands län – gärna tillsammans med kantjärn, byglar och distanser i samma leverans. Ange ytan eller nätlistan i offertförfrågan." },
+      { q: "Levererar ni armeringsjärn till Göteborg?", a: "Ja. Raka armeringsjärn i kamstål B500B, Ø6–Ø32, levereras i standardlängder eller kapade och bockade efter din bockningslista – till arbetsplatsen i Göteborg och kranskommunerna." },
     ],
   },
   {

@@ -5,6 +5,7 @@ import { site } from "@/config/site";
 import { Section, SectionHeading, Card, CheckList } from "@/components/ui";
 import { Breadcrumbs, CtaBanner } from "@/components/sections";
 import { JsonLd, breadcrumbSchema } from "@/lib/jsonld";
+import { renderText } from "@/lib/renderText";
 
 export const metadata: Metadata = {
   title: "Produkter – prefab armering",
@@ -28,7 +29,7 @@ export default function ProdukterPage() {
           as="h1"
           eyebrow="Produkter"
           title="Prefabricerad armering – hela sortimentet"
-          intro={`Vi tillverkar och levererar prefab armering i ${site.regionInflected}. Välj en kategori för mer information och begär en offert efter din bockningslista eller ritning.`}
+          intro={renderText(`Vi tillverkar och levererar [prefab armering](/prefab-armering) i ${site.regionInflected}. Välj en kategori och begär offert efter din bockningslista eller ritning.`)}
         />
         <figure className="mt-8 overflow-hidden rounded-panel border border-line">
           <Image

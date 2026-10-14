@@ -69,7 +69,7 @@ const baseLandings: Landing[] = [
     slug: "prefab-armering",
     name: "Prefab armering",
     h1: "Prefab armering – färdig att lägga på bygget",
-    metaTitle: "Prefab armering – kapad, bockad och färdiga korgar",
+    metaTitle: "Prefabricerad armering – kapad, bockad, korgar",
     metaDescription:
       "Prefab armering i B500B: klippt och bockad armering, korgar, nät och grundarmering efter ritning – märkt per position, levererad i hela Sverige.",
     intro:

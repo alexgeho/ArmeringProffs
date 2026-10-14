@@ -480,14 +480,17 @@ const basePosts: Post[] = [
     excerpt:
       "Armeringsjärn som kapas och bockas i maskin efter bockningslistan och kommer buntade och märkta per position. Så går det till och vad du behöver skicka.",
     date: "2026-08-31",
-    updated: "2026-10-09",
-    readingMinutes: 4,
+    updated: "2026-10-14",
+    readingMinutes: 5,
     target: { href: "/produkter/klippt-och-bockad", label: "Beställ klippt & bockad armering" },
     keywords: [
       "klippt och bockad armering",
       "bockad armering",
       "kapad armering",
       "bockningslista armering",
+      "bockning av armering",
+      "bockning armering",
+      "bockade armeringsjärn",
     ],
     content: [
       { type: "p", text: "Klippt och bockad armering är armeringsjärn som kapas och bockas i maskin efter din bockningslista eller ritning. Järnen kommer buntade och märkta per position, så att varje bunt kan läggas på rätt plats utan att något mäts eller kapas på bygget." },
@@ -501,6 +504,10 @@ const basePosts: Post[] = [
         "Varje position buntas och märks med positionsnummer, dimension och antal.",
         "Leverans till bygget, gärna samordnad med nät, distanser och korgar.",
       ] },
+
+      { type: "h2", text: "Bockning av armering i maskin" },
+      { type: "p", text: "Vid bockning av armering i verkstad matas kamstålet – från ring i små dimensioner, från raka stänger i grövre – in i en bockningsmaskin som kapar och bockar efter måtten i bockningslistan. Maskinen bockar runt en dorn med rätt diameter för varje dimension: minst 4 × Ø upp till Ø16 och 7 × Ø för grövre järn enligt Eurokod 2. Då spricker inte stålet, och alla järn i en position får samma mått." },
+      { type: "p", text: "Bockade armeringsjärn är grunden i all [prefabricerad armering](/prefab-armering) – byglar, hörnjärn, korgar och specialformer. Ska du bara bocka några enstaka järn på bygget finns verktyg och bockningsradie i tabell i [bocka armeringsjärn](/blogg/bocka-armeringsjarn)." },
 
       { type: "h2", text: "Vanliga bockade detaljer" },
       { type: "table",
@@ -540,6 +547,7 @@ const basePosts: Post[] = [
     ],
     faqs: [
       { q: "Vad betyder klippt och bockad armering?", a: "Att armeringsjärnen kapas och bockas i maskin efter en bockningslista och levereras färdiga, buntade och märkta per position." },
+      { q: "Hur går bockning av armering till?", a: "Kamstålet kapas och bockas i maskin runt en dorn med rätt diameter för dimensionen, efter måtten i bockningslistan. Varje position buntas och märks innan leverans." },
       { q: "Vad behöver jag skicka för offert?", a: "En bockningslista eller konstruktionsritningen, leveransort och när armeringen behövs. Saknas lista tar vi fram den ur ritningen." },
       { q: "Kan jag beställa en liten mängd?", a: "Ja. Skicka listan även om det bara gäller några positioner – frakten räknas efter mängd och ort, och offerten visar vad det blir." },
       { q: "Hur märks järnen?", a: "Varje bunt märks med positionsnummer från bockningslistan, så att du ser direkt var järnen ska ligga." },
@@ -1027,7 +1035,7 @@ const basePosts: Post[] = [
     excerpt:
       "En bockningslista anger varje position med typform, mått, dimension och antal. Exempel, mall och de fel som gör att järnen inte passar.",
     date: "2026-09-08",
-    updated: "2026-10-09",
+    updated: "2026-10-14",
     readingMinutes: 5,
     target: { href: "/tjanster/bockningslista", label: "Skapa bockningslista" },
     keywords: [
@@ -1052,7 +1060,7 @@ const basePosts: Post[] = [
           ["3", "K – villabygel", "Ø8", "a = 800, b = 200, c = 300, d = 200", "147", "ca 1,45 m"],
         ],
       },
-      { type: "p", text: "Klipplängden blir något kortare än summan av yttermåtten, eftersom järnet följer en radie i varje bock. Den räknar tillverkaren fram – du anger yttermåtten. Mer om det i [bocka armeringsjärn](/blogg/bocka-armeringsjarn)." },
+      { type: "p", text: "Klipplängden blir något kortare än summan av yttermåtten, eftersom järnet följer en radie i varje bock. Den räknar tillverkaren fram – du anger yttermåtten. Minsta bockningsradie per dimension finns i [bockningsradie för armering – tabell](/blogg/bocka-armeringsjarn)." },
 
       { type: "h2", text: "Det här ska stå på varje rad" },
       { type: "ul", items: [
@@ -1224,7 +1232,7 @@ const basePosts: Post[] = [
     excerpt:
       "Sluten bygel, U-bygel och K-bygel – typkoder, hur måtten anges, krokar enligt Eurokod 2 och hur du räknar antal byglar.",
     date: "2026-09-23",
-    updated: "2026-10-09",
+    updated: "2026-10-14",
     readingMinutes: 6,
     target: { href: "/produkter/byglar-och-hakar", label: "Beställ färdiga armeringsbyglar" },
     keywords: [
@@ -1262,7 +1270,7 @@ const basePosts: Post[] = [
         ["Sluten bygel med sned sida", "NX", "Fyrsidig bygel där en sida är sned", "Balkar med sned kant, konsoler"],
         ["Hårnål", "S", "Två parallella ben med 180° rund bock", "Förankring och kantförstärkning"],
       ], caption: "Vanliga bygeltyper. Koderna används i bockningslistan tillsammans med måtten a, b, c … (yttermått)." },
-      { type: "p", text: "Du kan se alla standardformer med bokstavskod och prova egna mått i vårt verktyg för [typformer för bockning](/tjanster/bockningslista)." },
+      { type: "p", text: "Du kan se alla standardformer med bokstavskod och prova egna mått i vårt verktyg för [typformer för bockning](/tjanster/bockningslista). Mått och användning per typ: [N-bygel](/blogg/n-bygel-armering), [U-bygel](/blogg/u-bygel-armering), [B-bygel](/blogg/b-bygel-armering) och [C-bygel och hårnål](/blogg/c-bygel-harnal-armering)." },
 
       { type: "h3", text: "U-bygel – armering eller infästning?" },
       { type: "p", text: "Ordet U-bygel används också om gängade U-bultar för infästning av rör och avgassystem. I armeringssammanhang betyder U-bygel ett U-format armeringsjärn av kamstål (typform C) utan gängor. Ange typform och mått när du beställer, så blir det inga missförstånd." },
@@ -1289,6 +1297,9 @@ const basePosts: Post[] = [
       { type: "p", text: "Bygelavståndet (s) står på ritningen. Som riktvärden anger Eurokod 2 ett största avstånd i balkar på 0,75 × d (d = balkens effektiva höjd) och i pelare det minsta av 20 × minsta huvudjärnets diameter, pelarens minsta sida och 400 mm. Det är gränsvärden – inte en dimensionering." },
       { type: "p", text: "Antalet byglar räknar du ungefär som längd / bygelavstånd + 1. En 6 meter lång balk med byglar c/c 200 mm behöver alltså cirka 31 byglar." },
 
+      { type: "h2", text: "Bygelkorg – byglar och huvudjärn som färdig korg" },
+      { type: "p", text: "När byglarna och de längsgående järnen binds eller svetsas ihop i förväg blir det en bygelkorg: en färdig armeringskorg som lyfts på plats i balk, pelare eller kantbalk. Byglarna sitter redan med rätt avstånd, så montaget på bygget går snabbare. Vi tillverkar [armeringskorgar](/produkter/armeringskorgar) och [pelar- och balkkorgar](/produkter/pelar-och-balkkorgar) efter ritning." },
+
       { type: "h2", text: "Dimensioner och stålkvalitet" },
       { type: "p", text: "Byglar tillverkas oftast i kamstål B500B (SS 212540) i dimensionerna Ø6–Ø12 mm, i grövre konstruktioner även Ø16. Små dimensioner bockas från ringar i automatiska maskiner, vilket ger mycket jämna mått. De grövsta dimensionerna bockas oftast av raka stänger." },
 
@@ -1306,6 +1317,7 @@ const basePosts: Post[] = [
       { q: "Vad är skillnaden mellan en U-bygel och en sluten bygel?", a: "En U-bygel (typform C) är öppen och har tre ben. En sluten bygel (typform N) omsluter armeringen helt och förankras med krokar i ett hörn. Slutna byglar används där bygeln ska hålla ihop huvudjärnen i balkar och pelare." },
       { q: "Vad är en K-bygel?", a: "En öppen bygel (typform K) med ett extra ben. Den vanligaste varianten i villagrunder är villabygeln, där benet är förlängt in i plattan – se guiden om kantbalksbygel." },
       { q: "Hur tätt ska byglar sitta?", a: "Bygelavståndet står på ritningen. Eurokod 2 anger största avstånd 0,75 × d i balkar och i pelare det minsta av 20 × huvudjärnets diameter, pelarens minsta sida och 400 mm." },
+      { q: "Vad är en bygelkorg?", a: "Byglar och längsgående huvudjärn som binds eller svetsas ihop till en färdig korg innan den lyfts på plats i balk, pelare eller kantbalk." },
       { q: "Vilken dimension har armeringsbyglar?", a: "Oftast Ø6–Ø12 mm kamstål B500B, i grövre konstruktioner även Ø16. Rätt dimension står på konstruktionsritningen." },
       { q: "Kan man köpa färdiga armeringsbyglar?", a: "Ja. Ange typform, mått, dimension och antal – eller skicka ritningen – så tillverkar vi byglarna i serie och levererar dem märkta per position i hela Sverige." },
     ],
@@ -1576,7 +1588,7 @@ const basePosts: Post[] = [
     excerpt:
       "Villabygel eller sluten bygel, hur du räknar mått och antal, hur byglarna passar i kantelement av cellplast och montage steg för steg.",
     date: "2026-09-23",
-    updated: "2026-10-09",
+    updated: "2026-10-14",
     readingMinutes: 6,
     target: { href: "/produkter/villakorg-kantbalksarmering", label: "Beställ kantbalksarmering" },
     keywords: [
@@ -1588,7 +1600,7 @@ const basePosts: Post[] = [
       "armering kantbalk platta på mark",
     ],
     content: [
-      { type: "p", text: "En platta på mark har nästan alltid en förstärkt kant – en kantbalk – där plattan är tjockare och bär väggarnas last. Kantbalken armeras med längsgående järn i över- och underkant som hålls ihop av byglar. Det är de byglarna som kallas kantbalksbyglar. Färdiga kantbalksbyglar och kantbalkskorgar levererar vi som [kantbalksarmering](/produkter/villakorg-kantbalksarmering)." },
+      { type: "p", text: "En platta på mark har nästan alltid en förstärkt kant – en kantbalk – där plattan är tjockare och bär väggarnas last. Kantbalken armeras med längsgående järn i över- och underkant som hålls ihop av byglar. Det är de byglarna som kallas kantbalksbyglar. Färdiga kantbalksbyglar och kantbalkskorgar levererar vi som [kantbalksarmering](/produkter/villakorg-kantbalksarmering). Kantjärn, hörnjärn och skarvar – resten av kantbalkens armering – går vi igenom i [armera kantbalk](/blogg/armering-kantbalk)." },
 
       { type: "h2", text: "Vilken form har en kantbalksbygel?" },
       { type: "table", head: ["Form", "Kod", "Beskrivning"], rows: [

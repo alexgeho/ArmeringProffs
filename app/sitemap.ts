@@ -22,11 +22,11 @@ export const dynamic = "force-static";
 const UPDATED = {
   // app/page.tsx, /leverans, /om-oss, /kontakt, /offert, /vanliga-fragor,
   // /omdomen, /armeringskalkylator, /integritetspolicy – senast ändrade 2026-09-08.
-  static: "2026-10-09", // H1 på listsidor + kortare titlar (2026-09-25)
-  products: "2026-10-13", // config/products.ts + offertformulär i sidokolumnen (2026-10-13)
-  services: "2026-10-09", // config/services.ts (armeringsspecifikation på bockningslista 2026-09-25)
-  cities: "2026-10-13", // app/armering/[slug]/page.tsx (CTR-titlar 2026-10-13)
-  tools: "2026-10-09", // /viktkalkylator, /natkalkylator, /forankringslangd (components/SmaKalkylatorer.tsx)
+  static: "2026-10-14", // startsidans titel, /produkter-intro, /kontakt (2026-10-14)
+  products: "2026-10-14", // config/products.ts + landings (titlar ≤65, 2026-10-14)
+  services: "2026-10-14", // config/services.ts (armeringsritning på bockningslista, 2026-10-14)
+  cities: "2026-10-14", // config/cities.ts (Göteborg: nät/järn-FAQ 2026-10-14)
+  tools: "2026-10-14", // /viktkalkylator, /natkalkylator, /forankringslangd (components/SmaKalkylatorer.tsx)
 } as const;
 
 export default function sitemap(): MetadataRoute.Sitemap {

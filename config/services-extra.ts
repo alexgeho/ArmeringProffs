@@ -8,7 +8,7 @@ export const extraServices: Service[] = [
     h1: "Armeringsspecifikation från din ritning",
     metaTitle: "Armeringsspecifikation från ritning",
     metaDescription:
-      "Har du bara konstruktionsritningen? Skicka PDF, DWG eller IFC så tar vi fram armeringsspecifikation och bockningslista – och en offert på armeringen.",
+      "Armeringsspecifikation (armeringsspec, armeringsförteckning) från ritning: skicka PDF, DWG eller IFC – få specen, bockningslistan och offert.",
     intro:
       "Har du konstruktionsritningen men ingen armeringsspec? Skicka den som PDF, DWG eller IFC så tar vi fram specifikationen – varje position med form, mått, dimension, antal och vikt. Du godkänner specen innan något tillverkas och får offert på armeringen i samma svar.",
     keywords: [

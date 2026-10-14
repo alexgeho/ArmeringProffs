@@ -29,7 +29,7 @@ const baseServices: Service[] = [
     slug: "armeringsmontage",
     name: "Armeringsmontage",
     h1: "Armeringsmontage – vi lägger armeringen på plats",
-    metaTitle: "Armeringsmontage i hela Sverige – vi lägger armeringen",
+    metaTitle: "Armeringsmontage – vi lägger och najar armering",
     metaDescription:
       "Armeringsmontage i hela Sverige: vi lägger och najar armeringen vi själva tillverkat – tillverkning, leverans och montage från en leverantör. Begär offert.",
     intro:
@@ -114,11 +114,11 @@ const baseServices: Service[] = [
       },
       {
         heading: "Tre vanliga fel",
-        text: "1. Inner- och yttermått blandas ihop. 2. Antalet anges per element men inte totalt. 3. Bockningsradien glöms – för kamstål är minsta dorndiameter 4Ø upp till Ø16 och 7Ø för grövre järn enligt Eurokod 2. Vi stämmer av listan innan tillverkning.",
+        text: "1. Inner- och yttermått blandas ihop. 2. Antalet anges per element men inte totalt. 3. Bockningsradien glöms – för kamstål är minsta dorndiameter 4Ø upp till Ø16 och 7Ø för grövre järn enligt Eurokod 2, se [bockningsradie i tabell](/blogg/bocka-armeringsjarn). Vi stämmer av listan innan tillverkning.",
       },
       {
-        heading: "Har du bara ritningen?",
-        text: "Då tar vi fram hela listan åt dig via [armeringsspecifikation](/tjanster/armeringsspecifikation): skicka ritningen som PDF, DWG eller foto så får du listan att godkänna innan något tillverkas.",
+        heading: "Har du bara armeringsritningen?",
+        text: "Då tar vi fram hela listan åt dig via [armeringsspecifikation](/tjanster/armeringsspecifikation): skicka armeringsritningen som PDF, DWG eller foto så får du listan att godkänna innan något tillverkas. Hur positioner, beteckningar och mått står på ritningen förklarar vi i [läsa armeringsritning](/blogg/lasa-armeringsritning).",
       },
       {
         heading: "Från lista till färdig armering",
@@ -129,7 +129,7 @@ const baseServices: Service[] = [
       { q: "Vad är skillnaden mellan bockningsschema och bockningslista?", a: "Ingen. Båda orden betyder en lista över alla armeringspositioner med form, mått, dimension och antal." },
       { q: "Finns det en gratis mall?", a: "Ja, mallen kan laddas ner och fyllas i. Skicka den ifyllda mallen så får du en offert." },
       { q: "Vad ska en bockningslista innehålla?", a: "Positionsnummer, typform, mått per skänkel, dimension (Ø) och antal – gärna även täckskikt och bockningsradie om ritningen anger dem." },
-      { q: "Kan ni göra listan åt mig?", a: "Ja. Skicka konstruktionsritningen så tar vi fram listan och du godkänner den före tillverkning. Eventuell kostnad för det anges i offerten." },
+      { q: "Kan ni göra bockningslistan från min armeringsritning?", a: "Ja. Skicka armeringsritningen så tar vi fram listan och du godkänner den före tillverkning. Eventuell kostnad för det anges i offerten." },
     ],
     resource: { href: "/bockningslista-mall.csv", label: "Ladda ner bockningslista-mall (CSV)" },
   },

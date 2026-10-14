@@ -29,7 +29,7 @@ const baseProducts: Product[] = [
     slug: "klippt-och-bockad",
     name: "Klippt & bockad armering",
     h1: "Klippt och bockad armering – ILF efter din bockningslista",
-    metaTitle: "Klippt och bockad armering (ILF) efter din lista",
+    metaTitle: "Klippt och bockad armering (ILF) efter lista",
     metaDescription:
       "Klippt och bockad armering i B500B, Ø6–Ø32, tillverkad efter din bockningslista eller ritning och märkt per position. Skicka listan – få offert.",
     intro:
@@ -149,7 +149,7 @@ const baseProducts: Product[] = [
     slug: "armeringsnat",
     name: "Armeringsnät",
     h1: "Armeringsnät – lagernät 5150–8150 och nät efter mått",
-    metaTitle: "Armeringsnät 5150, 6150 och 8150 – köp med leverans",
+    metaTitle: "Armeringsnät 5150, 6150, 8150 – köp & leverans",
     metaDescription:
       "Armeringsnät 5150, 6150, 7150 och 8150 till platta, garage och grund. Vi räknar antal nät med överlapp och levererar i hela Sverige. Begär offert.",
     intro:
@@ -321,7 +321,7 @@ const baseProducts: Product[] = [
     slug: "distanser",
     name: "Distanser & tillbehör",
     h1: "Distanser för armering – distansklossar och nätstöd",
-    metaTitle: "Distanser för armering – distansklossar och nätstöd",
+    metaTitle: "Distanser armering – distansklossar och nätstöd",
     metaDescription:
       "Distansklossar, distanslister och nätstöd för rätt täckskikt – vi väljer höjd efter ritningen och levererar med armeringen i hela Sverige. Begär offert.",
     intro:
@@ -379,7 +379,7 @@ const baseProducts: Product[] = [
     slug: "byglar-och-hakar",
     name: "Byglar & hakar",
     h1: "Armeringsbyglar – färdiga byglar efter mått",
-    metaTitle: "Armeringsbyglar – färdiga byglar efter mått",
+    metaTitle: "Färdiga armeringsbyglar – köp byglar efter mått",
     metaDescription:
       "Färdiga armeringsbyglar efter mått: U-byglar, slutna byglar, kantbalksbyglar och hakar i B500B, buntade per position på pall. Skicka måtten – få offert.",
     intro:
