@@ -506,8 +506,8 @@ const basePosts: Post[] = [
       ] },
 
       { type: "h2", text: "Bockning av armering i maskin" },
-      { type: "p", text: "Vid bockning av armering i verkstad matas kamstålet – från ring i små dimensioner, från raka stänger i grövre – in i en bockningsmaskin som kapar och bockar efter måtten i bockningslistan. Maskinen bockar runt en dorn med rätt diameter för varje dimension: minst 4 × Ø upp till Ø16 och 7 × Ø för grövre järn enligt Eurokod 2. Då spricker inte stålet, och alla järn i en position får samma mått." },
-      { type: "p", text: "Bockade armeringsjärn är grunden i all [prefabricerad armering](/prefab-armering) – byglar, hörnjärn, korgar och specialformer. Ska du bara bocka några enstaka järn på bygget finns verktyg och bockningsradie i tabell i [bocka armeringsjärn](/blogg/bocka-armeringsjarn)." },
+      { type: "p", text: "Vid bockning av armering i verkstad matas kamstålet – från ring i små dimensioner, från raka stänger i grövre – in i en bockningsmaskin som kapar och bockar efter måtten i bockningslistan. Maskinen bockar runt en dorn med rätt diameter för varje dimension: minst 4 × Ø upp till Ø16 och 7 × Ø för grövre järn enligt Eurokod 2. Så spricker inte stålet, och alla järn i en position får samma mått." },
+      { type: "p", text: "Bockade armeringsjärn är grunden i all [prefabricerad armering](/prefab-armering) – byglar, hörnjärn, korgar och specialformer. Ska du bara bocka några järn på bygget, se verktyg och [bockningsradie i tabell](/blogg/bocka-armeringsjarn)." },
 
       { type: "h2", text: "Vanliga bockade detaljer" },
       { type: "table",
@@ -547,7 +547,6 @@ const basePosts: Post[] = [
     ],
     faqs: [
       { q: "Vad betyder klippt och bockad armering?", a: "Att armeringsjärnen kapas och bockas i maskin efter en bockningslista och levereras färdiga, buntade och märkta per position." },
-      { q: "Hur går bockning av armering till?", a: "Kamstålet kapas och bockas i maskin runt en dorn med rätt diameter för dimensionen, efter måtten i bockningslistan. Varje position buntas och märks innan leverans." },
       { q: "Vad behöver jag skicka för offert?", a: "En bockningslista eller konstruktionsritningen, leveransort och när armeringen behövs. Saknas lista tar vi fram den ur ritningen." },
       { q: "Kan jag beställa en liten mängd?", a: "Ja. Skicka listan även om det bara gäller några positioner – frakten räknas efter mängd och ort, och offerten visar vad det blir." },
       { q: "Hur märks järnen?", a: "Varje bunt märks med positionsnummer från bockningslistan, så att du ser direkt var järnen ska ligga." },
@@ -1060,7 +1059,7 @@ const basePosts: Post[] = [
           ["3", "K – villabygel", "Ø8", "a = 800, b = 200, c = 300, d = 200", "147", "ca 1,45 m"],
         ],
       },
-      { type: "p", text: "Klipplängden blir något kortare än summan av yttermåtten, eftersom järnet följer en radie i varje bock. Den räknar tillverkaren fram – du anger yttermåtten. Minsta bockningsradie per dimension finns i [bockningsradie för armering – tabell](/blogg/bocka-armeringsjarn)." },
+      { type: "p", text: "Klipplängden blir något kortare än summan av yttermåtten, eftersom järnet följer en radie i varje bock. Den räknar tillverkaren fram – du anger yttermåtten. Minsta radie per dimension: [bockningsradie för armering i tabell](/blogg/bocka-armeringsjarn)." },
 
       { type: "h2", text: "Det här ska stå på varje rad" },
       { type: "ul", items: [
@@ -1317,7 +1316,6 @@ const basePosts: Post[] = [
       { q: "Vad är skillnaden mellan en U-bygel och en sluten bygel?", a: "En U-bygel (typform C) är öppen och har tre ben. En sluten bygel (typform N) omsluter armeringen helt och förankras med krokar i ett hörn. Slutna byglar används där bygeln ska hålla ihop huvudjärnen i balkar och pelare." },
       { q: "Vad är en K-bygel?", a: "En öppen bygel (typform K) med ett extra ben. Den vanligaste varianten i villagrunder är villabygeln, där benet är förlängt in i plattan – se guiden om kantbalksbygel." },
       { q: "Hur tätt ska byglar sitta?", a: "Bygelavståndet står på ritningen. Eurokod 2 anger största avstånd 0,75 × d i balkar och i pelare det minsta av 20 × huvudjärnets diameter, pelarens minsta sida och 400 mm." },
-      { q: "Vad är en bygelkorg?", a: "Byglar och längsgående huvudjärn som binds eller svetsas ihop till en färdig korg innan den lyfts på plats i balk, pelare eller kantbalk." },
       { q: "Vilken dimension har armeringsbyglar?", a: "Oftast Ø6–Ø12 mm kamstål B500B, i grövre konstruktioner även Ø16. Rätt dimension står på konstruktionsritningen." },
       { q: "Kan man köpa färdiga armeringsbyglar?", a: "Ja. Ange typform, mått, dimension och antal – eller skicka ritningen – så tillverkar vi byglarna i serie och levererar dem märkta per position i hela Sverige." },
     ],

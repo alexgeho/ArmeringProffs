@@ -129,7 +129,7 @@ const baseServices: Service[] = [
       { q: "Vad är skillnaden mellan bockningsschema och bockningslista?", a: "Ingen. Båda orden betyder en lista över alla armeringspositioner med form, mått, dimension och antal." },
       { q: "Finns det en gratis mall?", a: "Ja, mallen kan laddas ner och fyllas i. Skicka den ifyllda mallen så får du en offert." },
       { q: "Vad ska en bockningslista innehålla?", a: "Positionsnummer, typform, mått per skänkel, dimension (Ø) och antal – gärna även täckskikt och bockningsradie om ritningen anger dem." },
-      { q: "Kan ni göra bockningslistan från min armeringsritning?", a: "Ja. Skicka armeringsritningen så tar vi fram listan och du godkänner den före tillverkning. Eventuell kostnad för det anges i offerten." },
+      { q: "Kan ni göra listan åt mig?", a: "Ja. Skicka konstruktionsritningen så tar vi fram listan och du godkänner den före tillverkning. Eventuell kostnad för det anges i offerten." },
     ],
     resource: { href: "/bockningslista-mall.csv", label: "Ladda ner bockningslista-mall (CSV)" },
   },

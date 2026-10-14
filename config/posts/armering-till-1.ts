@@ -203,7 +203,7 @@ export const armeringTill1: Post[] = [
   {
     slug: "armering-kantbalk",
     title: "Armera kantbalk – kantjärn, hörnjärn och skarvar",
-    metaTitle: "Kantbalksarmering – kantjärn, hörn och skarvar",
+    metaTitle: "Armera kantbalk – kantbalksarmering & skarvar",
     metaDescription:
       "Så armeras en kantbalk i platta på mark: antal och dimension på kantjärn, hörnjärn, skarvlängder och hur byglar och järn bildar en färdig kantbalkskorg.",
     excerpt:
