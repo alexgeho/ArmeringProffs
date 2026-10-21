@@ -23,8 +23,8 @@ const UPDATED = {
   // app/page.tsx, /leverans, /om-oss, /kontakt, /offert, /vanliga-fragor,
   // /omdomen, /armeringskalkylator, /integritetspolicy – senast ändrade 2026-09-08.
   static: "2026-10-14", // startsidans titel, /produkter-intro, /kontakt (2026-10-14)
-  products: "2026-10-14", // config/products.ts + landings (titlar ≤65, 2026-10-14)
-  services: "2026-10-14", // config/services.ts (armeringsritning på bockningslista, 2026-10-14)
+  products: "2026-10-21", // config/products.ts + landings (guider via target, länkar till B2B-sidor 2026-10-21)
+  services: "2026-10-21", // config/services.ts + mall (guider via target, 2026-10-21)
   cities: "2026-10-14", // config/cities.ts (Göteborg: nät/järn-FAQ 2026-10-14)
   tools: "2026-10-14", // /viktkalkylator, /natkalkylator, /forankringslangd (components/SmaKalkylatorer.tsx)
 } as const;

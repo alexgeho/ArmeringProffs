@@ -24,7 +24,7 @@ export const guider1: Post[] = [
     ],
     content: [
       { type: "p", text: "Snabbsvar: ett fullt utnyttjat rakt järn B500B i C25/30 behöver ungefär 40 × Ø vid god vidhäftning – för Ø12 cirka 485 mm. I överkant av höga gjutningar blir det cirka 57 × Ø. Exakt värde räknar konstruktören fram, och det står på ritningen." },
-      { type: "p", text: "Förankringslängden är sträckan järnet måste sitta i betongen för att kraften ska föras över via vidhäftningen. Är den för kort dras järnet ut innan stålet når sin hållfasthet. Får längden inte plats kan änden bockas – vi tillverkar [klippt och bockad armering](/produkter/klippt-och-bockad) med krokar och vinklar exakt enligt ritningen." },
+      { type: "p", text: "Förankringslängden är sträckan järnet måste sitta i betongen för att kraften ska föras över via vidhäftningen. Är den för kort dras järnet ut innan stålet når sin hållfasthet. Får längden inte plats kan änden bockas – vi tillverkar [klippt och bockad armering](/produkter/klippt-och-bockad) med krokar och vinklar exakt enligt ritningen. Räkna förankringslängden för din dimension i [kalkylatorn för förankringslängd](/forankringslangd)." },
 
       { type: "h2", text: "Förankringslängd eller skarvlängd?" },
       { type: "p", text: "Förankringslängd gäller ett järn som ska ”fästas” i betongen, till exempel vid ett upplag eller där en vägg ansluter mot en platta. Skarvlängd gäller två järn som ligger omlott och för över kraften mellan sig. Skarvlängden räknas ut från samma grundvärde men blir oftast längre, eftersom en faktor för andelen skarvade järn tillkommer. Riktvärden för skarvar finns i [skarvlängd och överlapp](/blogg/skarvlangd-armering)." },

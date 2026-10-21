@@ -8,6 +8,7 @@ import { FaqAccordion } from "@/components/FaqAccordion";
 import { JsonLd, serviceSchema, faqSchema, breadcrumbSchema } from "@/lib/jsonld";
 import { renderText } from "@/lib/renderText";
 import { foto } from "@/lib/foto";
+import { relatedGuides } from "@/lib/related";
 
 export const dynamicParams = false;
 
@@ -41,6 +42,7 @@ export default async function LandingPage({
   const l = getLanding(slug);
   if (!l) notFound();
   const url = `${site.url}/${l.slug}`;
+  const guides = relatedGuides(`/${l.slug}`, l.keywords, 3);
 
   return (
     <>
@@ -57,11 +59,26 @@ export default async function LandingPage({
 
       <Section>
         <div className="grid gap-12 lg:grid-cols-[1.4fr_0.6fr]">
-          <div className="prose-body min-w-0">
-            {l.body.map((b) => [
-              <h2 key={`${b.heading}-h`}>{b.heading}</h2>,
-              <p key={`${b.heading}-p`}>{renderText(b.text)}</p>,
-            ])}
+          <div className="min-w-0">
+            <div className="prose-body">
+              {l.body.map((b) => [
+                <h2 key={`${b.heading}-h`}>{b.heading}</h2>,
+                <p key={`${b.heading}-p`}>{renderText(b.text)}</p>,
+              ])}
+            </div>
+
+            {guides.length > 0 && (
+              <Panel className="mt-10">
+                <h2 className="type-h4 text-ink">Guider som hjälper dig vidare</h2>
+                <ul className="mt-3 grid gap-1">
+                  {guides.map((g) => (
+                    <li key={g.slug}>
+                      <ArrowLink href={`/blogg/${g.slug}`} className="min-h-11 font-medium">{g.title}</ArrowLink>
+                    </li>
+                  ))}
+                </ul>
+              </Panel>
+            )}
           </div>
           <aside>
             <Panel sticky>

@@ -61,7 +61,7 @@ export const guider2: Post[] = [
           ["Ø12 c150", "11,8", "118"],
         ],
       },
-      { type: "p", text: "Räknar du åtgång per kvadratmeter i stället för per kubikmeter finns en separat guide om [armeringsåtgång per m²](/blogg/armering-atgang-per-m2). För vikt per dimension, se [armeringsjärn – dimensioner](/blogg/armeringsjarn-dimensioner)." },
+      { type: "p", text: "Räknar du åtgång per kvadratmeter i stället för per kubikmeter finns en separat guide om [armeringsåtgång per m²](/blogg/armering-atgang-per-m2). För vikt per dimension, se [armeringsjärn – dimensioner](/blogg/armeringsjarn-dimensioner). Vikten för en viss dimension och längd räknar du i [viktkalkylatorn](/viktkalkylator)." },
 
       { type: "h2", text: "Vad påverkar armeringsmängden?" },
       { type: "ul", items: [

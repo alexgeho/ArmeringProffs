@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import { products, getProduct } from "@/config/products";
-import { posts } from "@/config/blog";
+import { relatedGuides } from "@/lib/related";
 import { faq } from "@/config/faq";
 import { site } from "@/config/site";
 import { Section, SectionHeading, Button, PageHeader, Panel, CheckList, ArrowLink, Card } from "@/components/ui";
@@ -41,22 +41,6 @@ export async function generateMetadata({
   };
 }
 
-/** Väljer relaterade guider (armering-klustret) utifrån gemensamma sökord. */
-function relatedGuides(keywords: string[], n = 3) {
-  const own = new Set(keywords.flatMap((k) => k.toLowerCase().split(/\s+/)).filter((w) => w.length > 3));
-  return posts
-    .map((post) => {
-      const words = new Set(post.keywords.flatMap((k) => k.toLowerCase().split(/\s+/)));
-      let score = 0;
-      for (const w of own) if (words.has(w)) score++;
-      return { post, score };
-    })
-    .filter((r) => r.score > 0)
-    .sort((a, b) => b.score - a.score)
-    .slice(0, n)
-    .map((r) => r.post);
-}
-
 export default async function ProductPage({
   params,
 }: {
@@ -71,7 +55,7 @@ export default async function ProductPage({
   const url = `${site.url}/produkter/${p.slug}`;
   const others = products.filter((x) => x.slug !== p.slug).slice(0, 4);
   const faqs = p.faqs && p.faqs.length > 0 ? p.faqs : faq;
-  const guides = relatedGuides(p.keywords, 3);
+  const guides = relatedGuides(`/produkter/${p.slug}`, p.keywords, 3);
 
   return (
     <>

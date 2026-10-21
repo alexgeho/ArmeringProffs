@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { services, getService } from "@/config/services";
-import { posts } from "@/config/blog";
+import { relatedGuides } from "@/lib/related";
 import { site } from "@/config/site";
 import { Section, SectionHeading, Container, Button, Panel, CheckList, ArrowLink, Card } from "@/components/ui";
 import { Breadcrumbs, CtaBanner, Process, CityLinks, PhotoHero } from "@/components/sections";
@@ -37,22 +37,6 @@ export async function generateMetadata({
   };
 }
 
-/** Väljer relaterade guider (armering-klustret) utifrån gemensamma sökord. */
-function relatedGuides(keywords: string[], n = 3) {
-  const own = new Set(keywords.flatMap((k) => k.toLowerCase().split(/\s+/)).filter((w) => w.length > 3));
-  return posts
-    .map((post) => {
-      const words = new Set(post.keywords.flatMap((k) => k.toLowerCase().split(/\s+/)));
-      let score = 0;
-      for (const w of own) if (words.has(w)) score++;
-      return { post, score };
-    })
-    .filter((r) => r.score > 0)
-    .sort((a, b) => b.score - a.score)
-    .slice(0, n)
-    .map((r) => r.post);
-}
-
 /** Tjänster som visar ett interaktivt verktyg i stället för hero med formulär. */
 const tools: Record<string, { title: string; text: string; node: React.ReactNode }> = {
   bockningslista: {
@@ -73,7 +57,7 @@ export default async function ServicePage({
 
   const url = `${site.url}/tjanster/${s.slug}`;
   const others = services.filter((x) => x.slug !== s.slug);
-  const guides = relatedGuides(s.keywords, 3);
+  const guides = relatedGuides(`/tjanster/${s.slug}`, s.keywords, 3);
   const tool = tools[s.slug];
 
   return (

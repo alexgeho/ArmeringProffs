@@ -166,7 +166,7 @@ const basePosts: Post[] = [
       { type: "p", text: "Fördjupning per nät: [5150](/blogg/armeringsnat-5150), [6150](/blogg/armeringsnat-6150), [7150](/blogg/armeringsnat-7150), [8150](/blogg/armeringsnat-8150) och [10150](/blogg/armeringsnat-10150). Vikten är bra att ha när du jämför offerter som anges per kilo med offerter per ark eller m². Arean (mm² stål per meter) är det konstruktören räknar med – två nät med samma area är likvärdiga oavsett tråd och ruta." },
 
       { type: "h2", text: "Arkformat" },
-      { type: "p", text: "Standardnät säljs i ark, ofta cirka 2,35 × 5 m. Formatet varierar mellan leverantörer, så kontrollera måtten innan du räknar antal ark. Går arken dåligt ut i plattans mått blir spillet stort – då beställer du nät kapade efter mått eller [specialnät](/produkter/svetsad-armering) med annan tråd eller rutstorlek löna sig." },
+      { type: "p", text: "Standardnät säljs i ark, ofta cirka 2,35 × 5 m. Formatet varierar mellan leverantörer, så kontrollera måtten innan du räknar antal ark. Går arken dåligt ut i plattans mått blir spillet stort – då kan nät kapade efter mått eller [specialnät](/produkter/svetsad-armering) med annan tråd eller rutstorlek löna sig. Antal ark med överlapp räknar du i [nätkalkylatorn](/natkalkylator)." },
 
       { type: "h2", text: "Så väljer du nät" },
       { type: "ul", items: [
@@ -317,7 +317,7 @@ const basePosts: Post[] = [
       ] },
 
       { type: "h2", text: "Skicka ritningen – få offert på poolarmeringen" },
-      { type: "p", text: "Vi tillverkar [poolarmering](/produkter/poolarmering) efter konstruktörens ritning: botten, väggar, hörnjärn och distanser, märkt per position och levererat till bygget i hela Sverige. Saknar du bockningslista tar vi fram den från ritningen. [Begär offert](/offert). Grunderna för plattan finns i [armering till betongplatta](/blogg/armering-till-betongplatta)." },
+      { type: "p", text: "Vi tillverkar [poolarmering](/produkter/poolarmering) efter konstruktörens ritning: botten, väggar, hörnjärn och distanser, märkt per position och levererat till bygget i hela Sverige. Saknar du bockningslista tar vi fram den från ritningen. [Begär offert](/offert). Grunderna för plattan finns i [armering till betongplatta](/blogg/armering-till-betongplatta). Bygger du pooler åt kunder – se [armering för poolbyggare](/armering-for-poolbyggare)." },
       { type: "p", text: "Bygger du pool i [Helsingborg](/armering/helsingborg), [Linköping](/armering/linkoping) eller på annan ort levererar vi poolarmeringen dit." },
     ],
     faqs: [
@@ -1456,7 +1456,7 @@ const basePosts: Post[] = [
         ["Ø20", "800–1 200 mm", "300 mm"],
         ["Ø25", "1 000–1 500 mm", "375 mm"],
       ], caption: "Golvvärdet gäller oavsett beräkning (Eurokod 2 anger också 0,3·α6·lb,rqd som kan bli större), men den beräknade skarvlängden blir nästan alltid betydligt längre. Den verkliga skarvlängden står på ritningen." },
-      { type: "p", text: "I vår [armeringskalkylator](/armeringskalkylator) används 50 × Ø som standard när du räknar kamjärn med skarvar – du kan skriva in skarvlängden från din ritning." },
+      { type: "p", text: "I vår [armeringskalkylator](/armeringskalkylator) används 50 × Ø som standard när du räknar kamjärn med skarvar – du kan skriva in skarvlängden från din ritning. Förankringslängden per dimension räknar du i [kalkylatorn för förankringslängd](/forankringslangd)." },
 
       { type: "h2", text: "Så beräknas skarvlängden enligt Eurokod 2" },
       { type: "p", text: "Först beräknas den erforderliga förankringslängden lb,rqd = (Ø / 4) · (σsd / fbd), där σsd är spänningen i järnet och fbd vidhäftningshållfastheten. Skarvlängden blir sedan l₀ = α1 · α2 · α3 · α5 · α6 · lb,rqd, där α-faktorerna tar hänsyn till bland annat form, täckskikt och andel skarvade järn (α6 = 1,0–1,5)." },
@@ -1556,7 +1556,7 @@ const basePosts: Post[] = [
       { type: "p", text: "Kortare stänger betyder fler skarvar – se [skarvlängd och överlapp](/blogg/skarvlangd-armering)." },
 
       { type: "h2", text: "Armeringsjärn 12 mm – den vanligaste dimensionen" },
-      { type: "p", text: "Ø12 är den dimension som oftast används i villagrunder, kantbalkar och plattor på mark. En 6-metersstång väger drygt 5 kg och ett ton Ø12 motsvarar ungefär 1 125 löpmeter. Behöver du räkna åtgång – antal stänger, löpmeter och vikt – använd [armeringskalkylatorn](/armeringskalkylator)." },
+      { type: "p", text: "Ø12 är den dimension som oftast används i villagrunder, kantbalkar och plattor på mark. En 6-metersstång väger drygt 5 kg och ett ton Ø12 motsvarar ungefär 1 125 löpmeter. Behöver du räkna åtgång – antal stänger, löpmeter och vikt – använd [armeringskalkylatorn](/armeringskalkylator). Bara vikten per dimension och längd? Använd [viktkalkylatorn](/viktkalkylator)." },
 
       { type: "h2", text: "Vad kostar armeringsstål?" },
       { type: "p", text: "Armeringsstål prissätts oftast per ton eller per kilo. Priset följer världsmarknaden för stål och varierar över tid. Därtill påverkas totalpriset av:" },

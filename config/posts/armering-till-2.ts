@@ -103,7 +103,7 @@ export const armeringTill2: Post[] = [
     ],
     content: [
       { type: "p", text: "Ett stallgolv armeras normalt med nät i plattan, grövre armering under foderbord och körgångar och bockade järn i gödselkanalerna. Lika viktigt som mängden är täckskiktet: gödsel och urin angriper både betong och stål."  },
-      { type: "p", text: "Vi levererar armering till lantbruksbyggen direkt till gården – nät, bockade kanaljärn och kantbalksarmering, buntat per byggdel. Se hur vi arbetar som [armeringsleverantör](/armeringsleverantor)."  },
+      { type: "p", text: "Vi levererar armering till lantbruksbyggen direkt till gården – nät, bockade kanaljärn och kantbalksarmering, buntat per byggdel. Se hur vi arbetar med [armering för lantbruk](/armering-for-lantbruk) och som [armeringsleverantör](/armeringsleverantor)."  },
 
       { type: "h2", text: "Delarna i ett stallgolv"  },
       { type: "table", head: ["Del", "Belastning", "Typisk armering"], rows: [

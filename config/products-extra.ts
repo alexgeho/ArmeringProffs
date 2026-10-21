@@ -40,7 +40,7 @@ export const extraProducts: Product[] = [
       },
       {
         heading: "Ritning eller bara mått?",
-        text: "Har du konstruktionsritning räknar vi direkt från den. Har du bara yttermått och tjocklek tar vi fram ett mängdförslag som du stämmer av med konstruktören. Vill du räkna själv först? Testa [armeringskalkylatorn](/armeringskalkylator). Upplägget fungerar lika bra för villa, garage, attefallshus och uterum – se guiden [armering till betongplatta](/blogg/armering-till-betongplatta).",
+        text: "Har du konstruktionsritning räknar vi direkt från den. Har du bara yttermått och tjocklek tar vi fram ett mängdförslag som du stämmer av med konstruktören. Vill du räkna själv först? Testa [armeringskalkylatorn](/armeringskalkylator) eller [nätkalkylatorn](/natkalkylator). Upplägget fungerar lika bra för villa, garage, attefallshus och uterum – se guiden [armering till betongplatta](/blogg/armering-till-betongplatta). Husfabriker får [ett paket per hus](/armering-for-husfabriker).",
       },
       {
         heading: "Kantbalk och vot färdigt bockade",
