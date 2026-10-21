@@ -165,7 +165,8 @@ const baseProducts: Product[] = [
       "fingerskarvnät",
       "armeringsnät efter mått",
       "kapat armeringsnät",
-      "armeringsmatta",
+      "armeringsnät små rutor",
+      "galvaniserat armeringsnät",
     ],
     includes: [
       "Lagernät 5150, 6150, 7150 och 8150",
@@ -193,6 +194,14 @@ const baseProducts: Product[] = [
         text: "Vi kapar näten till valfria mått, så att de går jämnt ut i plattan och du slipper kapa på bygget. Avvikande maskvidd eller tråd? Då tillverkas [specialnät efter mått](/produkter/svetsad-armering). [Kantjärn och byglar](/produkter/klippt-och-bockad) och [distanser](/produkter/distanser) skickas i samma leverans som näten.",
       },
       {
+        heading: "Armeringsnät med små rutor",
+        text: "Lagernäten 5150–8150 har 150 mm ruta. Kräver ritningen tätare ruta tillverkar vi [specialnät](/produkter/svetsad-armering) med den maskvidd och tråd som anges. Till uteplats, förråd och andra mindre plattor räcker oftast ett vanligt 150-nät – se [armeringsmatta till platta och trädgård](/armeringsmatta).",
+      },
+      {
+        heading: "Galvaniserat armeringsnät?",
+        text: "Lagernäten är av vanligt, obehandlat armeringsstål. Ingjutet i betong behöver nätet normalt ingen galvanisering: det basiska porvattnet och ett tillräckligt täckskikt skyddar stålet. Där klorider från havsvatten eller vägsalt angriper konstruktionen föreskriver konstruktören i stället ofta [rostfri armering](/produkter/rostfri-armering). Läs mer i [rostfri armering – när behövs den](/blogg/rostfri-armering).",
+      },
+      {
         heading: "Pris och leverans",
         text: "Priset beror på nättyp, antal och leveransort. Nät, tillbehör och frakt står i samma offert, och frakten räknas efter mängd och ort – ingen fast fraktavgift. [Skicka plattans mått – få offert på näten](/offert).",
       },
@@ -203,6 +212,8 @@ const baseProducts: Product[] = [
       { q: "Kan ni räkna ut hur många nät jag behöver?", a: "Ja. Skicka plattans mått eller ritningen så räknar vi antal nät med överlapp samt kantjärn och distanser, i en samlad offert." },
       { q: "Kan ni kapa armeringsnät efter mått?", a: "Ja. Vi kapar nät till valfria mått efter plattan eller ritningen, så att du får färdiga ark utan kapning på bygget." },
       { q: "Kan jag beställa bara några nät?", a: "Ja. Frakten räknas efter mängd och ort, så även en mindre beställning går att leverera." },
+      { q: "Finns armeringsnät med mindre rutor?", a: "Lagernäten har 150 mm ruta. Tätare ruta tillverkas som specialnät efter ritningens maskvidd och tråd." },
+      { q: "Behöver armeringsnät vara galvaniserat?", a: "Normalt inte när nätet gjuts in i betong – täckskiktet skyddar stålet. I kloridmiljö föreskriver konstruktören ofta rostfri armering i stället." },
       { q: "Levererar ni armeringsnät i hela Sverige?", a: "Ja, även till Norrland. Frakt och leveranstid anges i offerten." },
     ],
   },

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { landings, getLanding } from "@/config/landings";
 import { site } from "@/config/site";
-import { Section, SectionHeading, Panel, CheckList, ArrowLink } from "@/components/ui";
+import { Section, SectionHeading, Panel, CheckList, ArrowLink, DataTable } from "@/components/ui";
 import { Breadcrumbs, CtaBanner, Process, PhotoHero } from "@/components/sections";
 import { FaqAccordion } from "@/components/FaqAccordion";
 import { JsonLd, serviceSchema, faqSchema, breadcrumbSchema } from "@/lib/jsonld";
@@ -61,9 +61,18 @@ export default async function LandingPage({
         <div className="grid gap-12 lg:grid-cols-[1.4fr_0.6fr]">
           <div className="min-w-0">
             <div className="prose-body">
-              {l.body.map((b) => [
+              {l.body.map((b, i) => [
                 <h2 key={`${b.heading}-h`}>{b.heading}</h2>,
                 <p key={`${b.heading}-p`}>{renderText(b.text)}</p>,
+                l.table && l.table.after === i && (
+                  <DataTable
+                    key={`${b.heading}-t`}
+                    className="!mt-6"
+                    head={l.table.head}
+                    rows={l.table.rows}
+                    caption={l.table.caption}
+                  />
+                ),
               ])}
             </div>
 

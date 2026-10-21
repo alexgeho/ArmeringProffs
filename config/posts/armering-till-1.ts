@@ -689,7 +689,7 @@ export const armeringTill1: Post[] = [
       "betongplatta utomhus armering",
     ],
     content: [
-      { type: "p", text: "En gjuten uteplats eller altan på mark är en tunn, oisolerad platta som utsätts för regn, frost och tjäle. Armeringen ska framför allt hålla ihop plattan och begränsa sprickor. Oftast räcker ett lager [armeringsnät](/produkter/armeringsnat) – men bara om underarbetet är rätt gjort." },
+      { type: "p", text: "En gjuten uteplats eller altan på mark är en tunn, oisolerad platta som utsätts för regn, frost och tjäle. Armeringen ska framför allt hålla ihop plattan och begränsa sprickor. Oftast räcker ett lager [armeringsnät](/produkter/armeringsnat) – men bara om underarbetet är rätt gjort. Vi levererar även några få [armeringsmattor](/armeringsmatta) till uteplatsen." },
 
       { type: "h2", text: "Typisk armering till uteplats" },
       { type: "table",

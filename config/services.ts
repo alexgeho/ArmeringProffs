@@ -22,6 +22,8 @@ export type Service = {
   faqs?: Faq[];
   /** Valfri nedladdningsbar resurs (t.ex. bockningslista-mall). */
   resource?: { href: string; label: string };
+  /** Valfri tabell, visas efter body[after]. */
+  table?: { after: number; head: string[]; rows: string[][]; caption?: string };
 };
 
 const baseServices: Service[] = [

@@ -136,7 +136,7 @@ const basePosts: Post[] = [
     excerpt:
       "Vad 5150 och 6150 betyder, vad näten väger per m², vanliga arkformat och vilket nät som brukar väljas till uterum, garage, villagrund och industrigolv.",
     date: "2026-08-31",
-    updated: "2026-10-09",
+    updated: "2026-10-21",
     readingMinutes: 6,
     target: { href: "/produkter/armeringsnat", label: "Beställ armeringsnät" },
     category: "dimensioner",
@@ -149,7 +149,7 @@ const basePosts: Post[] = [
     ],
     content: [
       { type: "p", text: "Ett armeringsnät anges med tråddiameter och rutstorlek. 6150 betyder Ø6 mm tråd med 150 mm mellan trådarna (skrivs även 6x150 eller Ø6 c/c 150). Till uterum och mindre plattor räcker ofta 5150, till garage och villagrund är 6150 vanligast och tyngre golv kräver 8150 eller grövre." },
-      { type: "p", text: "Vi levererar [armeringsnät](/produkter/armeringsnat) i standardformat och kapar nät till valfria mått när arken inte går jämnt ut i plattan." },
+      { type: "p", text: "Vi levererar [armeringsnät](/produkter/armeringsnat) i standardformat och kapar nät till valfria mått när arken inte går jämnt ut i plattan. Nätet kallas också [armeringsmatta](/armeringsmatta)." },
 
       { type: "h2", text: "Storlekar, vikt och användning" },
       { type: "table",

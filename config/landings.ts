@@ -175,6 +175,75 @@ const baseLandings: Landing[] = [
     ],
   },
   {
+    slug: "armeringsmatta",
+    name: "Armeringsmatta",
+    h1: "Armeringsmatta – nät till platta, uteplats och trädgård",
+    metaTitle: "Armeringsmatta – köp nät till platta & trädgård",
+    metaDescription:
+      "Armeringsmatta 5150–8150 till uteplats, förråd, uterum och garage. Vi räknar antal mattor med överlapp och levererar även små beställningar. Begär offert.",
+    intro:
+      "Armeringsmatta är ett annat namn på armeringsnät: svetsade ståltrådar i ett rutnät som gjuts in i betongplattan. Till förråd, uterum och mindre plattor räcker ofta 5150, till garage och villaplatta 6150. Skicka plattans mått så räknar vi antal mattor med överlapp och levererar – även små beställningar.",
+    keywords: [
+      "armeringsmatta",
+      "armeringsmattor",
+      "köpa armeringsmatta",
+      "armeringsmatta 5150",
+      "armeringsmatta 6150",
+      "armeringsnät trädgård",
+      "armeringsmatta uteplats",
+      "armeringsmatta förråd",
+    ],
+    includes: [
+      "Mattor 5150, 6150, 7150 och 8150",
+      "Mattor kapade till plattans mått",
+      "Antal mattor räknat med överlapp",
+      "Distanser i samma leverans",
+      "Även små beställningar",
+      "Frakt efter mängd och ort",
+    ],
+    table: {
+      after: 0,
+      head: ["Matta", "Tråd / ruta", "Vikt kg/m²", "Vanlig användning"],
+      rows: [
+        ["5150", "Ø5 / 150 mm", "2,05", "Uterum, förråd, mindre plattor"],
+        ["6150", "Ø6 / 150 mm", "2,96", "Garageplatta, villaplatta på mark"],
+        ["7150", "Ø7 / 150 mm", "4,03", "Plattor med högre krav på sprickbredd"],
+        ["8150", "Ø8 / 150 mm", "5,27", "Verkstads- och lagergolv, uppfarter"],
+      ],
+      caption: "Teoretiska vikter utan överlapp. Ritningen avgör vilken matta som krävs.",
+    },
+    body: [
+      {
+        heading: "Armeringsmatta eller armeringsnät?",
+        text: "Samma sak. Beteckningen anger tråd och ruta: 6150 är Ø6 mm tråd med 150 mm mellan trådarna. Mattorna säljs i ark, ofta cirka 2,35 × 5 m – formatet varierar mellan leverantörer. Mer om storlekar finns i guiden [armeringsnät – storlekar och mått](/blogg/armeringsnat-storlekar-och-matt).",
+      },
+      {
+        heading: "Armeringsmatta till trädgården",
+        text: "Gjutna ytor i trädgården armeras oftast med ett lager matta: [uteplats och altan](/blogg/armering-uteplats-betong), platta till [friggebod](/blogg/armering-friggebod) eller [attefallshus](/blogg/armering-attefallshus), [uterum](/blogg/armering-uterum) och [carport](/blogg/armering-carport). Mattan ska ligga i betongen på distanser, inte direkt på marken – annars gör den nästan ingen nytta och rostar lätt.",
+      },
+      {
+        heading: "Så många mattor behöver du",
+        text: "Mattorna skarvas med minst två rutors överlapp, för 150-nät ca 300 mm. Antalet ark beror därför på både yta och hur arken går ut i plattans mått. Räkna själv i [nätkalkylatorn](/natkalkylator) eller skicka måtten, så räknar vi antal mattor, distanser och kantjärn åt dig.",
+      },
+      {
+        heading: "Mindre rutor eller annan tråd?",
+        text: "Lagermattorna har 150 mm ruta. Behöver du tätare ruta eller annan tråd tillverkar vi [specialnät efter mått](/produkter/svetsad-armering). Mer om nättyper, fingerskarvnät och korrosionsskydd finns under [armeringsnät](/produkter/armeringsnat).",
+      },
+      {
+        heading: "Pris och leverans",
+        text: "Priset beror på mattyp, antal och leveransort. Frakten räknas efter mängd och ort – ingen fast fraktavgift – så även några få mattor går att leverera, i hela Sverige. [Skicka plattans mått – få offert på mattorna](/offert).",
+      },
+    ],
+    faqs: [
+      { q: "Vad är en armeringsmatta?", a: "Ett armeringsnät: svetsade ståltrådar i ett rutnät som gjuts in i betong för att hålla ihop plattan och begränsa sprickor. Namnen används om samma produkt." },
+      { q: "Vilken armeringsmatta till uteplats eller förråd?", a: "Till uteplats används ofta 5150 eller 6150 i ett lager, till förråd och mindre plattor ofta 5150. Ritningen eller leverantörens anvisning gäller." },
+      { q: "Hur stor är en armeringsmatta?", a: "Ofta cirka 2,35 × 5 m, men formatet varierar mellan leverantörer. Vi kapar också mattor till plattans mått." },
+      { q: "Hur mycket ska armeringsmattor överlappa?", a: "Minst två rutor, för 150-nät ca 300 mm, och skarven najas." },
+      { q: "Kan jag beställa bara några mattor?", a: "Ja. Frakten räknas efter mängd och ort, så även en liten beställning går att leverera." },
+      { q: "Kan mattan läggas direkt på marken?", a: "Nej. Den ska ligga på distanser så att den hamnar i betongen. Distanser kan skickas i samma leverans." },
+    ],
+  },
+  {
     slug: "armering-norrland",
     name: "Armering Norrland",
     h1: "Armering i Norrland – leverans till hela norra Sverige",
