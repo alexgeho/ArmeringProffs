@@ -1,5 +1,8 @@
 # next-level-brief — worklog (2026-09-08)
 
+## 🟢 2026-10-21 — SEO-проход (ветка `seo-2026-10-21`, не задеплоено)
+GSC 28 дн: 312 кл / 12,8K / 2,4 % / поз. 8,3. Сделано: guider на продуктах/услугах/лендингах по target (lib/related.ts); ссылки на сирот (5 B2B-лендингов, 3 калькулятора). 7 городов не в индексе → решение владельца. Отчёт: ~/sites-hub/audits/2026-10-21/armeringproffs.md. После деплоя — Request Indexing по списку оттуда.
+
 ## ▶️ HANDOFF 2026-10-14 — НАЧНИ ОТСЮДА
 **KLART 13–14.10 (всё live):**
 - Validate fix GSC ✅ (Product snippets + Merchant listings — письма «successfully fixed»).
