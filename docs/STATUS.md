@@ -389,3 +389,5 @@ SEO-аудит с фиксами (Service-схема, скрыт фейк-NAP, a
 
 ## 🗒️ Лог сессии 2026-09-01
 HTTPS force-redirect (`proxy.ts`), GA4, SVG-иллюстрации, реальные фото (WebP), hero-форма UX.
+
+- 2026-10-23: korslänk i brödtext /blogg/armering-till-betongplatta/ → https://gjutabetongplatta.se (ankare «gjuta betongplatta»).

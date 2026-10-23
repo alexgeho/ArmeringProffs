@@ -70,7 +70,7 @@ const basePosts: Post[] = [
     ],
     content: [
       { type: "p", text: "En betongplatta på mark armeras nästan alltid med svetsat armeringsnät över hela ytan och kamstål i kantbalken och under bärande väggar. Nätet begränsar sprickor och fördelar lasten, kamstålet tar de koncentrerade lasterna. Dimension och mängd avgör konstruktören, men riktvärdena nedan räcker för att förstå ritningen och räkna ungefärlig åtgång." },
-      { type: "p", text: "Har du ritningen kan du få [grundarmeringen](/produkter/grundarmering) färdig: nät, kantbalksarmering och bockade järn, märkta per position så att varje del går att hitta på bygget." },
+      { type: "p", text: "Har du ritningen kan du få [grundarmeringen](/produkter/grundarmering) färdig: nät, kantbalksarmering och bockade järn, märkta per position så att varje del går att hitta på bygget. Vill du låta någon annan [gjuta betongplatta](https://gjutabetongplatta.se) i Stockholmsområdet kan armeringen ingå i entreprenaden." },
 
       { type: "h2", text: "Det här ingår i armeringen till en platta på mark" },
       { type: "ul", items: [
