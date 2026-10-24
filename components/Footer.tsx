@@ -11,6 +11,7 @@ const footerLinks = [
   { href: "/vanliga-fragor", label: "Vanliga frågor" },
   { href: "/kontakt", label: "Kontakt" },
   { href: "/integritetspolicy", label: "Integritetspolicy" },
+  { href: "/villkor", label: "Villkor" },
 ];
 
 export function Footer() {
