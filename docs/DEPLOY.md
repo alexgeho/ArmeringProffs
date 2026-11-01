@@ -15,7 +15,7 @@
 >    – den behövs inte längre och frigör processer/PMEM på kontot.
 > 4. **PHP mail():** kontrollera att mail() är aktiverat och att `upload_max_filesize` +
 >    `post_max_size` är ≥ 12 MB (bifogad ritning tillåts upp till 10 MB i formuläret).
->    Mottagare/avsändare i `public/sendmail.php` = `offert@armeringproffs.se`.
+>    Mottagare i `public/sendmail.php` = `info@armeringproffs.se` (avsändare `offert@armeringproffs.se`).
 >
 > ### [OWNER] – drift (Inleed shared, samma konto som gjutabetong/byggexp/villatak)
 > - Statik = ingen kallstart, inga zombie-Node-processer, inget nproc-problem längre.

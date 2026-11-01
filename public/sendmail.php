@@ -22,7 +22,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') !== 'POST') {
 }
 
 // --- Konfiguration ---
-$TO   = 'offert@armeringproffs.se';   // mottagare (byt vid behov)
+$TO   = 'info@armeringproffs.se';     // mottagare: info-lådan (vidare till Gmail)
 $FROM = 'offert@armeringproffs.se';   // avsändare på egen domän (krävs för leverans)
 $MAX_FILE_BYTES = 10 * 1024 * 1024;   // 10 MB
 $ALLOWED_EXT = ['pdf','dwg','dxf','xls','xlsx','csv','doc','docx','png','jpg','jpeg','zip'];
