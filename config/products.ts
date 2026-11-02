@@ -437,7 +437,7 @@ const baseProducts: Product[] = [
       },
       {
         heading: "Rakstål, kapat eller bockat",
-        text: "Raka järn i standardlängd passar dig som har egen bockare eller bara ska komplettera. Vill du slippa kapa beställer du järnen kapade till mått. Ska järnen bli byglar, hörnjärn eller kantbalksbyglar gör vi dem som [klippt och bockad armering](/produkter/klippt-och-bockad) efter din lista. För egen bockning i maskin finns även [armering i ringar](/produkter/armering-i-ringar).",
+        text: "Raka järn i standardlängd passar dig som har egen bockare eller bara ska komplettera. Vill du slippa kapa beställer du järnen kapade till mått. Ska järnen bli byglar, hörnjärn eller kantbalksbyglar gör vi dem som [klippt och bockad armering](/produkter/klippt-och-bockad) efter din lista. För egen bockning i maskin finns även [armering i ringar](/produkter/armering-i-ringar). Kapade raka järn används också till [armeringsjärn till staket](/armeringsjarn-staket) i trädgården.",
       },
       {
         heading: "Svart armeringsjärn och ytrost",

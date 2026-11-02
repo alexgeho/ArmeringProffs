@@ -310,7 +310,7 @@ const baseLandings: Landing[] = [
       },
       {
         heading: "Armeringsmatta till trädgården",
-        text: "Gjutna ytor i trädgården armeras oftast med ett lager matta: [uteplats och altan](/blogg/armering-uteplats-betong), platta till [friggebod](/blogg/armering-friggebod) eller [attefallshus](/blogg/armering-attefallshus), [uterum](/blogg/armering-uterum) och [carport](/blogg/armering-carport). Mattan ska ligga i betongen på distanser, inte direkt på marken – annars gör den nästan ingen nytta och rostar lätt.",
+        text: "Gjutna ytor i trädgården armeras oftast med ett lager matta: [uteplats och altan](/blogg/armering-uteplats-betong), platta till [friggebod](/blogg/armering-friggebod) eller [attefallshus](/blogg/armering-attefallshus), [uterum](/blogg/armering-uterum) och [carport](/blogg/armering-carport). Mattan ska ligga i betongen på distanser, inte direkt på marken – annars gör den nästan ingen nytta och rostar lätt. Till staket och insynsskydd används i stället raka järn – se [staket av armeringsjärn](/armeringsjarn-staket).",
       },
       {
         heading: "Så många mattor behöver du",
@@ -332,6 +332,104 @@ const baseLandings: Landing[] = [
       { q: "Hur mycket ska armeringsmattor överlappa?", a: "Minst två rutor, för 150-nät ca 300 mm, och skarven najas." },
       { q: "Kan jag beställa bara några mattor?", a: "Ja. Frakten räknas efter mängd och ort, så även en liten beställning går att leverera." },
       { q: "Kan mattan läggas direkt på marken?", a: "Nej. Den ska ligga på distanser så att den hamnar i betongen. Distanser kan skickas i samma leverans." },
+    ],
+  },
+  {
+    slug: "armeringsjarn-staket",
+    name: "Armeringsjärn till staket",
+    h1: "Armeringsjärn till staket – kamstål kapat till mått",
+    metaTitle: "Armeringsjärn till staket – kapat till mått",
+    metaDescription:
+      "Staket av armeringsjärn: kamstål B500B Ø12–Ø25 i 6 och 12 m eller kapat till mått. Räkna järn per meter staket och få offert med leverans i hela Sverige.",
+    intro:
+      "Ett staket av armeringsjärn – raka kamstänger som står tätt i en rad och får rosta till en jämn brun yta – är både insynsskydd och rabattkant. Vi levererar kamstål B500B i 6 och 12 m eller kapat till dina mått, även bockat, till både privatpersoner och företag i hela Sverige.",
+    keywords: [
+      "armeringsjärn staket",
+      "staket av armeringsjärn",
+      "armeringsjärnsstaket",
+      "armeringsjärn trädgård",
+      "rostigt staket armeringsjärn",
+      "armeringsjärn insynsskydd",
+      "armeringsjärn kapat till mått",
+    ],
+    includes: [
+      "Kamstål B500B Ø12–Ø25",
+      "Rakstål i 6 m och 12 m",
+      "Kapat till staketets mått",
+      "Bockat efter skiss",
+      "Frakt efter mängd och ort",
+      "Leverans i hela Sverige",
+    ],
+    table: {
+      after: 2,
+      head: ["Dimension", "Vikt kg/m", "Järn à 2,0 m", "10 m staket, c/c 100 mm"],
+      rows: [
+        ["Ø12", "0,888", "1,78 kg", "101 järn · 202 m · ca 179 kg"],
+        ["Ø16", "1,58", "3,16 kg", "101 järn · 202 m · ca 319 kg"],
+        ["Ø20", "2,47", "4,94 kg", "101 järn · 202 m · ca 499 kg"],
+        ["Ø25", "3,85", "7,70 kg", "101 järn · 202 m · ca 778 kg"],
+      ],
+      caption: "Nominell vikt enligt 0,00617 × Ø² kg/m. Exemplet: 1,5 m synlig höjd + 0,5 m i fundamentet.",
+    },
+    body: [
+      {
+        heading: "Därför armeringsjärn som staket",
+        text: "Armeringsjärn är stål med kammar – samma kamstål som gjuts in i husgrunder. I trädgården blir de räfflade stängerna ett staket som släpper igenom ljus men bryter insyn, särskilt när man tittar snett längs raden. Järnen rostar till en brun patina utan att du behöver måla dem. De passar som insynsskydd mot uteplatsen, som avgränsning mot grannen, runt en rabatt eller som stöd för klätterväxter. Formen bestämmer du själv: raka järn i jämn höjd, järn i olika höjder som bildar en våg, eller bockade järn som bågar och byglar.",
+      },
+      {
+        heading: "Vilken dimension till staketet?",
+        text: "Vi levererar kamstål B500B i dimensionerna Ø12, Ø16, Ø20 och Ø25 mm som passar till staket, i 6 eller 12 m eller kapat till mått. Klenare järn blir luftigare och lättare att hantera men fjädrar mer när de står fritt. Grövre järn ger ett tyngre uttryck och står styvare, men väger mer och kostar mer per meter. Ju högre staketet är och ju glesare järnen står, desto grövre dimension brukar man välja. Vikt och area för varje dimension finns under [armeringsjärn och kamstål](/produkter/armeringsjarn).",
+      },
+      {
+        heading: "Så räknar du antal järn per meter staket",
+        text: "Antalet järn = staketets längd ÷ avståndet mellan järnens mittlinjer (c/c) + 1. Längden per järn = synlig höjd + den del som ska sitta i fundamentet eller i en bottenregel. Exempel: ett 10 m långt staket med c/c 100 mm ger 10 000 ÷ 100 + 1 = 101 järn. Med 1,5 m synlig höjd och 0,5 m i fundamentet blir varje järn 2,0 m, totalt 202 m. Ett 12 m-järn räcker då till sex bitar à 2,0 m. Tabellen visar vikten för samma staket i olika dimensioner – räkna egna mått i [viktkalkylatorn](/viktkalkylator).",
+      },
+      {
+        heading: "Kapat till mått eller bockat",
+        text: "Du kan köpa rakstål i 6 eller 12 m och kapa själv, men med många järn går det snabbare att beställa dem färdigkapade i rätt längd. Vill du ha bågar, U-formade byglar eller järn med vinklad överdel tillverkar vi dem som [klippt och bockad armering](/produkter/klippt-och-bockad) efter din skiss. Ett U-format järn med båda benen i marken ger en rundad överkant i stället för två vassa ändar. Vill du bocka själv beskriver guiden [bocka armeringsjärn](/blogg/bocka-armeringsjarn) hur det går till.",
+      },
+      {
+        heading: "Rostig patina eller rostfritt",
+        text: "Vanligt kamstål är obehandlat. Ute får det snabbt ytrost, och efter några månader har stängerna ofta en jämn brun yta. Rosten kan färga av sig på stenplattor, betong och ljusa fasader, så planera för ett dränerande grus- eller jordband närmast järnen. Vill du ha en blank yta som inte rostar tar vi fram [rostfri armering](/produkter/rostfri-armering) efter behov. Den kostar mer än vanligt kamstål och kan ha längre leveranstid – båda anges i offerten.",
+      },
+      {
+        heading: "Montera staketet – grunderna",
+        text: "Järnen kan gjutas in i en betongsträng eller i plintar, eller fästas i en bottenregel av stål eller trä. Hur djupt och hur kraftigt fundamentet ska vara beror på höjd, dimension, vind och mark – och på om marken tjälar. Står järnen tätt i ett högt staket tar raden mycket vind, så räkna med det när du dimensionerar fundamentet. Mer om ingjutna stolpar och plintar finns i guiden [armering till stolpfundament](/blogg/armering-till-stolpfundament).",
+        items: [
+          "Spänn ett snöre för rak linje och använd en mall för jämnt c/c-avstånd",
+          "Kontrollera lodet på varje järn innan betongen börjar binda",
+          "Kapade ändar är vassa: slipa av graderna eller sätt skyddshattar på ändarna",
+          "Använd handskar och skyddsglasögon när du kapar och hanterar järnen",
+        ],
+      },
+      {
+        heading: "Bygglov: staket eller plank?",
+        text: "Enligt Boverket kräver ett vanligt staket inte bygglov. Ett staket är oftast lägre och glesare än ett plank eller en mur. Står järnen så tätt att staketet blir ett plank gäller plankreglerna: inom detaljplan behövs inget bygglov om planket är högst 1,8 m och står inom 3,6 m från en byggnad, eller högst 1,2 m och står längre från byggnaden än 3,6 m. Vill du bygga utan bygglov närmare tomtgränsen än 4,5 m behöver du grannens skriftliga medgivande. Kommunen kan ha utökad lovplikt i detaljplanen, och staketet får inte skymma sikten vid utfarter och hörntomter. Fråga byggnadsnämnden i din kommun om du är osäker. Källa: Boverket, [Mur, plank, altan och annat](https://www.boverket.se/sv/byggande/bygglov-rivningslov-marklov-och-anmalan/vad-far-jag-bygga-utan-bygglov/mur-plank-altan-och-annat/).",
+      },
+      {
+        heading: "Armeringsnät i trädgården",
+        text: "Ska du gjuta en uteplats, en platta till förrådet eller en gång i trädgården är det armeringsnät som behövs, inte lösa järn. Mattor, storlekar och hur många du behöver finns under [armeringsmatta till trädgården](/armeringsmatta).",
+      },
+      {
+        heading: "Så beställer du",
+        text: "Skicka en lista eller en enkel skiss via [offertformuläret](/offert). Du får offert med pris, frakt och leveranstid – normalt inom en arbetsdag. Frakten räknas efter mängd och ort, utan fast fraktavgift, och vi levererar i hela Sverige. 12 m-järn kräver plats och oftast hjälp vid lossning, så ange hur leveransadressen nås.",
+        items: [
+          "Dimension, t.ex. Ø16 B500B",
+          "Längd per järn och antal – eller staketets längd, höjd och c/c",
+          "Raka järn eller bockade enligt skiss",
+          "Leveransadress och hur bilen kommer fram",
+        ],
+      },
+    ],
+    faqs: [
+      { q: "Vilken dimension på armeringsjärn passar till staket?", a: "Vi levererar Ø12, Ø16, Ø20 och Ø25 mm. Klenare järn blir luftigare men fjädrar mer; till högre staket väljer man oftast en grövre dimension." },
+      { q: "Hur många armeringsjärn går det åt per meter staket?", a: "Dela längden med c/c-avståndet och lägg till ett. Med c/c 100 mm blir det tio järn per meter plus ett i slutet – 101 järn till ett 10 m staket." },
+      { q: "Kan jag få järnen kapade till rätt längd?", a: "Ja. Vi levererar rakstål i 6 och 12 m eller kapat till de längder du anger. Bågar och byglar bockas efter din skiss." },
+      { q: "Hur lång tid tar det innan järnen rostar?", a: "Obehandlat kamstål får ytrost snabbt utomhus. Hur fort det blir en jämn brun yta beror på väder och läge." },
+      { q: "Färgar rosten av sig?", a: "Ja, rostvatten kan missfärga stenplattor, betong och ljusa fasader. Ett grus- eller jordband närmast järnen minskar problemet." },
+      { q: "Behöver jag bygglov för ett staket av armeringsjärn?", a: "Ett vanligt staket kräver inte bygglov enligt Boverket. Blir det så tätt att det räknas som plank gäller plankreglerna, och kommunen kan ha utökad lovplikt – fråga byggnadsnämnden vid tveksamhet." },
+      { q: "Säljer ni till privatpersoner?", a: "Ja. Skicka mått eller en skiss via offertformuläret så får du offert med pris, frakt och leveranstid." },
+      { q: "Vad kostar frakten?", a: "Frakten räknas efter mängd och leveransort, utan fast fraktavgift, och anges i offerten. Vi levererar i hela Sverige." },
     ],
   },
   {
