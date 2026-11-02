@@ -658,7 +658,7 @@ const basePosts: Post[] = [
     ],
     content: [
       { type: "p", text: "Att beställa armering går till i fyra steg: du skickar underlag, får en offert med pris, frakt och leveranstid, godkänner, och armeringen tillverkas och levereras till bygget. Bästa underlaget är en bockningslista eller konstruktionsritning, men ett foto av en skiss räcker för att starta." },
-      { type: "p", text: "Har du underlaget redo kan du [begära offert](/offert) direkt och bifoga filerna." },
+      { type: "p", text: "Har du underlaget redo kan du [begära offert](/offert) direkt och bifoga filerna. Vad vi levererar som [armeringsleverantör till entreprenörer](/armeringsleverantor) och vad som ingår i [prefabricerad armering](/prefab-armering) står på respektive sida." },
 
       { type: "h2", text: "1. Skicka underlaget" },
       { type: "table",
@@ -1469,7 +1469,7 @@ const basePosts: Post[] = [
         ["6 < Ø ≤ 8,5 mm", "≥ 250 mm", "2"],
         ["8,5 < Ø ≤ 12 mm", "≥ 350 mm", "2"],
       ], caption: "Minsta skarvlängd för fördelningsjärn i armeringsnät enligt SS-EN 1992-1-1 tabell 8.4. Huvudarmeringen i nätet skarvas enligt särskilda regler i avsnitt 8.7.5.1." },
-      { type: "p", text: "Läs mer om nät i guiden [armeringsnät – storlekar och mått](/blogg/armeringsnat-storlekar-och-matt)." },
+      { type: "p", text: "Läs mer om nät i guiden [armeringsnät – storlekar och mått](/blogg/armeringsnat-storlekar-och-matt). Ska du beställa räknar vi antal nät med rätt överlapp åt dig – se [armeringsnät 5150–8150 med leverans](/produkter/armeringsnat)." },
 
       { type: "h2", text: "Så placerar du skarvarna rätt" },
       { type: "ul", items: [

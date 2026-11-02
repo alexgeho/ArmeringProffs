@@ -332,7 +332,7 @@ export const guider1: Post[] = [
 
       { type: "h2", text: "Från ritning till beställning" },
       { type: "p", text: "Ritningen visar var armeringen ska ligga. För att tillverka den behövs en förteckning med varje position: form, mått, Ø och antal. Finns den inte på ritningen måste den tas fram – det är vad som kallas armeringsspecifikation eller bockningslista. Hur en sådan ser ut visar vi i [armeringsspecifikation – exempel](/blogg/armeringsspecifikation-exempel)." },
-      { type: "p", text: "Skicka din ritning (PDF, DWG eller foto) till oss via [armeringsspecifikation](/tjanster/armeringsspecifikation) eller [offertformuläret](/offert). Vi tar fram specifikationen, du godkänner den och vi tillverkar, märker per position och levererar i hela Sverige." },
+      { type: "p", text: "Skicka din ritning (PDF, DWG eller foto) till oss via [armeringsspecifikation](/tjanster/armeringsspecifikation) eller [offertformuläret](/offert). Vi tar fram specifikationen, du godkänner den och vi tillverkar, märker per position och levererar i hela Sverige. Mer om tillverkningen: [klippt och bockad armering efter ritning](/produkter/klippt-och-bockad) och [prefabricerade armeringskorgar och nät](/prefab-armering)." },
     ],
     faqs: [
       { q: "Vad betyder s150 på en armeringsritning?", a: "s150 betyder att järnen ligger med 150 mm centrumavstånd (c/c). Ø12 s150 är alltså 12 mm kamstål med 150 mm mellan järnens mitt." },
@@ -558,7 +558,7 @@ export const guider1: Post[] = [
     ],
     content: [
       { type: "p", text: "I svenska bockningslistor beskrivs armeringens form med en bokstavskod – en typform. I stället för att rita varje järn skriver man formens bokstav och måtten a, b, c och så vidare. Tillverkaren vet då exakt hur järnet ska bockas. Koderna är svensk branschpraxis och används av konstruktörer, armerare och bockverkstäder." },
-      { type: "p", text: "Alla former finns med figur och måttfält i vårt verktyg för [bockningslista](/tjanster/bockningslista). Har du bara ritningen tar vi fram [armeringsspecifikationen åt dig](/tjanster/armeringsspecifikation) – med rätt typform för varje position." },
+      { type: "p", text: "Alla former finns med figur och måttfält i vårt verktyg för [bockningslista](/tjanster/bockningslista). Vill du slippa bocka själv tillverkar vi alla typformer som [klippt och bockad armering efter bockningslista](/produkter/klippt-och-bockad). Har du bara ritningen tar vi fram [armeringsspecifikationen åt dig](/tjanster/armeringsspecifikation) – med rätt typform för varje position." },
 
       { type: "figure", illustration: "bending-shapes", caption: "Några vanliga typformer: rak stång, vinkel, U-järn och sluten bygel." },
 

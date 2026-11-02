@@ -3,7 +3,7 @@
 import json,os,re,sys,time,io,urllib.request,urllib.error
 from concurrent.futures import ThreadPoolExecutor
 from PIL import Image
-OUT='/Users/alexandergerhard/Armeringproffs/public/images/foto'
+OUT=os.path.join(os.path.dirname(os.path.abspath(__file__)),'..','public','images','foto')  # repo-relativ (fungerar i worktrees)
 tok=os.environ.get('REPLICATE_API_TOKEN') or re.search(r"REPLICATE_API_TOKEN=['\"]?([^'\"\n]+)",open(os.path.expanduser('~/.zshrc')).read()).group(1)
 STYLE=(", professional documentary construction photography, Sweden, natural soft overcast daylight, realistic photo, "
        "35mm lens, shallow depth of field, sharp detail on the steel reinforcement, no people, no text, no logos, no watermark")

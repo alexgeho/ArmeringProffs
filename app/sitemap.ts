@@ -22,8 +22,8 @@ export const dynamic = "force-static";
 const UPDATED = {
   // app/page.tsx, /leverans, /om-oss, /kontakt, /offert, /vanliga-fragor,
   // /omdomen, /armeringskalkylator, /integritetspolicy – senast ändrade 2026-09-08.
-  static: "2026-10-14", // startsidans titel, /produkter-intro, /kontakt (2026-10-14)
-  products: "2026-10-21", // config/products.ts + landings (guider via target, länkar till B2B-sidor 2026-10-21)
+  static: "2026-11-02", // startsidan: titel + sortiment-text + B2B-block (2026-11-02)
+  products: "2026-11-02", // config/products.ts + landings (våg 2026-11-02: klippt-och-bockad, armeringsjarn, armeringsnat, prefab-armering, armeringsleverantor)
   services: "2026-10-21", // config/services.ts + mall (guider via target, 2026-10-21)
   cities: "2026-10-14", // config/cities.ts (Göteborg: nät/järn-FAQ 2026-10-14)
   tools: "2026-10-14", // /viktkalkylator, /natkalkylator, /forankringslangd (components/SmaKalkylatorer.tsx)

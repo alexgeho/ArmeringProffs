@@ -7,6 +7,7 @@
  */
 
 import type { Faq } from "@/config/faq";
+import type { BodySection } from "@/components/BodySections";
 import { extraServices } from "@/config/services-extra";
 
 export type Service = {
@@ -18,7 +19,7 @@ export type Service = {
   intro: string;
   keywords: string[];
   includes: string[];
-  body: { heading: string; text: string }[];
+  body: BodySection[];
   faqs?: Faq[];
   /** Valfri nedladdningsbar resurs (t.ex. bockningslista-mall). */
   resource?: { href: string; label: string };

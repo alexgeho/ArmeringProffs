@@ -122,6 +122,12 @@ Höger: bilden fyller **hela blockets höjd** – överkant = eyebrow, underkant
 - ❌ Långa stycken + bocklista i 2 kolumner.
 - Text + panel (t.ex. `LeveransSection`): `items-start`.
 
+### Brödtext på produkt-/landningssidor (`components/BodySections.tsx`)
+`body: BodySection[]` i config → `bodyNodes(body)` i en `prose-body`. Varje avsnitt: `heading` + `text` och valfritt
+`items` (bocklista, samma som i guiderna), `table` (DataTable) och `image` (foto 16:9 från `public/images/foto`, rundad `rounded-panel`).
+- ✅ Foto i löptext = helbredd i textkolumnen under avsnittet (som i guiderna) – inte MediaSplit.
+- ❌ Fler än ett foto per två–tre avsnitt.
+
 ### SectionHeading, PageHeader, Section
 - `Section` – `muted` (surface), `narrow` (max-w-3xl, centrerad), `id`. Varannan sektion muted; två muted i rad = ❌.
 - `SectionHeading eyebrow title intro center as="h1|h2"`.

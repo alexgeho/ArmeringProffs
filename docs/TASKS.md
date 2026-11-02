@@ -1,2 +1,5 @@
 - [x] 2026-11-02 Блоки «текст + картинка» (напр. /om-oss): привести к дизайн-системе
 - [x] 2026-11-02 Фото в блоке «текст + картинка» — на всю высоту блока
+- [x] 2026-11-02 Волна коммерческих страниц (длинные, сильные): /produkter/klippt-och-bockad, /prefab-armering, /armeringsleverantor, /produkter/armeringsjarn, /produkter/armeringsnat, / — тексты, FAQ, фото Replicate, ссылки блог→страница (ветка wave-2026-11-02)
+- [x] 2026-11-02 Gap-анализ KP → docs/kp/gap-2026-11-02.md
+- [ ] [OWNER] Решить: продаём ли стальные балки (H/I/U/HEA) и прутья «под забор» (armeringsjärn staket 1K–10K)

@@ -13,7 +13,7 @@ import { IconArrow, IconPhone } from "@/components/icons";
 import {
   JsonLd, serviceSchema, faqSchema, breadcrumbSchema,
 } from "@/lib/jsonld";
-import { renderText } from "@/lib/renderText";
+import { bodyNodes } from "@/components/BodySections";
 import { foto } from "@/lib/foto";
 
 export function generateStaticParams() {
@@ -94,10 +94,7 @@ export default async function ProductPage({
               </figure>
             )}
             <div className="prose-body">
-              {p.body.map((b) => [
-                <h2 key={`${b.heading}-h`}>{b.heading}</h2>,
-                <p key={`${b.heading}-p`}>{renderText(b.text)}</p>,
-              ])}
+              {bodyNodes(p.body)}
             </div>
 
             <Panel className="mt-10">

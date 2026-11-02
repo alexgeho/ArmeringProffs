@@ -6,7 +6,7 @@ import { Section, SectionHeading, Panel, CheckList, ArrowLink, DataTable } from 
 import { Breadcrumbs, CtaBanner, Process, PhotoHero } from "@/components/sections";
 import { FaqAccordion } from "@/components/FaqAccordion";
 import { JsonLd, serviceSchema, faqSchema, breadcrumbSchema } from "@/lib/jsonld";
-import { renderText } from "@/lib/renderText";
+import { bodyNodes } from "@/components/BodySections";
 import { foto } from "@/lib/foto";
 import { relatedGuides } from "@/lib/related";
 
@@ -61,19 +61,17 @@ export default async function LandingPage({
         <div className="grid gap-12 lg:grid-cols-[1.4fr_0.6fr]">
           <div className="min-w-0">
             <div className="prose-body">
-              {l.body.map((b, i) => [
-                <h2 key={`${b.heading}-h`}>{b.heading}</h2>,
-                <p key={`${b.heading}-p`}>{renderText(b.text)}</p>,
+              {bodyNodes(l.body, (i) =>
                 l.table && l.table.after === i && (
                   <DataTable
-                    key={`${b.heading}-t`}
+                    key={`${i}-lt`}
                     className="!mt-6"
                     head={l.table.head}
                     rows={l.table.rows}
                     caption={l.table.caption}
                   />
                 ),
-              ])}
+              )}
             </div>
 
             {guides.length > 0 && (
