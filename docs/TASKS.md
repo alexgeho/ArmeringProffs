@@ -10,3 +10,4 @@
 - Stålbalkar (h/i/u/HEA-balk): inte nu (ägaren 02.11).
 - [x] Sida /armeringsjarn-staket — live 02.11
 - [x] 2026-11-02 Новая страница /armeringsjarn-staket (armeringsjärn staket 1K–10K): лендинг, расчёт прутьев на метр, Boverket staket/plank, FAQ 8, фото Replicate; ссылки с /armeringsmatta и /produkter/armeringsjarn (ветка staket-2026-11-02)
+- [ ] Формы (владелец 02.11): заголовок одной строкой + сразу поля; без подзаголовков/предзаполненного текста (расчёт → скрытое поле); отдельные поля E-post (обязательно) и Telefon (не обязательно)
