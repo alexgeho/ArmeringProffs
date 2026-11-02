@@ -1,5 +1,19 @@
 # next-level-brief — worklog (2026-09-08)
 
+## ▶️ HANDOFF 2026-11-02 — НАЧНИ ОТСЮДА
+**KLART (всё live):**
+- 22.10–01.11 (не было в логе): `/armeringsmatta` + armeringsnät (små rutor, galvaniserat) `4df72a3`; IndexNow key `1cca9cb`; ссылка на gjutabetongplatta.se из armering-till-betongplatta `e603210`; новая страница `/villkor` (футер + sitemap) `74a87cc`; заявки с формы теперь идут на **info@armeringproffs.se** `ac934e4`.
+- 02.11: блоки «текст + картинка» по дизайн-системе — новый компонент `MediaSplit` + `SplitImage` (`components/ui.tsx`): слева заголовок → короткий lead → CheckList в 1 колонку, справа фото **на всю высоту блока** (от eyebrow до последней строки), на мобильном 3:2 под текстом. Применено: /om-oss, интро на главной; `LeveransSection` → `items-start`. Правило записано в `docs/DESIGN-SYSTEM.md` (раздел MediaSplit).
+**🔜 NÄSTA STEG (по порядку):**
+1. Проверить скриншотом главную (интро-иллюстрация в MediaSplit на всю высоту — не обрезаны ли края, `object-cover`) и /om-oss на мобильном 375 px (окно Chrome не ресайзится — через DevTools device mode или телефон владельца).
+2. Остальные «текст + блок» на `MediaSplit`: /omdomen (noindex, низкий приоритет), PhotoHero/лендинги — посмотреть, есть ли ещё фото с пустотой рядом.
+3. Проверить, что письма с формы реально приходят на info@ (после `ac934e4`) — тестовая заявка + Roundcube.
+4. GSC-срез (28 дн) + CTR titles от 08.10/13–14.10 (просрочено с ~27.10); Request Indexing: /armeringsmatta, /villkor, blogg/klippt-bockad-armering, blogg/armeringsstal, produkter/klippt-och-bockad, produkter/armeringsjarn (только «not on Google»).
+5. Google Business Profile + каталоги (hitta, eniro, allabolag) — после ответа владельца по телефону/адресу.
+**ЖДЁМ [OWNER]:** Google Ads 3–5 тыс. kr/мес — да/нет; главный телефон (Juri +46 72 858 99 75 или Александр +46 70 757 75 75); адрес для GBP; реальные отзывы/референсы; бесплатна ли armeringsspecifikation.
+**Правило владельца:** любая правка дизайна → сразу в `docs/DESIGN-SYSTEM.md` и во все такие же места сайта.
+
+
 ## 🟢 2026-10-21 — SEO-проход (ветка `seo-2026-10-21`, не задеплоено)
 GSC 28 дн: 312 кл / 12,8K / 2,4 % / поз. 8,3. Сделано: guider на продуктах/услугах/лендингах по target (lib/related.ts); ссылки на сирот (5 B2B-лендингов, 3 калькулятора). 7 городов не в индексе → решение владельца. Отчёт: ~/sites-hub/audits/2026-10-21/armeringproffs.md. После деплоя — Request Indexing по списку оттуда.
 
