@@ -342,7 +342,7 @@ const baseLandings: Landing[] = [
     metaDescription:
       "Staket av armeringsjärn: kamstål B500B Ø12–Ø25 i 6 och 12 m eller kapat till mått. Räkna järn per meter staket och få offert med leverans i hela Sverige.",
     intro:
-      "Ett staket av armeringsjärn – raka kamstänger som står tätt i en rad och får rosta till en jämn brun yta – är både insynsskydd och rabattkant. Vi levererar kamstål B500B i 6 och 12 m eller kapat till dina mått, även bockat, till privatpersoner i hela Sverige.",
+      "Ett staket av armeringsjärn – raka kamstänger som står tätt i en rad och får rosta till en jämn brun yta – är både insynsskydd och rabattkant. Vi levererar kamstål B500B i 6 och 12 m eller kapat till dina mått, även bockat, till både privatpersoner och företag i hela Sverige.",
     keywords: [
       "armeringsjärn staket",
       "staket av armeringsjärn",
@@ -382,7 +382,7 @@ const baseLandings: Landing[] = [
       },
       {
         heading: "Så räknar du antal järn per meter staket",
-        text: "Antalet järn = staketets längd ÷ avståndet mellan järnens mittlinjer (c/c) + 1. Längden per järn = synlig höjd + den del som ska sitta i fundamentet eller i en bottenregel. Exempel: ett 10 m långt staket med c/c 100 mm ger 10 000 ÷ 100 + 1 = 101 järn. Med 1,5 m synlig höjd och 0,5 m i fundamentet blir varje järn 2,0 m, totalt 202 m. Ett 12 m-järn räcker då till sex bitar utan spill. Tabellen visar vikten för samma staket i olika dimensioner – räkna egna mått i [viktkalkylatorn](/viktkalkylator).",
+        text: "Antalet järn = staketets längd ÷ avståndet mellan järnens mittlinjer (c/c) + 1. Längden per järn = synlig höjd + den del som ska sitta i fundamentet eller i en bottenregel. Exempel: ett 10 m långt staket med c/c 100 mm ger 10 000 ÷ 100 + 1 = 101 järn. Med 1,5 m synlig höjd och 0,5 m i fundamentet blir varje järn 2,0 m, totalt 202 m. Ett 12 m-järn räcker då till sex bitar à 2,0 m. Tabellen visar vikten för samma staket i olika dimensioner – räkna egna mått i [viktkalkylatorn](/viktkalkylator).",
       },
       {
         heading: "Kapat till mått eller bockat",
@@ -390,7 +390,7 @@ const baseLandings: Landing[] = [
       },
       {
         heading: "Rostig patina eller rostfritt",
-        text: "Vanligt kamstål är obehandlat. Ute får det snabbt ytrost, och efter några månader har stängerna ofta en jämn brun yta. Rosten kan färga av sig på stenplattor, betong och ljusa fasader, så planera för ett dränerande grus- eller jordband närmast järnen. Vill du ha en blank yta som inte rostar tar vi fram [rostfri armering](/produkter/rostfri-armering) efter behov. Den kostar flera gånger mer än vanligt kamstål och kan ha längre leveranstid, som anges i offerten.",
+        text: "Vanligt kamstål är obehandlat. Ute får det snabbt ytrost, och efter några månader har stängerna ofta en jämn brun yta. Rosten kan färga av sig på stenplattor, betong och ljusa fasader, så planera för ett dränerande grus- eller jordband närmast järnen. Vill du ha en blank yta som inte rostar tar vi fram [rostfri armering](/produkter/rostfri-armering) efter behov. Den kostar mer än vanligt kamstål och kan ha längre leveranstid – båda anges i offerten.",
       },
       {
         heading: "Montera staketet – grunderna",
@@ -404,7 +404,7 @@ const baseLandings: Landing[] = [
       },
       {
         heading: "Bygglov: staket eller plank?",
-        text: "Enligt Boverket kräver ett vanligt staket inte bygglov. Ett staket kännetecknas av att det oftast inte är lika högt som ett plank och inte är lika tätt som ett plank eller en mur. Står järnen så tätt att staketet blir ett plank gäller plankreglerna: inom detaljplan behövs inget bygglov om planket är högst 1,8 m och står inom 3,6 m från en byggnad, eller högst 1,2 m och står längre från byggnaden än 3,6 m. Vill du bygga utan bygglov närmare tomtgränsen än 4,5 m behöver du grannens skriftliga medgivande. Kommunen kan ha utökad lovplikt i detaljplanen, och staketet får inte skymma sikten vid utfarter och hörntomter. Fråga byggnadsnämnden i din kommun om du är osäker. Källa: Boverket, [Mur, plank, altan och annat](https://www.boverket.se/sv/byggande/bygglov-rivningslov-marklov-och-anmalan/vad-far-jag-bygga-utan-bygglov/mur-plank-altan-och-annat/).",
+        text: "Enligt Boverket kräver ett vanligt staket inte bygglov. Ett staket är oftast lägre och glesare än ett plank eller en mur. Står järnen så tätt att staketet blir ett plank gäller plankreglerna: inom detaljplan behövs inget bygglov om planket är högst 1,8 m och står inom 3,6 m från en byggnad, eller högst 1,2 m och står längre från byggnaden än 3,6 m. Vill du bygga utan bygglov närmare tomtgränsen än 4,5 m behöver du grannens skriftliga medgivande. Kommunen kan ha utökad lovplikt i detaljplanen, och staketet får inte skymma sikten vid utfarter och hörntomter. Fråga byggnadsnämnden i din kommun om du är osäker. Källa: Boverket, [Mur, plank, altan och annat](https://www.boverket.se/sv/byggande/bygglov-rivningslov-marklov-och-anmalan/vad-far-jag-bygga-utan-bygglov/mur-plank-altan-och-annat/).",
       },
       {
         heading: "Armeringsnät i trädgården",
@@ -423,7 +423,7 @@ const baseLandings: Landing[] = [
     ],
     faqs: [
       { q: "Vilken dimension på armeringsjärn passar till staket?", a: "Vi levererar Ø12, Ø16, Ø20 och Ø25 mm. Klenare järn blir luftigare men fjädrar mer; till högre staket väljer man oftast en grövre dimension." },
-      { q: "Hur många armeringsjärn går det åt per meter staket?", a: "Dela längden med c/c-avståndet och lägg till ett. Med c/c 100 mm blir det tio järn per meter plus ett i änden – 101 järn till ett 10 m staket." },
+      { q: "Hur många armeringsjärn går det åt per meter staket?", a: "Dela längden med c/c-avståndet och lägg till ett. Med c/c 100 mm blir det tio järn per meter plus ett i slutet – 101 järn till ett 10 m staket." },
       { q: "Kan jag få järnen kapade till rätt längd?", a: "Ja. Vi levererar rakstål i 6 och 12 m eller kapat till de längder du anger. Bågar och byglar bockas efter din skiss." },
       { q: "Hur lång tid tar det innan järnen rostar?", a: "Obehandlat kamstål får ytrost snabbt utomhus. Hur fort det blir en jämn brun yta beror på väder och läge." },
       { q: "Färgar rosten av sig?", a: "Ja, rostvatten kan missfärga stenplattor, betong och ljusa fasader. Ett grus- eller jordband närmast järnen minskar problemet." },
