@@ -1,5 +1,10 @@
 # next-level-brief — worklog (2026-09-08)
 
+## 🟢 2026-11-02 — GSC-срез
+- GSC 28 дн (по 31.10): 433 кл / 19,8K / CTR 2,2 % / поз. 8,0 (21.10: 312 / 12,8K). Индекс 145 / нет 43 (22 redirect, 19 Discovered).
+- /armeringsmatta, /villkor, blogg/klippt-bockad-armering, blogg/armeringsstal — уже в индексе (п. 4 NÄSTA закрыт).
+- Трафик почти весь из блога (skarvlängd, läsa ritning, bocka) → коммерция слабая; рычаг = GBP + каталоги (ждём телефон/адрес владельца).
+
 ## ▶️ HANDOFF 2026-11-02 — НАЧНИ ОТСЮДА
 **KLART (всё live):**
 - 22.10–01.11 (не было в логе): `/armeringsmatta` + armeringsnät (små rutor, galvaniserat) `4df72a3`; IndexNow key `1cca9cb`; ссылка на gjutabetongplatta.se из armering-till-betongplatta `e603210`; новая страница `/villkor` (футер + sitemap) `74a87cc`; заявки с формы теперь идут на **info@armeringproffs.se** `ac934e4`.
