@@ -73,7 +73,7 @@ export const armeringTill1: Post[] = [
       { type: "h2", text: "Exempel: villa på platta, 10 × 12 m" },
       { type: "p", text: "Så kan armeringen se ut för en enplansvilla på 120 m² med nät 5150 och 2 + 2 kantjärn Ø12. Siffrorna visar storleksordningen – din ritning ger de verkliga mängderna." },
       { type: "table",
-        caption: "Räkneexempel före skarvar och spill. Vikter: nät 5150 ca 2,05 kg/m², Ø12 0,888 kg/m.",
+        caption: "Räkneexempel före skarvar och spill. Vikter: nät 5150 ca 2,06 kg/m², Ø12 0,888 kg/m.",
         head: ["Position", "Mängd", "Vikt ca"],
         rows: [
           ["Nät 5150 i plattan", "ca 135 m² inkl. överlapp", "275 kg"],
@@ -1013,7 +1013,7 @@ export const armeringTill1: Post[] = [
           ["Najtråd", "en rulle", "–"],
         ],
       },
-      { type: "p", text: "Med nät 5150 (ca 2,05 kg/m²) blir nätet cirka 35 kg. Räkna själv i [armeringskalkylatorn](/armeringskalkylator)." },
+      { type: "p", text: "Med nät 5150 (ca 2,06 kg/m²) blir nätet cirka 35 kg. Räkna själv i [armeringskalkylatorn](/armeringskalkylator)." },
 
       { type: "h2", text: "Platta eller plintar?" },
       { type: "p", text: "Plintar är snabbare och kräver mindre betong, och golvet blir av trä. En gjuten platta ger ett tåligt golv som klarar gräsklippare, verktyg och fukt bättre. Den kräver mer markarbete och ett ordentligt bärlager. Står boden på mark med tjälrisk är markisolering runt plattan ett billigt skydd mot att plattan lyfts och spricker." },

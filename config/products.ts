@@ -71,21 +71,6 @@ const baseProducts: Product[] = [
           "Kramlor, S-hakar och förankringsjärn",
           "Specialformer enligt typformerna A–XX och [3D-bockning](/produkter/3d-bockning)",
         ],
-        image: {
-          src: "/images/foto/klippt-och-bockad-buntar.webp",
-          alt: "Buntar med färdigbockade byglar i kamstål på pall, märkta per position",
-        },
-      },
-      {
-        heading: "Så beställer du – från lista till leverans",
-        text: "Hela flödet går via offert, så att du vet pris, frakt och leveranstid innan något tillverkas.",
-        items: [
-          "Skicka bockningslista, ritning eller ett foto av skissen via [offertformuläret](/offert).",
-          "Vi stämmer av mått, typformer och antal och hör av oss om något saknas.",
-          "Du får offert med pris, frakt till din ort och leveranstid – normalt inom en arbetsdag.",
-          "Efter godkänd offert kapar och bockar vi, märker och buntar per position.",
-          "Armeringen levereras till bygget, i ett slag eller i etapper.",
-        ],
       },
       {
         heading: "Det här behöver vi för en offert",
@@ -94,6 +79,10 @@ const baseProducts: Product[] = [
       {
         heading: "Märkning som sparar tid på bygget",
         text: "Varje bunt får en etikett med positionsnummer, dimension, form och antal – samma nummer som på ritningen. Buntarna sorteras per element eller etapp, så att det som ska läggas först ligger överst. Kontrollen före gjutning går snabbare när varje detalj kan stämmas av mot listan, se checklistan [kontroll av armering före gjutning](/blogg/kontroll-fore-gjutning-armering).",
+        image: {
+          src: "/images/foto/klippt-och-bockad-buntar.webp",
+          alt: "Bunt med kapade armeringsjärn på pall, märkt med en orange etikett",
+        },
       },
       {
         heading: "Bockningsdiameter enligt Eurokod 2",
@@ -130,27 +119,15 @@ const baseProducts: Product[] = [
         text: "Samma tillverkning passar en enskild garageplatta och ett flerbostadshus. För platta på mark levererar vi kantbalksbyglar och hörnjärn tillsammans med nät och distanser som [grundarmering](/produkter/grundarmering). Entreprenörer får leveranser per etapp, se [armeringsleverantör](/armeringsleverantor). Behöver du också folk på plats utför vi [armeringsmontage](/tjanster/armeringsmontage) i hela Sverige.",
       },
       {
-        heading: "Vad påverkar priset?",
-        text: "Två listor med samma vikt kan få olika pris. Det här styr:",
-        items: [
-          "Total vikt per dimension – stålet är den största posten",
-          "Antal kap och bockningar – många små byglar kräver mer arbete än raka järn",
-          "Antal positioner och typformer i listan",
-          "Mängd och leveransort, som avgör frakten",
-          "Om leveransen delas upp i etapper",
-        ],
-      },
-      {
         heading: "När leveransen kommer",
         text: "Se till att bilen kan komma fram och att det finns en plan, fast yta att lägga buntarna på. Lägg armeringen på trästöd, inte direkt på marken, och håll buntarna sorterade per position tills de ska monteras – då är rätt bunt lätt att hitta. Långa och tunga buntar lossas med kran; ange i förfrågan om det finns kran på plats. Mer i [lagring och hantering av armering](/blogg/lagring-hantering-armering).",
       },
       {
         heading: "Pris, frakt och leverans i hela Sverige",
-        text: "Priset styrs av vikt per dimension och hur många kap och bockningar listan innehåller. Frakten räknas efter mängd och ort, utan fast fraktavgift – även mindre order blir rimliga. Vi levererar i hela landet, även till [Norrland](/armering-norrland). [Skicka bockningslistan och få offert](/offert) med pris och leveranstid.",
+        text: "Priset styrs av vikten per dimension, antalet kap och bockningar, antalet positioner i listan och om leveransen delas upp i etapper. Frakten räknas efter mängd och ort, utan fast fraktavgift – även mindre order blir rimliga. Vi levererar i hela landet, även till [Norrland](/armering-norrland). [Skicka bockningslistan och få offert](/offert) med pris och leveranstid.",
       },
     ],
     faqs: [
-      { q: "Vad är klippt och bockad armering?", a: "Kamstål som kapas till rätt längd och bockas till rätt form i verkstad efter bockningslista eller ritning. Det levereras märkt per position, klart att läggas i formen." },
       { q: "Vad är ILF-armering?", a: "ILF betyder inläggningsfärdig armering: kapad, bockad, märkt och buntad per position efter bockningslista, klar att läggas i formen. Det är samma sak som klippt och bockad armering." },
       { q: "Kan ni tillverka om jag inte har någon bockningslista?", a: "Ja. Skicka konstruktionsritningen så tar vi fram listan. Du godkänner den innan något tillverkas." },
       { q: "Räcker ett foto av en skiss?", a: "Ja, för att komma igång. Vi stämmer av mått och antal med dig innan offerten blir slutlig." },
@@ -280,13 +257,13 @@ const baseProducts: Product[] = [
         heading: "Distanser till armeringsnät",
         text: "Nätet ska ligga i betongen, inte på marken. Distanserna ger rätt täckskikt – mot cellplast i platta på mark anger ritningen ofta 25–35 mm. Ett vanligt riktvärde är distanser c/c 0,6–1,0 m i båda riktningar, tätare där man går mycket och för klena nät som lätt sviktar. Vi skickar [distanser](/produkter/distanser) och [najtråd](/produkter/najtrad-och-tillbehor) i samma leverans som näten. Läs mer i [distanser och täckskikt](/blogg/distanser-tackskikt-armering).",
         image: {
-          src: "/images/foto/armeringsnat-pa-distanser.webp",
-          alt: "Armeringsnät med överlapp på distanser över cellplast i formen till en platta på mark",
+          src: "/images/foto/armeringsnat-platta-pa-mark.webp",
+          alt: "Armeringsnät över cellplast i formen till en stor platta på mark, klar för gjutning",
         },
       },
       {
         heading: "Ett eller två nätlager?",
-        text: "En villaplatta på mark har ofta ett nät i överkant. Plattor med punktlaster, golvvärme i flera lager eller krav på liten sprickbredd kan kräva två lager – ett i underkant och ett i överkant, hållna isär med distanser eller stolar. När det behövs beskriver [dubbelt armeringsnät](/blogg/dubbelt-armeringsnat).",
+        text: "En villaplatta på mark har ofta ett nät i överkant. Plattor med punktlaster, golvvärme i flera lager eller krav på liten sprickbredd kan kräva två lager – ett i underkant och ett i överkant, hållna isär med distanser eller stolar. När det behövs står i guiden [dubbelt armeringsnät](/blogg/dubbelt-armeringsnat).",
       },
       {
         heading: "När lagernät inte passar",
@@ -303,6 +280,7 @@ const baseProducts: Product[] = [
       {
         heading: "Så beställer du armeringsnät",
         text: "Du behöver inte räkna ut antalet själv – skicka plattans mått så gör vi det.",
+        ordered: true,
         items: [
           "Skicka plattans yttermått eller ritningen via [offertformuläret](/offert).",
           "Ange nättyp om den står på ritningen, annars vad plattan ska bära.",
@@ -458,7 +436,7 @@ const baseProducts: Product[] = [
         text: "12 m ger färre skarvar i långa plattor och balkar men kräver plats och oftast lyft vid lossning. 6 m bärs för hand och passar trånga tomter. En 12 m Ø12 väger ca 10,7 kg och en 12 m Ø16 ca 19 kg – samma järn i 6 m väger hälften. Varje skarv kostar en överlappslängd stål; hur lång den blir står i [skarvlängd och överlapp](/blogg/skarvlangd-armering).",
         image: {
           src: "/images/foto/armeringsjarn-12m-lager.webp",
-          alt: "Buntar med raka armeringsjärn i olika dimensioner på trästöd i ett stållager",
+          alt: "Raka armeringsjärn av kamstål med synliga kammar, upplagda på trästöd",
         },
       },
       {
@@ -485,7 +463,7 @@ const baseProducts: Product[] = [
       },
       {
         heading: "Ta emot och lagra järnen",
-        text: "6-metersstänger kan bäras av för hand, men buntar med 12 m och grova dimensioner kräver kran eller truck vid lossning – ange i förfrågan vad som finns på plats. Lägg järnen på trästöd med jämna mellanrum så att de inte böjs eller ligger i vatten och lera, och sortera per dimension så att rätt järn är lätt att hitta. Se också [kontroll av armering före gjutning](/blogg/kontroll-fore-gjutning-armering).",
+        text: "6-metersstänger kan bäras för hand, men buntar med 12 m och grova dimensioner kräver kran eller truck vid lossning – ange i förfrågan vad som finns på plats. Lägg järnen på trästöd med jämna mellanrum så att de inte böjs eller ligger i vatten och lera, och sortera per dimension så att rätt järn är lätt att hitta. Se också [kontroll av armering före gjutning](/blogg/kontroll-fore-gjutning-armering).",
       },
       {
         heading: "Leverans i hela Sverige",
@@ -497,7 +475,6 @@ const baseProducts: Product[] = [
       { q: "Ritningen säger B500B – går K500C-T bra?", a: "Ja. K500C-T är kamstång i duktilitetsklass C enligt SS 212540. Klass C är segare och uppfyller kraven för B500B. Kvaliteten framgår av materialcertifikatet." },
       { q: "Vilka dimensioner finns?", a: "Ø6, Ø8, Ø10, Ø12, Ø16, Ø20, Ø25 och Ø32 mm i raka längder. Vi kapar också till mått." },
       { q: "Hur tungt är ett armeringsjärn?", a: "En 6 m Ø12 väger ca 5,3 kg och en 12 m Ø12 ca 10,7 kg. Vikten per meter är 0,888 kg för Ø12 och 1,58 kg för Ø16." },
-      { q: "Hur räknar man ut vikten på armeringsjärn?", a: "Vikt per meter = 0,00617 × Ø² kg. Ø10 ger 0,617 kg/m. Multiplicera med total längd, eller använd viktkalkylatorn." },
       { q: "Vad är svart armeringsjärn?", a: "Vanligt obehandlat kamstål, alltså standardarmering. Ytrost är normalt; lös rost och smuts tas bort före gjutning." },
       { q: "Ska jag välja 6 eller 12 meter?", a: "12 m ger färre skarvar men kräver plats och lyft. 6 m bärs för hand och passar trånga tomter." },
       { q: "Hur beställer jag?", a: "Ange dimension, längd och antal eller total vikt samt leveransort. Pris och frakt efter mängd och ort står i offerten." },

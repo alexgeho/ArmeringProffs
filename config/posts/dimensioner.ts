@@ -700,7 +700,7 @@ const nat: Post[] = [
     title: "Armeringsnät 5150 – vikt, mått och användning",
     metaTitle: "Armeringsnät 5150 – vikt, mått & användning",
     metaDescription:
-      "Armeringsnät 5150: Ø5 mm tråd, 150 mm rutor, ca 2,05 kg/m² och 131 mm²/m. Var nätet räcker, hur mycket det ska överlappa och hur du räknar åtgång.",
+      "Armeringsnät 5150: Ø5 mm tråd, 150 mm rutor, ca 2,06 kg/m² och 131 mm²/m. Var nätet räcker, hur mycket det ska överlappa och hur du räknar åtgång.",
     excerpt:
       "5150 är det lättaste vanliga armeringsnätet. Här är vikt, area, överlapp och var nätet räcker – och var du behöver gå upp till 6150.",
     date,
@@ -723,7 +723,7 @@ const nat: Post[] = [
         ["Ruta (c/c)", "150 × 150 mm"],
         ["Area per tråd", "19,6 mm²"],
         ["Area per meter och riktning", "ca 131 mm²/m"],
-        ["Vikt", "ca 2,05 kg/m²"],
+        ["Vikt", "ca 2,06 kg/m²"],
         ["Ark 2 × 5 m", "ca 21 kg"],
         ["Minsta skarv enligt EC2 tabell 8.4", "150 mm och minst 1 maska"],
       ], caption: "Teoretiska värden utan utstickande trådändar. Verklig vikt per ark anges av tillverkaren." },
@@ -739,7 +739,7 @@ const nat: Post[] = [
 
       { type: "h2", text: "5150 jämfört med 6150" },
       { type: "table", head: ["Nät", "Area per meter", "Vikt per m²"], rows: [
-        ["5150", "131 mm²/m", "2,05 kg"],
+        ["5150", "131 mm²/m", "2,06 kg"],
         ["6150", "189 mm²/m", "2,96 kg"],
       ] },
       { type: "p", text: "6150 har drygt 40 % mer stål än 5150. Att byta upp kostar alltså mer stål, men kan ge plattan större bärförmåga och bättre sprickfördelning." },
@@ -767,7 +767,7 @@ const nat: Post[] = [
       { type: "p", text: "Ange plattans mått så räknar vi antal ark, distanser och kantjärn. Även små beställningar går bra – frakten beräknas efter mängd och ort, utan fast avgift. Begär pris via [armeringsnät](/produkter/armeringsnat) eller [offert](/offert)." },
     ],
     faqs: [
-      { q: "Hur mycket väger armeringsnät 5150?", a: "Cirka 2,05 kg per m². Ett ark på 2 × 5 m väger runt 21 kg." },
+      { q: "Hur mycket väger armeringsnät 5150?", a: "Cirka 2,06 kg per m². Ett ark på 2 × 5 m väger runt 21 kg." },
       { q: "Räcker 5150 till en garageplatta?", a: "Oftast inte. Garageplattor ritas normalt med 6150 eller grövre. Konstruktionsritningen avgör." },
       { q: "Hur mycket ska 5150 överlappa?", a: "Eurokod 2 anger minst 150 mm och en maska för Ø5-tråd. I praktiken läggs ofta två rutor, cirka 300 mm, omlott. Ritningen gäller." },
       { q: "Hur många ark 5150 går det åt?", a: "Plattans yta plus 10–15 % för överlapp, delat med arkets yta. Ett uterum på 20 m² kräver cirka 23 m² nät, alltså tre ark på 2 × 5 m." },
@@ -821,7 +821,7 @@ const nat: Post[] = [
 
       { type: "h2", text: "6150 jämfört med grannstorlekarna" },
       { type: "table", head: ["Nät", "Area per meter", "Vikt per m²", "Skillnad mot 6150"], rows: [
-        ["5150", "131 mm²/m", "2,05 kg", "−31 %"],
+        ["5150", "131 mm²/m", "2,06 kg", "−30 %"],
         ["6150", "189 mm²/m", "2,96 kg", "–"],
         ["7150", "257 mm²/m", "4,03 kg", "+36 %"],
         ["8150", "335 mm²/m", "5,27 kg", "+78 %"],

@@ -10,6 +10,8 @@ export type BodySection = {
   text: string;
   /** Valfri bocklista efter stycket (samma stil som i guiderna). */
   items?: string[];
+  /** Numrerad lista (steg) i stället för bocklista. */
+  ordered?: boolean;
   /** Valfri tabell efter stycket/listan. */
   table?: { head: string[]; rows: string[][]; caption?: string };
   /** Valfritt foto efter avsnittet (WebP 1600×900 i public/images/foto). */
@@ -21,7 +23,14 @@ export function bodyNodes(body: BodySection[], after?: (i: number) => ReactNode)
   return body.flatMap((b, i) => [
     <h2 key={`${i}-h`}>{b.heading}</h2>,
     <p key={`${i}-p`}>{renderText(b.text)}</p>,
-    b.items && (
+    b.items && b.ordered && (
+      <ol key={`${i}-ol`} className="grid list-decimal gap-2 pl-5 marker:text-muted">
+        {b.items.map((it) => (
+          <li key={it} className="pl-1">{renderText(it)}</li>
+        ))}
+      </ol>
+    ),
+    b.items && !b.ordered && (
       <ul key={`${i}-ul`} className="grid gap-2">
         {b.items.map((it) => (
           <li key={it} className="flex items-start gap-2">
@@ -37,6 +46,7 @@ export function bodyNodes(body: BodySection[], after?: (i: number) => ReactNode)
         head={b.table.head}
         rows={b.table.rows}
         caption={b.table.caption ? renderText(b.table.caption) : undefined}
+        label={b.table.caption?.replace(/\[([^\]]+)\]\([^)]+\)/g, "$1")}
       />
     ),
     b.image && (

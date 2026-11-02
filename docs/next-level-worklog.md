@@ -1,5 +1,10 @@
 # next-level-brief — worklog (2026-09-08)
 
+## 🟢 2026-11-02 (вечер) — волна коммерческих страниц (ветка `wave-2026-11-02`, не задеплоено)
+- Длинные страницы: /produkter/klippt-och-bockad, /produkter/armeringsjarn, /produkter/armeringsnat, /prefab-armering, /armeringsleverantor + блок sortiment и B2B на главной (title «Armering – prefab, klippt & bockad i hela Sverige»). Компонент `components/BodySections.tsx` (списки/таблица/фото в body).
+- 6 фото Replicate в public/images/foto (после критика перегенерированы: только сплошной kamstål). Gap KP → docs/kp/gap-2026-11-02.md (staket 1K–10K, балки — решение владельца).
+- Позже: в гайдах ещё упоминается EKS → заменить на BFS 2024:6. После деплоя — Request Indexing 5 страниц.
+
 ## 🟢 2026-11-02 — GSC-срез
 - GSC 28 дн (по 31.10): 433 кл / 19,8K / CTR 2,2 % / поз. 8,0 (21.10: 312 / 12,8K). Индекс 145 / нет 43 (22 redirect, 19 Discovered).
 - /armeringsmatta, /villkor, blogg/klippt-bockad-armering, blogg/armeringsstal — уже в индексе (п. 4 NÄSTA закрыт).

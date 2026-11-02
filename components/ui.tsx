@@ -355,11 +355,14 @@ export function DataTable({
   head,
   rows,
   caption,
+  label,
   className = "",
 }: {
   head: ReactNode[];
   rows: ReactNode[][];
   caption?: ReactNode;
+  /** Ren text för aria-label när caption innehåller länkar. */
+  label?: string;
   className?: string;
 }) {
   return (
@@ -368,7 +371,7 @@ export function DataTable({
         className="overflow-x-auto rounded-card border border-line"
         tabIndex={0}
         role="region"
-        aria-label={typeof caption === "string" ? caption : "Tabell"}
+        aria-label={label ?? (typeof caption === "string" ? caption : "Tabell")}
       >
         <table className="w-full border-collapse text-left text-base">
           <thead className="bg-surface">

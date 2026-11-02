@@ -65,22 +65,11 @@ const baseLandings: Landing[] = [
         ],
       },
       {
-        heading: "Så går ett projekt till",
-        text: "Samma arbetsgång oavsett om det gäller ett bjälklag eller en hel stomme:",
-        items: [
-          "Ni skickar ritningar, spec eller förfrågningsunderlag.",
-          "Vi tar fram eller kontrollerar specifikationen och stämmer av oklarheter med er eller konstruktören.",
-          "Offert med pris per position eller etapp, frakt och leveranstid.",
-          "Tillverkning: kapning, bockning, korgar och nät – märkt per position och element.",
-          "Leverans per etapp till arbetsplatsen, vid behov med montage.",
-        ],
-      },
-      {
         heading: "Leveransplan efter er tidplan",
         text: "Stora projekt gjuts i etapper – då ska armeringen komma i samma takt. Vi planerar leveranser per etapp, bjälklag eller element enligt överenskommelse, så att arbetsplatsen inte fylls med material som ligger i vägen. Leveranstider och upplägg anges i offerten utifrån projektets omfattning och ort. Ändras tidplanen stämmer vi av nästa leverans, så att armeringen kommer när formen är klar.",
         image: {
           src: "/images/foto/armeringsleverantor-leverans.webp",
-          alt: "Lastbil med kran levererar buntar av armeringsjärn till en byggarbetsplats i norra Sverige",
+          alt: "Bunt med armeringsjärn lyfts med stroppar från en lastbil på en byggarbetsplats",
         },
       },
       {
@@ -159,7 +148,7 @@ const baseLandings: Landing[] = [
             ["Montage", "Lägga och naja – märkt per position", "Kapa, bocka, sortera, lägga och naja"],
             ["Grova dimensioner", "Bockas i maskin", "Kräver maskin även på plats"],
           ],
-          caption: "Vad som lönar sig beror på projektet – räkna på det i guiden om prefab eller att bocka själv.",
+          caption: "Vad som lönar sig beror på projektet – räkna på det i [prefab eller bocka själv](/blogg/prefab-eller-bocka-sjalv).",
         },
       },
       {
@@ -188,7 +177,7 @@ const baseLandings: Landing[] = [
       },
       {
         heading: "Prefab armering till villa, garage och attefallshus",
-        text: "För en villa- eller garageplatta består armeringen oftast av nät över ytan, kantbalksbyglar och kantjärn längs kanterna, förstärkning under bärande väggar och distanser som håller allt i rätt höjd. Med prefab kommer allt detta färdigt och märkt, så att plattan kan armeras på en dag i stället för flera. Skicka grundritningen eller plattans mått så räknar vi mängderna. Exempel på hur plattor armeras finns i [armering till garageplatta](/blogg/armering-till-garage), [armering till attefallshus](/blogg/armering-attefallshus) och [armering till betongplatta](/blogg/armering-till-betongplatta).",
+        text: "För en villa- eller garageplatta består armeringen oftast av nät över ytan, kantbalksbyglar och kantjärn längs kanterna, förstärkning under bärande väggar och distanser som håller allt i rätt höjd. Med prefab kommer allt detta färdigt och märkt, så att plattan armeras betydligt snabbare. Skicka grundritningen eller plattans mått så räknar vi mängderna. Exempel på hur plattor armeras finns i [armering till garageplatta](/blogg/armering-till-garage), [armering till attefallshus](/blogg/armering-attefallshus) och [armering till betongplatta](/blogg/armering-till-betongplatta).",
       },
       {
         heading: "Till stomme och anläggning",
@@ -205,12 +194,6 @@ const baseLandings: Landing[] = [
       {
         heading: "Så beställer du",
         text: "Skicka bockningslista, spec eller ritning. Har du bara ritningen tar vi fram [armeringsspecifikationen](/tjanster/armeringsspecifikation), har du måtten kan du bygga listan i vårt [bockningslisteverktyg](/tjanster/bockningslista). Ett foto av en skiss räcker för att komma igång.",
-        items: [
-          "Skicka underlaget via [offertformuläret](/offert).",
-          "Vi stämmer av mått och mängder och tar fram offert med pris, frakt och leveranstid.",
-          "Efter godkänd offert tillverkas armeringen och märks per position.",
-          "Leverans till bygget i hela Sverige – vid behov med [armeringsmontage](/tjanster/armeringsmontage).",
-        ],
       },
       {
         heading: "Pris och leverans i hela Sverige",
@@ -313,7 +296,7 @@ const baseLandings: Landing[] = [
       after: 0,
       head: ["Matta", "Tråd / ruta", "Vikt kg/m²", "Vanlig användning"],
       rows: [
-        ["5150", "Ø5 / 150 mm", "2,05", "Uterum, förråd, mindre plattor"],
+        ["5150", "Ø5 / 150 mm", "2,06", "Uterum, förråd, mindre plattor"],
         ["6150", "Ø6 / 150 mm", "2,96", "Garageplatta, villaplatta på mark"],
         ["7150", "Ø7 / 150 mm", "4,03", "Plattor med högre krav på sprickbredd"],
         ["8150", "Ø8 / 150 mm", "5,27", "Verkstads- och lagergolv, uppfarter"],

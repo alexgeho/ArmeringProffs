@@ -156,7 +156,7 @@ const basePosts: Post[] = [
         caption: "Teoretiska värden för kvadratiska nät med samma tråd i båda riktningar. Ritningen avgör vilket nät som krävs.",
         head: ["Nät", "Tråd / ruta", "Vikt kg/m²", "Area mm²/m", "Vanlig användning"],
         rows: [
-          ["5150", "Ø5 / 150 mm", "2,05", "131", "Uterum, förråd, mindre plattor"],
+          ["5150", "Ø5 / 150 mm", "2,06", "131", "Uterum, förråd, mindre plattor"],
           ["6150", "Ø6 / 150 mm", "2,96", "189", "Garageplatta, villaplatta på mark"],
           ["7150", "Ø7 / 150 mm", "4,03", "257", "Plattor med högre krav på sprickbredd"],
           ["8150", "Ø8 / 150 mm", "5,27", "335", "Verkstads- och lagergolv, uppfarter"],
@@ -189,7 +189,7 @@ const basePosts: Post[] = [
       { q: "Vad betyder 5x150 eller 5150 på ett armeringsnät?", a: "Ø5 mm tråd med 150 mm mellan trådarna i båda riktningar. Första siffran är tråddiametern, de tre sista rutstorleken i mm." },
       { q: "Vilket armeringsnät ska jag ha till en garageplatta?", a: "Vanligen 6150, med kamstål i kantbalken och vid portöppningen. Tunga fordon kan kräva grövre nät eller två lager – ritningen avgör." },
       { q: "Vilka mått har ett armeringsnät?", a: "Ett vanligt ark är cirka 2,35 × 5 m, men formatet varierar mellan leverantörer. Vi kapar också nät till valfria mått." },
-      { q: "Vad väger ett armeringsnät?", a: "5150 väger cirka 2,05 kg/m² och 6150 cirka 2,96 kg/m². Ett ark 6150 på 2,35 × 5 m väger alltså runt 35 kg." },
+      { q: "Vad väger ett armeringsnät?", a: "5150 väger cirka 2,06 kg/m² och 6150 cirka 2,96 kg/m². Ett ark 6150 på 2,35 × 5 m väger alltså runt 35 kg." },
     ],
   },
   {
