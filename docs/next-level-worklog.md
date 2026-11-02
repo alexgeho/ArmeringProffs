@@ -1,5 +1,10 @@
 # next-level-brief — worklog (2026-09-08)
 
+## 🟢 2026-11-02 (kväll) — Våg LIVE `0bde981`
+- 6 sidor live (/, klippt-och-bockad, prefab-armering, armeringsleverantor, armeringsjarn, armeringsnat) — 200 + nya titles verifierade.
+- Foto klippt-buntar borttaget (fyrkantiga stänger utan kammar). Övriga foton: owner bör titta.
+- NÄSTA 03.11: Request Indexing för de 6 (GSC-kvoten slut 02.11). Ägaren: säljer AGRY stålbalkar / kapade järn för staket? (docs/kp/gap-2026-11-02.md)
+
 ## 🟢 2026-11-02 (вечер) — волна коммерческих страниц (ветка `wave-2026-11-02`, не задеплоено)
 - Длинные страницы: /produkter/klippt-och-bockad, /produkter/armeringsjarn, /produkter/armeringsnat, /prefab-armering, /armeringsleverantor + блок sortiment и B2B на главной (title «Armering – prefab, klippt & bockad i hela Sverige»). Компонент `components/BodySections.tsx` (списки/таблица/фото в body).
 - 6 фото Replicate в public/images/foto (после критика перегенерированы: только сплошной kamstål). Gap KP → docs/kp/gap-2026-11-02.md (staket 1K–10K, балки — решение владельца).
