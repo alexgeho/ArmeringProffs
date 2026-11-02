@@ -16,8 +16,8 @@ export const site = {
   url: "https://armeringproffs.se",
 
   // Kontaktuppgifter
-  phone: "+46 72 858 99 75",
-  phoneHref: "tel:+46728589975",
+  phone: "08-446 821 58", // samma som gjutabetongplatta.se (ägaren 02.11)
+  phoneHref: "tel:+46844682158",
   phoneOffice: "", // valfritt kontorsnummer
   phoneOfficeHref: "",
   email: "info@armeringproffs.se",

@@ -12,3 +12,4 @@
 - [x] 2026-11-02 Новая страница /armeringsjarn-staket (armeringsjärn staket 1K–10K): лендинг, расчёт прутьев на метр, Boverket staket/plank, FAQ 8, фото Replicate; ссылки с /armeringsmatta и /produkter/armeringsjarn (ветка staket-2026-11-02)
 - [x] 2026-11-02 Формы (владелец 02.11): заголовок одной строкой + сразу поля; без подзаголовков/предзаполненного текста (расчёт → скрытое поле); отдельные поля E-post (обязательно) и Telefon (не обязательно)
 - [x] Underrubrik «Bifoga armeringsspecifikationen…» på alla offertformulär + bifoga-text (ägaren 02.11 kväll)
+- [x] Telefon → 08-446 821 58 (samma som gjutabetongplatta, ägaren 02.11)
