@@ -192,6 +192,39 @@ export function SectionHeading({
   );
 }
 
+/**
+ * Text + bild/panel i två kolumner. Rubriken ligger över båda kolumnerna,
+ * kolumnerna börjar på samma höjd (items-start) och är lika breda.
+ */
+export function MediaSplit({
+  heading,
+  media,
+  children,
+}: {
+  heading: ReactNode;
+  media: ReactNode;
+  children: ReactNode;
+}) {
+  return (
+    <>
+      {heading}
+      <div className="mt-10 grid items-start gap-10 lg:grid-cols-2">
+        <div className="min-w-0">{children}</div>
+        <div className="min-w-0">{media}</div>
+      </div>
+    </>
+  );
+}
+
+/** Bild i MediaSplit: 3:2, rundad panel. */
+export function SplitImage({ src, alt }: { src: string; alt: string }) {
+  return (
+    <figure className="relative aspect-[3/2] overflow-hidden rounded-panel border border-line bg-paper">
+      <Image src={src} alt={alt} fill sizes="(min-width: 1024px) 560px, 100vw" className="object-cover dark:brightness-90" />
+    </figure>
+  );
+}
+
 /** Ljust sidhuvud (produkt-, verktygs- och innehållssidor utan foto-hero). */
 export function PageHeader({
   title,

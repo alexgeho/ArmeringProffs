@@ -1,10 +1,9 @@
 import { site } from "@/config/site";
 import { faq } from "@/config/faq";
-import { ArrowLink, Section, SectionHeading, cardClass } from "@/components/ui";
+import { ArrowLink, CheckList, MediaSplit, Section, SectionHeading, SplitImage } from "@/components/ui";
 import {
   Hero, UspBar, PrefabShowcase, ProductsGrid, Process, LeveransSection, Reviews, CtaBanner, KalkylatorPromo, GuidesTeaser,
 } from "@/components/sections";
-import Image from "next/image";
 import { FaqAccordion } from "@/components/FaqAccordion";
 import { JsonLd, faqSchema, serviceSchema } from "@/lib/jsonld";
 
@@ -27,28 +26,29 @@ export default function HomePage() {
 
       {/* Intro/SEO-text */}
       <Section muted>
-        <div className="grid items-center gap-10 lg:grid-cols-[1fr_0.8fr]">
-          <div>
-            <SectionHeading
-              eyebrow="Armeringsleverantör för hela Sverige"
-              title="Prefab armering efter din ritning"
-              intro={`${site.company} tillverkar och levererar prefabricerad armering för bygg och anläggning – klippt och bockad armering, armeringskorgar, svetsad armering och armeringsnät, kamstål B500B och distanser. Vi tar hela cykeln: tillverkning efter bockningslista, leverans i hela Sverige och montage på plats. Skicka din ritning så får du en offert.`}
-            />
-          </div>
-          <figure className={`${cardClass} p-(--space-card) shadow-card`}>
-            <Image
+        <MediaSplit
+          heading={<SectionHeading eyebrow="Armeringsleverantör för hela Sverige" title="Prefab armering efter din ritning" />}
+          media={
+            <SplitImage
               src="/images/illustrationer/intro-armeringskorg.webp"
               alt="Prefabricerad armeringskorg i kamstål B500B på trästöd, med bockade byglar bredvid"
-              width={1200}
-              height={900}
-              sizes="(min-width: 1024px) 480px, 100vw"
-              className="h-auto w-full rounded-control dark:brightness-90"
             />
-            <figcaption className="mt-4 text-center text-sm text-muted">
-              Armeringskorg – svetsad prefab efter dina mått
-            </figcaption>
-          </figure>
-        </div>
+          }
+        >
+          <p className="text-lead text-ink-soft">
+            {site.company} tillverkar och levererar prefabricerad armering för bygg och anläggning – efter din
+            bockningslista, i hela Sverige.
+          </p>
+          <CheckList
+            className="mt-8"
+            items={[
+              "Klippt och bockad armering",
+              "Armeringskorgar och svetsad armering",
+              "Armeringsnät, kamstål B500B och distanser",
+              "Tillverkning, leverans och montage",
+            ]}
+          />
+        </MediaSplit>
       </Section>
 
       <ProductsGrid />

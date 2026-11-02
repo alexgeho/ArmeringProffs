@@ -274,7 +274,7 @@ const leveransPoints = [
 export function LeveransSection({ heading = true, muted = false }: { heading?: boolean; muted?: boolean }) {
   return (
     <Section id="leverans" muted={muted}>
-      <div className="grid items-center gap-10 lg:grid-cols-2">
+      <div className="grid items-start gap-10 lg:grid-cols-2">
         <div>
           {heading && (
             <SectionHeading
