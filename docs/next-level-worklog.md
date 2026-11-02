@@ -1,5 +1,10 @@
 # next-level-brief — worklog (2026-09-08)
 
+## ▶️ HANDOFF 2026-11-02 (kväll) — НАЧНИ ОТСЮДА
+**KLART:** 6 страниц расширены (`0bde981`) + /armeringsjarn-staket/ (`4d19ad0`) live; формы: заголовок + «Bifoga armeringsspecifikationen…» → поля, E-post* / Telefon, расчёт/список скрытым полем `spec` → «Underlag» в письме; телефон 08-446 821 58 (как gjuta).
+**NÄSTA:** 1) 03.11 Request Indexing: /armeringsjarn-staket/, /produkter/klippt-och-bockad/, /prefab-armering/, /armeringsleverantor/, /produkter/armeringsjarn/, /produkter/armeringsnat/, /. 2) GBP + каталоги с 08-446 821 58. 3) Мини-калькулятор в skarvlängd / bocka-armeringsjarn. 4) Старые «EKS» в гайдах → BFS 2024:6.
+**ЖДЁМ:** Google Ads да/нет; адрес GBP; балки — не сейчас (владелец 02.11).
+
 ## 🟢 2026-11-02 (kväll) — Våg LIVE `0bde981`
 - 6 sidor live (/, klippt-och-bockad, prefab-armering, armeringsleverantor, armeringsjarn, armeringsnat) — 200 + nya titles verifierade.
 - Foto klippt-buntar borttaget (fyrkantiga stänger utan kammar). Övriga foton: owner bör titta.
