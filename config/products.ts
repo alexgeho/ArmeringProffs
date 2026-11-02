@@ -79,10 +79,6 @@ const baseProducts: Product[] = [
       {
         heading: "Märkning som sparar tid på bygget",
         text: "Varje bunt får en etikett med positionsnummer, dimension, form och antal – samma nummer som på ritningen. Buntarna sorteras per element eller etapp, så att det som ska läggas först ligger överst. Kontrollen före gjutning går snabbare när varje detalj kan stämmas av mot listan, se checklistan [kontroll av armering före gjutning](/blogg/kontroll-fore-gjutning-armering).",
-        image: {
-          src: "/images/foto/klippt-och-bockad-buntar.webp",
-          alt: "Bunt med kapade armeringsjärn på pall, märkt med en orange etikett",
-        },
       },
       {
         heading: "Bockningsdiameter enligt Eurokod 2",

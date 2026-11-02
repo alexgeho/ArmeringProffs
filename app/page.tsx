@@ -117,7 +117,7 @@ export default function HomePage() {
           media={
             <SplitImage
               src="/images/foto/startsida-verkstad.webp"
-              alt="Armeringsverkstad med raka armeringsjärn i ställ och färdiga armeringskorgar"
+              alt="Armeringsverkstad med raka armeringsjärn i ställ och buntar på golvet"
             />
           }
         >
