@@ -76,6 +76,7 @@ export default function KontaktPage() {
 
           <div className="rounded-panel border border-line bg-card p-6 sm:p-8">
             <h2 className="type-h4 text-ink">Begär offert</h2>
+            <p className="mt-1 text-sm text-ink-soft">Bifoga armeringsspecifikationen – det är det första vi behöver för att räkna på jobbet.</p>
             <div className="mt-5">
               <ContactForm source="kontaktsida" />
             </div>

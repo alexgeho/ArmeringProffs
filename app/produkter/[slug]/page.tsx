@@ -119,6 +119,7 @@ export default async function ProductPage({
           <aside>
             <Panel sticky>
               <h2 className="type-h4 text-ink">Få en offert</h2>
+              <p className="mt-1 text-sm text-ink-soft">Bifoga armeringsspecifikationen – det är det första vi behöver för att räkna på jobbet.</p>
               <div className="mt-5">
                 <ContactForm compact source={`produkt-${p.slug}`} />
               </div>

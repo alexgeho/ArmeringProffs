@@ -74,6 +74,7 @@ export function PhotoHero({
         </div>
         <div className={glassCard}>
           <h2 className="text-xl font-bold text-white">{formTitle}</h2>
+          <p className="mt-1 text-sm text-slate-300">Bifoga armeringsspecifikationen – det är det första vi behöver för att räkna på jobbet.</p>
           <div className="mt-5">
             <ContactForm compact={!fullForm} onDark source={formSource} />
           </div>
@@ -122,6 +123,7 @@ export function Hero({
 
         <div className={glassCard}>
           <h2 className="text-xl font-bold text-white">Få en offert på din armering</h2>
+          <p className="mt-1 text-sm text-slate-300">Bifoga armeringsspecifikationen – det är det första vi behöver för att räkna på jobbet.</p>
           <div className="mt-5">
             <ContactForm compact onDark source={formSource} />
           </div>
