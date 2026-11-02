@@ -193,8 +193,8 @@ export function SectionHeading({
 }
 
 /**
- * Text + bild/panel i två kolumner. Rubriken ligger över båda kolumnerna,
- * kolumnerna börjar på samma höjd (items-start) och är lika breda.
+ * Text + bild i två kolumner. Rubrik och text till vänster, bilden till höger
+ * fyller hela blockets höjd (från eyebrow till sista raden).
  */
 export function MediaSplit({
   heading,
@@ -206,20 +206,20 @@ export function MediaSplit({
   children: ReactNode;
 }) {
   return (
-    <>
-      {heading}
-      <div className="mt-10 grid items-start gap-10 lg:grid-cols-2">
-        <div className="min-w-0">{children}</div>
-        <div className="min-w-0">{media}</div>
+    <div className="grid gap-10 lg:grid-cols-2">
+      <div className="min-w-0">
+        {heading}
+        <div className="mt-8">{children}</div>
       </div>
-    </>
+      <div className="min-w-0">{media}</div>
+    </div>
   );
 }
 
-/** Bild i MediaSplit: 3:2, rundad panel. */
+/** Bild i MediaSplit: 3:2 på mobil, full höjd bredvid texten på lg. */
 export function SplitImage({ src, alt }: { src: string; alt: string }) {
   return (
-    <figure className="relative aspect-[3/2] overflow-hidden rounded-panel border border-line bg-paper">
+    <figure className="relative aspect-[3/2] overflow-hidden rounded-panel border border-line bg-paper lg:aspect-auto lg:h-full lg:min-h-80">
       <Image src={src} alt={alt} fill sizes="(min-width: 1024px) 560px, 100vw" className="object-cover dark:brightness-90" />
     </figure>
   );

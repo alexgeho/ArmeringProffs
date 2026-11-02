@@ -116,11 +116,11 @@ Bas-klassen `cardClass` för specialkort (process-steg, omdömen, bloggkort).
 
 ### MediaSplit, SplitImage – text + bild
 `<MediaSplit heading={<SectionHeading …/>} media={<SplitImage src alt />}>text + CheckList</MediaSplit>`
-Rubriken över båda kolumnerna, två lika breda kolumner som börjar på samma höjd (`items-start`), bild 3:2.
-- ✅ Vänster: en kort ingress (`text-lead`, 1–2 meningar) + `CheckList` i EN kolumn.
-- ❌ Rubrik inne i textkolumnen med bilden vertikalt centrerad bredvid (`items-center`) – ger olika överkanter och tomrum.
-- ❌ Långa stycken + bocklista i 2 kolumner (raderna bryts i 3 rader).
-- Text + panel (t.ex. `LeveransSection`) följer samma regel: `items-start`.
+Två lika breda kolumner. Vänster: rubrik → kort ingress (`text-lead`) → `CheckList` i EN kolumn.
+Höger: bilden fyller **hela blockets höjd** – överkant = eyebrow, underkant = sista raden (ägarens regel 2026-11-02). Mobil: bild 3:2 under texten.
+- ❌ Bild mindre än textblocket med tomrum ovanför/under. ❌ `items-center` med bild bredvid text.
+- ❌ Långa stycken + bocklista i 2 kolumner.
+- Text + panel (t.ex. `LeveransSection`): `items-start`.
 
 ### SectionHeading, PageHeader, Section
 - `Section` – `muted` (surface), `narrow` (max-w-3xl, centrerad), `id`. Varannan sektion muted; två muted i rad = ❌.
