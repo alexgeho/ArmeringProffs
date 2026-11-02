@@ -357,7 +357,7 @@ export function KalkylatorPromo() {
           {[
             "Åtgång av nät, kantjärn och distanser",
             "Baserat på samma tumregler som våra guider",
-            "Offertformuläret förifylls med din beräkning",
+            "Beräkningen följer med offertförfrågan",
           ].map((t) => (
             <li key={t} className="flex items-start gap-3 rounded-card bg-card p-4 text-ink-soft">
               <IconCheck className="mt-0.5 h-5 w-5 shrink-0 text-accent" /> {t}

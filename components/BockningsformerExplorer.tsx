@@ -305,7 +305,7 @@ export function BockningsformerExplorer() {
             </div>
             <div className="min-w-0 rounded-card bg-surface p-4">
               <p className="mb-3 text-sm font-semibold text-ink">Skicka listan som offertförfrågan</p>
-              <ContactForm compact source="bockningslista-verktyg" defaultMessage={spec} />
+              <ContactForm compact source="bockningslista-verktyg" context={spec} />
             </div>
           </div>
       </div>

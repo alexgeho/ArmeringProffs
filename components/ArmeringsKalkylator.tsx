@@ -2,7 +2,6 @@
 
 import { useMemo, useState } from "react";
 import { ContactForm } from "./ContactForm";
-import { IconCheck } from "./icons";
 import { TextField, SelectField } from "./form";
 import { ArrowLink } from "./ui";
 import { DIAMETERS, MESHES, calcBars, calcEdgeBars, calcMesh, fmt, kgPerM } from "@/lib/rebar-calc";
@@ -10,7 +9,7 @@ import { DIAMETERS, MESHES, calcBars, calcEdgeBars, calcMesh, fmt, kgPerM } from
 /**
  * Armeringskalkylator – lead-magnet.
  * Två lägen: armeringsnät (antal ark, vikt, kantjärn) och kamjärn c/c (antal
- * stänger, löpmeter, vikt). Resultatet förifylls i offertformuläret så att
+ * stänger, löpmeter, vikt). Resultatet följer med offertförfrågan som dolt fält så att
  * steget till en offertförfrågan blir minimalt. Inga priser – bara åtgång.
  *
  * OBS: Riktvärden. Dimension, placering, överlapp och täckskikt ska följa
@@ -209,16 +208,9 @@ export function ArmeringsKalkylator() {
 
         {r && (
           <div className="rounded-panel border border-brand/30 bg-card p-6 shadow-sm sm:p-8">
-            <div className="flex items-center gap-2 text-accent">
-              <IconCheck className="h-5 w-5" />
-              <h2 className="text-lg font-bold text-ink">Skicka som offertförfrågan</h2>
-            </div>
-            <p className="mt-2 text-sm text-ink-soft">
-              Din beräkning är redan ifylld nedan. Lägg till telefon eller e-post så återkommer vi
-              med pris och leveranstid.
-            </p>
+            <h2 className="text-lg font-bold text-ink">Skicka som offertförfrågan</h2>
             <div className="mt-5">
-              <ContactForm compact source={`kalkylator-${mode}`} defaultMessage={spec} />
+              <ContactForm compact source={`kalkylator-${mode}`} context={spec} />
             </div>
           </div>
         )}

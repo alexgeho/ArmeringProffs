@@ -12,23 +12,41 @@ type Status = "idle" | "sending" | "sent" | "error";
 export function ContactForm({
   compact = false,
   source = "webbformulär",
-  defaultMessage,
+  context,
   onDark = false,
 }: {
   compact?: boolean;
   source?: string;
-  /** Förifylld text i meddelandefältet (t.ex. en beräkning från kalkylatorn). */
-  defaultMessage?: string;
+  /** Underlag (kalkylatorns beräkning, bockningslista) – skickas som dolt fält, aldrig förifyllt. */
+  context?: string;
   /** Formuläret ligger direkt på mörk bakgrund (transparent kort i hero). */
   onDark?: boolean;
 }) {
   const [status, setStatus] = useState<Status>("idle");
   const [fileName, setFileName] = useState("");
+  const [errors, setErrors] = useState<{ email?: string; phone?: string }>({});
+
+  function validate(data: FormData) {
+    const next: { email?: string; phone?: string } = {};
+    const email = String(data.get("email") ?? "").trim();
+    const phone = String(data.get("phone") ?? "").trim();
+    if (!email) next.email = "Fyll i din e-post.";
+    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) next.email = "Kontrollera e-postadressen.";
+    if (phone && phone.replace(/\D/g, "").length < 6) next.phone = "Kontrollera telefonnumret.";
+    return next;
+  }
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const form = e.currentTarget;
     const data = new FormData(form);
+    const found = validate(data);
+    setErrors(found);
+    if (found.email || found.phone) {
+      const first = form.querySelector<HTMLInputElement>(found.email ? 'input[name="email"]' : 'input[name="phone"]');
+      first?.focus();
+      return;
+    }
     data.append("source", source);
     const visit = readVisitSource();
     if (visit) {
@@ -67,7 +85,7 @@ export function ContactForm({
   }
 
   return (
-    <form onSubmit={onSubmit} className="grid min-w-0 grid-cols-1 gap-4">
+    <form onSubmit={onSubmit} noValidate className={`grid min-w-0 grid-cols-1 gap-4 ${onDark ? "[--danger:#fca5a5]" : ""}`}>
       {/* Honeypot mot spam-bots: dolt fält som människor inte ser. Fylls det i
           slänger sendmail.php förfrågan. aria-hidden + tabindex -1 + autocomplete off. */}
       <div aria-hidden="true" className="absolute left-[-9999px] h-0 w-0 overflow-hidden" style={{ position: "absolute" }}>
@@ -78,12 +96,16 @@ export function ContactForm({
       {/* Minimalistiskt: bara placeholder synlig, etiketten finns för skärmläsare (sr-only). */}
       <Field name="name" label="Namn / företag" />
 
+      {/* E-post krävs (svaret går dit), telefon är frivillig. */}
       {compact ? (
-        <Field name="contact" label="Telefon eller e-post" required />
+        <>
+          <Field name="email" label="E-post" type="email" required error={errors.email} onEdit={() => setErrors((x) => ({ ...x, email: undefined }))} />
+          <Field name="phone" label="Telefon" type="tel" error={errors.phone} onEdit={() => setErrors((x) => ({ ...x, phone: undefined }))} />
+        </>
       ) : (
         <div className="grid gap-4 sm:grid-cols-2">
-          <Field name="phone" label="Telefon" type="tel" required />
-          <Field name="email" label="E-post" type="email" required />
+          <Field name="email" label="E-post" type="email" required error={errors.email} onEdit={() => setErrors((x) => ({ ...x, email: undefined }))} />
+          <Field name="phone" label="Telefon" type="tel" error={errors.phone} onEdit={() => setErrors((x) => ({ ...x, phone: undefined }))} />
         </div>
       )}
 
@@ -99,11 +121,11 @@ export function ContactForm({
         label="Beskriv ditt projekt"
         hideLabel
         rows={compact ? 3 : 4}
-        // key gör att fältet uppdateras när en ny beräkning skickas in från kalkylatorn.
-        key={defaultMessage}
-        defaultValue={defaultMessage}
         placeholder="Beskriv ditt projekt"
       />
+
+      {/* Underlag (beräkning/bockningslista) följer med dolt – sendmail.php lägger det under «Underlag». */}
+      {context && <input type="hidden" name="spec" value={context} />}
 
       {/* Bifoga ritning/bockningslista: egen knapp i stället för webbläsarens "Choose File". */}
       <label className={`flex min-h-12 min-w-0 cursor-pointer items-center gap-2 rounded-control border border-dashed px-4 py-3 text-sm hover:border-accent focus-within:border-accent focus-within:outline-2 focus-within:outline-accent ${onDark ? "border-white/40 text-slate-100" : "border-field text-ink-soft"}`}>
@@ -147,13 +169,18 @@ function Field({
   label,
   type = "text",
   required,
+  error,
+  onEdit,
 }: {
   name: string;
   label: string;
   type?: string;
   required?: boolean;
+  error?: string;
+  onEdit?: () => void;
 }) {
-  const auto: Record<string, string> = { name: "name", phone: "tel", email: "email", contact: "on" };
+  const auto: Record<string, string> = { name: "name", phone: "tel", email: "email" };
+  const mode: Record<string, "tel" | "email"> = { phone: "tel", email: "email" };
   return (
     <TextField
       name={name}
@@ -161,6 +188,9 @@ function Field({
       hideLabel
       type={type}
       required={required}
+      error={error}
+      onChange={error && onEdit ? () => onEdit() : undefined}
+      inputMode={mode[name]}
       autoComplete={auto[name]}
       placeholder={required ? `${label} *` : label}
     />

@@ -156,6 +156,13 @@ En öppen åt gången, `aria-expanded` + `aria-controls`, svaren finns i DOM (`h
 - ✅ Placeholder = exempel, aldrig ett värde användaren måste radera.
 - ❌ `focus:outline-none` utan ersättning.
 
+### Formulär (ägaren 02.11.2026)
+Gäller ALLA formulär (`ContactForm` i hero, kontakt, produkt, kalkylator, bockningslista).
+1. Formulärkortet = EN rad rubrik, sedan direkt fälten. Inget annat ovanför fälten: ingen ingress/underrubrik, ingen ikonrad, inga check-punkter, ingen telefon/länkar i kortet.
+2. Ingen förifylld text i fälten. Underlag (kalkylatorns resultat, bockningslistan) skickas som DOLT fält (`context` → `spec`) och hamnar under «Underlag» i lead-mejlet.
+3. Separata fält: «E-post *» krävs (`type=email`, valideras: «Fyll i din e-post.» / «Kontrollera e-postadressen.») och «Telefon» frivillig (`type=tel`, minst 6 siffror om ifylld). Inget kombinerat «telefon eller e-post». Ordning: Namn / företag → E-post * → Telefon → meddelande → bifoga → knapp.
+- `sendmail.php`: `email` krävs (400 JSON vid saknad/ogiltig), Reply-To = e-post, `phone` frivillig, `contact` tas emot bakåtkompatibelt.
+
 ---
 
 ## 3. Sidmallar

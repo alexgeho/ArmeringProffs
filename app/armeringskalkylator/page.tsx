@@ -37,7 +37,7 @@ const faqs: Faq[] = [
   },
   {
     q: "Kan jag beställa armeringen direkt?",
-    a: "Ja. När du har fyllt i måtten förifylls beräkningen i offertformuläret. Lägg till telefon eller e-post, bifoga eventuell ritning eller bockningslista, så återkommer vi med pris och leveranstid för hela Sverige.",
+    a: "Ja. När du har fyllt i måtten följer beräkningen med offertförfrågan automatiskt. Lägg till din e-post, bifoga eventuell ritning eller bockningslista, så återkommer vi med pris och leveranstid för hela Sverige.",
   },
   {
     q: "Vilket armeringsnät ska jag välja?",

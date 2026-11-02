@@ -50,6 +50,8 @@ $contact  = field('contact');
 $location = field('location');
 $quantity = field('quantity');
 $message  = field('message');
+// Dolt underlag från kalkylatorn/bockningslistan (aldrig förifyllt i fälten).
+$spec     = function_exists('mb_substr') ? mb_substr(field('spec'), 0, 4000, 'UTF-8') : substr(field('spec'), 0, 4000);
 $source   = field('source') !== '' ? field('source') : 'webbformulär';
 $consent  = isset($_POST['consent']);
 // Varifrån besökaren kom (sparas i sessionStorage av VisitSourceRecorder).
@@ -58,7 +60,8 @@ $landing  = substr(field('landing'), 0, 300);
 $referrer = substr(field('referrer'), 0, 500);
 $utm      = substr(field('utm'), 0, 500);
 
-// Kompakt hero-form skickar ett kombinerat fält "contact" (telefon ELLER e-post).
+// Bakåtkompatibelt: äldre formulär skickade ett kombinerat fält "contact"
+// (telefon ELLER e-post). Nya formulär skickar "email" (krävs) + "phone" (frivillig).
 if ($contact !== '') {
     if (strpos($contact, '@') !== false) {
         if ($email === '') $email = $contact;
@@ -67,10 +70,15 @@ if ($contact !== '') {
     }
 }
 
-// --- Validering: minst en kontaktuppgift + samtycke ---
-if ($phone === '' && $email === '') {
+// --- Validering: e-post krävs och måste vara giltig + samtycke ---
+if ($email === '') {
     http_response_code(400);
-    echo json_encode(['ok' => false, 'error' => 'Telefon eller e-post krävs']);
+    echo json_encode(['ok' => false, 'error' => 'E-post krävs']);
+    exit;
+}
+if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    http_response_code(400);
+    echo json_encode(['ok' => false, 'error' => 'Ogiltig e-postadress']);
     exit;
 }
 if (!$consent) {
@@ -78,12 +86,7 @@ if (!$consent) {
     echo json_encode(['ok' => false, 'error' => 'Samtycke krävs']);
     exit;
 }
-if ($email !== '' && !filter_var($email, FILTER_VALIDATE_EMAIL)) {
-    // Ogiltig e-post – behåll som text men använd inte i Reply-To.
-    $reply = '';
-} else {
-    $reply = $email;
-}
+$reply = $email;
 
 // --- Ev. bifogad fil ---
 $attachment = null;
@@ -126,6 +129,11 @@ if ($message !== '') {
     $lines[] = '';
     $lines[] = 'Meddelande:';
     $lines[] = $message;
+}
+if ($spec !== '') {
+    $lines[] = '';
+    $lines[] = 'Underlag:';
+    $lines[] = $spec;
 }
 // Trafikkälla – för att se vad som ger leads.
 $refHost = $referrer !== '' ? (parse_url($referrer, PHP_URL_HOST) ?: $referrer) : '';
