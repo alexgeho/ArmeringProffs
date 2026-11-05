@@ -957,7 +957,7 @@ const basePosts: Post[] = [
 
       { type: "h2", text: "Skicka ritningen – få offert på murens armering" },
       { type: "p", text: "Vi tillverkar armeringen till stödmurar och L-stöd efter konstruktörens ritning: bockade startjärn, vägg- och sulajärn som [klippt och bockad armering](/produkter/klippt-och-bockad), [nät](/produkter/armeringsnat) och distanser, med frakt efter mängd och ort. [Begär offert](/offert). Dimensionerna förklaras i [armeringsjärn dimensioner](/blogg/armeringsjarn-dimensioner)." },
-      { type: "p", text: "Vi levererar armering till stödmurar och L-stöd i bland annat [Stockholm](/armering/stockholm) och [Göteborg](/armering/goteborg)." },
+      { type: "p", text: "Vi levererar armering till stödmurar och L-stöd i bland annat [Stockholm](/armering/stockholm) och [Göteborg](/armering/goteborg). Behöver du hjälp med schakt, dränering och återfyllnad bakom muren kan du [jämföra offerter från markentreprenörer i Stockholm på Byggtorg](https://byggtorg.se/)." },
     ],
     faqs: [
       { q: "Vilka armeringsjärn används i en stödmur?", a: "Ofta Ø10–Ø16 vertikalt och horisontellt, med startjärn från sulan upp i väggen. Högre murar kräver grövre järn. Dimension och c/c står på ritningen." },
