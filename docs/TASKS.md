@@ -13,3 +13,4 @@
 - [x] 2026-11-02 Формы (владелец 02.11): заголовок одной строкой + сразу поля; без подзаголовков/предзаполненного текста (расчёт → скрытое поле); отдельные поля E-post (обязательно) и Telefon (не обязательно)
 - [x] Underrubrik «Bifoga armeringsspecifikationen…» på alla offertformulär + bifoga-text (ägaren 02.11 kväll)
 - [x] Telefon → 08-446 821 58 (samma som gjutabetongplatta, ägaren 02.11)
+- [ ] 2026-11-06 Clarity на сайт + журнал попыток формы (ok/ошибка) в sendmail.php

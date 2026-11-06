@@ -14,7 +14,7 @@ import { Button } from "./ui";
 const KEY = "ap-cookie-consent"; // "granted" | "denied"
 type Consent = "granted" | "denied";
 
-export function CookieConsent({ gaId, metaPixelId }: { gaId?: string; metaPixelId?: string }) {
+export function CookieConsent({ gaId, metaPixelId, clarityId }: { gaId?: string; metaPixelId?: string; clarityId?: string }) {
   const [consent, setConsent] = useState<Consent | null>(null);
   const [mounted, setMounted] = useState(false);
 
@@ -52,6 +52,14 @@ gtag('js', new Date());
 gtag('config', '${gaId}');`}
           </Script>
         </>
+      )}
+
+      {/* Microsoft Clarity – sessionsinspelning, först efter samtycke */}
+      {clarityId && consent === "granted" && (
+        <Script id="ms-clarity" strategy="afterInteractive">
+          {`(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","${clarityId}");
+window.clarity('consentv2',{ad_Storage:'denied',analytics_Storage:'granted'});`}
+        </Script>
       )}
 
       {/* Meta Pixel (retargeting) – laddas först efter uttryckligt samtycke */}
