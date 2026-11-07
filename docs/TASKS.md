@@ -16,4 +16,4 @@
 - [x] 2026-11-06 Clarity на сайт + журнал попыток формы (ok/ошибка) в sendmail.php
 
 ## 2026-11-07 — SEO-nivå
-- [ ] SEO-уровень 07.11: «kantbalksarmering» (поз. 8,7 на /blogg/armering-kantbalk) — title/H1/description под ключ, прямой ответ вверху + якоря «kantbalksarmering» из 5 топ-статей
+- [x] SEO-уровень 07.11: «kantbalksarmering» (поз. 8,7 на /blogg/armering-kantbalk) — title/H1/description под ключ, прямой ответ вверху + якоря «kantbalksarmering» из 5 топ-статей
