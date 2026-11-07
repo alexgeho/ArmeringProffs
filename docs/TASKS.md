@@ -14,3 +14,6 @@
 - [x] Underrubrik «Bifoga armeringsspecifikationen…» på alla offertformulär + bifoga-text (ägaren 02.11 kväll)
 - [x] Telefon → 08-446 821 58 (samma som gjutabetongplatta, ägaren 02.11)
 - [x] 2026-11-06 Clarity на сайт + журнал попыток формы (ok/ошибка) в sendmail.php
+
+## 2026-11-07 — SEO-nivå
+- [ ] SEO-уровень 07.11: «kantbalksarmering» (поз. 8,7 на /blogg/armering-kantbalk) — title/H1/description под ключ, прямой ответ вверху + якоря «kantbalksarmering» из 5 топ-статей

@@ -125,7 +125,7 @@ export const guider1: Post[] = [
       { type: "h3", text: "Korsnajning (åtta)" },
       { type: "p", text: "Tråden går i ett kryss runt korsningen innan den vrids åt. Knuten låser järnen i båda riktningarna och används där armeringen ska kunna beträdas eller lyftas, till exempel i korgar, väggar och vid ändar och hörn." },
       { type: "h3", text: "Sadelknut" },
-      { type: "p", text: "Tråden går runt det ena järnet och under det andra, så att knuten håller järnen mot varandra även när man kliver på dem. Vanlig i överkantsarmering och vid byglar." },
+      { type: "p", text: "Tråden går runt det ena järnet och under det andra, så att knuten håller järnen mot varandra även när man kliver på dem. Vanlig i överkantsarmering och vid byglar, till exempel i [kantbalksarmering](/blogg/armering-kantbalk)." },
 
       { type: "h2", text: "Så najar du – steg för steg" },
       { type: "ol", items: [
@@ -326,7 +326,7 @@ export const guider1: Post[] = [
       { type: "ul", items: [
         "Har du senaste revideringen? Revisionsbokstaven står i ritningshuvudet.",
         "Stämmer planer och sektioner med varandra – samma Ø och c/c?",
-        "Finns överkantsarmering, kantjärn och extra järn vid öppningar med?",
+        "Finns överkantsarmering, kantjärn och extra järn vid öppningar med? Kantjärnen beskrivs i [kantbalksarmering](/blogg/armering-kantbalk).",
         "Är skarvlängd och förankring angivna eller hänvisade till en generell not?",
       ] },
 

@@ -1275,7 +1275,7 @@ const basePosts: Post[] = [
       { type: "p", text: "Ordet U-bygel används också om gängade U-bultar för infästning av rör och avgassystem. I armeringssammanhang betyder U-bygel ett U-format armeringsjärn av kamstål (typform C) utan gängor. Ange typform och mått när du beställer, så blir det inga missförstånd." },
 
       { type: "h2", text: "Byglar i kantbalk" },
-      { type: "p", text: "I kantbalken runt en platta på mark används oftast en öppen K-bygel (villabygel) eller en sluten bygel. Mått, antal och montage går vi igenom i guiden [kantbalksbygel](/blogg/kantbalksbygel)." },
+      { type: "p", text: "I kantbalken runt en platta på mark används oftast en öppen K-bygel (villabygel) eller en sluten bygel. Mått, antal och montage går vi igenom i guiden [kantbalksbygel](/blogg/kantbalksbygel), och kantjärn, hörnjärn och skarvar i [kantbalksarmering](/blogg/armering-kantbalk)." },
 
       { type: "h2", text: "Så anges måtten på en bygel" },
       { type: "p", text: "Måtten anges som yttermått per ben i millimeter (a, b, c …), tillsammans med dimension (Ø), stålkvalitet och antal. Exempel på rader i en [bockningslista](/blogg/bockningslista-sa-gor-du):" },
@@ -1393,7 +1393,7 @@ const basePosts: Post[] = [
       ] },
 
       { type: "h2", text: "När lönar det sig att köpa bockat?" },
-      { type: "p", text: "Några enstaka järn till ett mindre projekt går bra att bocka själv. Men redan vid ett par dussin byglar går det snabbare, blir jämnare och ofta billigare totalt att beställa [klippt och bockad armering](/produkter/klippt-och-bockad) efter en [bockningslista](/tjanster/bockningslista). Då bockas varje järn i maskin med rätt radie, märks per position och levereras klart att montera." },
+      { type: "p", text: "Några enstaka järn till ett mindre projekt går bra att bocka själv. Men redan vid ett par dussin byglar går det snabbare, blir jämnare och ofta billigare totalt att beställa [klippt och bockad armering](/produkter/klippt-och-bockad) efter en [bockningslista](/tjanster/bockningslista). Då bockas varje järn i maskin med rätt radie, märks per position och levereras klart att montera. Bara kantbalken i en villagrund kräver ofta 100–200 byglar – se [kantbalksarmering](/blogg/armering-kantbalk)." },
       { type: "p", text: "[Skicka bockningslistan eller ritningen](/offert) så får du offert på färdigbockade järn, märkta per position och med frakt efter mängd och ort. Vikt per meter och stånglängder finns i [armeringsstål – B500B](/blogg/armeringsstal)." },
     ],
     faqs: [
@@ -1473,7 +1473,7 @@ const basePosts: Post[] = [
 
       { type: "h2", text: "Så placerar du skarvarna rätt" },
       { type: "ul", items: [
-        "Förskjut skarvarna – skarva inte alla järn i samma snitt.",
+        "Förskjut skarvarna – skarva inte alla järn i samma snitt. Exempel för kantjärn finns i [kantbalksarmering](/blogg/armering-kantbalk).",
         "Undvik skarvar där belastningen är störst, t.ex. mitt i ett spann eller över ett stöd.",
         "Järnen i en skarv ska ligga tätt ihop – högst 4 × Ø eller 50 mm fritt avstånd, annars ska skarven förlängas.",
         "Bind ihop skarven så att järnen inte glider isär vid gjutningen.",

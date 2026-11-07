@@ -202,14 +202,14 @@ export const armeringTill1: Post[] = [
   // 47. Kantbalk
   {
     slug: "armering-kantbalk",
-    title: "Armera kantbalk – kantjärn, hörnjärn och skarvar",
-    metaTitle: "Armera kantbalk – kantbalksarmering & skarvar",
+    title: "Kantbalksarmering – så armerar du en kantbalk",
+    metaTitle: "Kantbalksarmering – armera kantbalk rätt",
     metaDescription:
-      "Så armeras en kantbalk i platta på mark: antal och dimension på kantjärn, hörnjärn, skarvlängder och hur byglar och järn bildar en färdig kantbalkskorg.",
+      "Kantbalksarmering i platta på mark: antal och dimension på kantjärn, byglar och hörnjärn, skarvlängder och räkneexempel för en villaplatta 10 × 12 m.",
     excerpt:
       "Kantbalken bär ytterväggarna. Här går vi igenom de längsgående kantjärnen, hörnen och skarvarna – det som tillsammans med byglarna blir en färdig kantbalksarmering.",
     date,
-    updated: "2026-10-14",
+    updated: "2026-11-07",
     readingMinutes: 5,
     keywords: [
       "armera kantbalk",
@@ -221,6 +221,7 @@ export const armeringTill1: Post[] = [
       "kantbalksarmering",
     ],
     content: [
+      { type: "p", text: "Kantbalksarmering är armeringen i den förtjockade kanten runt en platta på mark: längsgående kantjärn i över- och underkant, i villaplattor ofta 2–3 st Ø10–Ø12, byglar Ø8 c/c 200–300 mm och L-formade hörnjärn i varje hörn. Antal, dimension och skarvlängd står på konstruktionsritningen." },
       { type: "p", text: "En kantbalk är den förtjockade kanten runt en platta på mark. Den armeras med längsgående kantjärn i över- och underkant, sammanhållna av byglar. Byglarnas form och mått har vi gått igenom i [kantbalksbygel](/blogg/kantbalksbygel) – här handlar det om kantjärnen, hörnen och skarvarna. Allt kan levereras färdigt som [kantbalkskorgar och kantbalksarmering](/produkter/villakorg-kantbalksarmering)." },
 
       { type: "h2", text: "Typisk kantbalksarmering i en villaplatta" },
