@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useId, useState } from "react";
 import Link from "next/link";
 import { IconCheck } from "./icons";
 import { TextField, TextArea } from "./form";
@@ -22,6 +22,8 @@ export function ContactForm({
   /** Formuläret ligger direkt på mörk bakgrund (transparent kort i hero). */
   onDark?: boolean;
 }) {
+  // Unika id:n – flera formulär kan ligga på samma sida (bloggartiklar: mitt + slut).
+  const uid = useId();
   const [status, setStatus] = useState<Status>("idle");
   const [fileName, setFileName] = useState("");
   const [errors, setErrors] = useState<{ email?: string; phone?: string }>({});
@@ -89,8 +91,8 @@ export function ContactForm({
       {/* Honeypot mot spam-bots: dolt fält som människor inte ser. Fylls det i
           slänger sendmail.php förfrågan. aria-hidden + tabindex -1 + autocomplete off. */}
       <div aria-hidden="true" className="absolute left-[-9999px] h-0 w-0 overflow-hidden" style={{ position: "absolute" }}>
-        <label htmlFor="company_website">Lämna tomt</label>
-        <input id="company_website" name="company_website" type="text" tabIndex={-1} autoComplete="off" />
+        <label htmlFor={`${uid}-company_website`}>Lämna tomt</label>
+        <input id={`${uid}-company_website`} name="company_website" type="text" tabIndex={-1} autoComplete="off" />
       </div>
 
       {/* Minimalistiskt: bara placeholder synlig, etiketten finns för skärmläsare (sr-only). */}
@@ -134,7 +136,7 @@ export function ContactForm({
         </svg>
         <span className="min-w-0 truncate">{fileName || "Bifoga armeringsspecifikation eller ritning"}</span>
         <input
-          id="drawing"
+          id={`${uid}-drawing`}
           name="drawing"
           type="file"
           accept=".pdf,.dwg,.dxf,.xls,.xlsx,.csv,.doc,.docx,.png,.jpg,.jpeg,.zip"

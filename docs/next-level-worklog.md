@@ -1,5 +1,12 @@
 # next-level-brief — worklog (2026-09-08)
 
+## 🟡 2026-11-13 — заявки: мобильная шапка + формы в 10 статьях (ветка `leads-2026-11-13`, НЕ задеплоено)
+- Шапка <1024 px на всех страницах: телефон (`tel:+46844682158`, иконка 44×44; с 640 px — с номером) + «Begär offert» (44 px) перед кнопками темы и меню. <390 px кнопка темы переезжает в мобильное меню (в ряд не помещается).
+- Блог: `OffertForm` (Panel + «Få en offert» + ContactForm compact, файл, sendmail.php) в середине и в конце 10 статей вместо CTA-рамок: bocka-armeringsjarn, lasa-armeringsritning, skarvlangd-armering, armeringsbyglar, naja-armering, typformer-armering, armering-platta-golvvarme, armering-till-betongplatta, armeringsspecifikation-exempel, tackskikt-exponeringsklass (GSC 28 дн, клики). source = `blogg-<slug>-mitt|slut`. ContactForm: id через `useId` (две формы на странице).
+- Проверка (headless Chromium, 19 страниц × 320–1440 × светлая/тёмная): tsc/eslint/build чисто; шапка 390: logo 82 · tel 44 · кнопка 105 · тема 44 · меню 44, зазоры 6, запас 0–5 px, без перекрытий; форма 390: карточка 358×585, поля 308×48, отступы 40/40 (середина) и 48 (конец), паддинг 24; 768: 720×565; 1440: 1104×496, поля 507. Формы не отправлялись.
+- Не трогал (было до правки): горизонтальная прокрутка /blogg/armeringsspecifikation-exempel/ на 390 (411 px), / и /armering/goteborg/ на 320 (327), калькулятор <360; колонка статьи на десктопе 1104 px (max-w-3xl не срабатывает).
+- NÄSTA: проверка главным агентом → merge в main → деплой; после — посмотреть в formlog/GA4 источники `blogg-*`.
+
 ## ▶️ HANDOFF 2026-11-02 (kväll) — НАЧНИ ОТСЮДА
 **KLART:** 6 страниц расширены (`0bde981`) + /armeringsjarn-staket/ (`4d19ad0`) live; формы: заголовок + «Bifoga armeringsspecifikationen…» → поля, E-post* / Telefon, расчёт/список скрытым полем `spec` → «Underlag» в письме; телефон 08-446 821 58 (как gjuta).
 **NÄSTA:** 1) 03.11 Request Indexing: /armeringsjarn-staket/, /produkter/klippt-och-bockad/, /prefab-armering/, /armeringsleverantor/, /produkter/armeringsjarn/, /produkter/armeringsnat/, /. 2) GBP + каталоги с 08-446 821 58. 3) Мини-калькулятор в skarvlängd / bocka-armeringsjarn. 4) Старые «EKS» в гайдах → BFS 2024:6.

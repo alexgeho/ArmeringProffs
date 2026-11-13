@@ -17,3 +17,7 @@
 
 ## 2026-11-07 — SEO-nivå
 - [x] SEO-уровень 07.11: «kantbalksarmering» (поз. 8,7 на /blogg/armering-kantbalk) — title/H1/description под ключ, прямой ответ вверху + якоря «kantbalksarmering» из 5 топ-статей
+
+## 2026-11-13 — заявки (ägaren «ок» på första ändringen efter leads-granskningen)
+- [x] 2026-11-13 Мобильная шапка (<1024 px): кнопка «Begär offert» + кликабельный телефон, все страницы (ветка leads-2026-11-13)
+- [x] 2026-11-13 Компактная форма запроса с файлом (ContactForm compact → sendmail.php) в середине и в конце 10 самых посещаемых статей блога по GSC 28 дн: bocka-armeringsjarn, lasa-armeringsritning, skarvlangd-armering, armeringsbyglar, naja-armering, typformer-armering, armering-platta-golvvarme, armering-till-betongplatta, armeringsspecifikation-exempel, tackskikt-exponeringsklass

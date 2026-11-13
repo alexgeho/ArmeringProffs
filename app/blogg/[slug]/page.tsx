@@ -5,6 +5,7 @@ import { site } from "@/config/site";
 import { Section, Container, Button, ArrowLink, Card, Panel, DataTable } from "@/components/ui";
 import { Breadcrumbs, CtaBanner } from "@/components/sections";
 import { FaqAccordion } from "@/components/FaqAccordion";
+import { ContactForm } from "@/components/ContactForm";
 import { IconClock, IconArrow, IconCheck } from "@/components/icons";
 import { figures } from "@/components/illustrations";
 import { JsonLd, articleSchema, breadcrumbSchema, faqSchema } from "@/lib/jsonld";
@@ -86,6 +87,41 @@ function renderBlock(b: Block, i: number) {
   return <p key={i}>{renderText(b.text)}</p>;
 }
 
+/**
+ * Artiklar med offertformulär i mitten och i slutet i stället för CTA-rutorna:
+ * de 10 mest besökta guiderna (GSC 28 dagar, 15.10–11.11.2026).
+ */
+const formPosts = new Set([
+  "bocka-armeringsjarn",
+  "lasa-armeringsritning",
+  "skarvlangd-armering",
+  "armeringsbyglar",
+  "naja-armering",
+  "typformer-armering",
+  "armering-platta-golvvarme",
+  "armering-till-betongplatta",
+  "armeringsspecifikation-exempel",
+  "tackskikt-exponeringsklass",
+]);
+
+/** Formulärkort i artikel: samma kort som på produktsidorna (rubrik + underrubrik + fält). */
+function OffertForm({ source, as: Tag, className }: { source: string; as: "h2" | "p"; className: string }) {
+  return (
+    <Panel className={`@container ${className}`}>
+      {/* Bred artikelkolumn (dator): rubrik till vänster, fält till höger – fälten blir aldrig bredare än ~510 px. */}
+      <div className="@3xl:grid @3xl:grid-cols-2 @3xl:gap-10">
+        <div>
+          <Tag className="type-h4 text-ink">Få en offert</Tag>
+          <p className="mt-1 text-sm text-ink-soft">Bifoga armeringsspecifikationen – det är det första vi behöver för att räkna på jobbet.</p>
+        </div>
+        <div className="mt-5 @3xl:mt-0">
+          <ContactForm compact source={source} />
+        </div>
+      </div>
+    </Panel>
+  );
+}
+
 /** Index för mitt-CTA: före den mittersta h2:an (minst efter första avsnittet). */
 function midIndex(content: Block[]): number {
   const h2 = content.flatMap((b, i) => (b.type === "h2" ? [i] : []));
@@ -127,6 +163,7 @@ export default async function PostPage({
   const more = relatedPosts(p, posts, 3);
   const bild = foto(p.slug);
   const mid = midIndex(p.content);
+  const withForm = formPosts.has(p.slug);
 
   return (
     <>
@@ -152,7 +189,10 @@ export default async function PostPage({
           <div className="prose-body mt-10">
             {p.content.map((b, i) => (
               <Fragment key={i}>
-                {i === mid && (
+                {i === mid && withForm && (
+                  <OffertForm as="p" source={`blogg-${p.slug}-mitt`} className="!my-10" />
+                )}
+                {i === mid && !withForm && (
                   <Panel className="!my-10 flex flex-wrap items-center justify-between gap-4">
                     <p className="type-h4 !m-0 text-ink">Slipp kapa och bocka själv</p>
                     <Button href="/offert">Skicka listan <IconArrow className="h-4 w-4" /></Button>
@@ -172,7 +212,8 @@ export default async function PostPage({
             </div>
           )}
 
-          <Panel className="mt-12">
+          {withForm && <OffertForm as="h2" source={`blogg-${p.slug}-slut`} className="mt-12" />}
+          {!withForm && <Panel className="mt-12">
             <h2 className="type-h4 text-ink">Behöver du armering till ditt projekt?</h2>
             <p className="mt-2 text-ink-soft">Vi tillverkar och levererar prefab armering i hela Sverige. Skicka din bockningslista för offert.</p>
             <div className="mt-4 flex flex-wrap items-center gap-4">
@@ -181,7 +222,7 @@ export default async function PostPage({
                 <ArrowLink href={p.target.href}>{p.target.label}</ArrowLink>
               )}
             </div>
-          </Panel>
+          </Panel>}
         </Container>
       </article>
 

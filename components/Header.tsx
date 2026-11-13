@@ -34,7 +34,7 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-header border-b border-line bg-page/90 backdrop-blur">
-      <div className="mx-auto flex h-(--header-h) w-full max-w-6xl items-center justify-between gap-4 px-4 sm:px-6">
+      <div className="mx-auto flex h-(--header-h) w-full max-w-6xl items-center justify-between gap-2 px-4 min-[360px]:gap-4 sm:px-6">
         <Link href="/" aria-label={site.brand} className="flex shrink-0 items-center font-bold text-ink" onClick={() => setOpen(false)}>
           <Image src="/images/logo-agry-light.png" alt={`${site.brand} – AGRY OÜ`} width={390} height={360} className="h-[76px] w-auto max-w-none shrink-0 object-contain sm:h-[92px] lg:h-[104px] dark:hidden" priority />
           <Image src="/images/logo-agry-dark.png" alt={`${site.brand} – AGRY OÜ`} width={520} height={480} className="hidden h-[76px] w-auto max-w-none shrink-0 object-contain sm:h-[92px] lg:h-[104px] dark:block" />
@@ -59,8 +59,17 @@ export function Header() {
           </Link>
         </div>
 
-        <div className="flex items-center gap-2 lg:hidden">
-        <ThemeToggle />
+        {/* Mobil/surfplatta: telefon + offertknapp alltid synliga i headern (ägaren 13.11).
+            Under 390 px ryms inte temaknappen i raden – den ligger då i mobilmenyn. */}
+        <div className="flex items-center gap-1.5 max-[360px]:gap-1 sm:gap-2 lg:hidden">
+        <a href={site.phoneHref} aria-label={`Ring ${site.phone}`} className="flex min-h-11 min-w-11 shrink-0 items-center justify-center gap-2 whitespace-nowrap text-sm font-semibold text-ink hover:text-brand">
+          <IconPhone className="h-5 w-5 text-accent sm:h-4 sm:w-4" />
+          <span className="hidden sm:inline">{site.phone}</span>
+        </a>
+        <Link href="/offert" onClick={() => setOpen(false)} className={buttonClass("primary", "sm", "shrink-0 max-sm:px-3 max-[360px]:!px-2")}>
+          Begär offert
+        </Link>
+        <ThemeToggle className="max-[390px]:hidden" />
         <button
           type="button"
           aria-label={open ? "Stäng meny" : "Öppna meny"}
@@ -93,10 +102,13 @@ export function Header() {
               </Link>
             ))}
             <div className="mt-3 flex flex-col gap-3 border-t border-line pt-4">
-              <a href={site.phoneHref} className="flex min-h-11 items-center gap-2 font-semibold text-ink">
-                <IconPhone className="h-4 w-4 text-accent" />
-                {site.phone}
-              </a>
+              <div className="flex items-center justify-between gap-3">
+                <a href={site.phoneHref} className="flex min-h-11 items-center gap-2 font-semibold text-ink">
+                  <IconPhone className="h-4 w-4 text-accent" />
+                  {site.phone}
+                </a>
+                <ThemeToggle className="min-[390px]:hidden" />
+              </div>
               <Link
                 href="/offert"
                 onClick={() => setOpen(false)}

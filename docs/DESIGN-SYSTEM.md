@@ -163,6 +163,25 @@ Gäller ALLA formulär (`ContactForm` i hero, kontakt, produkt, kalkylator, bock
 3. Separata fält: «E-post *» krävs (`type=email`, valideras: «Fyll i din e-post.» / «Kontrollera e-postadressen.») och «Telefon» frivillig (`type=tel`, minst 6 siffror om ifylld). Inget kombinerat «telefon eller e-post». Ordning: Namn / företag → E-post * → Telefon → meddelande → bifoga → knapp.
 - `sendmail.php`: `email` krävs (400 JSON vid saknad/ogiltig), Reply-To = e-post, `phone` frivillig, `contact` tas emot bakåtkompatibelt.
 
+### Header på mobil/surfplatta (ägaren 13.11.2026)
+Under 1024 px visar headerraden alltid: logga → telefon (`tel:`-länk) → «Begär offert» (`buttonClass("primary","sm")`) → temaknapp → menyknapp. Gäller alla sidor (en `Header`).
+- Telefon: bara ikon 44×44 px under 640 px, ikon + nummer från 640 px. `aria-label="Ring <nummer>"`.
+- Knappen är 44 px hög; sidopadding 12 px under 640 px, 8 px under 360 px (16 px från 640 px). Text alltid «Begär offert».
+- Avstånd mellan elementen: 6 px (4 px under 360 px), 8 px från 640 px. Logga → grupp minst 16 px (8 px under 360 px).
+- Under 390 px ryms inte temaknappen i raden – den ligger då i mobilmenyn till höger om telefonnumret.
+- Uppmätt 13.11 (ljust = mörkt): 320 px – summa 283 av 288; 360 – 303 av 328; 390 – 353 av 358; 768 – nummer synligt; ingen horisontell scroll, inga överlapp.
+- ❌ Dölja telefon eller offertknapp i mobilraden. ❌ Lägga till fler element i raden utan att mäta 320/360/390.
+
+### Offertformulär i guider (ägaren 13.11.2026)
+`OffertForm` i `app/blogg/[slug]/page.tsx`: `Panel` + rubrik «Få en offert» + underrubriken «Bifoga armeringsspecifikationen…» + `ContactForm compact` (samma kort som på produktsidorna, samma `sendmail.php`).
+- Placering: före den mittersta h2:an (ersätter rutan «Slipp kapa och bocka själv») och efter FAQ (ersätter «Behöver du armering till ditt projekt?»). Aldrig formulär + CTA-ruta på samma plats.
+- Gäller artiklarna i listan `formPosts` (de 10 mest besökta enligt GSC); övriga artiklar behåller CTA-rutorna. Ny artikel i listan = bara slug i `formPosts`.
+- Luft: 40 px över och under i löptexten (`!my-10`), 48 px över i slutet (`mt-12`); kortets inre luft 24 px på alla sidor; kortets kanter = textkolumnens kanter.
+- Kortet är `@container`: från 768 px kortbredd två kolumner (rubrik + underrubrik till vänster, fälten till höger, 40 px emellan) så att fälten inte blir bredare än ca 510 px; smalare = en kolumn.
+- Rubriken i mitten är `<p class="type-h4">` (ingen extra h2 mitt i artikeln), i slutet `<h2>`.
+- `source` = `blogg-<slug>-mitt` / `blogg-<slug>-slut` (syns i lead-mejlet och i GA4 `generate_lead`).
+- Flera `ContactForm` på samma sida: id:n för honeypot och filfält kommer från `useId` – inga fasta id:n i formuläret.
+
 ---
 
 ## 3. Sidmallar
@@ -175,7 +194,7 @@ Gäller ALLA formulär (`ContactForm` i hero, kontakt, produkt, kalkylator, bock
 | `/tjanster/[slug]` | Breadcrumbs → PhotoHero (eller verktygshuvud för bockningslista) → prose-body + Panel → Process → Card-rutnät → CityLinks → FAQ → CtaBanner |
 | `/armering/[ort]` | Breadcrumbs → PhotoHero → Card-rutnät + sektorer → Leverans (muted) → KalkylatorPromo → FAQ (narrow) → GuidesTeaser → ChipLinks (muted) → CtaBanner |
 | `/blogg` | Breadcrumbs → SectionHeading h1 → promo → grupper med bloggkort → CtaBanner |
-| `/blogg/[slug]` | Breadcrumbs → artikel (max-w-3xl, prose-body: h2/h3/p/ul/ol/DataTable/figur) → FAQ → Panel-CTA → Card-rutnät → CtaBanner |
+| `/blogg/[slug]` | Breadcrumbs → artikel (max-w-3xl, prose-body: h2/h3/p/ul/ol/DataTable/figur) → FAQ → Panel-CTA (eller `OffertForm` i mitten + slutet för `formPosts`) → Card-rutnät → CtaBanner |
 | Kalkylatorer | Breadcrumbs → PageHeader → verktyg (input-kort + resultat-kort på surface) → prose-body (muted, narrow) → FAQ (narrow) → CtaBanner |
 | `/produkter`, `/tjanster` | SectionHeading h1 → Card med CheckList |
 
