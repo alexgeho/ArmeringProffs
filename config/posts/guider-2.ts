@@ -481,7 +481,7 @@ export const guider2: Post[] = [
         "”Svetsad armering är alltid sämre” – nej, om svetsningen följer SS-EN ISO 17660 och ritningen tillåter den.",
       ] },
 
-      { type: "p", text: "Samma frågor gäller tillbehör som gjuts in, till exempel lyftöglor och ingjutningsgods. För dem kan det finnas egna produktstandarder och krav på provning – fråga leverantören vad som gäller för just den produkten." },
+      { type: "p", text: "Samma frågor gäller tillbehör som gjuts in, till exempel [lyftöglor i betong](/blogg/lyftoglor-betong) och ingjutningsgods. För dem kan det finnas egna produktstandarder och krav på provning – fråga leverantören vad som gäller för just den produkten." },
 
       { type: "h2", text: "Kontroll vid leverans" },
       { type: "p", text: "När armeringen kommer till bygget, jämför etiketterna med följesedeln och beställningen. Kontrollera att dimension och stålsort stämmer med ritningen och spara intygen tillsammans med kontrollplanen. Saknas intyg – begär dem innan armeringen gjuts in. I efterhand är det svårt att visa vilken armering som faktiskt ligger i konstruktionen. För offentliga upphandlingar och större projekt brukar kraven på intyg och spårbarhet stå i AMA Anläggning eller AMA Hus och i den tekniska beskrivningen." },
@@ -838,7 +838,7 @@ export const guider2: Post[] = [
           ["Garageplatta med tösalt", "XD3 + XF", "35 mm", "ca 45 mm"],
         ],
       },
-      { type: "p", text: "För kloridmiljöer som pooler och garage blir täckskiktet ofta 40–50 mm. Se även [armering till pool](/blogg/armering-till-pool)." },
+      { type: "p", text: "För kloridmiljöer som pooler och garage blir täckskiktet ofta 40–50 mm. Se även [armering till pool](/blogg/armering-till-pool). I XD3 och XS3 föreskrivs ibland [rostfri armering](/blogg/rostfri-armering) närmast den utsatta ytan." },
 
       { type: "h2", text: "Livslängdsklass – L50 eller L100?" },
       { type: "p", text: "L50 används för de flesta byggnader. L100 väljs för konstruktioner som ska hålla längre eller är svåra att reparera, till exempel broar, parkeringshus och vissa grundkonstruktioner. Skillnaden är oftast 5–10 mm i täckskikt. Livslängdsklassen står i konstruktionsförutsättningarna eller på ritningen." },

@@ -5,10 +5,10 @@ export const extraServices: Service[] = [
   {
     slug: "armeringsspecifikation",
     name: "Armeringsspecifikation",
-    h1: "Armeringsspecifikation från din ritning",
-    metaTitle: "Armeringsspecifikation från ritning",
+    h1: "Armeringsspecifikation och specning från din ritning",
+    metaTitle: "Armeringsspecifikation – specning av armering",
     metaDescription:
-      "Armeringsspecifikation (armeringsspec, armeringsförteckning) från ritning: skicka PDF, DWG eller IFC – få specen, bockningslistan och offert.",
+      "Specning av armering från ritning: skicka PDF, DWG eller IFC – vi tar fram armeringsspecifikationen (armeringsspec, förteckning) och offert i samma svar.",
     intro:
       "Har du konstruktionsritningen men ingen armeringsspec? Skicka den som PDF, DWG eller IFC så tar vi fram specifikationen – varje position med form, mått, dimension, antal och vikt. Du godkänner specen innan något tillverkas och får offert på armeringen i samma svar.",
     keywords: [
@@ -19,6 +19,7 @@ export const extraServices: Service[] = [
       "armeringsritning",
       "ta fram bockningslista",
       "speca armering",
+      "specning av armering",
     ],
     includes: [
       "Ritning in som PDF, DWG eller IFC",
@@ -31,7 +32,7 @@ export const extraServices: Service[] = [
     body: [
       {
         heading: "Ritningen visar var – specen visar hur mycket",
-        text: "Konstruktörens ritning visar var armeringen ska ligga, men inte hur många järn av varje form som behövs. Armeringsspecifikationen (armeringsförteckningen) räknar ut det: typform, skänkelmått, dimension, antal och vikt per position. Den blir underlaget för [klippt och bockad armering](/produkter/klippt-och-bockad) och för en offert du kan lita på.",
+        text: "Konstruktörens ritning visar var armeringen ska ligga, men inte hur många järn av varje form som behövs. Specning av armering är arbetet att räkna fram det ur ritningen, och resultatet är armeringsspecifikationen (armeringsförteckningen): typform, skänkelmått, dimension, antal och vikt per position. Den blir underlaget för [klippt och bockad armering](/produkter/klippt-och-bockad) och för en offert du kan lita på.",
       },
       {
         heading: "Så går det till",
@@ -52,6 +53,7 @@ export const extraServices: Service[] = [
     ],
     faqs: [
       { q: "Vad är en armeringsspecifikation?", a: "En förteckning över all armering i ett projekt – varje position med form, mått, dimension, antal och vikt, framräknad ur konstruktionsritningen." },
+      { q: "Vad är specning av armering?", a: "Att räkna fram armeringsspecifikationen ur konstruktionsritningen: varje järn får positionsnummer, form, mått, dimension och antal, och vikten räknas fram. Specen är underlaget för tillverkning och offert." },
       { q: "Vilka filformat tar ni emot?", a: "PDF, DWG och IFC. Har du ett annat format, skicka det ändå så hör vi av oss." },
       { q: "Vad är skillnaden mot en bockningslista?", a: "Innehållet är i praktiken detsamma. Skillnaden är vem som gör den: i bockningslisteverktyget fyller du i måtten själv, med armeringsspecifikation tar vi fram listan från ritningen." },
       { q: "Vad kostar armeringsspecifikationen?", a: "Det beror på ritningens omfattning. Upplägg och pris anges i offerten tillsammans med priset på armeringen." },
@@ -62,7 +64,7 @@ export const extraServices: Service[] = [
     slug: "ilf-armering",
     name: "ILF-armering",
     h1: "ILF-armering – inläggningsfärdig armering",
-    metaTitle: "ILF-armering – inläggningsfärdig armering",
+    metaTitle: "Beställ ILF-armering – märkt per position",
     metaDescription:
       "ILF-armering: kapad, bockad, märkt och buntad per position – klar att lägga direkt i formen, levererad per etapp i hela Sverige. Begär offert.",
     intro:

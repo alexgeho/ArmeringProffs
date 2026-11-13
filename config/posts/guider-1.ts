@@ -320,7 +320,7 @@ export const guider1: Post[] = [
       { type: "h3", text: "Skarvar och förankring" },
       { type: "p", text: "Ritningen anger var järnen får skarvas och hur långt de ska förankras. Missas det blir mängden för liten när armeringen beställs i stånglängder. Se [förankringslängd – tabell](/blogg/forankringslangd-armering)." },
       { type: "h3", text: "Mått: ytter- eller innermått?" },
-      { type: "p", text: "Byglar och bockade järn anges normalt med yttermått per skänkel. Kontrollera alltid hur måttsättningen är gjord innan du räknar klipplängder." },
+      { type: "p", text: "Byglar och bockade järn anges normalt med yttermått per skänkel. Kontrollera alltid hur måttsättningen är gjord innan du räknar klipplängder. Minsta [bockningsradie för armering](/blogg/bocka-armeringsjarn) per dimension finns i tabell." },
 
       { type: "h2", text: "Kontrollera ritningen innan du beställer" },
       { type: "ul", items: [
@@ -331,8 +331,8 @@ export const guider1: Post[] = [
       ] },
 
       { type: "h2", text: "Från ritning till beställning" },
-      { type: "p", text: "Ritningen visar var armeringen ska ligga. För att tillverka den behövs en förteckning med varje position: form, mått, Ø och antal. Finns den inte på ritningen måste den tas fram – det är vad som kallas armeringsspecifikation eller bockningslista. Hur en sådan ser ut visar vi i [armeringsspecifikation – exempel](/blogg/armeringsspecifikation-exempel)." },
-      { type: "p", text: "Skicka din ritning (PDF, DWG eller foto) till oss via [armeringsspecifikation](/tjanster/armeringsspecifikation) eller [offertformuläret](/offert). Vi tar fram specifikationen, du godkänner den och vi tillverkar, märker per position och levererar i hela Sverige. Mer om tillverkningen: [klippt och bockad armering efter ritning](/produkter/klippt-och-bockad) och [prefabricerade armeringskorgar och nät](/prefab-armering)." },
+      { type: "p", text: "Ritningen visar var armeringen ska ligga. För att tillverka den behövs en förteckning med varje position: form, mått, Ø och antal. Finns den inte på ritningen måste den tas fram – det är vad som kallas armeringsspecifikation eller bockningslista, och arbetet kallas [specning av armering](/tjanster/armeringsspecifikation). Hur en sådan ser ut visar vi i [armeringsspecifikation – exempel](/blogg/armeringsspecifikation-exempel)." },
+      { type: "p", text: "Skicka din ritning (PDF, DWG eller foto) till oss via [armeringsspecifikation](/tjanster/armeringsspecifikation) eller [offertformuläret](/offert). Vi tar fram specifikationen, du godkänner den och vi tillverkar, märker per position och levererar i hela Sverige – så kallad [ILF-armering](/blogg/ilf-inlaggningsfardig-armering). Mer om tillverkningen: [klippt och bockad armering efter ritning](/produkter/klippt-och-bockad) och [prefabricerade armeringskorgar och nät](/prefab-armering)." },
     ],
     faqs: [
       { q: "Vad betyder s150 på en armeringsritning?", a: "s150 betyder att järnen ligger med 150 mm centrumavstånd (c/c). Ø12 s150 är alltså 12 mm kamstål med 150 mm mellan järnens mitt." },
@@ -364,7 +364,7 @@ export const guider1: Post[] = [
       "vikt armeringsspecifikation",
     ],
     content: [
-      { type: "p", text: "En armeringsspecifikation (armeringsspec, armeringsförteckning) är tabellen som översätter armeringsritningen till något som går att tillverka: varje position med form, mått, dimension, antal och vikt. Den är både tillverkningsunderlag och underlag för pris. Här visar vi hur en färdig spec ser ut och hur siffrorna hänger ihop." },
+      { type: "p", text: "En armeringsspecifikation (armeringsspec, armeringsförteckning) är tabellen som översätter armeringsritningen till något som går att tillverka: varje position med form, mått, dimension, antal och vikt. Den är både tillverkningsunderlag och underlag för pris, och det är efter den som [ILF-armering](/blogg/ilf-inlaggningsfardig-armering) kapas, bockas och märks. Här visar vi hur en färdig spec ser ut och hur siffrorna hänger ihop." },
       { type: "p", text: "Vill du slippa göra den själv tar vi fram [armeringsspecifikationen från din ritning](/tjanster/armeringsspecifikation) – du godkänner den innan något tillverkas." },
 
       { type: "h2", text: "Kolumnerna i en armeringsspecifikation" },
@@ -429,7 +429,7 @@ export const guider1: Post[] = [
       { type: "p", text: "Kontrollera alltid summan mot ett överslag. En kantbalk på 40 meter med fyra längsjärn Ø12 kräver minst 160 m Ø12 plus skarvar – ligger specen långt under det har något fallit bort." },
 
       { type: "h2", text: "Låt oss göra specen" },
-      { type: "p", text: "En spec tar tid och felen syns först på bygget. Skicka ritningen via [armeringsspecifikation](/tjanster/armeringsspecifikation) så räknar vi fram alla positioner, vikter och former. Du får den för godkännande tillsammans med [offert](/offert) på tillverkning och leverans i hela Sverige." },
+      { type: "p", text: "En spec tar tid och felen syns först på bygget. Vi gör [specning av armering från ritning](/tjanster/armeringsspecifikation): skicka ritningen så räknar vi fram alla positioner, vikter och former. Du får den för godkännande tillsammans med [offert](/offert) på tillverkning och leverans i hela Sverige." },
     ],
     faqs: [
       { q: "Vad ska en armeringsspecifikation innehålla?", a: "Positionsnummer, antal, dimension (Ø), typform, mått per skänkel, klipplängd, total längd och vikt – gärna uppdelat per byggdel eller gjutetapp." },
@@ -443,15 +443,17 @@ export const guider1: Post[] = [
   /* 80 */
   {
     slug: "ilf-inlaggningsfardig-armering",
-    title: "ILF – vad är inläggningsfärdig armering?",
-    metaTitle: "Vad är ILF? Inläggningsfärdig armering",
+    title: "ILF-armering – vad är inläggningsfärdig armering?",
+    metaTitle: "ILF-armering – vad är inläggningsfärdig armering?",
     metaDescription:
-      "ILF betyder inläggningsfärdig armering: kapad, bockad och märkt per position, klar för formen. Så fungerar flödet, när det lönar sig och vad vi behöver.",
+      "ILF-armering är inläggningsfärdig armering: kapad, bockad och märkt per position, klar för formen. Vad som ingår, ILF mot raka järn och vad det kostar.",
     excerpt:
       "ILF är branschens förkortning för armering som kommer färdig att lägga in i formen. Här förklarar vi vad som ingår, hur flödet från ritning till bygge ser ut och när ILF lönar sig jämfört med raka järn.",
     date: "2026-10-09",
+    updated: "2026-11-13",
     readingMinutes: 6,
     keywords: [
+      "ilf armering",
       "vad är ilf armering",
       "inläggningsfärdig armering",
       "iläggningsfärdig armering",
@@ -460,8 +462,8 @@ export const guider1: Post[] = [
       "färdigbockad armering",
     ],
     content: [
-      { type: "p", text: "ILF står för inläggningsfärdig armering – ibland skrivet iläggningsfärdig. Det är armering som har kapats och bockats efter en armeringsspecifikation, märkts per position och buntats så att den kan läggas direkt i formen utan bearbetning på bygget. Begreppet används av armeringsfabriker och entreprenörer i hela Sverige." },
-      { type: "p", text: "Vi levererar [ILF-armering](/tjanster/ilf-armering) efter din ritning eller bockningslista, märkt och sorterad per byggdel." },
+      { type: "p", text: "ILF-armering är inläggningsfärdig armering – ibland skrivet iläggningsfärdig. Armeringen har kapats och bockats efter en armeringsspecifikation, märkts per position och buntats så att den kan läggas direkt i formen utan bearbetning på bygget. Förkortningen ILF används av armeringsfabriker och entreprenörer i hela Sverige." },
+      { type: "p", text: "Vi levererar ILF efter din ritning eller bockningslista, märkt och sorterad per byggdel – [beställ ILF-armering](/tjanster/ilf-armering)." },
 
       { type: "h2", text: "ILF jämfört med raka järn" },
       { type: "table", head: ["", "Raka järn (rakstål)", "ILF-armering"], rows: [
@@ -524,7 +526,7 @@ export const guider1: Post[] = [
       { type: "p", text: "ILF prissätts normalt per kilo eller ton, där stålpriset kompletteras med förädlingen – kapning, bockning, märkning – och frakten. Priset påverkas av mängd, andel bockade positioner och dimensioner. Exakt pris och leveranstid anges i offerten. Se också [vad kostar armering](/blogg/vad-kostar-armering)." },
 
       { type: "h2", text: "Beställ ILF-armering" },
-      { type: "p", text: "Skicka ritning eller bockningslista till oss via [ILF-armering](/tjanster/ilf-armering) eller [offertformuläret](/offert). Vi tillverkar i B500B, märker varje position och levererar sorterat i hela Sverige – även till Norrland." },
+      { type: "p", text: "Skicka ritning eller bockningslista till oss via sidan [beställ ILF-armering](/tjanster/ilf-armering) eller [offertformuläret](/offert). Vi tillverkar i B500B, märker varje position och levererar sorterat i hela Sverige – även till Norrland." },
     ],
     faqs: [
       { q: "Vad betyder ILF?", a: "ILF betyder inläggningsfärdig (iläggningsfärdig) armering – kapad, bockad, märkt och sorterad så att den kan läggas direkt i formen utan bearbetning på bygget." },
@@ -1057,12 +1059,13 @@ export const guider1: Post[] = [
   {
     slug: "rostfri-armering",
     title: "Rostfri armering – när behövs den och vad är alternativen?",
-    metaTitle: "Rostfri armering – när behövs den?",
+    metaTitle: "Rostfri armering – stålsorter & när den behövs",
     metaDescription:
-      "När behövs rostfri armering? Stålsorter som 1.4301, 1.4436 och duplex 1.4362, typiska användningsområden i saltmiljö och vilka alternativ som ofta räcker.",
+      "Rostfri armering (rostfria armeringsjärn) används i saltmiljö, klass XD3 och XS3: broar, kajer, parkeringsdäck. Stålsorter 1.4301–1.4462 och alternativ.",
     excerpt:
       "Rostfri armering används där kloridangrepp eller lång livslängd gör vanligt stål för riskabelt. Här är stålsorterna, när de behövs – och när större täckskikt räcker.",
     date: "2026-10-09",
+    updated: "2026-11-13",
     readingMinutes: 6,
     keywords: [
       "rostfri armering",
@@ -1073,6 +1076,7 @@ export const guider1: Post[] = [
       "rostfria armeringsjärn",
     ],
     content: [
+      { type: "p", text: "Rostfri armering är armeringsjärn av rostfritt stål – vanliga sorter är 1.4301, 1.4436 och duplexstålen 1.4362 och 1.4462. Den används där klorider från vägsalt eller havsvatten annars bryter ner vanligt armeringsstål: broar, kajer, parkeringsdäck och balkonginfästningar, främst i exponeringsklass XD3 och XS3. Rostfria armeringsjärn kostar flera gånger mer per kilo än kamstål B500B och läggs därför ofta bara i den yttersta armeringen mot den utsatta ytan." },
       { type: "p", text: "Vanligt armeringsstål skyddas av betongen. Det basiska porvattnet bildar en skyddande hinna på stålet, och så länge täckskiktet är tätt och tillräckligt tjockt rostar inte armeringen. Men klorider från havsvatten och vägsalt kan tränga in och bryta skyddet. Rostfri armering är ett sätt att göra konstruktionen okänslig för det." },
       { type: "p", text: "Står rostfri armering på din ritning [levererar vi den efter behov](/produkter/rostfri-armering) – klippt och bockad och samlevererad med vanligt kamstål B500B." },
 

@@ -433,7 +433,7 @@ const basePosts: Post[] = [
           ["Fuktig eller kloridutsatt miljö (pool, garage med vägsalt)", "Större, enligt exponeringsklass", "Enligt ritning"],
         ],
       },
-      { type: "p", text: "Tabellvärden per exponeringsklass (XC, XD, XS) finns i [täckskikt och exponeringsklass](/blogg/tackskikt-exponeringsklass). Mät alltid till det yttersta järnet – ofta bygeln – inte till huvudjärnet." },
+      { type: "p", text: "Tabellvärden per exponeringsklass (XC, XD, XS) finns i [täckskikt och exponeringsklass](/blogg/tackskikt-exponeringsklass). I de hårdaste kloridklasserna kan konstruktören i stället föreskriva [rostfri armering](/blogg/rostfri-armering) närmast ytan. Mät alltid till det yttersta järnet – ofta bygeln – inte till huvudjärnet." },
 
       { type: "h2", text: "Vilken distans till vilket underlag?" },
       { type: "table",
@@ -493,7 +493,7 @@ const basePosts: Post[] = [
       "bockade armeringsjärn",
     ],
     content: [
-      { type: "p", text: "Klippt och bockad armering är armeringsjärn som kapas och bockas i maskin efter din bockningslista eller ritning. Järnen kommer buntade och märkta per position, så att varje bunt kan läggas på rätt plats utan att något mäts eller kapas på bygget." },
+      { type: "p", text: "Klippt och bockad armering är armeringsjärn som kapas och bockas i maskin efter din bockningslista eller ritning. Järnen kommer buntade och märkta per position, så att varje bunt kan läggas på rätt plats utan att något mäts eller kapas på bygget. I branschen kallas det [ILF-armering](/blogg/ilf-inlaggningsfardig-armering) – inläggningsfärdig armering." },
       { type: "p", text: "Vi tillverkar [klippt och bockad armering](/produkter/klippt-och-bockad) i Ø6–Ø32, kamstål B500B, och levererar i hela Sverige." },
 
       { type: "h2", text: "Så går det till" },
@@ -1248,7 +1248,7 @@ const basePosts: Post[] = [
     ],
     content: [
       { type: "p", text: "En armeringsbygel är ett bockat järn som omsluter eller förbinder den längsgående armeringen i balkar, pelare och kantbalkar. Vanligast är sluten bygel (typform N), U-bygel (C) och öppen K-bygel, som i villagrunder kallas villabygel. Bygeln håller huvudjärnen på plats vid gjutningen och tar sedan upp tvärkrafter." },
-      { type: "p", text: "Byglar går åt i hundratal per projekt, och därför beställs de oftast färdigbockade i serie som [armeringsbyglar](/produkter/byglar-och-hakar)." },
+      { type: "p", text: "Byglar går åt i hundratal per projekt, och därför beställs de oftast färdigbockade i serie som [armeringsbyglar](/produkter/byglar-och-hakar). Levereras de märkta per position tillsammans med övriga järn kallas det [ILF-armering](/blogg/ilf-inlaggningsfardig-armering)." },
 
       { type: "h2", text: "Vad gör en bygel?" },
       { type: "ul", items: [
@@ -1326,11 +1326,11 @@ const basePosts: Post[] = [
     title: "Bocka armeringsjärn – för hand, med verktyg och rätt bockningsradie",
     metaTitle: "Bocka armeringsjärn – bockningsradie & tabell",
     metaDescription:
-      "Så bockar du armeringsjärn: verktyg, bockning för hand och minsta bockningsradie enligt Eurokod 2 i tabell. Plus klipplängd och vanliga misstag.",
+      "Minsta bockningsradie för armering i tabell Ø6–Ø32: dorndiameter 4 × Ø upp till Ø16, 7 × Ø för grövre (Eurokod 2). Plus bockning för hand och klipplängd.",
     excerpt:
       "Armeringsjärn kan bockas för hand med rätt verktyg – men bara med rätt bockningsradie. Här är tabellen över minsta dorndiameter, hur du räknar klipplängd och när det lönar sig att beställa färdigbockat.",
     date: "2026-09-23",
-    updated: "2026-10-09",
+    updated: "2026-11-13",
     readingMinutes: 6,
     target: { href: "/produkter/klippt-och-bockad", label: "Beställ färdigbockad armering" },
     keywords: [
@@ -1346,6 +1346,20 @@ const basePosts: Post[] = [
     content: [
       { type: "p", text: "Armeringsjärn upp till cirka Ø12 kan bockas för hand med bockjärn eller bockbord – kallt, i en rörelse och runt en dorn med rätt diameter. Minsta dorndiameter är 4 × Ø upp till Ø16 och 7 × Ø för grövre järn (Eurokod 2). Bockas järnet snävare kan stålet spricka och betongen innanför bocken krossas."},
       { type: "p", text: "Ska du ha många byglar eller grövre dimensioner är det enklare att beställa [klippt och bockad armering](/produkter/klippt-och-bockad) – då bockas varje järn i maskin med rätt radie." },
+
+      { type: "h2", text: "Minsta bockningsradie för armering – tabell" },
+      { type: "p", text: "Hur snävt ett järn får bockas styrs av dorndiametern – diametern på den tapp järnet bockas runt. Enligt Eurokod 2 (SS-EN 1992-1-1, tabell 8.1N) är minsta dorndiameter för bockar, krokar och öglor 4 × Ø upp till Ø16 och 7 × Ø för grövre dimensioner. Bockningsradien (innerradien) är hälften av dorndiametern. För svetsad armering och nät som bockas efter svetsning gäller större värden." },
+      { type: "table", head: ["Dimension", "Minsta dorndiameter", "Inre bockningsradie"], rows: [
+        ["Ø6", "24 mm (4Ø)", "12 mm"],
+        ["Ø8", "32 mm (4Ø)", "16 mm"],
+        ["Ø10", "40 mm (4Ø)", "20 mm"],
+        ["Ø12", "48 mm (4Ø)", "24 mm"],
+        ["Ø16", "64 mm (4Ø)", "32 mm"],
+        ["Ø20", "140 mm (7Ø)", "70 mm"],
+        ["Ø25", "175 mm (7Ø)", "87,5 mm"],
+        ["Ø32", "224 mm (7Ø)", "112 mm"],
+      ], caption: "Minsta dorndiameter för bockar, krokar och öglor enligt SS-EN 1992-1-1:2005 tabell 8.1N. Konstruktionsritningen kan kräva större radie." },
+      { type: "p", text: "För bockade huvudjärn kan konstruktören behöva kontrollera att betongen innanför bocken inte krossas (Eurokod 2, avsnitt 8.3(3)) och då kräva större radie än tabellvärdet. Följ alltid ritningen. Värdena gäller SS-EN 1992-1-1:2005 tills den nya generationen Eurokod (EN 1992-1-1:2023) införs i svenska regler." },
 
       { type: "h2", text: "Verktyg för att bocka armeringsjärn" },
       { type: "ul", items: [
@@ -1366,20 +1380,6 @@ const basePosts: Post[] = [
       ] },
       { type: "p", text: "Bocka i kallt tillstånd. Värm inte armeringsjärnet för att underlätta bockningen – värme förändrar stålets egenskaper, och enligt SS-EN 13670 är det inte tillåtet om arbetsbeskrivningen inte uttryckligen medger det. Bocka inte heller i sträng kyla: under −5 °C får armering bara bockas om arbetsbeskrivningen tillåter det och särskilda försiktighetsåtgärder vidtas. Att räta ut och bocka om ett järn som redan är bockat är likaså inte tillåtet utan uttryckligt medgivande – stålet kan spricka i bocken." },
 
-      { type: "h2", text: "Minsta bockningsradie – tabell" },
-      { type: "p", text: "Hur snävt ett järn får bockas styrs av dorndiametern – diametern på den tapp järnet bockas runt. Enligt Eurokod 2 (SS-EN 1992-1-1, tabell 8.1N) är minsta dorndiameter för bockar, krokar och öglor 4 × Ø upp till Ø16 och 7 × Ø för grövre dimensioner. Bockningsradien (innerradien) är hälften av dorndiametern. För svetsad armering och nät som bockas efter svetsning gäller större värden." },
-      { type: "table", head: ["Dimension", "Minsta dorndiameter", "Inre bockningsradie"], rows: [
-        ["Ø6", "24 mm (4Ø)", "12 mm"],
-        ["Ø8", "32 mm (4Ø)", "16 mm"],
-        ["Ø10", "40 mm (4Ø)", "20 mm"],
-        ["Ø12", "48 mm (4Ø)", "24 mm"],
-        ["Ø16", "64 mm (4Ø)", "32 mm"],
-        ["Ø20", "140 mm (7Ø)", "70 mm"],
-        ["Ø25", "175 mm (7Ø)", "87,5 mm"],
-        ["Ø32", "224 mm (7Ø)", "112 mm"],
-      ], caption: "Minsta dorndiameter för bockar, krokar och öglor enligt SS-EN 1992-1-1:2005 tabell 8.1N. Konstruktionsritningen kan kräva större radie." },
-      { type: "p", text: "För bockade huvudjärn kan konstruktören behöva kontrollera att betongen innanför bocken inte krossas (Eurokod 2, avsnitt 8.3(3)) och då kräva större radie än tabellvärdet. Följ alltid ritningen. Värdena gäller SS-EN 1992-1-1:2005 tills den nya generationen Eurokod (EN 1992-1-1:2023) införs i svenska regler." },
-
       { type: "h2", text: "Klipplängd – hur långt ska järnet vara?" },
       { type: "p", text: "Ett bockat järn blir något kortare än summan av yttermåtten, eftersom järnet följer en radie i varje bock. Den exakta klipplängden beror på dimension, bockningsradie och vinkel. Som tumregel vid minsta bockningsradie drar du av ungefär 2 × Ø per 90°-bock från summan av yttermåtten. Exempel: ett L-järn Ø10 med yttermåtten 300 + 500 mm → 800 − 20 ≈ 780 mm klipplängd. För byglar i serie måste klipplängden räknas ut exakt – annars stämmer inte måtten. Bockningsverkstäder räknar fram den automatiskt ur måtten i [bockningslistan](/blogg/bockningslista-sa-gor-du)." },
 
@@ -1393,7 +1393,7 @@ const basePosts: Post[] = [
       ] },
 
       { type: "h2", text: "När lönar det sig att köpa bockat?" },
-      { type: "p", text: "Några enstaka järn till ett mindre projekt går bra att bocka själv. Men redan vid ett par dussin byglar går det snabbare, blir jämnare och ofta billigare totalt att beställa [klippt och bockad armering](/produkter/klippt-och-bockad) efter en [bockningslista](/tjanster/bockningslista). Då bockas varje järn i maskin med rätt radie, märks per position och levereras klart att montera. Bara kantbalken i en villagrund kräver ofta 100–200 byglar – se [kantbalksarmering](/blogg/armering-kantbalk)." },
+      { type: "p", text: "Några enstaka järn till ett mindre projekt går bra att bocka själv. Men redan vid ett par dussin byglar går det snabbare, blir jämnare och ofta billigare totalt att beställa [klippt och bockad armering](/produkter/klippt-och-bockad) efter en [bockningslista](/tjanster/bockningslista). Då bockas varje järn i maskin med rätt radie, märks per position och levereras klart att montera – det som kallas [ILF-armering](/blogg/ilf-inlaggningsfardig-armering). Bara kantbalken i en villagrund kräver ofta 100–200 byglar – se [kantbalksarmering](/blogg/armering-kantbalk)." },
       { type: "p", text: "[Skicka bockningslistan eller ritningen](/offert) så får du offert på färdigbockade järn, märkta per position och med frakt efter mängd och ort. Vikt per meter och stånglängder finns i [armeringsstål – B500B](/blogg/armeringsstal)." },
     ],
     faqs: [
@@ -1531,7 +1531,7 @@ const basePosts: Post[] = [
 
       { type: "h2", text: "SS 212540 och K500C-T" },
       { type: "p", text: "I Sverige gäller SS-EN 10080 tillsammans med produktspecifikationen SS 212540 (senaste utgåva 2014). Den omfattar armeringsstål med sträckgräns 500 MPa i duktilitetsklasserna A, AB, B och C. Stålet betecknas där till exempel K500B-T eller K500C-T: K = kamstång, 500 = sträckgräns, B/C = duktilitetsklass och T = varmvalsat och värmebehandlat. Beteckningarna ersatte äldre svenska stålsorter som Ks 400 och Ks 500." },
-      { type: "p", text: "På ritningar anges ofta B500B, men det som lagerförs i Sverige är i regel K500C-T (klass C), som uppfyller kraven för B500B. Klass C får alltid ersätta klass B – men inte tvärtom. Stålet ska vara märkt med tillverkarens valsmärke och levereras med leveransintyg, så att det går att spåra." },
+      { type: "p", text: "På ritningar anges ofta B500B, men det som lagerförs i Sverige är i regel K500C-T (klass C), som uppfyller kraven för B500B. Klass C får alltid ersätta klass B – men inte tvärtom. Stålet ska vara märkt med tillverkarens valsmärke och levereras med leveransintyg, så att det går att spåra. I kloridmiljö kan ritningen i stället ange [rostfri armering](/blogg/rostfri-armering)." },
 
       { type: "h2", text: "Vikt per meter – tabell" },
       { type: "p", text: "Armeringsstål anges med nominell diameter (Ø) i millimeter. Vikten per meter räknas som 0,00617 × Ø² kg/m." },
@@ -1647,13 +1647,13 @@ const basePosts: Post[] = [
   {
     slug: "lyftoglor-betong",
     title: "Lyftögla i betong – material, dimension och placering",
-    metaTitle: "Lyftögla i betong – dimension & placering",
+    metaTitle: "Lyftöglor i betong – dimension & placering",
     metaDescription:
-      "Lyftögla i betong: material, dimension, förankring och placering – plus hur lyftvinkeln påverkar lasten och vem som ansvarar. För betongelement och prefab.",
+      "Lyftöglor i betong bockas av slätt rundstål, t.ex. S235 – inte kamstål. Dimension, förankring, placering och hur lyftvinkeln ökar kraften per ögla.",
     excerpt:
       "Material, dimension, förankring och lyftvinkel för ingjutna lyftöglor – och vilka regler som gäller vid lyft av betongelement.",
     date: "2026-09-23",
-    updated: "2026-10-09",
+    updated: "2026-11-13",
     readingMinutes: 6,
     target: { href: "/produkter/lyftoglor", label: "Beställ lyftöglor" },
     keywords: [
@@ -1665,6 +1665,7 @@ const basePosts: Post[] = [
       "lyftöglor betongelement",
     ],
     content: [
+      { type: "p", text: "En lyftögla i betong är en bockad ögla av slätt, segt rundstål, till exempel S235, som gjuts in i ett betongelement så att det kan lyftas. Dimension, förankring och placering bestäms av konstruktören efter elementets vikt, antal lyftpunkter och lyftvinkel – vid 90° mellan stropparna ökar kraften per ögla till cirka 1,41 gånger." },
       { type: "p", text: "Prefabricerade betongelement – trappor, balkar, väggelement, brunnslock och plintar – måste kunna lyftas vid avformning, transport och montage. Det görs med lyftöglor (ingjutningsöglor) som gjuts in i elementet. En lyftögla som är fel dimensionerad eller fel förankrad kan släppa, så den ska alltid följa konstruktörens ritning eller lyftsystemets anvisning. Vi bockar [lyftöglor](/produkter/lyftoglor) efter ritning." },
 
       { type: "h2", text: "Vilket material ska en lyftögla ha?" },
