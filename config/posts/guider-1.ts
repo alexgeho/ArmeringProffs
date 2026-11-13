@@ -444,7 +444,7 @@ export const guider1: Post[] = [
   {
     slug: "ilf-inlaggningsfardig-armering",
     title: "ILF-armering – vad är inläggningsfärdig armering?",
-    metaTitle: "ILF-armering – vad är inläggningsfärdig armering?",
+    metaTitle: "Vad är ILF-armering? Inläggningsfärdig armering",
     metaDescription:
       "ILF-armering är inläggningsfärdig armering: kapad, bockad och märkt per position, klar för formen. Vad som ingår, ILF mot raka järn och vad det kostar.",
     excerpt:
