@@ -813,7 +813,6 @@ export const armeringTill2: Post[] = [
     excerpt:
       "Pressar, kompressorer, sågverk och kvarnar står på massiva fundament som ska tåla vibrationer i decennier. Så är armeringen uppbyggd.",
     date: D,
-    updated: "2026-11-18",
     readingMinutes: 6,
     keywords: [
       "armering maskinfundament",
@@ -839,7 +838,7 @@ export const armeringTill2: Post[] = [
       { type: "p", text: "Maskinleverantören anger statiska och dynamiska laster, varvtal, bultplan och utsparingar. Konstruktören dimensionerar fundamentets massa och styvhet så att resonans undviks. För armeringen betyder det att bultgrupper, ingjutningsgods och kabelrännor ska vara låsta innan armeringsritningen görs – en flyttad bult kan kräva omritning."  },
 
       { type: "h2", text: "Isolerat från golvet"  },
-      { type: "p", text: "Fundamentet gjuts normalt separat från golvplattan, med en fog runt om, så att vibrationerna inte sprids. Armeringen ska därför inte gå igenom fogen. Fundamentet kan stå direkt på mark, [på berg](/blogg/armering-grund-pa-berg) eller på pålar – med pålar kombineras armeringen med pålplintar, se [platta på pålar](/blogg/armering-platta-pa-palar)."  },
+      { type: "p", text: "Fundamentet gjuts normalt separat från golvplattan, med en fog runt om, så att vibrationerna inte sprids. Armeringen ska därför inte gå igenom fogen. Fundamentet kan stå direkt på mark, på berg eller på pålar – med pålar kombineras armeringen med pålplintar, se [platta på pålar](/blogg/armering-platta-pa-palar)."  },
 
       { type: "h2", text: "Massiva gjutningar och temperatur"  },
       { type: "p", text: "Stora fundament utvecklar mycket värme när betongen härdar. Kärnan blir varm medan ytan svalnar, och skillnaden kan ge sprickor. Det motverkas med betongsammansättning, gjutetapper och ytarmering som begränsar sprickbredden. Därför har även fundament som statiskt inte behöver mycket armering en ordentlig ytarmering på alla sidor."  },
@@ -881,7 +880,6 @@ export const armeringTill2: Post[] = [
     excerpt:
       "Ett vindkraftsfundament innehåller tiotals ton armering, ofta grova dimensioner och tät armering kring bultkorgen. Så är det uppbyggt – och vad som krävs av leveransen.",
     date: D,
-    updated: "2026-11-18",
     readingMinutes: 6,
     keywords: [
       "armering vindkraftsfundament",
@@ -903,7 +901,7 @@ export const armeringTill2: Post[] = [
       ], caption: "Översikt. Val av fundamenttyp och armering görs av konstruktören utifrån turbin och geoteknik." },
 
       { type: "h2", text: "Radial- och ringarmering"  },
-      { type: "p", text: "Ett runt eller mångkantigt gravitationsfundament armeras ofta med radiella järn som går från centrum ut mot kanten och ringar eller polygonala järn runt om. I över- och underkant ligger var sitt sådant system. Däremellan sitter skjuvarmering i form av byglar eller [hakar](/blogg/s-hake-kramla-armering). Dimensionerna är ofta grova, Ø20–Ø32, och skarvarna många."  },
+      { type: "p", text: "Ett runt eller mångkantigt gravitationsfundament armeras ofta med radiella järn som går från centrum ut mot kanten och ringar eller polygonala järn runt om. I över- och underkant ligger var sitt sådant system. Däremellan sitter skjuvarmering i form av byglar eller hakar. Dimensionerna är ofta grova, Ø20–Ø32, och skarvarna många."  },
       { type: "ul", items: [
         "Underkant: radial- och ringjärn som tar böjmoment mot marken.",
         "Överkant: motsvarande system, ofta något klenare.",
@@ -1041,7 +1039,7 @@ export const armeringTill2: Post[] = [
     ],
     content: [
       { type: "p", text: "En platta på pålar armeras som ett [bjälklag](/blogg/armering-bjalklag): i både över- och underkant, med extra överkantsjärn över pålhuvudena och ofta pålplintar eller grundbalkar. Skälet är att plattan inte längre bärs jämnt av marken utan spänner mellan pålarna, som slås eller borras ner genom lös lera till fastare lager."  },
-      { type: "p", text: "Armeringen över pålarna – pålplintar, pålkorgar och andra [armeringskorgar](/produkter/armeringskorgar) – är en specialitet i sig. Vi tillverkar den som [pålarmering](/produkter/palarmering) efter konstruktörens ritning, märkt per påle och position."  },
+      { type: "p", text: "Armeringen över pålarna – pålplintar, pålkorgar och förstärkningar – är en specialitet i sig. Vi tillverkar den som [pålarmering](/produkter/palarmering) och andra [armeringskorgar](/produkter/armeringskorgar) efter konstruktörens ritning, märkt per påle och position."  },
 
       { type: "h2", text: "Tre sätt att bygga plattan"  },
       { type: "table", head: ["Utförande", "Hur lasten går", "Huvudarmering"], rows: [

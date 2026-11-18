@@ -1021,7 +1021,7 @@ export const armeringTill1: Post[] = [
           ["Najtråd", "en rulle", "–"],
         ],
       },
-      { type: "p", text: "Med nät 5150 (ca 2,06 kg/m²), som också säljs som [armeringsmatta](/armeringsmatta), blir nätet cirka 35 kg. Räkna själv i [armeringskalkylatorn](/armeringskalkylator)." },
+      { type: "p", text: "Med nät 5150 (ca 2,06 kg/m²) blir nätet cirka 35 kg. Nätet kallas också [armeringsmatta](/armeringsmatta). Räkna själv i [armeringskalkylatorn](/armeringskalkylator)." },
 
       { type: "h2", text: "Platta eller plintar?" },
       { type: "p", text: "Plintar är snabbare och kräver mindre betong, och golvet blir av trä. En gjuten platta ger ett tåligt golv som klarar gräsklippare, verktyg och fukt bättre. Den kräver mer markarbete och ett ordentligt bärlager. Står boden på mark med tjälrisk är markisolering runt plattan ett billigt skydd mot att plattan lyfts och spricker." },

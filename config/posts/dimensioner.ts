@@ -717,7 +717,7 @@ const nat: Post[] = [
       "5150 armering",
     ],
     content: [
-      { type: "p", text: "Armeringsnät 5150 – även kallat [armeringsmatta](/armeringsmatta) – har Ø5 mm tråd med 150 mm mellan trådarna i båda riktningarna. Det är det lättaste nätet i det vanliga sortimentet och används där lasterna är små: uterum, altaner, gångar och mindre plattor. Vi levererar [armeringsnät 5150](/produkter/armeringsnat) i lagerformat och som specialnät efter mått." },
+      { type: "p", text: "Armeringsnät 5150 har Ø5 mm tråd med 150 mm mellan trådarna i båda riktningarna. Det är det lättaste nätet i det vanliga sortimentet och används där lasterna är små: uterum, altaner, gångar och mindre plattor. Vi levererar [armeringsnät 5150](/produkter/armeringsnat) i lagerformat och som specialnät efter mått. Armeringsnät kallas också [armeringsmatta](/armeringsmatta)." },
       { type: "p", text: "Hur beteckningarna fungerar och vilka format som finns går vi igenom i [armeringsnät – storlekar och mått](/blogg/armeringsnat-storlekar-och-matt). Här är siffrorna för just 5150." },
 
       { type: "h2", text: "Fakta om armeringsnät 5150" },
@@ -800,7 +800,7 @@ const nat: Post[] = [
       "6150 armering",
     ],
     content: [
-      { type: "p", text: "Armeringsnät 6150 – även kallat [armeringsmatta](/armeringsmatta) – har Ø6 mm tråd med 150 mm rutor och är det nät som oftast förekommer på ritningar för garage, carportar och villaplattor på mark. Det ger ett bra mellanläge mellan vikt och bärförmåga. Vi levererar [armeringsnät 6150](/produkter/armeringsnat) i lagerformat, som fingerskarvnät och som specialnät efter mått." },
+      { type: "p", text: "Armeringsnät 6150 har Ø6 mm tråd med 150 mm rutor och är det nät som oftast förekommer på ritningar för garage, carportar och villaplattor på mark. Det ger ett bra mellanläge mellan vikt och bärförmåga. Vi levererar [armeringsnät 6150](/produkter/armeringsnat) i lagerformat, som fingerskarvnät och som specialnät efter mått. Armeringsnät kallas också [armeringsmatta](/armeringsmatta)." },
 
       { type: "h2", text: "Fakta om armeringsnät 6150" },
       { type: "table", head: ["Egenskap", "Värde"], rows: [
