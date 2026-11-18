@@ -346,6 +346,7 @@ export const guider2: Post[] = [
     excerpt:
       "Armeringsstål står för en betydande del av klimatpåverkan i en betongkonstruktion. Här förklarar vi EPD, återvunnet stål, klimatdeklaration och CBAM – och vad du kan be din leverantör om.",
     date: "2026-10-09",
+    updated: "2026-11-18",
     readingMinutes: 6,
     keywords: [
       "armering klimatavtryck",
@@ -407,7 +408,7 @@ export const guider2: Post[] = [
       ] },
 
       { type: "h2", text: "EPD med leveransen" },
-      { type: "p", text: "Ska projektet klimatdeklareras levererar vi EPD för stålet tillsammans med materialcertifikat 3.1 enligt SS-EN 10204. Läs mer om oss som [armeringsleverantör](/armeringsleverantor) eller skicka underlag via [offertformuläret](/offert)." },
+      { type: "p", text: "Ska projektet klimatdeklareras levererar vi EPD för stålet tillsammans med materialcertifikat 3.1 enligt SS-EN 10204 – samma dokumentation som följer med [armering till offentliga projekt](/armering-offentlig-upphandling). Läs mer om oss som [armeringsleverantör](/armeringsleverantor) eller skicka underlag via [offertformuläret](/offert)." },
     ],
     faqs: [
       { q: "Vad är en EPD för armering?", a: "En tredjepartsgranskad miljövarudeklaration enligt SS-EN 15804 som redovisar armeringsstålets miljöpåverkan, oftast per ton. GWP för A1–A3 visar klimatpåverkan fram till fabriksgrind." },
@@ -428,6 +429,7 @@ export const guider2: Post[] = [
     excerpt:
       "Många köpare frågar efter CE-märkning på armering – men för armeringsstål fungerar det annorlunda än för de flesta byggprodukter. Här är vilka intyg du faktiskt ska be om.",
     date: "2026-10-09",
+    updated: "2026-11-18",
     readingMinutes: 6,
     keywords: [
       "ce-märkning armering",
@@ -438,7 +440,7 @@ export const guider2: Post[] = [
       "b500b certifikat",
     ],
     content: [
-      { type: "p", text: "”Är armeringen CE-märkt?” är en vanlig fråga i upphandlingar. Svaret överraskar ofta: armeringsstål CE-märks i regel inte i dag. Det betyder inte att det saknas krav – kvaliteten visas i stället genom certifiering och intyg. Det här bör du fråga din [armeringsleverantör](/armeringsleverantor) efter." },
+      { type: "p", text: "”Är armeringen CE-märkt?” är en vanlig fråga i upphandlingar, inte minst i [offentliga projekt](/armering-offentlig-upphandling). Svaret överraskar ofta: armeringsstål CE-märks i regel inte i dag. Det betyder inte att det saknas krav – kvaliteten visas i stället genom certifiering och intyg. Det här bör du fråga din [armeringsleverantör](/armeringsleverantor) efter." },
 
       { type: "h2", text: "Varför armeringsstål normalt inte är CE-märkt" },
       { type: "p", text: "CE-märkning av byggprodukter förutsätter enligt byggproduktförordningen en harmoniserad standard eller en europeisk teknisk bedömning. För armeringsstål finns den europeiska standarden SS-EN 10080, men den är inte harmoniserad. EN 10080:2005 togs bort ur EU:s lista över harmoniserade standarder genom kommissionens beslut 2006/893/EG, och en reviderad version är fortfarande under arbete. Därför används nationella produktstandarder och certifieringssystem. I Sverige anges egenskaperna för kamstål B500B i SS 212540." },
@@ -508,6 +510,7 @@ export const guider2: Post[] = [
     excerpt:
       "Från grundritning till färdig gjutning: här är stegen för att planera armeringen till en villagrund, vem som gör vad och vad du behöver ha klart innan du beställer.",
     date: "2026-10-09",
+    updated: "2026-11-18",
     readingMinutes: 6,
     keywords: [
       "armeringsplan villa",
@@ -518,7 +521,7 @@ export const guider2: Post[] = [
       "armeringsritning villa",
     ],
     content: [
-      { type: "p", text: "En villagrund – oftast en platta på mark med kantbalkar – kräver armering som stämmer med konstruktionsritningen och kommer till bygget i rätt tid. Med en tydlig plan slipper du både väntan och felbeställningar. Det mesta av armeringen kan beställas som färdig [grundarmering](/produkter/grundarmering): nät, kantbalksarmering och klippt och bockade järn i ett paket." },
+      { type: "p", text: "En villagrund – oftast en platta på mark med kantbalkar – kräver armering som stämmer med konstruktionsritningen och kommer till bygget i rätt tid. Med en tydlig plan slipper du både väntan och felbeställningar. Det mesta av armeringen kan beställas som färdig [grundarmering](/produkter/grundarmering): nät, [kantbalksarmering](/produkter/villakorg-kantbalksarmering) och klippt och bockade järn i ett paket." },
 
       { type: "h2", text: "Steg 1: Konstruktionsritning" },
       { type: "p", text: "Utgångspunkten är konstruktörens ritning för grunden. Den visar plattans tjocklek, nättyp, kantbalkens form, extraarmering under bärande väggar och täckskikt. Husleverantörer levererar ofta grundritningen med husbeställningen. Saknas den behöver du anlita en konstruktör – armeringen ska dimensioneras, inte gissas." },

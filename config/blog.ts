@@ -842,7 +842,7 @@ const basePosts: Post[] = [
     excerpt:
       "Plintrör, plintsula eller fundament – hur de armeras, när armering kan utelämnas och vad du ska ange när du beställer färdiga plintkorgar.",
     date: "2026-09-05",
-    updated: "2026-10-09",
+    updated: "2026-11-18",
     readingMinutes: 4,
     target: { href: "/produkter/plintkorgar", label: "Beställ plintkorgar" },
     category: "armering-till",
@@ -860,7 +860,7 @@ const basePosts: Post[] = [
       "armering altan",
     ],
     content: [
-      { type: "p", text: "En bärande plint armeras oftast med en liten korg: längsgående kamstål och byglar som håller ihop dem. Bredare plintsulor får dessutom en bottenmatta som sprider lasten mot marken, och startjärn som förankrar pelaren ovanpå. Små, lätt belastade plintar till en altan kan ibland gjutas oarmerade – ritningen avgör." },
+      { type: "p", text: "En bärande plint armeras oftast med en liten [armeringskorg](/produkter/armeringskorgar): längsgående kamstål och byglar som håller ihop dem. Bredare plintsulor får dessutom en bottenmatta som sprider lasten mot marken, och startjärn som förankrar pelaren ovanpå. Små, lätt belastade plintar till en altan kan ibland gjutas oarmerade – ritningen avgör." },
       { type: "p", text: "Har du många likadana plintar sparar färdiga [plintkorgar](/produkter/plintkorgar) mycket tid. Vi tillverkar dem efter ritning, märkta per typ." },
 
       { type: "h2", text: "Plinttyper och typisk armering" },
@@ -914,7 +914,7 @@ const basePosts: Post[] = [
     excerpt:
       "Var dragkrafterna sitter i vägg, häl och tå, hur startjärnen förankras och de fel som får en stödmur att luta.",
     date: "2026-09-05",
-    updated: "2026-10-09",
+    updated: "2026-11-18",
     readingMinutes: 4,
     target: { href: "/produkter/klippt-och-bockad", label: "Beställ klippt & bockad armering" },
     category: "armering-till",
@@ -956,7 +956,7 @@ const basePosts: Post[] = [
       ] },
 
       { type: "h2", text: "Skicka ritningen – få offert på murens armering" },
-      { type: "p", text: "Vi tillverkar armeringen till stödmurar och L-stöd efter konstruktörens ritning: bockade startjärn, vägg- och sulajärn som [klippt och bockad armering](/produkter/klippt-och-bockad), [nät](/produkter/armeringsnat) och distanser, med frakt efter mängd och ort. [Begär offert](/offert). Dimensionerna förklaras i [armeringsjärn dimensioner](/blogg/armeringsjarn-dimensioner)." },
+      { type: "p", text: "Vi tillverkar armeringen till stödmurar och L-stöd efter konstruktörens ritning: bockade startjärn, vägg- och sulajärn som [klippt och bockad armering](/produkter/klippt-och-bockad), [nät](/produkter/armeringsnat) och distanser, med frakt efter mängd och ort. [Begär offert](/offert). Gjuter du murar och fundament som entreprenör står upplägget under [armering för markentreprenörer](/armering-for-markentreprenorer). Dimensionerna förklaras i [armeringsjärn dimensioner](/blogg/armeringsjarn-dimensioner)." },
       { type: "p", text: "Vi levererar armering till stödmurar och L-stöd i bland annat [Stockholm](/armering/stockholm) och [Göteborg](/armering/goteborg). Behöver du hjälp med schakt, dränering och återfyllnad bakom muren kan du [jämföra offerter från markentreprenörer i Stockholm på Byggtorg](https://byggtorg.se/)." },
     ],
     faqs: [
@@ -1112,7 +1112,7 @@ const basePosts: Post[] = [
     excerpt:
       "En gjuten trappa mellan två plan fungerar som en lutande platta. Var huvudjärnen ska ligga, hur trappan förankras och de fel som ger sprickor.",
     date: "2026-09-08",
-    updated: "2026-10-09",
+    updated: "2026-11-18",
     readingMinutes: 4,
     target: { href: "/produkter/klippt-och-bockad", label: "Beställ klippt & bockad armering" },
     category: "armering-till",
@@ -1124,7 +1124,7 @@ const basePosts: Post[] = [
       "gjuta betongtrappa armering",
     ],
     content: [
-      { type: "p", text: "En platsgjuten betongtrappa mellan två plan fungerar som en lutande platta som spänner mellan bjälklag eller vilplan. Huvudarmeringen läggs i trappans längdriktning i underkant, med fördelningsjärn på tvären, och förankras in i bjälklaget i båda ändar. Trappan ska dimensioneras av en konstruktör." },
+      { type: "p", text: "En platsgjuten betongtrappa mellan två plan fungerar som en lutande platta som spänner mellan bjälklag eller vilplan. Huvudarmeringen läggs i trappans längdriktning i underkant, med fördelningsjärn på tvären, och förankras in i [bjälklaget](/blogg/armering-bjalklag) i båda ändar. Trappan ska dimensioneras av en konstruktör." },
       { type: "p", text: "Trappans armering levererar vi som [klippt och bockad armering](/produkter/klippt-och-bockad) efter ritningen – knäckta huvudjärn och förankringsjärn är svåra att bocka rätt på plats." },
 
       { type: "h2", text: "Så armeras trappan" },
@@ -1231,7 +1231,7 @@ const basePosts: Post[] = [
     excerpt:
       "Sluten bygel, U-bygel och K-bygel – typkoder, hur måtten anges, krokar enligt Eurokod 2 och hur du räknar antal byglar.",
     date: "2026-09-23",
-    updated: "2026-10-14",
+    updated: "2026-11-18",
     readingMinutes: 6,
     target: { href: "/produkter/byglar-och-hakar", label: "Beställ färdiga armeringsbyglar" },
     keywords: [
@@ -1269,7 +1269,7 @@ const basePosts: Post[] = [
         ["Sluten bygel med sned sida", "NX", "Fyrsidig bygel där en sida är sned", "Balkar med sned kant, konsoler"],
         ["Hårnål", "S", "Två parallella ben med 180° rund bock", "Förankring och kantförstärkning"],
       ], caption: "Vanliga bygeltyper. Koderna används i bockningslistan tillsammans med måtten a, b, c … (yttermått)." },
-      { type: "p", text: "Du kan se alla standardformer med bokstavskod och prova egna mått i vårt verktyg för [typformer för bockning](/tjanster/bockningslista). Mått och användning per typ: [N-bygel](/blogg/n-bygel-armering), [U-bygel](/blogg/u-bygel-armering), [B-bygel](/blogg/b-bygel-armering) och [C-bygel och hårnål](/blogg/c-bygel-harnal-armering)." },
+      { type: "p", text: "Du kan se alla standardformer med bokstavskod och prova egna mått i vårt verktyg för [typformer för bockning](/tjanster/bockningslista). Mått och användning per typ: [N-bygel](/blogg/n-bygel-armering), [U-bygel](/blogg/u-bygel-armering), [B-bygel](/blogg/b-bygel-armering), [C-bygel och hårnål](/blogg/c-bygel-harnal-armering) och [S-hake och kramla](/blogg/s-hake-kramla-armering)." },
 
       { type: "h3", text: "U-bygel – armering eller infästning?" },
       { type: "p", text: "Ordet U-bygel används också om gängade U-bultar för infästning av rör och avgassystem. I armeringssammanhang betyder U-bygel ett U-format armeringsjärn av kamstål (typform C) utan gängor. Ange typform och mått när du beställer, så blir det inga missförstånd." },
@@ -1290,7 +1290,7 @@ const basePosts: Post[] = [
       ] },
 
       { type: "h2", text: "Krokar på slutna byglar" },
-      { type: "p", text: "Slutna byglar förankras med krokar som bockas in mot bygelns insida. Enligt Eurokod 2 (SS-EN 1992-1-1:2005, avsnitt 8.5, figur 8.5) ska en 135°-krok ha en rak ände på minst 5 × Ø och minst 50 mm, och en 90°-bock minst 10 × Ø och minst 70 mm. Ett längsgående järn ska ligga inuti kroken. Byt aldrig en 135°-krok mot 90° utan konstruktörens godkännande – vid vridning krävs till exempel 135°-krok eller omlott." },
+      { type: "p", text: "Slutna byglar förankras med krokar som bockas in mot bygelns insida. Enligt [Eurokod 2](/blogg/eurokod-2-armering) (SS-EN 1992-1-1:2005, avsnitt 8.5, figur 8.5) ska en 135°-krok ha en rak ände på minst 5 × Ø och minst 50 mm, och en 90°-bock minst 10 × Ø och minst 70 mm. Ett längsgående järn ska ligga inuti kroken. Byt aldrig en 135°-krok mot 90° utan konstruktörens godkännande – vid vridning krävs till exempel 135°-krok eller omlott." },
 
       { type: "h2", text: "Bygelavstånd och antal byglar" },
       { type: "p", text: "Bygelavståndet (s) står på ritningen. Som riktvärden anger Eurokod 2 ett största avstånd i balkar på 0,75 × d (d = balkens effektiva höjd) och i pelare det minsta av 20 × minsta huvudjärnets diameter, pelarens minsta sida och 400 mm. Det är gränsvärden – inte en dimensionering." },
@@ -1330,7 +1330,7 @@ const basePosts: Post[] = [
     excerpt:
       "Armeringsjärn kan bockas för hand med rätt verktyg – men bara med rätt bockningsradie. Här är tabellen över minsta dorndiameter, hur du räknar klipplängd och när det lönar sig att beställa färdigbockat.",
     date: "2026-09-23",
-    updated: "2026-11-13",
+    updated: "2026-11-18",
     readingMinutes: 6,
     target: { href: "/produkter/klippt-och-bockad", label: "Beställ färdigbockad armering" },
     keywords: [
@@ -1348,7 +1348,7 @@ const basePosts: Post[] = [
       { type: "p", text: "Ska du ha många byglar eller grövre dimensioner är det enklare att beställa [klippt och bockad armering](/produkter/klippt-och-bockad) – då bockas varje järn i maskin med rätt radie." },
 
       { type: "h2", text: "Minsta bockningsradie för armering – tabell" },
-      { type: "p", text: "Hur snävt ett järn får bockas styrs av dorndiametern – diametern på den tapp järnet bockas runt. Enligt Eurokod 2 (SS-EN 1992-1-1, tabell 8.1N) är minsta dorndiameter för bockar, krokar och öglor 4 × Ø upp till Ø16 och 7 × Ø för grövre dimensioner. Bockningsradien (innerradien) är hälften av dorndiametern. För svetsad armering och nät som bockas efter svetsning gäller större värden." },
+      { type: "p", text: "Hur snävt ett järn får bockas styrs av dorndiametern – diametern på den tapp järnet bockas runt. Enligt [Eurokod 2](/blogg/eurokod-2-armering) (SS-EN 1992-1-1, tabell 8.1N) är minsta dorndiameter för bockar, krokar och öglor 4 × Ø upp till Ø16 och 7 × Ø för grövre dimensioner. Bockningsradien (innerradien) är hälften av dorndiametern. För svetsad armering och nät som bockas efter svetsning gäller större värden." },
       { type: "table", head: ["Dimension", "Minsta dorndiameter", "Inre bockningsradie"], rows: [
         ["Ø6", "24 mm (4Ø)", "12 mm"],
         ["Ø8", "32 mm (4Ø)", "16 mm"],
@@ -1586,7 +1586,7 @@ const basePosts: Post[] = [
     excerpt:
       "Villabygel eller sluten bygel, hur du räknar mått och antal, hur byglarna passar i kantelement av cellplast och montage steg för steg.",
     date: "2026-09-23",
-    updated: "2026-10-14",
+    updated: "2026-11-18",
     readingMinutes: 6,
     target: { href: "/produkter/villakorg-kantbalksarmering", label: "Beställ kantbalksarmering" },
     keywords: [
@@ -1598,7 +1598,7 @@ const basePosts: Post[] = [
       "armering kantbalk platta på mark",
     ],
     content: [
-      { type: "p", text: "En platta på mark har nästan alltid en förstärkt kant – en kantbalk – där plattan är tjockare och bär väggarnas last. Kantbalken armeras med längsgående järn i över- och underkant som hålls ihop av byglar. Det är de byglarna som kallas kantbalksbyglar. Färdiga kantbalksbyglar och kantbalkskorgar levererar vi som [kantbalksarmering](/produkter/villakorg-kantbalksarmering). Kantjärn, hörnjärn och skarvar – resten av kantbalkens armering – går vi igenom i [armera kantbalk](/blogg/armering-kantbalk)." },
+      { type: "p", text: "En platta på mark har nästan alltid en förstärkt kant – en kantbalk – där plattan är tjockare och bär väggarnas last. Kantbalken armeras med längsgående järn i över- och underkant som hålls ihop av byglar. Det är de byglarna som kallas kantbalksbyglar. Färdiga [kantbalksbyglar](/produkter/byglar-och-hakar) och kantbalkskorgar levererar vi som [kantbalksarmering](/produkter/villakorg-kantbalksarmering). Kantjärn, hörnjärn och skarvar – resten av kantbalkens armering – går vi igenom i [armera kantbalk](/blogg/armering-kantbalk)." },
 
       { type: "h2", text: "Vilken form har en kantbalksbygel?" },
       { type: "table", head: ["Form", "Kod", "Beskrivning"], rows: [

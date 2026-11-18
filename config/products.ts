@@ -63,12 +63,12 @@ const baseProducts: Product[] = [
     body: [
       {
         heading: "Det här får du levererat",
-        text: "Varje järn kommer kapat till rätt längd och bockat till rätt form, buntat och märkt per position så att montören ser direkt var bunten ska ligga. Branschen kallar det ILF, inläggningsfärdig armering. Hur märkning och etappleveranser fungerar för entreprenörer står under [ILF-armering](/tjanster/ilf-armering).",
+        text: "Varje järn kommer kapat till rätt längd och bockat till rätt form, buntat och märkt per position så att montören ser direkt var bunten ska ligga. Branschen kallar det ILF, inläggningsfärdig armering. Hur märkning och etappleveranser fungerar för [byggentreprenörer](/armering-for-byggentreprenorer) står under [ILF-armering](/tjanster/ilf-armering).",
         items: [
           "Raka järn kapade till exakt längd",
           "Byglar: slutna, öppna, U- och L-byglar – även i serie, se [byglar och hakar](/produkter/byglar-och-hakar)",
           "Kantbalksbyglar och hörnjärn till platta på mark",
-          "Kramlor, S-hakar och förankringsjärn",
+          "Kramlor, [S-hakar](/blogg/s-hake-kramla-armering) och förankringsjärn",
           "Specialformer enligt typformerna A–XX och [3D-bockning](/produkter/3d-bockning)",
         ],
       },
@@ -140,9 +140,9 @@ const baseProducts: Product[] = [
     slug: "armeringskorgar",
     name: "Armeringskorgar",
     h1: "Armeringskorgar – prefab korgar till balk, pelare, påle och plint",
-    metaTitle: "Armeringskorgar – köp prefab korgar efter ritning",
+    metaTitle: "Armeringskorgar efter ritning – klara att lyfta i formen",
     metaDescription:
-      "Prefab armeringskorgar till balkar, pelare, pålar, plintar och kantbalk – svetsade eller najade efter ritning, märkta per position. Begär offert.",
+      "Armeringskorgar efter ritning till balkar, pelare, pålar, plintar och kantbalk – svetsade eller najade, märkta per position. Skicka ritningen – få offert.",
     intro:
       "Vi bygger armeringskorgar efter din konstruktionsritning – huvudjärn och byglar färdigt sammanfogade, så att korgen lyfts på plats och gjuts in. Kortare tid i formen och jämnare kvalitet än att naja allt på bygget. Märkt per position och levererat i hela Sverige.",
     // TODO [OWNER]: lägg produktfoto. Skicka horisontell bild ≥1600px (rebar cage /
@@ -168,26 +168,134 @@ const baseProducts: Product[] = [
     ],
     body: [
       {
+        heading: "Vad är en armeringskorg?",
+        text: "En armeringskorg är huvudjärn och byglar som najas eller svetsas ihop i verkstad till färdig armering för ett bärande element: en balk, pelare, påle eller plint. På bygget lyfts korgen på plats och gjuts in. Det som annars tar timmar att binda i formen tar minuter. Korgar är den mest förädlade delen av vår [prefab armering](/prefab-armering).",
+        items: [
+          "Huvudjärn: längsgående kamstål som tar upp huvudlasterna",
+          "Byglar som håller ihop korgen och tar upp tvärkrafter",
+          "Bygelavstånd enligt konstruktionsritningen",
+          "Yttermått anpassade efter täckskiktet i formen",
+          "Startjärn och skarvar mot anslutande delar",
+        ],
+      },
+      {
         heading: "Välj korgtyp",
         text: "Korgen ser olika ut beroende på element. Till platta på mark: [kantbalkskorgar](/produkter/villakorg-kantbalksarmering). Till plintar och stolpfundament: [plintkorgar](/produkter/plintkorgar). Till platsgjutna pålar: [pålkorgar](/produkter/palarmering). Till stommen: [pelar- och balkkorgar](/produkter/pelar-och-balkkorgar). Väggkorgar, brunnar och specialelement tillverkar vi också efter ritning.",
       },
       {
+        heading: "Typisk uppbyggnad per korgtyp",
+        text: "Tabellen visar hur korgarna brukar vara uppbyggda och vilka dimensioner som är vanliga. Värdena kommer från Eurokod 2:s minimiregler och vanliga utföranden i svenska projekt. Din ritning anger vad som gäller, och vi tillverkar efter den.",
+        table: {
+          head: ["Korg", "Längsjärn", "Byglar"],
+          rows: [
+            ["Pelarkorg", "Minst ett järn i varje hörn, i praktiken ofta Ø12–Ø25", "Slutna byglar, minst Ø6 och minst en fjärdedel av längsjärnets diameter"],
+            ["Balkkorg", "2–6 underkantsjärn, ofta Ø12–Ø25, och två överkantsjärn", "Slutna byglar Ø8–Ø10, tätare nära upplag"],
+            ["Kantbalkskorg", "2–3 kantjärn Ø10–Ø12 i över- och underkant", "Byglar Ø8 c/c 200–300 mm"],
+            ["Pålkorg", "Längsjärn i cirkel eller fyrkant", "Spiralbygel eller enkelbyglar"],
+            ["Plintkorg", "Längsgående kamstål, ofta med startjärn till pelaren", "Byglar som håller ihop längsjärnen"],
+          ],
+          caption: "Typiska utföranden. Dimension, antal och bygelavstånd enligt konstruktionsritningen.",
+        },
+      },
+      {
+        heading: "Bygelavstånd och korgens yttermått",
+        text: "Korgens yttermått är elementets tvärsnitt minus täckskiktet på båda sidor. En pelare 300 × 300 mm med 30 mm täckskikt får en korg med byglar 240 × 240 mm, och en balk 300 × 500 mm med 35 mm täckskikt byglar 230 × 430 mm. Bygelavståndet står på ritningen. Som gränser anger Eurokod 2 högst 0,75 × d i balkar och i pelare det minsta av 20 × längsjärnets diameter, pelarens minsta sida och 400 mm, med tätare byglar nära balk och platta. Bakgrunden finns i guiden [Eurokod 2 och armering](/blogg/eurokod-2-armering).",
+        table: {
+          head: ["Element", "Täckskikt", "Bygelns yttermått"],
+          rows: [
+            ["Pelare 250 × 250 mm", "30 mm", "190 × 190 mm"],
+            ["Pelare 300 × 300 mm", "30 mm", "240 × 240 mm"],
+            ["Pelare 400 × 400 mm", "35 mm", "330 × 330 mm"],
+            ["Balk 200 × 400 mm", "30 mm", "140 × 340 mm"],
+            ["Balk 300 × 500 mm", "35 mm", "230 × 430 mm"],
+          ],
+          caption: "Räkneexempel. Täckskiktet bestäms av exponeringsklassen och står på ritningen.",
+        },
+      },
+      {
         heading: "Därför lönar sig prefab",
         text: "Korgen byggs vid ett bord i fabrik i stället för i formen. Bygelavståndet blir jämnt, täckskiktet lättare att hålla och arbetet på bygget kortare. Vinsten är störst där samma korg upprepas många gånger eller där armeringen är tät. Exempel finns i guiderna [armering till garage](/blogg/armering-till-garage) och [armera en stödmur](/blogg/armera-stodmur).",
+        items: [
+          "Kortare byggtid: korgen lyfts på plats i stället för att bindas för hand",
+          "Jämnare kvalitet: rätt bygelavstånd och mått varje gång",
+          "Bättre arbetsmiljö: mindre tunga moment och böjning i formen",
+          "Mindre spill och färre fel än vid tillverkning på arbetsplatsen",
+        ],
       },
       {
         heading: "Svetsad eller najad",
-        text: "Svetsade korgar är styva och klarar lyft och transport bättre. Svetsning av armering görs enligt SS-EN ISO 17660, men konstruktören avgör om korgen får svetsas. Annars najas den. Vi följer ritningen.",
+        text: "Svetsade korgar är styva och klarar lyft och transport bättre. Svetsning av armering görs enligt SS-EN ISO 17660, men konstruktören avgör om korgen får svetsas. Annars najas den. Vi följer ritningen och ändrar inget utan besked. Hur vi arbetar med den som ritar står under [armering för konstruktörer](/armering-for-konstruktorer).",
+      },
+      {
+        heading: "Fel som en färdig korg förebygger",
+        text: "När korgar binds i formen är det samma fel som återkommer. En korg som byggs i verkstad efter ritningen och märks med position tar bort de flesta av dem. Elementen beskrivs i guiderna om pelare, balkar och [bjälklag](/blogg/armering-bjalklag).",
+        items: [
+          "Byglar som inte är slutna eller saknar förankrade krokar",
+          "För få byglar nära bjälklag och upplag, där byglarna ska sitta tätare",
+          "Balkkorgen vänd upp och ned, så att de grova järnen hamnar i överkant",
+          "Startjärn i fel läge, så att korgen inte går att skarva utan ombockning",
+          "För litet täckskikt när korgen trycks mot formen",
+        ],
+      },
+      {
+        heading: "Det här anger du i beställningen",
+        text: "Enklast är att skicka konstruktionsritningen. Saknas bockningslista tar vi fram den som en [armeringsspecifikation](/tjanster/armeringsspecifikation). Vill du ange uppgifterna själv behöver vi det här:",
+        items: [
+          "Typ och mått: pelare, balk, påle eller plint, korgens längd och tvärsnitt som yttermått",
+          "Huvudjärn: antal, dimension och placering",
+          "Byglar: typform, dimension och bygelavstånd c/c",
+          "Täckskikt, så att korgen får rätt yttermått i formen",
+          "Skarvar och utstickande startjärn mot anslutande delar",
+          "Lyftpunkter och antal korgar per position",
+        ],
+      },
+      {
+        heading: "Så går en beställning efter ritning till",
+        text: "Samma gång gäller för en enstaka korg och för en serie på hundra.",
+        ordered: true,
+        items: [
+          "Skicka ritningen eller armeringsspecifikationen och antal korgar via [offertformuläret](/offert).",
+          "Vi går igenom underlaget och frågar om något är oklart, till exempel om korgen får svetsas.",
+          "Du får offert med vikt per korg, total mängd, frakt och leveranstid, normalt inom en arbetsdag.",
+          "Korgarna byggs efter ritningen och märks per korg och position.",
+          "Leverans till arbetsplatsen. Montaget kan du lägga på oss som [armeringsmontage](/tjanster/armeringsmontage).",
+        ],
+      },
+      {
+        heading: "Lyft, transport och montage",
+        text: "En färdig korg lyfts på plats med kran och ställs på distanser i formen eller över startjärnen. Längre korgar lyfts i flera punkter så att de inte deformeras. Mycket långa korgar kan delas och skarvas på plats enligt ritningen. Ange längden i förfrågan, så återkommer vi med upplägget. Ange önskade lyftpunkter i beställningen.",
+      },
+      {
+        heading: "Leverans och frakt",
+        text: "Vi levererar armeringskorgar i hela Sverige. Frakten räknas efter mängd och ort, utan fast fraktavgift, och leveranstiden anges i offerten. Större projekt kan få korgarna per etapp i den ordning de gjuts. Så arbetar vi med [byggentreprenörer](/armering-for-byggentreprenorer), och med [markentreprenörer](/armering-for-markentreprenorer) som lyfter korgarna rakt ner i schaktet. Materialcertifikat 3.1 enligt SS-EN 10204 kan följa med leveransen.",
+      },
+      {
+        heading: "Guider om armeringskorgar",
+        text: "Guiderna går igenom hur korgarna armeras element för element.",
+        items: [
+          "[Armeringskorg – typer och användning i pålar, pelare och balkar](/blogg/armeringskorgar-palarmering)",
+          "[Armering till betongpelare](/blogg/armering-till-pelare)",
+          "[Armering till betongbalk](/blogg/armering-till-balk)",
+          "[Armering till plintar och plintgrund](/blogg/armering-till-plintar)",
+          "[Armering till stolpfundament](/blogg/armering-till-stolpfundament)",
+          "[Armering till platta på pålar](/blogg/armering-platta-pa-palar)",
+          "[N-bygel – bygeln som håller ihop korgen](/blogg/n-bygel-armering)",
+          "[Armeringsbyglar – typer och mått](/blogg/armeringsbyglar)",
+        ],
       },
       {
         heading: "Offert på korgarna",
-        text: "Skicka konstruktionsritningen eller armeringsspecifikationen och antal korgar. Saknas spec tar vi fram den. Offerten visar vikt per korg, total mängd och frakt efter mängd och ort. [Skicka ritningen – få offert på korgarna](/offert).",
+        text: "Skicka konstruktionsritningen eller armeringsspecifikationen och antal korgar. Saknas spec tar vi fram den. Offerten visar vikt per korg, total mängd och frakt efter mängd och ort. Lösa [byglar och hakar](/produkter/byglar-och-hakar) till samma projekt räknar vi in i samma offert. [Skicka ritningen – få offert på korgarna](/offert).",
       },
     ],
     faqs: [
       { q: "Vad är en armeringskorg?", a: "Färdigmonterad armering till ett bärande element, till exempel balk, pelare, påle eller plint: huvudjärn och byglar sammanfogade till en korg som lyfts på plats och gjuts in." },
-      { q: "Är korgarna svetsade eller najade?", a: "Båda förekommer. Svetsade korgar är styvare vid lyft, najade används där konstruktören inte tillåter svetsning. Ritningen avgör." },
-      { q: "Vilken korg behöver jag?", a: "Det framgår av konstruktionsritningen. Skicka den så går vi igenom vilka korgar och lösa positioner som ingår och lämnar en samlad offert." },
+      { q: "Är armeringskorgarna svetsade eller najade?", a: "Båda förekommer. Svetsade korgar är styvare vid lyft, najade används där konstruktören inte tillåter svetsning. Ritningen avgör." },
+      { q: "Vilken armeringskorg behöver jag?", a: "Det framgår av konstruktionsritningen. Skicka den så går vi igenom vilka korgar och lösa positioner som ingår och lämnar en samlad offert." },
+      { q: "Vad kostar en armeringskorg?", a: "Det beror på mängden stål, antal byglar, om korgen svetsas eller najas och hur många likadana korgar som beställs. Skicka ritningen så får du pris och leveranstid i offerten." },
+      { q: "Hur långa armeringskorgar går att transportera?", a: "Det beror på korgens tvärsnitt och transporten. Mycket långa korgar kan delas och skarvas på plats enligt ritningen. Ange längden i förfrågan." },
+      { q: "Kan ni tillverka armeringskorgar utan bockningslista?", a: "Ja. Vi tar fram armeringsspecifikationen från konstruktionsritningen, och du godkänner den innan något tillverkas." },
+      { q: "Levererar ni armeringskorgar i hela Sverige?", a: "Ja. Frakt och leveranstid räknas efter mängd och ort och anges i offerten." },
     ],
     featured: true,
   },
@@ -538,12 +646,12 @@ const baseProducts: Product[] = [
   {
     slug: "byglar-och-hakar",
     name: "Byglar & hakar",
-    h1: "Armeringsbyglar – färdiga byglar efter mått",
-    metaTitle: "Färdiga armeringsbyglar – köp byglar efter mått",
+    h1: "Armeringsbyglar – färdiga byglar och hakar efter mått",
+    metaTitle: "Armeringsbyglar Ø6–Ø16 efter mått – märkta per position",
     metaDescription:
-      "Färdiga armeringsbyglar efter mått: U-byglar, slutna byglar, kantbalksbyglar och hakar i B500B, buntade per position på pall. Skicka måtten – få offert.",
+      "Armeringsbyglar efter mått i B500B: slutna byglar, U-byglar, kantbalksbyglar och hakar i serie, buntade per position. Skicka lista eller ritning – få offert.",
     intro:
-      "Färdiga armeringsbyglar efter dina mått – U-byglar, slutna byglar, kantbalksbyglar, trappbyglar och hakar i B500B. Serietillverkade med samma mått på varje bygel, buntade per position och levererade på pall till bygget eller elementfabriken.",
+      "Färdiga armeringsbyglar efter dina mått – slutna byglar, U-byglar, kantbalksbyglar, trappbyglar och hakar i kamstål B500B. Serietillverkade med samma mått på varje bygel, buntade och märkta per position och levererade på pall till bygget eller elementfabriken.",
     keywords: [
       "armeringsbyglar",
       "färdiga armeringsbyglar",
@@ -565,16 +673,108 @@ const baseProducts: Product[] = [
     ],
     body: [
       {
-        heading: "Vanliga former",
-        text: "U-bygel (typform C), sluten bygel (typform N) med 135°-krokar, kantbalksbyglar, trappbyglar och enkla hakar – och specialformer efter ritning. Alla standardformer med bokstavskod finns i vår [översikt över typformer](/tjanster/bockningslista). Ange kod och mått när du begär offert. Mer om bygelavstånd finns i guiden [armeringsbyglar](/blogg/armeringsbyglar).",
+        heading: "Vad är en armeringsbygel?",
+        text: "En armeringsbygel är ett bockat järn som omsluter eller förbinder den längsgående armeringen i balkar, pelare och kantbalkar. Bygeln håller huvudjärnen på plats under gjutningen och tar sedan upp tvärkrafter i den färdiga konstruktionen. Antal, dimension och bygelavstånd bestäms av konstruktören och står på armeringsritningen. Vi tillverkar byglarna efter den, som en del av vår [prefab armering](/prefab-armering).",
+        items: [
+          "Balkar: slutna byglar som tar tvärkraft och håller ihop korgen",
+          "Pelare: omslutande byglar som hindrar att tryckta längsjärn knäcks ut",
+          "Kantbalk i platta på mark: öppna eller slutna kantbalksbyglar runt kantjärnen",
+          "Väggar, bjälklagskanter och gjutfogar: U-byglar och hårnålar",
+          "Prefabelement: stora serier med samma mått",
+        ],
+      },
+      {
+        heading: "Vanliga former och typformer",
+        text: "I svenska bockningslistor anges formen med en bokstavskod, en typform, tillsammans med måtten a, b, c. Alla standardformer med bokstavskod finns i vår [översikt över typformer](/tjanster/bockningslista). Ange kod och mått när du begär offert. Specialformer tillverkar vi efter ritning.",
+        table: {
+          head: ["Bygel", "Typform", "Form", "Typisk användning"],
+          rows: [
+            ["Sluten bygel", "N", "Rektangel med två krokar i samma hörn", "Balkar och pelare"],
+            ["U-bygel", "C", "Öppen U-form med tre ben", "Kantbalkar, skarvar, bjälklagskanter"],
+            ["Öppen bygel", "K", "Öppen bygel med ett extra ben, i villagrunder med förlängt ben in i plattan", "Kantbalk i platta på mark"],
+            ["Bygel med överlapp", "L", "Sluten form där benen överlappar", "Där krokar inte får plats"],
+            ["Vinkeljärn", "B", "En 90°-bock och två ben", "Hörn och anslutning mellan platta och vägg"],
+            ["Hårnål", "S", "Två parallella ben med 180°-bock", "Förankring och kantförstärkning"],
+          ],
+          caption: "Vanliga bygelformer. Måtten anges som yttermått i millimeter.",
+        },
+      },
+      {
+        heading: "Typiska mått på byglar",
+        text: "Bygelns yttermått är tvärsnittets mått minus täckskiktet på båda sidor. Täckskiktet räknas till bygeln, som ligger ytterst i konstruktionen. Tabellen visar hur måtten räknas fram för några vanliga tvärsnitt. Den är ingen katalog: vi bockar de mått som står i din lista eller på din ritning.",
+        table: {
+          head: ["Tvärsnitt", "Täckskikt", "Bygelns yttermått"],
+          rows: [
+            ["Pelare 250 × 250 mm", "30 mm", "190 × 190 mm"],
+            ["Pelare 300 × 300 mm", "30 mm", "240 × 240 mm"],
+            ["Pelare 400 × 400 mm", "35 mm", "330 × 330 mm"],
+            ["Balk 200 × 400 mm", "30 mm", "140 × 340 mm"],
+            ["Balk 300 × 500 mm", "35 mm", "230 × 430 mm"],
+            ["Kantbalk 300 × 400 mm", "50 mm", "200 × 300 mm"],
+          ],
+          caption: "Räkneexempel. Täckskiktet bestäms av exponeringsklassen och står på ritningen.",
+        },
+      },
+      {
+        heading: "Dimensioner och stålkvalitet",
+        text: "Byglar tillverkas i kamstål B500B, oftast i Ø6–Ø12 mm och i grövre konstruktioner även Ø16. Klena dimensioner bockas från ring i automatiska maskiner, vilket ger jämna mått i hela serien. De grövsta dimensionerna bockas av raka stänger. Minsta dorndiameter är 4 × Ø upp till Ø16 enligt [Eurokod 2](/blogg/eurokod-2-armering). Ritningen kan kräva större radie.",
+        table: {
+          head: ["Dimension", "Vikt", "Minsta dorndiameter", "Vanlig användning"],
+          rows: [
+            ["Ø6", "0,222 kg/m", "24 mm", "Klena byglar, hakar och kramlor"],
+            ["Ø8", "0,395 kg/m", "32 mm", "Kantbalksbyglar, byglar i balkar och pelare"],
+            ["Ø10", "0,617 kg/m", "40 mm", "Byglar i balkar och pelare, U-byglar"],
+            ["Ø12", "0,888 kg/m", "48 mm", "Grövre byglar och U-byglar"],
+            ["Ø16", "1,58 kg/m", "64 mm", "Byglar i grova konstruktioner"],
+          ],
+          caption: "Kamstål B500B. Dorndiameter enligt SS-EN 1992-1-1 tabell 8.1N.",
+        },
+      },
+      {
+        heading: "Krokar på slutna byglar",
+        text: "Slutna byglar förankras med krokar som bockas in mot bygelns insida. Enligt Eurokod 2 (SS-EN 1992-1-1, avsnitt 8.5) ska en 135°-krok ha en rak ände på minst 5 × Ø och minst 50 mm, och en 90°-bock minst 10 × Ø och minst 70 mm. Vi bockar den krok som ritningen anger och byter inte krokvinkel utan konstruktörens besked. Hur bockningen går till beskrivs i guiden [bocka armeringsjärn](/blogg/bocka-armeringsjarn).",
       },
       {
         heading: "Så räknar du antal byglar",
-        text: "Antal = längd / c/c-avstånd + 1. En kantbalk på 40 m med byglar c/c 300 kräver 40 000 / 300 ≈ 133 mellanrum, alltså 134 byglar. Lägg till extra byglar där ritningen anger tätare avstånd, till exempel vid hörn och stöd.",
+        text: "Antal = längd / c/c-avstånd + 1. En kantbalk på 40 m med byglar c/c 300 kräver 40 000 / 300 ≈ 133 mellanrum, alltså 134 byglar. Lägg till extra byglar där ritningen anger tätare avstånd, till exempel vid hörn och stöd. Som gränsvärden anger Eurokod 2 ett största bygelavstånd på 0,75 × d i balkar och i pelare det minsta av 20 × längsjärnets diameter, pelarens minsta sida och 400 mm. Det är gränser och ingen dimensionering. Avståndet på ritningen gäller.",
+      },
+      {
+        heading: "Hakar och kramlor",
+        text: "Hakar och kramlor är korta bockade järn som binder ihop två armeringslager, oftast i väggar med nät eller järn i båda sidor. De håller lagren på rätt avstånd under gjutningen. Formen på ritningen gäller, inte namnet. Vi tillverkar dem i serie på samma sätt som byglarna. Mått och användning står i guiden [S-hake och kramla](/blogg/s-hake-kramla-armering).",
       },
       {
         heading: "Samma mått i hela serien",
-        text: "Byglar går åt i stora mängder i balkar, pelare, kantbalkar och prefabelement. Serietillverkade byglar får samma mått varje gång, vilket gör att korgen blir rak och täckskiktet jämnt. Byglarna buntas per position och levereras på pall, gärna tillsammans med övrig armering.",
+        text: "Byglar går åt i stora mängder. En 6 meter lång balk med c/c 200 kräver 31 byglar och en villagrund 100–200 kantbalksbyglar. Bockas de på bygget blir måtten olika, och då passar inte huvudjärnen. Serietillverkade byglar får samma mått varje gång, vilket ger en rak korg och ett jämnt täckskikt. Vill du ha byglarna färdigt sammanfogade med längsjärnen tillverkar vi [armeringskorgar](/produkter/armeringskorgar) och [kantbalkskorgar](/produkter/villakorg-kantbalksarmering).",
+      },
+      {
+        heading: "Så beställer du efter bockningslista eller ritning",
+        text: "Enklast är en rad per position i bockningslistan. Har du bara ritningen räcker den. Då tar vi fram [armeringsspecifikationen](/tjanster/armeringsspecifikation) åt dig.",
+        ordered: true,
+        items: [
+          "Skicka bockningslistan eller ritningen via [offertformuläret](/offert). Per position behöver vi typform, mått a, b, c som yttermått, dimension, krokvinkel och antal.",
+          "Vi går igenom underlaget och frågar om något är oklart, till exempel om måtten avser ytter- eller innermått.",
+          "Du får offert med pris, frakt och leveranstid, normalt inom en arbetsdag.",
+          "Byglarna bockas i serie, buntas och märks per position.",
+          "Leverans på pall till bygget eller fabriken, gärna tillsammans med övrig armering.",
+        ],
+      },
+      {
+        heading: "Leverans och frakt",
+        text: "Vi levererar i hela Sverige. Frakten räknas efter mängd och ort, utan fast fraktavgift, och leveranstiden anges i offerten. Skriv gärna önskat leveransdatum i förfrågan. Byglarna kan gå i samma leverans som [klippt och bockad armering](/produkter/klippt-och-bockad), nät och distanser. Materialcertifikat 3.1 enligt SS-EN 10204 kan följa med leveransen.",
+      },
+      {
+        heading: "Guider om byglar",
+        text: "Vill du läsa mer innan du beställer? Guiderna går igenom varje bygeltyp för sig.",
+        items: [
+          "[Armeringsbyglar – typer, mått och när de används](/blogg/armeringsbyglar)",
+          "[N-bygel – sluten bygel till balk och pelare](/blogg/n-bygel-armering)",
+          "[U-bygel – mått, klipplängd och användning](/blogg/u-bygel-armering)",
+          "[B-bygel – vinkeljärn och hörnjärn](/blogg/b-bygel-armering)",
+          "[C-bygel och hårnål](/blogg/c-bygel-harnal-armering)",
+          "[Kantbalksbygel – mått och montage](/blogg/kantbalksbygel)",
+          "[Kantbalksarmering – så armerar du en kantbalk](/blogg/armering-kantbalk)",
+          "[Typformer för armering A–XX](/blogg/typformer-armering)",
+        ],
       },
       {
         heading: "Offert på byglar",
@@ -582,9 +782,13 @@ const baseProducts: Product[] = [
       },
     ],
     faqs: [
-      { q: "Vilka dimensioner kan byglar tillverkas i?", a: "Vanligen B500B Ø6–Ø12 mm. Grövre byglar tillverkas av raka stänger. Ange dimension och mått per position." },
-      { q: "Hur många byglar måste jag beställa?", a: "Både mindre partier och stora serier går bra. Ju större serie, desto lägre pris per styck." },
-      { q: "Hur anger jag formen?", a: "Enklast med typformens bokstavskod, till exempel N för sluten bygel och C för U-bygel, och måtten a, b, c. Alla koder finns i vår översikt över typformer." },
+      { q: "Vilka dimensioner kan armeringsbyglar tillverkas i?", a: "Vanligen B500B Ø6–Ø12 mm, i grövre konstruktioner även Ø16. Grövre byglar tillverkas av raka stänger. Ange dimension och mått per position." },
+      { q: "Hur många armeringsbyglar måste jag beställa?", a: "Både mindre partier och stora serier går bra. Ju större serie, desto lägre pris per styck." },
+      { q: "Hur anger jag formen på en bygel?", a: "Enklast med typformens bokstavskod, till exempel N för sluten bygel och C för U-bygel, och måtten a, b, c. Alla koder finns i vår översikt över typformer." },
+      { q: "Anges byglarnas mått som ytter- eller innermått?", a: "Som yttermått per ben i millimeter. Använder ritningen innermått skriver du det i förfrågan, så räknar vi om innan vi bockar." },
+      { q: "Vad är skillnaden mellan en U-bygel och en sluten bygel?", a: "En U-bygel (typform C) är öppen och har tre ben. En sluten bygel (typform N) omsluter armeringen helt och förankras med krokar i ett hörn." },
+      { q: "Kan ni tillverka kantbalksbyglar efter vårt kantelement?", a: "Ja. Skicka kantelementets invändiga mått eller ritningen, så bockar vi byglarna med rätt täckskikt mot cellplasten." },
+      { q: "Hur levereras armeringsbyglarna?", a: "Buntade och märkta per position på pall, i hela Sverige. Frakt och leveranstid anges i offerten." },
     ],
   },
   {

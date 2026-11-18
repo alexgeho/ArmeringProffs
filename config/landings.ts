@@ -138,7 +138,7 @@ const baseLandings: Landing[] = [
     body: [
       {
         heading: "Varför prefab?",
-        text: "Att kapa och bocka armering på bygget tar tid, kräver utrymme och ger spill. Med prefab görs jobbet i verkstad efter ritningen, och på bygget återstår bara att lägga och naja. Det ger rätt mått, mindre spill och kortare montagetid. Grunden är [klippt och bockad armering](/produkter/klippt-och-bockad) i kamstål B500B – levererat märkt per position, eller som [inläggningsfärdig ILF-armering](/tjanster/ilf-armering). Det passar både villabyggare och entreprenörer.",
+        text: "Att kapa och bocka armering på bygget tar tid, kräver utrymme och ger spill. Med prefab görs jobbet i verkstad efter ritningen, och på bygget återstår bara att lägga och naja. Det ger rätt mått, mindre spill och kortare montagetid. Grunden är [klippt och bockad armering](/produkter/klippt-och-bockad) i kamstål B500B – levererat märkt per position, eller som [inläggningsfärdig ILF-armering](/tjanster/ilf-armering). Det passar både villabyggare och [byggentreprenörer](/armering-for-byggentreprenorer).",
         table: {
           head: ["Moment", "Prefab armering", "Kapa och bocka på bygget"],
           rows: [
@@ -189,7 +189,7 @@ const baseLandings: Landing[] = [
       },
       {
         heading: "Kvalitet och normer",
-        text: "Kamstålet följer SS-EN 10080 och SS 212540. Bockningsradier följer Eurokod 2 (SS-EN 1992-1-1), som i Sverige tillämpas med Boverkets föreskrifter BFS 2024:6, eller den större radie som ritningen anger. Toleranser och utförande på plats regleras av SS-EN 13670. Materialcertifikat 3.1 enligt SS-EN 10204 och EPD kan levereras med leveransen. Dimensioneringen är konstruktörens – vi tillverkar exakt efter ritningen och stämmer av oklarheter innan tillverkning.",
+        text: "Kamstålet följer SS-EN 10080 och SS 212540. Bockningsradier följer Eurokod 2 (SS-EN 1992-1-1), som i Sverige tillämpas med Boverkets föreskrifter BFS 2024:6, eller den större radie som ritningen anger. Toleranser och utförande på plats regleras av SS-EN 13670. Materialcertifikat 3.1 enligt SS-EN 10204 och EPD kan levereras med leveransen, vilket ofta efterfrågas i [offentliga projekt](/armering-offentlig-upphandling). Dimensioneringen är konstruktörens – vi tillverkar exakt efter ritningen och stämmer av oklarheter innan tillverkning. Mer för dig som ritar finns under [armering för konstruktörer](/armering-for-konstruktorer).",
       },
       {
         heading: "Så beställer du",

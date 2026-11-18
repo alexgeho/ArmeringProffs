@@ -548,6 +548,7 @@ export const guider1: Post[] = [
     excerpt:
       "I bockningslistor beskrivs varje armeringsform med en bokstav: A för rak stång, N för sluten bygel, S för hårnål. Här är hela systemet förklarat – form för form.",
     date: "2026-10-09",
+    updated: "2026-11-18",
     readingMinutes: 7,
     keywords: [
       "typformer armering",
@@ -559,7 +560,7 @@ export const guider1: Post[] = [
       "typform n armering",
     ],
     content: [
-      { type: "p", text: "I svenska bockningslistor beskrivs armeringens form med en bokstavskod – en typform. I stället för att rita varje järn skriver man formens bokstav och måtten a, b, c och så vidare. Tillverkaren vet då exakt hur järnet ska bockas. Koderna är svensk branschpraxis och används av konstruktörer, armerare och bockverkstäder." },
+      { type: "p", text: "I svenska bockningslistor beskrivs armeringens form med en bokstavskod – en typform. I stället för att rita varje järn skriver man formens bokstav och måtten a, b, c och så vidare. Tillverkaren vet då exakt hur järnet ska bockas. Koderna är svensk branschpraxis och används av [konstruktörer](/armering-for-konstruktorer), armerare och bockverkstäder." },
       { type: "p", text: "Alla former finns med figur och måttfält i vårt verktyg för [bockningslista](/tjanster/bockningslista). Vill du slippa bocka själv tillverkar vi alla typformer som [klippt och bockad armering efter bockningslista](/produkter/klippt-och-bockad). Har du bara ritningen tar vi fram [armeringsspecifikationen åt dig](/tjanster/armeringsspecifikation) – med rätt typform för varje position." },
 
       { type: "figure", illustration: "bending-shapes", caption: "Några vanliga typformer: rak stång, vinkel, U-järn och sluten bygel." },
@@ -651,6 +652,7 @@ export const guider1: Post[] = [
     excerpt:
       "På ritningen står B500B, på följesedeln K500C-T. Är det samma stål? Här reder vi ut duktilitetsklasserna A, B och C – och varför klass C alltid får ersätta B.",
     date: "2026-10-09",
+    updated: "2026-11-18",
     readingMinutes: 6,
     keywords: [
       "b500b k500c-t skillnad",
@@ -706,7 +708,7 @@ export const guider1: Post[] = [
       { type: "p", text: "Armeringsstål ska vara märkt med tillverkarens valsmärke – ett mönster i kammarna som identifierar verk och land – och levereras med leveransintyg (provningsintyg) som anger standard, klass och charge. Spara intygen; de behövs vid kontroll och egenkontroll. Dimensioner och vikt per meter finns i [armeringsjärn – dimensioner](/blogg/armeringsjarn-dimensioner)." },
 
       { type: "h2", text: "Beställ rätt klass" },
-      { type: "p", text: "Ange stålklassen från ritningen när du begär pris – står inget särskilt gäller normalt B500B. Vi levererar [armeringsjärn](/produkter/armeringsjarn) och [klippt och bockad armering](/produkter/klippt-och-bockad) i B500B med materialcertifikat 3.1 enligt SS-EN 10204. Skicka ritning eller lista via [offert](/offert) så får du pris och leveransupplägg för hela Sverige." },
+      { type: "p", text: "Ange stålklassen från ritningen när du begär pris – står inget särskilt gäller normalt B500B. Vi levererar [armeringsjärn](/produkter/armeringsjarn) och [klippt och bockad armering](/produkter/klippt-och-bockad) i B500B med materialcertifikat 3.1 enligt SS-EN 10204, som ofta krävs i [offentlig upphandling](/armering-offentlig-upphandling). Skicka ritning eller lista via [offert](/offert) så får du pris och leveransupplägg för hela Sverige." },
     ],
     faqs: [
       { q: "Vad är skillnaden mellan B500B och K500C-T?", a: "B500B är europeisk beteckning för armeringsstål med sträckgräns 500 MPa i duktilitetsklass B. K500C-T är den svenska beteckningen enligt SS 212540 för kamstång i klass C, som är segare och uppfyller kraven för B500B." },
@@ -728,6 +730,7 @@ export const guider1: Post[] = [
     excerpt:
       "Eurokod 2 styr hur betong och armering dimensioneras i Sverige. Här är de regler som faktiskt syns på bygget – täckskikt, avstånd, bockar, skarvar och byglar – samlade på ett ställe.",
     date: "2026-10-09",
+    updated: "2026-11-18",
     readingMinutes: 8,
     keywords: [
       "eurokod 2 armering",
@@ -792,7 +795,7 @@ export const guider1: Post[] = [
       { type: "p", text: "En ny version av standarden, EN 1992-1-1:2023, är publicerad och ska införas i Sverige under de kommande åren. Fram till dess gäller SS-EN 1992-1-1:2005 med EKS. Vissa regler och tabellvärden ändras i den nya versionen – följ alltid den version konstruktören har dimensionerat efter. Fråga konstruktören om du är osäker på vilken som gäller i ditt projekt." },
 
       { type: "h2", text: "Från regler till leverans" },
-      { type: "p", text: "Eurokod 2 avgör vad konstruktören skriver på ritningen. Vi tillverkar efter ritningen: rätt dimension, bockningsradie och längd per position. Beställ [armeringsjärn](/produkter/armeringsjarn) eller skicka hela underlaget via [offert](/offert) – leverans i hela Sverige." },
+      { type: "p", text: "Eurokod 2 avgör vad konstruktören skriver på ritningen. Vi tillverkar efter ritningen: rätt dimension, bockningsradie och längd per position. Mer för dig som ritar finns under [armering för konstruktörer](/armering-for-konstruktorer). Beställ [armeringsjärn](/produkter/armeringsjarn) eller skicka hela underlaget via [offert](/offert) – leverans i hela Sverige." },
     ],
     faqs: [
       { q: "Vad är Eurokod 2?", a: "Eurokod 2, SS-EN 1992-1-1, är den europeiska standarden för dimensionering av betongkonstruktioner. I Sverige gäller den tillsammans med Boverkets nationella val i EKS." },
@@ -891,6 +894,7 @@ export const guider1: Post[] = [
     excerpt:
       "Fiberbetong blandas med fibrer direkt i betongbilen, nät läggs ut före gjutning. Här jämför vi fiberarmering och armeringsnät – vad de klarar och när vilket passar.",
     date: "2026-10-09",
+    updated: "2026-11-18",
     readingMinutes: 6,
     keywords: [
       "fiberarmering",
@@ -901,7 +905,7 @@ export const guider1: Post[] = [
       "plastfiber betong",
     ],
     content: [
-      { type: "p", text: "Fiberarmering betyder att korta fibrer av stål eller plast blandas in i betongen. Fibrerna fördelas i hela volymen och tar upp en del av dragkrafterna när betongen spricker. Armeringsnät är svetsade järn som läggs på ett bestämt ställe i tvärsnittet. Båda används i plattor och golv – men de fungerar olika." },
+      { type: "p", text: "Fiberarmering betyder att korta fibrer av stål eller plast blandas in i betongen. Fibrerna fördelas i hela volymen och tar upp en del av dragkrafterna när betongen spricker. Armeringsnät, eller [armeringsmatta](/armeringsmatta), är svetsade järn som läggs på ett bestämt ställe i tvärsnittet. Båda används i plattor och golv – men de fungerar olika." },
       { type: "p", text: "Behöver du konventionell armering till plattan levererar vi [armeringsnät](/produkter/armeringsnat) i standard- och specialformat, tillsammans med distanser och kantjärn." },
 
       { type: "h2", text: "Typer av fibrer" },

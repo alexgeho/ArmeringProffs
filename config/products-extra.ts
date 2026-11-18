@@ -63,9 +63,9 @@ export const extraProducts: Product[] = [
     slug: "villakorg-kantbalksarmering",
     name: "Kantbalksarmering & kantbalkskorgar",
     h1: "Kantbalksarmering – färdiga kantbalkskorgar till platta på mark",
-    metaTitle: "Kantbalkskorgar – färdig kantbalksarmering",
+    metaTitle: "Kantbalksarmering – färdiga korgar märkta per sida",
     metaDescription:
-      "Färdiga kantbalkskorgar till platta på mark: byglar och längsjärn i B500B efter ritning, med hörn och skarvjärn, märkta per sida. Begär offert.",
+      "Kantbalksarmering till platta på mark: färdiga kantbalkskorgar eller byglar och kantjärn i B500B efter ritning, med hörn och skarvjärn. Begär offert.",
     intro:
       "Kantbalksarmering som färdiga korgar – byglar och längsjärn sammanfogade i raka längder och hörn, så att kantbalken läggs ut direkt i formen. Tillverkat efter din ritning i kamstål B500B, märkt per sida och levererat i hela Sverige.",
     keywords: [
@@ -86,20 +86,122 @@ export const extraProducts: Product[] = [
     ],
     body: [
       {
-        heading: "Vad är en kantbalkskorg?",
-        text: "Kantbalksbyglar och längsgående järn fixerade till en korg som läggs direkt i kantelementet. I stället för att räkna, kapa och naja varje bygel lägger du ut korg efter korg. I vardagligt tal kallas den ibland villakorg. Kantbalken är den mest arbetskrävande delen av plattan, så tidsvinsten blir störst på grunder med många hörn och långa kanter. Korgarna ingår ofta i vår [grundarmering](/produkter/grundarmering) men går också att beställa separat.",
+        heading: "Vad är kantbalksarmering?",
+        text: "Kantbalksarmering är armeringen i den förtjockade kanten runt en platta på mark. Kantbalken bär ytterväggarnas last och styvar upp plattans kant. Den armeras med längsgående kantjärn i över- och underkant, byglar som håller ihop dem och L-formade hörnjärn i varje hörn. Antal, dimension och skarvlängd står på konstruktionsritningen. Vi tillverkar allt efter den, som lösa delar eller som färdiga korgar.",
+        items: [
+          "Kantjärn i underkant och överkant",
+          "Kantbalksbyglar med föreskrivet c/c-avstånd",
+          "Hörnjärn eller hörnkorgar i varje hörn",
+          "Skarvjärn mellan raka längder",
+          "Anslutningsjärn till innerbalkar under bärande väggar",
+        ],
       },
       {
-        heading: "Byggd efter din kantbalk",
-        text: "Höjd, bredd, bygelavstånd och antal längsjärn bestäms av konstruktören. I villaplattor är det ofta 2–3 längsjärn Ø10–Ø12 i över- och underkant och byglar Ø8 c/c 200–300 mm – men ritningen gäller. Ange fabrikat eller invändiga mått på kantelementet så anpassar vi korgen med rätt täckskikt. Bygelns form beskrivs i guiden [kantbalksbygel](/blogg/kantbalksbygel).",
+        heading: "Vad är en kantbalkskorg?",
+        text: "Kantbalksbyglar och längsgående järn fixerade till en korg som läggs direkt i kantelementet. I stället för att räkna, kapa och naja varje bygel lägger du ut korg efter korg. I vardagligt tal kallas den ibland villakorg. Kantbalken är den mest arbetskrävande delen av plattan, så tidsvinsten blir störst på grunder med många hörn och långa kanter. Korgarna ingår ofta i vår [grundarmering](/produkter/grundarmering) men går också att beställa separat, och de är en del av vår [prefab armering](/prefab-armering).",
+      },
+      {
+        heading: "Typisk kantbalksarmering i en villaplatta",
+        text: "Höjd, bredd, bygelavstånd och antal längsjärn bestäms av konstruktören. Tabellen visar vanliga utföranden för småhus. Ritningen gäller alltid, och vi tillverkar efter den.",
+        table: {
+          head: ["Del", "Typiskt utförande", "Kommentar"],
+          rows: [
+            ["Kantjärn underkant", "2–3 st Ø10–Ø12", "Tar dragkraft när kanten böjs nedåt"],
+            ["Kantjärn överkant", "2–3 st Ø10–Ø12", "Håller ihop korgen och tar dragkraft över stöd"],
+            ["Byglar", "Ø8, c/c 200–300 mm", "Förlängt ben går in i plattan"],
+            ["Hörnjärn", "L-formade, samma dimension som kantjärnen", "Ben ofta 500–800 mm"],
+            ["Täckskikt", "Ofta 25–35 mm mot cellplast och form", "Mot jord gäller större mått"],
+          ],
+          caption: "Vanliga exempel för småhus. Dimension, antal och avstånd enligt konstruktionsritningen.",
+        },
+      },
+      {
+        heading: "Bygelmått efter kantbalkens sektion",
+        text: "Bygelns yttermått är kantbalkens mått minus täckskiktet på varje sida. En kantbalk som är 300 mm bred och 400 mm hög får med 50 mm täckskikt en bygel på 200 × 300 mm. Täckskiktet kan skilja mellan över- och underkant, och gjuts betongen direkt mot jord krävs minst 75 mm enligt Eurokod 2. Ange kantelementets fabrikat eller invändiga mått, så anpassar vi korgen. Bygelns form beskrivs i guiden [kantbalksbygel](/blogg/kantbalksbygel).",
+        table: {
+          head: ["Bygelform", "Typform", "Beskrivning"],
+          rows: [
+            ["Öppen bygel med förlängt ben", "K", "Ett ben går in i plattan och binder ihop kantbalk och platta – vanligast i villagrunder"],
+            ["Sluten bygel", "N", "Omsluter kantbalkens järn helt och förankras med krokar"],
+            ["U-bygel", "C", "Öppen U-form, används ibland tillsammans med raka järn"],
+          ],
+          caption: "Vilken form som gäller står på konstruktionsritningen.",
+        },
+      },
+      {
+        heading: "Räkneexempel: platta 10 × 12 m",
+        text: "Kantbalken går runt hela plattan, så mängden följer omkretsen. En platta på 10 × 12 m har 44 m omkrets. Med 2 + 2 kantjärn Ø12 och byglar c/c 250 blir det ungefär så här. Siffrorna är ett räkneexempel, din ritning ger de verkliga mängderna.",
+        items: [
+          "Kantjärn: 4 × 44 m = 176 m, cirka 156 kg (Ø12 väger 0,888 kg/m)",
+          "Byglar: 44 m / 0,25 m ≈ 176 st",
+          "Hörnjärn: ett per kantjärn och hörn, alltså 16 st",
+          "Skarvar: ingen sida är längre än 12 m, så kantjärnen skarvas bara mot hörnjärnen",
+        ],
       },
       {
         heading: "Hörn och skarvar – där det oftast blir fel",
-        text: "Längsjärnen får inte bara mötas i hörnet. De ska föras runt med hörnkorgar eller L-formade hörnjärn och skarvas mot de raka korgarna med skarvjärn. Skarvlängden följer ritningen, se [skarvlängd armering](/blogg/skarvlangd-armering). Indragna hörn, utskjutande partier och innerbalkar under bärande väggar får egna positioner.",
+        text: "Längsjärnen får inte bara mötas i hörnet. De ska föras runt med hörnkorgar eller L-formade hörnjärn och skarvas mot de raka korgarna med skarvjärn. Skarvlängden följer ritningen, ofta i storleksordningen 40–60 gånger diametern, se [skarvlängd armering](/blogg/skarvlangd-armering). Indragna hörn, utskjutande partier och innerbalkar under bärande väggar får egna positioner. Hur hörn och öppningar förstärks beskrivs i guiden [armering runt öppningar och hörn](/blogg/armering-runt-oppningar-och-horn).",
+      },
+      {
+        heading: "Innerbalkar och förstärkningar",
+        text: "Bärande innerväggar och punktlaster från pelare eller trappor kräver ofta en inre kantbalk: en ränna i cellplasten som armeras på samma sätt som kanten. Där innerbalken möter ytterkantbalken binds järnen ihop med bockade anslutningsjärn, så att balkarna samverkar. Vid portöppningar och stora fönsterpartier kan kantbalken behöva extra järn. Ett vanligt fel är att innerbalkarna glöms när armeringen beställs styckvis. Med en lista per position kommer ytterbalk, innerbalkar, hörn och anslutningar i samma leverans.",
+      },
+      {
+        heading: "Montage steg för steg",
+        text: "Med färdiga korgar försvinner det mesta av najningen, men ordningen i formen är densamma.",
+        ordered: true,
+        items: [
+          "Ställ kantelementen och kontrollera de invändiga måtten.",
+          "Lägg ut distanser för underkantsjärnen.",
+          "Lägg korgarna sida för sida enligt märkningen.",
+          "Montera hörnkorgar eller hörnjärn och skarva enligt ritningen.",
+          "Kontrollera täckskiktet mot form och mark innan nätet läggs.",
+        ],
       },
       {
         heading: "Korg eller lösa byglar?",
-        text: "Lösa byglar och raka järn är flexibla och lätta att bära, men najas på plats. Färdiga korgar sparar tid i formen men kräver att kantelementens mått är bestämda. Vill du hellre ha lösa delar levererar vi [kantbalksbyglar](/produkter/byglar-och-hakar) och kantjärn efter samma ritning.",
+        text: "Lösa byglar och raka järn är flexibla och lätta att bära, men najas på plats. Färdiga korgar sparar tid i formen men kräver att kantelementens mått är bestämda. Vill du hellre ha lösa delar levererar vi [kantbalksbyglar](/produkter/byglar-och-hakar) och kantjärn efter samma ritning. Större korgar till balkar, pelare och plintar finns under [armeringskorgar](/produkter/armeringskorgar).",
+      },
+      {
+        heading: "Det här behöver vi för en offert",
+        text: "Har du konstruktionsritningen räcker den. Annars går det bra med plattans yttermått och kantbalkens sektion, så tar vi fram ett mängdförslag som du stämmer av med konstruktören.",
+        items: [
+          "Plattans mått och form, gärna som ritning",
+          "Kantelementets typ och invändiga mått",
+          "Antal och dimension på kantjärn i över- och underkant",
+          "Bygelavstånd och bygelmått, eller kantbalkens sektion",
+          "Läge för innerbalkar, portar och punktlaster",
+          "Leveransort och önskad vecka",
+        ],
+      },
+      {
+        heading: "Så går en beställning efter ritning till",
+        text: "Gången är densamma för en villagrund och för en serie hus.",
+        ordered: true,
+        items: [
+          "Skicka ritningen eller måtten via [offertformuläret](/offert).",
+          "Vi går igenom underlaget och frågar om något är oklart, till exempel täckskikt eller hörnens utformning.",
+          "Du får offert med pris, frakt och leveranstid, normalt inom en arbetsdag.",
+          "Korgar, hörn och skarvjärn tillverkas efter ritningen och märks per sida och position.",
+          "Leverans till tomten, gärna tillsammans med [armeringsnät](/produkter/armeringsnat) och [distanser](/produkter/distanser).",
+        ],
+      },
+      {
+        heading: "Leverans och frakt",
+        text: "Vi levererar kantbalksarmering i hela Sverige, även till privatpersoner. Frakten räknas efter mängd och ort, utan fast fraktavgift, och leveranstiden anges i offerten. Skriv önskat leveransdatum i förfrågan, så att armeringen finns på plats när kantelementen är ställda.",
+      },
+      {
+        heading: "Guider om kantbalken",
+        text: "Guiderna visar hur kantbalken armeras, räknas och monteras.",
+        items: [
+          "[Kantbalksarmering – så armerar du en kantbalk](/blogg/armering-kantbalk)",
+          "[Kantbalksbygel – mått och montage](/blogg/kantbalksbygel)",
+          "[Kantjärn och förankringsjärn](/blogg/kantjarn-forankringsjarn)",
+          "[Platta på mark – uppbyggnad, isolering och armering](/blogg/armering-platta-pa-mark)",
+          "[Armeringsplan för villa](/blogg/armeringsplan-villa)",
+          "[Armering till attefallshus](/blogg/armering-attefallshus)",
+          "[Armering till grund för hus på berg](/blogg/armering-grund-pa-berg)",
+        ],
       },
       {
         heading: "Offert på kantbalkskorgar",
@@ -108,9 +210,12 @@ export const extraProducts: Product[] = [
     ],
     faqs: [
       { q: "Vad är skillnaden på kantbalkskorg och lösa kantbalksbyglar?", a: "Lösa byglar najas ihop med längsjärnen på plats. En kantbalkskorg kommer färdigt sammanfogad och läggs direkt i formen." },
-      { q: "Kan ni tillverka korgar efter vår kantbalkssektion?", a: "Ja, efter ritningens höjd, bredd, bygelavstånd och längsjärn. Ange gärna kantelementets fabrikat eller invändiga mått." },
-      { q: "Ingår hörnen?", a: "Ja. Hörnkorgar eller hörnjärn och skarvjärn ingår efter ritning, så att kantbalken blir sammanhängande runt hela plattan." },
-      { q: "Vad behöver ni för att lämna offert?", a: "Ritningen, eller plattans yttermått och kantbalkens sektion, samt leveransort och önskat datum." },
+      { q: "Vilken armering ska en kantbalk ha?", a: "Det står på konstruktionsritningen. I villaplattor är 2–3 kantjärn Ø10–Ø12 i över- och underkant och byglar Ø8 c/c 200–300 mm vanligt." },
+      { q: "Vilket mått ska en kantbalksbygel ha?", a: "Kantbalkens bredd och höjd minus täckskiktet på varje sida. Vid 300 × 400 mm kantbalk och 50 mm täckskikt blir bygeln 200 × 300 mm." },
+      { q: "Kan ni tillverka kantbalkskorgar efter vår kantbalkssektion?", a: "Ja, efter ritningens höjd, bredd, bygelavstånd och längsjärn. Ange gärna kantelementets fabrikat eller invändiga mått." },
+      { q: "Ingår hörnen i kantbalksarmeringen?", a: "Ja. Hörnkorgar eller hörnjärn och skarvjärn ingår efter ritning, så att kantbalken blir sammanhängande runt hela plattan." },
+      { q: "Hur många kantbalksbyglar går det åt?", a: "Omkretsen delat med bygelavståndet. En platta på 10 × 12 m har 44 m omkrets, vilket ger cirka 176 byglar vid c/c 250." },
+      { q: "Vad behöver ni för att lämna offert på kantbalksarmering?", a: "Ritningen, eller plattans yttermått och kantbalkens sektion, samt leveransort och önskat datum." },
     ],
   },
   {

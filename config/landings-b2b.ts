@@ -31,7 +31,7 @@ export const b2bLandings: Service[] = [
     body: [
       {
         heading: "Ett exempel på leveransplan",
-        text: "Etapp 1, grund: [grundarmering](/produkter/grundarmering) med kantbalkskorgar, nät och [distanser](/produkter/distanser). Etapp 2, väggar och pelare: [klippt och bockad armering](/produkter/klippt-och-bockad) och [pelar- och balkkorgar](/produkter/pelar-och-balkkorgar). Etapp 3, bjälklag: [armeringsnät](/produkter/armeringsnat), kantjärn och [byglar](/produkter/byglar-och-hakar). Varje etapp är en egen leverans med egen följesedel.",
+        text: "Etapp 1, grund: [grundarmering](/produkter/grundarmering) med kantbalkskorgar, nät och [distanser](/produkter/distanser). Etapp 2, väggar och pelare: [klippt och bockad armering](/produkter/klippt-och-bockad) och [pelar- och balkkorgar](/produkter/pelar-och-balkkorgar). Etapp 3, [bjälklag](/blogg/armering-bjalklag): [armeringsnät](/produkter/armeringsnat), kantjärn och [byglar](/produkter/byglar-och-hakar). Varje etapp är en egen leverans med egen följesedel.",
       },
       {
         heading: "Mindre upplag, mindre letande",

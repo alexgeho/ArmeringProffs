@@ -15,6 +15,7 @@ const jarn: Post[] = [
     excerpt:
       "Ø6 är den tunnaste dimensionen av kamstål. Den används framför allt till byglar, hakar och kompletteringsjärn. Här är vikt, area, bockningsregler och vad Ø6 passar till.",
     date,
+    updated: "2026-11-18",
     readingMinutes: 6,
     keywords: [
       "armeringsjärn 6 mm",
@@ -25,7 +26,7 @@ const jarn: Post[] = [
       "kamjärn 6 mm vikt",
     ],
     content: [
-      { type: "p", text: "Armeringsjärn 6 mm (Ø6) är den klenaste dimensionen av kamstål B500B. Den bär inte stora laster själv – i stället håller den ihop grövre armering, låser nät och fyller ut där ritningen kräver lite stål. Det mesta Ø6 som går åt på ett bygge är bockat: byglar, hakar och kramlor. Därför beställs dimensionen oftast som [klippt och bockad armering](/produkter/klippt-och-bockad) snarare än som raka stänger." },
+      { type: "p", text: "Armeringsjärn 6 mm (Ø6) är den klenaste dimensionen av kamstål B500B. Den bär inte stora laster själv – i stället håller den ihop grövre armering, låser nät och fyller ut där ritningen kräver lite stål. Det mesta Ø6 som går åt på ett bygge är bockat: byglar, [hakar och kramlor](/blogg/s-hake-kramla-armering). Därför beställs dimensionen oftast som [klippt och bockad armering](/produkter/klippt-och-bockad) snarare än som raka stänger." },
       { type: "p", text: "Behöver du raka stänger finns Ø6 även som [armeringsjärn i 6 och 12 meter](/produkter/armeringsjarn). Här är siffrorna du behöver för att räkna och beställa." },
 
       { type: "h2", text: "Fakta om armeringsjärn Ø6" },
@@ -356,6 +357,7 @@ const jarn: Post[] = [
     excerpt:
       "Ø16 är steget från villabygge till bärande konstruktioner: bjälklag, balkar, källarväggar och fundament. Här är data, area per meter och bockningsreglerna.",
     date,
+    updated: "2026-11-18",
     readingMinutes: 6,
     keywords: [
       "armeringsjärn 16 mm",
@@ -416,7 +418,7 @@ const jarn: Post[] = [
       { type: "p", text: "Täckskiktet ska aldrig vara mindre än järnets diameter för att vidhäftningen ska fungera – för Ø16 minst 16 mm. I praktiken styr exponeringsklassen, som oftast ger 25–45 mm. Fritt avstånd mellan parallella järn ska vara minst det största av Ø, stenstorlek + 5 mm och 20 mm (Eurokod 2, 8.2)." },
 
       { type: "h2", text: "Ø16 i bjälklag och väggar" },
-      { type: "p", text: "I bjälklag läggs Ø16 i underkant i huvudriktningen och ofta klenare järn i andra riktningen. Stöden får överkantsarmering som förankras in i fältet. Eftersom stängerna är tunga lönar det sig att få dem kapade i exakta längder så att de kan läggas ut direkt utan kapning på bjälklaget." },
+      { type: "p", text: "I [bjälklag](/blogg/armering-bjalklag) läggs Ø16 i underkant i huvudriktningen och ofta klenare järn i andra riktningen. Stöden får överkantsarmering som förankras in i fältet. Eftersom stängerna är tunga lönar det sig att få dem kapade i exakta längder så att de kan läggas ut direkt utan kapning på bjälklaget." },
 
       { type: "h2", text: "Ø16 kapat i exakta längder" },
       { type: "p", text: "Vi kapar och bockar Ø16 efter bockningslistan, med rätt dorn och märkning per position. Stängerna kan läggas ut direkt på bjälklaget utan kapning. Saknas lista hjälper vi till att ta fram den ur ritningen. Skicka underlaget via [klippt och bockad armering](/produkter/klippt-och-bockad) eller [offert](/offert)." },
@@ -704,6 +706,7 @@ const nat: Post[] = [
     excerpt:
       "5150 är det lättaste vanliga armeringsnätet. Här är vikt, area, överlapp och var nätet räcker – och var du behöver gå upp till 6150.",
     date,
+    updated: "2026-11-18",
     readingMinutes: 5,
     keywords: [
       "armeringsnät 5150",
@@ -714,7 +717,7 @@ const nat: Post[] = [
       "5150 armering",
     ],
     content: [
-      { type: "p", text: "Armeringsnät 5150 har Ø5 mm tråd med 150 mm mellan trådarna i båda riktningarna. Det är det lättaste nätet i det vanliga sortimentet och används där lasterna är små: uterum, altaner, gångar och mindre plattor. Vi levererar [armeringsnät 5150](/produkter/armeringsnat) i lagerformat och som specialnät efter mått." },
+      { type: "p", text: "Armeringsnät 5150 – även kallat [armeringsmatta](/armeringsmatta) – har Ø5 mm tråd med 150 mm mellan trådarna i båda riktningarna. Det är det lättaste nätet i det vanliga sortimentet och används där lasterna är små: uterum, altaner, gångar och mindre plattor. Vi levererar [armeringsnät 5150](/produkter/armeringsnat) i lagerformat och som specialnät efter mått." },
       { type: "p", text: "Hur beteckningarna fungerar och vilka format som finns går vi igenom i [armeringsnät – storlekar och mått](/blogg/armeringsnat-storlekar-och-matt). Här är siffrorna för just 5150." },
 
       { type: "h2", text: "Fakta om armeringsnät 5150" },
@@ -786,6 +789,7 @@ const nat: Post[] = [
     excerpt:
       "6150 är det nät som oftast ritas in i garage- och villaplattor. Här är vikt, area, överlapp och ett räkneexempel för en garageplatta.",
     date,
+    updated: "2026-11-18",
     readingMinutes: 5,
     keywords: [
       "armeringsnät 6150",
@@ -796,7 +800,7 @@ const nat: Post[] = [
       "6150 armering",
     ],
     content: [
-      { type: "p", text: "Armeringsnät 6150 har Ø6 mm tråd med 150 mm rutor och är det nät som oftast förekommer på ritningar för garage, carportar och villaplattor på mark. Det ger ett bra mellanläge mellan vikt och bärförmåga. Vi levererar [armeringsnät 6150](/produkter/armeringsnat) i lagerformat, som fingerskarvnät och som specialnät efter mått." },
+      { type: "p", text: "Armeringsnät 6150 – även kallat [armeringsmatta](/armeringsmatta) – har Ø6 mm tråd med 150 mm rutor och är det nät som oftast förekommer på ritningar för garage, carportar och villaplattor på mark. Det ger ett bra mellanläge mellan vikt och bärförmåga. Vi levererar [armeringsnät 6150](/produkter/armeringsnat) i lagerformat, som fingerskarvnät och som specialnät efter mått." },
 
       { type: "h2", text: "Fakta om armeringsnät 6150" },
       { type: "table", head: ["Egenskap", "Värde"], rows: [
@@ -1285,6 +1289,7 @@ const byglar: Post[] = [
     excerpt:
       "N-bygeln omsluter huvudjärnen i balkar och pelare. Här är hur måtten räknas fram ur tvärsnittet, var byglarna ska sitta tätare och hur du räknar antal och vikt.",
     date,
+    updated: "2026-11-18",
     readingMinutes: 6,
     keywords: [
       "n-bygel",
@@ -1295,7 +1300,7 @@ const byglar: Post[] = [
       "typform n",
     ],
     content: [
-      { type: "p", text: "N-bygeln är en sluten, rektangulär bygel – typform N i bockningslistan. Den omsluter huvudjärnen i balkar och pelare och förankras med krokar i ett av hörnen. Det är den bygel som håller ihop en armeringskorg. Vi tillverkar [N-byglar](/produkter/byglar-och-hakar) i serie efter mått, och hela korgar om du vill." },
+      { type: "p", text: "N-bygeln är en sluten, rektangulär bygel – typform N i bockningslistan. Den omsluter huvudjärnen i balkar och pelare och förankras med krokar i ett av hörnen. Det är den bygel som håller ihop en [armeringskorg](/produkter/armeringskorgar). Vi tillverkar [N-byglar](/produkter/byglar-och-hakar) i serie efter mått, och hela korgar om du vill." },
       { type: "p", text: "Krokregler och bygeltyper i allmänhet finns i [armeringsbyglar](/blogg/armeringsbyglar). Här fokuserar vi på hur du tar fram måtten och antalet." },
 
       { type: "figure", illustration: "rebar-cage", caption: "N-byglar håller ihop längsgående järn till en korg." },

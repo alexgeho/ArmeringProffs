@@ -14,6 +14,7 @@ export const armeringTill1: Post[] = [
     excerpt:
       "Vilken armering en husgrund behöver beror först och främst på grundtypen. Här jämför vi platta på mark, krypgrund, källare, plintar och pålar – och vad som armeras i varje.",
     date,
+    updated: "2026-11-18",
     readingMinutes: 6,
     keywords: [
       "armering husgrund",
@@ -51,7 +52,7 @@ export const armeringTill1: Post[] = [
       { type: "p", text: "På dålig mark eller i sluttning grundläggs huset ibland på plintar eller pålar. Lasten förs då ned punktvis, och armeringen koncentreras till plintar, pålplattor och grundbalkar mellan dem. Här används ofta färdiga korgar. Plintarna beskrivs i [armering till plintar](/blogg/armering-till-plintar)." },
 
       { type: "h2", text: "Mark, tjäle och nivåer styr valet" },
-      { type: "p", text: "Markundersökningen avgör mycket. På fast, plan mark med låg grundvattennivå är platta på mark oftast enklast och billigast. På lera med risk för sättningar kan konstruktören välja förstärkt platta, kompensationsgrundläggning eller pålar. I sluttning blir en souterräng- eller källarlösning naturlig, eftersom huset ändå måste ta upp nivåskillnaden med väggar som håller jord." },
+      { type: "p", text: "Markundersökningen avgör mycket. På fast, plan mark med låg grundvattennivå är platta på mark oftast enklast och billigast. Ligger berget ytligt ställs huset i stället på avjämnat berg eller på plintar, se [grund på berg](/blogg/armering-grund-pa-berg). På lera med risk för sättningar kan konstruktören välja förstärkt platta, kompensationsgrundläggning eller pålar. I sluttning blir en souterräng- eller källarlösning naturlig, eftersom huset ändå måste ta upp nivåskillnaden med väggar som håller jord." },
       { type: "p", text: "Tjäldjupet varierar från några decimeter i södra Sverige till betydligt djupare i Norrland. En isolerad platta skyddas mot tjäle med markisolering runt kanten, medan plintar och grundmurar antingen grundläggs på tjälfritt djup eller isoleras. Det påverkar inte bara schaktdjupet utan också höjden på murar och plintar – och därmed armeringsmängden." },
       { type: "h2", text: "Vad beställs till respektive grundtyp?" },
       { type: "ul", items: [
@@ -112,6 +113,7 @@ export const armeringTill1: Post[] = [
     excerpt:
       "En platta på mark är mer än betong och nät. Här går vi igenom uppbyggnaden lager för lager – från makadam och cellplast till kantförstyvning och armering.",
     date,
+    updated: "2026-11-18",
     readingMinutes: 6,
     keywords: [
       "platta på mark uppbyggnad",
@@ -140,7 +142,7 @@ export const armeringTill1: Post[] = [
       },
 
       { type: "h2", text: "Kantförstyvningen bär väggarna" },
-      { type: "p", text: "Längs ytterväggarna är plattan förtjockad – en kantförstyvning eller kantbalk. Den tar ytterväggarnas last och styvar upp plattans kant. Kantelementet av cellplast fungerar som form, och inuti ligger längsgående kantjärn som hålls på plats av byglar. Hur kantbalken armeras i detalj beskrivs i [armera kantbalk](/blogg/armering-kantbalk)." },
+      { type: "p", text: "Längs ytterväggarna är plattan förtjockad – en kantförstyvning eller kantbalk. Den tar ytterväggarnas last och styvar upp plattans kant. Kantelementet av cellplast fungerar som form, och inuti ligger [kantbalksarmeringen](/produkter/villakorg-kantbalksarmering): längsgående kantjärn som hålls på plats av byglar. Hur kantbalken armeras i detalj beskrivs i [armera kantbalk](/blogg/armering-kantbalk)." },
       { type: "p", text: "Under bärande innerväggar och punktlaster görs ofta en lokal förtjockning med extra järn. Den syns som en ränna i cellplasten och armeras på samma sätt som kanten." },
 
       { type: "h2", text: "Typisk armering i en villaplatta" },
@@ -209,7 +211,7 @@ export const armeringTill1: Post[] = [
     excerpt:
       "Kantbalken bär ytterväggarna. Här går vi igenom de längsgående kantjärnen, hörnen och skarvarna – det som tillsammans med byglarna blir en färdig kantbalksarmering.",
     date,
-    updated: "2026-11-07",
+    updated: "2026-11-18",
     readingMinutes: 5,
     keywords: [
       "armera kantbalk",
@@ -222,7 +224,7 @@ export const armeringTill1: Post[] = [
     ],
     content: [
       { type: "p", text: "Kantbalksarmering är armeringen i den förtjockade kanten runt en platta på mark: längsgående kantjärn i över- och underkant, i villaplattor ofta 2–3 st Ø10–Ø12, byglar Ø8 c/c 200–300 mm och L-formade hörnjärn i varje hörn. Antal, dimension och skarvlängd står på konstruktionsritningen." },
-      { type: "p", text: "En kantbalk är den förtjockade kanten runt en platta på mark. Den armeras med längsgående kantjärn i över- och underkant, sammanhållna av byglar. Byglarnas form och mått har vi gått igenom i [kantbalksbygel](/blogg/kantbalksbygel) – här handlar det om kantjärnen, hörnen och skarvarna. Allt kan levereras färdigt som [kantbalkskorgar och kantbalksarmering](/produkter/villakorg-kantbalksarmering)." },
+      { type: "p", text: "En kantbalk är den förtjockade kanten runt en platta på mark. Den armeras med längsgående kantjärn i över- och underkant, sammanhållna av [kantbalksbyglar](/produkter/byglar-och-hakar). Byglarnas form och mått har vi gått igenom i [kantbalksbygel](/blogg/kantbalksbygel) – här handlar det om kantjärnen, hörnen och skarvarna. Allt kan levereras färdigt som [kantbalkskorgar och kantbalksarmering](/produkter/villakorg-kantbalksarmering)." },
 
       { type: "h2", text: "Typisk kantbalksarmering i en villaplatta" },
       { type: "table",
@@ -253,7 +255,7 @@ export const armeringTill1: Post[] = [
       { type: "p", text: "Kamstål levereras i längder upp till 12 m, så kantjärnen skarvas. Skarvlängden beror på dimension, betongklass och läge – ofta i storleksordningen 40–60 gånger diametern, det vill säga 500–700 mm för Ø12. Förskjut skarvarna så att de inte hamnar i samma snitt. Se [skarvlängd armering](/blogg/skarvlangd-armering) för fler värden." },
 
       { type: "h2", text: "Innerbalkar och förstärkningar" },
-      { type: "p", text: "Bärande innerväggar och punktlaster från pelare eller trappor kräver ofta en inre kantbalk – en ränna i cellplasten som armeras på samma sätt som kanten. Där innerbalken möter ytterkantbalken binds järnen ihop med bockade anslutningsjärn, så att balkarna samverkar. Vid portöppningar och stora fönsterpartier kan kantbalken behöva extra järn." },
+      { type: "p", text: "Bärande innerväggar och punktlaster från pelare eller trappor kräver ofta en inre kantbalk – en ränna i cellplasten som armeras på samma sätt som kanten. Där innerbalken möter ytterkantbalken binds järnen ihop med bockade anslutningsjärn, så att balkarna samverkar. Vid portöppningar och stora fönsterpartier kan kantbalken behöva extra järn, på samma sätt som [runt andra öppningar och hörn](/blogg/armering-runt-oppningar-och-horn)." },
       { type: "p", text: "Ett vanligt fel är att innerbalkarna glöms när armeringen beställs styckvis. Med en komplett bockningslista per position kommer alla delar – ytterbalk, innerbalkar, hörn och anslutningar – i samma leverans." },
       { type: "h2", text: "Fel som syns först när det är för sent" },
       { type: "ul", items: [
@@ -275,7 +277,7 @@ export const armeringTill1: Post[] = [
       ] },
 
       { type: "h2", text: "Avvik inte från ritningen" },
-      { type: "p", text: "Antal och dimension på kantjärn, bygelavstånd, hörnutformning och skarvlängder står på konstruktionsritningen. Kantbalkens storlek styrs av väggarnas last och markens bärighet." },
+      { type: "p", text: "Antal och dimension på kantjärn, bygelavstånd, hörnutformning och skarvlängder står på konstruktionsritningen. Kantbalkens storlek styrs av väggarnas last och markens bärighet. På berg får kantbalken ofta varierande höjd – se [grund på berg](/blogg/armering-grund-pa-berg)." },
 
       { type: "h2", text: "Bocka själv eller köpa färdigt?" },
       { type: "p", text: "Exemplet ovan ger närmare 200 byglar och 16 hörnjärn. Bockade för hand blir måtten ojämna, och en bygel som är några centimeter för stor ger fel täckskikt mot kantelementet. Fabriksbockade byglar är lika från första till sista och kommer märkta per position." },
@@ -312,6 +314,7 @@ export const armeringTill1: Post[] = [
     excerpt:
       "En källarvägg tar jordtryck från ena sidan och väggens last uppifrån. Här är den typiska armeringen – två lager, anslutningsjärn och hörn – och vad du ska tänka på.",
     date,
+    updated: "2026-11-18",
     readingMinutes: 5,
     keywords: [
       "armering källarvägg",
@@ -352,7 +355,7 @@ export const armeringTill1: Post[] = [
       { type: "p", text: "En källarvägg har jord på ena sidan och ett varmt rum på den andra. Betongen ska vara tät, och sprickor kan släppa in vatten. Därför är sprickbegränsningen lika viktig som bärförmågan. Vid högt grundvatten kan konstruktören kräva tätare armering och vattentät betong, och gjutfogen mellan platta och vägg tätas med fogband eller injekteringsslang." },
       { type: "p", text: "Utvändigt skyddas väggen av isolering, dränering och fuktspärr. Det minskar påverkan från jorden men ersätter inte rätt täckskikt. Armeringen ska ha full betongtäckning även om väggen senare isoleras." },
       { type: "h2", text: "Öppningar och genomföringar" },
-      { type: "p", text: "Källarfönster, dörrar och rörgenomföringar bryter armeringen. Runt varje öppning läggs extra järn längs kanterna och diagonaljärn i hörnen. Genomföringar för avlopp, vatten och el ska planeras före gjutning, så att armeringen kan läggas runt dem i stället för att kapas i efterhand." },
+      { type: "p", text: "Källarfönster, dörrar och rörgenomföringar bryter armeringen. Runt varje öppning läggs extra järn längs kanterna och diagonaljärn i hörnen – se [armering runt öppningar och hörn](/blogg/armering-runt-oppningar-och-horn). Genomföringar för avlopp, vatten och el ska planeras före gjutning, så att armeringen kan läggas runt dem i stället för att kapas i efterhand." },
       { type: "h2", text: "Gjutordning: platta först, sedan väggar" },
       { type: "ol", items: [
         "Placera anslutningsjärnen i bottenplattan enligt ritning och gjut plattan.",
@@ -401,6 +404,7 @@ export const armeringTill1: Post[] = [
     excerpt:
       "En platsgjuten betongvägg armeras både för last och för att begränsa sprickor. Här är de typiska lösningarna – och vad som händer vid hörn och öppningar.",
     date,
+    updated: "2026-11-18",
     readingMinutes: 5,
     keywords: [
       "armera betongvägg",
@@ -442,7 +446,7 @@ export const armeringTill1: Post[] = [
       { type: "p", text: "Svetsade nät går snabbt att montera i raka väggar utan många öppningar. Lösa järn är flexiblare när väggen har håltagningar, varierande höjd eller krav på exakt armeringsmängd. Ofta kombineras de: nät i ytan, lösa järn och byglar vid kanter och öppningar. Väggar som håller jord på ena sidan beskrivs i [armering till källarvägg](/blogg/armering-kallarvagg)." },
 
       { type: "h2", text: "Öppningar och hörn" },
-      { type: "p", text: "Runt dörrar och fönster koncentreras spänningarna i hörnen, där sprickor annars startar. Därför läggs extra järn längs öppningens kanter och diagonaljärn i hörnen. I väggslut och hörn binds de två lagren ihop med U-byglar så att armeringen förankras." },
+      { type: "p", text: "Runt dörrar och fönster koncentreras spänningarna i hörnen, där sprickor annars startar. Därför läggs [extra järn längs öppningens kanter och diagonaljärn i hörnen](/blogg/armering-runt-oppningar-och-horn). I väggslut och hörn binds de två lagren ihop med U-byglar så att armeringen förankras." },
 
       { type: "h2", text: "Skarvar och anslutningar" },
       { type: "p", text: "Väggens vertikaler skarvas mot anslutningsjärn från plattan eller bjälklaget under. Skarvlängden beror på dimension och betong, ofta 40–60 gånger diametern. Vid höga väggar eller gjutning i etapper behövs även skarvar i höjdled. Horisontella järn skarvas med förskjutning så att inte alla skarvar hamnar i samma snitt. Se [skarvlängd armering](/blogg/skarvlangd-armering)." },
@@ -495,6 +499,7 @@ export const armeringTill1: Post[] = [
     excerpt:
       "Ett bjälklag spänner fritt mellan stöd och armeras därför annorlunda än en platta på mark. Här är principen – underkant i fält, överkant över stöd – med typiska dimensioner.",
     date,
+    updated: "2026-11-18",
     readingMinutes: 5,
     keywords: [
       "armering bjälklag",
@@ -536,7 +541,7 @@ export const armeringTill1: Post[] = [
       { type: "p", text: "Ett helt platsgjutet bjälklag kräver form och stämp, och all armering läggs på plats. Med plattbärlag (prefabricerade tunna betongplattor med fackverksbalkar) ligger underkantsarmeringen redan ingjuten i bärlaget. På byggplatsen läggs då skarvarmering över bärlagsfogarna, överkantsarmering och eventuella förstärkningar innan pågjutningen." },
 
       { type: "h2", text: "Håltagningar och ingjutningsgods" },
-      { type: "p", text: "Ett bjälklag har ofta schakt för ventilation, trapphål och genomföringar för rör. Varje håltagning bryter armeringen, och den avskurna armeringen ska ersättas med avväxlingsjärn längs hålets kanter och diagonaljärn i hörnen. Stora öppningar som trapphål kan kräva egna balkar. Planera håltagningar med konstruktören innan armeringen beställs." },
+      { type: "p", text: "Ett bjälklag har ofta schakt för ventilation, trapphål och genomföringar för rör. Varje håltagning bryter armeringen, och den avskurna armeringen ska ersättas med avväxlingsjärn längs hålets kanter och diagonaljärn i hörnen, se [armering runt öppningar](/blogg/armering-runt-oppningar-och-horn). Stora öppningar som trapphål kan kräva egna balkar. Planera håltagningar med konstruktören innan armeringen beställs." },
       { type: "h2", text: "Ordning i lagren" },
       { type: "p", text: "I ett bjälklag som spänner i två riktningar ligger underkantens två lager korsvis. Vilken riktning som ligger nederst – och därmed har störst inre hävarm – står på ritningen och följer normalt den kortaste spännvidden. Samma gäller i överkant. Fel ordning minskar bärförmågan, så märkning per position är viktig." },
       { type: "p", text: "Överkantsarmeringen ska hållas på rätt höjd av armeringsstolar eller bockar som klarar gångtrafik under gjutningen. Trampas den ned förlorar bjälklaget kapacitet över stöden." },
@@ -588,6 +593,7 @@ export const armeringTill1: Post[] = [
     excerpt:
       "En balkong kragar ut från huset, och det vänder på allt du vet om plattarmering: huvudarmeringen ligger i överkant. Här är principen och de typiska lösningarna.",
     date,
+    updated: "2026-11-18",
     readingMinutes: 5,
     keywords: [
       "armering balkong",
@@ -629,7 +635,7 @@ export const armeringTill1: Post[] = [
       { type: "p", text: "En balkong utsätts för regn, frost och ibland salt. Täckskiktet väljs efter exponeringsklass och livslängd och är större än i en innerplatta. För lite täckskikt ger rostande armering och avspjälkad betong – den vanligaste skadan på äldre balkonger. Läs mer om [distanser och täckskikt](/blogg/distanser-tackskikt-armering)." },
 
       { type: "h2", text: "Utkragande eller understödd balkong?" },
-      { type: "p", text: "Alla balkonger kragar inte ut. En balkong som bärs av pelare eller av väggar i båda ändar fungerar mer som ett vanligt bjälklag, med huvudarmering i underkant i fält. Är den både understödd och inspänd i fasaden behövs armering i både över- och underkant. Det är alltså upplagsförhållandet som bestämmer var huvudarmeringen ska ligga – därför ska ritningen alltid följas." },
+      { type: "p", text: "Alla balkonger kragar inte ut. En balkong som bärs av pelare eller av väggar i båda ändar fungerar mer som ett vanligt [bjälklag](/blogg/armering-bjalklag), med huvudarmering i underkant i fält. Är den både understödd och inspänd i fasaden behövs armering i både över- och underkant. Det är alltså upplagsförhållandet som bestämmer var huvudarmeringen ska ligga – därför ska ritningen alltid följas." },
       { type: "h2", text: "Räcke, fall och avvattning" },
       { type: "p", text: "Räcken förankras med ingjutningsgods eller i efterhand med expanderande infästning. Ingjutningsgodset ska placeras före gjutningen så att det inte krockar med armeringen. Plattan ska ha fall utåt och droppnäsa i framkant, så att vatten inte rinner in mot fasaden eller längs undersidan. Avvattningen påverkar beständigheten lika mycket som täckskiktet." },
       { type: "h2", text: "Montage steg för steg" },
@@ -971,6 +977,7 @@ export const armeringTill1: Post[] = [
     excerpt:
       "En friggebod behöver ingen avancerad grund, men en gjuten platta ska ändå armeras. Här är en enkel och beprövad lösning för upp till 15 m².",
     date,
+    updated: "2026-11-18",
     readingMinutes: 4,
     keywords: [
       "armering friggebod",
@@ -1014,7 +1021,7 @@ export const armeringTill1: Post[] = [
           ["Najtråd", "en rulle", "–"],
         ],
       },
-      { type: "p", text: "Med nät 5150 (ca 2,06 kg/m²) blir nätet cirka 35 kg. Räkna själv i [armeringskalkylatorn](/armeringskalkylator)." },
+      { type: "p", text: "Med nät 5150 (ca 2,06 kg/m²), som också säljs som [armeringsmatta](/armeringsmatta), blir nätet cirka 35 kg. Räkna själv i [armeringskalkylatorn](/armeringskalkylator)." },
 
       { type: "h2", text: "Platta eller plintar?" },
       { type: "p", text: "Plintar är snabbare och kräver mindre betong, och golvet blir av trä. En gjuten platta ger ett tåligt golv som klarar gräsklippare, verktyg och fukt bättre. Den kräver mer markarbete och ett ordentligt bärlager. Står boden på mark med tjälrisk är markisolering runt plattan ett billigt skydd mot att plattan lyfts och spricker." },
@@ -1345,6 +1352,7 @@ export const armeringTill1: Post[] = [
     excerpt:
       "Ett industrigolv dimensioneras för truckar, pallställ och sprickkrav. Här är principerna för armering av fogfria och fogade golv – och vad som skiljer dem.",
     date,
+    updated: "2026-11-18",
     readingMinutes: 6,
     keywords: [
       "armering industrigolv",
@@ -1390,7 +1398,7 @@ export const armeringTill1: Post[] = [
       { type: "p", text: "Två lager 8150 väger 2 × 5,27 = 10,5 kg/m². På 2 000 m² blir det 21 ton, och med överlapp runt 23 ton – före kantförstärkningar och extra järn vid pelare. Med 10150 i båda lagren blir samma golv cirka 36 ton." },
 
       { type: "h2", text: "Logistik för stora golv" },
-      { type: "p", text: "Leveranserna bör följa gjutordningen, med märkning per etapp och position, så att rätt armering finns på plats till varje gjutning utan att ytan blockeras av material. Specialnät i projekterade format, med anpassade trådavstånd och utstickande trådar vid skarvar, ger färre överlapp och mindre spill än standardnät." },
+      { type: "p", text: "Leveranserna bör följa gjutordningen, med märkning per etapp och position, så att rätt armering finns på plats till varje gjutning utan att ytan blockeras av material – se [armering för byggentreprenörer](/armering-for-byggentreprenorer). Specialnät i projekterade format, med anpassade trådavstånd och utstickande trådar vid skarvar, ger färre överlapp och mindre spill än standardnät." },
       { type: "p", text: "Projekt i Norrland och på orter långt från större städer kräver samma planering. Vi levererar i hela Sverige, och frakten räknas efter mängd och ort." },
       { type: "h2", text: "Från ritning till leverans" },
       { type: "ol", items: [

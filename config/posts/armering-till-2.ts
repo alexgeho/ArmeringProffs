@@ -14,6 +14,7 @@ export const armeringTill2: Post[] = [
     excerpt:
       "En lagerhall har tre armerade delar: fundament under stommen, kantbalkar eller sulor under väggarna och en golvplatta som ska tåla truckar och ställage. Så hänger de ihop.",
     date: D,
+    updated: "2026-11-18",
     readingMinutes: 6,
     keywords: [
       "armering lagerhall",
@@ -62,7 +63,7 @@ export const armeringTill2: Post[] = [
       { type: "p", text: "Exemplet visar hur snabbt valet av dimension slår igenom på ett stort golv. Därför lönar det sig att låta konstruktören jämföra nät, två lager och fiber innan armeringen beställs."  },
 
       { type: "h2", text: "Leverans i etapper"  },
-      { type: "p", text: "På en hallbyggnad gjuts fundamenten först, sedan kantbalkarna och sist golvet – ofta med veckors mellanrum. Därför är det praktiskt att få armeringen levererad i samma ordning, sorterad och märkt per etapp. Det minskar upplag på bygget och sparar tid vid montaget."  },
+      { type: "p", text: "På en hallbyggnad gjuts fundamenten först, sedan kantbalkarna och sist golvet – ofta med veckors mellanrum. Därför är det praktiskt att få armeringen levererad i samma ordning, sorterad och märkt per etapp – så arbetar vi med [byggentreprenörer](/armering-for-byggentreprenorer). Det minskar upplag på bygget och sparar tid vid montaget."  },
 
       { type: "h2", text: "Skicka underlaget – få offert per etapp" },
       { type: "ul", items: [
@@ -157,6 +158,7 @@ export const armeringTill2: Post[] = [
     excerpt:
       "En gödselvårdsanläggning ska vara tät i decennier. Armeringen håller sprickorna små – så armeras en gödselplatta och en platsgjuten gödselbrunn.",
     date: D,
+    updated: "2026-11-18",
     readingMinutes: 6,
     keywords: [
       "armering gödselplatta",
@@ -168,7 +170,7 @@ export const armeringTill2: Post[] = [
     ],
     content: [
       { type: "p", text: "En gödselplatta armeras med nät i plattan och bockade järn i kantmurarna. En rund gödselbrunn armeras med horisontella ringar som tar gödseltrycket, tätast längst ner. Båda ska vara täta i decennier, och det är armeringen som håller sprickorna små nog."  },
-      { type: "p", text: "Ringar med rätt radie är svåra att bocka på plats. Vi tillverkar dem efter ritningen, tillsammans med nät och startjärn, och levererar till lantbrukare och markentreprenörer som [armeringsleverantör](/armeringsleverantor)."  },
+      { type: "p", text: "Ringar med rätt radie är svåra att bocka på plats. Vi tillverkar dem efter ritningen, tillsammans med nät och startjärn, och levererar till lantbrukare och [markentreprenörer](/armering-for-markentreprenorer) som [armeringsleverantör](/armeringsleverantor)."  },
 
       { type: "h2", text: "Gödselplatta – för fastgödsel"  },
       { type: "p", text: "En gödselplatta är en platta på mark med kantmurar på tre sidor. Plattan belastas av gödselns vikt och av lastmaskiner som kör upp på den. Kantmurarna tar sidotryck från gödseln och maskinens skopa."  },
@@ -300,6 +302,7 @@ export const armeringTill2: Post[] = [
     excerpt:
       "En pelare bär tryck, men armeringen behövs ändå – för moment, knäckning och sprickor. Här är reglerna för längsjärn och byglar och hur en pelarkorg byggs.",
     date: D,
+    updated: "2026-11-18",
     readingMinutes: 6,
     keywords: [
       "armering pelare",
@@ -311,12 +314,12 @@ export const armeringTill2: Post[] = [
     ],
     content: [
       { type: "p", text: "En betongpelare bär främst tryck, och betong är stark i tryck. Ändå armeras alla bärande pelare. Längsjärnen tar moment från snedbelastning och knäckning, ökar bärförmågan och begränsar sprickor. Byglarna håller längsjärnen på plats så att de inte trycks ut åt sidan när pelaren belastas."  },
-      { type: "p", text: "Pelarens armering byggs nästan alltid som en korg av längsjärn och byglar. Vi tillverkar färdiga [pelar- och balkkorgar](/produkter/pelar-och-balkkorgar) efter ritning, så att korgen bara behöver ställas på plats och anslutas till startjärnen."  },
+      { type: "p", text: "Pelarens armering byggs nästan alltid som en [armeringskorg](/produkter/armeringskorgar) av längsjärn och byglar. Vi tillverkar färdiga [pelar- och balkkorgar](/produkter/pelar-och-balkkorgar) efter ritning, så att korgen bara behöver ställas på plats och anslutas till startjärnen."  },
 
       { type: "figure", illustration: "rebar-cage", caption: "Pelarkorg: längsjärn i hörnen och längs sidorna, sammanhållna av byglar."  },
 
       { type: "h2", text: "Grundregler enligt Eurokod 2"  },
-      { type: "p", text: "Eurokod 2 (SS-EN 1992-1-1, avsnitt 9.5) ger minimiregler för pelare. Tabellen visar de rekommenderade värdena – den svenska nationella bilagan och konstruktörens beräkning gäller alltid i det enskilda fallet."  },
+      { type: "p", text: "[Eurokod 2](/blogg/eurokod-2-armering) (SS-EN 1992-1-1, avsnitt 9.5) ger minimiregler för pelare. Tabellen visar de rekommenderade värdena – den svenska nationella bilagan och konstruktörens beräkning gäller alltid i det enskilda fallet."  },
       { type: "table", head: ["Regel", "Rekommenderat värde"], rows: [
         ["Minsta diameter på längsjärn", "Ø8 mm (i praktiken ofta Ø12–Ø25)"],
         ["Minsta antal längsjärn", "Minst ett i varje hörn (4 i rektangulär pelare), minst 4 i cirkulär"],
@@ -342,7 +345,7 @@ export const armeringTill2: Post[] = [
       { type: "p", text: "Runda pelare armeras med längsjärn i en cirkel och spiralbygel eller cirkulära byglar. Spiralen kan tillverkas i ett stycke för hela pelarlängden."  },
 
       { type: "h2", text: "Varför beställa färdiga pelarkorgar?"  },
-      { type: "p", text: "Att binda korgar på plats tar tid och det är lätt att bygelavstånd eller täckskikt blir fel. En prefabricerad korg är tillverkad efter ritningen, kontrollerad och märkt med position. Den lyfts på plats i formen och ansluts till startjärnen. Mer om olika typer av korgar finns i guiden om [armeringskorgar](/blogg/armeringskorgar-palarmering)."  },
+      { type: "p", text: "Att binda korgar på plats tar tid och det är lätt att bygelavstånd eller täckskikt blir fel. En [prefabricerad korg](/prefab-armering) är tillverkad efter ritningen, kontrollerad och märkt med position. Den lyfts på plats i formen och ansluts till startjärnen. Mer om olika typer av korgar finns i guiden om [armeringskorgar](/blogg/armeringskorgar-palarmering)."  },
 
       { type: "h2", text: "Vanliga fel" },
       { type: "ul", items: ["Byglar som inte är slutna eller saknar förankrade krokar.", "För få byglar nära bjälklaget, där Eurokod 2 kräver förtätning.", "Startjärn i fel läge – korgen kan inte skarvas utan att järnen bockas om på plats.", "Täckskikt som blir för litet när korgen trycks mot formen."] },
@@ -377,6 +380,7 @@ export const armeringTill2: Post[] = [
     excerpt:
       "En balk böjs av lasten. Underkantsjärnen tar draget, byglarna tar tvärkraften. Här är minimireglerna och hur en balkkorg är uppbyggd.",
     date: D,
+    updated: "2026-11-18",
     readingMinutes: 6,
     keywords: [
       "armering balk",
@@ -388,7 +392,7 @@ export const armeringTill2: Post[] = [
     ],
     content: [
       { type: "p", text: "En betongbalk som bär last böjs nedåt. Överkanten trycks ihop och underkanten dras isär – och betong klarar nästan inget drag. Därför ligger huvudarmeringen i underkant av en fritt upplagd balk. Nära upplagen är det tvärkraften som dominerar, och den tas upp av byglar. En kontinuerlig balk över flera stöd har dessutom drag i överkant över stöden."  },
-      { type: "p", text: "Armeringen byggs som en korg av längsjärn och byglar. Vi tillverkar färdiga [pelar- och balkkorgar](/produkter/pelar-och-balkkorgar) efter ritning – från korta överliggare till långa balkar i flera delar."  },
+      { type: "p", text: "Armeringen byggs som en [armeringskorg](/produkter/armeringskorgar) av längsjärn och byglar. Vi tillverkar färdiga [pelar- och balkkorgar](/produkter/pelar-och-balkkorgar) efter ritning – från korta överliggare till långa balkar i flera delar."  },
 
       { type: "h2", text: "Delarna i en balkkorg"  },
       { type: "table", head: ["Del", "Uppgift", "Vanlig utformning"], rows: [
@@ -401,7 +405,7 @@ export const armeringTill2: Post[] = [
       { type: "figure", illustration: "rebar-cage", caption: "Balkkorg: längsjärn i över- och underkant, byglar runt om."  },
 
       { type: "h2", text: "Minimiregler enligt Eurokod 2"  },
-      { type: "p", text: "SS-EN 1992-1-1 avsnitt 9.2 ger minimiregler för balkar. Värdena nedan är de rekommenderade – nationell bilaga och konstruktörens beräkning gäller."  },
+      { type: "p", text: "SS-EN 1992-1-1 ([Eurokod 2](/blogg/eurokod-2-armering)) avsnitt 9.2 ger minimiregler för balkar. Värdena nedan är de rekommenderade – nationell bilaga och konstruktörens beräkning gäller."  },
       { type: "ul", items: [
         "Minsta dragarmering: As,min = 0,26 · fctm/fyk · b · d, men minst 0,0013 · b · d.",
         "Största armering: 0,04 · Ac utanför skarvar.",
@@ -454,6 +458,7 @@ export const armeringTill2: Post[] = [
     excerpt:
       "En hissgrop är en liten tät betonglåda under grundplattan. Den ska tåla jord- och vattentryck och hissens buffertlaster. Så armeras den.",
     date: D,
+    updated: "2026-11-18",
     readingMinutes: 5,
     keywords: [
       "armering hissgrop",
@@ -464,7 +469,7 @@ export const armeringTill2: Post[] = [
     ],
     content: [
       { type: "p", text: "En hissgrop armeras som en liten tät låda: bottenplatta i två lager, dubbelsidigt armerade väggar, startjärn från botten och hörnjärn som binder ihop väggarna. Den ska tåla jord- och grundvattentryck och hissens buffertlaster – och den måste vara torr."  },
-      { type: "p", text: "Armeringen är tät och full av hörn och hakar – ett typiskt fall där prefabricerad armering sparar mycket tid. Vi tillverkar armering till hissgropar som färdiga korgar och bockade järn inom [pelar- och balkkorgar](/produkter/pelar-och-balkkorgar)."  },
+      { type: "p", text: "Armeringen är tät och full av hörn och hakar – ett typiskt fall där [prefabricerad armering](/prefab-armering) sparar mycket tid. Vi tillverkar armering till hissgropar som färdiga korgar och bockade järn inom [pelar- och balkkorgar](/produkter/pelar-och-balkkorgar)."  },
 
       { type: "h2", text: "Typisk uppbyggnad"  },
       { type: "table", head: ["Del", "Typiskt mått", "Typisk armering"], rows: [
@@ -531,6 +536,7 @@ export const armeringTill2: Post[] = [
     excerpt:
       "Ett stolpfundament ska hålla stolpen stilla i vind och tjäle. En liten korg med fyra järn och byglar räcker ofta – men det beror på lasten.",
     date: D,
+    updated: "2026-11-18",
     readingMinutes: 5,
     keywords: [
       "armering stolpfundament",
@@ -542,7 +548,7 @@ export const armeringTill2: Post[] = [
     ],
     content: [
       { type: "p", text: "Ett stolpfundament är ett litet punktfundament som bär en enskild stolpe – till en carport, ett skärmtak, en pergola, ett plank, en grind eller en belysningsstolpe. Till skillnad från en plint under en byggnad tar stolpfundamentet ofta mer moment än vertikal last: vinden vill välta stolpen, och fundamentet ska hålla emot."  },
-      { type: "p", text: "Har du många fundament är färdiga [plintkorgar](/produkter/plintkorgar) det snabbaste sättet att få rätt armering i varje gjutning. Plintar under hus och attefallshus beskrivs i guiden om [armering till plintar](/blogg/armering-till-plintar)."  },
+      { type: "p", text: "Har du många fundament är färdiga [plintkorgar](/produkter/plintkorgar) det snabbaste sättet att få rätt armering i varje gjutning – så levererar vi till [markentreprenörer](/armering-for-markentreprenorer), med korgarna märkta per fundamenttyp. Plintar under hus och attefallshus beskrivs i guiden om [armering till plintar](/blogg/armering-till-plintar)."  },
 
       { type: "h2", text: "Typlösningar"  },
       { type: "table", head: ["Användning", "Typiskt fundament", "Typisk armering"], rows: [
@@ -807,6 +813,7 @@ export const armeringTill2: Post[] = [
     excerpt:
       "Pressar, kompressorer, sågverk och kvarnar står på massiva fundament som ska tåla vibrationer i decennier. Så är armeringen uppbyggd.",
     date: D,
+    updated: "2026-11-18",
     readingMinutes: 6,
     keywords: [
       "armering maskinfundament",
@@ -832,7 +839,7 @@ export const armeringTill2: Post[] = [
       { type: "p", text: "Maskinleverantören anger statiska och dynamiska laster, varvtal, bultplan och utsparingar. Konstruktören dimensionerar fundamentets massa och styvhet så att resonans undviks. För armeringen betyder det att bultgrupper, ingjutningsgods och kabelrännor ska vara låsta innan armeringsritningen görs – en flyttad bult kan kräva omritning."  },
 
       { type: "h2", text: "Isolerat från golvet"  },
-      { type: "p", text: "Fundamentet gjuts normalt separat från golvplattan, med en fog runt om, så att vibrationerna inte sprids. Armeringen ska därför inte gå igenom fogen. Fundamentet kan stå direkt på mark, på berg eller på pålar – med pålar kombineras armeringen med pålplintar, se [platta på pålar](/blogg/armering-platta-pa-palar)."  },
+      { type: "p", text: "Fundamentet gjuts normalt separat från golvplattan, med en fog runt om, så att vibrationerna inte sprids. Armeringen ska därför inte gå igenom fogen. Fundamentet kan stå direkt på mark, [på berg](/blogg/armering-grund-pa-berg) eller på pålar – med pålar kombineras armeringen med pålplintar, se [platta på pålar](/blogg/armering-platta-pa-palar)."  },
 
       { type: "h2", text: "Massiva gjutningar och temperatur"  },
       { type: "p", text: "Stora fundament utvecklar mycket värme när betongen härdar. Kärnan blir varm medan ytan svalnar, och skillnaden kan ge sprickor. Det motverkas med betongsammansättning, gjutetapper och ytarmering som begränsar sprickbredden. Därför har även fundament som statiskt inte behöver mycket armering en ordentlig ytarmering på alla sidor."  },
@@ -874,6 +881,7 @@ export const armeringTill2: Post[] = [
     excerpt:
       "Ett vindkraftsfundament innehåller tiotals ton armering, ofta grova dimensioner och tät armering kring bultkorgen. Så är det uppbyggt – och vad som krävs av leveransen.",
     date: D,
+    updated: "2026-11-18",
     readingMinutes: 6,
     keywords: [
       "armering vindkraftsfundament",
@@ -895,7 +903,7 @@ export const armeringTill2: Post[] = [
       ], caption: "Översikt. Val av fundamenttyp och armering görs av konstruktören utifrån turbin och geoteknik." },
 
       { type: "h2", text: "Radial- och ringarmering"  },
-      { type: "p", text: "Ett runt eller mångkantigt gravitationsfundament armeras ofta med radiella järn som går från centrum ut mot kanten och ringar eller polygonala järn runt om. I över- och underkant ligger var sitt sådant system. Däremellan sitter skjuvarmering i form av byglar eller hakar. Dimensionerna är ofta grova, Ø20–Ø32, och skarvarna många."  },
+      { type: "p", text: "Ett runt eller mångkantigt gravitationsfundament armeras ofta med radiella järn som går från centrum ut mot kanten och ringar eller polygonala järn runt om. I över- och underkant ligger var sitt sådant system. Däremellan sitter skjuvarmering i form av byglar eller [hakar](/blogg/s-hake-kramla-armering). Dimensionerna är ofta grova, Ø20–Ø32, och skarvarna många."  },
       { type: "ul", items: [
         "Underkant: radial- och ringjärn som tar böjmoment mot marken.",
         "Överkant: motsvarande system, ofta något klenare.",
@@ -1021,6 +1029,7 @@ export const armeringTill2: Post[] = [
     excerpt:
       "På lös lera bärs huset av pålar i stället för av marken. Plattan blir då ett bjälklag över pålarna – och armeras därefter.",
     date: D,
+    updated: "2026-11-18",
     readingMinutes: 6,
     keywords: [
       "platta på pålar",
@@ -1031,8 +1040,8 @@ export const armeringTill2: Post[] = [
       "pålgrundläggning armering",
     ],
     content: [
-      { type: "p", text: "En platta på pålar armeras som ett bjälklag: i både över- och underkant, med extra överkantsjärn över pålhuvudena och ofta pålplintar eller grundbalkar. Skälet är att plattan inte längre bärs jämnt av marken utan spänner mellan pålarna, som slås eller borras ner genom lös lera till fastare lager."  },
-      { type: "p", text: "Armeringen över pålarna – pålplintar, pålkorgar och förstärkningar – är en specialitet i sig. Vi tillverkar den som [pålarmering](/produkter/palarmering) efter konstruktörens ritning, märkt per påle och position."  },
+      { type: "p", text: "En platta på pålar armeras som ett [bjälklag](/blogg/armering-bjalklag): i både över- och underkant, med extra överkantsjärn över pålhuvudena och ofta pålplintar eller grundbalkar. Skälet är att plattan inte längre bärs jämnt av marken utan spänner mellan pålarna, som slås eller borras ner genom lös lera till fastare lager."  },
+      { type: "p", text: "Armeringen över pålarna – pålplintar, pålkorgar och andra [armeringskorgar](/produkter/armeringskorgar) – är en specialitet i sig. Vi tillverkar den som [pålarmering](/produkter/palarmering) efter konstruktörens ritning, märkt per påle och position."  },
 
       { type: "h2", text: "Tre sätt att bygga plattan"  },
       { type: "table", head: ["Utförande", "Hur lasten går", "Huvudarmering"], rows: [

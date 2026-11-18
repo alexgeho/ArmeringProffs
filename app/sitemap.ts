@@ -29,6 +29,20 @@ const UPDATED = {
   tools: "2026-10-14", // /viktkalkylator, /natkalkylator, /forankringslangd (components/SmaKalkylatorer.tsx)
 } as const;
 
+/**
+ * Enskilda sidor som ändrats senare än sin grupp (sökväg utan avslutande "/").
+ * Ta bort raden när gruppens datum ovan har passerat sidans datum.
+ */
+const CHANGED: Record<string, string> = {
+  // SEO 2026-11-18: tre produktsidor utbyggda (mått, beställning, FAQ) + nya internlänkar.
+  "/produkter/byglar-och-hakar": "2026-11-18",
+  "/produkter/armeringskorgar": "2026-11-18",
+  "/produkter/villakorg-kantbalksarmering": "2026-11-18",
+  "/produkter/klippt-och-bockad": "2026-11-18",
+  "/prefab-armering": "2026-11-18",
+  "/armering-for-byggentreprenorer": "2026-11-18",
+};
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = site.url;
   // trailingSlash: true i next.config → kanoniska URL:er slutar med "/". Håll
@@ -56,7 +70,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const productPages: MetadataRoute.Sitemap = products.map((p) => ({
     url: u(`/produkter/${p.slug}`),
-    lastModified: UPDATED.products,
+    lastModified: CHANGED[`/produkter/${p.slug}`] ?? UPDATED.products,
     changeFrequency: "monthly",
     priority: 0.8,
   }));
@@ -84,7 +98,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const landingPages: MetadataRoute.Sitemap = landings.map((l) => ({
     url: u(`/${l.slug}`),
-    lastModified: UPDATED.products,
+    lastModified: CHANGED[`/${l.slug}`] ?? UPDATED.products,
     changeFrequency: "monthly",
     priority: 0.8,
   }));
