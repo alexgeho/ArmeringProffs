@@ -1,5 +1,7 @@
 # Armeringsproffs — статус проекта (handoff)
 
+> ## 🟢 2026-11-19 — 3 товарные страницы добиты до 1 200–1 500 слов (план SEO 2026-11-18, строка 7): byglar-och-hakar 1266, armeringskorgar 1241, villakorg-kantbalksarmering 1234 (h1+intro+body+FAQ по собранному HTML). Добавлено: таблица Ø/вес/dorn (byglar), таблица «что читаем из ритнинга» (korgar), строки в таблицу kantbalk, расчётные примеры (вес серии, кг/м balkkorg, L-образная плита), «från ritning», leveranstid/etapper (только опубликованные формулировки — срок в offert), приёмка/контроль, FAQ по 10 (FAQPage). Схемы Recraft: 3 попытки, все отклонены (byglar → конские стремена, korg → путаная сетка, kantbalk → корзина), на сайт не ставились.
+>
 > ## 🟢 2026-11-02 — блоки «текст + картинка» → компонент MediaSplit (фото на всю высоту), правило в DESIGN-SYSTEM.md. **HANDOFF + NÄSTA → next-level-worklog.md (верх).**
 >
 > ## 🟢 2026-10-14 — формы на продуктах, mid-CTA в блоге, CTR-titles, Validate fix ✅. **HANDOFF + NÄSTA → next-level-worklog.md (верх).**

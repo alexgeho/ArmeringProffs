@@ -187,12 +187,31 @@ const baseProducts: Product[] = [
         },
       },
       {
+        heading: "Räkneexempel: vikt per meter balkkorg",
+        text: "Så räknar vi vikten ur ritningen. En balk på 300 × 500 mm med fyra längsjärn Ø16 och slutna byglar Ø8 c/c 200 mm, täckskikt 30 mm. Längsjärnen väger 4 × 1,58 = 6,32 kg/m. Bygeln blir 240 × 440 mm, och med krokar är klipplängden ungefär 1,5 m, alltså cirka 0,59 kg per bygel. Fem byglar per meter ger knappt 3 kg/m. Korgen väger alltså drygt 9 kg/m, och en sex meter lång korg runt 56 kg plus eventuella skarvjärn. Vikten per korg står i offerten.",
+      },
+      {
         heading: "Därför lönar sig prefab",
         text: "Korgen byggs vid ett bord i fabrik i stället för i formen. Bygelavståndet blir jämnt, täckskiktet lättare att hålla och arbetet på bygget kortare. Vinsten är störst där samma korg upprepas många gånger eller där armeringen är tät. Exempel finns i guiderna [armering till garage](/blogg/armering-till-garage) och [armera en stödmur](/blogg/armera-stodmur). Korgarna är en del av vår [prefab armering](/prefab-armering).",
       },
       {
         heading: "Svetsad eller najad",
-        text: "Svetsade korgar är styva och klarar lyft och transport bättre. Svetsning av armering görs enligt SS-EN ISO 17660, men konstruktören avgör om korgen får svetsas. Annars najas den. Vi följer ritningen. Hur vi arbetar med den som ritar står under [armering för konstruktörer](/armering-for-konstruktorer).",
+        text: "Svetsade korgar är styva och klarar lyft och transport bättre. Svetsning av armering görs enligt SS-EN ISO 17660, men konstruktören avgör om korgen får svetsas. Annars najas den. Vi följer ritningen. En najad korg är mjukare och kan behöva extra stag eller fler lyftpunkter för att behålla formen när den lyfts. Skriv därför i förfrågan hur korgarna ska lyftas, med kran eller för hand. Hur vi arbetar med den som ritar står under [armering för konstruktörer](/armering-for-konstruktorer).",
+      },
+      {
+        heading: "Det här läser vi ur ritningen",
+        text: "Ur konstruktionsritningen tar vi fram en position per korgtyp. Tabellen visar vilka uppgifter som behövs. Står något inte på ritningen frågar vi dig eller konstruktören, och du godkänner specifikationen innan vi startar.",
+        table: {
+          head: ["Korg", "Uppgifter vi behöver"],
+          rows: [
+            ["Pelarkorg", "Tvärsnitt, längd, längsjärn (antal och Ø), byglar och tätare zoner, skarvjärn uppåt och nedåt"],
+            ["Balkkorg", "Tvärsnitt, längd med upplag, över- och underkantsjärn, byglar per zon, eventuella bockade järn"],
+            ["Pålkorg", "Diameter, längd, antal längsjärn, spiralens stigning eller bygelavstånd, förlängning upp i plinten"],
+            ["Plintkorg", "Plintens mått, nät eller järn i botten, startjärn till pelaren med längd och läge"],
+            ["Alla korgar", "Täckskikt, antal korgar av varje typ, om svetsning är tillåten"],
+          ],
+          caption: "Det som anges på konstruktionsritningen gäller.",
+        },
       },
       {
         heading: "Det här behöver vi i förfrågan",
@@ -207,6 +226,14 @@ const baseProducts: Product[] = [
       {
         heading: "Märkning, lyft och transport",
         text: "Varje korg märks med sin position, så att den hamnar i rätt form. Lösa positioner till samma element, till exempel [byglar och hakar](/produkter/byglar-och-hakar), buntas och märks på samma sätt och kommer i samma leverans. På bygget lyfts korgen på plats med kran, och långa korgar lyfts i flera punkter. Mycket långa korgar kan delas och skarvas på plats enligt ritningen. Ange längden i förfrågan. Vi kan också montera korgarna, se [armeringsmontage](/tjanster/armeringsmontage).",
+      },
+      {
+        heading: "Leveranstid och etapper",
+        text: "Leveranstiden beror på antal korgar, hur många olika typer de är och leveransort, och den anges i offerten. Skriv önskad leveransvecka redan i förfrågan. Korgar till pelare för flera våningar eller till flera gjutetapper kan delas upp i flera leveranser enligt överenskommelse, så att arbetsplatsen inte fylls med korgar som ska gjutas in först om några veckor. Lösa byglar, skarvjärn och distanser till samma element kommer i samma leverans som korgarna.",
+      },
+      {
+        heading: "Kontroll före gjutning",
+        text: "Jämför märkningen med ritningen när korgen står i formen. Kontrollera att distanserna ger det täckskikt som ritningen anger, att skarvjärn och startjärn sticker ut åt rätt håll och att korgen inte har deformerats vid lyftet. Lyft långa korgar i flera punkter och lägg dem på underlag på bygget. Är något fel hör du av dig innan gjutningen, inte efter.",
       },
       {
         heading: "Guider om armeringskorgar",
@@ -242,6 +269,10 @@ const baseProducts: Product[] = [
       { q: "Vad kostar en armeringskorg?", a: "Det beror på mängden stål, antal byglar, om korgen svetsas eller najas och hur många likadana korgar som beställs. Skicka ritningen så får du pris och leveranstid i offerten." },
       { q: "Kan ni tillverka armeringskorgar utan bockningslista?", a: "Ja. Konstruktionsritningen räcker som underlag." },
       { q: "Levererar ni armeringskorgar i hela Sverige?", a: "Ja. Frakt och leveranstid räknas efter mängd och ort och anges i offerten." },
+      { q: "Hur lång är leveranstiden för armeringskorgar?", a: "Den beror på antal korgar, antal typer och leveransort och anges i offerten. Skriv önskad leveransvecka i förfrågan." },
+      { q: "Kan korgarna levereras i etapper?", a: "Ja. Större projekt kan få korgarna per etapp, våningsplan eller element enligt överenskommelse." },
+      { q: "Kan ni montera pelarskor och konsoler i korgen?", a: "Ja, om det står på ritningen. Ange fabrikat och läge i förfrågan, så kommer korgen färdig med detaljerna på plats." },
+      { q: "Hur mycket väger en armeringskorg?", a: "Det räknas ur ritningen. En balkkorg 300 × 500 mm med fyra Ø16 och byglar Ø8 c/c 200 väger drygt 9 kg per meter. Vikten per korg står i offerten." },
     ],
     featured: true,
   },
@@ -648,10 +679,29 @@ const baseProducts: Product[] = [
       {
         heading: "Dimensioner och mått",
         text: "Vi bockar byglar i kamstål B500B, vanligen Ø6–Ø12 mm och i grövre konstruktioner även Ø16. Bygelns yttermått är tvärsnittets mått minus täckskiktet på varje sida. Räkneexempel: en kantbalk som är 300 mm bred och 400 mm hög får med 30 mm täckskikt en bygel på 240 × 340 mm, med 50 mm en bygel på 200 × 300 mm. Täckskiktet står på ritningen. Krokar och bockningsradie följer ritningen och [Eurokod 2](/blogg/eurokod-2-armering).",
+        table: {
+          head: ["Dimension", "Vikt kg/m", "Minsta dorndiameter", "Vanlig användning"],
+          rows: [
+            ["Ø6", "0,222", "24 mm", "Lätta byglar och hakar i plattor och mindre element"],
+            ["Ø8", "0,395", "32 mm", "Kantbalksbyglar, balk- och pelarbyglar i småhus"],
+            ["Ø10", "0,617", "40 mm", "Byglar i balkar, pelare och väggar"],
+            ["Ø12", "0,888", "48 mm", "Kraftigare balkar, fundament och väggar"],
+            ["Ø16", "1,58", "64 mm", "Grova konstruktioner, enligt ritning"],
+          ],
+          caption: "B500B. Minsta dorndiameter 4 × Ø för Ø ≤ 16 mm enligt SS-EN 1992-1-1, tabell 8.1N. Ritningen kan kräva större dorn.",
+        },
       },
       {
         heading: "Så räknar du antal byglar",
         text: "Antal = längd / c/c-avstånd + 1. En kantbalk på 40 m med byglar c/c 300 kräver 40 000 / 300 ≈ 133 mellanrum, alltså 134 byglar. Lägg till extra byglar där ritningen anger tätare avstånd, till exempel vid hörn och stöd.",
+      },
+      {
+        heading: "Från ritning till bygellista",
+        text: "Har du ingen färdig lista går vi igenom ritningen position för position. För varje bygeltyp läser vi ut form, dimension, mått, antal och var avståndet är tätare, till exempel vid upplag, hörn och skarvar. Vi stämmer av bygelns mått mot tvärsnittet och täckskiktet. Saknas ett mått eller går två uppgifter isär frågar vi innan något bockas. Resultatet blir en bygellista med positionsnummer, och du eller din konstruktör godkänner den innan vi startar.",
+      },
+      {
+        heading: "Räkneexempel: vikt och pris per serie",
+        text: "Byglar prissätts i första hand efter vikt och antal bockningar. Vikten är klipplängd × antal × vikt per meter. Med de 134 byglarna från exemplet ovan, Ø8 och en klipplängd på 1,3 m blir det 134 × 1,3 m × 0,395 kg/m ≈ 69 kg. Klipplängden är bygelns omkrets plus krokarna, minus ett litet avdrag för varje bock. Vi räknar den åt dig ur listan. Ø10 väger drygt 50 % mer per meter än Ø8, så dimensionen på ritningen märks direkt i offerten.",
       },
       {
         heading: "Det här anger du i förfrågan",
@@ -672,6 +722,14 @@ const baseProducts: Product[] = [
       {
         heading: "Märkning och buntning",
         text: "Varje serie buntas för sig och märks med sitt positionsnummer från listan, så att montören ser direkt var bunten ska ligga. Buntarna lastas på pall. Beställer du också [klippt och bockad armering](/produkter/klippt-och-bockad), nät eller distanser kommer allt i samma leverans.",
+      },
+      {
+        heading: "Leveranstid och planering",
+        text: "Leveranstiden beror på mängd, antal positioner och leveransort och står i offerten. Skriv önskad leveransvecka redan i förfrågan, så planerar vi tillverkningen efter den. Byglar till flera gjutetapper kan delas upp i flera leveranser enligt överenskommelse, så att varje etapps buntar kommer när de behövs och inte ligger i vägen på bygget. Till elementfabriker levererar vi på pall, märkt per element eller serie.",
+      },
+      {
+        heading: "När leveransen kommer",
+        text: "Jämför etiketterna med bygellistan och mät några byglar i varje bunt innan de bärs ut. Förvara buntarna på underlag, inte direkt på marken, och bryt dem först när de ska monteras, så att positionerna inte blandas. Ser något fel ut hör du av dig innan byglarna najas in.",
       },
       {
         heading: "Hakar och kramlor",
@@ -710,6 +768,9 @@ const baseProducts: Product[] = [
       { q: "Hur anger jag formen på en bygel?", a: "Enklast med typformens bokstavskod, till exempel N för sluten bygel och C för U-bygel, och måtten a, b, c. Alla koder finns i vår översikt över typformer." },
       { q: "Anges byglarnas mått som ytter- eller innermått?", a: "Som yttermått i millimeter. Använder ritningen innermått skriver du det i förfrågan." },
       { q: "Vad är skillnaden mellan en U-bygel och en sluten bygel?", a: "En U-bygel (typform C) är öppen: två ben och en rygg. En sluten bygel (typform N) omsluter armeringen helt och förankras med krokar i ett hörn." },
+      { q: "Hur lång är leveranstiden för armeringsbyglar?", a: "Den beror på mängd, antal positioner och leveransort och anges i offerten. Skriv önskad leveransvecka i förfrågan, så planerar vi efter den." },
+      { q: "Vilken dorndiameter bockar ni byglarna med?", a: "Minst 4 × Ø för dimensioner upp till Ø16 enligt SS-EN 1992-1-1, alltså 32 mm för Ø8. Anger ritningen en större dorn följer vi den." },
+      { q: "Kan ni ta fram bygellistan åt mig?", a: "Ja. Skicka ritningen, så läser vi ut alla bygeltyper och antal. Du eller din konstruktör godkänner listan innan vi börjar bocka." },
       { q: "Kan ni tillverka kantbalksbyglar efter vårt kantelement?", a: "Ja. Skicka kantelementets invändiga mått eller ritningen, så bockar vi byglarna efter dem." },
       { q: "Hur levereras armeringsbyglarna?", a: "Buntade och märkta på pall, i hela Sverige. Frakt och leveranstid anges i offerten." },
     ],

@@ -98,6 +98,9 @@ export const extraProducts: Product[] = [
             ["Kantjärn i över- och underkant", "2–3 st Ø10–Ø12"],
             ["Byglar", "Ø8, c/c 200–300 mm"],
             ["Hörnjärn", "L-formade, samma dimension som kantjärnen"],
+            ["Skarvjärn mellan korgarna", "Samma dimension som kantjärnen, längd enligt ritningen"],
+            ["Innerbalk under bärande vägg", "Egen position, ofta samma uppbyggnad som kantbalken"],
+            ["Distanser", "Under underkantsjärnen och mot formen, höjd efter täckskiktet"],
           ],
           caption: "Vanliga exempel för småhus. Dimension, antal och avstånd enligt konstruktionsritningen.",
         },
@@ -105,6 +108,10 @@ export const extraProducts: Product[] = [
       {
         heading: "Hörn och skarvar – där det oftast blir fel",
         text: "Längsjärnen får inte bara mötas i hörnet. De ska föras runt med hörnkorgar eller L-formade hörnjärn och skarvas mot de raka korgarna med skarvjärn. Skarvlängden följer ritningen, se [skarvlängd armering](/blogg/skarvlangd-armering). Indragna hörn, utskjutande partier och innerbalkar under bärande väggar får egna positioner. Mer om förstärkningar står i guiden [armering runt öppningar och hörn](/blogg/armering-runt-oppningar-och-horn).",
+      },
+      {
+        heading: "Räkneexempel: L-formad villaplatta",
+        text: "Så räknar vi mängderna ur ritningen. En L-formad platta som är 12 × 10 m med ett urtag på 4 × 5 m har samma omkrets som en rektangel på 12 × 10 m, alltså 44 m. Men den har sex hörn i stället för fyra: fem utvändiga och ett invändigt, och det invändiga hörnet armeras på eget sätt. Med byglar Ø8 c/c 300 mm går det åt omkring 147 byglar. Med två Ø10 i överkant och två i underkant blir kantjärnen 4 × 44 = 176 m, eller cirka 109 kg. Byglarna, med en klipplängd på ungefär 1,3 m, väger tillsammans cirka 75 kg. Till det kommer hörnjärn och skarvjärn. Siffrorna är ett exempel. Ritningen avgör dimensioner och avstånd.",
       },
       {
         heading: "Korg eller lösa byglar?",
@@ -121,8 +128,31 @@ export const extraProducts: Product[] = [
         ],
       },
       {
+        heading: "Korgen och kantelementet",
+        text: "Korgen ska få plats i kantelementet med rätt täckskikt mot isoleringen på alla sidor. Därför behöver vi kantelementets fabrikat eller dess invändiga mått, inte bara kantbalkens mått på ritningen. Kantelement med lutande eller stegad insida ger en annan bygelform än ett rakt element. Distanserna under underkantsjärnen och mot formens sidor håller korgen på plats vid gjutningen.",
+      },
+      {
+        heading: "Vanliga fel i underlaget",
+        text: "Några saker är värda att kontrollera innan förfrågan skickas, eftersom de ändrar både mängd och pris. Felen upptäcks enklast på ritningen, inte i formen.",
+        items: [
+          "Bygelmåttet anges som kantbalkens mått, utan avdrag för täckskiktet",
+          "Det invändiga hörnet i en L- eller T-formad platta saknas i mängderna",
+          "Skarvjärn vid hörn och mellan korgar är inte medräknade",
+          "Innerbalkar under bärande väggar finns på ritningen men inte i listan",
+          "Kantelementets fabrikat är bytt efter att ritningen gjordes",
+        ],
+      },
+      {
+        heading: "Från ritning till korgar",
+        text: "Vi delar upp kantbalken i raka korgar, hörn och skarvar längs varje sida av plattan. Korgarnas längd anpassas efter sidornas mått och efter var ritningen tillåter skarvar. Indragna hörn och innerbalkar blir egna positioner. Varje del får ett positionsnummer och märks med sin sida. Du eller din konstruktör godkänner specifikationen innan vi startar.",
+      },
+      {
         heading: "Märkt per sida",
         text: "Korgar, hörn och skarvjärn märks per sida och position, så att rätt del hamnar längs rätt kant. Hörnkorgar eller hörnjärn och skarvjärn ingår efter ritning. [Distanser](/produkter/distanser) och [armeringsnät](/produkter/armeringsnat) kan gå i samma leverans.",
+      },
+      {
+        heading: "Leveranstid och mottagning",
+        text: "Leveranstiden beror på mängd och leveransort och anges i offerten. Skriv önskad leveransvecka i förfrågan och planera leveransen till när kantelementen och isoleringen är på plats, så att korgarna kan läggas ut direkt. Lägg korgarna på underlag sida för sida när de lastas av och jämför märkningen med ritningen innan de bärs ut.",
       },
       {
         heading: "Guider om kantbalken",
@@ -158,6 +188,9 @@ export const extraProducts: Product[] = [
       { q: "Ingår hörnen i kantbalksarmeringen?", a: "Ja. Hörnkorgar eller hörnjärn och skarvjärn ingår efter ritning, så att kantbalken blir sammanhängande runt hela plattan." },
       { q: "Hur många kantbalksbyglar går det åt?", a: "Omkretsen delat med bygelavståndet. En platta på 10 × 12 m har 44 m omkrets, vilket ger cirka 176 byglar vid c/c 250." },
       { q: "Vad behöver ni för att lämna offert på kantbalksarmering?", a: "Ritningen, eller plattans yttermått och kantbalkens sektion, samt leveransort och önskat datum." },
+      { q: "Kan jag beställa bara hörnen eller bara byglarna?", a: "Ja. Hörnjärn, skarvjärn, byglar och kantjärn kan beställas som lösa delar efter samma ritning, även om resten av kantbalken najas på plats." },
+      { q: "Hur lång är leveranstiden för kantbalkskorgar?", a: "Den beror på mängd och leveransort och anges i offerten. Skriv önskad leveransvecka i förfrågan." },
+      { q: "Hur långa är kantbalkskorgarna?", a: "Längden anpassas efter plattans sidor och efter var ritningen tillåter skarvar. Ange längden du vill ha i förfrågan om du har önskemål. Varje korg märks med sin sida och position." },
     ],
   },
   {

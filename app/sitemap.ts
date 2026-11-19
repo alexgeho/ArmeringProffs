@@ -35,9 +35,9 @@ const UPDATED = {
  */
 const CHANGED: Record<string, string> = {
   // SEO 2026-11-18: tre produktsidor utbyggda (mått, beställning, FAQ) + nya internlänkar.
-  "/produkter/byglar-och-hakar": "2026-11-18",
-  "/produkter/armeringskorgar": "2026-11-18",
-  "/produkter/villakorg-kantbalksarmering": "2026-11-18",
+  "/produkter/byglar-och-hakar": "2026-11-19",
+  "/produkter/armeringskorgar": "2026-11-19",
+  "/produkter/villakorg-kantbalksarmering": "2026-11-19",
   "/produkter/klippt-och-bockad": "2026-11-18",
   "/prefab-armering": "2026-11-18",
   "/armering-for-byggentreprenorer": "2026-11-18",
