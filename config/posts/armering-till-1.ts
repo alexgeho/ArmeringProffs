@@ -624,7 +624,7 @@ export const armeringTill1: Post[] = [
       },
 
       { type: "h2", text: "Infästning och köldbryggor" },
-      { type: "p", text: "Går balkongens armering rakt igenom ytterväggens isolering blir infästningen en köldbrygga. I nyproduktion används därför ofta bärande isolerelement, där drag- och tryckstänger går genom ett isolerskikt. Stängerna i isolerzonen är normalt av rostfritt stål." },
+      { type: "p", text: "Går balkongens armering rakt igenom ytterväggens isolering blir infästningen en köldbrygga. I nyproduktion används därför ofta bärande isolerelement, där drag- och tryckstänger går genom ett isolerskikt. Stängerna i isolerzonen är normalt av [rostfritt stål](/produkter/rostfri-armering/)." },
       { type: "p", text: "Elementets anslutningsjärn ska överlappa balkongens och bjälklagets armering. Därför måste elementtyp och höjd vara bestämda innan armeringen tillverkas – stäm av mot elementtillverkarens anvisning och konstruktörens ritning." },
 
       { type: "h2", text: "Det farligaste felet: armering i fel kant" },
@@ -810,7 +810,7 @@ export const armeringTill1: Post[] = [
       { type: "p", text: "Väljer du gjuten platta armeras den i princip som en garageplatta utan väggar: nät i fältet och förstärkt kant med kantjärn under stolpraden. Stolparna förankras med ingjutna stolpskor. Se även [armering till garageplatta](/blogg/armering-till-garage)." },
 
       { type: "h2", text: "Hur stor last får en stolpe?" },
-      { type: "p", text: "Snölasten på mark varierar i Sverige från cirka 1,0 kN/m² längs sydkusten till över 3 kN/m² i delar av Norrland och ännu mer i fjällen. På ett platt carporttak räknas ungefär 80 % av marksnön." },
+      { type: "p", text: "Snölasten på mark varierar i Sverige från cirka 1,0 kN/m² längs sydkusten till över 3 kN/m² i delar av [Norrland](/armering-norrland/) och ännu mer i fjällen. På ett platt carporttak räknas ungefär 80 % av marksnön." },
       { type: "table",
         caption: "Grov uppskattning av karakteristisk snölast på en dubbelcarport 6 × 6 m (36 m²) med sex stolpar. Mittstolparna får mer än hörnen.",
         head: ["Snölast på mark", "Snö på taket", "Per stolpe i snitt"],
@@ -940,7 +940,7 @@ export const armeringTill1: Post[] = [
       ] },
 
       { type: "h2", text: "Ritningen ingår i anmälan" },
-      { type: "p", text: "Även för ett litet hus ska grunden följa en konstruktionsritning, ofta från husleverantören. Den ingår i underlaget till anmälan, och kontrollansvarig eller byggherren ska kunna visa att armeringen följer den." },
+      { type: "p", text: "Även för ett litet hus ska grunden följa en konstruktionsritning, ofta från [husleverantören](/armering-for-husfabriker/). Den ingår i underlaget till anmälan, och kontrollansvarig eller byggherren ska kunna visa att armeringen följer den." },
 
       { type: "h2", text: "Liten platta, lika många delar" },
       { type: "p", text: "En attefallsplatta har samma delar som en villaplatta: nät, kantjärn, byglar, hörnjärn och distanser. Att köpa dem styckvis och bocka närmare 90 byglar för hand tar oproportionerligt lång tid. Färdigbockat och märkt per position kan du börja montera direkt." },

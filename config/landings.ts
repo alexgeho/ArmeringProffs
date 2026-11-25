@@ -112,11 +112,11 @@ const baseLandings: Landing[] = [
     slug: "prefab-armering",
     name: "Prefab armering",
     h1: "Prefab armering – färdig att lägga på bygget",
-    metaTitle: "Prefab armering – kapad, bockad, korgar & nät",
+    metaTitle: "Prefab armering – prefabricerad armering efter ritning",
     metaDescription:
       "Prefab armering i B500B: klippt och bockad armering, korgar, nät och grundarmering efter ritning – märkt per position, levererad i hela Sverige.",
     intro:
-      "Prefab armering betyder att armeringen tillverkas färdig innan den kommer till bygget – kapad, bockad, sammanfogad till korgar eller svetsad till nät. Här hittar du allt vi tillverkar, från enstaka byglar till kompletta grundpaket, levererat i hela Sverige.",
+      "Prefab armering, eller prefabricerad armering, betyder att armeringen tillverkas färdig innan den kommer till bygget – kapad, bockad, sammanfogad till korgar eller svetsad till nät. Här hittar du allt vi tillverkar, från enstaka byglar till kompletta grundpaket, levererat i hela Sverige.",
     keywords: [
       "prefab armering",
       "prefabricerad armering",

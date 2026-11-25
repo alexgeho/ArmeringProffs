@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { landings, getLanding } from "@/config/landings";
 import { site } from "@/config/site";
+import { fitTitle } from "@/lib/title";
 import { Section, SectionHeading, Panel, CheckList, ArrowLink, DataTable } from "@/components/ui";
 import { Breadcrumbs, CtaBanner, Process, PhotoHero } from "@/components/sections";
 import { FaqAccordion } from "@/components/FaqAccordion";
@@ -25,7 +26,7 @@ export async function generateMetadata({
   const l = getLanding(slug);
   if (!l) return {};
   return {
-    title: l.metaTitle,
+    title: fitTitle(l.metaTitle),
     description: l.metaDescription,
     keywords: l.keywords,
     alternates: { canonical: `/${l.slug}` },

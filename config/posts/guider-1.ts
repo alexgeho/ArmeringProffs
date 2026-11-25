@@ -526,7 +526,7 @@ export const guider1: Post[] = [
       { type: "p", text: "ILF prissätts normalt per kilo eller ton, där stålpriset kompletteras med förädlingen – kapning, bockning, märkning – och frakten. Priset påverkas av mängd, andel bockade positioner och dimensioner. Exakt pris och leveranstid anges i offerten. Se också [vad kostar armering](/blogg/vad-kostar-armering)." },
 
       { type: "h2", text: "Beställ ILF-armering" },
-      { type: "p", text: "Skicka ritning eller bockningslista till oss via sidan [beställ ILF-armering](/tjanster/ilf-armering) eller [offertformuläret](/offert). Vi tillverkar i B500B, märker varje position och levererar sorterat i hela Sverige – även till Norrland." },
+      { type: "p", text: "Skicka ritning eller bockningslista till oss via sidan [beställ ILF-armering](/tjanster/ilf-armering) eller [offertformuläret](/offert). Vi tillverkar i B500B, märker varje position och levererar sorterat i hela Sverige – även till [Norrland](/armering-norrland/)." },
     ],
     faqs: [
       { q: "Vad betyder ILF?", a: "ILF betyder inläggningsfärdig (iläggningsfärdig) armering – kapad, bockad, märkt och sorterad så att den kan läggas direkt i formen utan bearbetning på bygget." },
@@ -701,7 +701,7 @@ export const guider1: Post[] = [
       { type: "figure", illustration: "rebar-diameters", caption: "Kamstål i olika dimensioner. Klassen syns inte på järnet – den framgår av valsmärkningen och leveransintyget." },
 
       { type: "h2", text: "Nät, tråd och ringar – andra klasser" },
-      { type: "p", text: "Alla armeringsprodukter har inte samma klass. Svetsade nät tillverkas ofta av kallbearbetad tråd i klass A eller B, och armering i ringar för bockmaskiner kan vara antingen varm- eller kallvalsad. Det betyder inte att produkten är sämre – bara att konstruktören måste ha räknat med rätt klass. Står det B500B på ritningen för huvudarmeringen ska den levereras i minst klass B." },
+      { type: "p", text: "Alla armeringsprodukter har inte samma klass. Svetsade nät tillverkas ofta av kallbearbetad tråd i klass A eller B, och [armering i ringar](/produkter/armering-i-ringar/) för bockmaskiner kan vara antingen varm- eller kallvalsad. Det betyder inte att produkten är sämre – bara att konstruktören måste ha räknat med rätt klass. Står det B500B på ritningen för huvudarmeringen ska den levereras i minst klass B." },
       { type: "p", text: "Sträckgränsen är densamma, 500 MPa, i alla klasser som används i Sverige idag. Därför ger ett byte mellan B och C ingen skillnad i dimension eller vikt – Ø12 väger 0,888 kg/m oavsett klass. Det är bara segheten som skiljer." },
 
       { type: "h2", text: "Hur vet jag vilken klass jag fått?" },
@@ -743,7 +743,7 @@ export const guider1: Post[] = [
     ],
     content: [
       { type: "p", text: "Eurokod 2 – SS-EN 1992-1-1 – är standarden för dimensionering av betongkonstruktioner. I Sverige tillämpas den tillsammans med Boverkets nationella val i EKS. Det mesta i standarden är konstruktörens arbete, men en rad regler syns direkt i armeringen: hur tjockt täckskiktet är, hur tätt järnen ligger, hur snävt de bockas och hur långt de skarvas." },
-      { type: "p", text: "När armeringen är dimensionerad enligt Eurokod 2 levererar vi den – [armeringsjärn B500B](/produkter/armeringsjarn) raka eller klippta och bockade efter ritningen." },
+      { type: "p", text: "När armeringen är dimensionerad enligt Eurokod 2 levererar vi den – [armeringsjärn B500B](/produkter/armeringsjarn) raka eller klippta och bockade efter ritningen, eller som [prefabricerad armering](/prefab-armering) i korgar och nät." },
 
       { type: "h2", text: "Standarderna kring armering" },
       { type: "table", head: ["Standard", "Gäller"], rows: [
@@ -906,7 +906,7 @@ export const guider1: Post[] = [
     ],
     content: [
       { type: "p", text: "Fiberarmering betyder att korta fibrer av stål eller plast blandas in i betongen. Fibrerna fördelas i hela volymen och tar upp en del av dragkrafterna när betongen spricker. Armeringsnät, eller [armeringsmatta](/armeringsmatta), är svetsade järn som läggs på ett bestämt ställe i tvärsnittet. Båda används i plattor och golv – men de fungerar olika." },
-      { type: "p", text: "Behöver du konventionell armering till plattan levererar vi [armeringsnät](/produkter/armeringsnat) i standard- och specialformat, tillsammans med distanser och kantjärn." },
+      { type: "p", text: "Behöver du konventionell armering till plattan levererar vi [armeringsnät](/produkter/armeringsnat) i standard- och specialformat, tillsammans med distanser och kantjärn – eller som [prefabricerad armering](/prefab-armering) färdig att lägga." },
 
       { type: "h2", text: "Typer av fibrer" },
       { type: "table", head: ["Fiber", "Typisk dosering", "Används till"], rows: [

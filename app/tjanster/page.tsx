@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { fitTitle } from "@/lib/title";
 import { services } from "@/config/services";
 import { site } from "@/config/site";
 import { Section, SectionHeading, Card, CheckList } from "@/components/ui";
@@ -6,7 +7,7 @@ import { Breadcrumbs, CtaBanner } from "@/components/sections";
 import { JsonLd, breadcrumbSchema } from "@/lib/jsonld";
 
 export const metadata: Metadata = {
-  title: "Tjänster – armeringsmontage & bockningslista",
+  title: fitTitle("Tjänster – armeringsmontage & bockningslista"),
   description:
     "Armeringsmontage och hjälp med bockningslista från din ritning – utöver materialet. Tillverkning, leverans och montage i hela Sverige.",
   alternates: { canonical: "/tjanster" },

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { posts, getPost, type Block, type Post } from "@/config/blog";
 import { site } from "@/config/site";
+import { fitTitle } from "@/lib/title";
 import { Section, Container, Button, ArrowLink, Card, Panel, DataTable } from "@/components/ui";
 import { Breadcrumbs, CtaBanner } from "@/components/sections";
 import { FaqAccordion } from "@/components/FaqAccordion";
@@ -27,7 +28,7 @@ export async function generateMetadata({
   const p = getPost(slug);
   if (!p) return {};
   return {
-    title: p.metaTitle,
+    title: fitTitle(p.metaTitle),
     description: p.metaDescription,
     alternates: { canonical: `/blogg/${p.slug}` },
     openGraph: {

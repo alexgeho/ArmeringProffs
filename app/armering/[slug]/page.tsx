@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { cities, getCity, type City } from "@/config/cities";
 import { products } from "@/config/products";
 import { site } from "@/config/site";
+import { fitTitle } from "@/lib/title";
 import type { Faq } from "@/config/faq";
 import { Section, Button, SectionHeading, Card, ArrowLink, ChipLink, cardClass, inlineLink } from "@/components/ui";
 import Link from "next/link";
@@ -24,8 +25,8 @@ export async function generateMetadata({
   const c = getCity(slug);
   if (!c) return {};
   return {
-    title: `Armering ${c.name} – klippt, bockad & levererad`,
-    description: `Armering i ${c.name}: klippt & bockad efter ritning eller bockningslista, korgar och nät – levererat till bygget i ${c.lan}. Offert inom en arbetsdag.`,
+    title: fitTitle(`Armering ${c.name}${c.region ? ` & ${c.region}` : ""} – klippt, bockad & levererad`),
+    description: `Armering i ${c.name}: klippt & bockad efter ritning eller bockningslista, korgar och nät – levererat i ${c.lan}. Offert inom en arbetsdag.`,
     alternates: { canonical: `/armering/${c.slug}` },
     openGraph: {
       title: `Armering i ${c.name} | ${site.company}`,
@@ -91,7 +92,7 @@ export default async function CityPage({
       />
 
       <PhotoHero
-        title={<>Armering i {c.name}</>}
+        title={<>Armering i {c.name}{c.region ? ` och ${c.region}` : ""}</>}
         intro={c.angle}
         points={["Klippt & bockad efter bockningslista", "Armeringskorgar, nät & kamstål", `Leverans till ${c.name} & ${c.lan}`, "Tillverkning, leverans & montage"]}
         bgImage="/images/armeringsjarn-kamstal.webp"

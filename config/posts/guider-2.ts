@@ -524,7 +524,7 @@ export const guider2: Post[] = [
       { type: "p", text: "En villagrund – oftast en platta på mark med kantbalkar – kräver armering som stämmer med konstruktionsritningen och kommer till bygget i rätt tid. Med en tydlig plan slipper du både väntan och felbeställningar. Det mesta av armeringen kan beställas som färdig [grundarmering](/produkter/grundarmering): nät, [kantbalksarmering](/produkter/villakorg-kantbalksarmering) och klippt och bockade järn i ett paket." },
 
       { type: "h2", text: "Steg 1: Konstruktionsritning" },
-      { type: "p", text: "Utgångspunkten är konstruktörens ritning för grunden. Den visar plattans tjocklek, nättyp, kantbalkens form, extraarmering under bärande väggar och täckskikt. Husleverantörer levererar ofta grundritningen med husbeställningen. Saknas den behöver du anlita en konstruktör – armeringen ska dimensioneras, inte gissas." },
+      { type: "p", text: "Utgångspunkten är [konstruktörens](/armering-for-konstruktorer/) ritning för grunden. Den visar plattans tjocklek, nättyp, kantbalkens form, extraarmering under bärande väggar och täckskikt. Husleverantörer levererar ofta grundritningen med husbeställningen. Saknas den behöver du anlita en konstruktör – armeringen ska dimensioneras, inte gissas." },
 
       { type: "p", text: "Kontrollera att ritningen är fastställd innan du beställer. Ändras husets planlösning, bärande väggar eller grundens mått i efterhand kan både nät, kantbalkar och extrajärn påverkas. Fråga konstruktören om ritningen är en bygghandling och inte ett preliminärt underlag." },
 
@@ -841,7 +841,7 @@ export const guider2: Post[] = [
           ["Garageplatta med tösalt", "XD3 + XF", "35 mm", "ca 45 mm"],
         ],
       },
-      { type: "p", text: "För kloridmiljöer som pooler och garage blir täckskiktet ofta 40–50 mm. Se även [armering till pool](/blogg/armering-till-pool). I XD3 och XS3 föreskrivs ibland [rostfri armering](/blogg/rostfri-armering) närmast den utsatta ytan." },
+      { type: "p", text: "För kloridmiljöer som [pooler](/armering-for-poolbyggare/) och garage blir täckskiktet ofta 40–50 mm. Se även [armering till pool](/blogg/armering-till-pool). I XD3 och XS3 föreskrivs ibland [rostfri armering](/blogg/rostfri-armering) närmast den utsatta ytan." },
 
       { type: "h2", text: "Livslängdsklass – L50 eller L100?" },
       { type: "p", text: "L50 används för de flesta byggnader. L100 väljs för konstruktioner som ska hålla längre eller är svåra att reparera, till exempel broar, parkeringshus och vissa grundkonstruktioner. Skillnaden är oftast 5–10 mm i täckskikt. Livslängdsklassen står i konstruktionsförutsättningarna eller på ritningen." },
@@ -1099,7 +1099,7 @@ export const guider2: Post[] = [
           ["c/c", "Centrumavstånd mellan två järn, till exempel c150 = 150 mm."],
           ["cnom", "Nominellt täckskikt – minsta täckskikt plus tolerans. Anges på ritningen."],
           ["Distans", "Stol, kloss eller list som håller armeringen på rätt avstånd från form och underlag."],
-          ["Dorndiameter", "Diametern på tappen som järnet bockas runt. Se [dorndiameter enligt Eurokod 2](/blogg/dorndiameter-armering)."],
+          ["Dorndiameter", "Diametern på tappen som järnet bockas runt. Minsta värden: se dorndiameter enligt Eurokod 2."],
           ["Dragarmering", "Armering i den del av tvärsnittet som dras, oftast underkant mitt i fält."],
           ["Duktilitet", "Stålets förmåga att töjas innan det går av. Klass B kräver minst 5 % töjning vid maxlast."],
         ],
@@ -1170,7 +1170,7 @@ export const guider2: Post[] = [
       { type: "p", text: "Vill du gå djupare finns guider om [armeringsjärn – dimensioner](/blogg/armeringsjarn-dimensioner) och [bockningslista – så gör du](/blogg/bockningslista-sa-gor-du)." },
 
       { type: "h2", text: "Från begrepp till pris" },
-      { type: "p", text: "Har du ritning eller bockningslista räknar vi fram mängd och pris för din armering. Läs om [vad armering kostar](/armering-pris) eller skicka underlaget via [offertformuläret](/offert)." },
+      { type: "p", text: "Har du ritning eller bockningslista räknar vi fram mängd och pris för din [prefabricerade armering](/prefab-armering). Läs om [vad armering kostar](/armering-pris) eller skicka underlaget via [offertformuläret](/offert)." },
     ],
     faqs: [
       { q: "Vad betyder B500B?", a: "500 anger den karakteristiska sträckgränsen 500 MPa och det sista B duktilitetsklass B, som kräver minst 5 % töjning vid maxlast. I Sverige anges B500B i SS 212540." },

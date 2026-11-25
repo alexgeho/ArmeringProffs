@@ -1571,7 +1571,7 @@ const byglar: Post[] = [
         ["Startjärn", "Fundament → pelare", "L-järn med fot i fundamentet"],
         ["Kantjärn i fog", "Platta i etapper", "Rakt, skarvas mot nästa etapp"],
       ] },
-      { type: "p", text: "Den del som gjuts in ska ha förankringslängd och den del som sticker ut skarvlängd mot nästa etapps armering. Båda står på ritningen – riktvärden finns i [skarvlängd armering](/blogg/skarvlangd-armering)." },
+      { type: "p", text: "Den del som gjuts in ska ha [förankringslängd](/forankringslangd/) och den del som sticker ut skarvlängd mot nästa etapps armering. Båda står på ritningen – riktvärden finns i [skarvlängd armering](/blogg/skarvlangd-armering)." },
 
       { type: "h2", text: "Inborrade järn i befintlig betong" },
       { type: "p", text: "Ska en ny gjutning anslutas till befintlig betong borras järnen in och limmas med injekteringsmassa. Förankringslängd, borrhålsdiameter och kantavstånd styrs då av limsystemets produktgodkännande och konstruktörens beräkning – inte av vanliga tabellvärden. Järnen kapas i rätt längd; själva infästningen görs enligt systemets anvisningar." },

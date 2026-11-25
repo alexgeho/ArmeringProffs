@@ -25,7 +25,7 @@ const UPDATED = {
   static: "2026-11-02", // startsidan: titel + sortiment-text + B2B-block (2026-11-02)
   products: "2026-11-02", // config/products.ts + landings (våg 2026-11-02: klippt-och-bockad, armeringsjarn, armeringsnat, prefab-armering, armeringsleverantor, armeringsjarn-staket)
   services: "2026-11-13", // config/services*.ts (armeringsspecifikation: specning, ilf-armering: titel, 2026-11-13)
-  cities: "2026-10-14", // config/cities.ts (Göteborg: nät/järn-FAQ 2026-10-14)
+  cities: "2026-11-25", // config/cities.ts + mall (Malmö & Skåne i title/H1, kortare description – SEO 2026-11-25)
   tools: "2026-10-14", // /viktkalkylator, /natkalkylator, /forankringslangd (components/SmaKalkylatorer.tsx)
 } as const;
 
@@ -35,11 +35,11 @@ const UPDATED = {
  */
 const CHANGED: Record<string, string> = {
   // SEO 2026-11-18: tre produktsidor utbyggda (mått, beställning, FAQ) + nya internlänkar.
-  "/produkter/byglar-och-hakar": "2026-11-19",
+  "/produkter/byglar-och-hakar": "2026-11-25",
   "/produkter/armeringskorgar": "2026-11-19",
   "/produkter/villakorg-kantbalksarmering": "2026-11-19",
   "/produkter/klippt-och-bockad": "2026-11-18",
-  "/prefab-armering": "2026-11-18",
+  "/prefab-armering": "2026-11-25",
   "/armering-for-byggentreprenorer": "2026-11-18",
 };
 

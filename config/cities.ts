@@ -20,6 +20,8 @@ export type City = {
   landsdel: "Götaland" | "Svealand" | "Norrland";
   /** Närliggande orter vi också levererar till – unik lista per stad. */
   nearby: string[];
+  /** Landskap/region som söks tillsammans med orten (GSC), visas i title + H1. */
+  region?: string;
   /** Kort lokal text (unik) – används i hero. */
   angle: string;
   /** Andra lokala texten (unik) – lokal bygg-/logistikkontext. */
@@ -73,10 +75,11 @@ export const cities: City[] = [
     slug: "malmo",
     name: "Malmö",
     lan: "Skåne län",
+    region: "Skåne",
     landsdel: "Götaland",
     nearby: ["Lund", "Landskrona", "Trelleborg", "Vellinge", "Kävlinge", "Staffanstorp"],
     angle:
-      "Malmö och Öresundsregionen växer med stadsdelar som Hyllie, Västra hamnen och Nyhamnen. Vi levererar prefab armering efter din bockningslista eller ritning till projekt i hela sydvästra Skåne.",
+      "Malmö och Öresundsregionen växer med stadsdelar som Hyllie, Västra hamnen och Nyhamnen. Vi levererar prefab armering efter din bockningslista eller ritning till projekt i Malmö och hela Skåne.",
     intro2:
       "Skånes milda klimat ger kortare tjäldjup än i resten av landet och en lång byggsäsong. Närheten till havet ställer i stället krav på betongens beständighet: i kust- och hamnnära konstruktioner styr kloridexponeringen täckskiktet och därmed hur armeringen ska placeras.",
     sectors: ["Stadsutveckling i Hyllie och hamnområdena", "Kust- och hamnnära konstruktioner", "Flerbostadshus och kontor", "Villagrunder i sydvästra Skåne"],

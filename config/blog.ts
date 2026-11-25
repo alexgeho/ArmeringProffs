@@ -115,7 +115,7 @@ const basePosts: Post[] = [
 
       { type: "h2", text: "Skicka ritningen – få offert på grundarmeringen" },
       { type: "p", text: "Vi tillverkar [grundarmering](/produkter/grundarmering) efter din ritning eller bockningslista: [armeringsnät](/produkter/armeringsnat), kantbalksbyglar och [klippt och bockade järn](/produkter/klippt-och-bockad), märkta per position. Frakten räknas efter mängd och ort, och vi levererar i hela Sverige, även Norrland. [Begär offert](/offert) med ritningen bifogad." },
-      { type: "p", text: "Ska plattan bära ett garage eller en pool? Se [armering till garageplatta](/blogg/armering-till-garage) och [armering till pool](/blogg/armering-till-pool)." },
+      { type: "p", text: "Ska plattan bära ett garage eller en [pool](/armering-for-poolbyggare/)? Se [armering till garageplatta](/blogg/armering-till-garage) och [armering till pool](/blogg/armering-till-pool)." },
       { type: "p", text: "Vi levererar armering till betongplattor i hela landet – från [Stockholm](/armering/stockholm) i öster till [Göteborg](/armering/goteborg) i väster och orterna däremellan." },
     ],
     faqs: [
@@ -493,7 +493,7 @@ const basePosts: Post[] = [
       "bockade armeringsjärn",
     ],
     content: [
-      { type: "p", text: "Klippt och bockad armering är armeringsjärn som kapas och bockas i maskin efter din bockningslista eller ritning. Järnen kommer buntade och märkta per position, så att varje bunt kan läggas på rätt plats utan att något mäts eller kapas på bygget. I branschen kallas det [ILF-armering](/blogg/ilf-inlaggningsfardig-armering) – inläggningsfärdig armering." },
+      { type: "p", text: "Klippt och bockad armering är armeringsjärn som kapas och bockas i maskin efter din bockningslista eller ritning. Järnen kommer buntade och märkta per position, så att varje bunt kan läggas på rätt plats utan att något mäts eller kapas på bygget. I branschen kallas det [ILF-armering](/blogg/ilf-inlaggningsfardig-armering) – [inläggningsfärdig armering](/tjanster/ilf-armering/)." },
       { type: "p", text: "Vi tillverkar [klippt och bockad armering](/produkter/klippt-och-bockad) i Ø6–Ø32, kamstål B500B, och levererar i hela Sverige." },
 
       { type: "h2", text: "Så går det till" },
@@ -506,7 +506,7 @@ const basePosts: Post[] = [
       ] },
 
       { type: "h2", text: "Bockning av armering i maskin" },
-      { type: "p", text: "Vid bockning av armering i verkstad matas kamstålet – från ring i små dimensioner, från raka stänger i grövre – in i en bockningsmaskin som kapar och bockar efter måtten i bockningslistan. Maskinen bockar runt en dorn med rätt diameter för varje dimension: minst 4 × Ø upp till Ø16 och 7 × Ø för grövre järn enligt Eurokod 2. Så spricker inte stålet, och alla järn i en position får samma mått." },
+      { type: "p", text: "Vid [bockning av armering i verkstad](/produkter/klippt-och-bockad) matas kamstålet – från ring i små dimensioner, från raka stänger i grövre – in i en bockningsmaskin som kapar och bockar efter måtten i bockningslistan. Maskinen bockar runt en dorn med rätt diameter för varje dimension: minst 4 × Ø upp till Ø16 och 7 × Ø för grövre järn enligt Eurokod 2. Så spricker inte stålet, och alla järn i en position får samma mått." },
       { type: "p", text: "Bockade armeringsjärn är grunden i all [prefabricerad armering](/prefab-armering) – byglar, hörnjärn, korgar och specialformer. Ska du bara bocka några järn på bygget, se verktyg och [bockningsradie i tabell](/blogg/bocka-armeringsjarn)." },
 
       { type: "h2", text: "Vanliga bockade detaljer" },
@@ -640,7 +640,7 @@ const basePosts: Post[] = [
     title: "Beställa armering – så går det till steg för steg",
     metaTitle: "Beställa armering från leverantör – steg för steg",
     metaDescription:
-      "Så beställer du prefabricerad armering från en armeringsleverantör: vad du skickar, vad offerten ska innehålla och hur leveransen går till. Offert inom en arbetsdag.",
+      "Så beställer du prefabricerad armering från en leverantör: vad du skickar, vad offerten ska innehålla och hur leveransen går till. Offert på en arbetsdag.",
     excerpt:
       "Fyra steg från ritning till leverans – vad du skickar, vad en bra offert innehåller och vad du ska kontrollera innan du godkänner.",
     date: "2026-09-05",
@@ -687,7 +687,7 @@ const basePosts: Post[] = [
       { type: "p", text: "Efter godkänd offert kapas och bockas järnen, nät kapas och korgar binds eller svetsas – allt i kamstål B500B. Varje position buntas och märks så att den går att hitta på bygget." },
 
       { type: "h2", text: "4. Leverans" },
-      { type: "p", text: "Armeringen levereras till bygget i hela Sverige, även Norrland. Frakten räknas efter mängd och ort – ingen fast fraktavgift. Se till att det finns plats att lossa och att lastbilen kommer fram till upplaget." },
+      { type: "p", text: "Armeringen levereras till bygget i hela Sverige, även [Norrland](/armering-norrland/). Frakten räknas efter mängd och ort – ingen fast fraktavgift. Se till att det finns plats att lossa och att lastbilen kommer fram till upplaget." },
 
       { type: "h2", text: "Skicka underlaget nu" },
       { type: "p", text: "Vi tillverkar [klippt och bockad armering](/produkter/klippt-och-bockad), [armeringskorgar](/produkter/armeringskorgar) och [armeringsnät](/produkter/armeringsnat) och levererar [kamstål](/produkter/armeringsjarn) och [distanser](/produkter/distanser) i samma leverans. Behöver du hjälp på plats sköter vi även [armeringsmontage](/tjanster/armeringsmontage). [Begär offert](/offert) med ritning, lista eller mått." },
@@ -820,7 +820,7 @@ const basePosts: Post[] = [
         "Vill du ha en känsla för mängden först: använd [armeringskalkylatorn](/armeringskalkylator).",
         "Du får offert med pris per position, frakt och leveranstid.",
       ] },
-      { type: "p", text: "Steg för steg finns i [beställa armering](/blogg/bestalla-armering), och vikt per meter för olika dimensioner i [armeringsstål](/blogg/armeringsstal)." },
+      { type: "p", text: "Steg för steg finns i [beställa armering](/blogg/bestalla-armering), och [vikt per meter](/viktkalkylator/) för olika dimensioner i [armeringsstål](/blogg/armeringsstal)." },
 
       { type: "h2", text: "Få fast pris på din armering" },
       { type: "p", text: "Skicka ditt underlag så räknar vi [klippt och bockad armering](/produkter/klippt-och-bockad), [korgar](/produkter/armeringskorgar), [nät](/produkter/armeringsnat) och [kamstål](/produkter/armeringsjarn) med frakt efter mängd och ort – ingen fast fraktavgift. Läs hur [armeringspriset räknas](/armering-pris) eller [begär offert](/offert) direkt." },
@@ -1469,7 +1469,7 @@ const basePosts: Post[] = [
         ["6 < Ø ≤ 8,5 mm", "≥ 250 mm", "2"],
         ["8,5 < Ø ≤ 12 mm", "≥ 350 mm", "2"],
       ], caption: "Minsta skarvlängd för fördelningsjärn i armeringsnät enligt SS-EN 1992-1-1 tabell 8.4. Huvudarmeringen i nätet skarvas enligt särskilda regler i avsnitt 8.7.5.1." },
-      { type: "p", text: "Läs mer om nät i guiden [armeringsnät – storlekar och mått](/blogg/armeringsnat-storlekar-och-matt). Ska du beställa räknar vi antal nät med rätt överlapp åt dig – se [armeringsnät 5150–8150 med leverans](/produkter/armeringsnat)." },
+      { type: "p", text: "Läs mer om nät i guiden [armeringsnät – storlekar och mått](/blogg/armeringsnat-storlekar-och-matt). Ska du beställa räknar vi [antal nät](/natkalkylator/) med rätt överlapp åt dig – se [armeringsnät 5150–8150 med leverans](/produkter/armeringsnat)." },
 
       { type: "h2", text: "Så placerar du skarvarna rätt" },
       { type: "ul", items: [
@@ -1665,7 +1665,7 @@ const basePosts: Post[] = [
       "lyftöglor betongelement",
     ],
     content: [
-      { type: "p", text: "En lyftögla i betong är en bockad ögla av slätt, segt rundstål, till exempel S235, som gjuts in i ett betongelement så att det kan lyftas. Dimension, förankring och placering bestäms av konstruktören efter elementets vikt, antal lyftpunkter och lyftvinkel – vid 90° mellan stropparna ökar kraften per ögla till cirka 1,41 gånger." },
+      { type: "p", text: "En lyftögla i betong är en bockad ögla av slätt, segt rundstål, till exempel S235, som gjuts in i ett [betongelement](/armering-for-prefabindustri/) så att det kan lyftas. Dimension, förankring och placering bestäms av konstruktören efter elementets vikt, antal lyftpunkter och lyftvinkel – vid 90° mellan stropparna ökar kraften per ögla till cirka 1,41 gånger." },
       { type: "p", text: "Prefabricerade betongelement – trappor, balkar, väggelement, brunnslock och plintar – måste kunna lyftas vid avformning, transport och montage. Det görs med lyftöglor (ingjutningsöglor) som gjuts in i elementet. En lyftögla som är fel dimensionerad eller fel förankrad kan släppa, så den ska alltid följa konstruktörens ritning eller lyftsystemets anvisning. Vi bockar [lyftöglor](/produkter/lyftoglor) efter ritning." },
 
       { type: "h2", text: "Vilket material ska en lyftögla ha?" },

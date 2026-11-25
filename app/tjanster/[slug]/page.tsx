@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { fitTitle } from "@/lib/title";
 import { notFound } from "next/navigation";
 import { services, getService } from "@/config/services";
 import { relatedGuides } from "@/lib/related";
@@ -25,7 +26,7 @@ export async function generateMetadata({
   const s = getService(slug);
   if (!s) return {};
   return {
-    title: s.metaTitle,
+    title: fitTitle(s.metaTitle),
     description: s.metaDescription,
     keywords: s.keywords,
     alternates: { canonical: `/tjanster/${s.slug}` },

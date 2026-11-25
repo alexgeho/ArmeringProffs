@@ -169,7 +169,7 @@ export const armeringTill2: Post[] = [
       "gödselvårdsanläggning betong",
     ],
     content: [
-      { type: "p", text: "En gödselplatta armeras med nät i plattan och bockade järn i kantmurarna. En rund gödselbrunn armeras med horisontella ringar som tar gödseltrycket, tätast längst ner. Båda ska vara täta i decennier, och det är armeringen som håller sprickorna små nog."  },
+      { type: "p", text: "En [gödselplatta](/armering-for-lantbruk/) armeras med nät i plattan och bockade järn i kantmurarna. En rund gödselbrunn armeras med horisontella ringar som tar gödseltrycket, tätast längst ner. Båda ska vara täta i decennier, och det är armeringen som håller sprickorna små nog."  },
       { type: "p", text: "Ringar med rätt radie är svåra att bocka på plats. Vi tillverkar dem efter ritningen, tillsammans med nät och startjärn, och levererar till lantbrukare och [markentreprenörer](/armering-for-markentreprenorer) som [armeringsleverantör](/armeringsleverantor)."  },
 
       { type: "h2", text: "Gödselplatta – för fastgödsel"  },
@@ -768,7 +768,7 @@ export const armeringTill2: Post[] = [
 
       { type: "h2", text: "Ringdrag – ett räkneexempel"  },
       { type: "p", text: "I en rund tank pressar vätskan väggen utåt. Trycket ökar linjärt med djupet: för vatten cirka 10 kN/m³ × djupet. Ringdragkraften per meter vägghöjd blir N = p × r. I en tank med radie 3 m är trycket 3 m under ytan cirka 30 kPa och ringdraget cirka 90 kN per meter vägghöjd."  },
-      { type: "p", text: "För en tät konstruktion begränsar konstruktören spänningen i stålet för att hålla nere sprickbredden. Med en tillåten stålspänning på till exempel 200 MPa behövs då ungefär 450 mm² ringarmering per meter höjd vid botten – till exempel Ø10 c/c 300 på båda sidor (2 × 262 mm²/m). Exemplet visar principen, inte en dimensionering."  },
+      { type: "p", text: "För en tät konstruktion begränsar konstruktören spänningen i stålet för att hålla nere sprickbredden. Med en tillåten stålspänning på till exempel 200 MPa behövs då ungefär 450 mm² [ringarmering](/produkter/armering-i-ringar/) per meter höjd vid botten – till exempel Ø10 c/c 300 på båda sidor (2 × 262 mm²/m). Exemplet visar principen, inte en dimensionering."  },
 
       { type: "h2", text: "Sprickbredd enligt SS-EN 1992-3"  },
       { type: "p", text: "Vätskebehållare dimensioneras enligt Eurokod 2 del 3 (SS-EN 1992-3), som delar in konstruktioner i täthetsklasser. Ju högre krav på täthet, desto mindre tillåten sprickbredd – och desto mer armering. Det ger några praktiska regler:"  },
@@ -1038,7 +1038,7 @@ export const armeringTill2: Post[] = [
       "pålgrundläggning armering",
     ],
     content: [
-      { type: "p", text: "En platta på pålar armeras som ett [bjälklag](/blogg/armering-bjalklag): i både över- och underkant, med extra överkantsjärn över pålhuvudena och ofta pålplintar eller grundbalkar. Skälet är att plattan inte längre bärs jämnt av marken utan spänner mellan pålarna, som slås eller borras ner genom lös lera till fastare lager."  },
+      { type: "p", text: "En platta på pålar armeras som ett [bjälklag](/blogg/armering-bjalklag): i både över- och underkant, med extra överkantsjärn över pålhuvudena och ofta pålplintar eller grundbalkar. Skälet är att plattan inte längre bärs jämnt av marken utan spänner mellan pålarna, som slås eller borras ner genom lös lera till fastare lager. Så grundläggs till exempel stora delar av [Göteborg](/armering/goteborg/), där leran kan vara tiotals meter djup."  },
       { type: "p", text: "Armeringen över pålarna – pålplintar, pålkorgar och förstärkningar – är en specialitet i sig. Vi tillverkar den som [pålarmering](/produkter/palarmering) och andra [armeringskorgar](/produkter/armeringskorgar) efter konstruktörens ritning, märkt per påle och position."  },
 
       { type: "h2", text: "Tre sätt att bygga plattan"  },

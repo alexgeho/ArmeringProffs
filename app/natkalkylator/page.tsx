@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { fitTitle } from "@/lib/title";
 import Link from "next/link";
 import { site } from "@/config/site";
 import { Section, PageHeader, inlineLink } from "@/components/ui";
@@ -12,7 +13,7 @@ const path = "/natkalkylator";
 const name = "Nätkalkylator";
 
 export const metadata: Metadata = {
-  title: "Nätkalkylator – antal armeringsnät och överlapp",
+  title: fitTitle("Nätkalkylator – antal armeringsnät och överlapp"),
   description:
     "Räkna hur många armeringsnät plattan behöver: fyll i längd och bredd, välj nät 5150–10150 och överlapp – få antal ark 2,35 × 5 m och vikt i kg.",
   alternates: { canonical: path },

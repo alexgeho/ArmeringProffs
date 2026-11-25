@@ -5,6 +5,7 @@ import { products, getProduct } from "@/config/products";
 import { relatedGuides } from "@/lib/related";
 import { faq } from "@/config/faq";
 import { site } from "@/config/site";
+import { fitTitle } from "@/lib/title";
 import { Section, SectionHeading, Button, PageHeader, Panel, CheckList, ArrowLink, Card } from "@/components/ui";
 import { Breadcrumbs, CtaBanner, LeveransSection, Process, CityLinks } from "@/components/sections";
 import { FaqAccordion } from "@/components/FaqAccordion";
@@ -29,7 +30,7 @@ export async function generateMetadata({
   const p = getProduct(slug);
   if (!p) return {};
   return {
-    title: p.metaTitle,
+    title: fitTitle(p.metaTitle),
     description: p.metaDescription,
     keywords: p.keywords,
     alternates: { canonical: `/produkter/${p.slug}` },

@@ -626,7 +626,7 @@ const baseProducts: Product[] = [
     h1: "Armeringsbyglar – färdiga byglar och hakar efter mått",
     metaTitle: "Armeringsbyglar Ø6–Ø16 efter mått – märkta per position",
     metaDescription:
-      "Armeringsbyglar efter mått i B500B: slutna byglar, U-byglar, kantbalksbyglar och hakar i serie, buntade per position. Skicka lista eller ritning – få offert.",
+      "Armeringsbyglar efter mått i B500B: slutna byglar, U-byglar, kantbalksbyglar och hakar i serie, buntade per position. Skicka listan – få offert.",
     intro:
       "Färdiga armeringsbyglar efter dina mått – slutna byglar, U-byglar, kantbalksbyglar, trappbyglar och hakar i kamstål B500B. Serietillverkade med samma mått på varje bygel, buntade och märkta per position och levererade på pall till bygget eller elementfabriken.",
     keywords: [
