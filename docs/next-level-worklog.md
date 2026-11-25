@@ -1,5 +1,7 @@
 # next-level-brief — worklog (2026-09-08)
 
+## 🟢 2026-11-26 (recheck) — USP-kortet «Efter ritning» → «Offert efter ritning» så att rubriken matchar texten om offertens mängd per dimension och frakt (live).
+
 ## 🟢 2026-11-26 — Marknadskritikens punkter «utan ägaren» (live)
 - USP-kort (startsidan + /om-oss): «Kapat, bockat och svetsat … – märkt per position», «Offerten anger mängd per dimension, bearbetning och frakt var för sig», «Korta leveranstider» → «Ingen fast fraktavgift – frakten räknas efter mängd och ort, även små beställningar». Montage-kortet orört.
 - Startsidans hero-ingress + «Från en villaplatta till industriprojekt – även små beställningar.»
