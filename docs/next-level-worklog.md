@@ -1,5 +1,12 @@
 # next-level-brief — worklog (2026-09-08)
 
+## 🟢 2026-11-26 — Marknadskritikens punkter «utan ägaren» (live)
+- USP-kort (startsidan + /om-oss): «Kapat, bockat och svetsat … – märkt per position», «Offerten anger mängd per dimension, bearbetning och frakt var för sig», «Korta leveranstider» → «Ingen fast fraktavgift – frakten räknas efter mängd och ort, även små beställningar». Montage-kortet orört.
+- Startsidans hero-ingress + «Från en villaplatta till industriprojekt – även små beställningar.»
+- Internlänkar från guider: /produkter/3d-bockning 0→3 (gödselplatta, betongtank, vindkraftsfundament), /armeringsjarn-staket 0→3 (armeringsjärn-dimensioner, armeringsstål, stolpfundament), lyftoglor 2→3 (armeringskorgar), byggentreprenörer 2→3 (ILF), sundsvall/umea 2→3 (industrigolv).
+- /armering/<stad> (12): fält `groundGuides` – två guider som passar ortens mark/klimat länkas direkt efter mark-stycket.
+- Väntar på ägaren: fakta om tillverkningen/referenser, «Offert inom en arbetsdag», kr/kg-priser, formulär i fler guider, E-post-asterisk, staket-guide (ny sida), omdömen, GBP/kataloger, GSC-token.
+
 ## 🟢 2026-11-25 (natt) — SEO-pass: teknik, near-miss, kannibalisering, internlänkar (live)
 - GSC 28 d: 697 kl / 28K visn / CTR 2,5 % / pos 7,7. GSC-API-token saknas på nya Macen (~/.gsc-venv, gsc_token.json finns inte) → data via Chrome.
 - Teknik: titlar > 60 tecken (73 st) → `lib/title.ts` `fitTitle()`: suffixet «| Armeringsproffs» tas bort bara när titeln annars blir > 60 (sökordsdelen orörd); används i [slug], armering/[slug], blogg/[slug], produkter/[slug], tjanster/[slug], /tjanster, /natkalkylator. 9 description > 155 kortade (ortsmall «levererat i <län>», bestalla-armering, byglar-och-hakar). 7 foton > 200 KB omkomprimerade (samma mått; armeringsnat-platta-pa-mark 1600→1440 px). Olänkad «[..](..)»-text i tabellcell i armeringsordlista borttagen. Sitemap 162 URL = 200, inga brutna interna länkar, 1 H1 överallt, JSON-LD parsar.
