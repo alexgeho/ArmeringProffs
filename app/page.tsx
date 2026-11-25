@@ -60,7 +60,7 @@ export default function HomePage() {
     <>
       <Hero
         title={<>Prefab armering i <span className="text-accent">hela Sverige</span></>}
-        intro="Klippt och bockad armering, byglar, armeringskorgar, plint- och brunnsarmering, svetsat nät och kamstål Ø6–Ø32."
+        intro="Klippt och bockad armering, byglar, armeringskorgar, plint- och brunnsarmering, svetsat nät och kamstål Ø6–Ø32. Från en villaplatta till industriprojekt – även små beställningar."
         formSource="startsida-hero"
         bgImage="/images/hero-armeringskorgar.webp"
         bgAlt="Prefabricerade armeringskorgar staplade på en byggarbetsplats"

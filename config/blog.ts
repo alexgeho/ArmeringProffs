@@ -213,7 +213,7 @@ const basePosts: Post[] = [
       "armeringsstål",
     ],
     content: [
-      { type: "p", text: "Armeringsjärn i kamstål B500B finns i dimensionerna Ø6, 8, 10, 12, 16, 20, 25 och 32 mm. I villagrunder och plattor på mark används mest Ø8–Ø12, byglar görs oftast i Ø8–Ø10 och balkar, pelare och anläggning kräver Ø16 och grövre." },
+      { type: "p", text: "Armeringsjärn i kamstål B500B finns i dimensionerna Ø6, 8, 10, 12, 16, 20, 25 och 32 mm. I villagrunder och plattor på mark används mest Ø8–Ø12, byglar görs oftast i Ø8–Ø10 och balkar, pelare och anläggning kräver Ø16 och grövre. Till [staket av armeringsjärn](/armeringsjarn-staket) i trädgården används raka järn Ø12–Ø25, kapade till mått." },
       { type: "p", text: "Vi levererar [armeringsjärn i 6 och 12 m](/produkter/armeringsjarn) och kapar och bockar efter lista. Om stålet i sig – B500B, K500C-T, vikt per meter – läser du i [armeringsstål](/blogg/armeringsstal)." },
 
       { type: "h2", text: "Dimension, area och typisk användning" },
@@ -613,7 +613,7 @@ const basePosts: Post[] = [
       { type: "p", text: "Enklast är att skicka konstruktionsritningen. Saknas bockningslista tar vi fram den, och korgarna märks per position så att de hamnar rätt vid montaget." },
 
       { type: "h2", text: "Lyft och montage" },
-      { type: "p", text: "En färdig korg lyfts på plats med kran och placeras på distanser i formen eller över startjärnen. Längre korgar lyfts i flera punkter så att de inte deformeras. Vi kan också ta hand om [armeringsmontaget](/tjanster/armeringsmontage) på plats." },
+      { type: "p", text: "En färdig korg lyfts på plats med kran och placeras på distanser i formen eller över startjärnen. Längre korgar lyfts i flera punkter så att de inte deformeras. Ska ett färdiggjutet betongelement lyftas gjuts [lyftöglor](/produkter/lyftoglor) in i stället. Vi kan också ta hand om [armeringsmontaget](/tjanster/armeringsmontage) på plats." },
 
       { type: "h2", text: "Därför lönar sig prefab" },
       { type: "ul", items: [
@@ -1520,7 +1520,7 @@ const basePosts: Post[] = [
       "vikt armeringsjärn per meter",
     ],
     content: [
-      { type: "p", text: "Armeringsstål, armeringsjärn och kamstål är samma sak: stål med kammar på ytan som gjuts in i betong och tar upp dragkrafter. I Sverige används B500B enligt SS-EN 10080 och SS 212540, och Ø12 väger 0,888 kg per meter. Vi levererar [armeringsjärn och kamstål](/produkter/armeringsjarn) i Ø6–Ø32, raka eller kapade och bockade." },
+      { type: "p", text: "Armeringsstål, armeringsjärn och kamstål är samma sak: stål med kammar på ytan som gjuts in i betong och tar upp dragkrafter. I Sverige används B500B enligt SS-EN 10080 och SS 212540, och Ø12 väger 0,888 kg per meter. Vi levererar [armeringsjärn och kamstål](/produkter/armeringsjarn) i Ø6–Ø32, raka eller kapade och bockade. Kamstål används också till [staket av armeringsjärn](/armeringsjarn-staket) i trädgården." },
 
       { type: "h2", text: "B500B – vad betyder beteckningen?" },
       { type: "ul", items: [

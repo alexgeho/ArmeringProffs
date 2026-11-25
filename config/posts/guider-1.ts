@@ -526,7 +526,7 @@ export const guider1: Post[] = [
       { type: "p", text: "ILF prissätts normalt per kilo eller ton, där stålpriset kompletteras med förädlingen – kapning, bockning, märkning – och frakten. Priset påverkas av mängd, andel bockade positioner och dimensioner. Exakt pris och leveranstid anges i offerten. Se också [vad kostar armering](/blogg/vad-kostar-armering)." },
 
       { type: "h2", text: "Beställ ILF-armering" },
-      { type: "p", text: "Skicka ritning eller bockningslista till oss via sidan [beställ ILF-armering](/tjanster/ilf-armering) eller [offertformuläret](/offert). Vi tillverkar i B500B, märker varje position och levererar sorterat i hela Sverige – även till [Norrland](/armering-norrland/)." },
+      { type: "p", text: "Skicka ritning eller bockningslista till oss via sidan [beställ ILF-armering](/tjanster/ilf-armering) eller [offertformuläret](/offert). Vi tillverkar i B500B, märker varje position och levererar sorterat i hela Sverige – även till [Norrland](/armering-norrland/). Hur leveranserna planeras per etapp beskrivs under [armering för byggentreprenörer](/armering-for-byggentreprenorer)." },
     ],
     faqs: [
       { q: "Vad betyder ILF?", a: "ILF betyder inläggningsfärdig (iläggningsfärdig) armering – kapad, bockad, märkt och sorterad så att den kan läggas direkt i formen utan bearbetning på bygget." },

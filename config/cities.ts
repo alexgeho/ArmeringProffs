@@ -30,6 +30,8 @@ export type City = {
   sectors: string[];
   /** Lokal mark, klimat och grundläggning (unik, sann) – valfri. */
   ground?: string;
+  /** Två guider som passar ortens mark/klimat – länkas efter `ground` (kritik 26.11). */
+  groundGuides?: { slug: string; label: string }[];
   /** Extra lokala frågor – läggs till sidans FAQ. */
   faqs?: Faq[];
 };
@@ -48,6 +50,7 @@ export const cities: City[] = [
     sectors: ["Flerbostadshus och förtätning i innerstaden", "Tunnel-, bro- och anläggningsprojekt", "Villagrunder i kranskommunerna", "Kontor och kommersiella fastigheter"],
     ground:
       "Marken i Stockholmsområdet växlar snabbt mellan berg i dagen, morän och lerområden – ibland på samma tomt. På berg och morän gjuts ofta platta på mark direkt, medan lera kan kräva pålning med pålarmering och pålplintar. Konstruktören avgör grundläggningen; vi tillverkar armeringen efter ritningen.",
+    groundGuides: [{ slug: "armering-grund-pa-berg", label: "armering för grund på berg" }, { slug: "armering-platta-pa-palar", label: "platta på pålar" }],
     faqs: [
       { q: "Vilken armering behövs till en villagrund i Stockholmsområdet?", a: "Oftast armeringsnät i plattan, kantbalksbyglar och kantjärn i kantbalken samt extra järn under bärande väggar. Grundläggningen beror på om tomten är berg, morän eller lera – konstruktionsritningen avgör." },
     ],
@@ -65,6 +68,7 @@ export const cities: City[] = [
     sectors: ["Grundläggning på lera med pålar och pålplintar", "Infrastruktur och tunnlar", "Bostäder längs Göta älv", "Hamn-, industri- och logistikbyggnation"],
     ground:
       "Leran i Göteborg kan på sina ställen vara tiotals meter djup och är sättningskänslig, därför bärs många byggnader av pålar ner till fast botten. Klimatet vid västkusten är milt men fuktigt och salthaltigt nära havet – exponeringsklass och täckskikt bestäms av konstruktören.",
+    groundGuides: [{ slug: "armering-platta-pa-palar", label: "platta på pålar" }, { slug: "tackskikt-exponeringsklass", label: "täckskikt och exponeringsklass" }],
     faqs: [
       { q: "Levererar ni armering till pålplintar och pålfundament i Göteborg?", a: "Ja. Vi tillverkar plintkorgar, pålarmering och bockade detaljer till pålfundament efter konstruktionsritningen och levererar till arbetsplatsen i Göteborgsregionen." },
       { q: "Kan jag köpa armeringsnät i Göteborg?", a: "Ja. Vi levererar armeringsnät, till exempel 5150, 6150 och 8150, till bygget i Göteborg och Västra Götalands län – gärna tillsammans med kantjärn, byglar och distanser i samma leverans. Ange ytan eller nätlistan i offertförfrågan." },
@@ -85,6 +89,7 @@ export const cities: City[] = [
     sectors: ["Stadsutveckling i Hyllie och hamnområdena", "Kust- och hamnnära konstruktioner", "Flerbostadshus och kontor", "Villagrunder i sydvästra Skåne"],
     ground:
       "Under Malmö ligger kalksten, och ovanpå den lerig morän som bär de flesta grunder. Tjäldjupet är bland de minsta i Sverige, men för konstruktioner nära havet ger salt och klorider högre krav på täckskikt (exponeringsklass XS) – det anges på konstruktionsritningen.",
+    groundGuides: [{ slug: "tackskikt-exponeringsklass", label: "täckskikt och exponeringsklass" }, { slug: "armering-platta-pa-mark", label: "armering till platta på mark" }],
     faqs: [
       { q: "Behövs större täckskikt nära havet i Malmö?", a: "Ofta ja. Konstruktioner som utsätts för saltvatten eller havsluft hamnar i exponeringsklass XS enligt Eurokod 2, vilket normalt kräver större täckskikt. Konstruktören anger värdet – vi levererar distanser i rätt höjd." },
     ],
@@ -102,6 +107,7 @@ export const cities: City[] = [
     sectors: ["Bostadskvarter i Rosendal och Ulleråker", "Skolor och vårdbyggnader", "Pålplintar och grundbalkar på lera", "Villagrunder i Knivsta och Storvreta"],
     ground:
       "Uppsala ligger på en lerslätt där leran på sina håll är mycket djup, med Uppsalaåsen som en grusrygg genom staden. På leran grundläggs större hus ofta på pålar med plintar och grundbalkar, medan villor ofta kan gjutas som platta på mark. Konstruktören avgör grundläggningen; vi tillverkar armeringen efter ritningen.",
+    groundGuides: [{ slug: "armering-platta-pa-palar", label: "platta på pålar" }, { slug: "armering-platta-pa-mark", label: "armering till platta på mark" }],
     faqs: [
       { q: "Behöver en villa i Uppsala pålas?", a: "Inte alltid. Det beror på hur djup och lös leran är på just din tomt. Geotekniken och konstruktören avgör. Blir det pålning tillverkar vi pålarmering och plintkorgar, annars grundarmering till plattan." },
     ],
@@ -119,6 +125,7 @@ export const cities: City[] = [
     sectors: ["Maskinfundament och industrigolv", "Stadsutveckling kring Mälarporten", "Energi- och kraftvärmeanläggningar", "Villagrunder i Köping och Hallstahammar"],
     ground:
       "Närmast Mälaren och längs Svartån finns lösa leror, medan marken längre från stranden oftare är morän. Nära vattnet kan det därför krävas pålning eller förstärkning. Konstruktören avgör; vi tillverkar pålarmering, plintkorgar och grundarmering efter ritningen.",
+    groundGuides: [{ slug: "armering-platta-pa-palar", label: "platta på pålar" }, { slug: "armering-husgrund", label: "armering till husgrund" }],
     faqs: [
       { q: "Tillverkar ni armering till maskinfundament i Västerås?", a: "Ja. Vi tillverkar korgar och bockade järn efter konstruktionsritningen och märker varje fundament för sig. Ange om ingjutningsgods ska få plats i korgen." },
     ],
@@ -136,6 +143,7 @@ export const cities: City[] = [
     sectors: ["Industrigolv i lager- och logistikhallar", "Plint- och pelarfundament", "Järnvägsnära anläggningar kring Hallsberg", "Villagrunder i Kumla och Nora"],
     ground:
       "Örebro ligger på Närkeslätten med lerjordar längs Svartån och mot Hjälmaren, och morän i höjdlägena runt slätten. Stora golvplattor på lera ställer krav på grundläggningen. Konstruktören avgör; vi tillverkar efter ritningen.",
+    groundGuides: [{ slug: "armering-industrigolv", label: "armering till industrigolv" }, { slug: "armering-platta-pa-palar", label: "platta på pålar" }],
     faqs: [
       { q: "Kan ni leverera armeringsnät till ett stort lagergolv i Örebro?", a: "Ja. Nät, kantjärn och distanser levereras i etapper efter gjutplanen, så att golvet kan gjutas fält för fält." },
     ],
@@ -153,6 +161,7 @@ export const cities: City[] = [
     sectors: ["Bro- och anläggningsobjekt längs Ostlänken", "Bostäder i Vallastaden och nya stadsdelar", "Industri- och verkstadsbyggnation", "Villagrunder i Mjölby och Linghem"],
     ground:
       "Östgötaslätten har lerjordar och moränlera, särskilt längs Stångån. Platta på mark fungerar ofta för villor, medan större byggnader på lös lera kan behöva pålas. Konstruktören avgör grundläggningen.",
+    groundGuides: [{ slug: "armering-platta-pa-mark", label: "armering till platta på mark" }, { slug: "armering-platta-pa-palar", label: "platta på pålar" }],
     faqs: [
       { q: "Levererar ni armering till anläggningsprojekt kring Linköping?", a: "Ja. Vi tillverkar klippt och bockad armering och korgar efter ritning, märkt per position, och levererar per etapp till objektet." },
     ],
@@ -170,6 +179,7 @@ export const cities: City[] = [
     sectors: ["Stadsförnyelse i H+ och Oceanhamnen", "Hamn-, kaj- och logistikbyggnation", "Kustnära konstruktioner vid Öresund", "Villagrunder i Höganäs och Ängelholm"],
     ground:
       "Nordvästra Skåne har mest moränlera och kort tjäldjup. Nära havet hamnar betongen ofta i exponeringsklass XS, med större täckskikt som följd. Värdet står på konstruktionsritningen.",
+    groundGuides: [{ slug: "tackskikt-exponeringsklass", label: "täckskikt och exponeringsklass" }, { slug: "armering-platta-pa-mark", label: "armering till platta på mark" }],
     faqs: [
       { q: "Påverkar havsnära läge armeringen i Helsingborg?", a: "Ja, genom täckskiktet. Salt och klorider ger ofta exponeringsklass XS och större täckskikt. Konstruktören anger värdet, och vi levererar distanser i rätt höjd." },
     ],
@@ -187,6 +197,7 @@ export const cities: City[] = [
     sectors: ["Lagerhallar i Torsvik och Hedenstorp", "Stödmurar och grunder i sluttning", "Bostäder i Huskvarna och Habo", "Industri i Värnamo och Nässjö"],
     ground:
       "I dalgången närmast Vättern finns sand, silt och lera, medan sluttningarna ofta är morän. Silt är tjälfarlig, så tjälisolering och dränering är viktiga. Konstruktören avgör grundläggningen; vi tillverkar efter ritningen.",
+    groundGuides: [{ slug: "armera-stodmur", label: "att armera en stödmur" }, { slug: "armering-husgrund", label: "armering till husgrund" }],
     faqs: [
       { q: "Kan ni armera en stegad grund på sluttande tomt?", a: "Ja. Höga och stegade kantbalkar tillverkas som korgar efter ritningen och märks per avsnitt, så att det är tydligt var varje korg ska ligga." },
     ],
@@ -204,6 +215,7 @@ export const cities: City[] = [
     sectors: ["Bostadskvarter i Inre hamnen", "Järnvägs- och broobjekt för Ostlänken", "Hamn och industri vid Bråviken", "Villagrunder i Söderköping och Åby"],
     ground:
       "Längs Motala ström och mot Bråviken finns lera, och i hamnområdena ofta fyllnadsmassor. Där pålas många byggnader. På moränmark utanför centrum räcker oftare platta på mark. Konstruktören avgör.",
+    groundGuides: [{ slug: "armering-platta-pa-palar", label: "platta på pålar" }, { slug: "armering-platta-pa-mark", label: "armering till platta på mark" }],
     faqs: [
       { q: "Levererar ni pålarmering till projekt i Norrköping?", a: "Ja. Vi tillverkar pålarmering, plintkorgar och grundbalkar efter konstruktionsritningen och levererar per etapp." },
     ],
@@ -221,6 +233,7 @@ export const cities: City[] = [
     sectors: ["Järnvägs- och anläggningsprojekt i Västerbotten", "Bostäder och samhällsfastigheter", "Hamn och industri i Holmsund", "Grundläggning med tjälskydd"],
     ground:
       "Umeå ligger på sand- och siltavlagringar längs Umeälven, och silt är mycket tjälfarligt. Tjäldjupet är betydligt större än i södra Sverige, så grunder kräver tjälisolering eller tillräckligt grundläggningsdjup. Vintergjutning ställer dessutom krav på uppvärmning och skydd av betongen – armeringen påverkas inte av kylan, men leveransen bör planeras mot gjutningen.",
+    groundGuides: [{ slug: "armering-vintertid", label: "armering vintertid" }, { slug: "armering-husgrund", label: "armering till husgrund" }],
     faqs: [
       { q: "Kan ni leverera armering till Umeå på vintern?", a: "Ja, vi levererar året runt. Frakt och leveranstid till Umeå anges i offerten utifrån mängd och ort, så att armeringen finns på plats till gjutningen." },
     ],
@@ -238,6 +251,7 @@ export const cities: City[] = [
     sectors: ["Industri och processanläggningar", "Hamn och logistik vid Bottenhavet", "Stödmurar och grundläggning i sluttning", "Bostäder i Sundsvall, Timrå och Härnösand"],
     ground:
       "Sundsvall har norrländskt klimat med långa vintrar och stort tjäldjup, och marken växlar mellan berg, morän och finkorniga jordar i dalgångarna. Tjälskydd, dränering och grundläggningsdjup bestäms av konstruktören – vi tillverkar armeringen efter ritningen.",
+    groundGuides: [{ slug: "armering-vintertid", label: "armering vintertid" }, { slug: "armering-grund-pa-berg", label: "armering för grund på berg" }],
     faqs: [
       { q: "Levererar ni armering till industriprojekt i Sundsvall?", a: "Ja. Vi tillverkar klippt och bockad armering, armeringskorgar och nät efter konstruktionsritningen och levererar till arbetsplatsen. Frakt efter mängd och ort anges i offerten." },
     ],

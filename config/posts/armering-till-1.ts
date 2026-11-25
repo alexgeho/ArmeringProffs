@@ -1399,7 +1399,7 @@ export const armeringTill1: Post[] = [
 
       { type: "h2", text: "Logistik för stora golv" },
       { type: "p", text: "Leveranserna bör följa gjutordningen, med märkning per etapp och position, så att rätt armering finns på plats till varje gjutning utan att ytan blockeras av material – se [armering för byggentreprenörer](/armering-for-byggentreprenorer). Specialnät i projekterade format, med anpassade trådavstånd och utstickande trådar vid skarvar, ger färre överlapp och mindre spill än standardnät." },
-      { type: "p", text: "Projekt i Norrland och på orter långt från större städer kräver samma planering. Vi levererar i hela Sverige, och frakten räknas efter mängd och ort." },
+      { type: "p", text: "Projekt i Norrland – till exempel [armering i Sundsvall](/armering/sundsvall) och [armering i Umeå](/armering/umea) – och på orter långt från större städer kräver samma planering. Vi levererar i hela Sverige, och frakten räknas efter mängd och ort." },
       { type: "h2", text: "Från ritning till leverans" },
       { type: "ol", items: [
         "Konstruktören dimensionerar golvet efter laster, mark och sprickkrav.",

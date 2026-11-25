@@ -206,7 +206,7 @@ export const armeringTill2: Post[] = [
       { type: "h2", text: "Platta eller brunn – vad passar?" },
       { type: "p", text: "Fastgödsel från djupströbädd och hästgödsel lagras ofta på platta, medan flytgödsel från lösgödselsystem kräver brunn. Många gårdar har båda. Plattan är enklare att armera men tar större yta och behöver uppsamling av lakvatten. Brunnen kräver mer armering per kubikmeter men rymmer mycket på liten yta. Volymen styrs av antal djur och lagringstid, och dimensioneras tillsammans med rådgivare och konstruktör." },
       { type: "h2", text: "Skicka ritningen – få ringarna färdigbockade"  },
-      { type: "p", text: "Ange brunnens innerradie och väggtjocklek, eller skicka konstruktörens ritning via [offertformuläret](/offert). Ringarna bockas i delar efter radien, märks per höjdnivå och levereras tillsammans med bottennät och startjärn. Frakten räknas efter mängd och ort."  },
+      { type: "p", text: "Ange brunnens innerradie och väggtjocklek, eller skicka konstruktörens ritning via [offertformuläret](/offert). Ringarna bockas i delar efter radien med [bågbockning](/produkter/3d-bockning), märks per höjdnivå och levereras tillsammans med bottennät och startjärn. Frakten räknas efter mängd och ort."  },
     ],
     faqs: [
       { q: "Hur armeras en gödselbrunn?", a: "Med horisontell ringarmering som tar upp gödseltrycket, tätare längst ner, samt vertikal armering och en armerad bottenplatta. Förbindelsen botten–vägg är kritisk. Konstruktören dimensionerar." },
@@ -547,7 +547,7 @@ export const armeringTill2: Post[] = [
       "stolpfundament armeringskorg",
     ],
     content: [
-      { type: "p", text: "Ett stolpfundament är ett litet punktfundament som bär en enskild stolpe – till en carport, ett skärmtak, en pergola, ett plank, en grind eller en belysningsstolpe. Till skillnad från en plint under en byggnad tar stolpfundamentet ofta mer moment än vertikal last: vinden vill välta stolpen, och fundamentet ska hålla emot."  },
+      { type: "p", text: "Ett stolpfundament är ett litet punktfundament som bär en enskild stolpe – till en carport, ett skärmtak, en pergola, ett plank, en grind eller en belysningsstolpe – ett staket av stående kamstänger beskrivs i stället under [staket av armeringsjärn](/armeringsjarn-staket). Till skillnad från en plint under en byggnad tar stolpfundamentet ofta mer moment än vertikal last: vinden vill välta stolpen, och fundamentet ska hålla emot."  },
       { type: "p", text: "Har du många fundament är färdiga [plintkorgar](/produkter/plintkorgar) det snabbaste sättet att få rätt armering i varje gjutning – så levererar vi till [markentreprenörer](/armering-for-markentreprenorer), med korgarna märkta per fundamenttyp. Plintar under hus och attefallshus beskrivs i guiden om [armering till plintar](/blogg/armering-till-plintar)."  },
 
       { type: "h2", text: "Typlösningar"  },
@@ -791,7 +791,7 @@ export const armeringTill2: Post[] = [
       { type: "p", text: "Planera genomföringarna tidigt. Ett rör som gjuts in med flänsar eller tätningsringar blir tätt; ett hål som borras i efterhand skär av armeringsjärn och blir en svag punkt. Och tanken provtrycks med vatten innan den tas i bruk – en läckande gjutfog är dyr att laga i efterhand." },
 
       { type: "h2", text: "Ringar, hörnjärn och startjärn efter ritning"  },
-      { type: "p", text: "Skicka tankens armeringsritning eller bockningslista via [offertformuläret](/offert). Ringarna bockas efter radien och märks per höjdnivå, hörn- och startjärn per position. Vi levererar på samma sätt som till bassänger – se [poolarmering](/produkter/poolarmering)."  },
+      { type: "p", text: "Skicka tankens armeringsritning eller bockningslista via [offertformuläret](/offert). Ringarna bockas efter radien med [bågbockning](/produkter/3d-bockning) och märks per höjdnivå, hörn- och startjärn per position. Vi levererar på samma sätt som till bassänger – se [poolarmering](/produkter/poolarmering)."  },
     ],
     faqs: [
       { q: "Hur armeras en rund betongtank?", a: "Med horisontell ringarmering som tar vätsketrycket, tätare längst ner, vertikal armering och en armerad botten med startjärn upp i väggen. Konstruktören dimensionerar." },
@@ -914,7 +914,7 @@ export const armeringTill2: Post[] = [
       { type: "p", text: "I mitten av fundamentet sitter en bultkorg eller ett ankarsystem som tornet skruvas fast i. Den levereras normalt via turbinleverantören och placeras först. Armeringen ska sedan läggas runt och genom korgen utan att krocka med bultarna – därför är exakta mått och tydlig märkning avgörande."  },
 
       { type: "h2", text: "Utmattning och kvalitet"  },
-      { type: "p", text: "Vindlasten växlar miljontals gånger under fundamentets livslängd, så konstruktionen kontrolleras för utmattning. Det ställer krav på materialet och på utförandet: kamstål B500B enligt SS 212540 och SS-EN 10080, bockningsradier enligt ritning och skarvar på angivna lägen. Eventuell svetsning ska ske enligt SS-EN ISO 17660 och vara godkänd av konstruktören."  },
+      { type: "p", text: "Vindlasten växlar miljontals gånger under fundamentets livslängd, så konstruktionen kontrolleras för utmattning. Det ställer krav på materialet och på utförandet: kamstål B500B enligt SS 212540 och SS-EN 10080, bockningsradier enligt ritning och skarvar på angivna lägen. Eventuell svetsning ska ske enligt SS-EN ISO 17660 och vara godkänd av konstruktören. Rumsbockade former och bågformade järn till runda fundament tillverkas med [3D-bockning](/produkter/3d-bockning)."  },
 
       { type: "h2", text: "Logistik till vindparken"  },
       { type: "p", text: "Vindparker ligger ofta på skogsvägar långt från tätort, och gjutningarna styrs av väder och kranplanering. Det som gör skillnad för entreprenören:"  },

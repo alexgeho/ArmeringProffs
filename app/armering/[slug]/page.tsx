@@ -112,6 +112,13 @@ export default async function CityPage({
         <div className="prose-body mt-6 max-w-3xl">
           <p>{c.intro2}</p>
           {c.ground && <p>{c.ground}</p>}
+          {c.groundGuides && c.groundGuides.length === 2 && (
+            <p>
+              Läs mer i guiderna om{" "}
+              <Link href={`/blogg/${c.groundGuides[0].slug}`} className={inlineLink}>{c.groundGuides[0].label}</Link> och{" "}
+              <Link href={`/blogg/${c.groundGuides[1].slug}`} className={inlineLink}>{c.groundGuides[1].label}</Link>.
+            </p>
+          )}
         </div>
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {products.map((p) => (

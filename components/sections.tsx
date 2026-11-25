@@ -135,9 +135,9 @@ export function Hero({
 
 /* ---------- USP / trust bar ---------- */
 const usps = [
-  { img: "usp-prefab", title: "Prefab-tillverkning", text: "Kapat, bockat och svetsat efter din bockningslista." },
-  { img: "usp-ritning", title: "Efter ritning", text: "Vi tillverkar på mått enligt konstruktionsritning." },
-  { img: "usp-leverans", title: "Korta leveranstider", text: "Snabb leverans till bygget i hela Sverige – vi håller både pris och leveranstid." },
+  { img: "usp-prefab", title: "Prefab-tillverkning", text: "Kapat, bockat och svetsat efter din bockningslista – märkt per position." },
+  { img: "usp-ritning", title: "Efter ritning", text: "Offerten anger mängd per dimension, bearbetning och frakt var för sig." },
+  { img: "usp-leverans", title: "Ingen fast fraktavgift", text: "Frakten räknas efter mängd och ort – även små beställningar levereras i hela Sverige." },
   { img: "usp-montage", title: "Montage & rådgivning", text: "Vi kan även lägga armeringen och hjälpa dig rätt." },
 ];
 
