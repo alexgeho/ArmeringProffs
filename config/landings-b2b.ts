@@ -107,10 +107,10 @@ export const b2bLandings: Service[] = [
   {
     slug: "armering-for-prefabindustri",
     name: "Armering för prefabindustri",
-    h1: "Armering för betongelementfabriker – extra kapacitet när det behövs",
+    h1: "Armering för prefabindustri och betongelement – extra kapacitet när det behövs",
     metaTitle: "Armering för prefabindustri och betongelement",
     metaDescription:
-      "Korgar, byglar och specialnät till betongelementfabriker, märkta per element och levererade efter gjutplanen. Lägg ut toppar eller serier.",
+      "Armering för prefabindustri och betongelement: korgar, byglar och specialnät märkta per element och levererade efter gjutplanen. Toppar eller serier.",
     intro:
       "Har er armeringshall inte kapacitet för toppen i produktionen? Vi tillverkar korgar, byglar och specialnät i kamstål B500B efter era elementritningar, märker per element och levererar efter gjutplanen.",
     keywords: [
@@ -158,10 +158,10 @@ export const b2bLandings: Service[] = [
   {
     slug: "armering-for-husfabriker",
     name: "Armering för husfabriker",
-    h1: "Grundarmering för husfabriker – ett paket per hus",
+    h1: "Armering för husfabriker – ett grundpaket per hus",
     metaTitle: "Armering för husfabriker – grundpaket per hus",
     metaDescription:
-      "Grundarmering per hus för husfabriker och småhusproducenter: korgar, nät och distanser, packat och märkt per hus och levererat till tomten. Begär offert.",
+      "Armering för husfabriker och småhusproducenter: grundarmering per hus med korgar, nät och distanser, märkt per hus och levererat till tomten.",
     intro:
       "Samma husmodell, ny tomt varje vecka. Vi gör ett grundpaket per hus med kantbalkskorgar, nät, hörnjärn och distanser, märkt och packat per hus och levererat direkt till tomten.",
     keywords: [
@@ -309,10 +309,10 @@ export const b2bLandings: Service[] = [
   {
     slug: "armering-for-konstruktorer",
     name: "Armering för konstruktörer",
-    h1: "För konstruktörer – vi tillverkar det ni ritar",
+    h1: "Armering för konstruktörer – vi tillverkar det ni ritar",
     metaTitle: "Armering för konstruktörer – prefab ur ritning",
     metaDescription:
-      "Konstruktör? Vi tillverkar prefab armering i B500B direkt från er ritning, med era positionsnummer, och frågar innan vi bockar om något är oklart.",
+      "Armering för konstruktörer: prefab armering i B500B direkt från er ritning, med era positionsnummer – vi frågar innan vi bockar om något är oklart.",
     intro:
       "Ni ritar armeringen, vi tillverkar den utan att ändra något. Varje bunt får era positionsnummer, och är något oklart frågar vi innan vi bockar.",
     keywords: [
@@ -360,10 +360,10 @@ export const b2bLandings: Service[] = [
   {
     slug: "armering-offentlig-upphandling",
     name: "Armering i offentlig upphandling",
-    h1: "Armering till offentliga projekt – med dokumentationen klar",
+    h1: "Armering i offentlig upphandling – med dokumentationen klar",
     metaTitle: "Armering i offentlig upphandling – offert",
     metaDescription:
-      "Armering till skolor, vårdbyggnader, broar och VA: prefab i B500B efter förfrågningsunderlaget, med 3.1-certifikat och EPD. Få pris till anbudet.",
+      "Armering i offentlig upphandling: skolor, vårdbyggnader, broar och VA – prefab i B500B efter förfrågningsunderlaget, med 3.1-certifikat och EPD.",
     intro:
       "Lämnar ni anbud på ett offentligt projekt? Vi räknar armeringen ur förfrågningsunderlaget, så att ni har ett pris att lägga in. Materialcertifikat 3.1 och EPD levereras med armeringen.",
     keywords: [

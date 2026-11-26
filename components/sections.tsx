@@ -245,6 +245,7 @@ export function Process() {
               <Image
                 src={`/images/illustrationer/${s.img}.webp`}
                 alt=""
+                aria-hidden="true"
                 width={1280}
                 height={720}
                 sizes="(min-width: 768px) 270px, 100vw"

@@ -288,6 +288,7 @@ export function Card({
           <Image
             src={image.src}
             alt={image.alt}
+            aria-hidden={image.alt ? undefined : true}
             width={1280}
             height={720}
             sizes={image.sizes}

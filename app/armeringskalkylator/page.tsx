@@ -8,13 +8,14 @@ import { FaqAccordion } from "@/components/FaqAccordion";
 import type { Faq } from "@/config/faq";
 import { JsonLd, breadcrumbSchema, faqSchema } from "@/lib/jsonld";
 import { DIAMETERS, fmt, kgPerM } from "@/lib/rebar-calc";
+import { OG_IMAGES } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Armeringskalkylator – nät, kamjärn & vikt",
   description:
     "Räkna armering till betongplatta: antal nät, kamjärn c/c, löpmeter och vikt i kg – plus vikt per meter Ø6–Ø32. Begär offert direkt på beräkningen.",
   alternates: { canonical: "/armeringskalkylator" },
-  openGraph: {
+  openGraph: { images: OG_IMAGES,
     title: `Armeringskalkylator – nät, kamjärn och vikt | ${site.company}`,
     description:
       "Fyll i måtten och få antal armeringsnät, kamjärn c/c, löpmeter och vikt. Begär offert direkt på din beräkning.",

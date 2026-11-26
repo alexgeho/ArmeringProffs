@@ -6,8 +6,7 @@ export const guider2: Post[] = [
     slug: "armering-kg-per-m3",
     title: "Armering kg per m³ betong – riktvärden per konstruktionsdel",
     metaTitle: "Armering kg per m³ betong – riktvärden",
-    metaDescription:
-      "Hur många kg armering går det åt per m³ betong? Riktvärden för platta, grundbalk, plintar, väggar, bjälklag, balkar och pelare – och hur du räknar själv.",
+    metaDescription: "Armering kg per m³ betong: riktvärden för platta, grundbalk, plintar, väggar, bjälklag, balkar och pelare – och hur du räknar själv.",
     excerpt:
       "Kg armering per kubikmeter betong är ett snabbt sätt att uppskatta mängd och kostnad tidigt i ett projekt. Här är riktvärden per konstruktionsdel och hur du räknar fram din egen siffra.",
     date: "2026-10-09",
@@ -97,8 +96,7 @@ export const guider2: Post[] = [
     slug: "kontroll-fore-gjutning-armering",
     title: "Kontroll av armering före gjutning – checklista",
     metaTitle: "Kontroll av armering före gjutning – checklista",
-    metaDescription:
-      "Checklista för armeringskontroll före gjutning: dimensioner, c/c, täckskikt, distanser, skarvar, förankring, najning och dokumentation enligt SS-EN 13670.",
+    metaDescription: "Kontroll av armering före gjutning: dimensioner, c/c, täckskikt, distanser, skarvar, förankring, najning och dokumentation enligt SS-EN 13670.",
     excerpt:
       "När betongen väl är i formen går det inte att rätta armeringen. Med en enkel checklista före gjutning hittar du felen medan de fortfarande är lätta att åtgärda.",
     date: "2026-10-09",
@@ -181,8 +179,7 @@ export const guider2: Post[] = [
     slug: "lagring-hantering-armering",
     title: "Lagring och hantering av armering på bygget",
     metaTitle: "Lagring och hantering av armering på bygget",
-    metaDescription:
-      "Så lagrar och hanterar du armering på bygget: underlag, sortering per position, rost, lyft av nät och korgar samt säkerhet. Praktisk guide för bygget.",
+    metaDescription: "Lagring och hantering av armering på bygget: underlag, sortering per position, rost, lyft av nät och korgar samt säkerhet – praktisk guide.",
     excerpt:
       "Armering som ligger i lera, blandas ihop eller skadas vid lyft kostar tid och pengar. Så lagrar och hanterar du armeringen från leverans till montage.",
     date: "2026-10-09",
@@ -424,8 +421,7 @@ export const guider2: Post[] = [
     slug: "ce-markning-certifikat-armering",
     title: "CE-märkning och certifikat för armering – vad ska du fråga efter?",
     metaTitle: "CE-märkning och certifikat för armering",
-    metaDescription:
-      "Är armering CE-märkt? Vilka certifikat och intyg ska du be om – B500B enligt SS 212540, 3.1-intyg, svetsning enligt SS-EN ISO 17660 och spårbarhet.",
+    metaDescription: "CE-märkning och certifikat för armering: vilka intyg ska du be om – B500B enligt SS 212540, 3.1-intyg, svetsning enligt SS-EN ISO 17660, spårbarhet.",
     excerpt:
       "Många köpare frågar efter CE-märkning på armering – men för armeringsstål fungerar det annorlunda än för de flesta byggprodukter. Här är vilka intyg du faktiskt ska be om.",
     date: "2026-10-09",
@@ -505,8 +501,7 @@ export const guider2: Post[] = [
     slug: "armeringsplan-villa",
     title: "Armeringsplan för villa – steg för steg från ritning till gjutning",
     metaTitle: "Armeringsplan för villa – steg för steg",
-    metaDescription:
-      "Så armerar du en villagrund: konstruktionsritning, armeringsspecifikation, offert, leverans, montage och kontroll – steg för steg för dig som bygger hus.",
+    metaDescription: "Armeringsplan för villa: konstruktionsritning, armeringsspecifikation, offert, leverans, montage och kontroll – steg för steg för dig som bygger hus.",
     excerpt:
       "Från grundritning till färdig gjutning: här är stegen för att planera armeringen till en villagrund, vem som gör vad och vad du behöver ha klart innan du beställer.",
     date: "2026-10-09",
@@ -767,8 +762,7 @@ export const guider2: Post[] = [
     slug: "tackskikt-exponeringsklass",
     title: "Täckskikt per exponeringsklass – tabell XC, XD, XS och XF",
     metaTitle: "Täckskikt per exponeringsklass – tabell",
-    metaDescription:
-      "Minsta täckskikt för armering per exponeringsklass XC1–XC4, XD, XS och XF enligt Eurokod 2 och EKS, för livslängd L50 och L100. Med exempel och tolerans.",
+    metaDescription: "Täckskikt per exponeringsklass XC1–XC4, XD, XS och XF enligt Eurokod 2 och EKS, för livslängd L50 och L100. Med exempel och tolerans.",
     excerpt:
       "Hur stort täckskikt armeringen behöver beror på miljön betongen står i. Här är exponeringsklasserna och tabellen över minsta täckskikt enligt svensk tillämpning av Eurokod 2.",
     date: "2026-10-09",
@@ -963,8 +957,7 @@ export const guider2: Post[] = [
     slug: "prefab-eller-bocka-sjalv",
     title: "Prefab armering eller bocka själv – vad blir billigast?",
     metaTitle: "Prefab armering eller bocka själv – jämförelse",
-    metaDescription:
-      "Lönar det sig att bocka armering själv eller köpa prefab? Jämför materialspill, arbetstid, verktyg, felrisk och logistik – och räkna på ditt eget projekt.",
+    metaDescription: "Prefab armering eller bocka själv? Jämför materialspill, arbetstid, verktyg, felrisk och logistik – och räkna på vad som lönar sig i ditt projekt.",
     excerpt:
       "Raka järn är billigare per kilo än färdigbockade – men kilopriset är bara en del av kostnaden. Så jämför du prefab armering med att kapa och bocka själv på bygget.",
     date: "2026-10-09",
@@ -1285,8 +1278,7 @@ export const guider2: Post[] = [
     slug: "vanliga-fel-armering",
     title: "Vanliga fel vid armering – och hur du undviker dem",
     metaTitle: "Vanliga fel vid armering – så undviker du dem",
-    metaDescription:
-      "De vanligaste felen vid armering: för litet täckskikt, för korta skarvar, saknade hörnjärn, fel bockning och dålig najning. Så undviker du dem på bygget.",
+    metaDescription: "Vanliga fel vid armering: för litet täckskikt, för korta skarvar, saknade hörnjärn, fel bockning och dålig najning. Så undviker du dem på bygget.",
     excerpt:
       "De flesta armeringsfel är små och lätta att undvika – men dyra när betongen väl är gjuten. Här är de vanligaste felen, från planering till gjutning.",
     date: "2026-10-09",

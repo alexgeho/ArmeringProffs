@@ -7,6 +7,8 @@ import { ViktKalkylator } from "@/components/SmaKalkylatorer";
 import { FaqAccordion } from "@/components/FaqAccordion";
 import type { Faq } from "@/config/faq";
 import { JsonLd, breadcrumbSchema, faqSchema } from "@/lib/jsonld";
+import { OG_IMAGES } from "@/lib/seo";
+import { SourceNote } from "@/components/SourceNote";
 
 const path = "/viktkalkylator";
 const name = "Viktkalkylator armeringsjärn";
@@ -14,9 +16,9 @@ const name = "Viktkalkylator armeringsjärn";
 export const metadata: Metadata = {
   title: "Viktkalkylator armeringsjärn – räkna kg",
   description:
-    "Räkna vikten på armeringsjärn: välj dimension Ø6–Ø32, längd och antal stänger och få löpmeter och total vikt i kg. Beställ kamstål B500B direkt.",
+    "Viktkalkylator armeringsjärn: välj dimension Ø6–Ø32, längd och antal stänger och få löpmeter och total vikt i kg. Beställ kamstål B500B direkt.",
   alternates: { canonical: path },
-  openGraph: {
+  openGraph: { images: OG_IMAGES,
     title: `${name} | ${site.company}`,
     description: "Dimension, längd och antal – få total vikt i kg för kamstål B500B.",
     url: `${site.url}${path}`,
@@ -83,6 +85,7 @@ export default function ViktkalkylatorPage() {
         <div className="mt-10">
           <FaqAccordion items={faqs} />
         </div>
+        <SourceNote id="kamstal" className="mt-8" />
       </Section>
 
       <CtaBanner />

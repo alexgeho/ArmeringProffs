@@ -43,9 +43,8 @@ const basePosts: Post[] = [
   {
     slug: "armering-till-betongplatta",
     title: "Armering till betongplatta – vilken typ och hur mycket?",
-    metaTitle: "Armering betongplatta – typ & mängd",
-    metaDescription:
-      "Vilken armering behöver betongplattan och hur mycket går åt? Nät, kantjärn, täckskikt, överlapp och åtgång per m² – plus hur du får grundarmeringen färdig.",
+    metaTitle: "Armering till betongplatta – typ & mängd",
+    metaDescription: "Armering till betongplatta: vilken typ och hur mycket går åt? Nät, kantjärn, täckskikt, överlapp och åtgång per m² – plus färdig grundarmering.",
     excerpt:
       "Nät över ytan, kamstål i kanter och under bärande väggar. Riktvärden för dimension, åtgång och placering – och de fel som oftast gör att plattan spricker.",
     date: "2026-08-31",
@@ -329,10 +328,9 @@ const basePosts: Post[] = [
   },
   {
     slug: "armering-atgang-per-m2",
-    title: "Hur mycket armering går åt per m²?",
+    title: "Armeringsåtgång per m² – hur mycket armering går åt?",
     metaTitle: "Armeringsåtgång per m² – så räknar du",
-    metaDescription:
-      "Hur mycket armering går åt per m²? Räkna nät, kantjärn, byglar och distanser – med komplett exempel för en platta på 6 × 8 m. Få exakt mängd i offerten.",
+    metaDescription: "Armeringsåtgång per m²: räkna nät, kantjärn, byglar och distanser – med komplett exempel för en platta på 6 × 8 m. Få exakt mängd i offerten.",
     excerpt:
       "Tumregler för nät, kantjärn, byglar och distanser – och ett komplett räkneexempel för en platta på 6 × 8 m, från antal ark till kilo stål.",
     date: "2026-08-31",
@@ -473,10 +471,9 @@ const basePosts: Post[] = [
   },
   {
     slug: "klippt-bockad-armering",
-    title: "Klippt och bockad armering – vad är det?",
+    title: "Bockning av armering – så fungerar klippt och bockad armering",
     metaTitle: "Bockning av armering – klippt & bockad efter lista",
-    metaDescription:
-      "Klippt och bockad armering kapas och bockas i maskin efter din bockningslista och levereras märkt per position. Så går det till och vad du skickar.",
+    metaDescription: "Bockning av armering i maskin efter din bockningslista: klippt och bockad armering levereras märkt per position. Så går det till och vad du skickar.",
     excerpt:
       "Armeringsjärn som kapas och bockas i maskin efter bockningslistan och kommer buntade och märkta per position. Så går det till och vad du behöver skicka.",
     date: "2026-08-31",
@@ -556,8 +553,7 @@ const basePosts: Post[] = [
     slug: "armeringskorgar-palarmering",
     title: "Armeringskorg – typer och användning i pålar, pelare och balkar",
     metaTitle: "Armeringskorg för påle & pelare – typer och lyft",
-    metaDescription:
-      "Armeringskorgar för pålar, pelare, balkar och plintar: svetsad eller bunden, vad du anger vid beställning och hur korgen lyfts. Få offert efter ritning.",
+    metaDescription: "Armeringskorg för pålar, pelare, balkar och plintar: svetsad eller bunden, vad du anger vid beställning och hur korgen lyfts. Offert efter ritning.",
     excerpt:
       "Huvudjärn och byglar monterade till en färdig korg för påle, pelare, balk eller plint. Typer, svetsad eller bunden, och vad du anger när du beställer.",
     date: "2026-09-05",
@@ -639,8 +635,7 @@ const basePosts: Post[] = [
     slug: "bestalla-armering",
     title: "Beställa armering – så går det till steg för steg",
     metaTitle: "Beställa armering från leverantör – steg för steg",
-    metaDescription:
-      "Så beställer du prefabricerad armering från en leverantör: vad du skickar, vad offerten ska innehålla och hur leveransen går till. Offert på en arbetsdag.",
+    metaDescription: "Beställa armering från en leverantör: vad du skickar, vad offerten ska innehålla och hur leveransen går till. Offert på en arbetsdag.",
     excerpt:
       "Fyra steg från ritning till leverans – vad du skickar, vad en bra offert innehåller och vad du ska kontrollera innan du godkänner.",
     date: "2026-09-05",
@@ -703,9 +698,8 @@ const basePosts: Post[] = [
   {
     slug: "armering-till-garage",
     title: "Armering till garageplatta – så armerar du rätt",
-    metaTitle: "Armering garageplatta – så armerar du",
-    metaDescription:
-      "Garageplatta armeras oftast med nät 6150 och kamstål Ø10–12 i kantbalken. Dimensioner, port, vägsalt och åtgång – och offert på färdig grundarmering.",
+    metaTitle: "Armering till garageplatta – så armerar du",
+    metaDescription: "Armering till garageplatta: oftast nät 6150 och kamstål Ø10–12 i kantbalken. Dimensioner, port, vägsalt och åtgång – och offert på färdig grundarmering.",
     excerpt:
       "Nät 6150 över ytan, kamstål i kantbalken och extra järn vid porten. Dimensioner, åtgång för en platta på 6 × 6 m och det som skiljer garaget från en vanlig platta.",
     date: "2026-09-05",
@@ -836,9 +830,8 @@ const basePosts: Post[] = [
   {
     slug: "armering-till-plintar",
     title: "Armering till plintar och plintgrund",
-    metaTitle: "Armering plintar – plintgrund & plintkorg",
-    metaDescription:
-      "Hur armeras en plint? Plintkorg, bottenmatta och startjärn för altan, attefallshus, carport och stomme – plus när plintar kan gjutas utan armering.",
+    metaTitle: "Armering till plintar – plintgrund & plintkorg",
+    metaDescription: "Armering till plintar: plintkorg, bottenmatta och startjärn för altan, attefallshus, carport och stomme – plus när plintar kan gjutas utan armering.",
     excerpt:
       "Plintrör, plintsula eller fundament – hur de armeras, när armering kan utelämnas och vad du ska ange när du beställer färdiga plintkorgar.",
     date: "2026-09-05",
@@ -908,9 +901,8 @@ const basePosts: Post[] = [
   {
     slug: "armera-stodmur",
     title: "Armering till stödmur och L-stöd",
-    metaTitle: "Armering stödmur – så armeras L-stöd",
-    metaDescription:
-      "Så armeras en gjuten stödmur och ett L-stöd: huvudarmering på jordsidan, sulans armering, startjärn och täckskikt mot jord. Få offert på murens armering.",
+    metaTitle: "Armering till stödmur – så armeras L-stöd",
+    metaDescription: "Armering till stödmur och L-stöd: huvudarmering på jordsidan, sulans armering, startjärn och täckskikt mot jord. Få offert på murens armering.",
     excerpt:
       "Var dragkrafterna sitter i vägg, häl och tå, hur startjärnen förankras och de fel som får en stödmur att luta.",
     date: "2026-09-05",
@@ -1106,9 +1098,8 @@ const basePosts: Post[] = [
   {
     slug: "armering-till-betongtrappa",
     title: "Armering till betongtrappa – så armeras en gjuten trappa",
-    metaTitle: "Armering betongtrappa – så armeras den",
-    metaDescription:
-      "Så armeras en platsgjuten betongtrappa: huvudjärn i underkant, fördelningsjärn, förankring i bjälklag och vilplan. Få trappans armering färdigbockad.",
+    metaTitle: "Armering till betongtrappa – så armeras den",
+    metaDescription: "Armering till betongtrappa: huvudjärn i underkant, fördelningsjärn, förankring i bjälklag och vilplan. Få trappans armering färdigbockad.",
     excerpt:
       "En gjuten trappa mellan två plan fungerar som en lutande platta. Var huvudjärnen ska ligga, hur trappan förankras och de fel som ger sprickor.",
     date: "2026-09-08",
@@ -1165,9 +1156,8 @@ const basePosts: Post[] = [
   {
     slug: "armering-till-betonggolv",
     title: "Armering till betonggolv och industrigolv",
-    metaTitle: "Armering betonggolv – nät & fiber",
-    metaDescription:
-      "Hur armeras ett betonggolv? Nät, kamstål eller fiber – vad som passar golvet, var nätet ska ligga och hur sprickor styrs. Beställ nät till golvet.",
+    metaTitle: "Armering till betonggolv – nät & fiber",
+    metaDescription: "Armering till betonggolv: nät, kamstål eller fiber – vad som passar golvet, var nätet ska ligga och hur sprickor styrs. Beställ nät till golvet.",
     excerpt:
       "Nät, kamstål eller fiber? Vad som passar källar-, verkstads- och lagergolv, var nätet ska ligga i höjdled och hur sprickorna styrs.",
     date: "2026-09-08",
@@ -1646,7 +1636,7 @@ const basePosts: Post[] = [
 
   {
     slug: "lyftoglor-betong",
-    title: "Lyftögla i betong – material, dimension och placering",
+    title: "Lyftöglor i betong – material, dimension och placering",
     metaTitle: "Lyftöglor i betong – dimension & placering",
     metaDescription:
       "Lyftöglor i betong bockas av slätt rundstål, t.ex. S235 – inte kamstål. Dimension, förankring, placering och hur lyftvinkeln ökar kraften per ögla.",

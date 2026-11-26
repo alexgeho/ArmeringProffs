@@ -235,3 +235,10 @@ Under 1024 px visar headerraden alltid: logga → telefon (`tel:`-länk) → «B
 
 ## Temaväxling
 Knapp i headern (`components/ThemeToggle.tsx`) växlar ljust/mörkt och sparar valet i `localStorage` ("theme"). Skriptet `themeInitScript` i `<head>` sätter `data-theme` på `<html>` före första målning (sparat val, annars systemets läge) – ingen blink. CSS: `:root[data-theme="dark"]` + systemfallback; Tailwind `dark:` följer `data-theme`.
+
+## SEO-komponenter (26.11.2026, SEO-poäng ≥ 80 på alla sidor)
+- **Källrad `<SourceNote id="…" />`** (components/SourceNote.tsx): «Läs mer: [källa] (utgivare)» i `text-sm text-ink-soft`. Källor bara i `config/sources.ts` (Wikipedia, Boverket, Upphandlingsmyndigheten) – aldrig konkurrenter eller andra leverantörer. Sida → källa: `PAGE_SOURCE`; mallar: blogg, produkter, tjänster, landningssidor, orter, kalkylatorer.
+- FAQ-rubrik: «Vanliga frågor om <titelns första led>» (blogg), `faqTitle(h1)` = «Frågor och svar om <H1:s första led>» (produkter, tjänster, landningssidor).
+- Hero `bgAlt` = sidans ämne + vad fotot visar. Kortbilder utan alt (illustrationer) får `aria-hidden` automatiskt i `Card`.
+- Open Graph: sidor med eget `openGraph` skickar `images: OG_IMAGES` (lib/seo.ts → /opengraph-image).
+- Meta description börjar med/innehåller sidans sökord, 120–155 tecken. metaTitle och H1 använder samma fras («Armering till X»).

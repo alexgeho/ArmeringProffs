@@ -3,10 +3,11 @@ import Link from "next/link";
 import { site } from "@/config/site";
 import { Container } from "@/components/ui";
 import { Breadcrumbs } from "@/components/sections";
+import { SourceNote } from "@/components/SourceNote";
 
 export const metadata: Metadata = {
   title: "Villkor",
-  description: `Villkor för beställning och leverans av armering från ${site.company}.`,
+  description: `Villkor för beställning, leverans, betalning och reklamation av prefab armering från ${site.company} – det här gäller när du beställer.`,
   alternates: { canonical: "/villkor" },
 };
 
@@ -39,6 +40,11 @@ export default function VillkorPage() {
           konsumentköplagen (2022:260). Reklamation skickas till{" "}
           <a href={`mailto:${site.email}`} className="text-brand underline">{site.email}</a>.
         </p>
+        <p>
+          Har du frågor innan du beställer? Läs våra <Link href="/vanliga-fragor" className="text-brand underline">vanliga frågor</Link>{" "}
+          eller <Link href="/kontakt" className="text-brand underline">kontakta oss</Link>.
+        </p>
+        <SourceNote id="koplagen" />
       </Container>
     </>
   );

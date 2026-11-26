@@ -8,7 +8,7 @@ export const armeringTill2: Post[] = [
   {
     slug: "armering-till-lagerhall",
     title: "Armering till lagerhall – grund, golv och pelarfundament",
-    metaTitle: "Armering lagerhall – grund, golv & fundament",
+    metaTitle: "Armering till lagerhall – grund, golv & fundament",
     metaDescription:
       "Armering till lagerhall: pelarfundament, kantbalkar och golv för truck och ställage. Typlösningar, mängdexempel och leverans per etapp. Begär offert.",
     excerpt:
@@ -87,7 +87,7 @@ export const armeringTill2: Post[] = [
   {
     slug: "armering-till-stallgolv",
     title: "Armering till stallgolv och ladugård",
-    metaTitle: "Armering stallgolv – ladugård & djurstall",
+    metaTitle: "Armering till stallgolv – ladugård & djurstall",
     metaDescription:
       "Armering till stallgolv och ladugård: gångar, foderbord, gödselkanaler. Täckskikt i aggressiv miljö och mängdexempel. Skicka ritningen för offert.",
     excerpt:
@@ -152,7 +152,7 @@ export const armeringTill2: Post[] = [
   {
     slug: "armering-till-godselplatta",
     title: "Armering till gödselplatta och gödselbrunn",
-    metaTitle: "Armering gödselplatta & gödselbrunn",
+    metaTitle: "Armering till gödselplatta och gödselbrunn",
     metaDescription:
       "Armering till gödselplatta och gödselbrunn: ringarmering, botten, kantmurar och täthet enligt SS-EN 1992-3. Vi bockar ringar efter ritning – begär offert.",
     excerpt:
@@ -222,9 +222,8 @@ export const armeringTill2: Post[] = [
   {
     slug: "armering-till-garageuppfart",
     title: "Armering till garageuppfart och ramp i betong",
-    metaTitle: "Armering garageuppfart & ramp i betong",
-    metaDescription:
-      "Vilket nät till garageuppfarten? Tjocklek, nät per fordonstyp, fogar och åtgång för 18–60 m². Beställ armeringsnät med distanser – leverans i hela Sverige.",
+    metaTitle: "Armering till garageuppfart och ramp i betong",
+    metaDescription: "Armering till garageuppfart och ramp i betong: tjocklek, nät per fordonstyp, fogar och åtgång för 18–60 m². Leverans med distanser i hela Sverige.",
     excerpt:
       "En gjuten uppfart utsätts för bilar, frost och vägsalt. Rätt nät på rätt höjd och väl placerade fogar gör att den håller sig hel.",
     date: D,
@@ -296,7 +295,7 @@ export const armeringTill2: Post[] = [
   {
     slug: "armering-till-pelare",
     title: "Armering till betongpelare – längsjärn, byglar och regler",
-    metaTitle: "Armering betongpelare – längsjärn & byglar",
+    metaTitle: "Armering till betongpelare – längsjärn & byglar",
     metaDescription:
       "Armering till betongpelare: minsta antal längsjärn, bygelavstånd enligt Eurokod 2, startjärn och skarvar. Med räkneexempel. Beställ färdiga pelarkorgar.",
     excerpt:
@@ -374,7 +373,7 @@ export const armeringTill2: Post[] = [
   {
     slug: "armering-till-balk",
     title: "Armering till betongbalk – huvudjärn, byglar och minimiregler",
-    metaTitle: "Armering betongbalk – huvudjärn & byglar",
+    metaTitle: "Armering till betongbalk – huvudjärn & byglar",
     metaDescription:
       "Armering till betongbalk: underkantsjärn, byglar och minimiarmering enligt Eurokod 2 med räkneexempel. Färdiga balkkorgar efter ritning – begär offert.",
     excerpt:
@@ -452,7 +451,7 @@ export const armeringTill2: Post[] = [
   {
     slug: "armering-till-hissgrop",
     title: "Armering till hissgrop – botten, väggar och täthet",
-    metaTitle: "Armering hissgrop – botten, väggar & täthet",
+    metaTitle: "Armering till hissgrop – botten, väggar & täthet",
     metaDescription:
       "Armering till hissgrop: botten, dubbelsidiga väggar, hörnjärn och tätade fogar. Typiska mått och vanliga misstag. Beställ armeringen märkt per position.",
     excerpt:
@@ -530,7 +529,7 @@ export const armeringTill2: Post[] = [
   {
     slug: "armering-till-stolpfundament",
     title: "Armering till stolpfundament – carport, staket och skärmtak",
-    metaTitle: "Armering stolpfundament – typlösning & mått",
+    metaTitle: "Armering till stolpfundament – typlösning & mått",
     metaDescription:
       "Armering till stolpfundament för carport, staket och skärmtak: typisk korg, rörmått, frostdjup och räkneexempel. Beställ färdiga korgar efter dina mått.",
     excerpt:
@@ -600,7 +599,7 @@ export const armeringTill2: Post[] = [
   {
     slug: "armering-till-murfundament",
     title: "Armering till murfundament – sula under mur och plank",
-    metaTitle: "Armering murfundament – sula under mur",
+    metaTitle: "Armering till murfundament – sula under mur",
     metaDescription:
       "Armering till murfundament: sulmått, längsjärn, tvärjärn och startjärn för blockmur och trädgårdsmur, med mängdexempel. Beställ järnen kapade och bockade.",
     excerpt:
@@ -668,7 +667,7 @@ export const armeringTill2: Post[] = [
   {
     slug: "armering-till-yttertrappa",
     title: "Armering till yttertrappa och entrétrappa på mark",
-    metaTitle: "Armering yttertrappa – trappa på mark",
+    metaTitle: "Armering till yttertrappa – trappa på mark",
     metaDescription:
       "Armering till yttertrappa på mark: nät, bockade stegjärn, järn i stegnosen och tjälskydd. Exempel för tre steg. Skicka måtten – vi bockar järnen.",
     excerpt:
@@ -740,9 +739,8 @@ export const armeringTill2: Post[] = [
   {
     slug: "armering-till-betongtank",
     title: "Armering till brunn och tank i betong",
-    metaTitle: "Armering betongtank & brunn – tät konstruktion",
-    metaDescription:
-      "Armering till betongtank och brunn: ringdrag, sprickbredd enligt SS-EN 1992-3, botten mot grundvatten och räkneexempel. Ringar bockade efter radie.",
+    metaTitle: "Armering till brunn och tank i betong – täthet",
+    metaDescription: "Armering till brunn och tank i betong: ringdrag, sprickbredd enligt SS-EN 1992-3, botten mot grundvatten och räkneexempel. Ringar bockade efter radie.",
     excerpt:
       "En tank eller brunn i betong ska hålla vätska inne och grundvatten ute. Armeringens uppgift är att hålla sprickorna så små att konstruktionen förblir tät.",
     date: D,
@@ -807,7 +805,7 @@ export const armeringTill2: Post[] = [
   {
     slug: "armering-till-maskinfundament",
     title: "Armering till maskinfundament i industrin",
-    metaTitle: "Armering maskinfundament – industri",
+    metaTitle: "Armering till maskinfundament – industri",
     metaDescription:
       "Armering till maskinfundament: ytarmering mot temperatursprickor, järn kring bultgrupper och vikt per m². Tillverkad efter ritning, märkt per position.",
     excerpt:
@@ -874,7 +872,7 @@ export const armeringTill2: Post[] = [
   {
     slug: "armering-till-vindkraftsfundament",
     title: "Armering till vindkraftsfundament",
-    metaTitle: "Armering vindkraftsfundament – typer & logistik",
+    metaTitle: "Armering till vindkraftsfundament – typer & logistik",
     metaDescription:
       "Armering till vindkraftsfundament: radial- och ringarmering, bultkorg, utmattning, vikter Ø20–Ø32. Leverans per fundament till vindparker i hela Sverige.",
     excerpt:
@@ -948,7 +946,7 @@ export const armeringTill2: Post[] = [
   // 73. Grund för hus på berg
   {
     slug: "armering-grund-pa-berg",
-    title: "Armering till grund för hus på berg",
+    title: "Grund på berg – armering till platta, kantbalk och dymlingar",
     metaTitle: "Grund på berg – armering & dymlingar",
     metaDescription:
       "Grund på berg: platta på avjämnat berg, kantbalk med varierande höjd eller plintar – och dymlingar borrade i berget. Beställ grundarmeringen efter ritning.",
@@ -1021,9 +1019,8 @@ export const armeringTill2: Post[] = [
   {
     slug: "armering-platta-pa-palar",
     title: "Armering till platta på pålar",
-    metaTitle: "Armering platta på pålar – pålplintar & balkar",
-    metaDescription:
-      "Platta på pålar: armering i över- och underkant, pålplintar, grundbalkar och genomstansning. När plintkorgarna ska beställas. Begär offert på pålarmering.",
+    metaTitle: "Armering till platta på pålar – pålplintar & balkar",
+    metaDescription: "Armering till platta på pålar: över- och underkant, pålplintar, grundbalkar och genomstansning – och när plintkorgarna ska beställas.",
     excerpt:
       "På lös lera bärs huset av pålar i stället för av marken. Plattan blir då ett bjälklag över pålarna – och armeras därefter.",
     date: D,

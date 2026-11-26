@@ -6,13 +6,14 @@ import { Section, SectionHeading, Button, cardClass } from "@/components/ui";
 import { Breadcrumbs, CtaBanner } from "@/components/sections";
 import { IconArrow, IconClock } from "@/components/icons";
 import { JsonLd, breadcrumbSchema } from "@/lib/jsonld";
+import { OG_IMAGES } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Guider om armering",
   description:
     "Guider om armering: armeringsnät, armeringsjärn och dimensioner, klippt & bockad armering, täckskikt och hur mycket armering som går åt.",
   alternates: { canonical: "/blogg" },
-  openGraph: {
+  openGraph: { images: OG_IMAGES,
     title: `Guider om armering | ${site.company}`,
     description: "Praktiska guider om armering, armeringsnät, kamstål, klippt & bockad armering och distanser.",
     url: `${site.url}/blogg`,

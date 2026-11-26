@@ -1,16 +1,18 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { site } from "@/config/site";
 import { Section, SectionHeading } from "@/components/ui";
 import { Breadcrumbs } from "@/components/sections";
 import { ContactForm } from "@/components/ContactForm";
 import { IconPhone, IconMail, IconMapPin, IconClock } from "@/components/icons";
 import { JsonLd, breadcrumbSchema } from "@/lib/jsonld";
+import { OG_IMAGES } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Kontakt",
-  description: `Kontakta ${site.company} för offert på prefab armering – klippt & bockad, korgar och nät. Ring ${site.phone} eller skicka din bockningslista.`,
+  description: `Kontakt för offert på prefab armering – klippt & bockad, korgar och nät. Ring ${site.phone} eller skicka din bockningslista till ${site.company}.`,
   alternates: { canonical: "/kontakt" },
-  openGraph: {
+  openGraph: { images: OG_IMAGES,
     title: `Kontakt | ${site.company}`,
     description: "Kontakta oss för offert på prefab armering i hela Sverige.",
     url: `${site.url}/kontakt`,
@@ -27,7 +29,7 @@ export default function KontaktPage() {
             <SectionHeading
               as="h1"
               eyebrow="Kontakt"
-              title="Kontakta oss om prefab armering"
+              title="Kontakt – offert på prefab armering"
               intro="Ring oss eller fyll i formuläret så återkommer vi med en kostnadsfri offert. Vi bokar gärna ett platsbesök."
             />
             <ul className="mt-8 space-y-5">
@@ -69,7 +71,12 @@ export default function KontaktPage() {
                 </div>
               </li>
             </ul>
-            <p className="mt-8 text-sm text-muted">
+            <p className="mt-8 text-ink-soft">
+              Vill du räkna själv först? Testa <Link href="/armeringskalkylator" className="text-brand underline">armeringskalkylatorn</Link>,
+              se våra <Link href="/produkter" className="text-brand underline">produkter</Link> eller läs{" "}
+              <Link href="/vanliga-fragor" className="text-brand underline">vanliga frågor</Link>.
+            </p>
+            <p className="mt-6 text-sm text-muted">
               {site.company} drivs av {site.legalName} · Reg.nr {site.regNumber} · VAT {site.vat}
             </p>
           </div>

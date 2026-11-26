@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { landings, getLanding } from "@/config/landings";
 import { site } from "@/config/site";
-import { fitTitle } from "@/lib/title";
+import { fitTitle, faqTitle } from "@/lib/title";
+import { SourceNote } from "@/components/SourceNote";
+import { sourceFor } from "@/config/sources";
 import { Section, SectionHeading, Panel, CheckList, ArrowLink, DataTable } from "@/components/ui";
 import { Breadcrumbs, CtaBanner, Process, PhotoHero } from "@/components/sections";
 import { FaqAccordion } from "@/components/FaqAccordion";
@@ -10,6 +12,7 @@ import { JsonLd, serviceSchema, faqSchema, breadcrumbSchema } from "@/lib/jsonld
 import { bodyNodes } from "@/components/BodySections";
 import { foto } from "@/lib/foto";
 import { relatedGuides } from "@/lib/related";
+import { OG_IMAGES } from "@/lib/seo";
 
 export const dynamicParams = false;
 
@@ -30,7 +33,7 @@ export async function generateMetadata({
     description: l.metaDescription,
     keywords: l.keywords,
     alternates: { canonical: `/${l.slug}` },
-    openGraph: { title: l.metaTitle, description: l.metaDescription, url: `${site.url}/${l.slug}` },
+    openGraph: { images: OG_IMAGES, title: l.metaTitle, description: l.metaDescription, url: `${site.url}/${l.slug}` },
   };
 }
 
@@ -54,7 +57,7 @@ export default async function LandingPage({
         intro={l.intro}
         points={l.includes.slice(0, 4)}
         bgImage={foto(l.slug) ?? "/images/distanser-armeringsnat.webp"}
-        bgAlt={foto(l.slug) ? l.h1 : "Armeringsnät på distanser inför gjutning"}
+        bgAlt={foto(l.slug) ? l.h1 : `${l.h1.split(" – ")[0]} – armeringsnät på distanser inför gjutning`}
         formSource={`sida-${l.slug}`}
       />
 
@@ -74,6 +77,7 @@ export default async function LandingPage({
                 ),
               )}
             </div>
+            <SourceNote id={sourceFor(`/${l.slug}/`, "armering")} />
 
             {guides.length > 0 && (
               <Panel className="mt-10">
@@ -104,7 +108,7 @@ export default async function LandingPage({
 
       {l.faqs && l.faqs.length > 0 && (
         <Section muted>
-          <SectionHeading center eyebrow="Vanliga frågor" title="Frågor och svar" />
+          <SectionHeading center eyebrow="Vanliga frågor" title={faqTitle(l.h1)} />
           <div className="mt-10">
             <FaqAccordion items={l.faqs} />
           </div>

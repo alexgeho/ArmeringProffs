@@ -14,6 +14,9 @@ import { renderText } from "@/lib/renderText";
 import { foto } from "@/lib/foto";
 import Image from "next/image";
 import { Fragment } from "react";
+import { OG_IMAGES } from "@/lib/seo";
+import { SourceNote } from "@/components/SourceNote";
+import { sourceFor } from "@/config/sources";
 
 export function generateStaticParams() {
   return posts.map((p) => ({ slug: p.slug }));
@@ -31,7 +34,7 @@ export async function generateMetadata({
     title: fitTitle(p.metaTitle),
     description: p.metaDescription,
     alternates: { canonical: `/blogg/${p.slug}` },
-    openGraph: {
+    openGraph: { images: OG_IMAGES,
       type: "article",
       title: p.metaTitle,
       description: p.metaDescription,
@@ -40,6 +43,18 @@ export async function generateMetadata({
       modifiedTime: p.updated ?? p.date,
     },
   };
+}
+
+/** «Vanliga frågor om <ämne>» – ämnet = titelns första led (sidans sökord). Frågetitlar får bara «Vanliga frågor». */
+function faqHeading(metaTitle: string): string {
+  const topic = metaTitle.split(/\s[–|—-]\s|\s\|\s|:\s/)[0].trim();
+  if (!topic || topic.includes("?")) return "Vanliga frågor";
+  const keepCase = /^(Eurokod|CE|ILF|[A-ZÅÄÖ0-9-]{2,}\b)/.test(topic);
+  const lc = keepCase ? topic : topic.charAt(0).toLowerCase() + topic.slice(1);
+  if (/^vanliga /.test(lc)) return `Frågor om ${lc}`;
+  // Verb i infinitiv först («bocka armeringsjärn») → «att bocka armeringsjärn».
+  const verb = /^(armera|beställa|bocka|köpa|läsa|naja|räkna|välja|gjuta|lägga)\s/.test(lc);
+  return `Vanliga frågor om ${verb ? `att ${lc}` : lc}`;
 }
 
 function renderBlock(b: Block, i: number) {
@@ -203,10 +218,11 @@ export default async function PostPage({
               </Fragment>
             ))}
           </div>
+          <SourceNote id={sourceFor(`/blogg/${p.slug}/`, p.category === "dimensioner" ? "armeringsstal" : "armering")} />
 
           {p.faqs && p.faqs.length > 0 && (
             <div className="mt-12">
-              <h2 className="type-h3 text-ink">Vanliga frågor</h2>
+              <h2 className="type-h3 text-ink">{faqHeading(p.metaTitle)}</h2>
               <div className="mt-6">
                 <FaqAccordion items={p.faqs} />
               </div>

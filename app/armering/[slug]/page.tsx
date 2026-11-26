@@ -11,6 +11,8 @@ import { Breadcrumbs, CtaBanner, KalkylatorPromo, GuidesTeaser, PhotoHero } from
 import { FaqAccordion } from "@/components/FaqAccordion";
 import { IconCheck, IconArrow, IconTruck } from "@/components/icons";
 import { JsonLd, faqSchema, breadcrumbSchema } from "@/lib/jsonld";
+import { OG_IMAGES } from "@/lib/seo";
+import { SourceNote } from "@/components/SourceNote";
 
 export function generateStaticParams() {
   return cities.map((c) => ({ slug: c.slug }));
@@ -25,10 +27,10 @@ export async function generateMetadata({
   const c = getCity(slug);
   if (!c) return {};
   return {
-    title: fitTitle(`Armering ${c.name}${c.region ? ` & ${c.region}` : ""} – klippt, bockad & levererad`),
-    description: `Armering i ${c.name}: klippt & bockad efter ritning eller bockningslista, korgar och nät – levererat i ${c.lan}. Offert inom en arbetsdag.`,
+    title: fitTitle(`Armering i ${c.name}${c.region ? ` och ${c.region}` : ""} – klippt, bockad & levererad`),
+    description: `Armering i ${c.name}${c.region ? ` och ${c.region}` : ""}: klippt & bockad efter ritning eller bockningslista, korgar och nät – levererat i ${c.lan}. Offert inom en arbetsdag.`,
     alternates: { canonical: `/armering/${c.slug}` },
-    openGraph: {
+    openGraph: { images: OG_IMAGES,
       title: `Armering i ${c.name} | ${site.company}`,
       description: `Prefab armering tillverkad efter ritning och levererad till ${c.name} och ${c.lan}.`,
       url: `${site.url}/armering/${c.slug}`,
@@ -96,7 +98,7 @@ export default async function CityPage({
         intro={c.angle}
         points={["Klippt & bockad efter bockningslista", "Armeringskorgar, nät & kamstål", `Leverans till ${c.name} & ${c.lan}`, "Tillverkning, leverans & montage"]}
         bgImage="/images/armeringsjarn-kamstal.webp"
-        bgAlt="Armeringsjärn och betong på byggarbetsplats"
+        bgAlt={`Armering i ${c.name}${c.region ? ` och ${c.region}` : ""} – armeringsjärn och betong på byggarbetsplats`}
         formTitle={`Offert på armering i ${c.name}`}
         formSource={`stad-${c.slug}`}
         cols="lg:grid-cols-[1.05fr_0.95fr]"
@@ -188,10 +190,11 @@ export default async function CityPage({
 
       {/* FAQ */}
       <Section narrow>
-        <h2 className="type-h2 text-ink">Vanliga frågor om armering i {c.name}</h2>
+        <h2 className="type-h2 text-ink">Vanliga frågor om armering i {c.name}{c.region ? ` och ${c.region}` : ""}</h2>
         <div className="mt-10">
           <FaqAccordion items={faqs} />
         </div>
+        <SourceNote id="armering" className="mt-8" />
       </Section>
 
       <GuidesTeaser title="Guider för ditt armeringsprojekt" eyebrow="Guider & kunskap" />

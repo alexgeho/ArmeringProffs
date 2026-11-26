@@ -6,13 +6,14 @@ import { Section, SectionHeading, Card, CheckList } from "@/components/ui";
 import { Breadcrumbs, CtaBanner } from "@/components/sections";
 import { JsonLd, breadcrumbSchema } from "@/lib/jsonld";
 import { renderText } from "@/lib/renderText";
+import { OG_IMAGES } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Produkter – prefab armering",
   description:
-    "Prefab armering: klippt & bockad, armeringskorgar, svetsad armering och nät, armeringsjärn i kamstål och distanser. Leverans i hela Sverige.",
+    "Produkter i prefab armering: klippt & bockad, armeringskorgar, svetsad armering och nät, armeringsjärn i kamstål och distanser. Leverans i hela Sverige.",
   alternates: { canonical: "/produkter" },
-  openGraph: {
+  openGraph: { images: OG_IMAGES,
     title: "Produkter – prefab armering | Armeringsproffs",
     description:
       "Klippt & bockad armering, armeringskorgar, svetsad armering, armeringsjärn och distanser – prefab i hela Sverige.",
@@ -28,7 +29,7 @@ export default function ProdukterPage() {
         <SectionHeading
           as="h1"
           eyebrow="Produkter"
-          title="Prefabricerad armering – hela sortimentet"
+          title="Produkter – prefabricerad armering, hela sortimentet"
           intro={renderText(`Vi tillverkar och levererar [prefab armering](/prefab-armering) i ${site.regionInflected}. Välj en kategori och begär offert efter din bockningslista eller ritning.`)}
         />
         <figure className="mt-8 overflow-hidden rounded-panel border border-line">

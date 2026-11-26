@@ -10,6 +10,7 @@ import { VisitSourceRecorder } from "@/components/VisitSource";
 import { PhoneClickTracker } from "@/components/PhoneClickTracker";
 import { JsonLd, localBusinessSchema, websiteSchema } from "@/lib/jsonld";
 import { themeInitScript } from "@/components/ThemeToggle";
+import { OG_IMAGES } from "@/lib/seo";
 
 const inter = Inter({
   variable: "--font-sans",
@@ -37,7 +38,7 @@ export const metadata: Metadata = {
     "armering hela Sverige",
   ],
   alternates: { canonical: "/" },
-  openGraph: {
+  openGraph: { images: OG_IMAGES,
     type: "website",
     locale: "sv_SE",
     url: site.url,

@@ -1451,8 +1451,7 @@ const byglar: Post[] = [
     slug: "s-hake-kramla-armering",
     title: "S-hake och kramla – tvärarmering mellan två lager",
     metaTitle: "S-hake och kramla i armering – mått & regler",
-    metaDescription:
-      "S-hakar och kramlor binder ihop armeringslagren i väggar och plattor. Så används de, hur måtten räknas, vad Eurokod 2 säger och hur du anger dem i listan.",
+    metaDescription: "S-hake och kramla binder ihop armeringslagren i väggar och plattor. Så används de, hur måtten räknas, vad Eurokod 2 säger och hur du anger dem i listan.",
     excerpt:
       "När en vägg eller platta har armering i båda sidor behövs ofta korta järn som binder ihop lagren. Här är S-hakar och kramlor: funktion, mått och hur de beställs.",
     date,

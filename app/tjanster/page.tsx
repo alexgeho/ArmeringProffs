@@ -5,13 +5,14 @@ import { site } from "@/config/site";
 import { Section, SectionHeading, Card, CheckList } from "@/components/ui";
 import { Breadcrumbs, CtaBanner } from "@/components/sections";
 import { JsonLd, breadcrumbSchema } from "@/lib/jsonld";
+import { OG_IMAGES } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: fitTitle("Tjänster – armeringsmontage & bockningslista"),
   description:
-    "Armeringsmontage och hjälp med bockningslista från din ritning – utöver materialet. Tillverkning, leverans och montage i hela Sverige.",
+    "Tjänster utöver materialet: armeringsmontage och hjälp med bockningslista från din ritning. Tillverkning, leverans och montage i hela Sverige.",
   alternates: { canonical: "/tjanster" },
-  openGraph: {
+  openGraph: { images: OG_IMAGES,
     title: "Tjänster – armeringsmontage & bockningslista | Armeringsproffs",
     description:
       "Armeringsmontage och hjälp med bockningslista/armeringsritning – hela armeringsjobbet från en leverantör i hela Sverige.",
@@ -27,7 +28,7 @@ export default function TjansterPage() {
         <SectionHeading
           as="h1"
           eyebrow="Tjänster"
-          title="Mer än material – vi tar hela armeringsjobbet"
+          title="Tjänster – mer än material, vi tar hela armeringsjobbet"
           intro={`Utöver att tillverka och leverera prefab armering hjälper vi dig med själva jobbet: vi lägger armeringen på plats och tar fram bockningslistan från din ritning. Allt i ${site.regionInflected}.`}
         />
         <div className="mt-10 grid gap-6 lg:grid-cols-2">

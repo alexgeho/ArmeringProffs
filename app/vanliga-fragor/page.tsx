@@ -5,6 +5,7 @@ import { Section, SectionHeading, Button } from "@/components/ui";
 import { Breadcrumbs, CtaBanner } from "@/components/sections";
 import { FaqAccordion } from "@/components/FaqAccordion";
 import { JsonLd, faqSchema, breadcrumbSchema } from "@/lib/jsonld";
+import { SourceNote } from "@/components/SourceNote";
 
 export const metadata: Metadata = {
   title: "Vanliga frågor om prefab armering",
@@ -22,7 +23,7 @@ export default function VanligaFragorPage() {
         <SectionHeading
           as="h1"
           eyebrow="Vanliga frågor"
-          title="Frågor och svar om prefab armering"
+          title="Vanliga frågor om prefab armering"
           intro="Här har vi samlat de vanligaste frågorna vi får om prefabricerad armering – från offert och underlag till kvalitet, leverans och montage. Hittar du inte svaret? Hör av dig så hjälper vi dig."
         />
         <div className="mt-10">
@@ -34,6 +35,7 @@ export default function VanligaFragorPage() {
             Öppna armeringskalkylatorn
           </Button>
         </div>
+        <SourceNote id="armering" className="mx-auto mt-8 max-w-3xl" />
       </Section>
 
       <CtaBanner />

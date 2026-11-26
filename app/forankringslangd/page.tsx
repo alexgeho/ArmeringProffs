@@ -7,6 +7,8 @@ import { ForankringsKalkylator } from "@/components/SmaKalkylatorer";
 import { FaqAccordion } from "@/components/FaqAccordion";
 import type { Faq } from "@/config/faq";
 import { JsonLd, breadcrumbSchema, faqSchema } from "@/lib/jsonld";
+import { OG_IMAGES } from "@/lib/seo";
+import { SourceNote } from "@/components/SourceNote";
 
 const path = "/forankringslangd";
 const name = "Förankringslängd armering";
@@ -14,9 +16,9 @@ const name = "Förankringslängd armering";
 export const metadata: Metadata = {
   title: "Förankringslängd armering – kalkylator",
   description:
-    "Räkna riktvärde för förankringslängd lb,rqd enligt Eurokod 2: välj diameter, betongklass och vidhäftning. För kamstål B500B – konstruktören avgör.",
+    "Förankringslängd armering: räkna riktvärde för lb,rqd enligt Eurokod 2 – välj diameter, betongklass och vidhäftning. För kamstål B500B.",
   alternates: { canonical: path },
-  openGraph: {
+  openGraph: { images: OG_IMAGES,
     title: `Förankringslängd – kalkylator | ${site.company}`,
     description: "Diameter, betongklass och vidhäftning – få riktvärde för förankringslängd enligt Eurokod 2.",
     url: `${site.url}${path}`,
@@ -82,6 +84,7 @@ export default function ForankringslangdPage() {
         <div className="mt-10">
           <FaqAccordion items={faqs} />
         </div>
+        <SourceNote id="eurokoder" className="mt-8" />
       </Section>
 
       <CtaBanner />

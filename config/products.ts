@@ -397,7 +397,7 @@ const baseProducts: Product[] = [
     h1: "Svetsad armering – specialnät och svetsade mattor efter mått",
     metaTitle: "Specialnät och svetsad armering efter mått",
     metaDescription:
-      "Specialnät och svetsade mattor med den maskvidd, tråd och de mått ritningen kräver – färre skarvar och mindre kap på bygget. Skicka måtten, få offert.",
+      "Svetsad armering och specialnät med den maskvidd, tråd och de mått ritningen kräver – färre skarvar och mindre kap på bygget. Skicka måtten, få offert.",
     intro:
       "Passar inte lagernäten? Vi levererar specialnät och svetsade mattor med den maskvidd, trådgrovlek och de yttermått ritningen kräver. Det ger färre skarvar och mindre kap på bygget. Leverans i hela Sverige.",
     // TODO [OWNER]: lägg produktfoto. Skicka horisontell bild ≥1600px (welded wire
@@ -568,7 +568,7 @@ const baseProducts: Product[] = [
     h1: "Distanser för armering – distansklossar och nätstöd",
     metaTitle: "Distanser armering – distansklossar och nätstöd",
     metaDescription:
-      "Distansklossar, distanslister och nätstöd för rätt täckskikt – vi väljer höjd efter ritningen och levererar med armeringen i hela Sverige. Begär offert.",
+      "Distanser för armering: distansklossar, distanslister och nätstöd för rätt täckskikt – höjd efter ritningen, levererat med armeringen i hela Sverige.",
     intro:
       "Distanser håller armeringen på rätt höjd så att täckskiktet blir det ritningen anger. Vi levererar distansklossar, distanslister och nätstöd i rätt höjd och antal, i samma leverans som armeringen.",
     image: {
@@ -870,7 +870,7 @@ const baseProducts: Product[] = [
     h1: "3D-bockning och bågbockning av armering",
     metaTitle: "3D-bockning & bågbockning av armering",
     metaDescription:
-      "Rumsbockade 3D-former och bågformad armering i B500B till runda fundament, brunnar och vindkraftsfundament – bockat efter ritning. Begär offert.",
+      "3D-bockning och bågbockning av armering i B500B: rumsbockade former och bågar till runda fundament, brunnar och vindkraftsfundament. Begär offert.",
     intro:
       "Vi bockar armering i flera plan och i bågar – rumsbockade specialformer och bågformade järn till brunnar, tankar, runda plintar och vindkraftsfundament. Tillverkat i B500B efter ritning och märkt per position.",
     keywords: [

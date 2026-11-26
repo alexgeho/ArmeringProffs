@@ -8,13 +8,14 @@ import {
 import { FaqAccordion } from "@/components/FaqAccordion";
 import { JsonLd, faqSchema, serviceSchema } from "@/lib/jsonld";
 import { renderText } from "@/lib/renderText";
+import { OG_IMAGES } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: { absolute: "Armering – prefab, klippt & bockad i hela Sverige" },
   description:
     "Armering efter ritning: klippt och bockad, armeringsnät, armeringsjärn B500B och korgar – märkt per position, levererat i hela Sverige. Begär offert.",
   alternates: { canonical: "/" },
-  openGraph: {
+  openGraph: { images: OG_IMAGES,
     type: "website",
     locale: "sv_SE",
     siteName: site.company,

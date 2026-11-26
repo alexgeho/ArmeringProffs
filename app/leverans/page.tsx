@@ -7,13 +7,15 @@ import { Section, SectionHeading } from "@/components/ui";
 import { Breadcrumbs, LeveransSection, CtaBanner } from "@/components/sections";
 import { IconCheck } from "@/components/icons";
 import { JsonLd, serviceSchema, breadcrumbSchema } from "@/lib/jsonld";
+import { OG_IMAGES } from "@/lib/seo";
+import { SourceNote } from "@/components/SourceNote";
 
 export const metadata: Metadata = {
   title: "Leverans av armering i hela Sverige",
   description:
-    "Vi levererar prefab armering – klippt & bockad, korgar och nät – i hela Sverige. Frakt och leveranstid efter mängd och ort. Begär offert.",
+    "Leverans av armering i hela Sverige: prefab armering – klippt & bockad, korgar och nät – med frakt och leveranstid efter mängd och ort. Begär offert.",
   alternates: { canonical: "/leverans" },
-  openGraph: {
+  openGraph: { images: OG_IMAGES,
     title: "Leverans av armering i hela Sverige | Armeringsproffs",
     description: "Prefab armering tillverkad efter ritning och levererad i hela Sverige.",
     url: `${site.url}/leverans`,
@@ -29,13 +31,13 @@ export default function LeveransPage() {
         <SectionHeading
           as="h1"
           eyebrow="Leverans"
-          title="Armering levererad i hela Sverige"
+          title="Leverans av armering i hela Sverige"
           intro="Oavsett var i landet ditt bygg- eller anläggningsprojekt ligger tillverkar vi armeringen efter din bockningslista eller ritning och levererar den till arbetsplatsen. Ange leveransort och mängd i offertförfrågan så räknar vi fram frakt och leveranstid."
         />
         <figure className="mt-8 overflow-hidden rounded-panel border border-line">
           <Image
             src="/images/leverans-betongplatta.webp"
-            alt="Färdig armerad betongplatta på ett byggprojekt i Sverige"
+            alt="Leverans av armering – färdig armerad betongplatta på ett byggprojekt i Sverige"
             width={1600}
             height={1240}
             sizes="(min-width: 1152px) 1152px, 100vw"
@@ -43,7 +45,7 @@ export default function LeveransPage() {
           />
         </figure>
         <div className="mt-16">
-          <h2 className="type-h3 text-ink">Armering per ort</h2>
+          <h2 className="type-h3 text-ink">Leverans av armering per ort</h2>
           <p className="mt-2 text-ink-soft">Läs mer om leverans av armering till din stad:</p>
           <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
             {cities.map((c) => (
@@ -59,6 +61,7 @@ export default function LeveransPage() {
           <p className="mt-4 text-sm text-muted">
             Orterna är exempel – vi levererar till hela Sverige, inte bara till städerna ovan.
           </p>
+          <SourceNote id="armering" className="mt-4" />
         </div>
       </Section>
 

@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
-import { fitTitle } from "@/lib/title";
+import { fitTitle, faqTitle } from "@/lib/title";
+import { SourceNote } from "@/components/SourceNote";
+import { sourceFor } from "@/config/sources";
 import { notFound } from "next/navigation";
 import { services, getService } from "@/config/services";
 import { relatedGuides } from "@/lib/related";
@@ -12,6 +14,7 @@ import { BockningsformerExplorer } from "@/components/BockningsformerExplorer";
 import { JsonLd, serviceSchema, faqSchema, breadcrumbSchema } from "@/lib/jsonld";
 import { renderText } from "@/lib/renderText";
 import { foto } from "@/lib/foto";
+import { OG_IMAGES } from "@/lib/seo";
 
 export function generateStaticParams() {
   return services.map((s) => ({ slug: s.slug }));
@@ -30,7 +33,7 @@ export async function generateMetadata({
     description: s.metaDescription,
     keywords: s.keywords,
     alternates: { canonical: `/tjanster/${s.slug}` },
-    openGraph: {
+    openGraph: { images: OG_IMAGES,
       title: s.metaTitle,
       description: s.metaDescription,
       url: `${site.url}/tjanster/${s.slug}`,
@@ -100,7 +103,7 @@ export default async function ServicePage({
           intro={s.intro}
           points={s.includes.slice(0, 4)}
           bgImage={foto(s.slug) ?? "/images/distanser-armeringsnat.webp"}
-          bgAlt={foto(s.slug) ? s.h1 : "Armeringsnät på distanser inför gjutning"}
+          bgAlt={foto(s.slug) ? s.h1 : `${s.h1.split(" – ")[0]} – armeringsnät på distanser inför gjutning`}
           formSource={`tjanst-${s.slug}`}
         />
       )}
@@ -115,6 +118,7 @@ export default async function ServicePage({
                 <p key={`${b.heading}-p`}>{renderText(b.text)}</p>,
               ])}
             </div>
+            <SourceNote id={sourceFor(`/tjanster/${s.slug}/`, "armering")} />
 
             {guides.length > 0 && (
               <Panel className="mt-10">
@@ -170,7 +174,7 @@ export default async function ServicePage({
       {/* FAQ */}
       {s.faqs && s.faqs.length > 0 && (
         <Section muted>
-          <SectionHeading center eyebrow="Vanliga frågor" title="Frågor och svar" />
+          <SectionHeading center eyebrow="Vanliga frågor" title={faqTitle(s.h1)} />
           <div className="mt-10">
             <FaqAccordion items={s.faqs} />
           </div>

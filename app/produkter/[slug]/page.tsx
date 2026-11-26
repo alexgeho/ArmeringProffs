@@ -5,7 +5,7 @@ import { products, getProduct } from "@/config/products";
 import { relatedGuides } from "@/lib/related";
 import { faq } from "@/config/faq";
 import { site } from "@/config/site";
-import { fitTitle } from "@/lib/title";
+import { fitTitle, faqTitle } from "@/lib/title";
 import { Section, SectionHeading, Button, PageHeader, Panel, CheckList, ArrowLink, Card } from "@/components/ui";
 import { Breadcrumbs, CtaBanner, LeveransSection, Process, CityLinks } from "@/components/sections";
 import { FaqAccordion } from "@/components/FaqAccordion";
@@ -16,6 +16,9 @@ import {
 } from "@/lib/jsonld";
 import { bodyNodes } from "@/components/BodySections";
 import { foto } from "@/lib/foto";
+import { OG_IMAGES } from "@/lib/seo";
+import { SourceNote } from "@/components/SourceNote";
+import { sourceFor } from "@/config/sources";
 
 export function generateStaticParams() {
   return products.map((p) => ({ slug: p.slug }));
@@ -34,7 +37,7 @@ export async function generateMetadata({
     description: p.metaDescription,
     keywords: p.keywords,
     alternates: { canonical: `/produkter/${p.slug}` },
-    openGraph: {
+    openGraph: { images: OG_IMAGES,
       title: p.metaTitle,
       description: p.metaDescription,
       url: `${site.url}/produkter/${p.slug}`,
@@ -97,6 +100,7 @@ export default async function ProductPage({
             <div className="prose-body">
               {bodyNodes(p.body)}
             </div>
+            <SourceNote id={sourceFor(`/produkter/${p.slug}/`, "armering")} />
 
             <Panel className="mt-10">
               <h2 className="type-h4 text-ink">Egenskaper</h2>
@@ -152,7 +156,7 @@ export default async function ProductPage({
 
       {/* FAQ */}
       <Section>
-        <SectionHeading center eyebrow="Vanliga frågor" title="Frågor och svar" />
+        <SectionHeading center eyebrow="Vanliga frågor" title={faqTitle(p.h1)} />
         <div className="mt-10">
           <FaqAccordion items={faqs} />
         </div>

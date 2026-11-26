@@ -8,9 +8,8 @@ export const armeringTill1: Post[] = [
   {
     slug: "armering-husgrund",
     title: "Armering till husgrund – grundtyper och armering per typ",
-    metaTitle: "Armering husgrund – grundtyper och armering",
-    metaDescription:
-      "Platta på mark, krypgrund, källare eller plintar? Så skiljer sig armeringen mellan olika husgrunder – nät, kantjärn, byglar och väggarmering per grundtyp.",
+    metaTitle: "Armering till husgrund – grundtyper och armering",
+    metaDescription: "Armering till husgrund: platta på mark, krypgrund, källare eller plintar? Så skiljer sig nät, kantjärn, byglar och väggarmering per grundtyp.",
     excerpt:
       "Vilken armering en husgrund behöver beror först och främst på grundtypen. Här jämför vi platta på mark, krypgrund, källare, plintar och pålar – och vad som armeras i varje.",
     date,
@@ -308,9 +307,8 @@ export const armeringTill1: Post[] = [
   {
     slug: "armering-kallarvagg",
     title: "Armering till källarvägg och grundmur",
-    metaTitle: "Armering källarvägg och grundmur",
-    metaDescription:
-      "Så armeras en källarvägg eller grundmur: två lager kamjärn, anslutningsjärn från bottenplattan, hörnbyglar och täckskikt mot jord. Typiska dimensioner.",
+    metaTitle: "Armering till källarvägg och grundmur",
+    metaDescription: "Armering till källarvägg och grundmur: två lager kamjärn, anslutningsjärn från bottenplattan, hörnbyglar och täckskikt mot jord. Typiska dimensioner.",
     excerpt:
       "En källarvägg tar jordtryck från ena sidan och väggens last uppifrån. Här är den typiska armeringen – två lager, anslutningsjärn och hörn – och vad du ska tänka på.",
     date,
@@ -399,8 +397,7 @@ export const armeringTill1: Post[] = [
     slug: "armering-betongvagg",
     title: "Armera betongvägg – armering i platsgjutna väggar",
     metaTitle: "Armera betongvägg – järn, nät och byglar",
-    metaDescription:
-      "Hur armeras en platsgjuten betongvägg? Minimiarmering, ett eller två lager, nät eller lösa järn, öppningar och hörn – med typiska dimensioner och steg.",
+    metaDescription: "Armera betongvägg: minimiarmering, ett eller två lager, nät eller lösa järn, öppningar och hörn – med typiska dimensioner och arbetssteg.",
     excerpt:
       "En platsgjuten betongvägg armeras både för last och för att begränsa sprickor. Här är de typiska lösningarna – och vad som händer vid hörn och öppningar.",
     date,
@@ -493,9 +490,8 @@ export const armeringTill1: Post[] = [
   {
     slug: "armering-bjalklag",
     title: "Armering till bjälklag – platsgjutet och på plattbärlag",
-    metaTitle: "Armering bjälklag – underkant, överkant, stöd",
-    metaDescription:
-      "Så armeras ett betongbjälklag: underkantsarmering i fält, överkantsarmering över stöd, kantbalkar och håltagningar. Platsgjutet och på plattbärlag.",
+    metaTitle: "Armering till bjälklag – underkant, överkant, stöd",
+    metaDescription: "Armering till bjälklag: underkantsarmering i fält, överkantsarmering över stöd, kantbalkar och håltagningar. Platsgjutet och på plattbärlag.",
     excerpt:
       "Ett bjälklag spänner fritt mellan stöd och armeras därför annorlunda än en platta på mark. Här är principen – underkant i fält, överkant över stöd – med typiska dimensioner.",
     date,
@@ -587,9 +583,8 @@ export const armeringTill1: Post[] = [
   {
     slug: "armering-balkong",
     title: "Armering till balkong – utkragande platta i betong",
-    metaTitle: "Armering balkong – överkant och infästning",
-    metaDescription:
-      "Hur armeras en balkongplatta i betong? Huvudarmering i överkant, infästning mot bjälklaget, kantbyglar och täckskikt utomhus – typiska lösningar.",
+    metaTitle: "Armering till balkong – överkant och infästning",
+    metaDescription: "Armering till balkong i betong: huvudarmering i överkant, infästning mot bjälklaget, kantbyglar och täckskikt utomhus – typiska lösningar.",
     excerpt:
       "En balkong kragar ut från huset, och det vänder på allt du vet om plattarmering: huvudarmeringen ligger i överkant. Här är principen och de typiska lösningarna.",
     date,
@@ -680,9 +675,8 @@ export const armeringTill1: Post[] = [
   {
     slug: "armering-uteplats-betong",
     title: "Armering till uteplats och altan i betong",
-    metaTitle: "Armering uteplats och altan i betong",
-    metaDescription:
-      "Vilken armering behövs till en gjuten uteplats eller altan? Nättyp, placering, täckskikt utomhus, tjälsäker uppbyggnad och fogar – med typiska värden.",
+    metaTitle: "Armering till uteplats och altan i betong",
+    metaDescription: "Armering till uteplats och altan i betong: nättyp, placering, täckskikt utomhus, tjälsäker uppbyggnad och fogar – med typiska värden.",
     excerpt:
       "En gjuten uteplats står i väder och tjäle året om. Här är armeringen som brukar räcka, hur nätet placeras och varför underarbetet betyder lika mycket.",
     date,
@@ -774,9 +768,8 @@ export const armeringTill1: Post[] = [
   {
     slug: "armering-carport",
     title: "Armering till carport – plintar eller platta?",
-    metaTitle: "Armering carport – plintar eller platta",
-    metaDescription:
-      "Ska carporten stå på plintar eller en gjuten platta? Så armeras plintar, stolpfundament och carportplatta – med typiska dimensioner och arbetsgång.",
+    metaTitle: "Armering till carport – plintar eller platta",
+    metaDescription: "Armering till carport: plintar eller gjuten platta? Så armeras plintar, stolpfundament och carportplatta – med typiska dimensioner och arbetsgång.",
     excerpt:
       "En carport bärs av stolpar, och det är stolparnas fundament som ska klara snölast och tjäle. Här jämför vi plintar och platta och visar hur båda armeras.",
     date,
@@ -873,9 +866,8 @@ export const armeringTill1: Post[] = [
   {
     slug: "armering-attefallshus",
     title: "Armering till attefallshus – platta på mark i liten skala",
-    metaTitle: "Armering attefallshus – platta och kantbalk",
-    metaDescription:
-      "Vilken armering behövs till grunden för ett attefallshus på 30 m²? Nät, kantbalk, byglar, täckskikt och åtgång – med räkneexempel och arbetsgång.",
+    metaTitle: "Armering till attefallshus – platta och kantbalk",
+    metaDescription: "Armering till attefallshus på 30 m²: vilket nät, kantbalk, byglar, täckskikt och hur mycket som går åt – med räkneexempel och arbetsgång.",
     excerpt:
       "Ett attefallshus är ett riktigt hus i liten skala, och grunden byggs oftast som en platta på mark med kantbalk. Här är armeringen och ett räkneexempel för 30 m².",
     date,
@@ -971,9 +963,8 @@ export const armeringTill1: Post[] = [
   {
     slug: "armering-friggebod",
     title: "Armering till friggebod – enkel platta som håller",
-    metaTitle: "Armering friggebod – platta och nät",
-    metaDescription:
-      "Gjuta platta till friggebod? Så armeras en enkel betongplatta på 15 m²: nättyp, förstärkt kant, täckskikt och hur mycket nät som går åt.",
+    metaTitle: "Armering till friggebod – platta och nät",
+    metaDescription: "Armering till friggebod: så armeras en enkel betongplatta på 15 m² – nättyp, förstärkt kant, täckskikt och hur mycket nät som går åt.",
     excerpt:
       "En friggebod behöver ingen avancerad grund, men en gjuten platta ska ändå armeras. Här är en enkel och beprövad lösning för upp till 15 m².",
     date,
@@ -1068,9 +1059,8 @@ export const armeringTill1: Post[] = [
   {
     slug: "armering-uterum",
     title: "Armering till uterum – grund för varmt och kallt uterum",
-    metaTitle: "Armering uterum – grund och platta",
-    metaDescription:
-      "Hur armeras grunden till ett uterum? Skillnaden mellan kallt och varmt uterum, platta eller plintar, anslutning mot huset och typisk armering.",
+    metaTitle: "Armering till uterum – grund och platta",
+    metaDescription: "Armering till uterum: skillnaden mellan kallt och varmt uterum, platta eller plintar, anslutning mot huset och typisk armering för grunden.",
     excerpt:
       "Ett uterum står ofta tätt intill huset, och grunden måste fungera ihop med husgrunden. Här är armeringen för kallt och varmt uterum – och vad du ska se upp med.",
     date,
@@ -1163,9 +1153,8 @@ export const armeringTill1: Post[] = [
   {
     slug: "armering-bastu",
     title: "Armering till bastu – golv och platta",
-    metaTitle: "Armering bastu – gjutet golv och platta",
-    metaDescription:
-      "Så armeras ett gjutet bastugolv eller en platta till fristående bastu: nät, fall mot golvbrunn, extra järn runt brunnen och täckskikt i våt miljö.",
+    metaTitle: "Armering till bastu – gjutet golv och platta",
+    metaDescription: "Armering till bastu: så armeras ett gjutet bastugolv eller en platta till fristående bastu – nät, fall mot golvbrunn, extra järn och täckskikt.",
     excerpt:
       "Ett bastugolv är vått, varmt och har golvbrunn. Här är armeringen till gjutet golv och till plattan under en fristående bastu – och vad du ska tänka på kring brunnen.",
     date,
@@ -1256,9 +1245,8 @@ export const armeringTill1: Post[] = [
   {
     slug: "armering-platta-golvvarme",
     title: "Armering i platta med golvvärme – så samsas nät och slingor",
-    metaTitle: "Armering platta med golvvärme – nät & slingor",
-    metaDescription:
-      "Så armeras en platta på mark med golvvärme: nätet som fästbas, slingornas läge, täckskikt, distanser och vad du ska undvika vid fogar och skarvar.",
+    metaTitle: "Armering i platta med golvvärme – nät & slingor",
+    metaDescription: "Armering i platta med golvvärme: nätet som fästbas, slingornas läge, täckskikt, distanser och vad du ska undvika vid fogar och skarvar.",
     excerpt:
       "I en platta med golvvärme gör armeringsnätet dubbel nytta – det armerar plattan och håller slingorna på plats. Här är hur nät, slingor och distanser ska ligga.",
     date,
@@ -1346,9 +1334,8 @@ export const armeringTill1: Post[] = [
   {
     slug: "armering-industrigolv",
     title: "Armering till industrigolv – fogar, dubbla nät och punktlaster",
-    metaTitle: "Armering industrigolv – nät, fogar, laster",
-    metaDescription:
-      "Så armeras industrigolv: fogfritt eller fogat, dubbla nät, armering för truckar och pallställ, sprickbreddskrav och leverans av stora volymer.",
+    metaTitle: "Armering till industrigolv – nät, fogar, laster",
+    metaDescription: "Armering till industrigolv: fogfritt eller fogat, dubbla nät, armering för truckar och pallställ, sprickbreddskrav och leverans av stora volymer.",
     excerpt:
       "Ett industrigolv dimensioneras för truckar, pallställ och sprickkrav. Här är principerna för armering av fogfria och fogade golv – och vad som skiljer dem.",
     date,

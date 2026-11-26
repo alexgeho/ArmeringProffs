@@ -436,9 +436,9 @@ const baseLandings: Landing[] = [
     slug: "armering-norrland",
     name: "Armering Norrland",
     h1: "Armering i Norrland – leverans till hela norra Sverige",
-    metaTitle: "Armering Norrland – leverans till norra Sverige",
+    metaTitle: "Armering i Norrland – leverans till norra Sverige",
     metaDescription:
-      "Prefab armering till Norrland: Umeå, Luleå, Sundsvall, Östersund, Skellefteå och Kiruna. Klippt och bockad, korgar och nät – frakt efter mängd och ort.",
+      "Armering i Norrland: prefab till Umeå, Luleå, Sundsvall, Östersund, Skellefteå och Kiruna – klippt och bockad, korgar och nät. Frakt efter mängd och ort.",
     intro:
       "Vi levererar prefab armering till hela Norrland – från Sundsvall och Östersund till Umeå, Luleå och Kiruna. Klippt och bockad armering, korgar och nät tillverkas efter din ritning och levereras till arbetsplatsen, med frakt efter mängd och ort.",
     keywords: [

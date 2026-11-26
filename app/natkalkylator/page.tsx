@@ -8,6 +8,7 @@ import { NatKalkylator } from "@/components/SmaKalkylatorer";
 import { FaqAccordion } from "@/components/FaqAccordion";
 import type { Faq } from "@/config/faq";
 import { JsonLd, breadcrumbSchema, faqSchema } from "@/lib/jsonld";
+import { OG_IMAGES } from "@/lib/seo";
 
 const path = "/natkalkylator";
 const name = "Nätkalkylator";
@@ -17,7 +18,7 @@ export const metadata: Metadata = {
   description:
     "Räkna hur många armeringsnät plattan behöver: fyll i längd och bredd, välj nät 5150–10150 och överlapp – få antal ark 2,35 × 5 m och vikt i kg.",
   alternates: { canonical: path },
-  openGraph: {
+  openGraph: { images: OG_IMAGES,
     title: `Nätkalkylator – antal armeringsnät | ${site.company}`,
     description: "Längd, bredd, nättyp och överlapp – få antal ark och vikt.",
     url: `${site.url}${path}`,

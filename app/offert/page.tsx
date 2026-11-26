@@ -5,12 +5,13 @@ import { Section, Button, ArrowLink, Panel } from "@/components/ui";
 import { Breadcrumbs, PhotoHero } from "@/components/sections";
 import { IconCheck, IconPhone, IconRuler } from "@/components/icons";
 import { JsonLd, breadcrumbSchema } from "@/lib/jsonld";
+import { OG_IMAGES } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Begär offert på prefab armering",
   description: "Begär offert på prefab armering – klippt & bockad, korgar och nät. Ladda upp bockningslista eller ritning så får du pris och leveranstid.",
   alternates: { canonical: "/offert" },
-  openGraph: {
+  openGraph: { images: OG_IMAGES,
     title: `Begär offert på prefab armering | ${site.company}`,
     description: "Ladda upp din bockningslista eller ritning så får du pris och leveranstid för hela Sverige.",
     url: `${site.url}/offert`,

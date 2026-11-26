@@ -180,9 +180,9 @@ export const guider1: Post[] = [
   {
     slug: "najtrad-armering",
     title: "Najtråd för armering – vilken tråd och hur mycket går åt?",
-    metaTitle: "Najtråd armering – typer, tjocklek & åtgång",
+    metaTitle: "Najtråd för armering – typer, tjocklek & åtgång",
     metaDescription:
-      "Vilken najtråd ska du välja till armering – svart glödgad, galvad eller med öglor – och hur mycket går åt? Tjocklek, meter per kg och en enkel räknemodell.",
+      "Najtråd för armering: svart glödgad, galvad eller med öglor – och hur mycket går åt? Tjocklek, meter per kg och en enkel räknemodell.",
     excerpt:
       "Najtråd finns på rulle, färdigklippt och med öglor, i olika tjocklekar och ytor. Här är skillnaderna, meter per kilo och hur du räknar ut åtgången till ditt projekt.",
     date: "2026-10-09",
@@ -888,7 +888,7 @@ export const guider1: Post[] = [
   {
     slug: "fiberarmering-eller-armeringsnat",
     title: "Fiberarmering eller armeringsnät – vad ska du välja?",
-    metaTitle: "Fiberarmering vs armeringsnät – jämförelse",
+    metaTitle: "Fiberarmering eller armeringsnät – jämförelse",
     metaDescription:
       "Fiberarmering eller armeringsnät? Stålfiber, makro- och mikrofiber jämfört med nät: vad de klarar, dosering, för- och nackdelar och när de kombineras.",
     excerpt:
